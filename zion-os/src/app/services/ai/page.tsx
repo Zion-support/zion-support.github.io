@@ -1,3 +1,16 @@
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">;
+        <div className="container mx-auto px-6 text-center">;
+          <h1 className="text-5xl font-bold mb-6">🤖 AI Services & Solutions</h1>;
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">;
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">;
+        <div className="container mx-auto px-6 text-center">;
+          <h1 className="text-5xl font-bold mb-6">🤖 AI Services & Solutions</h1>;
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">;
+            we deliver enterprise-grade AI solutions that drive real results.;
           </p>;
           <div className="mt - 8">;
             <a href="tel:+13024640950" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 50 transition - colors mr - 4">;
@@ -60,6 +73,7 @@
               </a>;
             </div>;
             {/* AI Content Generation */}
+                SEO-optimized content for blogs, social media, and marketing materials.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
@@ -172,6 +186,7 @@
               </a>;
             </div>;
             {/* AI Process Automation */}
+                document processing, and AI-powered business process optimization.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;

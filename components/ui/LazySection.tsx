@@ -1,4 +1,29 @@
 
+
+
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+interface LazySectionProps {
+  children: React.ReactNode,
+  className?: string;
+  threshold?: number;
+  delay?: number;
+  direction?: 'up' | 'down' | 'left' | 'right'
+}
+export const LazySection: React.FC<LazySectionProps> = ({
+  children
+  className = ''
+  threshold = 0.1
+  delay = 0
+  direction = 'up'
+}) => {
+  children,
+  className = '',
+  threshold = 0.1,
+  delay = 0,
+  direction = 'up',
+}) => {;
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {
@@ -16,10 +41,6 @@
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
-      default:
-        return { opacity: 1, y: 0 }
-    }
-  }
     >
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -77,14 +98,3 @@ export const LazySection: React.FC<LazySectionProps> = ({;
       {children}
     </motion && motion.div>;
   );
-        return { opacity: 1, y: 0 }
-    }
-  }
-  return (
-    <motion&& motion.div
-      ref={ref}
-      initial={getInitialPosition()}
-      animate={isInView ? getAnimatePosition() : getInitialPosition()}
-      transition={{ duration: 0 && 0.8, delay, ease: "easeOut" }}
-      className={className}>;
-      {children}

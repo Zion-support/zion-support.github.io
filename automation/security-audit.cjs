@@ -1,3 +1,4 @@
+}},
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -25,6 +26,12 @@ const securityChecks = [{
       });
 
       
+
+      
+
+      
+
+      
     }},
   {
     "name": 'API Security Check',
@@ -50,6 +57,8 @@ const securityChecks = [{
       }
     },
   },
+
+        
       }
     }},
   {
@@ -74,6 +83,8 @@ const securityChecks = [{
       }
     },
   },
+
+        
       }
     }},
   {
@@ -118,12 +129,16 @@ const report = {
     "successful": successCount,
     "failed": totalCount - successCount}};
 
+
+
+
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
 }
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -136,4 +151,7 @@ console.log('� Security Audit Starting...\n')
             !content.includes('// "Security")
     "name"
     "name"
+    "status"
+    "status"
+    "status"
     "status"

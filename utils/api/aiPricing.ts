@@ -3,12 +3,12 @@ export const calculateAICost = async (usage: any) => {
   // Placeholder implementation;
   return { cost: 0, success: true }
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const getAIPricing = async (service: string) => {;
   // Placeholder implementation;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  return { price: 99, currency: 'USD', success: true }
+},;
+export const calculateAICost = async (usage: any) => {;
+  // Placeholder implementation;
+export const getAIPricing = async (service: string) => {;
+  // Placeholder implementation;
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,21 +1,179 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Trophy
+  FlaskConical as FlaskIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon
+  Crown
+  Gem
+  Diamond;
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Trophy,
+  FlaskConical as FlaskIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Crown,
+  Gem,;
+  Diamond,;
+
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+
+import {;
+  revolutionaryMicroSaasServices,;
+  revolutionaryServiceCategories,;
+
+} from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services';
-
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('price');
 
-  ];
-  }
-  // Price range filter
-  if (priceRange !== 'All') {
     filteredServices = filteredServices.filter(service => {
       const price = parseFloat(service.price.replace('$', '').replace(, ''));
       return price >= min && (max === Infinity |price <= max)
@@ -30,81 +188,90 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
       case 'category':
         return a.category.localeCompare(b.category);
       case 'roi':
-  const allServices = [;
-    ...revolutionaryMicroSaasServices,;
-    ...enhancedMicroSaasServices,;
-  ];  const allServices = [...revolutionaryMicroSaasServices, ...enhancedMicroSaasServices];
-  const priceRanges = [;
-    { value: 'All', label: 'All Prices' },;
-    { value: '0-100', label: '$0 - $100' },;
-    { value: '101-500', label: '$101 - $500' },;
-    { value: '501-1000', label: '$501 - $1,000' },;
-    { value: '1001-2500', label: '$1,001 - $2,500' },;
-    { value: '2501-5000', label: '$2,501 - $5,000' },;
-    { value: '5001+', label: '$5,001+' },  ];    { value: '501-1000', label: '$501 - $1,000' };
-    { value: '1001-2500', label: '$1,001 - $2,500' };
-    { value: '2501-5000', label: '$2,501 - $5,000' };
-    { value: '5001+', label: '$5,001+' }
-  const sortOptions = [;
-    { value: 'price', label: 'Price Low-High' },;
-    { value: 'name', label: 'Name A-Z' },;
-    { value: 'popularity', label: 'Most Popular' },;
-    { value: 'category', label: 'Category' },;
-    { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
-  ];
-  // Category filter;
-  if (selectedCategory !== 'All') {;
-    filteredServices = filteredServices && filteredServices.filter(;
-      service => service && service.category === selectedCategory;
-    );  }
-  // Price range filter;
-  if (priceRange !== 'All') {;
-    const [min, max] = priceRange;
-      .split('-');
-      .map(p => (p === '+' ? Infinity : parseInt(p)));
-    filteredServices = filteredServices && filteredServices.filter(service => {;
-      const price = parseFloat(service && service.price.replace('$', '').replace(',', ''));
-      return price >= min && (max === Infinity || price <= max);
-    });  }
-  // Search filter;
-  if (searchQuery) {    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
-    filteredServices = filteredServices && filteredServices.filter(service => {;
-      const price = parseFloat(service && service.price.replace('$', '').replace(, ''));
-      return price >= min && (max === Infinity || price <= max);
-    });
-  // Search filter;
-  if (searchQuery) {;
-    filteredServices = filteredServices && filteredServices.filter(;
-      service =>;
-        service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())    );    filteredServices = filteredServices && filteredServices.filter(service =>;
-      service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-  }
-  // Sort services;
-  filteredServices && filteredServices.sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price':;
-        return (
-          parseFloat(a && a.price.replace('$', '').replace(',', '')) -;
-          parseFloat(b && b.price.replace('$', '').replace(',', ''));
-        );      case 'popularity':        return parseFloat(a && a.price.replace('$', '').replace(, '')) - parseFloat(b && b.price.replace('$', '').replace(, ''));
-      case 'popularity':;
-        return (b && b.popular ? 1 : 0) - (a && a.popular ? 1 : 0);
-      case 'category':;
-        return a && a.category.localeCompare(b && b.category);
-      case 'roi':;
-        const aRoi = parseFloat(a && a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseFloat(b && b.roi.match(/\d+/)?.[0] || '0');
         return bRoi - aRoi;
       default:;
         return a && a.name.localeCompare(b && b.name);    }      default: return a && a.name.localeCompare(b && b.name);
     }
   });
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  }
+        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
+        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
+        return bRoi - aRoi;
+      default: return a.name.localeCompare(b.name)
+;
+  // Filter and sort services;
+  let filtered_services = all_services;
+;
+  // Category filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    filtered_services = filtered_services.filter (
+      service => service.category === selected_category);  }
+  // Price range filter;
+  if ( {    filtered_services = filtered_services.filter (service => service.category === selected_category)) {
+  $2
+}
+  }
+  // Price range filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    const [min, max] = price_range;
+      .split ('-');
+      .map (p => (p === '+' ? Infinity : parse_int (p)));
+    filtered_services = filtered_services.filter (service => {
+      const price = parse_float (service.price.replace ('$', '').replace (', ', ''));
+      return price >= min && (max === Infinity || price <= max);
+    });  }
+  // Search filter;
+  if ( {    const [min, max] = price_range.split ('-').map (p => p === '+' ? Infinity : parse_int (p))) {
+  $2
+}
+    filtered_services = filtered_services.filter (service => {
+      const price = parse_float (service.price.replace ('$', '').replace (, ''));
+      return price >= min && (max === Infinity || price <= max);
+    });
+  // Search filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    filtered_services = filtered_services.filter (
+      service =>;
+        service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.category.toLowerCase ().includes (search_query.toLowerCase ())    );    filtered_services = filtered_services.filter (service =>;
+      service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.category.toLowerCase ().includes (search_query.toLowerCase ());
+  }
+  // Sort services;
+  filtered_services.sort ((a, b) => {
+    switch (sort_by) {
+      case 'price':;
+        return (
+          parse_float (a.price.replace ('$', '').replace (', ', '')) -;
+          parse_float (b.price.replace ('$', '').replace (', ', '')));      case 'popularity':        return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, ''));
+      case 'popularity':;
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      case 'category':;
+        return a.category.locale_compare (b.category);
+      case 'roi':;
+        const a_roi = parse_float (a.roi.match (/\d+/)?.[0] || '0');
+        const b_roi = parse_float (b.roi.match (/\d+/)?.[0] || '0');
+        return b_roi - a_roi;
+      default:;
+        return a.name.locale_compare (b.name);    }      default: return a.name.locale_compare (b.name);
     }
   });
 ;
@@ -112,18 +279,67 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-      name: 'Professional',
-      price: '$199',
-      period: '/month',
-      description: 'Ideal for growing businesses and teams',
-      name: 'Enterprise',
-      price: '$499',
-      period: '/month',
-      description: 'For large organizations and enterprises',
+
+
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
+
+
+
+        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
-      icon: <Crown className="w - 6 h - 6" />,
-      color: 'from - yellow - 500 to - orange - 600',
-      popular: false;
+      icon: <Star className="w-6 h-6" />,
+      color: 'from-blue-500 to-cyan-600',
+      popular: false
+    },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
+      ];
+      icon: <Star className="w-6 h-6" />
+      color: 'from-blue-500 to-cyan-600'
+      popular: false
+    }
+      name: 'Professional'
+      price: '$199'
+      period: '/month'
+      description: 'Ideal for growing businesses and teams'
+      features: [
+        'Advanced service access'
+        'Priority support'
+        'Advanced features'
+        'API access'
+        'Advanced analytics'
+        'Custom integrations'
+      ]
+      icon: <Gem className="w-6 h-6" />
+      color: 'from-purple-500 to-pink-600'
+      popular: true
+    },    {        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations'
+      ];
+      icon: <Gem className="w-6 h-6" />
+      color: 'from-purple-500 to-pink-600'
+      popular: true
+    }
+      name: 'Enterprise'
+      price: '$499'
+      period: '/month'
+      description: 'For large organizations and enterprises'
+      features: [
+        'Full service access'
+        '24/7 dedicated support'
+        'All features'
+        'Custom development'
+        'Enterprise analytics'
+        'White-label options'
+        'SLA guarantees'
+      ]
+      icon: <Crown className="w-6 h-6" />
+      color: 'from-yellow-500 to-orange-600'
+      popular: false
+    },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
+      ];
+      icon: <Crown className="w-6 h-6" />
+      color: 'from-yellow-500 to-orange-600'
+      popular: false
     }
     {
       metric: '$15.2B',
@@ -146,6 +362,13 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
       y: 0
       opacity: 1
       transition: {
+        duration: 0.5,
+      },
+    },
+
+  return (
+    <UltraFuturisticBackground variant='holographic' intensity='high'>;
+      <div className='min - h-screen'>;
 
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -334,6 +557,9 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+              </motion.p>
+              {/* Market Stats */}
+              <motion.div
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
                 Transparent pricing for all our revolutionary micro SaaS;
                 services. Choose the perfect plan for your business with;
@@ -351,7 +577,30 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                 services. Choose the perfect plan for your business with;
                 guaranteed ROI and enterprise-grade reliability.;
               </motion && motion.p>;
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+
+
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                {marketStats.map((stat, index) => (
+                  <div key={index} className='text-center'>
+                    <div className='text-3xl font-bold text-cyan-400 mb-2'>
+                      {stat.metric}
+                    </div>
+                    <div className='text-gray-400 text-sm'>{stat.label}</div>
+                    <div className='text-gray-500 text-xs'>
+                      {stat.description}
+                    </div>                  </div>                  <div key={index} className="text-center">
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
+                    <div className="text-gray-400 text-sm">{stat.label}</div>
+                    <div className="text-gray-500 text-xs">{stat.description}</div>
+
+                  </div>
+
+                ))}
+              </motion.div>
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
@@ -372,6 +621,22 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              >
+
+
+
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              >
+
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
                 <Button
                   variant='primary'
                   size='lg'
@@ -391,6 +656,25 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                       .getElementById('services-pricing');
                       ?.scrollIntoView({ behavior: 'smooth' });
                   }
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                <Button 
+                  variant="primary" 
+                  size="lg"
+                  onClick={() => document.getElementById('pricing-tiers')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  View Pricing Tiers
+                  <DollarSign className="ml-2 w-5 h-5" />
+                </Button>
+                <Button 
+                  variant="futuristic" 
+                  size="lg"
+                  onClick={() => document.getElementById('services-pricing')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Browse All Services
                 </Button>
               </motion.div>
             </div>
@@ -401,10 +685,10 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                 <span className="text-white">{contactInfo.address}</span>
                 <Globe className="w-5 h-5 text-blue-400" />
                 <span className="text-white">{contactInfo.website}</span>
-            </div>
-          </div>
-        </section>
-        {/* Pricing Tiers */}
+
+              initial={{ opacity: 0, y: 20 }}
+
+
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -427,11 +711,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-                      ))}
-                    </div>
-                      <Button
-                        variant={tier && tier.popular ? 'futuristic' : 'primary'}
-                        size='md'
                          size="md"
                          onClick={() => window && window.open('https://ziontechgroup && ziontechgroup.com/contact_blank')}
                          className="w-full";
@@ -442,9 +721,7 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
-        {/* Services Pricing Grid */}
-        <section id='services-pricing' className='py-20'>;
-          <div className='container mx-auto px-4'>;
+
 
         {/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">
@@ -454,6 +731,16 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">;
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
+
+        {/* Services Pricing Grid */}
+        <section id='services-pricing' className='py-20'>
+          <div className='container mx-auto px-4'>
+            {/* Filters and Controls */}
+            <motion.div
+              className='mb-8'              initial={{ opacity: 0, y: 20 }}
+
+              initial={{ opacity: 0, y: 20 }}
+
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -482,15 +769,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                       </option>;
                     ))}
                   <select
-                    value={sortBy}
-                    onChange={e => setSortBy(e && e.target.value)}
-                    className='px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400';
-                  >;
-                    {sortOptions && sortOptions.map(option => (;
-                      <option key={option && option.value} value={option && option.value}>;
-                        {option && option.label}
-                      </option>;
-                    ))}
                     <input
                       type='text'
                       placeholder='Search services...'
@@ -508,12 +786,38 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                   </div>;
                 </div>;
               </div>;
+
+              whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
+
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
               variants={containerVariants}
               initial="hidden"
+            >
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  variants={itemVariants}
+                  whileHover={{ y: -5 }}>;
+                  <UltraFuturisticCard
+                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+
+                    variant={service.variant as any || 'quantum-advanced'}
+
+
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
@@ -553,18 +857,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                               className='flex items-center gap-2 text-sm'>;
                               <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
                               <span className='text-gray-300'>{feature}</span>                            </div>;
-                          <Button
-                            variant='primary'
-                            size='sm'
-                            onClick={() => window && window.open(service && service.link, '_blank')}
-                            className='w-full';
-                          >;
-                            Learn More;
-                            <ExternalLink className='ml-2 w-4 h-4' />;
-                          </Button>;
-                          <Button
-                            variant='futuristic'
-                            size='sm'
                              size="sm"
                              onClick={() => window.open(service.link, '_blank')}
                              className="w-full"
@@ -581,91 +873,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                              Get Pricing
                              <DollarSign className="ml-2 w-4 h-4" />
                            </Button>
-                          {service.icon}
-                        </div>;
-                        <div className='flex - 1'>;
-                          <div className='flex flex - col md:flex - row md:items - center md:justify - between mb - 4'>;
-                            <div>;
-                              <h3 className='text - xl font - bold text - white mb - 2'>;
-                                {service.name}
-                              </h3>;
-                              <p className='text - gray - 300 text - sm'>;
-                                {service.tagline}
-                              </p>;
-                            </div>;
-                            <div className='text - right mt - 2 md:mt - 0'>;
-                              <div className='text - 2xl font - bold text - cyan - 400'>;
-                                {service.price}
-                              </div>;
-                              <div className='text - sm text - gray - 400'>;
-                                {service.period}
-                                    <div
-                                      key={idx}
-                                      className='flex items-center gap-2 text-sm'>;
-                                      <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
-                                      <span className='text-gray-300'>;
-                                        {feature}
-                                      </span>;
-                                    </div>;
-                                  ))}
-                              </div>;
-                            </div>;
-                            <div>;
-                              <h4 className='text-sm font-semibold text-purple-400 mb-2'>;
-                                Market Info;
-                              </h4>;
-                              <div className='space-y-1 text-sm text-gray-300'>;
-                                <div>;
-                                  <span className='text-gray-400'>ROI:</span>{' '}
-                                  {service && service.roi}
-                                </div>;
-                                <div>;
-                                  <span className='text-gray-400'>Market:</span>{' '}
-                                  {service && service.marketSize}
-                                </div>;
-                                <div>;
-                                  <span className='text-gray-400'>Growth:</span>{' '}
-                                </div>;
-                              </div>;
-                            </div>;
-                          </div>;
-                            <Button
-                              variant='primary'
-                              size='sm'
-                              onClick={() =>;
-                                window && window.open(service && service.link, '_blank');
-                              }
-                            >;
-                              Learn More;
-                              <ExternalLink className='ml-2 w-4 h-4' />;
-                            </Button>;
-                            <Button
-                              variant='futuristic'
-                              size='sm'
-                          <div className="flex gap-2">
-                                                         <Button
-                               variant="primary"
-                               size="sm"
-                               onClick={() => window.open(service.link, '_blank')}
-                             >
-                               Learn More
-                               <ExternalLink className="ml-2 w-4 h-4" />
-                             </Button>
-                            >;
-                              Get Pricing;
-                              <DollarSign className='ml-2 w-4 h-4' />;
-                            </Button>                          </div>                          ;
-                          <div className="flex gap-2">;
-                                                         <Button
-                               variant="primary" 
-                               size="sm"
-                               onClick={() => window && window.open(service && service.link, '_blank')}
-                             >;
-                               Learn More;
-                               <ExternalLink className="ml-2 w-4 h-4" />;
-                             </Button>;
-                             <Button
-                               variant="futuristic" 
                                size="sm"
                                onClick={() => window && window.open('https: //ziontechgroup && ziontechgroup.com/contact_blank')}
                              >;
@@ -681,14 +888,15 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0 && 0.6 }}>;
-                <div className='text-6xl mb-4'>🔍</div>;
-                <h3 className='text-2xl font-bold text-white mb-2'>;
-                  No Services Found;
-                </h3>;
-                <p className='text-gray-400 mb-6'>;
-                  Try adjusting your search criteria or filters.;
-                </p>;
+                transition={{ duration: 0.6 }}
+              >
+                <div className='text-6xl mb-4'>🔍</div>
+                <h3 className='text-2xl font-bold text-white mb-2'>
+                  No Services Found
+                </h3>
+                <p className='text-gray-400 mb-6'>
+                  Try adjusting your search criteria or filters.
+                </p>
                 <Button
                   variant='primary'
                   onClick={() => {;
@@ -706,10 +914,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                    onClick={() => {;
                      setSearchQuery('');
                      setSelectedCategory('All');
-            )}
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              className="max-w-4xl mx-auto"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -767,7 +971,14 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                   <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+
+
                 </div>
+
               </div>
             </motion.div>
           </div>
@@ -968,3 +1179,5 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
       </div>;
     </UltraFuturisticBackground>));
 }
+
+  );

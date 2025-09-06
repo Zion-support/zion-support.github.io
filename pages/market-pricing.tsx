@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function MarketPricingPage() {
@@ -77,6 +75,8 @@ export default function MarketPricingPage() {
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Identity & SSO/SCIM</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
+
+
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
             </div>
@@ -196,10 +196,13 @@ export default function MarketPricingPage() {
                 <li > WorkOS pricing: <a className="text - cyan - 400 underline" href={`https://workos.com / pricing`} target="_blank" rel="noopener noreferrer">workos.com / pricing</a></li>;
                 <li > Okta pricing: <a className="text - cyan - 400 underline" href={`https://www.okta.com / pricing/`} target="_blank" rel="noopener noreferrer">okta.com / pricing</a></li>;
               </ul>;
-              <div className="text - sm text - slate - 400 mt - 3">Typical SMB budgets: $100–$1, 500 / month depending on MAUs and features.</div>;
             </div>;
           </div>;
         </div>;
       </div>;
-    </Layout>);
-}
+
+;
+;
+
+
+

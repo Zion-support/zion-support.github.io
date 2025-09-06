@@ -1,17 +1,22 @@
 export interface CustomerTicket {
+export interface CustomerTicket {;
   id: string;
-  customer_id: string;
+  customerId: string;
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
   category: string;
-  assigned_to?: string;
-  created_at: Date;
-  updated_at: Date;
-  resolved_at?: Date;
-  customer_satisfaction?: number;
+  assignedTo?: string;
+  createdAt: Date;
+  updatedAt: Date;
+  resolvedAt?: Date;
+  customerSatisfaction?: number;
   tags: string[];
+
+  attachments: string[],
+  conversation_history: CustomerMessage[];
+
 }
 export interface CustomerMessage {
   id: string;
@@ -30,19 +35,18 @@ export interface CustomerProfile {
   phone?: string;
   company?: string;
   plan: string;
-  total_tickets: number;
-  resolved_tickets: number;
   averageResolutionTime: number;
   customer_satisfaction: number;
   last_contact: Date;
   preferences: {
+  tags: string[];
+
 }
 export interface AIResponse {
   id: string;
   ticket_id: string;
   response: string;
   confidence: number;
-}
 export interface CustomerServiceMetrics {
   total_tickets: number;
   open_tickets: number;
@@ -50,29 +54,28 @@ export interface CustomerServiceMetrics {
   averageResolutionTime: number;
     customerSatisfaction: number
   }>
-=======
-  customer_satisfaction: number;
-  firstResponseTime: number,
-  ticketVolumeByCategory: Record < string, number>;
-  agent_performance: Record < string, {
-    tickets_resolved: number;
-    averageResolutionTime: number,
-    customer_satisfaction: number;
-  }>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface CustomerServiceRequest {
+  customerId: string;
   customer_id: string;
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   category: string;
 }
+  ticketId: string;
 export interface CustomerServiceResponse {
   ticket_id: string;
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
   estimatedResolutionTime: string;
+export class AICustomerServiceService {;
+  private apiKey: string;
+
+  private baseUrl: string
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
+    this.apiKey = apiKey
+    this.baseUrl = baseUrl
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
@@ -83,15 +86,6 @@ export interface CustomerServiceResponse {
     }
   }
   async getTicket(ticketId: string): Promise<CustomerTicket> {
-    try {
-      const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
-        headers: {
-    } catch (error) {
-      console && console.error('Error getting ticket:', error);
-      throw error
-    }
-  }
-  async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {
     try {
     } catch (error) {
       console && console.error('Error updating ticket:', error);
@@ -120,8 +114,6 @@ export interface CustomerServiceResponse {
   }
   async getCustomerProfile(customerId: string): Promise<CustomerProfile> {
     try {
-      const response = await fetch(`${this && this.baseUrl}/api/customer-service/customers/${customerId}`, {
-        headers: {
       return {
         ...data;
         lastContact: new Date(data && data.lastContact)}
@@ -132,8 +124,6 @@ export interface CustomerServiceResponse {
   }
   async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics> {
     try {
-      const response = await fetch(`${this && this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
-        headers: {
     } catch (error) {
       console && console.error('Error getting metrics:', error);
       throw error
@@ -142,8 +132,6 @@ export interface CustomerServiceResponse {
   async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
     try {
       const params = new URLSearchParams({ query, ...filters });
-      const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {
-        headers: {
     } catch (error) {
       console && console.error('Error searching tickets:', error);
       throw error
@@ -166,7 +154,21 @@ export interface CustomerServiceResponse {
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
-=======
+  id: string,;
+  customerId: string,;
+  subject: string,;
+  description: string,;
+  priority: 'low' | 'medium' | 'high' | 'urgent',;
+  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
+  category: string,;
+  assignedTo?: string,;
+  createdAt: Date,;
+  updatedAt: Date,;
+  resolvedAt?: Date,;
+  customerSatisfaction?: number,;
+  tags: string[],;
+  attachments: string[],;
+  conversationHistory: CustomerMessage[];
   next_steps: string[],
   assigned_agent?: string;
 }
@@ -406,4 +408,3 @@ if ( {) {
 }
 export const aiCustomerServiceService = new AICustomerServiceService (process.env.CUSTOMER_SERVICE_API_KEY || '');
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

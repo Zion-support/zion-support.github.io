@@ -1,94 +1,59 @@
-
-import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
-import { Badge } from '@/components/ui/badge'
-import { Star } from 'lucide-react'
-export default function ProfilePage() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
-
-  const router = useRouter()
-  const profileId = router.query.profileId as string
-  const [profileData, setProfileData] = useState<any>(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [isError, setIsError] = useState(false)
-  useEffect((,) => {
-    const fetchProfile = async () => {
-      setIsLoading(true)
-      setIsError(false)
-=======
-import { HireNowCTA } from "@/components/profile/HireNowCTA",
-import { logErrorToProduction } from '@/utils/productionLogger',
-import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
-
-export default function ProfilePage() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
-  const router = useRouter(),
-  const profileId = router.query.profileId as string,
-  const [profileData, setProfileData] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [isError, setIsError] = useState(false),
-
-  useEffect(() => {
-    const fetchProfile = async () => {
-      setIsLoading(true),
-      setIsError(false),
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         if (error) {
           throw error
         }
-        setProfileData(data)
-      } catch (error) {
-=======
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        setIsError(true),
+
+        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
+        setIsError(true)
+        setIsError(true),
         toast({
           title: "Error"
           description: "Failed to load profile. Please try again later."
           variant: "destructive"})
       } finally {
         setIsLoading(false)
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <span className="loading loading-ring loading-lg"></span>
-      </div>
-    )
+      <div className="min-h-screen flex items-center justify-center">;
+        <span className="loading loading-ring loading-lg"></span>;
+      </div>;
+    );
   }
   if (isError |!profileData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">;
+        <span className="loading loading-ring loading-lg"></span>;
+      </div>;
+    );
+  }
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>
     )
   }
+
   return (
     <>
       <SEO
         title={`${profileData.full_name} | Talent Profile`}
-=======
+        description = {profileData.bio || "View the profile of this talented individual.",}
+
 ;
   return (;
     <>;
       <SEO;
         title={`${profileData.full_name} | Talent Profile`}
         description={profileData.bio || "View the profile of this talented individual."}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
       />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
@@ -113,31 +78,31 @@ export default function ProfilePage() {
                   )}
                 </div>
                 {/* Main Info */}
-                <div className="flex-1">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h1 className="text-2xl font-bold text-white">{profileData.full_name}</h1>
-                      <p className="text-zion-cyan font-medium">{profileData.professional_title}</p>
-                    </div>
+                <div className="flex-1">;
+                  <div className="flex justify-between items-start">;
+                    <div>;
+                      <h1 className="text-2xl font-bold text-white">{profileData && profileData.full_name}</h1>;
+                      <p className="text-zion-cyan font-medium">{profileData && profileData.professional_title}</p>;
+                    </div>;
                     {/* Add Save/Unsave Button Here */}
                   </div>
                   {/* Location & Availability */}
-                  <div className="mt-2 flex flex-wrap gap-3 text-sm">
-                    {profileData.location && (
-                      <div className="flex items-center text-zion-slate-light">
-                        <MapPin className="h-4 w-4 mr-1" />
-                        <span>{profileData.location}</span>
-                      </div>
+                  <div className="mt-2 flex flex-wrap gap-3 text-sm">;
+                    {profileData && profileData.location && (;
+                      <div className="flex items-center text-zion-slate-light">;
+                        <MapPin className="h-4 w-4 mr-1" />;
+                        <span>{profileData && profileData.location}</span>;
+                      </div>;
                     )}
-                    {profileData.availability && (
-                      <div className="flex items-center text-zion-slate-light">
-                        <Clock className="h-4 w-4 mr-1" />
-                        <span>{profileData.availability}</span>
-                      </div>
+                    {profileData && profileData.availability && (;
+                      <div className="flex items-center text-zion-slate-light">;
+                        <Clock className="h-4 w-4 mr-1" />;
+                        <span>{profileData && profileData.availability}</span>;
+                      </div>;
                     )}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
               {/* Skills */}
               {profileData.skills && profileData.skills.length > 0 && (
                 <div className="mt-4">
@@ -146,8 +111,8 @@ export default function ProfilePage() {
                     {profileData.skills.map((skill: string, index: number) => (
                       <Badge key={skill + index} variant="secondary">{skill}</Badge>
                     ))}
-                  </div>
-                </div>
+                  </div>;
+                </div>;
               )}
             </div>
             {/* Bio Section */}
@@ -161,85 +126,60 @@ export default function ProfilePage() {
                 {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (
                   profileData.portfolio_links.map((link: string, index: number) => (
                     <a
-                      key={link + index}
-                      href={link}
+                      key = {link + index,}
+                      href = {link,}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-zion-cyan hover:text-white transition-colors"
-                    >
-                      <LinkIcon className="h-4 w-4 mr-2" />
+                      className="flex items-center text-zion-cyan hover:text-white transition-colors">;
+                      <LinkIcon className="h-4 w-4 mr-2" />;
                       {link}
-                    </Link>
-                  ))
-                ) : (
-                  <p className="text-zion-slate-light">No portfolio links provided.</p>
-                )}
-              </div>
             </div>
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
             </div>
             {/* Social Links */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
-              <h2 className="text-xl font-bold text-white mb-3">Connect</h2>
-              <div className="flex space-x-4">
-                {profileData.github_link && (
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
+              <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
+              <div className="flex space-x-4">;
+                {profileData && profileData.github_link && (;
                   <a
-                    href={profileData.github_link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="GitHub"
-                    title="GitHub"
-                  >
-                    <Github className="h-6 w-6" />
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
                     target="_blank"
-                    rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="Twitter"
-                    title="Twitter"
-                  >
-                    <Twitter className="h-6 w-6" />
-                  </Link>
-                )}
-                {profileData.linkedin_link && (;
-                  <a;
-                    href={profileData.linkedin_link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="LinkedIn"
-                    title="LinkedIn"
-                  >
-                    <Linkedin className="h-6 w-6" />
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
                 )}
               </div>
             </div>
           </div>
           {/* Sidebar with HireNowCTA */}
-          <div className="col-span-12 lg:col-span-4 space-y-6">
+          <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
               talentProfile={{
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
             />
             {/* Placeholder for other sidebar elements */}
-=======
+  /* Placeholder for other sidebar elements */ ;
+}</div> </div> </div> </>) ;
+}'"};
+
+
+              }}
+            />;
+            {/* Placeholder for other sidebar elements */}
           </div>;
         </div>;
       </div>;
     </>;
   );
-}
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

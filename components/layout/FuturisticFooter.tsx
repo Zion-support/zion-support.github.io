@@ -1,17 +1,34 @@
-import {;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Globe,;
-  Zap,;
-  Bot,;
-  Cloud,;
   Shield,;
   ArrowRight,;
 } from 'lucide-react';
 
-export default function FuturisticFooter() {;
+import {
+  Mail
+  Phone
+  MapPin
+  Globe
+  Zap
+  Bot
+  Cloud
+  Shield
+  ArrowRight;
+} from 'lucide-react';
+
+import {
+  Mail
+  Phone
+  MapPin
+  Globe
+  Zap
+  Bot
+  Cloud
+  Shield
+  ArrowRight;
+} from 'lucide-react';
+
+export default function FuturisticFooter() {
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
+export default function FuturisticFooter() {
 
 export default function FuturisticFooter() {;
   const currentYear = new Date().getFullYear();
@@ -63,7 +80,6 @@ export default function FuturisticFooter() {;
     },;
     { name: 'X', href: 'https://x && x.com/ziontechgroup', icon: '🐦' },;
     { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: '💻' },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
   return (
     <footer className='relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden'>;
@@ -102,8 +118,6 @@ export default function FuturisticFooter() {;
     { name: 'X', href: 'https://x.com/ziontechgroup', icon: '🐦' }
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' }]
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className='w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40'>;
                   <span className='text-lg'>{social && social.icon}</span>                </a>  const serviceCategories = [;
     { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' },;
@@ -116,7 +130,6 @@ export default function FuturisticFooter() {;
     { name: 'LinkedIn', href: 'https://www && www.linkedin.com/company/zion-tech-group', icon: '💼' },;
     { name: 'X', href: 'https://x && x.com/ziontechgroup', icon: '🐦' },;
     { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: '💻' }],;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">;
       {/* Animated background elements */}
@@ -142,8 +155,65 @@ export default function FuturisticFooter() {;
                   href={social && social.href}
                   target="_blank"
                   rel="noopener noreferrer"
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
+
+          {/* Quick Links */}
+          <div>
+            <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
+              <ArrowRight className='w-5 h-5 text-blue-400 mr-2' />
+              Quick Links
+            </h3>
+            <ul className='space-y-3'>
+              {quickLinks.map(link => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                  >              Quick Links
+            </h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
+              <Cloud className='w-5 h-5 text-green-400 mr-2' />
+              Services
+            </h3>
+            <ul className='space-y-3'>
+              {serviceCategories.map(service => (
+                <li key={service.name}>
+                  <Link
+                    href={service.href}
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                  >              Services
+            </h3>
+            <ul className="space-y-3">
+              {serviceCategories.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    href={service.href}
+                    className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+
+
+
           {/* Quick Links */}
           <div>;
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>;
@@ -170,7 +240,6 @@ export default function FuturisticFooter() {;
                     className="text - gray - 400 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block";
                   >;
                     {link.name}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
           {/* Services */}
           <div>;
@@ -198,7 +267,6 @@ export default function FuturisticFooter() {;
                     className="text - gray - 400 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block";
                   >;
                     {service.name}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
           {/* Contact Info */}
           <div>;
@@ -212,6 +280,11 @@ export default function FuturisticFooter() {;
                 <div>;
                   <p className='text-white font-medium'>Phone</p>;
                   <a
+          {/* Contact Info */}
+          <div>
+            <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
+              <Shield className='w-5 h-5 text-purple-400 mr-2' />
+              Contact Us
             </h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -268,15 +341,11 @@ export default function FuturisticFooter() {;
         </div>
       </div>
       {/* Floating elements */}
-      <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
-      <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
-    </footer>
+
 );
 }
-=======
                 className='text-gray-400 hover:text-white transition-colors duration-200'>                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
-
             <div className="flex space-x-6 text-sm">;
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">;
                 Privacy Policy;
@@ -291,7 +360,6 @@ export default function FuturisticFooter() {;
           </div>;
         </div>;
       </div>;
-
       {/* Floating elements */}
       <div className='absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse' />;
       <div className='absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000' />;
@@ -303,9 +371,6 @@ export default function FuturisticFooter() {;
     </footer>;
   );
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   </Link>;
                 </li>))}
             </ul>;
@@ -413,4 +478,3 @@ export default function FuturisticFooter() {;
       <div className="absolute top - 1/2 left - 10 w - 1 h - 1 bg - green - 400 rounded - full animate - pulse delay - 500" />;
     </footer>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

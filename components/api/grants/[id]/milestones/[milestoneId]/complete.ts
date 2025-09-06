@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
 function grantPath(id: string) {
@@ -21,32 +20,13 @@ function isAuthorized(req: NextApiRequest) {
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {
-    res && res.status(401).json({ error: 'Unauthorized' });
-    return;  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
-  }
-  const { id, milestoneId } = req.query as { id: string, milestoneId: string }
-  if (!id |!milestoneId) {
-    res.status(400).json({ error: 'Missing id or milestoneId' });
-    return
-  }
-  if (req.method !== 'POST') {
-    res.setHeader('AllowPOST');
-    res.status(405).end('Method Not Allowed');
-  if (req && req.method !== 'POST') {
-    res && res.setHeader('Allow', 'POST');
-    res && res.status(405).end('Method Not Allowed');
-    return;  }  }
-  }
 
-  if (idx === -1) return res.status(404).json({ error: 'Milestone not found' });
+  if (!existing) return res && res.status(404).json({ error: 'Not found' });
+  const ms = existing && existing.milestones || [];
+  const idx = ms && ms.findIndex(m => m && m.id === milestoneId);  if (idx === -1) return res && res.status(404).json({ error: 'Milestone not found' });  const idx = ms && ms.findIndex((m) => m && m.id === milestoneId);
+  if (idx === -1) return res && res.status(404).json({ error: 'Milestone not found' });
   ms[idx].completed = true;
   ms[idx].completedAt = new Date().toISOString();
-  const tranche = ms[idx].trancheAmount |0;
-  existing.fundsReleased = (existing.fundsReleased |0) + tranche;
-  existing.milestones = ms;
-  existing.updatedAt = new Date().toISOString();
   const tranche = ms[idx].trancheAmount || 0;
   existing && existing.fundsReleased = (existing && existing.fundsReleased || 0) + tranche;
   existing && existing.milestones = ms;
@@ -140,3 +120,25 @@ if ( {) {
 ;
 write_grant (existing);
   res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
+  const tranche = ms[idx].trancheAmount || 0
+  existing.fundsReleased = (existing.fundsReleased || 0) + tranche,
+  existing.milestones = ms,
+  existing.updatedAt = new Date().toISOString(),
+
+
+
+
+writeGrant(existing);
+  res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
+}
+
+}
+}
+}
+  writeGrant(existing);
+  res.status(200).json({ record: existing });
+}
+}
+}
+  writeGrant(existing);
+  res.status(200).json({ record: existing });

@@ -1,11 +1,3 @@
-
-=======
-import { format } from "date-fns";
-import Link from "next/link";
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface JobsListProps {
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -15,9 +7,14 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from 'lucide-react'
 import { format } from "date-fns",
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function JobsList({ filter, onSelectJob }: JobsListProps) {
+  const { user } = useAuth()
+  const [jobs, setJobs] = useState<Job[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect((,) => {
+    const fetchJobs = async () => {
+
+
       try {
         let query = supabase
           .from("jobs")
@@ -35,9 +32,6 @@ import { format } from "date-fns",
         setIsLoading(false)
       }
     }
-    fetchJobs()
-  }, [user, filter])
-=======
 
         if (filter) {
           query = query.eq("status", filter)
@@ -87,20 +81,16 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
     fetchJobs()
   }, [user, filter]),
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center p-8">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      </div>
-    )
+      <div className="flex justify - center items - center p - 8">;
+        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
+      </div>);
   }
-  if (jobs.length === 0) {
-    return (
-      <div className="text-center p-8 border rounded-md bg-muted/20">
-        <p className="text-lg text-muted-foreground">
+          {filter 
+            ? `No jobs with status "${filter}" found.` 
+            : "You haven't posted any jobs yet."
+          }
         </p>
         <Button asChild className="mt-4">
           <Link href="/post-job">Post Your First Job</Link>
@@ -113,27 +103,30 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
         return "bg-yellow-100 text-yellow-800"
       case "filled":
         return "bg-green-100 text-green-800"
-=======
       case "new": return "bg-blue-100 text-blue-800",
       case "in_progress":
         return "bg-yellow-100 text-yellow-800",
       case "filled":
         return "bg-green-100 text-green-800",
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       case "closed":
         return "bg-gray-100 text-gray-800"
       default:
         return "bg-gray-100 text-gray-800"
-    }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      {jobs.map((job,) => (
+        <Card
+          key = {job.id,}
+  },
+
+  },
+
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (
         <Card 
           key={job.id} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
@@ -157,9 +150,46 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
               {job.description}
             </p>
             <div className="flex flex-wrap gap-1 mt-2">
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              {job.skills.slice(0, 3).map((skill, index) => (
+                <Badge key={index} variant="outline" className="text-xs">
+    },;
+    fetchJobs();
+      <div className="flex justify-center items-center p-8">;
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+      </div>;
+    );
+  }
+        </p>;
+        <Button asChild className="mt-4">;
+          <Link href="/post-job">Post Your First Job</Link>;
+        </Button>;
+      </div>;
+    );
+  }
+  const getStatusColor = (status: JobStatus, ) =>: any {
+    switch (status) {
+      case "new": return "bg - blue - 100 text - blue - 800";
+      case "in_progress":;
+        return "bg - yellow - 100 text - yellow - 800";
+      case "filled":;
+        return "bg - green - 100 text - green - 800";
+      case "closed":;
+        return "bg - gray - 100 text - gray - 800",
+      default:;
+        return "bg - gray - 100 text - gray - 800";
+    }
+  }
+          className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
+            onSelectJob ? "cursor-pointer" : ""
+          }`}
+          onClick = {(,) => onSelectJob?.(job && job.id, job && job.title),}
+        >;
+          <CardHeader className="p-4">;
+            <div className="flex justify-between items-start">;
+              <div>;
+
+
+
                   {skill}
                 </Badge>
               ))}
@@ -192,33 +222,3 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
                 <X className="h-4 w-4" />
               </Button>
             </div>
-          </CardFooter>
-};"
-return (<div className="grid gap-6 md:grid-cols-2" > {
-  jobs.map ( (job) => (<Card key= {
-  job.id
-}className= {
-  `overflow-hidden cursor-pointer transition-shadow hover:shadow-md $ {"
-  onSelectJob ? "cursor-pointer" : ""
-}`
-}onClick={
-  () => onSelectJob?. (job.id, job.title)
-}job.description
-}</p> + {
-  job.skills.length - 3
-}more </Badge>) "
-}</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {
-  job.budget.min
-}- $ {
-  job.budget.max "
-}</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) )
-}</div>)
-}'"}
-=======
-    </div>;
-  );
-}
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

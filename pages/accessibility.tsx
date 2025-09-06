@@ -12,23 +12,124 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from 'react';
-import { motion } from 'framer-motion';
+  Eye
+  Ear
+  Hand
+  Brain
+  CheckCircle
+  AlertTriangle
+  Globe
+  Users
+  Shield
+  Zap
+  FileText
+  Settings
+
+  Eye,
+  Ear,
+  Hand,
+  Brain,
+  CheckCircle,
+
+  Eye, 
+  Ear, 
+  Hand, 
+  Brain, 
+  CheckCircle, 
+  AlertTriangle,
+  Globe,
+  Users,
+  Shield,
+  Zap,
+  FileText,
+  Settings;
 } from 'lucide-react';
 const accessibility_features = [;
   {
+
+import {;
+  Eye, ;
+  Ear, ;
+  Hand, ;
+  Brain, ;
+  CheckCircle, ;
+  AlertTriangle,;
+  Globe,;
+  Users,;
+  Shield,;
+  Zap,;
+  FileText,;
+  Settings;
+} from 'lucide-react';
+const accessibilityFeatures = [;
+  {;
+    title: "Visual Accessibility",;
+    description: "Features to support users with visual impairments",;
+    icon: Eye,;
+    features: [;
+      "High contrast color schemes",;
+      "Scalable text and interface elements",;
+      "Screen reader compatibility",;
+      "Alternative text for images",;
+      "Keyboard navigation support";
+    ];
+  },;
+  {;
+    title: "Auditory Accessibility",;
+    description: "Support for users with hearing impairments",;
+    icon: Ear,;
+    features: [;
+      "Video captions and transcripts",;
+      "Visual indicators for audio cues",;
+      "Text-based communication options",;
+      "Volume controls and audio descriptions",;
+      "Sign language support where applicable";
+    ];
+  },;
+  {;
+    title: "Motor Accessibility",;
+    description: "Features for users with motor impairments",;
+    icon: Hand,;
+    features: [;
+      "Keyboard-only navigation",;
+      "Voice control compatibility",;
+      "Large click targets",;
+      "Customizable interaction timing",;
+      "Switch control support";
+    ];
+  },;
+  {;
+    title: "Cognitive Accessibility",;
+    description: "Support for users with cognitive differences",;
+    icon: Brain,;
+    features: [;
+      "Clear and simple language",;
+      "Consistent navigation patterns",;
+      "Error prevention and recovery",;
+      "Progress indicators",;
+      "Customizable interface complexity";
+    ];
   }
 ];
 
+
+
 export default function AccessibilityPage() {
-export default function AccessibilityPage() {;
+interface AccessibilityProps {
+  className?: string;
+}
+
+const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
   return (
     <MainLayout
       title="Accessibility - Zion Tech Group"
@@ -262,31 +363,12 @@ export default function AccessibilityPage() {;
             </div>;
           </div>;
         </section>;
+
         <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">;
-                Have Questions About Accessibility?;
-              </h2>;
-              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">;
-                We're here to help. Contact our accessibility team for support, feedback, or questions about our accessibility features.;
-              </p>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-                <a href="mailto:accessibility@ziontechgroup && ziontechgroup.com" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">;
-                  Contact Accessibility Team;
-                </a>;
-                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">;
-                  General Contact;
-                </a>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>;
   );
 }
     title: "Visual Accessibility",

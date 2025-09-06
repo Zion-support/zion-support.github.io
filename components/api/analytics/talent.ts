@@ -1,11 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const supabase = createServerClient();
       supabase
         .from('profile_views')
         .select('id, talent_id')
@@ -24,21 +18,6 @@ export default async function handler(
         .eq('talent_id', talentId)
     ]);
     const views =
-      viewsR && viewsR.status === 'fulfilled' && viewsR && viewsR.value.data
-        ? (viewsR && viewsR.value.data as any[])
-        : [];
-    const invites =
-      invitesR && invitesR.status === 'fulfilled' && invitesR && invitesR.value.data
-        ? (invitesR && invitesR.value.data as any[])
-        : [];
-    const apps =
-      appsR && appsR.status === 'fulfilled' && appsR && appsR.value.data
-        ? (appsR && appsR.value.data as any[])
-        : [];
-    const tags =
-      tagsR && tagsR.status === 'fulfilled' && tagsR && tagsR.value.data
-        ? (tagsR && tagsR.value.data as any[])
-        : [];
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
         .map(([label, value]) => ({ label, value }))
@@ -49,7 +28,13 @@ export default async function handler(
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
       ]
-=======
+
+
+  }
+
+}
+
+}
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -133,11 +118,7 @@ function handler() {
         { label: 'node', value: 1 },
         { label: 'ai', value: 1 },
       ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

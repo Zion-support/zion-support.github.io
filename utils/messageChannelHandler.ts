@@ -1,14 +1,26 @@
-=======
-},;
+};
+};
+};
+};
+;
 ,;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
-=======
+,
+ursor/integrate-build-improve-and-re-verify-8f7d
+}}}};
+;
+;
+
+}
+}
+}
+},
+
+
 export const messageChannelHandler = {
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
@@ -20,15 +32,11 @@ export const messageChannelHandler: MessageHandler = {
   receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
   }
-=======
 };
 };
 };
 };
 ,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 // Message channel handler for real-time communication
 export class MessageChannelHandler {
   private channels: Map<string, MessageChannel> = new Map();
@@ -47,7 +55,6 @@ export class MessageChannelHandler {
     this.channels.forEach((channel, id) => {
       if (id !== excludeChannel) {
         channel.port1.postMessage(message);
-=======
 // Message channel handler for real - time communication;
 export class MessageChannelHandler {
   private channels: Map < string, MessageChannel> = new Map ();
@@ -70,12 +77,18 @@ if ( {) {
   $2
 }
         channel.port1.post_message (message);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     });
   }
 }
 export default MessageChannelHandler;
-=======
+
+
+
+
+}}}};
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+},;
+,;
+;

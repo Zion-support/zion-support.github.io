@@ -9,15 +9,11 @@ interface CategoryType {
   icon: string
 
 
-      logErrorToProduction('Categories API error:', { data: response.statusText })
-      return CATEGORIES as CategoryType[]
-    fallbackData: initialCategories})
-  const categories = data |[]
-  const isLoading = !data && !error
-
-}
-import React from "react";
-import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";"});"})
+      logErrorToProduction ('Categories API error:', { data: response.status_text }),
+      return CATEGORIES as CategoryType[];
+    fallback_data: initial_categories}),
+  const categories = data || [];
+  const is_loading = !data && !error;
 }
 const Categories: React.FC: = () => {,"
   const categories = []
@@ -134,8 +130,6 @@ const Categories: React.FC = () => {}
 export default Categories""
 "
   )}
-export: default Categories
-export default Categories," ]
 import useSWR from 'swr',;
 import { CategoryCard } from "@/components/CategoryCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -235,6 +229,3 @@ export default function Categories({ categories: initialCategories = [] }: Categ
   );
 }
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

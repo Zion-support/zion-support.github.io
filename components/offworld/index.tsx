@@ -1,21 +1,9 @@
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
   const [proposalId, setProposalId] = useState('prop-1');
   const [name, setName] = useState('');
   const [skills, setSkills] = useState('');
   const [status, setStatus] = useState('');
-
-    const res = await fetch('/api/offworld/orbit?action=chat', {
-      method: 'POST'
-      headers: { 'content-type': 'application/json' }
-      body: JSON.stringify({ from: 'anon', text: chat })
-    });
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) })
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed')
-  }
-  async function castVote() {
-    setStatus('Recording vote...');
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
   }
   async function syncProfile() {
@@ -47,7 +35,6 @@
           className='border p-2'
           value={voteChoice}
           onChange={e => setVoteChoice(e && e.target.value)}
-=======
 import {useState} from 'react';
 import Head from 'next / head';
 export default /**
@@ -159,7 +146,6 @@ function broadcast() {
           className='border p - 2';
           value={vote_choice}
           on_change={e => setVoteChoice (e.target.value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         >;
           <option value='yes'>Yes</option>;
           <option value='no'>No</option>;
@@ -179,7 +165,6 @@ function broadcast() {
         />;
         <button
           className='px-3 py-2 bg-black text-white rounded'
-
       <section className='space-y-2'>;
         <h2 className='font-semibold'>Broadcast Manifesto</h2>;
         <button
@@ -190,12 +175,9 @@ function broadcast() {
       </section>;
 
       {status && <p className='text-sm text-gray-700'>{status}</p>}
-    </div>;
-  );
+    </div>
+);
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <button;
           className='px - 3 py - 2 bg - black text - white rounded';
           on_click={cast_vote}
@@ -235,5 +217,3 @@ function broadcast() {
       </section>;
       {status && <p className='text - sm text - gray - 700'>{status}</p>}
     </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,8 +1,4 @@
-
-exports && exports.handler = async function () {
-  try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const pages = [
       '/'
       '/about'
@@ -21,7 +17,6 @@ exports && exports.handler = async function () {
         content: xml,
         message: 'chore (automation): weekly sitemap refresh',
         token,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
@@ -29,8 +24,6 @@ exports && exports.handler = async function () {
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
-    }
-=======
     // Check condition
 if ( {) {
   $2
@@ -38,23 +31,7 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'public / sitemap - autogen.xml', content: xml, message: 'chore (automation): weekly sitemap refresh', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: pages.length }) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-
-    if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'public/sitemap-autogen && autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
-    }
-  } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
-
-}
-
-=======
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,25 +1,10 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useEffect, useState } from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import TrustBadge from '../components/ui/TrustBadge';
+import TrustRadar from '../components/ui/TrustRadar';
+import RiskIndicator from '../components/ui/RiskIndicator';
+
+
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
@@ -30,19 +15,11 @@ import React, { useEffect, useState } from 'react';
   }, []);
   useEffect(() => {
     async function load() {
-export default function TrustPage() {;
-  const [userId, setUserId] = useState<string>('demo-user');
-  const [data, setData] = useState<any>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [showLogic, setShowLogic] = useState<boolean>(false);
-
   }, []);
 
   useEffect(() => {;
     async function load() {;
       setLoading(true);
-      const res = await fetch(;
-        `/api/trust/${encodeURIComponent(userId)}?analyze=true`;
       );
       const json = await res && res.json();
       setData(json);
@@ -50,42 +27,20 @@ export default function TrustPage() {;
     }
     load();
   }, [userId]);
-
-    });
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res && res.json();
-      setData(json);
-      setLoading(false);
-    }
-    load();
-  }, [userId]);
-
-  async function submitPeer(): any (type: 'endorse' | 'flag') {;
-    await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) });
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged');
-  }
-
-  async function submitAppeal(): any (e: React && React.FormEvent) {;
-    e && e.preventDefault();
-    const form = e && e.target as HTMLFormElement;
-    const formData = new FormData(form);
-    const message = formData && formData.get('message');
-    const contactEmail = formData && formData.get('email');
-    await fetch('/api/trust/appeal', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ userId, message, contactEmail }),;
-    });
+    <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
-    form && form.reset();  }
-  return (
+
+
+    form && form.reset();
+
   }
   return (
-    <EnhancedLayout>;
-      <div className='space-y-6'>;
-        <div className='flex items-center justify-between'>;
-          <h1 className='text-2xl font-semibold'>Trust & Reputation</h1>;
-          <div className='flex items-center gap-3'>;
-            <label className='text-sm inline-flex items-center gap-2'>;
+    <EnhancedLayout>
+      <div className='space-y-6'>
+        <div className='flex items-center justify-between'>
+          <h1 className='text-2xl font-semibold'>Trust & Reputation</h1>
+          <div className='flex items-center gap-3'>
+            <label className='text-sm inline-flex items-center gap-2'>
               <input
                 type='checkbox'
                 checked={showLogic}
@@ -95,15 +50,6 @@ export default function TrustPage() {;
           <h1 className="text-2xl font-semibold">Trust & Reputation</h1>
           <div className="flex items-center gap-3">
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>
-              Transparent logic;
-            </label>          </div>      <div className="space-y-6">;
-        <div className="flex items-center justify-between">;
-          <h1 className="text-2xl font-semibold">Trust & Reputation</h1>;
-          <div className="flex items-center gap-3">;
-            <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>;
-        </div>;
-        {loading && <div>Loading...</div>}
-              </div>
               <div className="bg-white dark:bg-gray-900 rounded border p-4">
                 <h2 className="font-medium mb-2">Trust Metrics</h2>
                 <TrustRadar metrics={(data.components |[]).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
@@ -114,9 +60,16 @@ export default function TrustPage() {;
                   <ul className="space-y-1">
                     {data.components.map((c: any) => (
                       <li key={c.key} className="flex justify-between">
-                        <span>{c.key}</span>
-                        <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
+
+
+  }
+  return (
+    <EnhancedLayout>
+
+
+
                       </li>
+
                     ))}
                   </ul>;
                 </div>;
@@ -125,6 +78,38 @@ export default function TrustPage() {;
                 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data && data.reasonSummary}
                 </div>;
               )}
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {data.reasonSummary && (
+                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
+                </div>
+              )}
+            </div>
+            <div className='space-y-4'>
+              <div className='bg-white dark:bg-gray-900 rounded border p-4 space-y-3'>
+                <h3 className='font-medium'>Peer Review</h3>
+                <button
+                  className='text-sm px-3 py-1 rounded bg-green-600 text-white'
+                  onClick={() => submitPeer('endorse')}
+                    <input
+                      name='email'
+                      type='email'
+                      placeholder='Contact email'
+                      className='w-full border rounded px-2 py-1 text-sm'
+                    <textarea
+                      name='message'
+                      placeholder='Explain why your score should be reconsidered'
+                      className='w-full border rounded px-2 py-1 text-sm'
+                      rows={4}
+                      required
+
+      </div>;
+    </EnhancedLayout>;
+  );
+}
+
               )}
             </div>;
           </div>;
@@ -337,3 +322,4 @@ function submit_appeal() {
       </div>;
     </EnhancedLayout>);
 }
+

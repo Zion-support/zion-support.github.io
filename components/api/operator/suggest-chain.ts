@@ -1,46 +1,23 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body || {};export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { region, stakeUsd } = req.body |{}
+  const stake = Number(stakeUsd |0);
+
   const stake = Number(stakeUsd || 0);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
   // - Region hints (very rough):
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum
-  let candidates = ['polygon', 'bnb', 'avalanche'];
-  if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];
-    candidates =
-      stake > 5000
-        ? ['arbitrum', 'optimism', 'avalanche']
-        : ['bnb', 'avalanche', 'polygon'];
-    candidates =
-      stake > 5000
-        ? ['arbitrum', 'ethereum', 'optimism']
-        : ['polygon', 'arbitrum', 'optimism'];
-  } else if (
-  ) {
-    candidates =
-      stake > 5000
-        ? ['arbitrum', 'optimism', 'ethereum']
-        : ['polygon', 'arbitrum', 'optimism'];
-  }
-    candidates = stake > 5000 ? ['arbitrumoptimismavalanche'] : ['bnbavalanchepolygon']
-  } else if (regionLc.includes('eu') |regionLc.includes('europe')) {
-    candidates = stake > 5000 ? ['arbitrumethereumoptimism'] : ['polygonarbitrumoptimism']
-  } else if (regionLc.includes('us') |regionLc.includes('na') |regionLc.includes('america')) {
-    candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism']
-  }
-  const ranked = candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] }));
-
-  res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
-}
-=======
 
   const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k] }));
   res
@@ -58,9 +35,6 @@ export default async function handler(
   const ranked = candidates && candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] }));
   res && res.status(200).json({ recommendation: ranked[0], alternatives: ranked && ranked.slice(1) })
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { CHAINS } from '../../../utils / chains';
 ;
 export default async /**
@@ -137,4 +111,3 @@ if (||) {
   const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k] }));
   res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1) });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

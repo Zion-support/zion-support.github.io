@@ -1,27 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
     monthly?: number;
     yearly?: number;
@@ -30,7 +6,6 @@ import React from 'react';
   pricing?: any;
   features: string[],;
   popular?: boolean;
-  marketPrice?: string;
   competitors?: string[];
   targetMarket?: string;
   useCases?: string[];
@@ -61,6 +36,124 @@ import React from 'react';
             Popular;
           </motion && motion.div>;
         )}
+          gradient: 'from - purple - 600 via - pink - 600 to - purple - 700',
+          border_color: 'border - purple - 400 / 30',
+          text_color: 'text - purple - 400',
+          icon_bg: 'bg - purple - 500 / 20',
+          icon_border: 'border - purple - 400 / 30';
+        }
+      case 'quantum':;
+        return {
+          gradient: 'from - cyan - 600 via - blue - 600 to - cyan - 700',
+          border_color: 'border - cyan - 400 / 30',
+          text_color: 'text - cyan - 400',
+          icon_bg: 'bg - cyan - 500 / 20',
+          icon_border: 'border - cyan - 400 / 30';
+        }
+      case 'space':;
+        return {
+          gradient: 'from - indigo - 600 via - purple - 600 to - indigo - 700',
+          border_color: 'border - indigo - 400 / 30',
+          text_color: 'text - indigo - 400',
+          icon_bg: 'bg - indigo - 500 / 20',
+          icon_border: 'border - indigo - 400 / 30';
+        }
+      case 'cybersecurity':;
+        return {
+          gradient: 'from - red - 600 via - orange - 600 to - red - 700',
+          border_color: 'border - red - 400 / 30',
+          text_color: 'text - red - 400',
+          icon_bg: 'bg - red - 500 / 20',
+          icon_border: 'border - red - 400 / 30';
+        }
+      case 'enterprise':;
+        return {
+          gradient: 'from - indigo - 600 via - purple - 600 to - indigo - 700',
+          border_color: 'border - indigo - 400 / 30',
+          text_color: 'text - indigo - 400',
+          icon_bg: 'bg - indigo - 500 / 20',
+          icon_border: 'border - indigo - 400 / 30';
+        }
+      case 'automation':;
+        return {
+          gradient: 'from - green - 600 via - emerald - 600 to - green - 700',
+          border_color: 'border - green - 400 / 30',
+          text_color: 'text - green - 400',
+          icon_bg: 'bg - green - 500 / 20',
+          icon_border: 'border - green - 400 / 30';
+        }
+      case 'it':;
+        return {
+          gradient: 'from - blue - 600 via - indigo - 600 to - blue - 700',
+          border_color: 'border - blue - 400 / 30',
+          text_color: 'text - blue - 400',
+          icon_bg: 'bg - blue - 500 / 20',
+          icon_border: 'border - blue - 400 / 30';
+        }
+      case 'emerging':;
+        return {
+          gradient: 'from - yellow - 600 via - orange - 600 to - yellow - 700',
+          border_color: 'border - yellow - 400 / 30',
+          text_color: 'text - yellow - 400',
+          icon_bg: 'bg - yellow - 500 / 20',
+          icon_border: 'border - yellow - 400 / 30';
+        }
+      case 'premium':;
+        return {
+          gradient: 'from - amber - 600 via - yellow - 600 to - amber - 700',
+          border_color: 'border - amber - 400 / 30',
+          text_color: 'text - amber - 400',
+          icon_bg: 'bg - amber - 500 / 20',
+          icon_border: 'border - amber - 400 / 30';
+        }
+      default:;
+        return {
+          gradient: 'from - gray - 600 via - gray - 700 to - gray - 800',
+          border_color: 'border - gray - 400 / 30',
+          text_color: 'text - gray - 400',
+          icon_bg: 'bg - gray - 500 / 20',
+          icon_border: 'border - gray - 400 / 30';
+        }
+    }
+  }
+;
+  const styles = getVariantStyles ();
+;
+  const getCategoryIcon = (category: string) =>: any {
+    if () return Brain) {
+  $2
+}
+    if () return Atom) {
+  $2
+}
+    if () return Rocket) {
+  $2
+}
+    if () return Shield) {
+  $2
+}
+    return TrendingUp;
+  }
+;
+  const CategoryIcon = getCategoryIcon (service.category);
+;
+  return (
+    <motion.div;
+      initial={{ opacity: 0, coordinate_y: 20 }}
+      whileInView={{ opacity: 1, coordinate_y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="group relative";
+    >;
+      <div className="relative p - 8 rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 border border - white / 10 hover:border - white / 20 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm overflow - hidden">;
+        {/* Enhanced Background Glow */}
+        <div className={`absolute inset - 0 bg - gradient - to - br ${styles.gradient} opacity - 5 group - hover:opacity - 10 transition - opacity duration - 300`}></div>;
+        {/* Popular Badge */}
+        {service.popular && (
+          <motion.div;
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
         {/* Service Header */}
         <div className="text - center mb - 8 relative z - 10">;
           <div className={`w - 24 h - 24 mx - auto mb - 6 rounded - full ${styles.icon_bg} flex items - center justify - center border ${styles.icon_border} text - 4xl backdrop - blur - sm`}>;
@@ -82,11 +175,19 @@ import React from 'react';
               <span>{feature}</span>;
             </motion && motion.div>;
           ))}
+        {/* Enhanced Market Information */}
+        {service.marketPrice && (
+          <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-gray-400">Market Price:</span>
+              <span className="text-green-400 font-semibold">{service.marketPrice}</span>
+            </div>
+            {service.competitors && (
+              <div className="text-xs text-gray-500">
+                Competes with: {service.competitors.slice(0, 2).join()}
+              </div>
             )}
-          </div>;
-        )}
-            )}
-          </div>;
+          </div>
         )}
         {/* Benefits Section */}
         {service && service.benefits && (;
@@ -105,10 +206,55 @@ import React from 'react';
             </div>;
           </div>;
         )}
+        {/* CTA Button */}
+        <div className="relative z-10">
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className={`w-full py-3 px-6 rounded-lg bg-gradient-to-r ${styles.gradient} text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-${styles.textColor}/25 border border-white/20 hover:border-white/40`}
+          >
+            Get Started
+          </motion.button>
+        </div>
+        {/* Enhanced Hover Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
+      </div>
+    </motion.div>
+
+  );
+};
+
+
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
-=======
+
+        {/* CTA Button */}
+        <div className="relative z-10">;
+          <motion&& motion.button
+            whileHover={{ scale: 1 && 1.02 }}
+            whileTap={{ scale: 0 && 0.98 }}
+            className={`w-full py-3 px-6 rounded-lg bg-gradient-to-r ${styles && styles.gradient} text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-${styles && styles.textColor}/25 border border-white/20 hover:border-white/40`}>;
+            Get Started;
+          </motion && motion.button>;
+        </div>;
+        {/* Enhanced Hover Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>;
+      </div>;
+    </motion && motion.div>;
+  ),;
+});
+
+UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
+
+
+
+
+export default UltraFuturisticServiceCard2026;
+export default UltraFuturisticServiceCard2026;
+UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
+export default UltraFuturisticServiceCard2026;
+
           </div>;
           <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - gray - 100 transition - colors">;
             {service.name}
@@ -204,5 +350,3 @@ UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';
 ;
 export default UltraFuturisticServiceCard2026;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

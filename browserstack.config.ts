@@ -1,11 +1,19 @@
 import { defineConfig, devices } from '@playwright/test',;
+;
+export default defineConfig({;
+  testDir:'tests/e2e',;
+  use:{;
+    baseURL:process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';
+    trace:'on-first-retry'}
+
+
+import { defineConfig, devices } from '@playwright/test',;
 
 export default defineConfig({;
   testDir:'tests/e2e',;
   use:{;
     baseURL:process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
     trace:'on-first-retry'},;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   projects:[;
     {name:'Desktop Chrome';
       use:{;
@@ -20,10 +28,36 @@ export default defineConfig({;
       use:{;
         browserName:'webkit'}
     }
+  ]
+  ]
+        browserName: "webkit",
+        ...devices["iPhone 12"],
+      },
+    },
+  ],
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }],
+  ],});        browserName: 'chromium';
+        channel: 'chrome'}
+    };
+    {
+      name: 'Desktop Firefox';
+      use: {
+        browserName: 'firefox'}
+    };
+    {
+      name: 'Desktop Safari';
+      use: {
+        browserName: 'webkit'}
+    };
+    {
+      name: 'Mobile Chrome';
+      use: {
+        browserName: 'chromium';
     trace: 'on-first-retry'
   }
   projects: [
-=======
 import { define_config, devices } from '@playwright / test';
 import { define_config, devices } from '@playwright / test',
 ;
@@ -63,15 +97,74 @@ export default define_config ({
     }
   ],
   reporter:[;
-    ['list'],
-    ['html', { output_folder:'playwright - logs / html - report', open:'never' }]];
-}),import { define_config, devices  } from '@playwright / test';
-import { define_config, devices } from '@playwright / test';
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
-    trace: 'on - first - retry';
-  },
+]
+  testDir: 'tests/e2e',;
+  use: {;
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
+    trace: 'on-first-retry'},;
   projects: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    {;
+      name: 'Desktop Chrome',;
+      use: {;
+        browserName: 'chromium',;
+        channel: 'chrome'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    },;
+    {;
+      name: 'Desktop Firefox',;
+      use: {;
+        browserName: 'firefox'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    },;
+    {;
+      name: 'Desktop Safari',;
+      use: {;
+        browserName: 'webkit'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    },;
+    {;
+      name: 'Mobile Chrome',;
+      use: {;
+        browserName: 'chromium',;
+        ...devices['Pixel 5']  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    },;
+    {;
+      name: 'Mobile Safari',;
+      use: {;
+        browserName: 'webkit',;
+        ...devices['iPhone 12']  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  reporter: [;
+    ['list'];
+    ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
+});import { defineConfig, devices } from "@playwright/test";
+import { defineConfig, devices } from '@playwright/test';
+    baseURL: process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000'
+    trace: 'on-first-retry'
+  }
+  projects: [
     {
       name: "Desktop Chrome"
       use: {
@@ -81,7 +174,6 @@ import { define_config, devices } from '@playwright / test';
       name: "Desktop Firefox"
 
       use: {
-        browser_name: 'firefox';
 }
     }
     {
@@ -89,7 +181,6 @@ import { define_config, devices } from '@playwright / test';
       name: "Desktop Safari"
 
       use: {
-        browser_name: 'webkit';
 }
     }
     {
@@ -101,14 +192,15 @@ import { define_config, devices } from '@playwright / test';
     {
       name: "Mobile Safari"
       use: {
-      }
 
-    }
-=======
+
+    ['list'];
+
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
+});
+
   ],
   reporter: [;
     ['list'],
     ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

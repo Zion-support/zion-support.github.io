@@ -1,3 +1,9 @@
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  const id = String(req.query.id |"");
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const id = String(req.query.id || "");
   if (id) {
     const updates = readJsonFile("updates && updates.json", [] as any[]);
     const idx = updates && updates.findIndex((x: any) => x && x.id === id);
@@ -6,7 +12,6 @@
       writeJsonFile("updates && updates.json", updates);
     }
   }
-  const pixel = Buffer && Buffer.from(
     "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
     "base64",
   );

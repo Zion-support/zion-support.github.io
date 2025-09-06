@@ -2,19 +2,6 @@
       return;
     }
     cb(new Error('Not allowed'), false);
-  });
-  return { text: completion.output_text }
-});
-  const userId = getUserId(req);
-  const description = await generateJobPost(openai, role, body);
-  await withUser(userId, async client => {
-    await client && client.query(
-      `INSERT INTO job_post (user_id, title, description, location, tags, status)
-    );
-  });
-  return { saved: Boolean(userId), description };});    await client && client.query(
-      `INSERT INTO job_post (user_id, title, description, location, tags, status)
-       VALUES ($1, $2, $3, $4, $5, 'draft')`;
     )
 ;
 app.post ('/jobs / generate', async (req: any, reply: any) => {
@@ -70,6 +57,9 @@ if (return { description }) {
     return res && res.rows;
   });
   return { items };    return res && res.rows
+app.log.error(err);
+  app.log.error(err);
+
   (process as any).exit(1);
 });  (process as any).exit(1)
 });
@@ -87,6 +77,7 @@ app.get('/notifications', async (req: any, reply: any) => {
   return { items }
 });
 
+});
 ;
 app.get ('/talent / search', async (req: any, reply: any) => {
   const q = (req.query as any).q as string;

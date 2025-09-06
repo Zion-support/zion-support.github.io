@@ -1,24 +1,13 @@
 const fs = require('fs');
-=======
 #!/usr/bin/env node
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/automation-improvements-final
 const { execSync } = require('child_process');
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 const fs = require('fs');
-=======
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 class HealthChecker {
-=======
 
 class HealthCheckMonitor {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   constructor() {
     this.reportsDir = path.join(process.cwd(), 'automation-reports');
     this.ensureReportsDir();
@@ -32,20 +21,14 @@ class HealthCheckMonitor {
 
   log(message) {
     const timestamp = new Date().toISOString();
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     try {
       fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
       console.error('Failed to write to log file: ', error.message);
     }
-=======
     console.log(`[${timestamp}] ${message}`);
->>>>>>> origin/main
   }
-=======
-=======
     try {
       fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
       fs.appendFileSync(this.logFile, logMessage);
@@ -54,8 +37,6 @@ class HealthCheckMonitor {
     }
   }
 
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   async checkDependencies() {
     this.log('Checking dependencies.');
     try {
@@ -180,13 +161,10 @@ class HealthCheckMonitor {
       this.issues.push(`Security check failed: ${error.message}`);
       this.log(`ERROR: Security check failed: ${error.message}`, 'ERROR');
       return false;
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     }
   }
 
   async checkDiskSpace() {
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     try {
       const result = execSync('df -h .', { stdio: 'pipe', encoding: 'utf8' });
       const lines = result.trim().split('\n');
@@ -213,9 +191,6 @@ class HealthCheckMonitor {
   async runAllChecks() {
     this.log('Starting comprehensive health check.');
     
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const checks = [
       { name: 'Build Status', command: 'npm run build' },
       { name: 'Test Status', command: 'npm run test:smoke' },
@@ -241,7 +216,6 @@ class HealthCheckMonitor {
     }
 
     const report = {
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       timestamp: new Date().toISOString(),
       totalChecks: checks.length,
       passedChecks,
@@ -259,29 +233,21 @@ class HealthCheckMonitor {
       },
       recommendations: this.generateRecommendations()
     };
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     
     }
->>>>>>> origin/automation-improvements-final
     
     return report;
   }
 }
     });
 }
-=======
 // Run health check
 const healthChecker = new HealthChecker();
 healthChecker.runHealthCheck().catch(console.error);
-=======
-=======
 
 module.exports = HealthChecker;
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+const { execSync } = require('child_process');
+#!/usr/bin/env node
 const { execSync } = require('child_process');
 
 console.log('🏥 Running Health Check...');
@@ -301,7 +267,250 @@ checks.forEach(check => {
     console.log(`❌ ${check.name}: FAILED`);
   }
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2197
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+});
+});
+      const lines = stats.split('\n');
+      const rootLine = lines[1];
+      const usage = rootLine.split(/\s+/)[4];
+      this.healthCheck.checks.disk = {}
+        status: usage.includes('%') && parseInt(usage) < 90 ? 'ok' : 'warning',
+        details: `Disk usage: ${usage}`,`
+        message: usage.includes('%') && parseInt(usage) < 90 ? 'Disk space is healthy' : 'Disk space is low'
+      };
+    } catch (error) {}
+      this.healthCheck.checks.disk = {}
+        status: 'error',
+        message: 'Failed to check disk space'
+      };
+    };
+  };
+  async checkMemory() {}
+    try {}
+      const mem = execSync('free -h', { encoding: 'utf8' }
+});
+      this.healthCheck.checks.memory = {}
+        status: 'ok',
+        details: mem.split('\n')[1],
+        message: 'Memory check completed'
+      };
+    } catch (error) {}
+      this.healthCheck.checks.memory = {}
+        status: 'error',
+        message: 'Failed to check memory'
+      };
+    };
+  };
+  async checkBuild() {}
+    try {}
+      execSync('npm run build', { stdio: 'pipe' }
+});
+      this.healthCheck.checks.build = {}
+        status: 'ok',
+        message: 'Build successful'
+      };
+    } catch (error) {}
+      this.healthCheck.checks.build = {}
+        status: 'error',
+        message: 'Build failed'
+      };
+    };
+  };
+  async checkLint() {}
+    try {}
+      execSync('npm run lint', { stdio: 'pipe' }
+});
+      this.healthCheck.checks.lint = {}
+        status: 'ok',
+        message: 'Linting passed'
+      };
+    } catch (error) {}
+      try {}
+        execSync('npm run lint:fix', { stdio: 'pipe' }
+});
+        this.healthCheck.checks.lint = {}
+          status: 'warning',
+          message: 'Linting issues were auto-fixed'
+        };
+      } catch (fixError) {}
+        this.healthCheck.checks.lint = {}
+          status: 'error',
+          message: 'Linting failed and could not be auto-fixed'
+        };
+      };
+    };
+  };
+  async checkTypeCheck() {}
+    try {}
+      execSync('npm run type-check', { stdio: 'pipe' }
+});
+      this.healthCheck.checks.typeCheck = {}
+        status: 'ok',
+        message: 'Type checking passed'
+      };
+    } catch (error) {}
+      this.healthCheck.checks.typeCheck = {}
+        status: 'error',
+        message: 'Type checking failed'
+      };
+    };
+  };
+  async checkSecurity() {}
+    try {}
+      execSync('npm audit', { stdio: 'pipe' }
+});
+      this.healthCheck.checks.security = {}
+        status: 'ok',
+        message: 'No security vulnerabilities found'
+      };
+    } catch (error) {}
+      try {}
+        execSync('npm audit fix --force', { stdio: 'pipe' }
+});
+        this.healthCheck.checks.security = {}
+          status: 'warning',
+          message: 'Security vulnerabilities were auto-fixed'
+        };
+      } catch (fixError) {}
+        this.healthCheck.checks.security = {}
+          status: 'error',
+          message: 'Security vulnerabilities found and could not be auto-fixed'
+        };
+      };
+    };
+  };
+  determineOverallStatus() {}
+    const checks = Object.values(this.healthCheck.checks);
+    const hasErrors = checks.some(check => check.status === 'error');
+    const hasWarnings = checks.some(check => check.status === 'warning');
+    if (hasErrors) {}
+      this.healthCheck.status = 'unhealthy';
+    } else if (hasWarnings) {}
+      this.healthCheck.status = 'warning';
+    } else {}
+      this.healthCheck.status = 'healthy';
+    };
+  };
+  saveReport() {}
+    const reportPath = path.join(process.cwd(), 'health-report.json');
+    try {}
+      fs.writeFileSync(reportPath, JSON.stringify(this.healthCheck, null, 2));
+      console.log(`Health report saved to ${reportPath}`);
+    } catch (error) {}
+      console.error('Failed to save health report:', error);
+    };
+  };
+};
+// Run if called directly;
+if (require.main === module) {}
+  const checker = new HealthChecker();
+  checker.runAllChecks().then(success => {})
+    console.log(`Health check ${success ? 'passed' : 'failed'}`);
+    process.exit(success ? 0 : 1);
+  }
+});
+};
+module.exports = HealthChecker;
+#!/usr/bin/env node
+/**
+ * Health Check Script for Zion Tech Group Automation System
+ * Performs comprehensive health checks and reports system status
+ */
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+console.log('🩺 Zion Tech Group - System Health Check');
+console.log('');
+const healthReport = {
+    timestamp: new Date().toISOString(),
+    status: 'healthy',
+    checks: {},
+    summary: {
+        total: 0,
+        passed: 0,
+        failed: 0,
+        warnings: 0
+    }
+};
+function runCheck(name, checkFunction) {
+    healthReport.summary.total++;
+    console.log(`\n🔍 Checking: ${name}`);
+    try {
+        const result = checkFunction();
+        if (result.status === 'pass') {
+            healthReport.checks[name] = result;
+            healthReport.summary.passed++;
+            console.log(`✅ ${name}: ${result.message}`);
+        } else if (result.status === 'warning') {
+            healthReport.checks[name] = result;
+            healthReport.summary.warnings++;
+            console.log(`⚠️  ${name}: ${result.message}`);
+        } else {
+            healthReport.checks[name] = result;
+            healthReport.summary.failed++;
+            console.log(`❌ ${name}: ${result.message}`);
+        }
+    } catch (error) {
+        healthReport.checks[name] = {
+            status: 'fail',
+            message: `Error: ${error.message}`,
+            error: error.toString()
+        };
+        healthReport.summary.failed++;
+        console.log(`❌ ${name}: Error - ${error.message}`);
+
+    const results = [];
+    let passedChecks = 0;
+
+    for (const check of checks) {
+      try {
+        this.log(`🔍 Running ${check.name}...`);
+        execSync(check.command, { stdio: 'pipe' });
+        console.log(`✅ ${check.name} OK`);
+        results.push({ name: check.name, status: 'passed', error: null });
+        passedChecks++;
+      } catch (error) {
+        console.log(`❌ ${check.name} FAILED`);
+        results.push({ name: check.name, status: 'failed', error: error.message });
+      }
+    }
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalChecks: checks.length,
+      passedChecks,
+      failedChecks: checks.length - passedChecks,
+      results,
+      overallHealth: passedChecks === checks.length ? 'healthy' : 'unhealthy'
+    };
+
+    const reportPath = path.join(this.reportsDir, 'health-check-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log(`📊 Health check completed! Report saved to: ${reportPath}`);
+    this.log(`📈 Overall Health: ${report.overallHealth} (${passedChecks}/${checks.length} checks passed)`);
+    
+    return report;
+  }
+}
+
+// Run health check
+const healthChecker = new HealthChecker();
+healthChecker.runHealthCheck().catch(console.error);
+
+module.exports = HealthChecker;
+const { execSync } = require('child_process');
+console.log('🏥 Running Health Check...');
+const checks = [
+  { name: 'Build Status', command: 'npm run build' },
+  { name: 'Test Status', command: 'npm run test:smoke' },
+  { name: 'Lint Status', command: 'npm run lint:check' },
+  { name: 'Type Check', command: 'npm run type-check' }
+];
+checks.forEach(check => {
+  try {
+    execSync(check.command, { stdio: 'pipe' });
+    console.log(`✅ ${check.name}: OK`);
+  } catch (error) {
+    console.log(`❌ ${check.name}: FAILED`);
+  }
+});

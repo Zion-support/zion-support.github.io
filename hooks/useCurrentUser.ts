@@ -1,4 +1,7 @@
 import useSWR from 'swr';
+export function useCurrentUser() {
+
+export function useCurrentUser() {;
 
 export function useCurrentUser() {
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher);
@@ -7,7 +10,6 @@ export function useCurrentUser() {
     loading: !data && !error
     error
     mutate
-=======
 ;
 const fetcher = (url: string) =>: any fetch (url).then (r => (r.ok ? r.json () : null));
 ;
@@ -21,12 +23,8 @@ function useCurrentUser() {
     loading: !data && !error,
     error,
     mutate,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
     loading: !data && !error;
     mutate}
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

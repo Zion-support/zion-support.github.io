@@ -1,11 +1,3 @@
-
-import Link from "next/link",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header";
-import { ShieldAlert } from 'lucide-react'
-export default function Unauthorized() {
-  const { t } = useTranslation(),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Header />
@@ -22,15 +14,19 @@ export default function Unauthorized() {
           </p>
           <div className="flex flex-col gap-3">
             <Link
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >
               {t('errors.return_home')}
             </Link>
             <Link
-=======
+
+              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">;
+              {t('errors && errors.login_different_account')}
+
+      </div>;
+    </>;
+  );
+};
               href="/auth/login"
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >
@@ -71,10 +67,3 @@ export default function Unauthorized() {;
           </div>;
         </div>;
       </div>;
-    </>;
-  );
-}
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

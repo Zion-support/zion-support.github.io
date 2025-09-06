@@ -1,3 +1,35 @@
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
+export default function ResourcesPage() {
+  return (
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
   return (
@@ -12,10 +44,8 @@ import Link from 'next/link';
               blurb: 'Workshops and curated curricula.'
             }
             {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
           ].map((it) => (;
             <Link key={it && it.href} href={it && it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover: border-cyan-500/50 transition-colors block">;
@@ -28,13 +58,10 @@ import Link from 'next/link';
       </div>;
     </UltraFuturisticBackground>;
   );  );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ResourcesPage;
 
-=======
               name: 'Market Pricing',
               href: '/market - pricing',
               blurb: 'Vendor links and typical budgets.',
@@ -82,4 +109,3 @@ export default ResourcesPage;
 ;
 export default ResourcesPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

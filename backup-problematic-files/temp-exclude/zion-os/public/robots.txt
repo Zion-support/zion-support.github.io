@@ -1,6 +1,22 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -22,5 +38,48 @@ Allow: /privacy
 Allow: /terms
 Allow: /cookies
 
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/temp-exclude/zion-os/public/robots.txt
 # Crawl delay (optional)
 Crawl-delay: 1
+=======
+=======
+<<<<<<< HEAD:public/robots.txt.backup.1756000986
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+# Crawl delay
+=======
+# Sitemaps
+Sitemap: https://zion.app/sitemap.xml
+Sitemap: https://zion.app/sitemap.txt
+
+# Crawl-delay
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+Crawl-delay: 1
+# Crawl delayCrawl-delay: 1
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+# Crawl delayCrawl-delay: 1
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+# Crawl delayCrawl-delay: 1
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+<<<<<<< HEAD
+>>>>>>> 7cf12841373f145842e9be71de39162cce6db040:public/robots.txt.backup.1756000986
+=======
+=======
+# Crawl delay (optional)
+Crawl-delay: 1
+>>>>>>> origin/main:backup-problematic-files/temp-exclude/zion-os/public/robots.txt
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e

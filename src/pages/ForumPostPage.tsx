@@ -1,31 +1,12 @@
-
-import { useState } from "react",
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from 'lucide-react'
-import { formatDistanceToNow, format } from "date-fns",
-import { ForumPost, ForumReply } from "@/types/community",
-import { useAuth } from "@/hooks/useAuth",
-import ReplyCard from "@/components/community/ReplyCard",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine-tuning",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   authorId: "user1",
   authorName: "Alex Johnson",
   authorAvatar: "https://i.pravatar.cc/150?img=3",
   authorRole: "Verified Talent",
   categoryId: "ai-tools",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   createdAt: "2025-04-01T12:00:00Z",
   updatedAt: "2025-04-01T12:00:00Z",
   upvotes: 48,
@@ -34,13 +15,10 @@ const mockPost: ForumPost = {
   isAnswered: true,
   isFeatured: true
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Mock data for replies
 const mockReplies: ForumReply[] = [
   {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
     id: "reply2",
     postId: "1",
@@ -57,7 +35,6 @@ const mockReplies: ForumReply[] = [
     id: "reply3",
     postId: "1",
     content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     authorId: "user4",
     authorName: "Emma Davis",
     authorRole: "ML Research Lead",
@@ -66,7 +43,6 @@ const mockReplies: ForumReply[] = [
     upvotes: 15,
     downvotes: 0,
     isAnswer: true
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
     id: "reply4",
     postId: "1",
@@ -78,13 +54,22 @@ const mockReplies: ForumReply[] = [
     upvotes: 4,
     downvotes: 0
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
   // Cast the result instead to provide the expected shape.
-=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
   const router = useRouter(),
   const postId = router.query.postId as string,
   const { user } = useAuth(),
@@ -118,7 +103,6 @@ export default function ForumPostPage() {
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`/auth/login?returnTo=${returnTo}`),
       return
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     setPost({ ...post, upvotes: post.upvotes + 1 }),
@@ -216,7 +200,6 @@ export default function ForumPostPage() {
   },
 
   const handlePinPost = () => {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setPost({ ...post, isPinned: !post.isPinned }),
     
     toast({
@@ -225,7 +208,6 @@ export default function ForumPostPage() {
   },
 
   const handleLockPost = () => {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setPost({ ...post, isLocked: !post.isLocked }),
     
     toast({
@@ -234,6 +216,140 @@ export default function ForumPostPage() {
   },
   
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Mock data for a forum post;
+const mockPost: ForumPost = {;
+  id: "1",;
+  title: "Best practices for AI model fine-tuning",;
+  createdAt: "2025-04-01T12:00:00Z",;
+  updatedAt: "2025-04-01T12:00:00Z",;
+  upvotes: 48,;
+  downvotes: 2,;
+  replyCount: 4,;
+  isAnswered: true,;
+  isFeatured: true;
+// Mock data for replies;
+const mockReplies: ForumReply[] = [;
+  {;
+    id: "reply1",;
+    postId: "1",;
+    content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",;
+    authorId: "user2",;
+    authorName: "Sarah Chen",;
+    createdAt: "2025-04-01T14:30:00Z",;
+    updatedAt: "2025-04-01T14:30:00Z",;
+    upvotes: 12,;
+    downvotes: 0;
+    authorId: "user3",;
+    authorName: "Michael Wong",;
+    authorRole: "AI Engineer",;
+    createdAt: "2025-04-01T16:15:00Z",;
+    updatedAt: "2025-04-01T16:15:00Z",;
+    upvotes: 8,;
+    downvotes: 0;
+    authorId: "user4",;
+    authorName: "Emma Davis",;
+    authorRole: "ML Research Lead",;
+    createdAt: "2025-04-02T09:45:00Z",;
+    updatedAt: "2025-04-02T09:45:00Z",;
+    upvotes: 15,;
+    downvotes: 0,;
+    isAnswer: true;
+  {;
+    id: "reply4",;
+    postId: "1",;
+    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",;
+    authorId: "user5",;
+    authorName: "David Lin",;
+    createdAt: "2025-04-02T11:20:00Z",;
+    updatedAt: "2025-04-02T11:20:00Z",;
+    upvotes: 4,;
+    downvotes: 0;
+  }
+export default function ForumPostPage() {;
+  // Using `useParams` without type arguments avoids issues when TypeScript;
+  // can't determine the generic type for the helper from React Router.;
+  // Cast the result instead to provide the expected shape.;
+    id: "reply1",
+    post_id: "1",
+    content: "Great post! I've had similar experiences with data preparation being the key to successful fine - tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
+    author_id: "user2",
+    author_name: "Sarah Chen",
+    author_avatar: "https://i.pravatar.cc / 150?img = 5",
+    created_at: "2025 - 04 - 01T14:30:00Z",
+    updated_at: "2025 - 04 - 01T14:30:00Z",
+    upvotes: 12,
+    downvotes: 0;
+  }
+  {
+    id: "reply2",
+    post_id: "1",
+    content: "Have you tried using LoRA or QLoRA for efficient fine - tuning? I've found them to be much more resource - friendly while maintaining good performance.",
+    author_id: "user3",
+    author_name: "Michael Wong",
+    author_role: "AI Engineer",
+    created_at: "2025 - 04 - 01T16:15:00Z",
+    updated_at: "2025 - 04 - 01T16:15:00Z",
+    upvotes: 8,
+    downvotes: 0;
+  }
+  {
+    id: "reply3",
+    post_id: "1",
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine - tuning process.\n\n_also, when fine - tuning language models, I've found that carefully crafting your prompts / templates for training can make a huge difference in the quality of the outputs.";
+    author_id: "user4",
+    author_name: "Emma Davis",
+    author_role: "ML Research Lead",
+    created_at: "2025 - 04 - 02T09:45:00Z",
+    updated_at: "2025 - 04 - 02T09:45:00Z",
+    upvotes: 15,
+    downvotes: 0,
+    is_answer: true;
+  }
+  {
+    id: "reply4",
+    post_id: "1",
+    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",
+    author_id: "user5",
+    author_name: "David Lin",
+    created_at: "2025 - 04 - 02T11:20:00Z",
+    updated_at: "2025 - 04 - 02T11:20:00Z",
+    upvotes: 4,
+    downvotes: 0;
+  }
+];
+export default /**
+ * ForumPostPage - Function description
+ */
+function ForumPostPage() {
+  // Using `use_params` without type arguments avoids issues when TypeScript;
+  // can't determine the generic type for the helper from React Router.;
+  // Cast the result instead to provide the expected shape.;
+  const router = use_router ();
+  const post_id = router.query.post_id as string;
+  const { user } = use_auth ();
+  const { toast } = use_toast ();
+  const [post, set_post] = useState (mock_post);
+  const [replies, set_replies] = useState (mock_replies);
+  // Check if this is the user's own post;
+  const is_author = user?.id === post?.author_id;
+  // Check if user is admin / mod;
+  const isAdminOrMod = user?.user_type === 'admin' || user?.role === 'admin';
+      return;
+    }
+  const handlePinPost = () =>: any {
+    // Check condition
+if (return) {
+  $2
+}
+    set_post ({ ...post, is_pinned: !post.is_pinned }),
+  const handleLockPost = () =>: any {
+    // Check condition
+if (return) {
+  $2
+}
+    set_post ({ ...post, is_locked: !post.is_locked }),
+  const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
+  const formatted_date = format (new Date (post.created_at), "MMMM d, yyyy 'at' h: mm a"),
+}
+  );
+}

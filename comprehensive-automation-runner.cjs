@@ -1,3 +1,9 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
 /**
  * Comprehensive Automation Runner
  * Runs all automation scripts and provides comprehensive testing and improvement
@@ -14,12 +20,38 @@ class ComprehensiveAutomationRunner {
       optimizations: 0,
       errors: []
     };
+  }
+
+  ensureLogDir() {
+    if (!fs.existsSync(this.logDir)) {
+      fs.mkdirSync(this.logDir, { recursive: true });
+    }
+  }
+
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = {
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️',
+      'PROGRESS': '🔄'
+    }[type] || 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  async runCommand(command, description, timeout = 30000) {
+    this.log(`Running: ${description}`, 'PROGRESS');
     try {
       const result = execSync(command, { 
         encoding: 'utf8', 
         stdio: 'pipe',
         timeout: timeout 
       });
+      this.log(`${description} completed successfully`, 'SUCCESS');
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`${description} failed: ${error.message}`, 'ERROR');
       this.results.errors.push({
         command,
         description,
@@ -65,14 +97,71 @@ class ComprehensiveAutomationRunner {
     this.results.buildSuccess = buildSuccess;
     return buildSuccess;
   }
+
   async runTests() {
     this.log('🧪 Running comprehensive tests...');
+    const testTasks = [
+      { command: 'npm run test:smoke', description: 'Smoke Tests' },
+      { command: 'npm test -- --passWithNoTests', description: 'Jest Tests' }
+    ];
+
+    let testsPassed = 0;
+    for (const task of testTasks) {
+      const result = await this.runCommand(task.command, task.description);
+      if (result.success) {
+        testsPassed++;
+      }
+    }
+    this.results.testsPassed = testsPassed;
+    return testsPassed;
+  }
+
+  async runAllAutomations() {
+    this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
+    
+    try {
+      await this.runSyntaxFixes();
+      await this.runBuildProcess();
+      await this.runTests();
+      this.generateFinalReport();
+    } catch (error) {
+      this.log(`Automation failed: ${error.message}`, 'ERROR');
+      process.exit(1);
     }
   }
+
+  generateFinalReport() {
+    const duration = Date.now() - this.startTime;
+    const report = {
+      timestamp: new Date().toISOString(),
+      duration: `${Math.round(duration / 1000)}s`,
+      results: this.results,
+      summary: {
+        syntaxFixes: this.results.syntaxFixes,
+        buildSuccess: this.results.buildSuccess,
+        testsPassed: this.results.testsPassed,
+        totalErrors: this.results.errors.length,
+      },
+    };
+
+    const reportPath = path.join(process.cwd(), 'comprehensive-automation-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log('📊 Final Report Generated', 'SUCCESS');
+    this.log(`✅ Syntax Fixes: ${report.summary.syntaxFixes}`);
+    this.log(`🏗️ Build Success: ${report.summary.buildSuccess}`);
+    this.log(`🧪 Tests Passed: ${report.summary.testsPassed}`);
+    this.log(`❌ Total Errors: ${report.summary.totalErrors}`);
+  }
 }
-if (require.main === module) {
-  const deployment = new DeploymentAutomation();
-}
+
 // Run if called directly
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
+  runner.runAllAutomations().catch(error => {
+    console.error('Comprehensive automation runner failed:', error);
+    process.exit(1);
+  });
+}
+
+module.exports = ComprehensiveAutomationRunner;

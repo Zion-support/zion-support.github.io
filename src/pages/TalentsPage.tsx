@@ -1,10 +1,9 @@
-=======
+
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
-import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';
 import { TALENT_PROFILES  } from '@/data/talentData';
 import { TalentProfile  } from '@/types/talent';
@@ -36,6 +35,3 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
     )
   }
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

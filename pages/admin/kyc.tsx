@@ -1,6 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
+import React, { useEffect, useState } from 'react',;
+import Head from 'next/head',;
+import type { KycProfile } from '../../utils/kyc',;
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+import type { KycProfile } from '../../utils/kyc';
+
+
+
+
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+import type { KycProfile } from '../../utils/kyc';
+
+
+
+
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+import type { KycProfile } from '../../utils/kyc';
 export default function AdminKycPage() {
   const [queue, setQueue] = useState<KycProfile[]>([])
   const [reason, setReason] = useState<string>('')
@@ -14,7 +34,41 @@ export default function AdminKycPage() {
   }, [])
   async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
     const res = await fetch('/api/admin/kyc-queue', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ userId, action, reason: reason |undefined })})
+    const data = await res.json()
 
+    if (data.ok) load()
+  }
+  const [queue, setQueue] = useState<KycProfile[]>([]);
+  const [reason, setReason] = useState<string>('');
+  async function load() {
+    const res = await fetch('/api/admin/kyc-queue');
+    const data = await res.json();
+    if (data.ok) setQueue(data.queue);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  useEffect(() => {
+    load();
+  }, []);
+  async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
+    const res = await fetch('/api/admin/kyc-queue', {
+
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId, action, reason: reason || undefined })}),
+    const data = await res.json();
+    if (data.ok) load()
+  }
+
+    if (data.ok) load()
+  }
+
+}
   return (
     <>
       <Head>
@@ -33,6 +87,12 @@ export default function AdminKycPage() {
             <div key={p.userId} className="border rounded p-4">
               <div className="flex items-center justify-between">
                 <div>
+                  )}
+                  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </div>
                 <div className="flex gap-2">
                   <button onClick={() => act(p.userId, 'approve')} className="px-3 py-1 rounded bg-green-600 text-white">Approve</button>
@@ -48,6 +108,23 @@ export default function AdminKycPage() {
                       <div>Filename: {d.filename}</div>
                       <div>Uploaded: {new Date(d.uploadedAt).toLocaleString()}</div>
                     </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+    </>
+  ),
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+}
+
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 import type { KycProfile } from '../../utils / kyc',
@@ -128,3 +205,5 @@ function act() {
       </main>;
     </>);
 }
+
+

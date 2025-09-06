@@ -10,16 +10,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(200).json({ ok: true })
 }
-  createSessionCookie,
-  validate_credentials,
-} from '../../../utils / auth - utils';import { createSessionCookie, validate_credentials } from '../../../utils / auth - utils';
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
 }
     return res.status (405).json ({ error: 'Method not allowed' });
   }

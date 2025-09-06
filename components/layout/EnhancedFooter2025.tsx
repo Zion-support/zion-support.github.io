@@ -1,3 +1,52 @@
+import { motion } from 'framer-motion';
+
+  Phone
+  Mail
+  MapPin
+  Star
+  ArrowRight
+  Brain
+  Atom
+  Shield
+  Rocket
+  Target
+  Microscope
+  Zap
+  Globe
+  Database
+  Lock
+  Cloud
+  BarChart3
+  Twitter
+  Linkedin
+  Github
+  Youtube
+  Instagram;} from 'lucide-react';import {
+import { 
+
+
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  Microscope,
+  Zap,
+  Globe,
+  Database,
+  Lock,
+  Cloud,
+  BarChart3,
+  Twitter,
+  Linkedin,
+  Github,
+  Youtube,;
+  Instagram,;} from 'lucide-react';import { ;
   Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
@@ -84,65 +133,10 @@ const serviceCategories = [
     ];
   }
 ];
-;
-const company_links = [;
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News', href: '/news' },
-  { name: 'Case Studies', href: '/case - studies' },
-  { name: 'Blog', href: '/blog' },
-];
-;
-const legal_links = [;
-  { name: 'Privacy Policy', href: '/privacy' },
-  { name: 'Terms of Service', href: '/terms' },
-  { name: 'Cookie Policy', href: '/cookies' },
-  return (
-    <footer className='relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-gray-800/50'>;
-      {/* Background Effects */}
-        {/* Main Footer Content */}
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12'>;
-            {/* Company Info */}
-                    Future Technology Solutions;
-                  </div>;
-                </div>;
-              </div>;
-                Leading the future with revolutionary AI, quantum computing, and;
-                emerging technology solutions that transform businesses;
-                worldwide.;
-              </p>;
-              {/* Contact Info */}
-              <div className='space-y-3'>;
-                <div className='flex items-center space-x-3 text-gray-300'>;
-                  <Phone className='w-4 h-4 text-cyan-400' />;
-                  <a
-                    href={`tel:${contactInfo && contactInfo.mobile}`}
-                    className='hover:text-cyan-400 transition-colors'>;
-                    {contactInfo && contactInfo.mobile}
-                  </a>;
-                </div>;
-                <div className='flex items-center space-x-3 text-gray-300'>;
-                  <Mail className='w-4 h-4 text-purple-400' />;
-                  <a
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
-      <div className="relative z-10">
-                    href={`mailto:${contactInfo && contactInfo.email}`}
-                    className='hover:text-purple-400 transition-colors'>;
-                    {contactInfo && contactInfo.email}
-                  </a>;
-                </div>;
-                <div className='flex items-center space-x-3 text-gray-300'>;
-                  <MapPin className='w-4 h-4 text-pink-400' />;
-                  <span className='text-sm'>{contactInfo && contactInfo.address}</span>                </div>      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>;
-
-      <div className="relative z-10">;
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">;
             {/* Company Info */}
-
             {/* Service Categories */}
             {serviceCategories && serviceCategories.map((category, index) => (;
               <motion&& motion.div
@@ -151,6 +145,21 @@ const legal_links = [;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+
+              >
+                <div className='flex items-center space-x-3'>
+                  <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
+                    <category.icon className='w-4 h-4 text-white' />
+                  </div>
+                  <h3 className='text-lg font-semibold text-white'>
+                    {category.title}
+                  </h3>
+                </div>
+                <div className='space-y-2'>
+                  {category.services.map(service => (
+                    <Link
+                      key={service.name}
+                      href={service.href}
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                     <category.icon className="w-4 h-4 text-white" />
@@ -168,6 +177,24 @@ const legal_links = [;
                     {category && category.title}
                   </h3>;
                 </div>;
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+                      {service.name}
+
+          </div>;
+
+
+
+          {/* Additional Links */}
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
+
+
                       key={service.name}
                       href={service.href}
                       className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200 text - sm";
@@ -184,8 +211,48 @@ const legal_links = [;
               <div className='space-y-2'>;
                 {companyLinks && companyLinks.map(link => (;
                   <Link
+            <div>
+              <h4 className="text-white font-semibold mb-4">Company</h4>
+              <div className="space-y-2">
+                {companyLinks.map((link) => (
+                  <Link
+                    </Link>))}
+                </div>;
+              </motion.div>))}
+          </div>;
+          {/* Additional Links */}
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 mt - 12 pt - 8 border - t border - gray - 800 / 50'>;
+            {/* Company Links */}
+            <div>;
+              <h4 className='text - white font - semibold mb - 4'>Company</h4>;
+              <div className='space - y-2'>;
+                {company_links.map (link => (
+                  <Link;
                     key={link.name}
                     href={link.href}
+                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                  >
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
+
+                  >
+
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+                    {link.name}
+
+              </div>;
+            </div>;
+
+
                     className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
                   >;
                 ))}
@@ -201,25 +268,72 @@ const legal_links = [;
               <div className="space-y-2">;
                 {legalLinks && legalLinks.map((link) => (;
                   <Link
-                    key={link && link.name}
-                    href={link && link.href}
+                    key={link.name}
+                    href={link.href}
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >              <h4 className="text-white font-semibold mb-4">Legal</h4>
+              <div className="space-y-2">
+                {legalLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
                     className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div>
+              <h4 className='text-white font-semibold mb-4'>Follow Us</h4>
+              <div className='flex space-x-4'>
+                {socialLinks.map(social => (                  <a              <h4 className="text-white font-semibold mb-4">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+
+
+
+
+            {/* Social Links */}
+
+
+                    key={social.name}
+                    href={social.href}
+                    className={`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
+                    aria-label={social.name}
+                  >
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+                  </Link>))}
+              </div>;
+            </div>;
+            {/* Legal Links */}
+            <div>;
+              <h4 className='text - white font - semibold mb - 4'>Legal</h4>;
+              <div className='space - y-2'>;
+                {legal_links.map (link => (
+                  <Link;
+                    key={link.name}
+                    href={link.href}
+                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm'                  >              <h4 className="text - white font - semibold mb - 4">Legal</h4>;
+              <div className="space - y-2">;
+                {legal_links.map ((link) => (
+                  <Link;
+                    key={link.name}
+                    href={link.href}
+                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
+                    {link.name}
+                  </Link>))}
+              </div>;
+            </div>;
                 ))}
             {/* Social Links */}
             <div>;
-              <h4 className='text-white font-semibold mb-4'>Follow Us</h4>;
-              <div className='flex space-x-4'>;
-                {socialLinks && socialLinks.map(social => (                  <a              <h4 className="text-white font-semibold mb-4">Follow Us</h4>;
-              <div className="flex space-x-4">;
-                {socialLinks && socialLinks.map((social) => (;
-                  <a
-                    key={social && social.name}
-                    href={social && social.href}
-                    className={`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social && social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
-                    aria-label={social && social.name}>;
-                    <social && social.icon className='w-5 h-5' />                  </a>                    <social && social.icon className="w-5 h-5" />;
-                  </a>;
-                ))}
               </div>;
             </div>;
           </div>;
@@ -228,10 +342,27 @@ const legal_links = [;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
+
+              >
+                Stay Ahead of the Future
+              </motion.h3>
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
+
+              >
+                Get the latest insights on AI, quantum computing, and emerging
+                technologies delivered to your inbox.
+              </motion.p>              >
+                Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
+              </motion.p>
+                className="text-gray-400 mb-6 max-w-2xl mx-auto"
+              >
+                Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
+              </motion.p>
+              
               <motion.div
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'>;
                 Get the latest insights on AI, quantum computing, and emerging;
@@ -243,6 +374,8 @@ const legal_links = [;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
+
+              >
                 <input
                   type='email'
                   placeholder='Enter your email'
@@ -259,14 +392,11 @@ const legal_links = [;
           </div>;
         </div>;
       </div>;
-};
-
 export default EnhancedFooter2025;
     </footer>);
 }
-;
-export default EnhancedFooter2025);
-}
-;
 export default EnhancedFooter2025;
-;
+
+};
+
+

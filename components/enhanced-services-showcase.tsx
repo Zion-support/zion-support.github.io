@@ -1,9 +1,13 @@
+
+//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+ //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+ //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+
+//Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
 import React from 'react';
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 //Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ...cuttingEdgeITServices;
 ...innovativeMicroSaasV2Services;
 ...enhancedRealMicroSaasServices;
@@ -23,12 +27,6 @@ const container_variants = {
   opacity: 1, y: 0
 }transition= {
   {
-}variants= {
-  itemVariants
-}className= {
-}</motion.div> {
-  filtered_services.length === 0 && (<div className="text - center py - 16"> <div className="text - 6xl mb - 4">🔍</div> <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3> <p className="text - gray - 400 mb - 6">Try adjusting your search criteria or browse all categories</p> <Button href="#"on_click= {
-  () => {
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -36,9 +34,20 @@ const container_variants = {
   opacity: 1, y: 0
 }transition= {
   {
+}
+}> {
+  children
+}</button>)
+}
+// Button component (if not imported)
+const Button = ({
+  href
+  variant = 'primary';
+  size = 'md';
+  className = '';
+  children, onClick
+}: {
   href,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   variant = 'primary';
   size = 'md';
   href?: string;
@@ -51,12 +60,11 @@ const container_variants = {
       </a>;
     );
   }
-  return (
-    <button onClick={onClick} className={classes}>;
-      {children}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
+    </button>;
+  );
+};
+
   class_name = '';
   children, on_click;
 }: {
@@ -96,4 +104,3 @@ if ( {) {
     </button>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

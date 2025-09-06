@@ -1,4 +1,16 @@
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import type { NextPage } from 'next'
+import Head from 'next/head'
+
+import type { NextPage } from 'next'
+import Head from 'next/head'
+
 const Page: NextPage = () => {
   return (
     <>
@@ -12,12 +24,14 @@ const Page: NextPage = () => {
       </div>
     </>
   )
-};
+},
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+export default Page,;
+;
+
+
 export default Page;
 
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 const Page: NextPage = () => {
@@ -35,4 +49,8 @@ const Page: NextPage = () => {
 },
 export default Page,
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export default Page
+},
+
+
+export default Page

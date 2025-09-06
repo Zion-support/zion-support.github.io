@@ -1,4 +1,8 @@
 
+
+'use client';
+'use client';
+;
 import React from 'react';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
@@ -31,7 +35,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
             repeat: Infinity
             ease: 'easeInOut'
           }}
-        />;
 
         {/* Grid Pattern */}
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0 && 0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0 && 0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />;
@@ -69,6 +72,8 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+
+
           {/* Badge */}
           <motion&& motion.div
             initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -86,12 +91,27 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
           initial={{ opacity: 0, coordinate_y: 30 }}
           animate={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.8 }}
-          className='max - w-6xl mx - auto'        >          className="max - w-6xl mx - auto";
-        >;
+          className='max-w-6xl mx-auto'        >          className="max-w-6xl mx-auto"
+        >
+
           {/* Badge */}
-          <motion.div;
+          <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8'
+          >
+            <Star className='w-5 h-5 text-yellow-400 fill-current' />
+            <span className='text-white font-medium'>
+              Leading Technology Solutions Provider
+            </span>          </motion.div>            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
+          >
+            <Star className="w-5 h-5 text-yellow-400 fill-current" />
+            <span className="text-white font-medium">Leading Technology Solutions Provider</span>
+            </span>          </motion.div>
+
+          </motion.div>
+
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
             className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8'>;
             <Star className='w-5 h-5 text-yellow-400 fill-current' />;
@@ -125,6 +145,15 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+
+          >
+            <Link
+              href='/contact'
+
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+          >
+
             <Link
               href="/contact"
               className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
@@ -166,70 +195,98 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+          {/* Main Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <Link
+          >
+            <Link
+              href='/contact'
+              className='group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1'
+            >
+              Get Started Today
+              <ArrowRight className='inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+            </Link>
+            <button className='group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300'>
+              <div className='w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors'>
+                <Play className='w-6 h-6 ml-1' />
+              </div>
+              <span className='text-lg font-medium'>Watch Demo</span>            </button>          >
+            <Link
+              href="/contact"
+              className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
+            >
+              Get Started Today
+              <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <button className="group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300">
+              <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors">
+                <Play className="w-6 h-6 ml-1" />
+              </div>
+              <span className="text-lg font-medium">Watch Demo</span>
+            </button>
+          </motion.div>
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            {stats.map((stat, index) => (
+              <motion.div
+
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                className='text-center group'
+
+
+
+
+              >
+                <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">
+                  <stat.icon className="w-8 h-8 text-blue-400" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-400 font-medium">{stat.label}</div>
+              </motion.div>
+
+            ))}
+          </motion.div>
+        </motion.div>
+      </div>
+
+          </motion && motion.div>;
+        </motion && motion.div>;
+      </div>;
+
+
             ))}
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-};
-
-export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2";
-      >;
-        <motion&& motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className='w-6 h-10 border-2 border-white/30 rounded-full flex justify-center'          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">;
-          <motion&& motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className='w-1 h-3 bg-white/60 rounded-full mt-2'            className="w-1 h-3 bg-white/60 rounded-full mt-2"
-          />;
-        </motion && motion.div>;
-      </motion && motion.div>;
-    </section>;
-  );
+export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
 export default HeroSection;
-                className='text - center group';
-              >;
-                <div className='w - 16 h - 16 bg - white / 10 backdrop - blur - sm rounded - 2xl flex items - center justify - center mx - auto mb - 4 border border - white / 20 group - hover:border - blue - 400 transition - colors'>;
-                  <stat.icon className='w - 8 h - 8 text - blue - 400' />;
-                </div>;
-                <div className='text - 3xl font - bold text - white mb - 2'>;
-                  {stat.value}
-                </div>;
-                <div className='text - gray - 400 font - medium'>{stat.label}</div>              </motion.div>              >;
-                <div className="w - 16 h - 16 bg - white / 10 backdrop - blur - sm rounded - 2xl flex items - center justify - center mx - auto mb - 4 border border - white / 20 group - hover:border - blue - 400 transition - colors">;
-                  <stat.icon className="w - 8 h - 8 text - blue - 400" />;
-                </div>;
-                <div className="text - 3xl font - bold text - white mb - 2">{stat.value}</div>;
-                <div className="text - gray - 400 font - medium">{stat.label}</div>;
-              </motion.div>))}
-          </motion.div>;
-        </motion.div>;
-      </div>;
-      {/* Scroll Indicator */}
-      <motion.div;
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-        className='absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2'      >;
-        <motion.div;
-          animate={{ coordinate_y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className='w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center'        >;
-          <motion.div;
-            animate={{ coordinate_y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className='w - 1 h - 3 bg - white / 60 rounded - full mt - 2'          />;
-        </motion.div>;
-      </motion.div>;
-    </section>);
-}
+
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
 ;
 export default HeroSection;        className="absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2";
       >;
@@ -241,15 +298,12 @@ export default HeroSection;        className="absolute bottom - 8 left - 1/2 tra
           <motion.div;
             animate={{ coordinate_y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className='w - 1 h - 3 bg - white / 60 rounded - full mt - 2'            className="w - 1 h - 3 bg - white / 60 rounded - full mt - 2";
-          />;
-        </motion.div>;
-      </motion.div>;
-    </section>);
 }
 ;
 export default HeroSection);
 }
 ;
 export default HeroSection;
+    </section>
+    </section>
 ;

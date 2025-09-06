@@ -5,6 +5,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const identity = requireRoles(req, res, ["admin", "maintainer"])
   if (!identity) return
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",;
+import { getGitStatus, requireRoles } from "../../../utils/devAccess",;
+;
+export default function handler(req: any, res: any) {
+  res.status(200).json({ message: 'Source map endpoint' });
+import type { NextApiRequest, NextApiResponse } from "next",
+import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",
+import { getGitStatus, requireRoles } from "../../../utils/devAccess",
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const identity = requireRoles(req, res, ["admin", "maintainer"]),
+  if (!identity) return,
   if (req.method === "GET") {
     const nodes = getSourceMapWithExistence()
     const git = getGitStatus()
@@ -23,8 +35,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.setHeader("Allow", "GET, POST")
 
-  res.status(405).end("Method Not Allowed")
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';,
 import { getGitStatus, require_roles  } from '../../../utils / dev_access';,
@@ -52,18 +62,90 @@ if ( {) {
   $2
 }
     const { path: repoRelativePath } = req.body || {},
-    if () {) {
-  $2
-}
-      res.status (400).json ({ error: "Invalid path" }),
+
+    if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
+      res.status(400).json({ error: "Invalid path" }),
       return;
-    }
-    const result = deployBasicTemplateForPath (repoRelativePath),
-    res.status (200).json ({ ok: true, result }),
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
+import { getGitStatus, requireRoles } from "../../../utils/devAccess";
+export default function handler(req, res) {
+  try {
+  const identity = requireRoles(req, res, ["admin", "maintainer"]);
+  if (!identity) return,;
+  if (req.method === "GET") {;
+    const nodes = getSourceMapWithExistence();
+    const git = getGitStatus();
+    res.status(200).json({ nodes, status: { gitConnected: git.connected, gitBranch: git.branch } });
     return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-  res.set_header ("Allow", "GET, POST"),
-  res.status (405).end ("Method Not Allowed");
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (req.method === "POST") {;
+    const { path: repoRelativePath } = req.body || {};
+    if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {;
+      res.status(400).json({ error: "Invalid path" });
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    const result = deployBasicTemplateForPath(repoRelativePath);
+    res.status(200).json({ ok: true, result });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  res.setHeader("Allow", "GET, POST"),
+  res.status(405).end("Method Not Allowed")
+;
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+}
+}
+
+

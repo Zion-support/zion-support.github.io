@@ -1,3 +1,18 @@
+  Users,
+  MapPin,
+  Clock,
+  DollarSign,
+  ArrowRight,
+  Heart,
+  Star,
+  Award,
+  Coffee,
+  Zap,
+  Shield,
+  Briefcase,
+  GraduationCap,
+  Globe,
+  CheckCircle,;
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -76,14 +91,10 @@ const benefits = [
       "Comprehensive health insurance, mental health support, and wellness programs"
   }
   {
-    icon: DollarSign
-    title: "Competitive Compensation"
-    description:
-      "Competitive salaries, performance bonuses, and equity participation"
-  }
+  },
   {
-    icon: GraduationCap
-    title: "Learning & Development"
+    icon: GraduationCap,
+    title: "Learning & Development",
     description:
       "Professional development budget, conference attendance, and training programs"
   }
@@ -102,12 +113,9 @@ const benefits = [
     icon: Award
     title: "Career Growth"
     description:
-      "Clear career paths, mentorship programs, and advancement opportunities"
-  }
 ];
 const values = [
   {
-    title: "Innovation"
     description:
       "We encourage creative thinking and embrace new technologies to solve complex problems."
   }
@@ -124,8 +132,6 @@ const values = [
   {
     title: "Integrity"
     description:
-      "We conduct business with honesty, transparency, and ethical practices."
-  }
 ];
 
 class ErrorBoundary extends React.Component {
@@ -133,10 +139,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -159,6 +175,7 @@ import {;
   GraduationCap,;
   Globe,;
   CheckCircle,;
+
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -166,12 +183,23 @@ import {;
       keywords="careers, jobs, employment, technology careers, AI jobs, software development">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
+import Head from 'next/head';
+import Layout from '../components/Layout';
+
+export default function CareersPage() {
+  
+    >
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
           </div>;
+
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -412,6 +440,15 @@ function CareersPage() {
             </div>;
           </div>;
         </section>;
+        {/* Open Positions */}
+        <section id="open - positions" className="py - 20 bg - white">;
+          <div className="container mx - auto px - 4">;
+            <motion.div;
+              className="text - center mb - 16";
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
                     key={job.id}
                     className="bg - white border border - gray - 200 rounded - lg p - 6 hover:shadow - lg transition - shadow duration - 300";
                     initial={{ opacity: 0, coordinate_y: 30 }}
@@ -452,6 +489,7 @@ function CareersPage() {
             </div>;
           </div>;
         </section>;
+
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   Learn More About Us;
                 </a>;
@@ -471,31 +509,13 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
-                Don't See Your Dream Job?;
-              </h2>;
-              <p className="text - xl text - blue - 100 mb - 8 max - w-3xl mx - auto">;
-                We're always looking for talented individuals. Send us your;
-                resume and let us know how you'd like to contribute to our team.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - white text - blue - 600 rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";
-                >;
-                  Send Resume;
-                </a>;
-                <a;
-                  href="/about";
-                  className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - blue - 600 transition - all duration - 300 font - semibold";
-                >;
-                  Learn More About Us;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>);
+    </MainLayout>
+    </MainLayout>
+    </Layout>
+    </MainLayout>;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+    </MainLayout>;
+  );
 }

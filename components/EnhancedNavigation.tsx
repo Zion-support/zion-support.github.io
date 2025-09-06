@@ -2,6 +2,56 @@ import Link from 'next/link';
 
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
+    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
+  ];
+  const company = [
+    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' }
+    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' }
+    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' }
+    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' }
+    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
+  ];
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+  }
+  const closeAllDropdowns = () => {
+
+const EnhancedNavigation: React.FC = () => {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  useEffect(() => {;
+    const handleScroll = () => {;
+      setIsScrolled(window && window.scrollY > 20);
+    };
+
+    window && window.addEventListener('scroll', handleScroll);
+    return () => window && window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const services = [;
+    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },;
+    { name: 'AI Business Intelligence', href: 'https://ziontechgroup && ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },;
+    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' },;
+    { name: 'Edge Computing', href: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },;
+    { name: 'Space Technology', href: 'https://ziontechgroup && ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },;
+    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
+  ];
+
+  const company = [;
+    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },;
+    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' },;
+    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },;
+    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },;
+    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
+  ];
+
+  const toggleDropdown = (dropdown: string) => {;
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown),;
+  };
+
+  const closeAllDropdowns = () => {;
     setActiveDropdown(null);
     setIsOpen(false);
   }
@@ -17,6 +67,64 @@ import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users
             <div className="relative">;
               <button
                 onClick={() => toggleDropdown('services')}
+              {activeDropdown === 'services' && (
+                <motion.div
+                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
+              >;
+                <span>Services</span>;
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;
+              </button>;
+
+              {activeDropdown === 'services' && (;
+                <motion&& motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6"
+                >
+                  <div className="grid grid-cols-2 gap-4 px-6">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="group p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                        onClick={closeAllDropdowns}
+                      >
+                        <div className="flex items-start space-x-3">
+                          <service.icon className="w-6 h-6 text-blue-600 mt-1" />
+                          <div>
+                            <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
+                              {service.name}
+                            </h3>
+                            <p className="text-sm text-gray-600">{service.description}</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </div>
+            {/* Company Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('company')}
+                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
+              >
+                <span>Company</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
+              </button>
+              {activeDropdown === 'company' && (
+              {activeDropdown === 'services' && (
+                <motion.div
+                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
+              >;
+                <span>Services</span>;
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;
+              </button>;
+
+              {activeDropdown === 'services' && (;
+                <motion&& motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
@@ -123,7 +231,6 @@ import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
                   onClick={closeAllDropdowns}>;
-=======
 import Link from 'next / link';
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
@@ -329,8 +436,10 @@ const EnhancedNavigation: React.FC = () => {
                   className="block w - full text - center px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font - semibold transition - colors";
                   on_click={closeAllDropdowns}
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Get Started;
                 </Link>;
               </div>;
             </div>;
+export default EnhancedNavigation;
+export default EnhancedNavigation;
+export default EnhancedNavigation;

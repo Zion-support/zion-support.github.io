@@ -1,10 +1,3 @@
-=======
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import { Calendar, ArrowRight } from 'lucide-react'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnterpriseCTA() {
   return (
     <section id='contact' className='py-20 px-4 md:px-6'>
@@ -65,9 +58,12 @@ export function EnterpriseCTA() {
                       <span className='text-primary text-sm font-medium'>
                         4
                       </span>                    </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Calendar, ArrowRight } from 'lucide-react'
+
+
 export function EnterpriseCTA() {
   return (
     <section id="contact" className="py-20 px-4 md: px-6">
@@ -187,10 +183,7 @@ export function EnterpriseCTA() {;
           </div>;
         </div>;
       </div>;
-    </section>;
-  );
+
+    </section>);
 }
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -63,96 +63,6 @@ function resolve_conflicts() {
         // Read the file content;
         let content = fs.readFileSync (file, 'utf8');
 ;
-        // Remove conflict markers and keep the incoming changes (after <<<<<<< HEAD);
-        content = content.replace (/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-;
-        // Write the resolved content back;
-        fs.writeFileSync (file, content);
-;
-        // Add the file to staging;
-        exec_sync (`git add "${file}"`, { stdio: 'inherit' });
-;
-        console.log (`✅ Resolved conflicts in ${file}`);
-      }
-    });
-;
-    // Handle deleted files (modify / delete conflicts);
-    const deleted_files = exec_sync ('git ls - files --deleted', { encoding: 'utf8' }).trim ().split ('\n').filter (Boolean);
-;
-    deleted_files.for_each (file => {
-      console.log (`Handling deleted file: ${file}`);
-      // Remove from index to accept the deletion;
-      exec_sync (`git rm "${file}"`, { stdio: 'inherit' });
-    });
-;
-    console.log ('✅ All conflicts resolved!');
-    return true;
-  } catch (error) {
-    console.error ('❌ Error resolving conflicts:', error.message);
-    return false;
-  }
-}
-// Function to merge a PR;
-/**
- * mergePR - Function description
- */
-function mergePR() {
-  try {
-    console.log (`\n🔄 Attempting to merge ${pr_branch}...`);
-;
-    // Try to merge;
-    exec_sync (`git merge origin/${pr_branch} --no - ff`, { stdio: 'pipe' });
-    console.log (`✅ Successfully merged ${pr_branch}`);
-    return true;
-  } catch (error) {
-    console.log (`⚠️  Merge conflicts detected in ${pr_branch}`);
-;
-    // Resolve conflicts;
-    if () {) {
-  $2
-}
-      // Commit the merge;
-      try {
-        exec_sync ('git commit -m "Resolve merge conflicts and merge PR"', { stdio: 'inherit' });
-        console.log (`✅ Successfully resolved conflicts and merged ${pr_branch}`);
-        return true;
-      } catch (commit_error) {
-        console.error (`❌ Failed to commit merge for ${pr_branch}:`, commit_error.message);
-        return false;
-      }
-    } else {
-      console.error (`❌ Failed to resolve conflicts for ${pr_branch}`);
-      return false;
-    }
-  }
-}
-  for (const branch of prBranches) {
-    try {
-      // Fetch the latest changes
-      execSync('git fetch origin', { stdio: 'inherit' });
-      // Check if branch exists
-// Main execution;
-async /**
- * main - Function description
- */
-function main() {
-  const pr_branches = [;
-    'cursor / fix - lint - push - and - merge - to - main - 8bf8',
-    'cursor / fix - lint - push - and - merge - to - main - 592f',
-    'cursor / fix - lint - push - and - merge - to - main - 1370';
-  ];
-;
-  console.log ('🚀 Starting PR merge process...');
-;
-  for (const branch of pr_branches) {
-    try {
-      // Fetch the latest changes;
-      exec_sync ('git fetch origin', { stdio: 'inherit' });
-;
-      // Check if branch exists;
-      try {
-        exec_sync (`git show - ref --verify --quiet refs / remotes / origin/${branch}`, { stdio: 'pipe' });
-      } catch {
         try {
           exec_sync ('git merge --abort', { stdio: 'pipe' });
         } catch (abort_error) {
@@ -165,7 +75,6 @@ function main() {
     console && console.error('Error getting git status:', error && error.message);
   }
 }
-      console.error (`❌ Error processing ${branch}:`, error.message);
     }
   }
   console.log ('\n🎉 PR merge process completed!');
@@ -178,4 +87,3 @@ function main() {
     console.error ('Error getting git status:', error.message);
   }
 }
-main ().catch (console.error);

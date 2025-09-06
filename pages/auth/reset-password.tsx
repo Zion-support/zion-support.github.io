@@ -1,4 +1,13 @@
-import type { NextPage } from 'next';
+
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const ResetPassword: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>ResetPassword - Zion Tech Solutions</title>
+        <meta name="description" content="ResetPassword page" />
+      </Head>
       <main>
         <h1>ResetPassword</h1>
         <p>This page is under construction.</p>
@@ -6,8 +15,12 @@ import type { NextPage } from 'next';
     </div>
   )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+export default ResetPassword;
+
+},
+export default ResetPassword,
+
+
       <main>;
         <h1>ResetPassword</h1>;
         <p>This page is under construction.</p>;
@@ -15,10 +28,9 @@ import type { NextPage } from 'next';
     </div>;
   ),;
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ResetPassword;
-=======
+
+
 import Head from 'next / head';
       <main>;
         <h1 > ResetPassword</h1>;
@@ -29,4 +41,5 @@ import Head from 'next / head';
 ;
 export default ResetPassword;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+

@@ -33,7 +33,6 @@ interface State {
                 </pre>;
               </details>;
             )}
-=======
   has_error: boolean,
   error?: Error;
 }
@@ -95,7 +94,6 @@ if ( {) {
         </div>),
     }
     return this.props.children;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
 export default ErrorBoundary;

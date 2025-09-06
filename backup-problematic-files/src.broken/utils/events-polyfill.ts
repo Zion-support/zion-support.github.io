@@ -1,3 +1,4 @@
- Utility functions for events-polyfill,;
+// Utility functions for events-polyfill,;
 export const events-polyfill = {,;
-  //
+  // TODO:Implement utility functions;
+},

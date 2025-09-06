@@ -1,5 +1,7 @@
  export function ClientOnboardingSteps () {;
   const onboardingStatus = useOnboardingStatus ();
 const steps: OnboardingStep[] = [ {;
-  id: "post-job",";"label: "Post your first job","completed: onboardingStatus.jobPosted;";"link: any
-"{";"  id: "invite",";"label: "Send invitation to talent","completed: onboardingStatus.inviteSent;";"link: any
+  id: "post-job",";"label: "Post your first job","completed: onboardingStatus.jobPosted;";"link: "/post-job",";"action: "Post Job",
+};"{";"  id: "invite",";"label: "Send invitation to talent","completed: onboardingStatus.inviteSent;";"link: "/talent",";"action: "Find Talent",
+};"{";"  id: "response",";"label: "Receive your first application",
+completed: onboardingStatus.responseReceived;"}"

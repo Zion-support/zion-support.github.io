@@ -1,3 +1,6 @@
+
+
+export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState({
@@ -19,7 +22,6 @@
       marketing: true
       functional: true
     }
-=======
 
 export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
@@ -45,7 +47,6 @@ export default function CookieConsent() {;
       marketing: true,;
       functional: true,;
     };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setPreferences(allAccepted);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
     setIsVisible(false);
@@ -61,9 +62,6 @@ export default function CookieConsent() {;
                 </p>;
               </div>;
             </div>;
-              <button
-                onClick={() => setShowSettings(true)}
-                className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors flex items-center gap-2";
               >;
                 <Settings className="w-4 h-4" />;
                 Cookie Settings;
@@ -79,15 +77,6 @@ export default function CookieConsent() {;
                 Accept All;
               </button>;
             </div>;
-          </div>;
-        ) : (;
-          <div>;
-            <div className="flex items-center justify-between mb-4">;
-              <h3 className="text-lg font-semibold text-gray-900">;
-                Cookie Preferences;
-              </h3>;
-              <button
-                onClick={() => setShowSettings(false)}
                 <input
                   type="checkbox"
                   checked={preferences && preferences.necessary}
@@ -109,7 +98,6 @@ export default function CookieConsent() {;
       </div>;
     </div>;
   );
-=======
             <div className="flex flex - col sm:flex - row gap - 2 w - full md:w - auto">;
               <button;
                 on_click={() => setShowSettings (true)}
@@ -243,5 +231,4 @@ export default function CookieConsent() {;
           </div>)}
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

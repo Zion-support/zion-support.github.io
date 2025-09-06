@@ -1,8 +1,3 @@
-import Link from 'next/link';
-export default function Placeholder() {;
-  return (
-  );
-=======
 import Link from 'next / link';
 export default /**
  * Placeholder - Function description
@@ -21,4 +16,3 @@ function Placeholder() {
       </main>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

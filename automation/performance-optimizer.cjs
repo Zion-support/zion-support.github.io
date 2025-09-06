@@ -145,6 +145,72 @@ function findFiles(dir, exts) {
   return results;
 }
 
+function optimizeImages(publicDir, report) {
+  const images = findFiles(publicDir, ['.png', '.jpg', '.jpeg']);
+  if (images.length === 0) {
+    report.actions.push('No images found to optimize');
+    return;
+  }
+
+  let sharp;
+  try {
+    sharp = require('sharp');
+  } catch {
+    report.actions.push('sharp not installed; skipping image optimization');
+    return;
+  }
+
+  const optimized = [];
+  for (const img of images) {
+    const stat = fs.statSync(img);
+    if (stat.size < 150 * 1024) continue; // skip small files
+    
+    const ext = path.extname(img).toLowerCase();
+    const outPath = img.replace(new RegExp(`${ext}$`), '.webp');
+    
+    try {
+      sharp(img).webp({ quality: 80 }).toFile(outPath);
+      optimized.push({ from: img, to: outPath });
+    } catch (e) {
+      report.errors.push(`Failed optimizing ${img}: ${e.message}`);
+    }
+  }
+
+  if (optimized.length > 0) {
+    report.optimizedImages = optimized;
+  }
+  report.actions.push(`Optimized ${optimized.length} images to WebP`);
+}
+
+function ensureNextConfigFlags(rootDir, report) {
+  const candidates = ['next.config.js', 'deployment/next.config.js'];
+  
+  for (const rel of candidates) {
+    const file = path.join(rootDir, rel);
+    if (!fs.existsSync(file)) continue;
+
+    const original = fs.readFileSync(file, 'utf8');
+    
+    if (original.includes('optimizeCss: true')) {
+      report.actions.push(`${rel}: optimizeCss already enabled`);
+      continue;
+    }
+
+    // Attempt minimal enhancement by appending experimental.optimizeCss
+    try {
+      let updated = original;
+      
+      if (original.includes('experimental:')) {
+        updated = original.replace(
+          /experimental:\s*\{/,
+          'experimental: {\n    optimizeCss: true,'
+        );
+      } else if (original.includes('nextConfig') || original.includes('module.exports')) {
+        updated = original.replace(/\{([\s\S]*?)\}/, m => 
+          m.replace(/\}$/, ',\n  experimental: { optimizeCss: true }\n}')
+        );
+      }
+#!/usr/bin/env node
 });
       log(`Found ${optimizations.length} optimization opportunities in next.config.js`, 'WARNING');
     } else {}
@@ -278,6 +344,62 @@ if (require.main === module) {}
     process.exit(success ? 0 : 1);
 #!/usr/bin/env node
 
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+console.log('⚡ Starting Performance Optimizer...');
+
+class PerformanceOptimizer {
+  constructor() {
+    this.reportsDir = path.join(process.cwd(), 'automation-reports');
+    this.ensureReportsDir();
+  }
+
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async optimizePerformance() {
+    const optimizations = [
+      { name: 'Bundle Analysis', command: 'npm run analyze', description: 'Analyzing bundle size' },
+      { name: 'Image Optimization', command: 'npm run optimize:images', description: 'Optimizing images' },
+      { name: 'Code Splitting', command: 'npm run build:analyze', description: 'Analyzing code splitting' },
+      { name: 'Lighthouse Audit', command: 'npm run perf:lighthouse', description: 'Running Lighthouse audit' },
+      { name: 'Performance Monitor', command: 'npm run perf:monitor', description: 'Monitoring performance' }
+    ];
+
+    const results = [];
+    let successfulOptimizations = 0;
+
+      if (buildResult.success) {
+        // Analyze bundle size
+        const buildDir = path.join(this.projectRoot, '.next');
+        if (fs.existsSync(buildDir)) {
+          const stats = fs.statSync(buildDir);
+          const sizeInMB = stats.size / (1024 * 1024);
+          
+          this.results.bundleAnalysis = {
+            success: true,
+            size: sizeInMB,
+            recommendations: this.generateBundleRecommendations(sizeInMB)
+          };
+        }
+      }
+    } catch (error) {
+      this.results.bundleAnalysis = {
+        success: false,
+        size: 0,
+        recommendations: ['Failed to analyze bundle size']
+      };
+    }
   }
 
   async optimizeImages() {
@@ -290,6 +412,27 @@ if (require.main === module) {}
         const imageFiles = fs.readdirSync(imagesDir).filter(file => 
           /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
         );
+        execSync(optimization.command, { stdio: 'pipe' });
+        console.log(`✅ ${optimization.name} completed successfully`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'success', 
+          description: optimization.description,
+          error: null 
+        });
+        successfulOptimizations++;
+      } catch (error) {
+        console.log(`❌ ${optimization.name} failed`);
+        results.push({ 
+          name: optimization.name, 
+          status: 'failed', 
+          description: optimization.description,
+          error: error.message 
+        });
+    for (const optimization of optimizations) {
+      try {
+        this.log(`🔧 Running ${optimization.name}...`);
+        this.log(`📝 ${optimization.description}`);
         
         this.results.imageOptimization = {
           success: true,
@@ -534,6 +677,8 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
       this.generateReport();
     }
 
+    }
+
     const report = {
       timestamp: new Date().toISOString(),
       totalOptimizations: optimizations.length,
@@ -549,6 +694,22 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
     this.log(`📊 Performance optimization completed! Report saved to: ${reportPath}`);
     this.log(`📈 Performance Score: ${report.performanceScore}% (${successfulOptimizations}/${optimizations.length} optimizations successful)`);
     
+// Run performance optimization
+const optimizer = new PerformanceOptimizer();
+    try {
+      await this.analyzeBundle();
+      await this.optimizeImages();
+      await this.implementCodeSplitting();
+      await this.setupCaching();
+      await this.setupCompression();
+    } catch (error) {
+      this.log(`Fatal error: ${error.message}`, 'ERROR');
+    } finally {
+      this.generateReport();
+    }
+  }
+}
+
 // Run the performance optimizer
 if (require.main === module) {
     const optimizer = new PerformanceOptimizer(),
@@ -556,6 +717,7 @@ if (require.main === module) {
   }
 
 module.exports = PerformanceOptimizer;
+
 
 function main() {
   const root = process.cwd();
@@ -621,6 +783,9 @@ console.log(`High Priority: ${performanceReport.recommendations.filter(r => r.pr
 console.log(`Medium Priority: ${performanceReport.recommendations.filter(r => r.priority === 'medium').length}`);
 console.log(`\n📄 Report saved to: ${reportPath}`);
 process.exit(0);
+// Run performance optimization
+const optimizer = new PerformanceOptimizer();
+optimizer.optimizePerformance().catch(console.error);
 // Run performance optimization
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().catch(console.error);

@@ -2,10 +2,6 @@
     { name: 'Profile', href: '/profile', icon: User },
     { name: 'Settings', href: '/settings', icon: Settings }
   ];
-  return (
-    <div className="flex h - screen bg - gray - 100">;
-      {/* Sidebar */}
-=======
       <div className={`${is_open ? 'w - 64' : 'w - 16'} transition - all duration - 300 bg - white shadow - lg`}>;
         <div className="p - 4">;
           <button;
@@ -41,5 +37,3 @@
     </div>);
 }
 ;
-export default SidebarNavigation;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

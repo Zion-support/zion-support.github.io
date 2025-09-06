@@ -1,9 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-  try {
-    const supabase = createServerClient();
-    // Replace with your actual tables/queries
-    // Fallback to mock if querying fails
     ]);
     const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
     const users =
@@ -26,7 +21,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       referralsR && referralsR.status === 'fulfilled' && referralsR && referralsR.value.data
         ? (referralsR && referralsR.value.data as any[])
         : [];
-
     const usersData = mockIfEmpty(users, [
       { id: 1, role: 'client', country: 'US' }
       { id: 2, role: 'talent', country: 'IN' }
@@ -73,6 +67,22 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     const quotesAccepted = quotesData && quotesData.filter(
       q => q && q.status === 'accepted'
     ).length;
+    usersData.forEach(u => {
+      geoCounts[u.country |'Unknown'] =
+        (geoCounts[u.country |'Unknown'] |0) + 1;
+    });
+  } catch (e: any) {
+
+    jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
+    const referralConversions = referralsData.filter(r => r.converted).length;
+    const geoCounts: Record<string, number> = {};
+    usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 });
+    res.status(200).json({
+      totals: {
+       totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects 
+    },
+    topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }));
+      referralConversions;
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
       referralConversions: 2
 
@@ -103,3 +113,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       ],
     });
   }}
+
+
+

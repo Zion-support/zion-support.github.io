@@ -1,0 +1,176 @@
+{
+  "timestamp": "2025-09-06T00:05:18.716Z",
+  "analysisResults": [
+    {
+      "type": "performance",
+      "status": "issues_found",
+      "details": "Found 9 performance issues"
+    },
+    {
+      "type": "security",
+      "status": "issues_found",
+      "details": "Found 11 security issues"
+    }
+  ],
+  "issues": [
+    {
+      "type": "linting",
+      "severity": "warning",
+      "message": "Linting issues detected",
+      "details": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "type": "typescript",
+      "severity": "error",
+      "message": "TypeScript errors detected",
+      "details": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "type": "performance",
+      "severity": "info",
+      "message": "Console statements found (remove in production)",
+      "file": "/workspace/src/components/NewsletterSection.jsx"
+    },
+    {
+      "type": "performance",
+      "severity": "info",
+      "message": "Console statements found (remove in production)",
+      "file": "/workspace/src/utils/accessibility-checker.ts"
+    },
+    {
+      "type": "performance",
+      "severity": "info",
+      "message": "Console statements found (remove in production)",
+      "file": "/workspace/src/utils/authUtils.ts"
+    },
+    {
+      "type": "performance",
+      "severity": "info",
+      "message": "Console statements found (remove in production)",
+      "file": "/workspace/src/utils/monitoring.ts"
+    },
+    {
+      "type": "performance",
+      "severity": "info",
+      "message": "Console statements found (remove in production)",
+      "file": "/workspace/src/utils/performance-optimizer.ts"
+    },
+    {
+      "type": "performance",
+      "severity": "info",
+      "message": "Console statements found (remove in production)",
+      "file": "/workspace/src/utils/productionLogger.ts"
+    },
+    {
+      "type": "performance",
+      "severity": "info",
+      "message": "Console statements found (remove in production)",
+      "file": "/workspace/src/utils/seo-optimizer.ts"
+    },
+    {
+      "type": "performance",
+      "severity": "info",
+      "message": "Console statements found (remove in production)",
+      "file": "/workspace/pages/quote.tsx"
+    },
+    {
+      "type": "performance",
+      "severity": "info",
+      "message": "Console statements found (remove in production)",
+      "file": "/workspace/components/PerformanceMonitor.tsx"
+    },
+    {
+      "type": "security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected",
+      "file": "/workspace/pages/[slug].tsx"
+    },
+    {
+      "type": "security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected",
+      "file": "/workspace/components/2030-revolutionary-services.tsx"
+    },
+    {
+      "type": "security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected",
+      "file": "/workspace/components/Analytics.tsx"
+    },
+    {
+      "type": "security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected",
+      "file": "/workspace/components/SEOHead.tsx"
+    },
+    {
+      "type": "security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected",
+      "file": "/workspace/components/broken/SEO.tsx"
+    },
+    {
+      "type": "security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected",
+      "file": "/workspace/components/reports/blueprints/blueprint-2025-08-14-140146.tsx"
+    },
+    {
+      "type": "security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected",
+      "file": "/workspace/components/reports/blueprints/blueprint-2025-08-14-141021.tsx"
+    },
+    {
+      "type": "security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected",
+      "file": "/workspace/components/reports/blueprints/blueprint-2025-08-14-142038.tsx"
+    },
+    {
+      "type": "security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected",
+      "file": "/workspace/components/reports/playbooks/playbook-2025-08-14-140146.tsx"
+    },
+    {
+      "type": "security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected",
+      "file": "/workspace/components/reports/playbooks/playbook-2025-08-14-141021.tsx"
+    },
+    {
+      "type": "security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected",
+      "file": "/workspace/components/reports/playbooks/playbook-2025-08-14-142038.tsx"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "category": "code_quality",
+      "message": "Address the identified issues to improve code quality",
+      "action": "Review and fix the issues listed in the analysis report"
+    },
+    {
+      "priority": "medium",
+      "category": "performance",
+      "message": "Optimize performance by addressing performance issues",
+      "action": "Review performance issues and implement optimizations"
+    },
+    {
+      "priority": "high",
+      "category": "security",
+      "message": "Address security vulnerabilities immediately",
+      "action": "Review and fix security issues to prevent vulnerabilities"
+    }
+  ],
+  "summary": {
+    "totalIssues": 22,
+    "criticalIssues": 1,
+    "warnings": 12,
+    "info": 9,
+    "totalRecommendations": 3
+  }
+}

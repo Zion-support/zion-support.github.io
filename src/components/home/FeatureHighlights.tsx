@@ -1,8 +1,3 @@
-
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card";
-import { Check } from 'lucide-react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const highlightsData = [
     {
       title: "For Talent Seekers",
@@ -27,6 +22,7 @@ import { Check } from 'lucide-react'
       ]
     },
     {
+
       title: "For Enterprise Clients",
       features: [
         "White-labeled talent portal with your company branding",
@@ -38,9 +34,13 @@ import { Check } from 'lucide-react'
       ]
     }
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
+
+
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -50,7 +50,11 @@ import { Check } from 'lucide-react'
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
           </p>
         </div>
-=======
+;
+'"`;
+);
+
+
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {highlightsData.map((category, index) => (
@@ -63,6 +67,7 @@ import { Check } from 'lucide-react'
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
+
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from 'lucide-react';
@@ -117,28 +122,8 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed;
           </p>;
         </div>;
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-          {highlightsData.map((category, index) => (;
-            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">;
-              <CardContent className="p-6">;
-                <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>;
-                <ul className="space-y-3">;
-                  {category.features.map((feature, idx) => (;
-                    <li key={idx} className="flex items-start">;
-                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />;
-                      <span className="text-zion-slate-light">{feature}</span>;
-                    </li>;
                   ))}
                 </ul>;
               </CardContent>;
             </Card>;
           ))}
-        </div>;
-      </div>;
-    </section>;
-  );
-}
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

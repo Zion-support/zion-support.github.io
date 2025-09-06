@@ -403,6 +403,3 @@ class BuildMonitor {
 // Main execution
 if (require.main === module) {
   const monitor = new BuildMonitor(),
-  monitor.run().catch(console.error)}
-
-module.exports = BuildMonitor;

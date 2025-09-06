@@ -1,26 +1,13 @@
+export default function Quiz({ questions, onComplete }: Props) {
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-
+export default function Quiz({ questions, onComplete }: Props) {;
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [submitted, setSubmitted] = useState(false);
+  const score = questions.reduce(
+    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0)
+    0
+  );
+  function submit() {
     setSubmitted(true);
     onComplete(score);
   }
@@ -36,6 +23,10 @@ import React, { useState } from 'react';
               <label key={i} className='flex items-center gap-2'>;
                 <input
   function submit() {
+  function submit() {
+
+    setSubmitted(true)
+
     onComplete(score)
   }
   return (
@@ -48,31 +39,6 @@ import React, { useState } from 'react';
               <label key={i} className="flex items-center gap-2">;
                 <input
                   type="radio"
-              )}
-            </div>;
-          )}
-        </div>;
-      ))}
-      <button
-        onClick={submit}
-        className='px-4 py-2 bg-blue-600 text-white rounded'>;
-        Submit Quiz;
-      </button>;
-      {submitted && (;
-        <div className='text-sm'>;
-          Score: {score} / {questions && questions.length}
-        </div>;
-      )}
-      {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
-    </div>
-);
-}
-    </div>;
-  );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>;
-      {submitted && <div className="text-sm">Score: {score} / {questions && questions.length}</div>}
-    </div>;
-  );
-}
             <div className='mt - 2 text - sm'>;
               {answers[q.id] === q.answer_index ? (
                 <span className='text - green - 600'>Correct</span>) : (
@@ -88,9 +54,26 @@ import React, { useState } from 'react';
         Submit Quiz;
       </button>;
       {submitted && (
-        <div className='text - sm'>;
           Score: {score} / {questions.length}
         </div>)}
     </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;
       {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
     </div>);
+                <span>{opt}</span>
+              </label>
+            ))}
+          </div>
+          {submitted && (
+              )}
+            </div>
+          )}
+        </div>
+      ))}
+  )
+
+}
+  );
+}
+
+
+

@@ -1,27 +1,33 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import Head from 'next / head';
-import { motion } from 'framer-motion';
+  Brain
+  Atom
+  Shield
+  Rocket
+  Star
+  Award
+  TrendingUp
+  CheckCircle
+  ArrowRight
+  Zap
+  Target
+  Microscope
+  Lock
+  Cloud
+  BarChart3
+  Settings
+  Eye
+  Code
+  Palette
+  Search
+  Filter
+  Grid
+  List
+  ExternalLink
+  Phone
+  Mail
+  MapPin;} from 'lucide-react';import {
+
+
   Brain,
   Atom,
   Shield,
@@ -72,7 +78,21 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
     description: 'Innovative business solutions for modern enterprises',
     services: cuttingEdgeMicroSaasServices2025,
     icon: Rocket,
-];
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const allServices = [
+
+    ...cuttingEdgeAIServices2025;
+    ...cuttingEdgeQuantumServices2025;
+    ...cuttingEdgeEnterpriseITServices2025;
+    ...cuttingEdgeMicroSaasServices2025
+  ];
+
+  const filteredServices = allServices.filter(service => {
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
     return matchesSearch && matchesCategory
@@ -232,55 +252,18 @@ export default function CuttingEdgeServicesShowcase2025() {;
       coordinate_y: 0,
       opacity: 1,
       transition: {
-      }
-    }
+        duration: 0.5,
+      },
+    },  };
+
   };
 
-  const itemVariants = {;
-    hidden: { y: 20, opacity: 0 },;
-    visible: {;
-      y: 0,;
-      opacity: 1,;
-      transition: {;
-        duration: 0 && 0.5,;
-      },;
-    },  };        duration: 0 && 0.5;
-      }
-    }
-  }
+
   return (
-    <>;
-      <Head>;
-        <title>;
-          Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future;
-          Technology Solutions;
-        </title>;
-        <meta
-          name='description'
-          content='Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology.'
-        />;
-        <meta
-          name='keywords'
-          content='cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology'
-        {/* Hero Section */}
-        <section className='relative overflow-hidden'>;
-          <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>;
-          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
         <meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />
         <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        {/* Hero Section */}
-        <section className='relative overflow-hidden'>;
-          <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>;
-          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32'>        <section className="relative overflow-hidden">;
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>;
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
             >
               <motion.h1
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
@@ -288,11 +271,27 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 transition={{ duration: 1, delay: 0.2 }}
               >
                 Cutting-Edge Services
+
+
+              <motion.p
+                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
                   Showcase 2025
                 </span>
               </motion.h1>
-              <motion.p
+
+
+              <motion.p 
+
+
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
+
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion.p>
               {/* Hero Stats */}
@@ -330,7 +329,31 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion && motion.p>;
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                {heroStats.map((stat, index) => (
+                  <div key={index} className='text-center'>
+                    <div className='flex justify-center mb-2'>
+                      <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>
+                        {stat.icon}
+                      </div>
+                    </div>
+                    <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
+                      {stat.value}
+                    </div>
+
+                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
+
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
+
+                  </div>
+
+                ))}
+              </motion.div>
+              {/* CTA Buttons */}
+              <motion.div
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
                 {heroStats && heroStats.map((stat, index) => (;
@@ -358,10 +381,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}>;
                 <a
-                <a
-                  href="/contact"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105">;
                   Get Started;
                 </a>;
@@ -376,7 +395,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
               className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={{ opacity: 0, y: 20 }}        <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div 
-              className="flex flex-col lg:flex-row gap-6 items-center justify-between"
+
+
+              initial={{ opacity: 0, y: 20 }}
+
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
@@ -391,13 +414,38 @@ export default function CuttingEdgeServicesShowcase2025() {;
               {/* Category Filter */}
               <div className='flex flex-wrap gap-2'>              <div className="flex flex-wrap gap-2">;
                 <button
+              <div className='flex flex-wrap gap-2'>                <button
+
+                />
+              </div>
+
+              {/* Category Filter */}
+
+                <button
+
+                  onClick={() => setSelectedCategory('all')}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === 'all'
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
+                      : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
+                  }`}
                   onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
                     selectedCategory === 'all';
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                       : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
                   }`}
-                  <button
+
+
+
+
+
+                    key={category.title}
+                    onClick={() => setSelectedCategory(category.title)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                      selectedCategory === category.title
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
+                        : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
                     key={category && category.title}
                     onClick={() => setSelectedCategory(category && category.title)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -409,6 +457,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
                     {category && category.title} ({category && category.count});
                   </button>;
                 ))}
+                <button
+
+
+
+
+
+
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
@@ -423,18 +478,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50';
                       : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70';
                   }`}
-                >;
-                  <List className='w-5 h-5' />                </button>                  <List className="w-5 h-5" />;
-                </button>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-        {/* Services Grid */}
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
                   variants={itemVariants}
                   className={`group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                     viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''
@@ -479,17 +522,29 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         </div>;
                       </div>;
                     </div>;
-                    {/* Tags */}
+
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
+
+                        >
+
                           {tag}
                         </span>;
                       ))}
+
+
+
+
+
+                    {/* Market Info */}
+                    <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
+                      <span>Market: {service.marketSize}</span>
+                      <span className='text-cyan-400'>{service.category}</span>                    </div>
+                          {tag}
+                        </span>;
+                      ))}
+                    </div>
                   </div>
                   {/* Service Details */}
-                  {/* Service Details */}
-                  <div
-                    className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}>;
-                    <div className='mb-6'>;
-                      <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>;
                         Key Features;
                       </h4>;
                       <ul className='space-y-2'>;
@@ -520,6 +575,15 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       <div className="text-2xl font-bold text-white">
                         ${service.pricing.starter.price}
                         <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>
+
+                    </div>
+                  </div>
+
+                  {/* Service Details */}
+
+                      </div>
+                    </div>
+                    </div>;
                     {/* Pricing */}
                     <div className='mb-6'>;
                       <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>;
@@ -538,15 +602,34 @@ export default function CuttingEdgeServicesShowcase2025() {;
                     </div>;
                   </div>;
 
+
+                  {/* Hover Effect Overlay */}
+
+
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
                 </motion && motion.div>;
               ))}
+
+            </motion && motion.div>;
+
+
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+
+              >
+                <div className='text-6xl mb-4'>🔍</div>
+                <h3 className='text-2xl font-bold text-white mb-2'>
+                  No services found
+                </h3>
+                <p className='text-white/70 mb-6'>
+                  Try adjusting your search terms or category filter
+                </p>
+                <button
+                  onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
                   }}
@@ -569,11 +652,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
+
+
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                 <a
@@ -604,7 +689,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   <ArrowRight className="ml-2 w-5 h-5" />;
                 </a>;
                 <a
-              {/* Contact Info */}
                   <div className="text-white font-semibold">Phone</div>
                   <a href={`tel:${contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                     {contactInfo.mobile}
@@ -632,6 +716,21 @@ export default function CuttingEdgeServicesShowcase2025() {;
         </section>
       </Layout>
     </>
+
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
+  hidden: {
+  opacity: 0
+}
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1
+}
+const itemVariants = {
+  hidden: {
+  y: 20, opacity: 0
+}
+visible: {
+  y: 0, opacity: 1, transition: {
                         </span>                      </div>;
                     </div>;
                     {/* CTA */}
@@ -837,7 +936,9 @@ const item_variants = {
   hidden: {
   coordinate_y: 20, opacity: 0;
 }
-visible: {
-  coordinate_y: 0, opacity: 1, transition: {
-  duration: 0.5;
-}}
+
+  duration: 0.5 
+
+};}
+};
+

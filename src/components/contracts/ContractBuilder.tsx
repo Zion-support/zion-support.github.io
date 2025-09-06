@@ -1,3 +1,13 @@
+isOpen;
+  onClose;
+  talent;
+  clientName;
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
+        }}
+        talent = {talent,}
+        clientName = {clientName,}
+        onContractGenerated = {onContractGenerated,}
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -6,10 +16,8 @@ import { Save } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -22,22 +30,34 @@ import { ContractPreview } from "./components/ContractPreview",
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
             <div className="flex gap-2">
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => setTemplateManagerOpen(true)}
+                onClick = {(,) => setTemplateManagerOpen(true),}
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
                 Templates
               </Button>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                variant="outline" 
+                size="sm"
+                onClick = {(,) => setTemplateManagerOpen(true),}
+                className="flex gap-1";
+              >;
+                <Save className="h-4 w-4" />;
+                Templates;
+              </Button>;
+
+
+
+              
+
+              <Button
+                variant="secondary"
+                size="sm"
               <Button
                 variant="secondary"
                 size="sm"
@@ -47,6 +67,9 @@ import { ContractPreview } from "./components/ContractPreview",
               </Button>
             </div>
           </div>
+            <ContractForm
+
+            <ContractForm 
               talent = {talent,}
               clientName = {clientName,}
               initialValues = {formValues,}
@@ -56,6 +79,9 @@ import { ContractPreview } from "./components/ContractPreview",
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
+              <ContractPreview
+
+              <ContractPreview 
                 contractContent = {generatedContract,}
                 talent = {talent,}
                 onClose = {onClose,}
@@ -96,7 +122,6 @@ import { ContractPreview } from "./components/ContractPreview",
   formValues
 }/> </DialogContent> </Dialog>)
 }"}
-=======
           
           <TabsContent value="form" className="pt-4">
             <ContractForm 
@@ -130,6 +155,3 @@ import { ContractPreview } from "./components/ContractPreview",
   );
 }
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

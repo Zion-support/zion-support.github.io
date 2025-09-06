@@ -1,3 +1,9 @@
+
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+
+
   useEffect(() => {
     async function load() {
       setLoading(true)
@@ -23,19 +29,80 @@ function AdminNotesConsole() {
 function load() {
       set_loading (true),
       try {
-        const res = await fetch ('/api / admin / notes - all', { headers: { 'X - Admin': is_admin ? 'true' : 'false' } }),
-        // Check condition
-if (return, ) {
-  $2
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
+        if (!res.ok) return,;
+        const data = await res.json();
+        setNotes(data.notes || []);
+      } finally {;
+        setLoading(false);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-        const data = await res.json (),
-        set_notes (data.notes || []);
       } finally {
         set_loading (false);
       }
     }
-    if (load ()) {
-  $2
+
+
+type Note = {
+  id: string;
+  targetType: string;
+  targetId: string;
+  text: string;
+  authorId: string;
+  createdAt: number;
+};
+export default function AdminNotesConsole(req, res) {
+  try {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {;
+    async function load() {;
+      setLoading(true);
+      try {
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
+        if (!res.ok) return,;
+        const data = await res.json();
+        setNotes(data.notes || []);
+      } finally {;
+        setLoading(false);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h1 className="text-xl font-semibold">Admin Notes</h1>
+        <label className="inline-flex items-center gap-2 text-sm">
+          <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+          <span>Admin</span>
+        </label>
+      </div>
+      {loading ? (
+        <div>Loading…</div>
+      ) : notes.length === 0 ? (
+        <div className="opacity-70">No notes found.</div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {notes.map((n) => (
+            <div key={n.id} className="rounded border p-3 text-sm">
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 }
   }, [is_admin]),
   return (
@@ -59,3 +126,6 @@ if (return, ) {
             </div>))}
         </div>)}
     </div>);
+}
+
+

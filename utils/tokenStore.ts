@@ -1,5 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+export interface TokenTransaction {
+
+
+export interface TokenTransaction {;
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -8,6 +12,12 @@ import path from 'path';
   timestamp: string;
   metadata?: Record < string, any>;
 }
+
+
+
+export interface TokenConfig {;
+
+
   name: string;
   symbol: string;
   total_supply: number;
@@ -57,6 +67,42 @@ function load_transactions (): TokenTransaction[] {
     return getDefaultConfig ();
   }
 }
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+
+    name: 'ZION Token',
+    symbol: 'ZION$',
+
+  const transactions = loadTransactions();
+  const newTransaction: TokenTransaction = {
+
+    ...transaction,
+    id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
+    timestamp: new Date().toISOString()
+  };
+  
+  transactions && transactions.push(newTransaction);
+
+  saveTransactions(transactions);
+  return newTransaction;
+}
+  return loadConfig();
+}
+export function setConfig(config: TokenConfig): void {
+  saveConfig(config);
+}
+
+export function getConfig(): TokenConfig {;
+  return loadConfig();
+}
+
+export function setConfig(config: TokenConfig): void {;
+  saveConfig(config);
+}
+
+export function getUserBalance(userId: string): number {;
   const transactions = loadTransactions();
   let balance = 0;
   for (const tx of transactions) {
@@ -75,29 +121,16 @@ function load_transactions (): TokenTransaction[] {
     stakingRewardRate: 12.5;
   }
 }
-export function getAllTransactions (): TokenTransaction[] {
-  return load_transactions ();
-}
-export function add_transaction (transaction: Omit < TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
-  const transactions = load_transactions ();
-  const new_transaction: TokenTransaction = {
-    ...transaction,
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    timestamp: new Date ().toISOString ();
   }
 ;
   transactions.push (new_transaction);
   save_transactions (transactions);
   return new_transaction;
 }
-export function get_config (): TokenConfig {
-  return load_config ();
 }
 export function set_config (config: TokenConfig): void {
   save_config (config);
 }
-export function getUserBalance (user_id: string): number {
-  const transactions = load_transactions ();
   let balance = 0;
 ;
   for (const tx of transactions) {
@@ -119,4 +152,3 @@ if ( {) {
     }
   }
   return Math.max (0, balance);
-}

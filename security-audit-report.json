@@ -1,0 +1,141 @@
+{
+  "timestamp": "2025-09-06T00:07:28.790Z",
+  "vulnerabilities": [
+    {
+      "type": "dependency",
+      "severity": "none",
+      "count": 0,
+      "details": "No dependency vulnerabilities found"
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  "securityIssues": [
+    {
+      "file": "/workspace/src/utils/chunkErrorHandler.ts",
+      "type": "code_security",
+      "severity": "warning",
+      "message": "innerHTML assignment detected - potential XSS risk",
+      "line": 13
+    },
+    {
+      "file": "/workspace/pages/[slug].tsx",
+      "type": "code_security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
+      "line": 172
+    },
+    {
+      "file": "/workspace/components/2030-revolutionary-services.tsx",
+      "type": "code_security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
+      "line": 9
+    },
+    {
+      "file": "/workspace/components/Analytics.tsx",
+      "type": "code_security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
+      "line": 95
+    },
+    {
+      "file": "/workspace/components/SEOHead.tsx",
+      "type": "code_security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
+      "line": 91
+    },
+    {
+      "file": "/workspace/components/broken/SEO.tsx",
+      "type": "code_security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
+      "line": 65
+    },
+    {
+      "file": "/workspace/components/reports/blueprints/blueprint-2025-08-14-140146.tsx",
+      "type": "code_security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
+      "line": 1
+    },
+    {
+      "file": "/workspace/components/reports/blueprints/blueprint-2025-08-14-141021.tsx",
+      "type": "code_security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
+      "line": 1
+    },
+    {
+      "file": "/workspace/components/reports/blueprints/blueprint-2025-08-14-142038.tsx",
+      "type": "code_security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
+      "line": 1
+    },
+    {
+      "file": "/workspace/components/reports/playbooks/playbook-2025-08-14-140146.tsx",
+      "type": "code_security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
+      "line": 1
+    },
+    {
+      "file": "/workspace/components/reports/playbooks/playbook-2025-08-14-141021.tsx",
+      "type": "code_security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
+      "line": 1
+    },
+    {
+      "file": "/workspace/components/reports/playbooks/playbook-2025-08-14-142038.tsx",
+      "type": "code_security",
+      "severity": "warning",
+      "message": "dangerouslySetInnerHTML usage detected - potential XSS risk",
+      "line": 1
+    },
+    {
+      "file": ".env",
+      "type": "environment",
+      "severity": "warning",
+      "message": "Sensitive environment variable detected - ensure proper security",
+      "line": "NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdud3RnZ2VwdHprcW5kdXV0aHRvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU0MTQyMjcsImV4cCI6MjA2MDk5MDIyN30.mIyYJWh3S1FLCmjwoJ7FNHz0XLRiUHBd3r9we-E4DIY"
+    },
+    {
+      "file": ".env",
+      "type": "permissions",
+      "severity": "info",
+      "message": "File is world-readable - consider restricting permissions",
+      "details": "Current permissions: 100644"
+    },
+    {
+      "file": "package.json",
+      "type": "permissions",
+      "severity": "info",
+      "message": "File is world-readable - consider restricting permissions",
+      "details": "Current permissions: 100644"
+    },
+    {
+      "file": "next.config.cjs",
+      "type": "permissions",
+      "severity": "info",
+      "message": "File is world-readable - consider restricting permissions",
+      "details": "Current permissions: 100644"
+    },
+    {
+      "file": "ecosystem.config.cjs",
+      "type": "permissions",
+      "severity": "info",
+      "message": "File is world-readable - consider restricting permissions",
+      "details": "Current permissions: 100755"
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  "recommendations": [
+    {

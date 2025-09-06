@@ -1,4 +1,3 @@
-import {
   BookOpen,
   Brain,
   Building,
@@ -33,9 +32,93 @@ import {
   Star,
   Target,
   TrendingUp,
-} from "lucide-react";
+  Clock,
+  DollarSign,
+  Cpu,
+  Rocket,
+  Car,
+  Sprout,
+  Wifi,
+  GraduationCap,
+  Award as Recognition,
+  Star as Rating,
+  Users as People,
+  Settings as Config,
+  BarChart3 as Analytics,
+  Shield as Security,
+  Code as Programming,
+  Zap as Lightning,
+  Globe as World,
+  Home as House,
+  Building as Office,
+  FileText as Document,
+  MessageSquare as Chat,
+  Calendar as Schedule,
+  ShoppingCart as Cart,
+  BookOpen as Book,
+  Camera as Photo,
+  Music as Audio,
+  Gamepad2 as Gaming,
+  Heart as Love,
+  Truck as Delivery,
+  Calculator as Math,
+  CreditCard as Payment,
+  Lock as Secure,
+  Eye as View,
+  Target as Goal,
+  TrendingUp as Growth,
+  Clock as Time,
+  DollarSign as Money;
+
+
+
+
 } from 'lucide-react';
 
+
+
+
+  ArrowRight
+  Award
+  BarChart3
+  BookOpen
+  Brain
+  Building
+  Calculator
+  Calendar
+  Camera
+  CheckCircle
+  ChevronDown
+  Clock
+  Cloud
+  Code
+  CreditCard
+  DollarSign
+  Eye
+  FileText
+  Gamepad2
+  Globe
+  Heart
+  Home
+  Lock
+  Mail
+  MapPin
+  Menu
+  MessageSquare
+  Music
+  Network
+  Phone
+  Rocket
+  Settings
+  Shield
+  ShoppingCart
+  Star
+  Target
+  TrendingUp
+  Truck
+  Users
+  X
+  Zap
 const navigationItems = [
   {
     title: "Services"
@@ -101,11 +184,102 @@ const navigation_items = [;
       }
       {
       {
+        title: "Data Analytics",
+        href: "/data - analytics",
+        icon: BarChart3,
+        description: "Advanced analytics platform",
+        popular: false,
+      },
+    ],
+  },
+  {
+    title: "Solutions",
+    href: "/solutions",
+    icon: Target,
+    submenu: [;
+      {
+        title: "Enterprise Solutions",
+        href: "/solutions / enterprise",
+        icon: Building,
+        description: "Comprehensive enterprise solutions",
+      },
+      {
+        title: "Startup Solutions",
+        href: "/solutions / startup",
+        icon: Rocket,
+        description: "Rapid deployment for startups",
+      },
+      {
+        title: "Industry Solutions",
+        href: "/solutions / industry",
+        icon: BarChart3,
+        description: "Industry - specific solutions",
+      },
+      {
+        title: "Custom Solutions",
+        href: "/solutions / custom",
+        icon: Settings,
+        description: "Tailored custom solutions",
+      },
+    ],
+  },
+  {
+    title: "Industries",
+    href: "/industries",
+    icon: Building,
+    submenu: [;
+      {
+        title: "Healthcare",
+        href: "/industries / healthcare",
+        icon: Heart,
+        description: "Medical AI and health tech",
+      },
+      {
+        title: "Finance",
+        href: "/industries / finance",
+        icon: DollarSign,
+        description: "Fintech and financial services",
+      },
+      {
+        title: "Manufacturing",
+        href: "/industries / manufacturing",
+        icon: Settings,
+        description: "Industrial automation",
+      },
+      {
+        title: "Retail",
+        href: "/industries / retail",
+        icon: ShoppingCart,
+        description: "E - commerce and retail tech",
+      },
+      {
+        title: "Education",
+        href: "/industries / education",
+        icon: BookOpen,
+        description: "EdTech solutions",
+      },
+      {
+        title: "Real Estate",
+        href: "/industries / real - estate",
+        icon: Home,
+        description: "PropTech innovations",
+      },
+    ],
+  },
+  {
+      {
         title: "Blog"
         href: "/blog"
         icon: FileText
         description: "Latest insights and trends"
       }
+      {
+      {
+        title: "White Papers",
+        href: "/white - papers",
+        icon: FileText,
+        description: "In - depth research reports",
+      },
       {
       {
         title: "FileTextation"
@@ -154,6 +328,18 @@ const navigation_items = [;
       }
     ]
   }
+];
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
+
+export default function Navigation() {;
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -184,6 +370,10 @@ const navigation_items = [;
           </div>;
         </div>;
       </div>;
+      {/* Main Navigation */}
+      <div className="container mx - auto px - 4">;
+        <div className="flex justify - between items - center py - 4">;
+          {/* Logo */}
                 AI & Technology Solutions;
               </div>;
             </div>;

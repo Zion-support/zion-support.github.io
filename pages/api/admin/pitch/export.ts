@@ -15,14 +15,15 @@
   res.setHeader('Content-Typeapplication/octet-stream')
   res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version |'draft'}.html"`)
   res.status(200).send(html)
-
-}
-function escapeHtml(str: string) {
-  return String(str)
-
 .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
     .replace(/'/g, '&#039,')
 }
+
+    .replace(/'/g, '&#039,');
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+

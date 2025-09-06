@@ -30,7 +30,6 @@ export default function ProductPage() {;
         if (res.ok) {
           const data = await res.json();
           setProduct(data)
-=======
 import { useRouter } from 'next/router', // Changed from useParams;
 import { useEffect, useState } from 'react',;
 import Image from 'next/image',;
@@ -64,45 +63,72 @@ export default function ProductPage() {;
         if (res.ok) {;
           const data = await res.json(),;
           setProduct(data);
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
-      } catch (err) {
         // Fail silently and fall back to local data
-        logErrorToProduction('Error fetching product', { data: err })
-      }
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct()
-=======
     },;
     // Only fetch if id is available (from router);
     if (id) {;
       fetchProduct();
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+  }, [id]), // id is now from router && router.query;
+
+
+    return <div className="p-6 text-white">Product not found</div>
+  }, [id]), // id is now from router.query;
+
     }
   }, [id]), // id is now from router.query
   if (!product && !id) { // If no id from router yet, it might still be loading
     return <div className="p-6 text-white">Loading product details...</div>
   }
   if (!product) {
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       />
-      <div className="min-h-screen bg-zion-blue p-6 text-white">
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
             <Image
               className="object-cover rounded-md"
+              fill
             />
           </div>
         ) : null}
         <p className="mb-6">{product.description}</p>
+        </Button>;
+      </div>;
+    </>;
+  );
+
+import Image from 'next / image';
+import {Button} from '@/components / ui / button';
+import {NEW_PRODUCTS} from '@/data / newProductsData';
+import {use_cart} from '@/context / CartContext';
+import {toast} from '@/hooks / use - toast';
+import {SEO} from '@/components / SEO';
+import {logErrorToProduction} from '@/utils / production_logger';
+export default /**
+ * ProductPage - Function description
+ */
+function ProductPage() {
+  const router = use_router ();
+  const { id: raw_id } = router.query;
+  const id = typeof raw_id === 'string' ? raw_id : undefined;
+  const [product, set_product] = useState (
+    NEW_PRODUCTS.find ((p) => p.id === id) || null);
+  const { items, dispatch } = use_cart ();
+  const [adding, set_adding] = useState (false);
+  useEffect (() => {
+    // Update product if id changes and is available from router.query;
+    // Check condition
+if ( {) {
+  $2
+}
+;
+        </Button>;
+      </div>;
+    </>;
         </Button>
       </div>
     </>
@@ -129,10 +155,5 @@ product.title ;
 }
         </Button>;
       </div>;
-    </>;
-  );
-}
+    </>);
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

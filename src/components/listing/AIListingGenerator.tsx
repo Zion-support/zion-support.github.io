@@ -7,17 +7,14 @@ interface GeneratedContent {
 
     max: number
   }
-  keyPoints: string[]
+  key_points: string[];
 }
 interface AIListingGeneratorProps {
 
-  onApplyGenerated?: (content: GeneratedContent,) => void
-
-  initialValues?: {
     title?: string;
     category?: string;
     keyFeatures?: string;
-    targetAudience?: string
+    targetAudience?: string;
   }
 }
 
@@ -36,21 +33,22 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     keyFeatures: string
     targetAudience: string
   }) => {
-    setIsLoading(true)
+    setIsLoading (true);
     try {
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
-        body: { title, category, keyFeatures, targetAudience }
-      })
-      if (error) {
-        throw new Error(error.message)
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
+        body: { title, category, key_features, target_audience }
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (error.message);
       }
       if (data && (data as any).error) {
         throw new Error((data as any).error)
       }
-=======
 
       setGeneratedContent((data as any)?.generated || null)
-=======
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -60,10 +58,7 @@ import { AIListingForm } from "./AIListingForm",
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 import {logErrorToProduction} from '@/utils/productionLogger',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       toast({
-        title: "Content Generated"
         description: "AI has created optimized listing content for you."
       })
     } catch (error) {
@@ -74,18 +69,14 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         variant: "destructive"
       })
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
       })
-    }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -105,7 +96,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
           />
         </CardContent>
       </Card>
-=======
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 ;
@@ -118,23 +108,11 @@ import {logErrorToProduction} from '@/utils/productionLogger',
       logErrorToProduction('Error generating content:', { data: error }),;
       toast({;
         title: "Generation Failed",;
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
-  },;
-  const handleApply = () => {;
-    if (generatedContent && onApplyGenerated) {;
-      onApplyGenerated(generatedContent),;
-      toast({;
-        title: "Content Applied";
-        description: "The generated content has been applied to your listing.";
-      });
-    }
-  };
-  return (;
     <div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
@@ -154,18 +132,30 @@ import {logErrorToProduction} from '@/utils/productionLogger',
           />;
         </CardContent>;
       </Card>;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {isLoading && <LoadingContentSkeleton />}
       {generatedContent && !isLoading && (
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
-=======
+}) => {
+  setIsLoading (true);
+try {
+  const {
+}catch (error) {';
+  logErrorToProduction ('Error generating content:', {
+  data: error;
+});
+toast ({
+}finally {
+  setIsLoading (false);
+}
+}
+
+}
+}
+}
+}
+
     </div>;
   );
 }
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,15 +1,9 @@
-import React, { useState } from "react",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Select,
   SelectContent,
   SelectItem,
@@ -28,7 +22,6 @@ import { Textarea } from '@/components/ui/textarea'; import {
   SelectItem
   SelectTrigger
   SelectValue
-=======
 } from '@/components/ui/select'
 import { Input } from '@/components/ui/input'
 import { disputeReasonLabels } from '@/types/disputes'
@@ -59,17 +52,13 @@ export function DisputeForm({
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [files, setFiles] = useState<File[]>([]),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const dispute = await createDispute({
         project_id: projectId,
         milestone_id: milestoneId,
         reason_code: values.reason_code,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
@@ -77,44 +66,33 @@ export function DisputeForm({
           // logInfo(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
         toast.success('Your dispute has been submitted')
-=======
         
         toast.success("Your dispute has been submitted"),
         
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
-=======
-=======
+
+
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+      logErrorToProduction('Error submitting dispute:', { data: error }),
+      toast.error("Failed to submit dispute. Please try again.")
+
     } finally {
       setIsSubmitting(false)
     }
   }
   return (
-    <div className="space-y-6">
-      <div className="flex items-center space-x-2">
-        <FileText className="h-5 w-5 text-primary" />
-        <h2 className="text-xl font-semibold">Report an Issue</h2>
-      </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
             control={form.control}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -123,9 +101,150 @@ export function DisputeForm({
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    {Object.entries(disputeReasonLabels).map(([value, label]) => (
+                      <SelectItem key={value} value={value}>{label}</SelectItem>
+import React, { useState } from "react",;
+import { useForm, ControllerRenderProps } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { Button } from "@/components/ui/button",;
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+    <div className='space-y-6'>;
+      <div className='flex items-center space-x-2'>;
+        <FileText className='h-5 w-5 text-primary' />;
+        <h2 className='text-xl font-semibold'>Report an Issue</h2>;
+      </div>;
+          <FormField
+            control={form && form.control}
+            name='reason_code'
+      setIsSubmitting (true);
+      const dispute = await create_dispute ({
+        project_id: project_id,
+        milestone_id: milestone_id,
+        reason_code: values.reason_code,
+        description: values.description,
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        // Future enhancement: Upload attachments;
+        // For now we just log the files that would be uploaded;
+        // Check condition
+if ( {) {
+  $2
+}
+          // log_info (`Would upload ${files.length} files for dispute ${dispute.id}`);
+        }
+        toast.success ('Your dispute has been submitted');
+        // Check condition
+if ( {) {
+  $2
+}
+          onDisputeCreated (dispute.id);
+        }
+      }
+    } catch (error) {
+      logErrorToProduction ('Error submitting dispute:', { data: error });
+      toast.error ('Failed to submit dispute. Please try again.');
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+  return (
+    <div className='space - y-6'>;
+      <div className='flex items - center space - x-2'>;
+        <FileText className='h - 5 w - 5 text - primary' />;
+        <h2 className='text - xl font - semibold'>Report an Issue</h2>;
+      </div>;
+      <Form {...form}>;
+        <form on_submit={form.handle_submit (on_submit)} className='space - y-6'>;
+          <FormField;
+            control={form.control}
+            name='reason_code';
+            render={({
+              field
+            }: {
+                <Select
+                  onValueChange={field && field.onChange}
+                  defaultValue={field && field.value}>;
+              field: ControllerRenderProps<;
+                z.infer < typeof form_schema>,
+                'reason_code';
+              >;
+            }) => (              <FormItem>;
+                <FormLabel > Reason for dispute</FormLabel>;
+                <Select;
+                  onValueChange={field.on_change}
+                  default_value={field.value}
+                >;
+                  <FormControl>;
+                    <SelectTrigger>;
+                      <SelectValue placeholder='Select a reason' />;
+                    </SelectTrigger>;
+                  </FormControl>;
+                  <SelectContent>;
+          <FormField
+            control={form && form.control}
+            name='description'
+                    {Object.entries (disputeReasonLabels).map (
+                      ([value, label]) => (
+                        <SelectItem key={value} value={value}>;
+                          {label}
+                        </SelectItem>))}                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+              </FormItem>)}
+          />;
+          <FormField;
+            control={form.control}
+            name='description';
+            render={({
+              field
+            }: {
+                  <Textarea
+                    placeholder='Please provide specific details about the issue...'
+                    className='min-h-[150px]'
+              field: ControllerRenderProps<;
+                z.infer < typeof form_schema>,
+                'description';
+              >;
+            }) => (              <FormItem>;
+                <FormLabel > Describe the issue in detail</FormLabel>;
+                <FormControl>;
+                  <Textarea;
+                    placeholder='Please provide specific details about the issue...';
+                    className='min - h-[150px]';
+                    {...field}
+                  />;
+                </FormControl>;
+                <FormMessage />;
+                <Input
+                  type='file'
+                  multiple
+                  onChange={handleFileChange}
+                        <li
+                          key={index}
+                          className='flex items-center justify-between text-sm bg-muted/30 p-2 rounded'
+                        >
+                          <span>
+                            {file.name} ({(file.size / 1024).toFixed(1)} KB)
+                          </span>
+                          <Button
+                            type='button'
+                            variant='ghost'
+                            size='sm'
+
                     {...field}
                   />
                 </FormControl>
@@ -133,6 +252,36 @@ export function DisputeForm({
               </FormItem>
             )}
           />
+
+
+                      ))}
+                    </ul>;
+                  </div>;
+                )}
+              </div>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+          <div className='flex justify-end space-x-2'>
+          
+          <div className="flex justify-end space-x-2">
+
+
+            {onCancel && (
+              <Button type='button' variant='outline' onClick={onCancel}>
+                Cancel
+              </Button>
+              </FormItem>)}
+          />;
+          <FormItem>;
+            <FormLabel > Attachments (optional)</FormLabel>;
+            <FormControl>;
+              <div className='space - y-4'>;
+                <Input;
+                  type='file';
+                  multiple;
+                  on_change={handleFileChange}
+                  className='cursor - pointer'                />;
               <div className='space-y-4'>
                 <Input
                   type='file'
@@ -159,7 +308,6 @@ export function DisputeForm({
                             Remove
                           </Button>
                         </li>
-=======
               <div className="space-y-4">
                 <Input 
                   type="file" 
@@ -184,39 +332,50 @@ export function DisputeForm({
                             Remove;
                           </Button>;
                         </li>;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       ))}
                     </ul>
                   </div>
                 )}
-              </div>
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {onCancel && (
-              <Button type="button" variant="outline" onClick={onCancel}>
+              <Button type='button' variant='outline' onClick={onCancel}>
                 Cancel
               </Button>
-            )}
-            <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit Dispute"}
-            </Button>
-          </div>
-        </form>
-      </Form>
-    </div>
-  )
-}
-=======
+}value= {
+  value 
+}> {;
+  label ;
+}</SelectItem>) ) ;
+}</SelectContent> </Select> <FormMessage /> </FormItem>) ;
+}/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) ;
+
+
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
-}'"};
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+  setIsSubmitting (true);
+const dispute = await create_dispute ({
+  project id: project_id;
+milestone id: milestone_id;
+reason code: values.reason code;
+description: values.description;
+});
+//Future enhancement: Upload attachments //For now we just log the files that would be uploaded // Check condition
+if ( {) {
+  $2
+}
+}finally {
+  setIsSubmitting (false);
+}";
+}return (<div className="space - y-6" > <div className="flex items - center space - x-2" > <FileText className="h - 5 w - 5 text - primary" /> <h2 className="text - xl font - semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel > Reason for dispute</FormLabel> <Select onValueChange= {
+  field.on_change;
+}default_value= {
+  field.value ";
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {
+  Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItem key= {
+  value;
+}value= {
+  value;
+}> {

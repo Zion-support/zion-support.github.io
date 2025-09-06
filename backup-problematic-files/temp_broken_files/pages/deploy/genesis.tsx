@@ -1,1 +1,1 @@
-export { default } from '../zion/
+export { default } from '../zion/init',

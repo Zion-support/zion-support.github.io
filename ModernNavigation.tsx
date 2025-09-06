@@ -25,13 +25,3 @@ export default function ModernNavigation(): any ({}: ModernNavigationProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-export default /**
- * ModernNavigation - Function description
- */
-function ModernNavigation() {
-  return (
-    <div className={class_name}>;
-      <h1 > ModernNavigation</h1>;
-      <p > This component is currently under development.</p>;
-    </div>);
-}

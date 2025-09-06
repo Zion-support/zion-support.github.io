@@ -1,4 +1,52 @@
-interface Param {
+      method
+      headers: {
+        Authorization: `Bearer ${apiKey}`
+        'Content-Type': 'application/json'
+      }
+      // Add timeout to prevent hanging
+
+      try {
+        options.body = JSON.stringify (JSON.parse (body));
+      } catch {
+        options.body = body
+      }
+    }
+    setLoading(true)
+    setResponse(null)
+    try {
+      const res = await fetch (url, options);
+      const content_type = res.headers.get ('content - type');
+      let response_text: string;
+      if () {) {
+  $2
+}
+        try {
+          const json_data = await res.json ();
+          response_text = JSON.stringify (json_data, null, 2);
+        } catch {
+          response_text = await res.text ();
+        }
+      } else {
+        response_text = await res.text ();
+      }
+    } catch (err: any) {
+      let error_message = 'Request failed';
+      // Check condition
+if ( {) {
+  $2
+}
+        error_message = 'Request timed out (15s)';
+      } else if () {) {
+  $2
+}
+        error_message =;
+          'Network error - check CORS configuration or API endpoint';
+      } else {
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import CodeBlock from './CodeBlock';
 
   name: string
 type: string
@@ -32,7 +80,6 @@ export function ApiPlayground({
       })
       const query = searchParams.toString()
       if (query) url += `?${query}` }
-=======
 import { Button } from "@/components/ui/button",
 import CodeBlock from "./CodeBlock",
 interface Param {
@@ -81,28 +128,18 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       const query = searchParams.toString(),
       if (query) url += `?${query}`
     }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const options: RequestInit = {
       method
       headers: {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       try {
         options.body = JSON.stringify(JSON.parse(body))
       } catch {
         options.body = body
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-4">
       <Input
         value={apiKey}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       />
       {params.map(p => (
         <Input
@@ -115,37 +152,49 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
           onChange={e => setBody(e.target.value)}
           className='font-mono'        />
       )}
-      <Button onClick={sendRequest} disabled={loading}>
-        {loading ? 'Sending...' : 'Send Request'}
-      </Button>
-      {response && <CodeBlock code={response} language='json' />}
-    </div>
-  )
-export default ApiPlayground
-  const val = paramValues[p.name]
-if (val) searchParams.append (p.name, val)
-})
-const query = searchParams.toString ()
-if (query) url += `?$ {
-  query
-}`
-}const options: RequestInit = {
-  method, headers: {
-  Authorization: `Bearer $ {
-  apiKey
-}`
-"Content-Type" : "application/json"
+
+
+    </div>;
+  );
+
+export default ApiPlayground;
+  const val = paramValues[p && p.name];
+if (val) searchParams && searchParams.append (p && p.name, val) ;
+});
+const query = searchParams && searchParams.toString ();
+if (query) url += `?$ {;
+  query ;
+}` ;
+}const options: RequestInit = {;
+  method, headers: {;
+  Authorization: `Bearer $ {;
+  apiKey ;
+}`;
+"Content-Type" : "application/json" ;
+};
+//Add timeout to prevent hanging signal: AbortSignal && AbortSignal.timeout (15000) ;
+};
+}setLoading (true);
+setResponse (null);
+let responseText: string;
+if (contentType?.includes ('application/json') ) {;
+  try {;
+  /> {;
+  params && params.map ( (p) => (<Inputkey= {
+  p && p.name 
+}</div>) ;
+}export default ApiPlayground;
+
+  p.name;
+}</div>);
+}export default ApiPlayground;
+'";
+  p.name 
+}</div>) ;
+}export default ApiPlayground;
+'";
 }
-//Add timeout to prevent hanging signal: AbortSignal.timeout (15000)
-}
-}setLoading (true)
-setResponse (null)
-let responseText: string
-if (contentType?.includes ('application/json') ) {
-  try {
-  /> {
-  params.map ( (p) => (<Input key= {
-=======
+
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;
@@ -165,7 +214,3 @@ if (contentType?.includes ('application/json') ) {
   )
 }
 ;
-export default ApiPlayground;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

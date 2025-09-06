@@ -58,7 +58,6 @@ class IntelligentErrorFixer {
       missingImports: {
         pattern: /React\./g,
         fix: (content) => {
-          if (!content.includes("import React")) {;
             return `import React from 'react';\n${content}`;
           }
           return content;
@@ -114,12 +113,10 @@ class IntelligentErrorFixer {
       return { success: false, output: error.stdout || error.message };
     }
   }
-
     lines.forEach((line, index) => {
       // Extract file paths and error messages
       const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/);
       const errorMatch = line.match(/Error:|SyntaxError:|TypeError:/);
-      
       if (fileMatch && errorMatch) {
         errors.push({
           file: fileMatch[1],
@@ -174,12 +171,10 @@ class IntelligentErrorFixer {
         content = `import React from 'react';\n${content}`;
         modified = true;
       }
-
       if (modified) {
         // Create backup
         const backupPath = `${filePath}.backup.${Date.now()}`;
         fs.copyFileSync(filePath, backupPath);
-        
         // Write fixed content
         fs.writeFileSync(filePath, content);
         this.log(`Successfully fixed and saved: ${filePath}`);
@@ -223,7 +218,6 @@ class IntelligentErrorFixer {
         } else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) {
           const baseName = file.name.replace(/\.(js|tsx)$/, '');
           const relativePath = path.relative(pagesDir, path.join(dir, baseName));
-          
           if (seen.has(relativePath)) {
             duplicates.push(path.join(dir, file.name));
           } else {
@@ -293,9 +287,6 @@ const {
             return content.replace(match[0], match[0] + match[0].charAt(0));
           }},
         "mergeConflicts": {
-          "fix": content => {
-            // Remove merge conflict markers
-            return content
           pattern: /||
           "fix": content => {
             // Remove merge conflict markers
@@ -404,6 +395,8 @@ const {
     }
   }
 }
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 
     }
     async runTypeCheck() {
@@ -615,7 +608,3 @@ const {
 if (require.main === module) {
   const fixer = new IntelligentErrorFixer();
   fixer.run().catch(console.error);
-}
-module.exports = IntelligentErrorFixer;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||

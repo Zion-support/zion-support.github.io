@@ -1,5 +1,4 @@
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const ContextMenu = ContextMenuPrimitive.Root
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger
 const ContextMenuGroup = ContextMenuPrimitive.Group
@@ -11,22 +10,18 @@ const ContextMenuSubTrigger = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
     inset?: boolean
   }
->(({ className, inset, children, ...props }, ref) => (;
+>(({ class_name, inset, children, ...props }, ref) => (
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       className
-    )}
     {...props}
   >;
     {children}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   </ContextMenuPrimitive.SubTrigger>
-))
 ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName
 const ContextMenuSubContent = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubContent>
@@ -35,128 +30,140 @@ const ContextMenuSubContent = React.forwardRef<
   <ContextMenuPrimitive.SubContent
     ref={ref}
     className={cn(
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       className
-    )}
     {...props}
   />;
 ));
 ContextMenuSubContent.displayName = ContextMenuPrimitive.SubContent.displayName;
 const ContextMenuContent = React.forwardRef<;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Content>;
->(({ className, ...props }, ref) => (;
   <ContextMenuPrimitive.Portal>;
     <ContextMenuPrimitive.Content;
       ref={ref}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
         className
-      )}
       {...props}
     />;
   </ContextMenuPrimitive.Portal>;
 ));
 ContextMenuContent.displayName = ContextMenuPrimitive.Content.displayName;
 const ContextMenuItem = React.forwardRef<;
-=======
+
+className={cn (
+      &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  >;
+    {children}
+<ChevronRight className=&quot;ml - auto h - 4 w - 4&quot; />;
+  </ContextMenuPrimitive.SubTrigger>));
+ContextMenuSubTrigger.display_name = ContextMenuPrimitive.SubTrigger.display_name;
+const ContextMenuSubContent = React.forward_ref<;
+  React.ElementRef < typeof ContextMenuPrimitive.SubContent>,
+  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.SubContent>;
+>(({ class_name, ...props }, ref) => (
+  <ContextMenuPrimitive.SubContent;
+    ref={ref}
+    className={cn (
+      &quot;z - 50 min - w-[8rem] overflow - hidden rounded - md border bg - popover p - 1 text - popover - foreground shadow - md data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+      class_name)}
+    {...props}
+  />));
+ContextMenuSubContent.display_name = ContextMenuPrimitive.SubContent.display_name;
+const ContextMenuContent = React.forward_ref<;
+  React.ElementRef < typeof ContextMenuPrimitive.Content>,
+  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Content>;
+>(({ class_name, ...props }, ref) => (
+  <ContextMenuPrimitive.Portal>;
+    <ContextMenuPrimitive.Content;
+      ref={ref}
+className={cn (
+        &quot;z - 50 min - w-[8rem] overflow - hidden rounded - md border bg - popover p - 1 text - popover - foreground shadow - md animate - in fade - in - 80 data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+        class_name)}
+      {...props}
+    />;
+  </ContextMenuPrimitive.Portal>));
+ContextMenuContent.display_name = ContextMenuPrimitive.Content.display_name;
+const ContextMenuItem = React.forward_ref<;
+  React.ElementRef < typeof ContextMenuPrimitive.Item>,
+  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Item> & {
+
+
   React.ElementRef<typeof ContextMenuPrimitive.Item>,;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  React.ElementRef<typeof ContextMenuPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
     inset?: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <ContextMenuPrimitive.Item;
     ref={ref}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       className
-    )}
     {...props}
   />;
 ));
 ContextMenuItem.displayName = ContextMenuPrimitive.Item.displayName;
 const ContextMenuCheckboxItem = React.forwardRef<;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.CheckboxItem>;
 >(({ className, children, checked, ...props }, ref) => (;
   <ContextMenuPrimitive.CheckboxItem;
     ref={ref}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       className
     )}
     checked={checked}
     {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <ContextMenuPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
-      </ContextMenuPrimitive.ItemIndicator>
-    </span>
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <ContextMenuPrimitive.ItemIndicator>;
+        <Check className=&quot;h - 4 w - 4&quot; />;
+      </ContextMenuPrimitive.ItemIndicator>;
+    </span>;
     {children}
-  </ContextMenuPrimitive.CheckboxItem>;
-));
-ContextMenuCheckboxItem.displayName =;
-  ContextMenuPrimitive.CheckboxItem.displayName;
-const ContextMenuRadioItem = React.forwardRef<;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <ContextMenuPrimitive.RadioItem;
     ref={ref}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       className
     )}
     {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <ContextMenuPrimitive.ItemIndicator>
-        <Circle className="h-2 w-2 fill-current" />
-      </ContextMenuPrimitive.ItemIndicator>
-    </span>
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <ContextMenuPrimitive.ItemIndicator>;
+        <Circle className=&quot;h - 2 w - 2 fill - current & quot; />;
+      </ContextMenuPrimitive.ItemIndicator>;
+    </span>;
     {children}
-  </ContextMenuPrimitive.RadioItem>;
-));
-ContextMenuRadioItem.displayName = ContextMenuPrimitive.RadioItem.displayName;
-const ContextMenuLabel = React.forwardRef<;
-=======
-  React.ElementRef<typeof ContextMenuPrimitive.Label>,;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
     inset?: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <ContextMenuPrimitive.Label;
     ref={ref}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       className
-    )}
     {...props}
   />;
 ));
 ContextMenuLabel.displayName = ContextMenuPrimitive.Label.displayName;
 const ContextMenuSeparator = React.forwardRef<;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
   <ContextMenuPrimitive.Separator;
@@ -172,15 +179,10 @@ const ContextMenuShortcut = ({
   return (
     <span
       className={cn(
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
         className
       )}
       {...props}
-    />;
-  );
+    />);
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

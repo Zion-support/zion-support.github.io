@@ -82,7 +82,6 @@
                         className="block text - gray - 700 hover:text - blue - 600 transition - colors py - 2";
                       >;
                         {item.name}
-=======
                       </Link>)}
                   </div>))}
                 {/* Contact Info */}
@@ -104,5 +103,3 @@
     </header>);
 }
 ;
-export default EnhancedHeader;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

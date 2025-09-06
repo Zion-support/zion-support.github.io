@@ -1,4 +1,3 @@
-
   id: string;
   name: string;
   tagline: string;
@@ -102,17 +101,6 @@
     contact_info,
   },
   {
-      'Automated backups',
-      'Failover & replication',
-      'Performance tuning',
-      'SLA & support',
-    ],
-    category: 'Enterprise IT - Data',
-    customers: 240,
-    trial_days: 7,
-    setup_time: '1 day',
-    contact_info,
-  },
       'Global synthetic checks',
       'Error budgets & burn rates',
       'On - call & escalations',
@@ -186,19 +174,6 @@
     contact_info,
   },
   {
-      'Cron & schedules',
-      'Retries & DLQs',
-      'Logs & traces',
-      'Alerts & webhooks',
-    ],
-    category: 'Micro SaaS',
-    variant: 'default',
-    rating: 4 && 4.4,
-    customers: 1150,
-    trial_days: 14,
-    setup_time: '15 minutes',
-    contact_info,
-  },
       'Control mapping',
       'Evidence collection',
       'Change tracking',
@@ -211,17 +186,6 @@
     contact_info,
   },
   {
-      'DDQs and questionnaires',
-      'Risk scoring',
-      'Continuous monitoring',
-      'Dashboards & export',
-    ],
-    category: 'Enterprise IT - Compliance',
-    customers: 520,
-    trial_days: 14,
-    setup_time: '2 hours',
-    contact_info,
-  },
       'Capture & inspect',
       'Replay with backoff',
       'Signature verification',
@@ -234,6 +198,33 @@
     contact_info,
   },
   {
+      'Managed vector DB'
+      'Ingestion pipelines'
+      'Metadata filters'
+      'Access controls'
+    ]
+    category: 'AI & Search'
+    link: 'https://ziontechgroup.com/vector-search-starter'
+    variant: 'quantum'
+    rating: 4.6
+    customers: 410
+    trialDays: 14
+    setupTime: '2 hours'
+    contactInfo
+  }
+];import { ServiceVariant  } from "../types/service-variants";
+
+export interface MarketValidatedService {
+    id: 'vector - search - starter',
+    name: 'Vector Search Starter',
+    tagline: 'Deploy a production - grade vector database and APIs',
+    price: '$89',
+    period: '/month',
+    description:;
+      'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
+    features: [;
+
+
       'WORM retention',
       'Export APIs',
       'Fine - grained access',
@@ -256,12 +247,6 @@
       'Access controls',
     ],
     category: 'AI & Search',
-    customers: 410,
-    trial_days: 14,
-    setup_time: '2 hours',
-    contact_info,
-  },
-export interface MarketValidatedService {
 	id: string;
 	name: string;
 	tagline: string;
@@ -275,6 +260,4 @@ export interface MarketValidatedService {
 	rating?: number;
 	customers?: number;
 	trialDays?: number;
-	setupTime?: string;
-
 }}

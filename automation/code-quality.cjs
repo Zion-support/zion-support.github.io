@@ -1,3 +1,4 @@
+}},
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -56,6 +57,8 @@ const qualityChecks = [{
       console.log(`Total files analyzed: ${totalFiles}`);
     },
   },
+      
+      
     }},
   {
     "name": 'Import/Export Analysis',
@@ -77,6 +80,9 @@ const qualityChecks = [{
       }
     },
   },
+
+        
+        
       }
     }},
   {
@@ -111,6 +117,8 @@ const qualityChecks = [{
       }
     },
   },
+
+        
       }
     }},
 ];
@@ -143,12 +151,16 @@ const report = {
     "successful": successCount,
     "failed": totalCount - successCount}};
 
+
+
+
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
 }
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -164,4 +176,7 @@ console.log(' Code Quality Checker Starting...\n')
     "name"
     "name"
             content.match(/^import\s+.*from\s+['"][^'')]
+    "status"
+    "status"
+    "status"
     "status"

@@ -1,4 +1,6 @@
 import type { NextPage } from 'next';
+
+
 const EquipmentDetail: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query as { slug?: string }
@@ -14,34 +16,6 @@ const EquipmentDetail: NextPage = () => {
         </div>
       </EnhancedLayout>
     )
-import equipment from '@/data/equipment ;
-const EquipmentDetail: NextPage = () => {;
-  const router = useRouter(),;
-  const { slug } = router && router.query as { slug?: string };
-  const items = equipment as any[];
-  const item = items && items.find(e => e && e.slug === slug);  const item = items && items.find((e) => e && e.slug === slug);
-
-  if (!item) {;
-    return (
-      <EnhancedLayout>;
-        <Head>;
-          <title>Equipment Not Found - Zion Tech Solutions</title>;
-        </Head>;
-        <div className='space-y-4'>;
-          <h1 className='text-xl font-semibold'>Equipment not found</h1>;
-          <Link href='/products'>;
-            <a className='text-blue-600 hover:underline'>Back to Equipment</a>;
-          </Link>;
-        </div>;
-      </EnhancedLayout>;
-    );  }        <div className="space-y-4">;
-          <h1 className="text-xl font-semibold">Equipment not found</h1>;
-          <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>;
-        </div>;
-      </EnhancedLayout>;
-    );
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <EnhancedLayout>;
       <Head>;
@@ -123,15 +97,10 @@ const EquipmentDetail: NextPage = () => {;
     </EnhancedLayout>
   )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default EquipmentDetail;
 
-=======
 import Head from 'next / head';
 import {use_router} from 'next / router';
 import Link from 'next / link';
@@ -227,4 +196,3 @@ if ( {) {
 ;
 export default EquipmentDetail;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

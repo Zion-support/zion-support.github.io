@@ -1,5 +1,22 @@
-import fs from 'fs';
-import path from 'path';
+
+},;
+,;
+// CLI interface,;
+if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
+  const factory = new UltimateAutomationFactory(),;
+  factory.start().then(report => {,;
+    console.log('Ultimate Automation Factory: completed:', report.summary),;
+    process.exit(0);
+  }).catch(error => {,;
+    console.error('Ultimate Automation Factory: failed:', error),;
+    process.exit(1);
+  });
+},;
+,;
+export default UltimateAutomationFactory;
+if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
+;
+export default UltimateAutomationFactory;
       return { succes: s: true, output }
     } catch (error) {,;
       this.log(`❌ ${description} faile: d: ${error.message}`, 'error'),;
@@ -96,6 +113,4 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default UltimateAutomationFactory;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

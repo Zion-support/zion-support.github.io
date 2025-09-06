@@ -1,11 +1,14 @@
-import { useState, useEffect } from "react",
-import { SEO } from "@/components/SEO",
-import { TalentCard } from "@/components/talent/TalentCard",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Using router.asPath instead of useLocation
+
+        const { data, error } = await supabase;
+          .from ('saved_talents');
+          .select (
+            `;
+            talent_profile (
+  }
+
+  const handleRequestHire = (talent: TalentProfile) =>: any {
+    log_info ('Request to hire:', { data: talent });    toast ({
 
   useEffect(() => {
     if (!user) {
@@ -19,10 +22,7 @@ import { TalentProfile } from "@/types/talent",
       try {
         if (!user) {
           logWarn("User not authenticated."),
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           return
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
         const { data, error } = await supabase
           .from("saved_talents")
@@ -45,7 +45,6 @@ import { TalentProfile } from "@/types/talent",
             )
           `
           )
-=======
           .eq("user_id", user.id),
 
         if (error) {
@@ -134,30 +133,6 @@ export default function SavedTalentsPage() {;
   },
 
   const handleRequestHire = (talent: TalentProfile) => {
-    logInfo('Request to hire:', { data: talent }),
-    toast({
-      title: "Hire Request Sent",
-      description: `A hire request has been sent to ${talent.full_name}.`})
-  },
-
-  const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
-    try {
-      if (!user) {
-        logWarn("User not authenticated."),
-        return
-      } catch (error) {;
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching saved talents' }),;
-        toast({;
-          title: "Error",;
-          description: "Failed to load saved talents. Please try again later.",;
-          variant: "destructive"});
-      } finally {;
-        setIsLoading(false);
-      }
-    },;
-    fetchSavedTalents();
-  }, [user]),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const handleViewProfile = (talentId: string) => {;
     router.push(`/talent/${talentId}`);
   };
@@ -165,7 +140,7 @@ export default function SavedTalentsPage() {;
     logInfo('Request to hire:', { data: talent });    toast({
       title: 'Hire Request Sent',
       description: `A hire request has been sent to ${talent.full_name}.`,
-    })
+    });
   }
   const handleToggleSave = async (
     talentId: string,
@@ -175,25 +150,33 @@ export default function SavedTalentsPage() {;
         logWarn('User not authenticated.')
         return;
       }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        const { error } = await supabase;
+          .from ('saved_talents');
+          .insert ([{ user_id: user.id, talent_id: talent_id }]);
+        // Check condition
+if ( {) {
+  $2
+}
+          throw error;
+        }
       } else {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          .insert([{ user_id: user.id, talent_id: talentId }]),
+  
+          .insert([{ user_id: user.id, talent_id: talentId }]),
+  
+
         if (error) {
           throw error
         }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Fetch the updated talent profile and add it to the list
         const { data: talentData, error: talentError } = await supabase
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
-=======
           .single(),
   
         if (talentError) {
@@ -203,27 +186,10 @@ export default function SavedTalentsPage() {;
             description: "Failed to update saved talents. Please try again later.",
             variant: "destructive"}),
           return
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
   
         if (talentData) {
-          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
-          toast({
-            title: "Talent Saved",
-            description: "Talent saved to your list."})
-        }
-      }
-    } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error toggling saved talent' }),
-      toast({
-        title: "Error",
-        description: "Failed to update saved talents. Please try again later.",
-        variant: "destructive"})
-    }
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -235,28 +201,60 @@ export default function SavedTalentsPage() {;
         <p className="text-muted-foreground">
           Here are the talents you've saved for future reference.
         </p>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
           <div className="py-8">
             <EmptyState
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center"
             />
           </div>
         ) : (
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
             ))}
           </div>
         )}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      </div>
+    </>
+  )
+}, [user, router])
+}const {
+  data, error;
+}= await supabase .from ("saved talents") user id;
+full name;
+professional title;
+profile picture url;
+hourly rate;
+bio;
+years experience;
+key projects;
+skills;
+location;
+availability;
+is verified) `);
+}finally {
+  setIsLoading (false);
+
+}
+}, [user]);
+}
+  try {
+
+  handleRequestHire;
+}is_authenticated= {
+  !!user;
+}/>) );
+}</div>);
+}</div> </>);
+}'"}
+
+      </div>;
+    </>;
+  );
+}
+            ))}
+          </div>
+        )}

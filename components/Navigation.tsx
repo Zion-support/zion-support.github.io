@@ -1,13 +1,39 @@
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import {
+origin/automation-improvements-final
+
+
+
+
+  Menu
+  X
+  ChevronDown
+  ChevronRight
+  Phone
+  Mail
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Github
+  ArrowRight
+  Building
+  Users
+  ShoppingCart
+  Shield
+  Zap
+  Globe
+  BarChart3
+  Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-=======
->>>>>>> origin/automation-improvements-final
 
 export default function Navigation() {
-=======
 export default function Navigation() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export default function Navigation() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -52,7 +78,6 @@ export default function Navigation() {;
     }
     { name: "News", href: "/news", description: "Industry news and updates" }
   ];
-  ];
   return (
     <>;
       {/* Top Bar */}
@@ -84,10 +109,6 @@ export default function Navigation() {;
                 </div>;
               </div>;
             </Link>;
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">;
-              <Link
-                href="/"
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button
@@ -111,7 +132,6 @@ export default function Navigation() {;
                       <div className="grid grid-cols-2 gap-4 px-6">;
                         {services && services.map((service, index) => {;
                           const IconComponent = service && service.icon;
-=======
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items - center space - x-8">;
               <Link;
@@ -143,7 +163,6 @@ export default function Navigation() {;
                       <div className="grid grid - cols - 2 gap - 4 px - 6">;
                         {services.map ((service, index) => {
                           const IconComponent = service.icon;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           return (
                             <Link;
                               key={index}
@@ -170,7 +189,6 @@ export default function Navigation() {;
                       <div className="grid grid-cols-2 gap-4 px-6">;
                         {solutions && solutions.map((solution, index) => {;
                           const IconComponent = solution && solution.icon;
-=======
                               href={service.href}
                               className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
                             >;
@@ -221,7 +239,6 @@ export default function Navigation() {;
                       <div className="grid grid - cols - 2 gap - 4 px - 6">;
                         {solutions.map ((solution, index) => {
                           const IconComponent = solution.icon;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           return (
                             <Link;
                               key={index}
@@ -299,7 +316,8 @@ export default function Navigation() {;
                       </div>;
                     </motion && motion.div>;
                   )}
-=======
+
+
                 </AnimatePresence>;
               </div>;
 
@@ -309,22 +327,16 @@ export default function Navigation() {;
                 Pricing;
               </Link>;
             </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="p-2 text-gray-700 hover:text-blue-600 transition-colors";
-                aria-label="Search";
-              >;
-                <Search className="w-5 h-5" />;
-              </button>;
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
               <Link
-                href="/contact"
->>>>>>> origin/automation-improvements-final
+                href=/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
               >
                 Get Started
               </Link>
@@ -335,7 +347,6 @@ export default function Navigation() {;
                 Call Now
               </a>
             </div>
-=======
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">;
                 Get Started;
               </Link>;
@@ -345,8 +356,6 @@ export default function Navigation() {;
                 Call Now;
               </a>;
             </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2"
@@ -449,7 +458,6 @@ export default function Navigation() {;
                       href="tel:+13024640950"
                       className="block bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium text-center"
                       onClick={() => setIsMenuOpen(false)}
-=======
                               href={solution.href}
                               className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
                             >;
@@ -696,7 +704,6 @@ export default function Navigation() {;
                       href="tel:+13024640950";
                       className="block bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 4 py - 2 rounded - lg font - medium text - center";
                       on_click={() => setIsMenuOpen (false)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     >;
                       Call Now;
                     </a>;
@@ -709,7 +716,6 @@ export default function Navigation() {;
       />;
     </>;
   );
-=======
               </motion.div>)}
           </AnimatePresence>;
         </div>;
@@ -720,5 +726,4 @@ export default function Navigation() {;
         on_close={() => setIsSearchOpen (false)}
       />;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
