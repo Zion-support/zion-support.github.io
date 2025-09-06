@@ -29,8 +29,8 @@ export default function ServicesOverviewPage() {
           title="Micro SaaS"
           description="End-to-end product development with billing, auth, and analytics"
           bullets={[
-            "Foundational architecture"
-            "Billing + subscriptions"
+            "Foundational architecture",
+            "Billing + subscriptions",
             "Growth analytics"
           ]}
           icon="🚀"
@@ -48,6 +48,27 @@ export default function ServicesOverviewPage() {
           description="Cloud migration, DevOps, and security solutions"
           bullets={["Cloud migration", "DevOps + SRE", "Security"]}
           icon="⚙️"
+        />
+        <ServiceCard
+          href="/services/cybersecurity"
+          title="Cybersecurity"
+          description="Comprehensive security services and compliance solutions"
+          bullets={["Penetration testing", "Security audits", "Compliance support"]}
+          icon="🔒"
+        />
+        <ServiceCard
+          href="/services/mobile-development"
+          title="Mobile Development"
+          description="Native and cross-platform mobile app development"
+          bullets={["iOS & Android", "React Native", "Flutter"]}
+          icon="📱"
+        />
+        <ServiceCard
+          href="/services/business-automation"
+          title="Business Automation"
+          description="RPA, workflow automation, and digital transformation"
+          bullets={["Process automation", "RPA solutions", "AI-powered workflows"]}
+          icon="⚡"
         />
         <ServiceCard
           href="/services/blockchain"
