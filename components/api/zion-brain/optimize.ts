@@ -1,63 +1,189 @@
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {
-  if (req.method !== "POST")
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
+  if (!isAuthorized(req))
+    return res && res.status(401).json({ error: "Unauthorized" });
+  function isAuthorized(req: NextApiRequest): boolean {
+
+    return !superToken || token === superToken;
+  }
+
+
+<<<<<<< HEAD
+    return !superToken || token === superToken;
+  }
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST");
     return res.status(405).json({ error: "Method not allowed" });
   if (!isAuthorized(req))
     return res.status(401).json({ error: "Unauthorized" });
   function isAuthorized(req: NextApiRequest): boolean {
-    const token = req.headers["x-admin-token"] || req.query.token;
+    const token = req.headers["x-admin-token"] |req.query.token;
     const superToken = process.env.SUPERADMIN_TOKEN;
+<<<<<<< HEAD
+    return !superToken |token === superToken;
     return !superToken || token === superToken;
   }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+  }
   export default async function handler(
-    req: NextApiRequest,
-    res: NextApiResponse,
+    req: NextApiRequest
+    res: NextApiResponse
   ) {
-    if (req.method !== "POST")
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (req && req.method !== "POST")
+      return res && res.status(405).json({ error: "Method not allowed" });
+=======
+    if (req.method !== "POST");
       return res.status(405).json({ error: "Method not allowed" });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!isAuthorized(req))
-      return res.status(401).json({ error: "Unauthorized" });
-    const started = Date.now();
+      return res && res.status(401).json({ error: "Unauthorized" });
+    const started = Date && Date.now();
     try {
-      const { prompt, userIntent } = req.body || {};
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      const { prompt, userIntent } = req && req.body || {};
       const result = await optimizePrompt(String(prompt || ""), userIntent);
-      const latencyMs = Date.now() - started;
+      const latencyMs = Date && Date.now() - started;
       const status =
-        result.optimized.length > String(prompt || "").length * 0.5
+        result && result.optimized.length > String(prompt || "").length * 0 && 0.5
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           ? "ok"
           : "laggy";
-
       appendLog({
+        module: "optimizer"
+        type: "optimize"
+        status: status as any
+        latencyMs
+        payload: {
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          userIntent,
+          originalLength: String(prompt || "").length,
+          optimizedLength: result && result.optimized.length,
+        },
+      });
+<<<<<<< HEAD
+
+
+=======
+=======
+    return res.status(200).json(result)
+  } catch (e: any) {
+    appendLog({ module: 'optimizer', type: 'optimize', status: 'error', payload: { error: e?.message || 'unknown' } });
+    return res.status(500).json({ error: 'Optimization failure' })
+  };
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  if ()) {
+  $2
+}
+    return res.status (401).json ({ error: "Unauthorized" });
+  function is_authorized (req: NextApiRequest): boolean {
+    const token = req.headers["x - admin - token"] || req.query.token;
+    const super_token = process.env.SUPERADMIN_TOKEN;
+    return !super_token || token === super_token;
+  }
+  export default async /**
+ * handler - Function description
+ */
+function handler() {
+    if (
+      return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+    if ()) {
+  $2
+}
+      return res.status (401).json ({ error: "Unauthorized" });
+    const started = Date.now ();
+    try {
+      const { prompt, user_intent } = req.body || {}
+      const result = await optimize_prompt (String (prompt || ""), user_intent);
+      const latency_ms = Date.now () - started;
+      const status =;
+        result.optimized.length > String (prompt || "").length * 0.5;
+          ? "ok";
+          : "laggy";
+;
+      append_log ({
         module: "optimizer",
         type: "optimize",
         status: status as any,
-        latencyMs,
+        latency_ms,
         payload: {
-          userIntent,
-          originalLength: String(prompt || "").length,
-          optimizedLength: result.optimized.length,
+          user_intent,
+          original_length: String (prompt || "").length,
+          optimized_length: result.optimized.length,
         },
       });
-
-      return res.status(200).json(result);
+;
+      return res.status (200).json (result);
     } catch (e: any) {
-      appendLog({
+      append_log ({
         module: "optimizer",
         type: "optimize",
         status: "error",
         payload: { error: e?.message || "unknown" },
       });
-      return res.status(500).json({ error: "Optimization failure" });
+      return res.status (500).json ({ error: "Optimization failure" });
     }
-    appendLog({
+    append_log ({
       module: "optimizer",
       type: "optimize",
       status: "error",
       payload: { error: e?.message || "unknown" },
     });
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return res.status (500).json ({ error: "Optimization failure" });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
     return res.status(500).json({ error: "Optimization failure" });
   }
 }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

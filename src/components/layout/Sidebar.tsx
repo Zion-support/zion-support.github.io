@@ -1,48 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { 
-  Home, 
-  Users, 
-  Settings, 
-  DollarSign, 
-  Phone,
-  Menu
-} from 'lucide-react'
+import React from 'react';
 
-const Sidebar = () => {
-  const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Users },
-    { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign },
-    { name: 'Contact', href: '/contact', icon: Phone }
-  ]
-
+export default function Sidebar() {
   return (
-    <aside className="hidden lg:block w-64 bg-white shadow-lg min-h-screen">
+    <aside className="hidden lg:block fixed left-0 top-16 bottom-0 w-80 bg-gray-100 border-r">
       <div className="p-6">
-        <div className="flex items-center space-x-2 mb-8">
-          <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">Z</span>
-          </div>
-          <span className="text-lg font-semibold text-gray-900">Zion Tech</span>
-        </div>
-        
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Navigation</h2>
         <nav className="space-y-2">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200"
-            >
-              <item.icon className="w-5 h-5" />
-              <span className="font-medium">{item.name}</span>
-            </Link>
-          ))}
+          <a href="/" className="block text-gray-600 hover:text-gray-900">Home</a>
+          <a href="/about" className="block text-gray-600 hover:text-gray-900">About</a>
+          <a href="/services" className="block text-gray-600 hover:text-gray-900">Services</a>
+          <a href="/pricing" className="block text-gray-600 hover:text-gray-900">Pricing</a>
+          <a href="/contact" className="block text-gray-600 hover:text-gray-900">Contact</a>
         </nav>
       </div>
     </aside>
-  )
+  );
 }
-
-export default Sidebar

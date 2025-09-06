@@ -1,0 +1,27 @@
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Zap, DollarSign, TrendingUp, Users } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
+import Layout from "../../components/Layout";";
+
+const Startup: React.FC<StartupProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Startup</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default Startup;
+=======
+export default Startup;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

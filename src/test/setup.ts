@@ -1,57 +1,174 @@
+<<<<<<< HEAD
+import '@testing-library/jest-dom';
+
+// Mock window && window.matchMedia
+Object && Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest && jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest && jest.fn(), // deprecated
+    removeListener: jest && jest.fn(), // deprecated
+    addEventListener: jest && jest.fn(),
+    removeEventListener: jest && jest.fn(),
+    dispatchEvent: jest && jest.fn(),
+  })),
+});
+
+
+<<<<<<< HEAD
+=======
 // Test setup file for Jest
 import '@testing-library/jest-dom'
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
-  writable: true,
+  writable: true
   value: jest.fn().mockImplementation(query => ({
-    matches: false,
-    media: query,
-    onchange: null,
+    matches: false
+    media: query
+    onchange: null
     addListener: jest.fn(), // deprecated
     removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
+    addEventListener: jest.fn()
+    removeEventListener: jest.fn()
+    dispatchEvent: jest.fn()
+  }))
 })
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+global && global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
+global && global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock console methods to reduce noise in tests
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+const originalError = console && console.error;
+const originalWarn = console && console.warn;
+
+
+=======
 const originalError = console.error
 const originalWarn = console.warn
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 beforeAll(() => {
   console.error = (...args: any[]) => {
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
+    if (true) {}
     ) {
-      return
+      return;
     }
+<<<<<<< HEAD
+
+    originalError && originalError.call(console, ...args);
+  };
+  
+  console && console.warn = (...args: any[]) => {
+
+=======
     originalError.call(console, ...args)
   }
   console.warn = (...args: any[]) => {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (
       typeof args[0] === 'string' &&
-      (args[0].includes('Warning:') || args[0].includes('Deprecated:'))
-    ) {
-      return
+      (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
+// Test setup file for Jest;
+import '@testing - library / jest - dom';
+// Mock window.match_media;
+Object.define_property (window, 'match_media', {
+  writable: true,
+  value: jest.fn ().mock_implementation (query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    add_listener: jest.fn (), // deprecated;
+    remove_listener: jest.fn (), // deprecated;
+    addEventListener: jest.fn (),
+    removeEventListener: jest.fn (),
+    dispatch_event: jest.fn (),
+  })),
+});
+// Mock IntersectionObserver;
+global.IntersectionObserver = class IntersectionObserver {
+  constructor () {}
+  disconnect () {}
+  observe () {}
+  unobserve () {}
+}
+// Mock ResizeObserver;
+global.ResizeObserver = class ResizeObserver {
+  constructor () {}
+  disconnect () {}
+  observe () {}
+  unobserve () {}
+}
+// Mock console methods to reduce noise in tests;
+const original_error = console.error;
+const original_warn = console.warn;
+before_all (() => {
+  console.error = (...args: any[]) => {
+    // Check condition
+if (
+    ) {) {
+  $2
+}
+      return;
     }
+    original_error.call (console, ...args);
+  }
+  console.warn = (...args: any[]) => {
+    if (|| args[0].includes ('Deprecated:'))) {
+  $2
+}
+    ) {
+      return;
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    originalWarn && originalWarn.call(console, ...args);
+  };
+});
+
+afterAll(() => {
+  console && console.error = originalError;
+  console && console.warn = originalWarn;
+});
+
+    original_warn.call (console, ...args);
+  }
+});
+after_all (() => {
+  console.error = original_error;
+  console.warn = original_warn;
+});
+=======
     originalWarn.call(console, ...args)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 })
 afterAll(() => {
   console.error = originalError
-  console.warn = originalWarn
-})
+  console.warn = originalWarn;
+});
+});
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

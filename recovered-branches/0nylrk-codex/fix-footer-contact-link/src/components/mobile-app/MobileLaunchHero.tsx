@@ -9,6 +9,9 @@ export const MobileLaunchHero: React.FC = () => {
   const appStoreUrl = "#"; // Replace with actual App Store URL
   const googlePlayUrl = "#"; // Replace with actual Google Play URL
 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-8">
@@ -66,6 +69,14 @@ export const MobileLaunchHero: React.FC = () => {
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+
+
+=======
+<<<<<<< HEAD
                     {/* In production, replace with actual app screenshot */}
                   </div>
                 </CardContent>
@@ -77,3 +88,8 @@ export const MobileLaunchHero: React.FC = () => {
     </section>
   );
 };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

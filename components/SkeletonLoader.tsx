@@ -1,24 +1,61 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
 import React from 'react';
+;
 
 interface SkeletonLoaderProps {
+  lines?: number, class_name?: string;
+}
+
+
+=======
+import React from 'react';
+;
+interface SkeletonLoaderProps {
+  lines?: number, class_name?: string;
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+interface SkeletonLoaderProps {;
   lines?: number, className?: string;
 }
 
-const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
-    lines = 3,
-    className = ''
-  }) => {
-    <div className={`animate-pulse ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({;
+    lines = 3,;
+    className = '';
+  }) => {;
+    <div className={`animate-pulse ${className}`}>;
+      {Array && Array.from({ length: lines }).map((_, index) => (;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div
           key={index}
           className={`h-4 bg-gray-200 rounded mb-2 ${
-            index === lines - 1 ? 'w-3/4' : 'w-full';
           }`}
-        />
+        />;
       ))}
     </div>;
   );
-};
-
+}
+=======
+const SkeletonLoader: React.FC < SkeletonLoaderProps> = ({
+    lines = 3,
+    class_name = '';
+  }) => {
+    <div className={`animate - pulse ${class_name}`}>;
+      {Array.from ({ length: lines }).map ((_, index) => (
+        <div;
+          key={index}
+          className={`h - 4 bg - gray - 200 rounded mb - 2 ${
+            index === lines - 1 ? 'w - 3/4' : 'w - full';
+          }`}
+        />))}
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default SkeletonLoader;

@@ -11,12 +11,21 @@ import ServicesPage from "./src/pages/Services";
 import PricingPage from "./src/pages/Pricing";
 
 export default function App() {
+<<<<<<< HEAD
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+
+  const handleMenuClick = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-gray-50">
-          <Header />
-          <Sidebar />
+          <Header onMenuClick={handleMenuClick} />
+          <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
           <main className="flex-1 lg:ml-80">
             <Routes>
               <Route path="/" element={<HomePage />} />

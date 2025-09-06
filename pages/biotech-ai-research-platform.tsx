@@ -1,6 +1,34 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
+<<<<<<< HEAD
+
+}
+
+
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+=======
+
+
+import React from 'react';
+
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 export default function BiotechAIResearchPlatformPage() {
   return (
     <Layout>
@@ -26,6 +54,8 @@ export default function BiotechAIResearchPlatformPage() {
               <div className="mt-6 flex gap-3">
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a>
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
+                <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Link>
+                <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</Link>
               </div>
             </div>
           </div>
@@ -34,4 +64,26 @@ export default function BiotechAIResearchPlatformPage() {
     </Layout>
   )
 }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+;
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -34,6 +34,13 @@ export function ProfileContact({
         }));
     }, 1000);
   };
+>>>>>>> main
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -50,8 +57,8 @@ export function ProfileContact({
             className="text-zion-cyan hover:underline truncate block"
           >
             {email}
-          </a>
-        </div>
+          </a>;
+        </div>;
       )}
 
       <form onSubmit={handleSendMessage}>
@@ -60,13 +67,49 @@ export function ProfileContact({
             <Input
               placeholder="Subject"
               value={subject}
+              onChange={(e) => setSubject(e && e.target.value)}
+              className="bg-zion-blue border-zion-blue-light text-white";
+=======
+            className="text - zion - cyan hover:underline truncate block";
+          >;
+            {email}
+          </a>;
+        </div>)}
+      <form on_submit={handleSendMessage}>;
+        <div className="space - y-4">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          <div>;
+            <Input;
+              placeholder="Subject";
+              value={subject}
+<<<<<<< HEAD
+              on_change={(e) => set_subject (e.target.value)}
+              className="bg - zion - blue border - zion - blue - light text - white";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      ;
+      <form onSubmit={handleSendMessage}>;
+        <div className="space-y-4">;
+          <div>;
+            <Input;
+              placeholder="Subject";
+              value={subject}
               onChange={(e) => setSubject(e.target.value)}
-              className="bg-zion-blue border-zion-blue-light text-white"
-              required
-            />
-          </div>
-          <div>
-            <Textarea
+              className="bg-zion-blue border-zion-blue-light text-white";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+              required;
+            />;
+          </div>;
+          <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+              onChange={(e) => setMessage(e && e.target.value)}
+=======
+            <Textarea;
               placeholder={`Message to ${profileName}...`}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
@@ -81,9 +124,81 @@ export function ProfileContact({
           >
             <Send className="mr-2 h-4 w-4" />
             {isSending ? "Sending..." : "Send Message"}
+
           </Button>
         </div>
       </form>
     </div>
   );
 }
+
+=======
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+            <Textarea;
+              placeholder={`Message to ${profile_name}...`}
+              value={message}
+              on_change={(e) => set_message (e.target.value)}
+              className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
+              required;
+            />;
+          </div>;
+          <Button;
+            type="submit";
+            className="w - full bg - zion - cyan hover:bg - zion - cyan / 90";
+            disabled={is_sending}
+          >;
+            <Send className="mr - 2 h - 4 w - 4" />;
+            {is_sending ? "Sending..." : "Send Message"}
+          </Button>;
+        </div>;
+      </form>;
+    </div>);
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+=======
+  )
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+  )
+  )
+
+<<<<<<< HEAD
+  ),;}
+ interface ProfileContactProps {
+  email?: string;
+profileName: string;
+profileType: 'service' | 'talent' 
+}export function ProfileContact ({
+  email, profileName, profileType 
+}: ProfileContactProps) {
+  const handleSendMessage = (e: React.FormEvent) => {
+  e.preventDefault ();
+setIsSending (true);
+//Here would be the actual API call to send the message setTimeout ( () => {
+  
+}, 1000);
+};
+  `mailto:$ {
+  email 
+}` 
+}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>) 
+}
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -20,7 +20,43 @@ interface ReviewCardProps {
   onReport: (reviewId: string, reason: string) => Promise<boolean>;
 }
 
-export function ReviewCard({ review, onReport }: ReviewCardProps) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {useState} from "react";
+import {formatDistanceToNow} from "date-fns";
+import {Star, Flag, User} from "lucide-react";
+import {Review} from "@/types/reviews";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Textarea} from "@/components/ui/textarea";
+interface ReviewCardProps {;
+  review: Review,;
+  onReport: (reviewId: string, reason: string) => Promise<boolean>;
+}
+
+export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
+
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
+
+
+  const handleReport = async () => {;
+    if (!reportReason && reportReason.trim()) return;
+
+
+    setIsReporting(true);
+    const success = await onReport(review && review.id, reportReason);
+    setIsReporting(false);
+
+
+    if (success) {;
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export function ReviewCard({ review, onReport }: ReviewCardProps) {;
   const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
@@ -33,6 +69,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
     setIsReporting(false);
 
     if (success) {
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setReportReason("");
       setIsReportDialogOpen(false);
     }
@@ -42,10 +82,33 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
     if (!rating) return null;
 
     return (
-      <div className="flex">
-        {[1, 2, 3, 4, 5].map((star) => (
+      <div className="flex">;
+        {[1, 2, 3, 4, 5].map((star) => (;
           <Star
             key={star}
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          />;
+        ))}
+
+      </div>
+
+    )
+  },
+  
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  const renderStars = (rating?: number) => {
+    if (!rating) return null;
+
+    return (
+      <div className="flex">;
+        {[1, 2, 3, 4, 5].map ((star) => (
+          <Star;
+            key={star}
+<<<<<<< HEAD
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
         ))}
@@ -86,7 +149,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                     : "??"}
                 </AvatarFallback>
               )}
-            </Avatar>
+            </Avatar>;
           )}
 
           <div>
@@ -201,3 +264,15 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
     </div>
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

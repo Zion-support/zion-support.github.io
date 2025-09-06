@@ -45,7 +45,83 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
             onDelete={onDeleteSkill}
           />
         ))}
+      </div>;
+    </div>;
+  );
+=======
+
+=======
+<<<<<<< HEAD
       </div>
     </div>
   );
 };
+      },
+      {} as Record < string, Skill[]>,
+    );
+;
+    setSkillsByCategory (grouped);
+  }, [skills]);
+;
+  // Check condition
+if (.length === 0) {) {
+  $2
+}
+    return null;
+  }
+  return (
+    <div className="space - y-6">;
+      <h3 className="text - md font - medium">Your Skills</h3>;
+      <div className="space - y-4">;
+        {Object.entries (skillsByCategory).map (([category, category_skills]) => (
+          <SkillCategory;
+            key={category}
+            category={category}
+            skills={category_skills}
+            on_delete={onDeleteSkill}
+          />))}
+      </div>;
+    </div>);
+}
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  ),;
+},; setSkillsByCategory (grouped) 
+}, [skills]);
+return (<div className="space-y-6" > <h3 className="text-md font-medium" >Your Skills</h3> <SkillCategory key= {
+  category 
+}category= {
+  category 
+}skills= {
+  categorySkills 
+}onDelete= {
+  onDeleteSkill 
+}/>) ) 
+}</div> </div>) 
+};
+</div>
+    </div>
+
+  );
+}
+
+  );
+
+};
+
+      </div>
+    </div>
+  );
+}
+
+  )
+      </div>;
+    </div>;
+  );
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

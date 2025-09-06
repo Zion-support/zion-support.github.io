@@ -1,16 +1,36 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import React from 'react',
+import { Button } from "@/components/ui/button",
+import { Star } from 'lucide-react'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react'
 import { Button } from '@/components/ui/button'
+
+import React from 'react';
+import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { Star } from 'lucide-react'
+import { Star } from 'lucide-react';
+
+
+=======
+=======
+import { Star } from 'lucide-react'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SaveTalentButtonProps {
   talentId: string
   onSave: (talentId: string) => void
   isSaved: boolean
+<<<<<<< HEAD
 export function SaveTalentButton({
-  talentId,
-  onSave,
-  isSaved,
+  talentId
+  onSave
+  isSaved
 }: SaveTalentButtonProps) {
-  
       onClick={() => onSave(talentId)}
       variant={isSaved ? 'default' : 'outline'}
       size='sm'
@@ -20,13 +40,109 @@ export function SaveTalentButton({
           : 'text-yellow-500 border-yellow-500 hover:bg-yellow-500/10'
       }    >
 import { Button } from "@/components/ui/button"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface SaveTalentButtonProps {
   talentId: string,
   onSave: (talentId: string,) => void,
   isSaved: boolean
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+  talentId: string
+  onSave: (talentId: string,) => void
+
+  isSaved: boolean
+}
+<<<<<<< HEAD
+=======
+export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButtonProps) {
+<<<<<<< HEAD
+  )
+}}
+}
+import React from 'react',;
+import { Button } from "@/components/ui/button",;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { Button } from '@/components/ui/button';
+import { Star } from 'lucide-react';
+
+interface SaveTalentButtonProps {;
+  talentId: string;
+  onSave: (talentId: string) => void;
+  isSaved: boolean;
+
+export function SaveTalentButton(): any ({;
+  talentId,;
+  onSave,;
+  isSaved,;
+}: SaveTalentButtonProps) {;
+
+      onClick={() => onSave(talentId)}
+      variant={isSaved ? 'default' : 'outline'}
+      size='sm';
+      className={;
+        isSaved;
+          ? 'bg-yellow-500 hover:bg-yellow-600 text-white';
+          : 'text-yellow-500 border-yellow-500 hover:bg-yellow-500/10';
+      }    >;
+import React from 'react';
+import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+import { Star } from 'lucide-react';
+interface SaveTalentButtonProps {;
+  talentId: string,;
+  onSave: (talentId: string,) => void,;
+  isSaved: boolean;
 }
 
-export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButtonProps) {
+export function SaveTalentButton(): any ({ talentId, onSave, isSaved }: SaveTalentButtonProps) {;
+  return (
+    <Button
+
+
+      {isSaved ? 'Saved' : 'Save'}
+    </Button>
+  );
+
+
+}
+ursor/fix-website-loading-errors-and-merge-6662
+import React from 'react';
+import { Button } from '@/components / ui / button';
+import { Star } from 'lucide-react';
+interface SaveTalentButtonProps {
+  talent_id: string;
+  on_save: (talent_id: string) => void;
+  is_saved: boolean;
+export /**
+ * SaveTalentButton - Function description
+ */
+function SaveTalentButton() {
+      on_click={() => on_save (talent_id)}
+      variant={is_saved ? 'default' : 'outline'}
+      size='sm';
+      className={
+        is_saved;
+          ? 'bg - yellow - 500 hover:bg - yellow - 600 text - white';
+          : 'text - yellow - 500 border - yellow - 500 hover:bg - yellow - 500 / 10';
+      }    >;
+import { Button  } from '@/components / ui / button';
+interface SaveTalentButtonProps {
+  talent_id: string,
+  on_save: (talent_id: string, ) => void,
+  is_saved: boolean;
+}
+export /**
+ * SaveTalentButton - Function description
+ */
+function SaveTalentButton() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Button
       onClick = {(,) => onSave(talentId),}
@@ -36,6 +152,28 @@ export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButton
       <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />
       {isSaved ? 'Saved' : 'Save'}
     </Button>
-  )
-}}
+import React from 'react',;
+import { Button } from "@/components/ui/button",;
+import React from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Star } from 'lucide-react';
+interface SaveTalentButtonProps {;
+  talentId: string,;
+  onSave: (talentId: string) => void;
+  isSaved: boolean;
 }
+<<<<<<< HEAD
+
+  talentId: string,
+  onSave: (talentId: string,) => void,
+  isSaved: boolean
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      onClick={() => onSave(talentId)}
+      variant={isSaved ? "default" : "outline"}
+      size="sm"
+      className={isSaved ? "bg-yellow-500 hover:bg-yellow-600 text-white" : "text-yellow-500 border-yellow-500 hover:bg-yellow-500/10"}
+    >
+      <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />
+      {isSaved ? 'Saved' : 'Save'}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

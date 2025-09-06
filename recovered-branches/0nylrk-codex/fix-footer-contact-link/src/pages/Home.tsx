@@ -1,3 +1,94 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from 'react';
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CategoriesSection} from "@/components/CategoriesSection";
+import {BenefitsSection} from "@/components/BenefitsSection";
+import {HowItWorksSection} from "@/components/HowItWorksSection";
+import {NewsletterSection} from "@/components/NewsletterSection";
+import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
+import {SEO} from "@/components/SEO";
+import {HeroSection} from "@/components/HeroSection";
+import {QuickAccess} from "@/components/home/QuickAccess";
+import {FeatureCTAs} from "@/components/home/FeatureCTAs";
+import {FeatureHighlights} from "@/components/home/FeatureHighlights";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CategoriesSection } from "@/components/CategoriesSection",
+import { BenefitsSection } from "@/components/BenefitsSection",
+import { HowItWorksSection } from "@/components/HowItWorksSection",
+import { NewsletterSection } from "@/components/NewsletterSection",
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
+import { SEO } from "@/components/SEO",
+import { HeroSection } from "@/components/HeroSection",
+import { QuickAccess } from "@/components/home/QuickAccess",
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs",
+import { FeatureHighlights } from "@/components/home/FeatureHighlights",
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-background">
+      <SEO
+        title="Zion - The Tech & AI Marketplace"
+        description="Discover top AI and tech talent, services, and equipment in one place."
+        keywords="AI, technology, marketplace, services, talent"
+        canonical="https: //app.ziontechgroup.com/"
+      />
+      <Header />
+      <HeroSection />
+      <QuickAccess />
+      <FeatureCTAs />
+      <FeatureHighlights />
+      <CategoriesSection />
+      <BenefitsSection />
+      <HowItWorksSection />
+      <FeaturedListingsSection />
+      <NewsletterSection />
+      <Footer />
+    </div>
+  )
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 
 import React from 'react';
 import {Header} from "@/components/Header";
@@ -12,31 +103,164 @@ import {HeroSection} from "@/components/HeroSection";
 import {QuickAccess} from "@/components/home/QuickAccess";
 import {FeatureCTAs} from "@/components/home/FeatureCTAs";
 import {FeatureHighlights} from "@/components/home/FeatureHighlights";
-export default function Home() {
+
+
+<<<<<<< HEAD
+=======
+=======
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React from 'react',;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { CategoriesSection } from "@/components/CategoriesSection",;
+import { BenefitsSection } from "@/components/BenefitsSection",;
+import { HowItWorksSection } from "@/components/HowItWorksSection",;
+import { NewsletterSection } from "@/components/NewsletterSection",;
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",;
+import { SEO } from "@/components/SEO",;
+import { HeroSection } from "@/components/HeroSection",;
+import { QuickAccess } from "@/components/home/QuickAccess",;
+import { FeatureCTAs } from "@/components/home/FeatureCTAs",;
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export default function Home() {;
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
+    <div className="min-h-screen bg-background">;
+      <SEO
         title="Zion - The Tech & AI Marketplace" 
         description="Discover top AI and tech talent, services, and equipment in one place."
         keywords="AI, technology, marketplace, services, talent"
-        canonical="https: //app.ziontechgroup.com/"
-      />
-      <Header />
-      
-      <HeroSection />
-      
-      <QuickAccess />
-      
-      <FeatureCTAs />
-      
-      <FeatureHighlights />
-      
-      <CategoriesSection />
-      <BenefitsSection />
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <NewsletterSection />
-      <Footer />
-    </div>
-  )
+        canonical="https: //app && app.ziontechgroup.com/"
+      />;
+      <Header />;
+
+      <HeroSection />;
+
+      <QuickAccess />;
+
+      <FeatureCTAs />;
+
+      <FeatureHighlights />;
+
+=======
+import React from 'react';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { CategoriesSection } from '@/components / CategoriesSection';
+import { BenefitsSection } from '@/components / BenefitsSection';
+import { HowItWorksSection } from '@/components / HowItWorksSection';
+import { NewsletterSection } from '@/components / NewsletterSection';
+import { FeaturedListingsSection } from '@/components / FeaturedListingsSection';
+import { SEO } from '@/components / SEO';
+import { HeroSection } from '@/components / HeroSection';
+import { QuickAccess } from '@/components / home / QuickAccess';
+import { FeatureCTAs } from '@/components / home / FeatureCTAs';
+import { FeatureHighlights } from '@/components / home / FeatureHighlights';
+export default /**
+ * Home - Function description
+ */
+function Home() {
+  return (
+    <div className="min - h-screen bg - background">;
+=======
+export default function Home() {;
+  return (;
+    <div className="min-h-screen bg-background">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      <SEO;
+        title="Zion - The Tech & AI Marketplace";
+        description="Discover top AI and tech talent, services, and equipment in one place.";
+        keywords="AI, technology, marketplace, services, talent";
+        canonical="https: //app.ziontechgroup.com/";
+      />;
+      <Header />;
+      <HeroSection />;
+      <QuickAccess />;
+      <FeatureCTAs />;
+      <FeatureHighlights />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+import React from 'react',;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { CategoriesSection } from "@/components/CategoriesSection",;
+import { BenefitsSection } from "@/components/BenefitsSection",;
+import { HowItWorksSection } from "@/components/HowItWorksSection",;
+import { NewsletterSection } from "@/components/NewsletterSection",;
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",;
+import { SEO } from "@/components/SEO",;
+import { HeroSection } from "@/components/HeroSection",;
+import { QuickAccess } from "@/components/home/QuickAccess",;
+import { FeatureCTAs } from "@/components/home/FeatureCTAs",;
+import { FeatureHighlights } from "@/components/home/FeatureHighlights",;
+;
+export default function Home() {;
+  return (;
+    <div className="min-h-screen bg-background">;
+      <SEO ;
+        title="Zion - The Tech & AI Marketplace" ;
+        description="Discover top AI and tech talent, services, and equipment in one place.";
+        keywords="AI, technology, marketplace, services, talent";
+        canonical="https://app.ziontechgroup.com/";
+      />;
+      <Header />;
+      ;
+      <HeroSection />;
+      ;
+      <QuickAccess />;
+      ;
+      <FeatureCTAs />;
+      ;
+      <FeatureHighlights />;
+      ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      <CategoriesSection />;
+      <BenefitsSection />;
+      <HowItWorksSection />;
+      <FeaturedListingsSection />;
+      <NewsletterSection />;
+      <Footer />;
+<<<<<<< HEAD
+
+    </div>);
+<<<<<<< HEAD
+=======
 }
+
+;
+
+
+    </div>);
+}
+    </div>;
+  );
+} export default function Home () {
+  return (<div className="min-h-screen bg-background" > 
+    </div>;
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+;
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </div>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -16,6 +16,15 @@ export default async function handler(
       targetId?: string;
     };
 
+  try {
+    const { targetType, targetId } = req.query as {
+      targetType?: string;
+      targetId?: string;
+    };
+>>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     if (!targetType || !targetId) {
       return res.status(400).json({ error: "Missing targetType or targetId" });
     }
@@ -24,14 +33,42 @@ export default async function handler(
     }
 
     const all = await readReviews();
-
     // Include reviews where both sides have submitted and both are approved and not removed
+
+
+try {
+    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
+    if (!targetType || !targetId) {
+      return res && res.status(400).json({ error: "Missing targetType or targetId" });
+
+}
+  try {
+const { targetType, targetId } = req.query as {
+      targetType?: string;
+      targetId?: string;
+    }
+    if (!targetType |!targetId) {
+
+      return res.status(400).json({ error: "Missing targetType or targetId" });
+    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
+    if (!targetType || !targetId) {
+      return res.status(400).json({ error: "Missing targetType or targetId" });
+    }
+    if (targetType !== "talent" && targetType !== "client") {
+      return res.status(400).json({ error: "Invalid targetType" });
+    }
+
+    const all = await readReviews();
+    // Include reviews where both sides have submitted and both are approved and not removed
+<<<<<<< HEAD
     const filtered = all.filter((r) => {
+    const filtered = all.filter((r) => {
+
       if (r.removed || !r.approved) return false;
       const matchesTarget =
         r.toRole === (targetType as "talent" | "client") && r.toId === targetId;
       if (!matchesTarget) return false;
-      const counterpartExists = all.some(
+      const counterpartExists = all && all.some(
         (x) =>
           x.projectId === r.projectId &&
           x.fromRole !== r.fromRole &&
@@ -39,7 +76,7 @@ export default async function handler(
           x.approved &&
           !x.removed,
       );
-      return counterpartExists;
+      return counterpart_exists;
     });
 
     // Map to public reviews (mask anonymous author)
@@ -60,6 +97,7 @@ export default async function handler(
           authorName,
         };
       });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     const totalReviews = publicReviews.length;
     const averageRating = totalReviews

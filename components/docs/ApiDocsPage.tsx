@@ -1,51 +1,107 @@
-import React, { useMemo, useState } from 'react',;
-import Sidebar from './Sidebar',;
-import EndpointDetail from './EndpointDetail',;
-import v1 from '../../data/api-docs/v1',;
-import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',
+import React, { useMemo, useState } from 'react',
+import Sidebar from './Sidebar',
+import EndpointDetail from './EndpointDetail',
+import v1 from '../../data / api - docs / v1',
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data / api - docs / types',
 ;
-export default function ApiDocsPage() {
-  const spec: ApiDocsSpec = v1, // could switch by version later
-  const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion),
-  const [visibility, setVisibility] = useState<Visibility | 'all'>('all'),
-  const allEndpoints: EndpointSpec[] = useMemo(() => spec.sections.flatMap((s) => s.endpoints), [spec]),
-  const firstEndpoint = useMemo(() => allEndpoints.find((e) => e.versions.includes(selectedVersion)), [allEndpoints, selectedVersion]),
-  const [activeEndpointId, setActiveEndpointId] = useState<string | undefined>(firstEndpoint?.id),
-
-  const activeEndpoint = allEndpoints.find((e) => e.id === activeEndpointId) || firstEndpoint,
-
+export default /**
+ * ApiDocsPage - Function description
+ */
+function ApiDocsPage() {
+  const spec: ApiDocsSpec = v1, // could switch by version later;
+  const [selected_version, setSelectedVersion] = useState < string>(spec.default_version),
+  const [visibility, set_visibility] = useState < Visibility | 'all'>('all'),
+  const all_endpoints: EndpointSpec[] = useMemo (() => spec.sections.flat_map ((s) => s.endpoints), [spec]),
+  const first_endpoint = useMemo (() => all_endpoints.find ((e) => e.versions.includes (selected_version)), [all_endpoints, selected_version]),
+  const [activeEndpointId, setActiveEndpointId] = useState < string | undefined>(first_endpoint?.id),
+  const active_endpoint = all_endpoints.find ((e) => e.id === activeEndpointId) || first_endpoint,
   return (
-    <div className="min-h-screen bg-high-contrast-primary text-high-contrast grid grid-cols-1" style={{ gridTemplateColumns: '18rem 1fr' }}>
-      <Sidebar
+    <div className="min - h-screen bg - high - contrast - primary text - high - contrast grid grid - cols - 1" style={{ gridTemplateColumns: '18rem 1fr' }}>;
+      <Sidebar;
         spec={spec}
-        activeEndpointId={activeEndpoint?.id}
+        activeEndpointId={active_endpoint?.id}
         onSelectEndpoint={setActiveEndpointId}
-        selectedVersion={selectedVersion}
-        onChangeVersion={(v) => { setSelectedVersion(v), setActiveEndpointId(undefined) }}
-        visibilityFilter={visibility}
-        onChangeVisibility={setVisibility}
+        selected_version={selected_version}
+        onChangeVersion={(v) => { setSelectedVersion (v), setActiveEndpointId (undefined) }}
+        visibility_filter={visibility}
+        onChangeVisibility={set_visibility}
+      />;
+      <main className="p - 6 space - y-6">;
+        <header className="flex items - center justify - between">;
+          <div>;
+            <div className="text - 2xl font - bold">Zion OS API Documentation</div>;
+            <div className="text - sm text - high - contrast - muted">Developer - friendly API docs with live testing</div>;
+          </div>;
+          <div className="flex gap - 2">;
+            <a className="px - 3 py - 1 rounded border border - high - contrast - accent" href="/api / docs / openapi" target="_blank" rel="noreferrer">OpenAPI</a>;
+            <a className="px - 3 py - 1 rounded border border - high - contrast - accent" href="/api / docs / postman" target="_blank" rel="noreferrer">Postman</a>;
+            <a className="px - 3 py - 1 rounded border border - high - contrast - accent" href="/api / docs / graphql" target="_blank" rel="noreferrer">GraphQL</a>;
+          </div>;
+        </header>;
+        {active_endpoint ? (
+          <EndpointDetail endpoint={active_endpoint} />) : (
+          <div className="text - sm text - high - contrast - muted">Select an endpoint from the sidebar</div>)}
+        <section className="mt - 8">;
+          <div className="text - lg font - semibold mb - 2">Changelog</div>;
+          <ChangelogWidget />;
+        </section>;
+      </main>;
+    </div>);
+}
+/**
+ * ChangelogWidget - Function description
+ */
+function ChangelogWidget() {
+  const [content, set_content] = useState (''),
+  const [message, set_message] = useState (''),
+  async /**
+ * load - Function description
+ */
+function load() {
+    set_message (''),
+    const res = await fetch ('/api / docs / changelog'),
+    const data = await res.json (),
+    set_content (data.content || '');
+  }
+  async /**
+ * save - Function description
+ */
+function save() {
+    set_message (''),
+    await fetch ('/api / docs / changelog', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ content }) }),
+    set_message ('Saved');
+  }
+  return (
+    <div className="space - y-2">;
+      <div className="flex gap - 2">;
+        <button on_click={load} className="px - 3 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary">Load</button>;
+        <button on_click={save} className="px - 3 py - 1 rounded bg - high - contrast - accent text - black">Save</button>;
+        {message && <span className="text - xs text - high - contrast - muted">{message}</span>}
+      </div>;
+      <textarea className="w - full h - 40 px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary text - sm" value={content} on_change={(e) => set_content (e.target.value)} placeholder="Add changelog entries here..." />;
+    </div>);
       />
-      <main className="p-6 space-y-6">
-        <header className="flex items-center justify-between">
+      <main className=&quot;p-6 space-y-6&quot;>
+        <header className=&quot;flex items-center justify-between&quot;>
           <div>
-            <div className="text-2xl font-bold">Zion OS API Documentation</div>
-            <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>
+            <div className=&quot;text-2xl font-bold&quot;>Zion OS API Documentation</div>
+            <div className=&quot;text-sm text-high-contrast-muted&quot;>Developer-friendly API docs with live testing</div>
           </div>
-          <div className="flex gap-2">
-            <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/openapi" target="_blank" rel="noreferrer">OpenAPI</a>
-            <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/postman" target="_blank" rel="noreferrer">Postman</a>
-            <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>
+          <div className=&quot;flex gap-2&quot;>
+            <a className=&quot;px-3 py-1 rounded border border-high-contrast-accent&quot; href=&quot;/api/docs/openapi&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>OpenAPI</a>
+            <a className=&quot;px-3 py-1 rounded border border-high-contrast-accent&quot; href=&quot;/api/docs/postman&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>Postman</a>
+            <a className=&quot;px-3 py-1 rounded border border-high-contrast-accent&quot; href=&quot;/api/docs/graphql&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>GraphQL</a>
           </div>
         </header>
 
-        {activeEndpoint ? (
+        {_activeEndpoint ? (
           <EndpointDetail endpoint={activeEndpoint} />
         ) : (
-          <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
+          <div className=&quot;text-sm text-high-contrast-muted&quot;>Select an endpoint from the sidebar</div>
         )}
 
-        <section className="mt-8">
-          <div className="text-lg font-semibold mb-2">Changelog</div>
+        <section className=&quot;mt-8&quot;>
+          <div className=&quot;text-lg font-semibold mb-2&quot;>Changelog</div>
           <ChangelogWidget />
         </section>
       </main>
@@ -59,8 +115,8 @@ function ChangelogWidget() {
 
   async function load() {
     setMessage(''),
-    const res = await fetch('/api/docs/changelog'),
-    const data = await res.json(),
+    const res = await fetch('/api/docs/changelog')
+    const data = await res.json()
     setContent(data.content || '')
   }
 
@@ -71,13 +127,14 @@ function ChangelogWidget() {
   }
 
   return (
-    <div className="space-y-2">
-      <div className="flex gap-2">
-        <button onClick={load} className="px-3 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">Load</button>
-        <button onClick={save} className="px-3 py-1 rounded bg-high-contrast-accent text-black">Save</button>
-        {message && <span className="text-xs text-high-contrast-muted">{message}</span>}
+    <div className=&quot;space-y-2&quot;>
+      <div className=&quot;flex gap-2&quot;>
+        <button onClick={load} className=&quot;px-3 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary&quot;>Load</button>
+        <button onClick={save} className=&quot;px-3 py-1 rounded bg-high-contrast-accent text-black&quot;>Save</button>
+        {message && <span className=&quot;text-xs text-high-contrast-muted&quot;>{message}</span>}
       </div>
-      <textarea className="w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Add changelog entries here..." />
+      <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />
     </div>
   )
-};
+
+}

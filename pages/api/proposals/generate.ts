@@ -10,11 +10,20 @@ export default async function handler(
   if (req.method !== "POST")
     return res.status(405).json({ error: "Method not allowed" });
 
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method not allowed" });
+>>>>>>> main
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   try {
     const {
-      targetInstitution,
+      target_institution,
       type,
-      regionalScope,
+      regional_scope,
       budgetOrResolution,
       supportingMultiverses = [],
       title = "Zion DAO Proposal",
@@ -26,7 +35,11 @@ export default async function handler(
     const userPrompt =
       promptAssist ||
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || "gpt-4o-mini",
       messages: [
@@ -39,16 +52,31 @@ export default async function handler(
     const contentMarkdown =
       completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
 
-    const meta = createProposal({
+=======
+
+    const completion = await openai.chat.completions.create({
+      model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
+      messages: [
+      ],
+      temperature: 0.3
+    });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title,
-      targetInstitution,
+      target_institution,
       type,
-      regionalScope,
+      regional_scope,
       budgetOrResolution,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       supportingMultiverses,
       contentMarkdown,
       language,
     });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 
     return res.status(200).json({ meta, markdown: contentMarkdown });
   } catch (error: any) {

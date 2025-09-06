@@ -176,7 +176,6 @@ class PerformanceOptimizer {
       recommendations.push('Use dynamic imports for large components');
       recommendations.push('Optimize images and assets') }
     return recommendations}
-}
 if() { const optimizer = new PerformanceOptimizer;(;);
   optimizer.analyzeBundle();
   optimizer.generateReport() }
@@ -219,7 +218,6 @@ class SecurityAuditor {
     };
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
     console.log('Security report generated')}
-}
 if() { const auditor = new SecurityAuditor;(;);
   auditor.runAudit();
   auditor.fixIssues();
@@ -255,7 +253,6 @@ module.exports = SecurityAuditor";
     this.createSecurityScript();
     this.generateReport();
     this.log('✅ App improvement analysis completed') }
-}
 if() { const improver = new AppImprover;(;);
   improver.run().catch(error => {
     console.error('App improvement "failed":  ,', error);

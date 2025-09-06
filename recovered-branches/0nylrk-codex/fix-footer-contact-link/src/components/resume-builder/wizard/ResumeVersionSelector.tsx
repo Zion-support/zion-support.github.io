@@ -45,7 +45,9 @@ export function ResumeVersionSelector({
       }
       setIsLoading(false);
     }
-  };
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="flex items-center gap-2">
@@ -97,6 +99,20 @@ export function ResumeVersionSelector({
             <Button
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
+<<<<<<< HEAD
+
+            <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>
+              Cancel
+            </Button>
+            <Button
+onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() |isLoading}
+              onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() || isLoading}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -109,3 +125,12 @@ export function ResumeVersionSelector({
     </div>
   );
 }
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -9,9 +9,32 @@ interface PreviewHeaderProps {
   onBack: () => void;
 }
 
+
+=======
+=======
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, FileText, Link } from "lucide-react";
+import { PdfExportButton } from "../PdfExportButton";
+import { Resume } from "@/types/resume";
+import { useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+interface PreviewHeaderProps {
+  resume: Resume;
+  onBack: () => void;
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
-  const [isPrinting, setIsPrinting] = useState(false);
-  const isMobile = useIsMobile();
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const handleBrowserPrint = () => {
     setIsPrinting(true);
@@ -22,20 +45,126 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
       @media print {
         body * {
           visibility: hidden
+import { Button } from '@/components/ui/button',;
+import { ArrowLeft, FileText, Link } from 'lucide-react',;
+import { PdfExportButton } from '../PdfExportButton',;
+import { Resume } from '@/types/resume',;
+import { useState } from 'react',;
+import { useIsMobile } from '@/hooks/use-mobile',;
+interface PreviewHeaderProps {;
+  resume: Resume,;
+  onBack: () => void;
+}
+;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
+  const handleBrowserPrint = () => {;
+    setIsPrinting(true);
+
+    // Inject print-specific CSS only for the duration of printing;
+    const style = document && document.createElement('style');
+    style && style.innerHTML = `;
+      @media print {;
+        body * {;
+          visibility: hidden;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  const handleBrowserPrint = () => {;
+    setIsPrinting(true),;
+    // Inject print-specific CSS only for the duration of printing;
+    const style = document.createElement('style'),;
+    style.innerHTML = `;
+      @media print {;
+        body * {;
+          visibility: hidden;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         .print-section, .print-section * {
           visibility: visible
         }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         .print-section {
+          position: absolute
+          left: 0
+          top: 0
+          width: 100%
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+        }
+        .print-section, .print-section * {;
+          visibility: visible;
+        }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        .print-section {;
+          position: absolute,;
+          left: 0,;
+          top: 0,;
+          width: 100%;
+        }
+        .no-print {;
+import { Button  } from '@/components / ui / button';
+import { ArrowLeft, FileText, Link  } from './lucide-react';
+import { PdfExportButton  } from '../PdfExportButton';
+import { Resume  } from '@/types / resume';
+import { useState  } from './react';
+import { useIsMobile  } from '@/hooks / use - mobile';
+interface PreviewHeaderProps {
+  resume: Resume;
+  on_back: () => void;
+}
+export /**
+ * PreviewHeader - Function description
+ */
+function PreviewHeader() {
+  const [is_printing, setIsPrinting] = useState (false);
+  const is_mobile = useIsMobile ();
+;
+  const handleBrowserPrint = () =>: any {
+    setIsPrinting (true);
+;
+    // Inject print - specific CSS only for the duration of printing;
+    const style = document.create_element ("style");
+    style.innerHTML = `;
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        .print - section, .print - section * {
+          visibility: visible;
+        }
+        .print - section {
           position: absolute,
           left: 0,
           top: 0,
-          width: 100%
+          width: 100%;
         }
-        .no-print {
-          display: none !important
+        .no - print {
+          display: none !important;
+<<<<<<< HEAD
         }
       }
+<<<<<<< HEAD
+
+
+    `,
+    document.head.appendChild(style),
+=======
+=======
+<<<<<<< HEAD
     `;
     document.head.appendChild(style);
 
@@ -48,6 +177,10 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
       setIsPrinting(false);
     }, 1000);
   };
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div
@@ -81,3 +214,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
     </div>
   );
 }
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -27,11 +27,16 @@ export default function DesignMapPage() {
     }
   }
 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Head>
         <title>Zion OS Design Map</title>
       </Head>
+<<<<<<< HEAD
+<<<<<<< HEAD
       <section className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Zion OS Design Map</h1>
@@ -85,6 +90,64 @@ export default function DesignMapPage() {
           />
         </div>
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+            <a
+              href="/api/design-map"
+              className="px-3 py-2 rounded bg-gray-900 text-white text-sm"
+            >
+              JSON
+            </a>
+            <a
+              href="/api/figma/export?kit=tailwind"
+              className="px-3 py-2 rounded bg-neon-blue text-black text-sm"
+            >
+              Export Tailwind
+            </a>
+            <a
+              href="/api/figma/export?kit=chakra"
+              className="px-3 py-2 rounded bg-neon-purple text-white text-sm"
+            >
+              Export Chakra
+            </a>
+            <a
+              href="/api/figma/export?kit=react"
+              className="px-3 py-2 rounded bg-neon-green text-black text-sm"
+            >
+              Export React
+            </a>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <MapColumn
+            title="Foundations"
+            sections={designMap.products.foundations}
+          />
+          <MapColumn title="Talent UI" sections={designMap.products.talent} />
+          <MapColumn title="Client UI" sections={designMap.products.client} />
+          <MapColumn
+            title="AI Tools UI"
+            sections={designMap.products.aiTools}
+          />
+          <MapColumn title="DAO & Token UI" sections={designMap.products.dao} />
+          <MapColumn
+            title="Admin Console"
+            sections={designMap.products.admin}
+          />
+          <MapColumn
+            title="Mobile Layouts"
+            sections={designMap.products.mobile}
+          />
+<<<<<<< HEAD
+        </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
           <h2 className="font-medium mb-3">Create New Screen</h2>
           <div className="flex flex-col md:flex-row gap-3 items-start md:items-end">
@@ -161,6 +224,14 @@ function MapColumn({
                   className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800"
                 >
                   {i.title}
+
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
+
+                  {i.title}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </span>
               ))}
             </div>

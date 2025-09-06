@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -7,10 +10,10 @@ import Link from 'next/link'
 export default function InstantMessaging() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Instant Messaging',
-    description:
-      'Chat in real time with clients and freelancers using Socket.IO based messaging.',
+    '@type': 'WebPage',;
+    name: 'Instant Messaging',;
+    description:;
+      'Chat in real time with clients and freelancers using Socket.IO based messaging.';
     url: 'https://app.ziontechgroup.com/features/instant-messaging',  };    "@context": "https://schema.org"
     "@type": "WebPage"
     "name": "Instant Messaging"
@@ -24,57 +27,208 @@ export default function InstantMessaging() {
         description='Negotiate deals and collaborate instantly with real-time chat.'
         keywords='real-time messaging, Socket.IO chat, project communication'
         canonical='https://app.ziontechgroup.com/features/instant-messaging'
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import Link from 'next/link';
+export default function InstantMessaging() {;
+  const schema = {;
+    '@context': 'https://schema && schema.org',;
+    '@type': 'WebPage',;
+    name: 'Instant Messaging',;
+    description:;
+      'Chat in real time with clients and freelancers using Socket && Socket.IO based messaging.',;
+    url: 'https://app && app.ziontechgroup.com/features/instant-messaging',  };    "@context": "https://schema && schema.org";
+    "@type": "WebPage";
+    "name": "Instant Messaging";
+    "description": "Chat in real time with clients and freelancers using Socket && Socket.IO based messaging.",;
+    "url": "https://app && app.ziontechgroup.com/features/instant-messaging";
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+export default function InstantMessaging() {
+  const schema = {
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+    "@context": "https: //schema.org",
+=======
+    "@context": "https://schema.org",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    "@type": "WebPage",
+    "name": "Instant Messaging",
+    "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.",
+    "url": "https://app.ziontechgroup.com/features/instant-messaging"
+
+<<<<<<< HEAD
+  };
+
+=======
+  const schema = {
+    '@context': 'https://schema.org'
+    '@type': 'WebPage'
+    name: 'Instant Messaging'
+    description:
+      'Chat in real time with clients and freelancers using Socket.IO based messaging.'
+    url: 'https://app.ziontechgroup.com/features/instant-messaging',  };    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "Instant Messaging"
+    "description": "Chat in real time with clients and freelancers using Socket.IO based messaging."
+    "url": "https://app.ziontechgroup.com/features/instant-messaging"
+  }
+        title='Instant Messaging'
+        description='Negotiate deals and collaborate instantly with real-time chat.'
+        keywords='real-time messaging, Socket.IO chat, project communication'
+        canonical='https://app.ziontechgroup.com/features/instant-messaging'
+  };
+
+  return (
+    <>;
+
+
+            <li>;
+              Chat rooms scoped to each order or project for focused;
+              discussions.;
+            </li>;
+
+            <li > Share files and links directly within the conversation.</li>;
+          </ul>;
+          <h2 className='text - 2xl font - bold mb - 4'>;
+            Frequently Asked Questions;
+          </h2>;
+          <div className='space - y-4 mb - 12'>;
+            <div>;
+              <p className='font - semibold'>Is chat history saved?</p>;
+              <p className='text - zion - slate - light'>;
+
+                Yes, messages are stored securely so you can review past;
+                discussions.;
+              </p>;
+            </div>;
+            <div>;
+
+              <p className='font - semibold'>Can I disable notifications?</p>;
+              <p className='text - zion - slate - light'>;
+
+                You can mute rooms or disable notifications in your account;
+                settings.;
+              </p>;
+            </div>;
+          </div>;
+
+import { Button } from "@/components/ui/button",
+import Link from 'next/link',
+export default function InstantMessaging() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Instant Messaging",
+    "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.",
+    "url": "https://app.ziontechgroup.com/features/instant-messaging"
+  },
+
+  return (
+    <>
+      <SEO
+        title='Instant Messaging'
+        description='Negotiate deals and collaborate instantly with real-time chat.'
+        keywords='real-time messaging, Socket.IO chat, project communication'
+        canonical='https://app.ziontechgroup.com/features/instant-messaging'
+        title="Instant Messaging"
+        description="Negotiate deals and collaborate instantly with real-time chat."
+        keywords="real-time messaging, Socket.IO chat, project communication"
+        canonical="https://app.ziontechgroup.com/features/instant-messaging"
+
+
+
+=======
+  };
+
+  return (
+    <>
+      <SEO
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
-        type='application/ld+json'
+        type="application/ld+json"
+<<<<<<< HEAD
+
+      />
+      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
-      <main className='bg-background text-white py-12'>
-        <div className='container mx-auto px-4 md:px-6'>
-          <GradientHeading className='mb-4 text-center'>
-            Instant Messaging
-          </GradientHeading>
-          <p className='text-center text-zion-slate-light max-w-3xl mx-auto mb-8'>
-            Communicate with partners and support staff instantly from any
-            device.
+      <main className="bg-background text-white py-12">
+        <div className="container mx-auto px-4 md: px-6">
+          <GradientHeading className="mb-4 text-center">Instant Messaging</GradientHeading>
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Communicate with partners and support staff instantly from any device.
           </p>
-          <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>
+          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <img
-              src='https://placehold.co/800x400'
-              alt='Screenshot of chat interface'
-              className='object-cover'
+              src="https://placehold && placehold.co/800x400"
+              alt="Screenshot of chat interface"
+              className="object-cover"
             />
           </div>
-          <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
-          <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Real-time notifications keep everyone updated.</li>
-            <li>
-              Chat rooms scoped to each order or project for focused
-              discussions.
-            </li>
+            <li>Chat rooms scoped to each order or project for focused discussions.</li>
             <li>Share files and links directly within the conversation.</li>
           </ul>
-          <h2 className='text-2xl font-bold mb-4'>
-            Frequently Asked Questions
-          </h2>
-          <div className='space-y-4 mb-12'>
+          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div className="space-y-4 mb-12">
             <div>
-              <p className='font-semibold'>Is chat history saved?</p>
-              <p className='text-zion-slate-light'>
-                Yes, messages are stored securely so you can review past
-                discussions.
-              </p>
+              <p className="font-semibold">Is chat history saved?</p>
+              <p className="text-zion-slate-light">Yes, messages are stored securely so you can review past discussions.</p>
             </div>
             <div>
-              <p className='font-semibold'>Can I disable notifications?</p>
-              <p className='text-zion-slate-light'>
-                You can mute rooms or disable notifications in your account
-                settings.
-              </p>
+              <p className="font-semibold">Can I disable notifications?</p>
+              <p className="text-zion-slate-light">You can mute rooms or disable notifications in your account settings.</p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Start Chatting</Link>            </Button>      />
@@ -114,6 +268,8 @@ export default function InstantMessaging() {
               <p className="text-zion-slate-light">You can mute rooms or disable notifications in your account settings.</p>
             </div>
           </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Start Chatting</Link>
@@ -123,5 +279,87 @@ export default function InstantMessaging() {
       </main>
     </>
   )
+<<<<<<< HEAD
 }
 ;
+=======
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { SEO } from "@/components/SEO",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import Link from 'next/link',;
+export default function InstantMessaging() {;
+  const schema = {;
+    "@context": "https://schema.org",;
+    "@type": "WebPage",;
+    "name": "Instant Messaging",;
+    "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.";
+    "url": "https://app.ziontechgroup.com/features/instant-messaging";
+  };
+  return (;
+    <>;
+      <SEO;
+        title="Instant Messaging";
+        description="Negotiate deals and collaborate instantly with real-time chat.";
+        keywords="real-time messaging, Socket.IO chat, project communication";
+        canonical="https://app.ziontechgroup.com/features/instant-messaging";
+      />;
+      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      <script;
+        type="application/ld+json";
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      ></script>;
+      <Header />;
+      <main className="bg-background text-white py-12">;
+        <div className="container mx-auto px-4 md: px-6">;
+          <GradientHeading className="mb-4 text-center">Instant Messaging</GradientHeading>;
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">;
+            Communicate with partners and support staff instantly from any device.;
+          </p>;
+          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
+<<<<<<< HEAD
+            <img;
+              src="https://placehold.co/800x400";
+              alt="Screenshot of chat interface";
+              className="object-cover";
+            />;
+          </div>;
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;
+            <li>Real-time notifications keep everyone updated.</li>;
+            <li>Chat rooms scoped to each order or project for focused discussions.</li>;
+            <li>Share files and links directly within the conversation.</li>;
+          </ul>;
+          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>;
+          <div className="space-y-4 mb-12">;
+            <div>;
+              <p className="font-semibold">Is chat history saved?</p>;
+              <p className="text-zion-slate-light">Yes, messages are stored securely so you can review past discussions.</p>;
+            </div>;
+            <div>;
+              <p className="font-semibold">Can I disable notifications?</p>;
+              <p className="text-zion-slate-light">You can mute rooms or disable notifications in your account settings.</p>;
+            </div>;
+          </div>;
+          <div className="text-center">;
+            <Button size="lg" className="bg-zion-purple text-white" asChild>;
+              <Link href="/open-app">Start Chatting</Link>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+            </Button>;
+          </div>;
+        </div>;
+      </main>;
+<<<<<<< HEAD
+    </>;
+  );
+}
+;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

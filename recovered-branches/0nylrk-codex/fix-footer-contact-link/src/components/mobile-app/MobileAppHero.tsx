@@ -8,6 +8,9 @@ export const MobileAppHero: React.FC = () => {
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
   const googlePlayUrl = "#"; // Replace with actual Google Play URL when available
 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <section className="relative bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-8">
@@ -44,6 +47,19 @@ export const MobileAppHero: React.FC = () => {
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, Phone} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {AppStoreButtons} from "./AppStoreButtons";
+=======
+
+
+=======
+<<<<<<< HEAD
               {/* This would be replaced with an actual phone mockup image in production */}
             </div>
           </div>
@@ -52,3 +68,8 @@ export const MobileAppHero: React.FC = () => {
     </section>
   );
 };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

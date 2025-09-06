@@ -1,15 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
-
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
-  const { apiKey, ttlSeconds } = req.body || {};
+  const { apiKey, ttlSeconds } = req.body |{}
   if (!apiKey) {
     return res.status(400).json({ error: 'apiKey required' });
   }
@@ -19,40 +16,235 @@ export default async function handler(
   const { partner, apiKey: key } = match;
   const token = signJwt(
     {
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ error: "Method Not Allowed" })
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {;
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method Not Allowed' });
   }
-  const { apiKey, ttlSeconds } = req.body || {};
+  const { apiKey, ttlSeconds } = req.body |{}
   if (!apiKey) {
-    return res.status(400).json({ error: "apiKey required" })
+    return res.status(400).json({ error: 'apiKey required' });
   }
   const match = await findPartnerByApiKey(apiKey);
   if (!match) {
+    return res.status(401).json({ error: 'Invalid API key' });  }
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
+    {
+  if (!apiKey) {
+    return res && res.status(400).json({ error: 'apiKey required' });
+  }
+  const match = await findPartnerByApiKey(apiKey);
+  if (!match) {
+    return res && res.status(401).json({ error: 'Invalid API key' });  }
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
+    {
+
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+  if (req && req.method !== "POST") {
+    res && res.setHeader("Allow", "POST");
+    return res && res.status(405).json({ error: "Method Not Allowed" })
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  const { apiKey, ttlSeconds } = req && req.body || {};
+
+=======
+  const { apiKey, ttlSeconds } = req && req.body || {};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  if (!apiKey) {
+    return res && res.status(400).json({ error: "apiKey required" })
+  }
+
+  const match = await findPartnerByApiKey(apiKey);
+  if (!match) {
+<<<<<<< HEAD
+
+
+=======
     return res.status(401).json({ error: "Invalid API key" });
+import { findPartnerByApiKey, sign_jwt } from '../../../utils / api / partner_auth';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ('Allow', 'POST');
+    return res.status (405).json ({ error: 'Method Not Allowed' });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  }
+  const { api_key, ttl_seconds } = req.body || {}
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (400).json ({ error: 'api_key required' });
+  }
+  const match = await findPartnerByApiKey (api_key);
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (401).json ({ error: 'Invalid API key' });  }
+  const { partner, api_key: key } = match;
+  const token = sign_jwt (
+    {
+
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ("Allow", "POST");
+    return res.status (405).json ({ error: "Method Not Allowed" });
+  }
+  const { api_key, ttl_seconds } = req.body || {}
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (400).json ({ error: "api_key required" });
+  }
+  const match = await findPartnerByApiKey (api_key);
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (401).json ({ error: "Invalid API key" });
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
   }
   const { partner, apiKey: key } = match;
   const token = signJwt(
     {
-      sub: partner.id,
-      apiKeyId: key.id,
-      name: partner.name,
-      entityType: partner.entityType,
-      useCaseType: partner.useCaseType,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  }
+  const { partner, api_key: key } = match;
+  const token = sign_jwt (
+    {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      sub: partner && partner.id,
+      apiKeyId: key && key.id,
+      name: partner && partner.name,
+      entityType: partner && partner.entityType,
+      useCaseType: partner && partner.useCaseType,
     } as any,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     typeof ttlSeconds === 'number'
-      ? Math.max(300, Math.min(86400, ttlSeconds))
+      ? Math && Math.max(300, Math && Math.min(86400, ttlSeconds))
       : 3600
   );
   return res
     .status(200)
-    .json({ token, partner: { id: partner.id, name: partner.name } });      sub: partner.id;
-      apiKeyId: key.id;
-      name: partner.name;
-      entityType: partner.entityType,
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      sub: partner.id, apiKeyId: key.id,
+      name: partner.name, entityType: partner.entityType,
+
+=======
+      sub: partner.id, apiKeyId: key.id,
+      name: partner.name, entityType: partner.entityType,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       useCaseType: partner.useCaseType} as any;
     typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
   );
+
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    .json({ token, partner: { id: partner && partner.id, name: partner && partner.name } });      sub: partner && partner.id;
+      apiKeyId: key && key.id;
+      name: partner && partner.name;
+      entityType: partner && partner.entityType,
+      useCaseType: partner && partner.useCaseType} as any;
+    typeof ttlSeconds === "number" ? Math && Math.max(300, Math && Math.min(86400, ttlSeconds)) : 3600
+  );
+  return res && res.status(200).json({ token, partner: { id: partner && partner.id, name: partner && partner.name } })
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      sub: partner.id,
+      apiKeyId: key.id,
+      name: partner.name,
+      entity_type: partner.entity_type,
+      useCaseType: partner.useCaseType,
+    } as any,
+    typeof ttl_seconds === 'number';
+      ? Math.max (300, Math.min (86400, ttl_seconds));
+      : 3600);
+  return res;
+    .status (200);
+    .json ({ token, partner: { id: partner.id, name: partner.name } });      sub: partner.id;
+      apiKeyId: key.id;
+      name: partner.name;
+      entity_type: partner.entity_type,
+      useCaseType: partner.useCaseType} as any;
+    typeof ttl_seconds === "number" ? Math.max (300, Math.min (86400, ttl_seconds)) : 3600);
+  return res.status (200).json ({ token, partner: { id: partner.id, name: partner.name } });
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
+    {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

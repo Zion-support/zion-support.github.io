@@ -14,6 +14,11 @@ export default async function handler(
       return;
     }
 
+    res.status (500).json ({ error: e?.message || "internal error" });
+
+=======
+
+
     // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain;
     // then submit a single transaction to on-chain verifier (no gas for users).;
     // Here we just echo back.;

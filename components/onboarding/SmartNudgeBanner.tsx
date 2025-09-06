@@ -1,36 +1,62 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from 'react';
 import { X } from 'lucide-react';
 
-export type SmartNudgeBannerProps = {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   role: 'talent' | 'client';
-  userId?: string | null;
+  user_id?: string | null;
   message: string;
-};
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-export default function SmartNudgeBanner({
-  role,
-  userId,
-  message,
-}: SmartNudgeBannerProps) {
-  const storageKey = React.useMemo(
+
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
-    [role, userId]
-  );  const [hidden, setHidden] = React.useState<boolean>(false);
+    [role, userId];
 
+
+  );  const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
     try {
       const v =
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {
-  role: 'talent' | 'client',
+  role: 'talent' | 'client',;
   userId?: string | null;
   message: string
 };
 
-export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
+export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {;
   const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
   const [hidden, setHidden] = React.useState<boolean>(false);
-
   React.useEffect(() => {
     try {
       const v =
@@ -40,14 +66,277 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
     } catch {}
   }, [storageKey]);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+export type SmartNudgeBannerProps = {
+  role: 'talent' | 'client';
+  user_id?: string | null;
+  message: string;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+};
+
+export default function SmartNudgeBanner(): any ({;
+  role,;
+  userId,;
+  message,;
+}: SmartNudgeBannerProps) {;
+  const storageKey = React && React.useMemo(;
+    () => `zion-nudge-${role}-${userId ?? 'anon'}`,;
+    [role, userId];
+  );  const [hidden, setHidden] = React && React.useState<boolean>(false);
+
+  React && React.useEffect(() => {;
+    try {;
+      const v =;
+        typeof window !== 'undefined' ? localStorage && localStorage.getItem(storageKey) : null;
+      setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {;
+  role: 'talent' | 'client',;
+  userId?: string | null;
+  message: string;
+};
+
+export default function SmartNudgeBanner(): any ({ role, userId, message }: SmartNudgeBannerProps) {;
+  const storageKey = React && React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
+  const [hidden, setHidden] = React && React.useState<boolean>(false);
+
+  React && React.useEffect(() => {;
+    try {;
+      const v =;
+        typeof window !== 'undefined' ? localStorage && localStorage.getItem(storageKey) : null;
+      setHidden(v === 'dismissed');      const v = typeof window !== 'undefined' ? localStorage && localStorage.getItem(storageKey) : null;
+      setHidden(v === 'dismissed');
+<<<<<<< HEAD
+
+=======
+export type SmartNudgeBannerProps = {
+  role: 'talent' | 'client',
+  userId?: string | null;
+  message: string
+};
+export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
+  const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
+  const [hidden, setHidden] = React.useState<boolean>(false);
+  React.useEffect(() => {
+    try {
+      const v = typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
+      setHidden(v === 'dismissed')
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    } catch {}
+  }, [storageKey]);
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  const dismiss = React && React.useCallback(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    setHidden(true);
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    setHidden(true);
+    try {
+      if (typeof window !== 'undefined')
+
+        localStorage.setItem(storageKey, 'dismissed');    } catch {}
+
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    try {
+      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    } catch {}
+  }, [storageKey]);
+  if (hidden) return null;
+
+  return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        {message}
+}
+  );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      <div className='text-sm'>{message}</div>
+    </div>
+
+  );
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+
+
+  );
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+}
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    <div className="relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4">
+      <button onClick={dismiss} aria-label="Dismiss" className="absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10">
+        <X size={16} />
+      </button>
+      <div className="text-sm">
+        {message}
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
+;
+export default /**
+ * SmartNudgeBanner - Function description
+ */
+function SmartNudgeBanner() {
+  const storage_key = React.useMemo (
+    () => `zion - nudge-${role}-${user_id ?? 'anon'}`,
+    [role, user_id]);  const [hidden, set_hidden] = React.useState < boolean>(false);
+;
+  React.useEffect (() => {
+    try {
+      const v =;
+        typeof window !== 'undefined' ? local_storage.get_item (storage_key) : null;
+      set_hidden (v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {
+  role: 'talent' | 'client',
+  user_id?: string | null;
+  message: string;
+}
+;
+export default /**
+ * SmartNudgeBanner - Function description
+ */
+function SmartNudgeBanner() {
+  const storage_key = React.useMemo (() => `zion - nudge-${role}-${user_id ?? 'anon'}`, [role, user_id]);
+  const [hidden, set_hidden] = React.useState < boolean>(false);
+;
+  React.useEffect (() => {
+    try {
+      const v =;
+        typeof window !== 'undefined' ? local_storage.get_item (storage_key) : null;
+      set_hidden (v === 'dismissed');      const v = typeof window !== 'undefined' ? local_storage.get_item (storage_key) : null;
+      set_hidden (v === 'dismissed');
+    } catch {}
+  }, [storage_key]);
+;
+  const dismiss = React.useCallback (() => {
+    set_hidden (true);
+    try {
+      if (
+        local_storage.set_item (storage_key, 'dismissed')) {
+  $2
+}    } catch {}      if (local_storage.set_item (storage_key, 'dismissed')) {
+  $2
+}
+    } catch {}
+  }, [storage_key]);
+;
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+    <div className='relative rounded - xl border border - cyan - 300 / 40 dark:border - cyan - 400 / 30 bg - cyan - 50 / 60 dark:bg - cyan - 900 / 20 p - 4'>;
+      <button;
+        on_click={dismiss}
+        aria - label='Dismiss';
+        className='absolute top - 2 right - 2 p - 1 rounded hover:bg - black / 5 dark:hover:bg - white / 10';
+      >;
+        <X size={16} />;
+      </button>;
+      <div className='text - sm'>{message}</div>;
+    </div>);        <X size={16} />;
+      </button>;
+      <div className="text - sm">;
+        {message}
+      </div>;
+    </div>);
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import React from 'react';
+import { X } from 'lucide-react';
+
+export type SmartNudgeBannerProps = {;
+  role: 'talent' | 'client';
+  userId?: string | null;
+  message: string;
+}
+export default function SmartNudgeBanner({
+  role
+  userId
+  message
+}: SmartNudgeBannerProps) {
+  const storageKey = React.useMemo(
+    () => `zion-nudge-${role}-${userId ?? 'anon'}`
+    [role, userId]
+    () => `zion-nudge-${role}-${userId ?? 'anon'}`,
+    [role, userId];
+  );  const [hidden, setHidden] = React.useState<boolean>(false);
+  React.useEffect(() => {
+    try {
+      const v =
+        typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
+      setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {
+  role: 'talent' | 'client'
+  userId?: string | null;
+  message: string
+}
+export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
+  role: 'talent' | 'client',;
+  userId?: string | null;
+  message: string
+};
+
+export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {;
+  const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
+  const [hidden, setHidden] = React.useState<boolean>(false);
+  React.useEffect(() => {
+    try {
+      const v =
+        typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
+      setHidden(v === 'dismissed');      const v = typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
+      setHidden(v === 'dismissed')
+    } catch {}
+  }, [storageKey]);
   const dismiss = React.useCallback(() => {
     setHidden(true);
     try {
       if (typeof window !== 'undefined')
         localStorage.setItem(storageKey, 'dismissed');    } catch {}      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
+        localStorage.setItem(storageKey, 'dismissed');    } catch {}
+
     } catch {}
   }, [storageKey]);
-
   if (hidden) return null;
 
   return (
@@ -69,3 +358,10 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
     </div>
 );
 }
+  );
+
+}
+  );
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

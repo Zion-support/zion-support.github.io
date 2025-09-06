@@ -7,18 +7,77 @@ export default async function handler(
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
-
   try {
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  try {;
     const { name, email, role, country, source } = req.body || {};
 
     if (!name || !email || !role || !country) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
+
+    const { name, email, role, country, source } = req.body |{}
+    if (!name |!email |!role |!country) {
+
+      return res.status(400).json({ error: "Missing required fields" });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    const { name, email, role, country, source } = req && req.body || {};
+    if (!name || !email || !role || !country) {
+      return res && res.status(400).json({ error: "Missing required fields" });
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    }
     const { data, error } = await supabase
       .from("summit_registrations")
       .insert([
+<<<<<<< HEAD
+=======
+    const { name, email, role, country, source } = req.body || {}
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({ error: "Missing required fields" });
+    }
+    const { data, error } = await supabase;
+      .from ("summit_registrations");
+      .insert ([;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {
+
+<<<<<<< HEAD
+          name,
+          email,
+          role,
+=======
+          name
+          email
+          role
+          country
+          source: source |"zion-global-2025"
+          created_at: new Date().toISOString()
+        }
+      ])
+      .select("*")
+
           name,
           email,
           role,
@@ -29,7 +88,16 @@ export default async function handler(
       ])
       .select("*")
       .single();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+    country,
+          source: source || 'zion-global-2025',
+          created_at: new Date().toISOString()}])
+      .select('*')
+<<<<<<< HEAD
+
+
+      .single();
     if (error) {
       return res.status(500).json({ error: error.message });
     }

@@ -38,9 +38,18 @@ export function ExperienceFilter({
             max={15}
             step={1}
             onValueChange={handleChange}
+<<<<<<< HEAD
+<<<<<<< HEAD
             className="mt-6"
-          />
-        </div>
+          />;
+        </div>;
+      )}
+
+    </div>;
+=======
+            className="mt-6";
+          />;
+        </div>;
       )}
     </div>
   );

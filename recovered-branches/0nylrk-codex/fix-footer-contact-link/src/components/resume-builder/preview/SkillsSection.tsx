@@ -3,6 +3,25 @@ interface SkillsSectionProps {
   skills: Skill[];
 }
 
+
+import {Skill} from '@/types/resume';
+=======
+import { Skill } from "@/types/resume";
+>>>>>>> main
+interface SkillsSectionProps {
+  skills: Skill[];
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+interface SkillsSectionProps {
+  skills: Skill[];
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+interface SkillsSectionProps {
+  skills: Skill[];
+}
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
   const skillsByCategory = skills.reduce(

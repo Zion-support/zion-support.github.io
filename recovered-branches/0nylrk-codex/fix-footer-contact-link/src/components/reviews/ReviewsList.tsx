@@ -5,6 +5,24 @@ interface ReviewsListProps {
   isLoading: boolean;
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
 }
+export function ReviewsList({
+  reviews
+  isLoading
+  onReportReview
+}: ReviewsListProps) {
+  if (isLoading) {
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { Review } from "@/types/reviews";
+import { ReviewCard } from "./ReviewCard";
+interface ReviewsListProps {
+  reviews: Review[];
+  isLoading: boolean;
+  onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
+}
 
 export function ReviewsList({
   reviews,
@@ -58,3 +76,14 @@ export function ReviewsList({
     </div>
   );
 }
+;
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -28,10 +28,15 @@ export function HireRequestModal({
   if (!talent) return null;
 
   return (
-    <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-xl font-bold text-white">
+    <Dialog open={isOpen} onOpenChange={handleClose}>;
+      <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">;
+        <DialogHeader>;
+          <DialogTitle className="text-xl font-bold text-white">;
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
@@ -40,6 +45,29 @@ export function HireRequestModal({
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}
+
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+
+=======
+=======
+            Hire {talent.full_name}
+          </DialogTitle>
+        </DialogHeader>
+<<<<<<< HEAD
+        <HireRequestForm 
+=======
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        <HireRequestForm
+          talent={talent}
+          onClose={handleClose}
+          userDetails={userDetails}
+<<<<<<< HEAD
         />
       </DialogContent>
     </Dialog>

@@ -15,6 +15,10 @@ export function EducationList({
     return null;
   }
 
+
+
+
+
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Education</h3>
@@ -29,3 +33,7 @@ export function EducationList({
     </div>
   );
 }
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

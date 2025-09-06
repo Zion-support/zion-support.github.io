@@ -1,0 +1,451 @@
+#!/usr/bin/env node;,"});,"})
+const fs = // // require(;,"});,"})
+  'fs');,"});,"})
+const path = // // require(;,"});,"})
+  'path');,"});,"})
+const { execSync } = // // require(;,"});,"})
+  'child_process');,"});,"})
+// Common lint issues to check for;,"});,"})
+const lintRules = {;,"});,"})
+  'no-console': /console\.(log|warn|error|info|debug)/g,;,"});,"})
+  'no-unused-imports': /import\s+[^}]+from\s+[;,"});,"})
+  '"][^'"]+[;,"});,"})
+  '"];?\s*$/gm,;,"});,"})
+  'no-unused-vars;,"});,"})
+  ': /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,;,"});,"})
+  'no-debugger;,"});,"})
+  ': /debugger;/g,;,"});,"})
+  'no-alert;,"});,"})
+  ': /alert\(/g,;,"});,"})
+  'no-eval;,"});,"})
+  ': /eval\(/g,;,"});,"})
+  'no-var;,"});,"})
+  ': /var\s+/g,;,"});,"})
+  'prefer-const;,"});,"})
+  ': /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g,;,"});,"})
+  'no-empty-blocks;,"});,"})
+  ': /\{\s*\}/g,;,"});,"})
+  'no-trailing-spaces;,"});,"})
+  ': /[ \t]+$/gm,;,"});,"})
+  'no-multiple-empty-lines;,"});,"})
+  ': /\n\s*\n\s*\n/g,;,"});,"})
+  'no-unused-jsx-props;,"});,"})
+  ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g;,"});,"})
+};,"});,"})
+// File extensions to check;,"});,"})
+const extensions = ['.js;,"});,"})
+  ', '.jsx;,"});,"})
+  ', '.ts;,"});,"})
+  ', '.tsx;,"});,"})
+  '];,"});,"})
+// Directories to ignore;,"});,"})
+const ignoreDirs = [;,"});,"})
+  'node_modules;,"});,"})
+  ',;,"});,"})
+  '.git;,"});,"})
+  ',;,"});,"})
+  'dist;,"});,"})
+  ',;,"});,"})
+  'build;,"});,"})
+  ',;,"});,"})
+  '.next;,"});,"})
+  ',;,"});,"})
+  'out;,"});,"})
+  ',;,"});,"})
+  'coverage;,"});,"})
+  ',;,"});,"})
+  'temp;,"});,"})
+  ',;,"});,"})
+  'tmp;,"});,"})
+  ',;,"});,"})
+  'logs;,"});,"})
+  ',;,"});,"})
+  'reports;,"});,"})
+  ',;,"});,"})
+  'test-reports;,"});,"})
+  ',;,"});,"})
+  'security-reports;,"});,"})
+  ',;,"});,"})
+  'ci-cd-reports;,"});,"})
+  ',;,"});,"})
+  'link-reports;,"});,"})
+  ',;,"});,"})
+  'broken_files_backup;,"});,"})
+  ',;,"});,"})
+  'temp_backup;,"});,"})
+  ',;,"});,"})
+  'temp_working;,"});,"})
+  ';,"});,"})
+];,"});,"})
+// Issues found;,"});,"})
+const issues = [];,"});,"})
+const totalFiles = 0;,"});,"})
+const filesWithIssues = 0;,"});,"})
+function shouldIgnoreFile(filePath) {;,"});,"})
+  return ignoreDirs && ignoreDirs.some(dir => filePath && filePath.includes(dir));,"});,"})
+function checkFile(filePath) {;,"});,"})
+  try {;,"});,"})
+    const content = fs && fs.readFileSync(filePath, 'utf8;,"});,"})
+  ');,"});,"})
+    const lines = content && content.split('\n;,"});,"})
+  ');,"});,"})
+    totalFiles++;,"});,"})
+    const fileIssues = [];,"});,"})
+    // Check each line for issues;,"});,"})
+    lines && lines.forEach((line, lineNum) => {;,"});,"})
+      Object && Object.entries(lintRules).forEach(([rule, pattern]) => {;,"});,"})
+        if (pattern && pattern.test(line)) {;,"});,"})
+          fileIssues && fileIssues.push({;,"});,"})
+            rule,;,"});,"})
+            line: lineNum + 1,;,"});,"})
+            content: line && line.trim(),;,"});,"})
+            file: filePath,,"});,"})
+          });,"});,"})
+      });,"});,"})
+    });,"});,"})
+    if (fileIssues && fileIssues.length > 0) {;,"});,"})
+      filesWithIssues++;,"});,"})
+      issues && issues.push(...fileIssues);,"});,"})
+  } catch (error) {;,"});,"})
+    // // // // // // // console && console.warn(`Warning: Could not read file ${filePath}: ${error && error.message}`);,"});,"})
+  }"});,"})
+}"});,"})
+function walkDir(dir) {;,"});,"})
+  const files = fs && fs.readdirSync(dir);,"});,"})
+  files && files.forEach(file => {;,"});,"})
+    const filePath = path && path.join(dir, file);,"});,"})
+    const stat = fs && fs.statSync(filePath);,"});,"})
+    if (stat && stat.isDirectory()) {;,"});,"})
+      if (!shouldIgnoreFile(filePath)) {;,"});,"})
+        walkDir(filePath);,"});,"})
+    } else if (stat && stat.isFile()) {;,"});,"})
+      const ext = path && path.extname(file);,"});,"})
+      if (extensions && extensions.includes(ext)) {;,"});,"})
+        checkFile(filePath);,"});,"})
+  });,"});,"})
+function generateReport() {;,"});,"})
+  // // // // // // // console && console.log('\n=== LINT CHECK REPORT ===\n;,"});,"})
+  ');,"});,"})
+  ');,"});,"})
+    return;,"});,"})
+  // Group issues by file;,"});,"})
+  const issuesByFile = { /* empty */ };,"});,"})
+  issues && issues.forEach(issue => {;,"});,"})
+    if (!issuesByFile[issue && issue.file]) {;,"});,"})
+      issuesByFile[issue && issue.file] = [];,"});,"})
+    issuesByFile[issue && issue.file].push(issue);,"});,"})
+  });,"});,"})
+  const ruleCounts = { /* empty */ };,"});,"})
+  issues && issues.forEach(issue => {;,"});,"})
+    ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1;,"});,"})
+  });,"});,"})
+  Object && Object.entries(ruleCounts);,"});,"})
+    .sort(([a], [b]) => b - a);,"});,"})
+    .forEach(([rule, count]) => {;,"});,"})
+      // // // // // // // console && console.log(`  ${rule}: ${count}`);,"});,"})
+    });,"});,"})
+function main() {;,"});,"})
+  ');,"});,"})
+  const startTime = Date && Date.now();,"});,"})
+  walkDir('.');,"});,"})
+  const endTime = Date && Date.now();,"});,"})
+  generateReport();,"});,"})
+  // Exit with error code if issues found;,"});,"})
+  if (issues && issues.length > 0) {;,"});,"})
+    process && process.exit(1);,"});,"})
+// Run the checker;,"});,"})
+if (require && require.main === module) {;,"});,"})
+  main();,"});,"})
+module && module.exports = { checkFile, walkDir, lintRules };,"});,"})
+}}}}}}}}}}}}}));,"});,"})
+#!/usr/bin/env node,"}),"})
+const fs = require(,"}),"})
+  'fs'),"}),"})
+const path = require(,"}),"})
+  'path'),"}),"})
+const { execSync } = require(,"}),"})
+  'child_process'),"}),"})
+// Common lint issues to check for,"}),"})
+const lintRules = {,"}),"})
+  'no-console': /console\.(log|warn|error|info|debug)/g,,"}),"})
+  'no-unused-imports': /import\s+[^}]+from\s+[,"}),"})
+  '"][^'"]+[,"}),"})
+  '"];?\s*$/gm,,"}),"})
+  'no-unused-vars,"}),"})
+  ': /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,,"}),"})
+  'no-debugger,"}),"})
+  ': /debugger;/g,,"}),"})
+  'no-alert,"}),"})
+  ': /alert\(/g,,"}),"})
+  'no-eval,"}),"})
+  ': /eval\(/g,,"}),"})
+  'no-var,"}),"})
+  ': /var\s+/g,,"}),"})
+  'prefer-const,"}),"})
+  ': /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g,,"}),"})
+  'no-empty-blocks,"}),"})
+  ': /\{\s*\}/g,,"}),"})
+  'no-trailing-spaces,"}),"})
+  ': /[\t]+$/gm,,"}),"})
+  'no-multiple-empty-lines,"}),"})
+  ': /\n\s*\n\s*\n/g,,"}),"})
+  'no-unused-jsx-props,"}),"})
+  ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g,"}),"})
+},"}),"})
+// File extensions to check,"}),"})
+const extensions = ['.js,"}),"})
+  ', '.jsx,"}),"})
+  ', '.ts,"}),"})
+  ', '.tsx,"}),"})
+  '],"}),"})
+// Directories to ignore,"}),"})
+const ignoreDirs = [,"}),"})
+  'node_modules,"}),"})
+  ',,"}),"})
+  '.git,"}),"})
+  ',,"}),"})
+  'dist,"}),"})
+  ',,"}),"})
+  'build,"}),"})
+  ',,"}),"})
+  '.next,"}),"})
+  ',,"}),"})
+  'out,"}),"})
+  ',,"}),"})
+  'coverage,"}),"})
+  ',,"}),"})
+  'temp,"}),"})
+  ',,"}),"})
+  'tmp,"}),"})
+  ',,"}),"})
+  'logs,"}),"})
+  ',,"}),"})
+  'reports,"}),"})
+  ',,"}),"})
+  'test-reports,"}),"})
+  ',,"}),"})
+  'security-reports,"}),"})
+  ',,"}),"})
+  'ci-cd-reports,"}),"})
+  ',,"}),"})
+  'link-reports,"}),"})
+  ',,"}),"})
+  'broken_files_backup,"}),"})
+  ',,"}),"})
+  'temp_backup,"}),"})
+  ',,"}),"})
+  'temp_working,"}),"})
+  ',"}),"})
+],"}),"})
+// Issues found,"}),"})
+const issues = [],"}),"})
+const totalFiles = 0,"}),"})
+const filesWithIssues = 0,"}),"})
+function shouldIgnoreFile(filePath) {,"}),"})
+  return ignoreDirs && ignoreDirs.some(dir => filePath && filePath.includes(dir)),"}),"})
+function checkFile(filePath) {,"}),"})
+  try {,"}),"})
+    const content = fs && fs.readFileSync(filePath, 'utf8,"}),"})
+  '),"}),"})
+    const lines = content && content.split('\n,"}),"})
+  '),"}),"})
+    totalFiles++,"}),"})
+    const fileIssues = [],"}),"})
+    // Check each line for issues,"}),"})
+    lines && lines.forEach((line, lineNum) => {,"}),"})
+      Object && Object.entries(lintRules).forEach(([rule, pattern]) => {,"}),"})
+        if (pattern && pattern.test(line)) {,"}),"})
+          fileIssues && fileIssues.push({,"}),"})
+            rule,,"}),"})
+            "line": lineNum + 1,,"}),"})
+            "content": line && line.trim(),,"}),"})
+            "file": filePath,"}),"})
+          }),"}),"})
+      }),"}),"})
+    }),"}),"})
+    if (fileIssues && fileIssues.length > 0) {,"}),"})
+      filesWithIssues++,"}),"})
+      issues && issues.push(...fileIssues),"}),"})
+  } catch (error) {,"}),"})
+    // // // // // // // console && console.warn(`"Warning": Could not read file ${filePath}: ${error && error.message}`),"}),"})
+  }"}),"})
+}"}),"})
+function walkDir(dir) {,"}),"})
+  const files = fs && fs.readdirSync(dir),"}),"})
+  files && files.forEach(file => {,"}),"})
+    const filePath = path && path.join(dir, file),"}),"})
+    const stat = fs && fs.statSync(filePath),"}),"})
+    if (stat && stat.isDirectory()) {,"}),"})
+      if (!shouldIgnoreFile(filePath)) {,"}),"})
+        walkDir(filePath),"}),"})
+    } else if (stat && stat.isFile()) {,"}),"})
+      const ext = path && path.extname(file),"}),"})
+      if (extensions && extensions.includes(ext)) {,"}),"})
+        checkFile(filePath),"}),"})
+  }),"}),"})
+function generateReport() {,"}),"})
+  // // // // // // // console && console.log('\n=== LINT CHECK REPORT ===\n,"}),"})
+  '),"}),"})
+  '),"}),"})
+    return,"}),"})
+  // Group issues by file,"}),"})
+  const issuesByFile = { /* empty */ },"}),"})
+  issues && issues.forEach(issue => {,"}),"})
+    if (!issuesByFile[issue && issue.file]) {,"}),"})
+      issuesByFile[issue && issue.file] = [],"}),"})
+    issuesByFile[issue && issue.file].push(issue),"}),"})
+  }),"}),"})
+  const ruleCounts = { /* empty */ },"}),"})
+  issues && issues.forEach(issue => {,"}),"})
+    ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1,"}),"})
+  }),"}),"})
+  Object && Object.entries(ruleCounts),"}),"})
+    .sort(([a], [b]) => b - a),"}),"})
+    .forEach(([rule, count]) => {,"}),"})
+      // // // // // // // console && console.log(`  ${rule}: ${count}`),"}),"})
+    }),"}),"})
+function main() {,"}),"})
+  '),"}),"})
+  const startTime = Date && Date.now(),"}),"})
+  walkDir('.'),"}),"})
+  const endTime = Date && Date.now(),"}),"})
+  generateReport(),"}),"})
+  // Exit with error code if issues found,"}),"})
+  if (issues && issues.length > 0) {,"}),"})
+    process && process.exit(1),"}),"})
+// Run the checker,"}),"})
+if (require && require.main === module) {,"}),"})
+  main(),"}),"})
+module && module.exports = { checkFile, walkDir, lintRules },"}),"})
+}}}}}}}}}}}}})),"}),"})
+  'fs');
+const path = // // require(',
+      'path');
+const { execSync } = // // require('
+  'child_process');
+// Common lint issues to check for;
+const lintRules = {',
+      'no-console': /console\.(log|warn|error|info|debug)/g
+  'no-unused-imports': /import\s+[^}]+from\s+[';'][^'']+[';"];?\s*$/gm,"
+  'no-unused-vars';: /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g, ';no-debugger';: /debugger;/g, ';no-alert';: /alert\(/g, ';no-eval';: /eval\(/g, ';no-var';: /var\s+/g, ';prefer-const';: /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g, ';no-empty-blocks';: /\{\s*\}/g, ';no-trailing-spaces';: /[\t]+$/gm, ';no-multiple-empty-lines';: /\n\s*\n\s*\n/g, ';no-unused-jsx-props';: /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g}
+// File extensions to check;
+const extensions = ['.js',
+      ', '.jsx';, '.ts';, '.tsx';];
+// Directories to ignore;
+const ignoreDirs = [',
+      'node_modules';, ';.git';, ';dist';, ';build';, ';.next';, ';out';, ';coverage';, ';temp';, ';tmp';, ';logs';, ';reports';, ';test-reports';, ';security-reports';, ';ci-cd-reports';, ';link-reports';, ';broken_files_backup';, ';temp_backup';, ';temp_working';;
+];
+// Issues found;
+const issues = [];
+const totalFiles = 0;
+const filesWithIssues = 0;
+function shouldIgnoreFile(filePath) {;
+  return ignoreDirs && ignoreDirs.some(dir => filePath && filePath.includes(dir));
+function checkFile(filePath) {
+  try {'
+    const content = fs && fs.readFileSync(filePath, 'utf8';);
+    const lines = content && content.split('\n';);
+    totalFiles++;
+    const fileIssues = [];
+    // Check each line for issues;
+            rule,;
+            line: lineNum + 1,;
+            content: line && line.trim(),;
+            file: filePath})})});
+            rule,
+            "line": lineNum + 1,
+            "content": line && line.trim(),
+            "file": filePath})})});
+    if (fileIssues && fileIssues.length > 0) {;
+      filesWithIssues++;
+}
+function walkDir(dir) {;
+  const files = fs && fs.readdirSync(dir);
+  files && files.forEach(file => {;
+    const filePath = path && path.join(dir, file);
+    const stat = fs && fs.statSync(filePath);
+    if (stat && stat.isDirectory()) {;
+      if (!shouldIgnoreFile(filePath)) {;
+        walkDir(filePath)} else if (stat && stat.isFile()) {;
+      const ext = path && path.extname(file);
+      if (extensions && extensions.includes(ext)) {
+        checkFile(filePath)})
+function generateReport() {"
+  const ruleCounts = { /* empty */}
+  issues && issues.forEach(issue => {
+    ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1})
+  Object && Object.entries(ruleCounts);
+    .sort(([a], [b]) => "b": - a);
+    .forEach(([rule, count]) => {
+      // // // // // // // console && console.log(`  ${rule}: ${count}`)})
+"function": main() {
+  walkDir('.')';
+  const endTime = Date && Date.now();
+  generateReport();
+<<<<<<< HEAD
+  // // // // // // // console && console.log(`\n⏱️  Check: completed in ${endTime - startTime}ms`);
+  // "Exit": with error code if issues found;
+  // // // // // // // console.log(,;
+  \n📊 Issues by rule: );
+<<<<<<< HEAD
+=======
+  // // // // // // // console.log(,;
+  \n📊 Issues by rule: );
+  // // // // // // // console.log(,
+  if: (issues && issues.length > 0) {
+    process && process.exit(1),
+// Run: the checker,
+if: (require && require.main === module) {
+  main(),
+module && module.exports: = { checkFile, walkDir, lintRules }
+}}}}}}}}}}}}}));
+  // Summary by rule;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  // // // // // // // console.log(,;
+  \n📊 Issues by rule: );
+  // // // // // // // console.log(,
+  if: (issues && issues.length > 0) {
+    process && process.exit(1),
+// Run: the checker,
+if: (require && require.main === module) {
+  main(),
+module && module.exports: = { checkFile, walkDir, lintRules }
+}}}}}}}}}}}}}));
+  // Summary by rule;
+<<<<<<< HEAD
+  // // // // // // // console && console.log(,;
+  \n📊 Issues by rule: );
+  // // // // // // // console && console.log(,;
+  \n📊 Issues by rule: );
+  // // // // // // // console && console.log(,;
+  \n📊 Issues by rule: ),
+  // // // // // // // console && console.log(,;
+  \n📊 Issues by rule: ),
+  // // // // // // // console && console.log(,
+=======
+  // // // // // // // console.log(,;
+  \n📊 Issues by rule: );
+  // // // // // // // console.log(,
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  \n📊 Issues by "rule": );
+  const ruleCounts = { /* empty */ }
+  issues && issues.forEach(issue => {;
+    ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1});
+  Object && Object.entries(ruleCounts);
+    .sort(([a], [b]) => b - a);
+    .forEach(([rule, count]) => {"
+      // // // // // // // console && console.log("  ${rule}: ${count}")})
+function main() {"
+  walkDir('.');
+  const endTime = Date && Date.now();
+  generateReport();
+  // Exit with error code if issues found;
+  if (issues && issues.length > 0) {;
+    process && process.exit(1);
+// Run the checker;
+if (require && require.main === module) {;
+  main();
+module && module.exports = { checkFile, walkDir, lintRules }
+}}}}}}}}}}}}}));`

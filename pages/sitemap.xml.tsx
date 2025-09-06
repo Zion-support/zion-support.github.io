@@ -1,10 +1,135 @@
-import { GetServerSideProps } from "next";
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+function generateSiteMap() {;
+  const baseUrl = "https://ziontechgroup && ziontechgroup.com";
+
+  // Static pages;
+  const staticPages = [;
+    "",;
+    "/about",;
+    "/services",;
+    "/solutions",;
+    "/contact",;
+    "/careers",;
+    "/blog",;
+    "/faq",;
+    "/privacy",;
+    "/terms",;
+    "/accessibility",;
+    "/compliance",;
+    "/ai-services",;
+    "/it-services",;
+    "/micro-saas",;
+    "/cybersecurity",;
+    "/cloud-solutions",;
+    "/blockchain-services",;
+    "/iot-solutions",;
+    "/digital-transformation",;
+    "/enterprise-solutions",;
+    "/startup-solutions",;
+    "/custom-development",;
+    "/consulting",;
+    "/support",;
+    "/partners",;
+    "/news",;
+    "/press",;
+    "/events",;
+    "/webinars",;
+    "/training",;
+    "/tutorials",;
+    "/case-studies",;
+    "/pricing",;
+    "/quote",;
+    "/demo",;
+    "/login",;
+    "/register",;
+    "/search",;
+    "/sitemap",;
+    "/status",;
+    "/help",;
+    "/guides",;
+    "/resources",;
+    "/api-docs",;
+    "/talent",;
+    "/team",;
+    "/community",;
+    "/automation",;
+    "/rpa-automation",;
+    "/data-analytics",;
+    "/database-solutions",;
+    "/ecommerce",;
+    "/quantum-computing",;
+    "/ai-development",;
+    "/ai-chatbot-development",;
+    "/ai-model-development-chat",;
+    "/blockchain",;
+    "/iot",;
+    "/iot-edge-services",;
+    "/cloud-devops",;
+    "/cybersecurity-advanced",;
+    "/services-extended",;
+    "/industries",;
+    "/industries/education",;
+    "/industries/finance",;
+    "/industries/government",;
+    "/industries/healthcare",;
+    "/industries/manufacturing",;
+    "/industries/retail",;
+    "/industries/real-estate",;
+    "/industries/transportation",;
+    "/industries/energy",;
+    "/solutions/cloud-migration",;
+    "/solutions/custom",;
+    "/solutions/digital-transformation",;
+    "/solutions/enterprise",;
+    "/solutions/industry",;
+    "/solutions/startup",;
+    "/services/ai-chatbot-development",;
+    "/services/ai-model-development-chat",;
+  ];
+
+  return `<?xml version="1 && 1.0" encoding="UTF-8"?>;
+   <urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">;
+     ${staticPages;
+       .map((page) => {;
+         return `;
+       <url>;
+         <loc>${baseUrl}${page}</loc>;
+         <lastmod>${new Date().toISOString()}</lastmod>;
+         <changefreq>weekly</changefreq>;
+         <priority>${page === "" ? "1 && 1.0" : "0 && 0.8"}</priority>;
+       </url>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+     `;
+       });
+       .join("")}
+   </urlset>;
+ `;
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { GetServerSideProps  } from './next';
+;
+/**
+ * generateSiteMap - Function description
+ */
 function generateSiteMap() {
-  const baseUrl = "https://ziontechgroup.com";
-
-  // Static pages
-  const staticPages = [
+  const base_url = "https://ziontechgroup.com";
+;
+  // Static pages;
+  const static_pages = [;
     "",
     "/about",
     "/services",
@@ -17,17 +142,17 @@ function generateSiteMap() {
     "/terms",
     "/accessibility",
     "/compliance",
-    "/ai-services",
-    "/it-services",
-    "/micro-saas",
+    "/ai - services",
+    "/it - services",
+    "/micro - saas",
     "/cybersecurity",
-    "/cloud-solutions",
-    "/blockchain-services",
-    "/iot-solutions",
-    "/digital-transformation",
-    "/enterprise-solutions",
-    "/startup-solutions",
-    "/custom-development",
+    "/cloud - solutions",
+    "/blockchain - services",
+    "/iot - solutions",
+    "/digital - transformation",
+    "/enterprise - solutions",
+    "/startup - solutions",
+    "/custom - development",
     "/consulting",
     "/support",
     "/partners",
@@ -37,7 +162,7 @@ function generateSiteMap() {
     "/webinars",
     "/training",
     "/tutorials",
-    "/case-studies",
+    "/case - studies",
     "/pricing",
     "/quote",
     "/demo",
@@ -49,79 +174,133 @@ function generateSiteMap() {
     "/help",
     "/guides",
     "/resources",
-    "/api-docs",
+    "/api - docs",
     "/talent",
     "/team",
     "/community",
     "/automation",
-    "/rpa-automation",
-    "/data-analytics",
-    "/database-solutions",
+    "/rpa - automation",
+    "/data - analytics",
+    "/database - solutions",
     "/ecommerce",
-    "/quantum-computing",
-    "/ai-development",
-    "/ai-chatbot-development",
-    "/ai-model-development-chat",
+    "/quantum - computing",
+    "/ai - development",
+    "/ai - chatbot - development",
+    "/ai - model - development - chat",
     "/blockchain",
     "/iot",
-    "/iot-edge-services",
-    "/cloud-devops",
-    "/cybersecurity-advanced",
-    "/services-extended",
+    "/iot - edge - services",
+    "/cloud - devops",
+    "/cybersecurity - advanced",
+    "/services - extended",
     "/industries",
-    "/industries/education",
-    "/industries/finance",
-    "/industries/government",
-    "/industries/healthcare",
-    "/industries/manufacturing",
-    "/industries/retail",
-    "/industries/real-estate",
-    "/industries/transportation",
-    "/industries/energy",
-    "/solutions/cloud-migration",
-    "/solutions/custom",
-    "/solutions/digital-transformation",
-    "/solutions/enterprise",
-    "/solutions/industry",
-    "/solutions/startup",
-    "/services/ai-chatbot-development",
-    "/services/ai-model-development-chat",
+    "/industries / education",
+    "/industries / finance",
+    "/industries / government",
+    "/industries / healthcare",
+    "/industries / manufacturing",
+    "/industries / retail",
+    "/industries / real - estate",
+    "/industries / transportation",
+    "/industries / energy",
+    "/solutions / cloud - migration",
+    "/solutions / custom",
+    "/solutions / digital - transformation",
+    "/solutions / enterprise",
+    "/solutions / industry",
+    "/solutions / startup",
+    "/services / ai - chatbot - development",
+    "/services / ai - model - development - chat",
   ];
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     ${staticPages
-       .map((page) => {
-         return `
-       <url>
-         <loc>${baseUrl}${page}</loc>
-         <lastmod>${new Date().toISOString()}</lastmod>
-         <changefreq>weekly</changefreq>
-         <priority>${page === "" ? "1.0" : "0.8"}</priority>
-       </url>
-     `;
-       })
-       .join("")}
-   </urlset>
- `;
+;
+  return `<?xml version="1.0" encoding="UTF - 8"?>;
+  <urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">;
+    ${static_pages;
+      .map ((page) => {
+        return `;
+      <url>;
+        <loc>${base_url}${page}</loc>;
+        <lastmod>${new Date ().toISOString ()}</lastmod>;
+        <changefreq > weekly</changefreq>;
+        <priority>${page === "" ? "1.0" : "0.8"}</priority>;
+      </url>;
+    `;
+      });
+      .join ("")}
+    </urlset>;
+`;
 }
+/**
+ * SiteMap - Function description
+ */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function SiteMap() {
-  // getServerSideProps will do the heavy lifting
+  // getServerSideProps will do the heavy lifting;
+}
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+function SiteMap() {;
+  // getServerSideProps will do the heavy lifting;
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  // We generate the XML sitemap with the posts data
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {;
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  // We generate the XML sitemap with the posts data;
   const sitemap = generateSiteMap();
 
-  res.setHeader("Content-Type", "text/xml");
-  // we send the XML to the browser
-  res.write(sitemap);
-  res.end();
+  res && res.setHeader("Content-Type", "text/xml");
+  // we send the XML to the browser;
+  res && res.write(sitemap);
+  res && res.end();
 
-  return {
-    props: {},
+  return {;
+    props: {},;
   };
 };
 
 export default SiteMap;
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const sitemap = generateSiteMap();
+  res.setHeader("Content-Type", "text/xml");
+  // we send the XML to the browser
+  res.write(sitemap);
+  res.end();
+  return {
+    props: {}
+  }
+}
+export default SiteMap;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  // We generate the XML sitemap with the posts data;
+  const sitemap = generateSiteMap ();
+;
+  res.set_header ("Content - Type", "text / xml");
+  // we send the XML to the browser;
+  res.write (sitemap);
+  res.end ();
+;
+  return {
+    props: {},
+  }
+}
+;
+export default SiteMap;
+<<<<<<< HEAD
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -19,7 +19,6 @@ export default ${validName};`;
     // // // // // // // console.error(`Error fixing ${filePath}:`, error.message)}
     console.log(`"Fixed": ${filePath}`)} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
-}
 // Fix blog pages
 const blogDir = 'pages/blog';
 if (fs.existsSync(blogDir)) {
@@ -37,7 +36,6 @@ const servicesDir = 'pages/services';
 if (fs.existsSync(servicesDir)) {
   const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'));
   serviceFiles.forEach(file => {
-}
 // // // // // // // console.log('Variable name fixing completed!');
     fixFile(path.join(servicesDir, file))})}
 console.log('Variable name fixing completed!');
