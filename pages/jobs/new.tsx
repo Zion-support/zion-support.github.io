@@ -1,44 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import { useToast } from '../../components/ui/NotificationSystem';
-export default function NewJobPage() {
-  const { notify } = useToast();
-  const [loading, setLoading] = useState(false);
-  const onSubmit = null;
-=======
-import {useState} from 'react';
-import EnhancedCard from '../../components/ui/EnhancedCard';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import { useToast } from '../../components/ui/NotificationSystem';
-          </form>
-        )}
-      </EnhancedCard>
-    </div>
-);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState } from 'react'
-import EnhancedCard from '../../components/ui/EnhancedCard'
-import EnhancedButton from '../../components/ui/EnhancedButton'
-import EnhancedLoading from '../../components/ui/EnhancedLoading'
-import { useToast } from '../../components/ui/NotificationSystem'
-export default function NewJobPage() {
-  const { notify } = useToast()
-  const [loading, setLoading] = useState(false),
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    setLoading(true),
-    setTimeout(() => {
-      setLoading(false),
-      notify('Job posted! Invite talent to get responses.success')
-    }, 800)
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -52,12 +13,33 @@ export default function NewJobPage() {
             <textarea className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" rows={5} placeholder="Job description" />
             <EnhancedButton type="submit" variant="primary">Publish</EnhancedButton>
           </form>
-<<<<<<< HEAD
+
+
+          </form>;
         )}
-      </EnhancedCard>
-    </div>
-);
+      </EnhancedCard>;
+    </div>;
+  );
+
+
 =======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import {useState} from 'react';
+import EnhancedCard from '../../components / ui / EnhancedCard';
+import EnhancedButton from '../../components / ui / EnhancedButton';
+import EnhancedLoading from '../../components / ui / EnhancedLoading';
+import { use_toast } from '../../components / ui / NotificationSystem';
+          </form>)}
+      </EnhancedCard>;
+    </div>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -71,8 +53,6 @@ export default function NewJobPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

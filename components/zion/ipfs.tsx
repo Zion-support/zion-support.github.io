@@ -1,9 +1,15 @@
-<<<<<<< HEAD
+
 
 import OffworldDeploy from "../deploy/offworld";
+export default OffworldDeploy;
+
+
+import OffworldDeploy from '../deploy/offworld';
 export default OffworldDeploy;
 
 =======
-import OffworldDeploy from "../deploy/offworld";
+import OffworldDeploy from "../deploy / offworld";
 export default OffworldDeploy;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
