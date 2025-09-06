@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-{}
-=======
-{}
->>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
+{
+  "/_error": "pages/_error.js",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}

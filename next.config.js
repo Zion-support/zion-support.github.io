@@ -81,8 +81,4 @@ const nextConfig = {
   serverExternalPackages: ['sharp'],
 };
 
-<<<<<<< HEAD
 export default nextConfig;
-=======
-module.exports = nextConfig;
->>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
