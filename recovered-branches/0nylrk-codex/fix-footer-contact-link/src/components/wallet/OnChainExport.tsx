@@ -6,7 +6,7 @@ import {Wallet, Info, Check, ChevronRight, ArrowUpRight} from "lucide-react";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
 import {useToast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
-export function OnChainExport() {
+export function OnChainExport() {;
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
@@ -71,7 +71,7 @@ export function OnChainExport() {
       })
     } finally {
       setIsExporting(false)
-    }
+    };
   };
   
   return (
@@ -133,5 +133,5 @@ export function OnChainExport() {
       </CardContent>
     </Card>
   )
-}
+};
 ;

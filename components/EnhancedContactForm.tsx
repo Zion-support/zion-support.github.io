@@ -142,7 +142,6 @@ export default EnhancedContactForm;
               Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth.
             </p>
           </div>
-
           <div className="space-y-6">
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-3 flex items-center justify-center">
@@ -153,7 +152,6 @@ export default EnhancedContactForm;
                 <p className="text-white/70">contact@ziontechgroup.com</p>
               </div>
             </div>
-
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-3 flex items-center justify-center">
                 <Phone className="w-6 h-6 text-white" />
@@ -163,7 +161,6 @@ export default EnhancedContactForm;
                 <p className="text-white/70">+1 (555) 123-4567</p>
               </div>
             </div>
-
             <div className="flex items-start space-x-4">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 p-3 flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-white" />
@@ -175,7 +172,6 @@ export default EnhancedContactForm;
             </div>
           </div>
         </div>
-
         {/* Contact Form */}
         <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -211,7 +207,6 @@ export default EnhancedContactForm;
                   </motion.p>
                 )}
               </div>
-
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
                   Email Address *
@@ -244,7 +239,6 @@ export default EnhancedContactForm;
                 )}
               </div>
             </div>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
@@ -262,7 +256,6 @@ export default EnhancedContactForm;
                   placeholder="Enter your company name"
                 />
               </div>
-
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
                   Service Interest
@@ -285,7 +278,6 @@ export default EnhancedContactForm;
                 </select>
               </div>
             </div>
-
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
                 Message *
@@ -317,7 +309,6 @@ export default EnhancedContactForm;
                 </motion.p>
               )}
             </div>
-
             <button
               type="submit"
               disabled={isSubmitting}

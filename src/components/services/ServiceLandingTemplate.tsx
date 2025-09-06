@@ -16,8 +16,8 @@ interface ServiceLandingTemplateProps {
   title: string
   subtitle: string
   description: string
-  benefits: Benefit[]
-  features?: string[]
+  benefits: Benefit[];
+  features?: string[];
   stats?: Array<{ label: string; value: string }>
   ctaText: string
   ctaLink: string
@@ -48,7 +48,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </p>
         </div>
       </section>
-
       {benefits.length > 0 && (
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -126,3 +125,4 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
     </div>
   )
 }
+;

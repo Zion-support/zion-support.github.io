@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface Innovative2026MicroSaasServiceV4 {
+export interface Innovative2026MicroSaasServiceV4 {;
   id: string;
   name: string;
   tagline: string;
@@ -751,7 +751,7 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
       customers: 120,
       rating: 4.9,
       reviews: 98,
-    },
+    },;
   ];    features: [
       'AI document generationCompliance checkingCustomizable templatesLegal clause libraryRisk assessmentDocument versioningElectronic signaturesLegal research tools';
       'Multi-jurisdiction supportExpert consultation'

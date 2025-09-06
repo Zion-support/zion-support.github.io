@@ -24,9 +24,9 @@ import {
   ExternalLink,
   TrendingUp,
   BarChart3,
-  Cloud,
+  Cloud,;
   Network,;} from 'lucide-react';import {
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
+  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, ;
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
 import EnhancedNavigation from '../components/EnhancedNavigation';
@@ -34,7 +34,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 import EnhancedContactForm from '../components/EnhancedContactForm';
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
-export default function HomePage() {
+export default function HomePage() {;
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -176,9 +176,7 @@ export default function HomePage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />
         <link rel="canonical" href="https://ziontechgroup.com" />
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center px-6 py-20'>
         {/* Animated Background */}
@@ -186,7 +184,6 @@ export default function HomePage() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]' />
         </div>
-
         <div className='relative z-10 text-center max-w-6xl mx-auto'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
@@ -196,7 +193,6 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]" />
         </div>
-
         <div className="relative z-10 text-center max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -217,7 +213,6 @@ export default function HomePage() {
               Leading-edge technology solutions and autonomous innovation platform
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
@@ -260,7 +255,6 @@ export default function HomePage() {
             </div>
           </motion.div>
         </div>
-
         {/* Floating Elements */}
         <div className='absolute inset-0 pointer-events-none'>
           <motion.div
@@ -293,7 +287,6 @@ export default function HomePage() {
           />
         </div>
       </section>
-
       {/* Features Section */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-20 px-6">
@@ -313,7 +306,6 @@ export default function HomePage() {
               industries and driving the future of technology
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {services.map((service, index) => (          >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Revolutionary Technology Solutions
@@ -322,7 +314,6 @@ export default function HomePage() {
               Discover our cutting-edge services that are transforming industries and driving the future of technology
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -358,7 +349,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>
@@ -391,15 +381,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Enhanced Services Showcase */}
       <div id='services'>        <EnhancedServicesShowcase />      <div id="services">
         <EnhancedServicesShowcase />
       </div>
-
       {/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection />
-
       {/* Latest Updates Section */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-20 px-6">
@@ -418,7 +405,6 @@ export default function HomePage() {
               developments
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             <a
               href='/reports/updates/update-2025-08-15-0508'
@@ -471,7 +457,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Contact Form Section */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
@@ -496,11 +481,9 @@ export default function HomePage() {
               Let's discuss your project and explore how our cutting-edge technology solutions can transform your business
             </p>
           </motion.div>
-
           <EnhancedContactForm />
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
 );

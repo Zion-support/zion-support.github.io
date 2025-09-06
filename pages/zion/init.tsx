@@ -78,7 +78,6 @@ const InitPage: NextPage = () => {
           Initialize a full Zion OS instance from a single control panel.
         </p>
       </div>
-
       <form
         onSubmit={handleSubmit}
         className='grid grid-cols-1 gap-6 max-w-4xl'
@@ -157,7 +156,6 @@ const InitPage: NextPage = () => {
             </select>
           </div>
         </section>
-
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div>
             <label className='block text-sm font-medium'>Logo URL</label>
@@ -217,7 +215,6 @@ const InitPage: NextPage = () => {
             />
           </div>
         </section>
-
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
             <h3 className='font-semibold mb-3'>Auto-Deploy Modules</h3>
@@ -248,7 +245,6 @@ const InitPage: NextPage = () => {
             </div>
           </div>
         </section>
-
         <div className='flex items-center gap-3'>
           <button
             disabled={submitting}
@@ -258,7 +254,6 @@ const InitPage: NextPage = () => {
           </button>
           {error && <span className='text-sm text-red-500'>{error}</span>}        </div>
       </form>
-
       {result && (
         <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
           <h3 className='font-semibold'>Deployment Result</h3>
@@ -272,3 +267,6 @@ const InitPage: NextPage = () => {
 };
 
 export default InitPage;
+
+}
+}

@@ -1,4 +1,4 @@
-export interface Attachment {
+export interface Attachment {;
   id: string;
   filename: string;
   originalName: string;
@@ -9,7 +9,7 @@ export interface Attachment {
   uploadedBy: string
 }
 
-export interface SupportTicket {
+export interface SupportTicket {;
   id: string;
   title: string;
   description: string;
@@ -28,7 +28,7 @@ export interface SupportTicket {
   resolutionTime?: number, // in hours
 }
 
-export interface TicketMessage {
+export interface TicketMessage {;
   id: string;
   content: string;
   senderType: 'customer' | 'agent' | 'system';
@@ -38,7 +38,7 @@ export interface TicketMessage {
   attachments: Attachment[]
 }
 
-export interface Customer {
+export interface Customer {;
   id: string;
   name: string;
   email: string;
@@ -52,7 +52,7 @@ export interface Customer {
   createdAt: Date
 }
 
-export interface SupportAgent {
+export interface SupportAgent {;
   id: string;
   name: string;
   email: string;
@@ -72,7 +72,7 @@ export interface AgentPerformance {
   escalationRate: number, // percentage
 }
 
-export interface ChatbotSession {
+export interface ChatbotSession {;
   id: string;
   customerId: string;
   startTime: Date;
@@ -85,7 +85,7 @@ export interface ChatbotSession {
   satisfaction: number, // 1-5
 }
 
-export interface ChatbotMessage {
+export interface ChatbotMessage {;
   id: string;
   content: string;
   sender: 'customer' | 'bot';
@@ -94,7 +94,7 @@ export interface ChatbotMessage {
   confidence?: number
 }
 
-export interface KnowledgeBaseArticle {
+export interface KnowledgeBaseArticle {;
   id: string;
   title: string;
   content: string;
@@ -107,7 +107,7 @@ export interface KnowledgeBaseArticle {
   createdBy: string
 }
 
-export interface SupportAnalytics {
+export interface SupportAnalytics {;
   totalTickets: number;
   openTickets: number;
   resolvedTickets: number;
@@ -119,7 +119,7 @@ export interface SupportAnalytics {
   agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
 }
 
-export interface AIRecommendation {
+export interface AIRecommendation {;
   type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement';
   title: string;
   description: string;

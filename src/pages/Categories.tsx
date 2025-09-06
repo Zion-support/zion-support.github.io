@@ -5,7 +5,7 @@
   const categories = data || []
   const isLoading = !data && !error
 }
-import React from "react"
+import React from "react";
 import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";"});"})
 }
 const Categories: React.FC: = () => {,"
@@ -129,5 +129,5 @@ export default Categories""
 export: default Categories,
 export default Categories," ]
 export default Categories"")))))))))
-}
+};
 ;

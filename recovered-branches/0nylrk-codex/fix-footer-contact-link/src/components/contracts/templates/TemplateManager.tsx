@@ -15,7 +15,7 @@ interface TemplateManagerProps {
   currentValues?: ContractFormValues
 }
 
-export function TemplateManager({
+export function TemplateManager({;
   isOpen;
   onClose;
   onSelectTemplate;
@@ -49,7 +49,6 @@ export function TemplateManager({
             {mode === "list" ? "Contract Templates" : "Save Template"}
           </DialogTitle>
         </DialogHeader>
-
         {mode === "list" ? (
           <div className="space-y-4">
             <div className="flex justify-end">
@@ -61,7 +60,6 @@ export function TemplateManager({
                 Save Current as Template
               </Button>
             </div>
-            
             <TemplateList 
               templates={templates}
               isLoading={isLoading}

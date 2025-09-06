@@ -11,7 +11,7 @@ import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'luci
 import {VideoCallRoom} from '@/components/video/VideoCallRoom';
 import {toast} from 'sonner';
 export default function ProjectRoom() {
-  const { projectId } = useParams() as { projectId: string },
+  const { projectId } = useParams() as { projectId: string },;
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -83,7 +83,6 @@ export default function ProjectRoom() {
             <Button variant="outline">Invite Team Member</Button>
           </div>
         </div>
-        
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
           <TabsList className="grid grid-cols-6 md:w-fit">
             <TabsTrigger value="chat" className="flex items-center gap-2">
@@ -117,7 +116,6 @@ export default function ProjectRoom() {
               <span className="hidden sm:inline">Settings</span>
             </TabsTrigger>
           </TabsList>
-          
           <TabsContent value="chat" className="space-y-4">
             <Card>
               <CardHeader>
@@ -131,7 +129,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="files" className="space-y-4">
             <Card>
               <CardHeader>
@@ -145,7 +142,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="video" className="space-y-4">
             <Card>
               <CardHeader>
@@ -160,7 +156,6 @@ export default function ProjectRoom() {
                       participants={callParticipants}
                       onLeave={endVideoCall}
                     />
-                    
                     {/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">
                       <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
@@ -186,7 +181,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="calendar" className="space-y-4">
             <Card>
               <CardHeader>
@@ -200,7 +194,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="team" className="space-y-4">
             <Card>
               <CardHeader>
@@ -214,7 +207,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="settings" className="space-y-4">
             <Card>
               <CardHeader>

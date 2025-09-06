@@ -22,7 +22,7 @@ function ensureStorage() {
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
 
@@ -68,4 +68,7 @@ fs.writeFileSync(RSS_PATH, xml, 'utf8');
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
   items 
 }</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
+}
+
+}
 }

@@ -4,14 +4,14 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
+import { Textarea } from '@/components/ui/textarea';
 import { logErrorToProduction } from '@/utils/productionLogger'; import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject } from '@/types/resume'
 import { usePortfolio } from '@/hooks/usePortfolio'
@@ -183,7 +183,6 @@ export function ProjectForm({
             )}
           />
         </div>
-
         <FormField
           control={form.control}
           name='image_url'
@@ -217,6 +216,6 @@ export function ProjectForm({
       </form>
     </Form>
   )
-}
-}
+};
+};
 ;

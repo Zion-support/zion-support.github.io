@@ -17,7 +17,7 @@ const forgotPasswordSchema = z.object({
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
 
-export default function ForgotPassword() {
+export default function ForgotPassword() {;
   const { resetPassword, isLoading } = useAuth();
   const [submitted, setSubmitted] = useState(false);
   
@@ -47,7 +47,6 @@ export default function ForgotPassword() {
                 Enter your email and we'll send you a link to reset your password.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {submitted ? (
                 <div className="text-center py-8">
@@ -98,7 +97,6 @@ export default function ForgotPassword() {
                     >
                       {isLoading ? "Sending..." : "Reset Password"}
                     </Button>
-
                     <div className="text-center">
                       <Link
                         to="/login"

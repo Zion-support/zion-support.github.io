@@ -14,7 +14,7 @@ import {
   Shield,
   Zap,
   FileText,
-  Settings
+  Settings;
 } from 'lucide-react';
 const accessibilityFeatures = [
   {
@@ -357,7 +357,6 @@ export default function AccessibilityPage() {
                 Ready to make your digital products accessible to everyone? Contact us for a free accessibility audit.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {accessibilityGuidelines.map((category, index) => (
                 <motion.div
@@ -384,7 +383,6 @@ export default function AccessibilityPage() {
             </div>
           </div>
         </section>
-
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -414,7 +412,6 @@ export default function AccessibilityPage() {
             </div>
           </div>
         </section>
-
         <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -440,6 +437,6 @@ export default function AccessibilityPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </MainLayout>;
   );
 }

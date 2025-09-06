@@ -12,11 +12,11 @@ const BADGES: Badge[] = [
   { id: 'elite', label: 'Elite', threshold: 1000 },
 ];
 
-export function currentBadge(balance: number): Badge | null {
+export function currentBadge(balance: number): Badge | null {;
   let current: Badge | null = null;
   
   return current;
-export default function Badges({ balance }: { balance: number }) {
+export default function Badges({ balance }: { balance: number }) {;
   const active = currentBadge(balance);
   return (
     <div className='flex gap-2 items-center flex-wrap'>
@@ -31,7 +31,7 @@ export default function Badges({ balance }: { balance: number }) {
   }
   return current
 }
-export default function Badges({ balance }: { balance: number }) {
+export default function Badges({ balance }: { balance: number }) {;
   const active = currentBadge(balance);
   return (
     <div className='flex gap-2 items-center flex-wrap'>
@@ -60,4 +60,6 @@ export default function Badges({ balance }: { balance: number }) {
       )}
     </div>
   );
+}
+
 }

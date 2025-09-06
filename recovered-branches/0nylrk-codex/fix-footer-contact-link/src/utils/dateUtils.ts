@@ -10,5 +10,5 @@ export const formatDate = (dateString: string): string => {
     return format(new Date(dateString), 'PP')
   } catch (e) {
     return dateString
-  }
+  };
 };

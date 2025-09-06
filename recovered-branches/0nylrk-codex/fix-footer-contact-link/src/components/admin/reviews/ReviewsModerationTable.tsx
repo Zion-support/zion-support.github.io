@@ -18,7 +18,7 @@ interface ReviewsModerationTableProps {
   onRefresh: () => void
 }
 
-export function ReviewsModerationTable({
+export function ReviewsModerationTable({;
   reviews;
   isLoading;
   onRefresh}: ReviewsModerationTableProps) {
@@ -238,7 +238,6 @@ export function ReviewsModerationTable({
           ))}
         </TableBody>
       </Table>
-
       {selectedReview && (
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>
           <DialogContent className="max-w-lg">
@@ -249,7 +248,6 @@ export function ReviewsModerationTable({
                 {format(new Date(selectedReview.created_at), "MMMM d, yyyy")}
               </DialogDescription>
             </DialogHeader>
-
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -280,11 +278,9 @@ export function ReviewsModerationTable({
                 </div>
                 <div>{renderStars(selectedReview.rating)}</div>
               </div>
-
               <div className="border rounded-md p-3 bg-muted/20">
                 <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>
               </div>
-
               <div className="space-y-2">
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
                 <div className="flex flex-wrap gap-2">
@@ -313,7 +309,6 @@ export function ReviewsModerationTable({
                   )}
                 </div>
               </div>
-
               {selectedReview.report_count > 0 && (
                 <div className="bg-red-50 border border-red-200 rounded-md p-3">
                   <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview.report_count}</h4>
@@ -323,7 +318,6 @@ export function ReviewsModerationTable({
                 </div>
               )}
             </div>
-
             <DialogFooter>
               {selectedReview.status === "pending" && (
                 <>

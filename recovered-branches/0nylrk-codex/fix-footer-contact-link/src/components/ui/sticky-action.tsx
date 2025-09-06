@@ -9,7 +9,7 @@ interface StickyActionProps {
   position?: "bottom" | "top"
 }
 
-export function StickyAction({
+export function StickyAction({;
   className;
   children;
   showAfterScroll = 300;

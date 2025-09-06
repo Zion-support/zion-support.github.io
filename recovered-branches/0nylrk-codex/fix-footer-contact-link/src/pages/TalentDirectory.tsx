@@ -10,7 +10,7 @@ import {SORT_OPTIONS} from "@/data/sortOptions";
 import {X} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
-export default function TalentDirectory() {
+export default function TalentDirectory() {;
   const navigate = useNavigate();
 
   // Use our custom hook to manage state
@@ -64,7 +64,6 @@ export default function TalentDirectory() {
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
             </p>
           </div>
-          
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Sidebar - Desktop */}
@@ -89,7 +88,6 @@ export default function TalentDirectory() {
                 clearFilters={clearFilters}
               />
             </div>
-            
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">
               <Button
@@ -100,7 +98,6 @@ export default function TalentDirectory() {
                 Filter & Sort
               </Button>
             </div>
-            
             {/* Results */}
             <TalentResults
               filteredTalents={filteredTalents}
@@ -123,7 +120,6 @@ export default function TalentDirectory() {
                 setExperienceRange;
                 clearFilters}}
             />
-            
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (
               <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">

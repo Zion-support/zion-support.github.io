@@ -5,14 +5,14 @@
 import {supabase} from '@/integrations/supabase/client';
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
 
-export type ZionGPTUsage = {
+export type ZionGPTUsage = {;
   modelId: string;
   tokensUsed: number;
   cost: number,
   timestamp: Date
 };
 
-export interface ModelConfig {
+export interface ModelConfig {;
   id: ModelVersion;
   version: number;
   createdAt: string;
@@ -30,7 +30,7 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
       .eq('purpose', purpose)
       .eq('active', true)
       .order('version', { ascending: false })
-      .limit(1)
+      .limit(1);
       .single();
     
     if (error || !data) {
@@ -52,7 +52,7 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
 }
 
 // Log usage of the fine-tuned model
-export async function logModelUsage(
+export async function logModelUsage(;
   modelId: string;
   tokensUsed: number;
   feature: string,
@@ -87,7 +87,7 @@ function calculateCost(modelId: string, tokens: number): number {
 
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
-  prompt, 
+  prompt, ;
   purpose;
   maxTokens = 500;
   temperature = 0.7;

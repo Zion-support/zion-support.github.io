@@ -9,7 +9,7 @@ interface SuggestedTalentsProps {
   jobTitle?: string;
 }
 
-export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
+export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
   const [talents, setTalents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -109,7 +109,6 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
           {jobTitle ? `Talents for ${jobTitle}` : "Suggested Talents"}
         </CardTitle>
       </CardHeader>
-
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>

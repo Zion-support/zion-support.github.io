@@ -4,7 +4,7 @@ import {SystemNotificationParams} from './types';
 /**
  * Creates a system notification for a user
  */
-export async function createSystemNotification({
+export async function createSystemNotification({;
   userId;
   title;
   message;

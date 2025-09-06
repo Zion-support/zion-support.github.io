@@ -9,7 +9,7 @@ const FILE = "jobs.json";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
   if (!rateLimit(req, res)) return;
 
   if (req.method === "GET") {

@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import FeedbackModal from '../../components/ui/FeedbackModal';
-export default function ClientHirePage() {
+export default function ClientHirePage() {;
   const [talentSlug, setTalentSlug] = useState('ava-chen');
   const [startDateIso, setStartDateIso] = useState<string>(
     new Date().toISOString().slice(0, 10)
@@ -52,7 +52,6 @@ export default function ClientHirePage() {
   return (
     <div className='max-w-3xl mx-auto p-6 space-y-6'>
       <h1 className='text-xl font-semibold'>Hire Talent</h1>
-
       <div className='space-y-4 border rounded p-4'>
         <div>
           <label className='block text-sm font-medium'>Talent</label>
@@ -62,7 +61,6 @@ export default function ClientHirePage() {
             className='w-full border rounded px-3 py-2'
           />
         </div>
-
         <div>
           <label className='block text-sm font-medium'>Start date</label>
           <input
@@ -72,7 +70,6 @@ export default function ClientHirePage() {
             className='w-full border rounded px-3 py-2'
           />
         </div>
-
         <div>
           <label className='block text-sm font-medium'>Scope summary</label>
           <input
@@ -81,7 +78,6 @@ export default function ClientHirePage() {
             className='w-full border rounded px-3 py-2'
           />
         </div>
-
         <div>
           <label className='block text-sm font-medium'>Payment terms</label>
           <select
@@ -94,7 +90,6 @@ export default function ClientHirePage() {
             <option value='milestone'>Milestone</option>
           </select>
         </div>
-
         {termsType === 'hourly' && (
           <div>
             <label className='block text-sm font-medium'>
@@ -133,7 +128,6 @@ export default function ClientHirePage() {
             className='w-full border rounded px-3 py-2'
           />
         </div>
-
         <div className='flex justify-end'>
           <button
             onClick={sendOffer}
@@ -143,7 +137,6 @@ export default function ClientHirePage() {
             {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>
         </div>
       </div>
-
       {result && (
         <div className='border rounded p-4 bg-emerald-50'>
           <div className='font-medium'>Offer sent</div>
@@ -164,3 +157,5 @@ export default function ClientHirePage() {
       />
     </div>
 );
+
+}

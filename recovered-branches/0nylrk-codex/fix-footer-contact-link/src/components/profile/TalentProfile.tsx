@@ -19,7 +19,7 @@ interface TalentProfileProps {
   onMessageTalent?: () => void
 }
 
-export function TalentProfile({ 
+export function TalentProfile({ ;
   profile;
   onRequestHire;
   onMessageTalent
@@ -58,7 +58,6 @@ export function TalentProfile({
         rating={profile.average_rating}
         reviewCount={profile.rating_count}
       />
-      
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
         {/* Left Column - Skills & Info */}
@@ -71,7 +70,6 @@ export function TalentProfile({
             profileType="talent"
           />
         </div>
-        
         {/* Right Column - Bio & Projects */}
         <div className="lg:col-span-2 space-y-8">
           {/* Bio Section */}
@@ -81,10 +79,8 @@ export function TalentProfile({
               <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>
             </div>
           </div>
-          
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
-          
           {/* Ratings Section */}
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
             <h2 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -97,7 +93,6 @@ export function TalentProfile({
               ratingCount={profile.rating_count}
             />
           </div>
-          
           {/* Hire Now CTA */}
           {isAuthenticated && (
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
@@ -107,7 +102,6 @@ export function TalentProfile({
                   Connect with {profile.full_name} for your next project and get started right away.
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
                 </p>
-                
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Button 
                     size="lg" 
@@ -117,7 +111,6 @@ export function TalentProfile({
                     <Handshake className="mr-2 h-5 w-5" />
                     Hire Now
                   </Button>
-                  
                   {onMessageTalent && (
                     <Button 
                       size="lg" 

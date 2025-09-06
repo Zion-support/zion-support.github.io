@@ -22,7 +22,7 @@ export function useAuthEventHandlers(
     setTimeout(() => {
       if (mappedUser) {
         checkNewRegistration(mappedUser)
-      }
+      };
     }, 0);
 
     // Check if user needs to complete onboarding

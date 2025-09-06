@@ -89,8 +89,8 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
           }
         : undefined,
     })
-  }, [])
-  const clearAllErrors = useCallback(() => {
+  }, []);
+  const clearAllErrors = useCallback(() => {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
   }, [])
   const contextValue: ErrorContextType = {
@@ -205,8 +205,11 @@ export function useErrorHandler() {
   return {
     reportError,
     handleApiError,
-    handleAsyncOperation,
+    handleAsyncOperation,;
   };    reportError
     handleApiError
     handleAsyncOperation}
+}
+
+}
 }

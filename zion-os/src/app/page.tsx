@@ -1,7 +1,7 @@
 import FeatureCard from './components/FeatureCard',
 export default function HomePage() {
-  const features = [
-    {
+  const features = [;
+    {;
       icon: &quot;🤖&quot;,
       title: &quot;AI-Powered Intelligence&quot;,
       description: &quot;ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.&quot;,
@@ -81,19 +81,16 @@ export default function HomePage() {
       <section className=&quot;relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8&quot;>
         <div className=&quot;max-w-7xl mx-auto text-center&quot;>
           <div className=&quot;hero-gradient absolute inset-0 -z-10&quot;></div>
-          
           <div className=&quot;animate-fade-in&quot;>
             <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6&quot;>
               <span className=&quot;gradient-text&quot;>Launch Sovereign</span>
               <br />
               <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
             </h1>
-            
             <p className=&quot;text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed&quot;>
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
               Built for the future of decentralized business.
             </p>
-            
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
               <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift&quot;>
                 🚀 Launch Your Economy
@@ -105,7 +102,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 bg-white/5&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
@@ -118,7 +114,6 @@ export default function HomePage() {
               for launching sovereign digital economies.
             </p>
           </div>
-
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {features.map((feature, index) => (
               <FeatureCard
@@ -154,7 +149,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className=&quot;py-16 px-4 sm:px-6 lg:px-8 bg-white/5&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>

@@ -12,7 +12,7 @@ export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
     unreadCount, 
-    markAsRead, 
+    markAsRead, ;
     markAllAsRead;
     dismissNotification, 
     loading;
@@ -73,12 +73,10 @@ export const NotificationCenter: React.FC = () => {
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
         />
-        
         <NotificationFilter 
           filter={filter as FilterType} 
           onFilterChange={handleFilterChange} 
         />
-        
         <NotificationList 
           loading={loading}
           error={error}
@@ -87,7 +85,6 @@ export const NotificationCenter: React.FC = () => {
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
         />
-        
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
     </Popover>

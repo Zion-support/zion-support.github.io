@@ -39,7 +39,6 @@ export function DeveloperPortal() {
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
-
       {/* Tabs */}
       <div className='border-b border-zinc-800 mb-8'>
         <div className='flex flex-wrap -mb-px'>
@@ -59,7 +58,6 @@ export function DeveloperPortal() {
           })}
         </div>
       </div>
-
       {/* Tab content */}
       <div>
         {activeTab === 'documentation' && <ApiDocumentation />}
@@ -78,7 +76,6 @@ export function DeveloperPortal() {
           })}
         </div>
       </div>
-      
       {/* Tab content */}
       <div>
         {activeTab === "documentation" && <ApiDocumentation />}
@@ -98,6 +95,6 @@ export default function ProtectedDeveloperPortal() {
   )
 }
 }
-  )
-}
+  );
+};
 ;

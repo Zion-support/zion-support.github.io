@@ -80,8 +80,8 @@ export default function EnhancedFooter() {
     { name: 'AI Services', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Security', href: '/security' },
+    { name: 'Micro SaaS', href: '/micro-saas' },;
+    { name: 'Security', href: '/security' },;
     { name: 'Case Studies', href: '/case-studies' },;
   ];
 
@@ -236,7 +236,6 @@ export default function EnhancedFooter() {
             </div>
           </div>
         </div>
-
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
 <p className="text-gray-400 text-sm">
@@ -264,3 +263,5 @@ export default function EnhancedFooter() {
 };
 
 export default EnhancedFooter;
+
+}

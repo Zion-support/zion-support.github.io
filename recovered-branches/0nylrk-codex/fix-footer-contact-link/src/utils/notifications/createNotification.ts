@@ -4,7 +4,7 @@ import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
-export async function createNotification({
+export async function createNotification({;
   userId;
   title;
   message;

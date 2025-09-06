@@ -6,7 +6,7 @@ import {
   CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain, 
   Atom, Rocket, Target, Microscope, DollarSign, Phone, 
   Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
-} from 'lucide-react',
+} from 'lucide-react',;
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',;
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',;
 import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029',;
@@ -67,16 +67,13 @@ export default function ComprehensivePricing2029() {
   return (
     <div className="min-h-screen bg-black text-white relative">
       <FuturisticAnimatedBackground2029 />
-      
       <Head>
         <title>2029 Comprehensive Pricing - Zion Tech Group</title>
         <meta name="description" content="Explore our comprehensive 2029 pricing for AI autonomous ecosystems, emerging tech breakthroughs, and practical business solutions. Transparent pricing with flexible billing options." />
         <meta name="keywords" content="2029 pricing, AI services pricing, quantum technology pricing, business solutions pricing, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/2029-comprehensive-pricing" />
       </Head>
-
       <UltraFuturisticNavigation2029 />
-
       {/* Hero Section */}
       <section className="relative overflow-hidden py-32">
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -92,7 +89,6 @@ export default function ComprehensivePricing2029() {
               Transparent pricing for our revolutionary 2029 services. Choose the perfect plan 
               for your business transformation journey.
             </p>
-
             {/* Billing Toggle */}
             <div className="flex items-center justify-center gap-4 mb-12">
               <span className="text-gray-400">Monthly</span>
@@ -113,7 +109,6 @@ export default function ComprehensivePricing2029() {
           </motion.div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="py-12 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
@@ -140,7 +135,6 @@ export default function ComprehensivePricing2029() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
@@ -157,7 +151,6 @@ export default function ComprehensivePricing2029() {
               Each service includes comprehensive features, support, and implementation.
             </p>
           </motion.div>
-
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
@@ -176,7 +169,6 @@ export default function ComprehensivePricing2029() {
                     <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                   </div>
-
                   {/* Pricing */}
                   <div className="text-center mb-6">
                     <div className="text-4xl font-bold text-purple-400 mb-2">
@@ -188,7 +180,6 @@ export default function ComprehensivePricing2029() {
                       )}
                     </div>
                   </div>
-
                   {/* Categories */}
                   <div className="flex flex-wrap gap-2 mb-6 justify-center">
                     {service.category.slice(0, 3).map((cat, catIndex) => (
@@ -198,7 +189,6 @@ export default function ComprehensivePricing2029() {
                       </span>
                     ))}
                   </div>
-
                   {/* Key Features */}
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
@@ -211,7 +201,6 @@ export default function ComprehensivePricing2029() {
                       ))}
                     </ul>
                   </div>
-
                   {/* Key Benefits */}
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Benefits</h4>
@@ -224,7 +213,6 @@ export default function ComprehensivePricing2029() {
                       ))}
                     </ul>
                   </div>
-
                   {/* Market Info */}
                   <div className="grid grid-cols-2 gap-4 mb-6 text-center">
                     <div>
@@ -236,7 +224,6 @@ export default function ComprehensivePricing2029() {
                       <div className="text-sm font-semibold text-green-400">{service.roi}</div>
                     </div>
                   </div>
-
                   {/* CTA Buttons */}
                   <div className="flex gap-3">
                     <Link
@@ -254,7 +241,6 @@ export default function ComprehensivePricing2029() {
           </div>
         </div>
       </section>
-
       {/* Enterprise Solutions */}
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -271,7 +257,6 @@ export default function ComprehensivePricing2029() {
               Need a custom solution or enterprise package? We offer tailored solutions 
               for large organizations with specific requirements.
             </p>
-
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
@@ -287,7 +272,6 @@ export default function ComprehensivePricing2029() {
                   Contact Sales
                 </Link>
               </div>
-
               <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                   <Shield className="w-8 h-8 text-white" />
@@ -302,7 +286,6 @@ export default function ComprehensivePricing2029() {
                   Contact Sales
                 </Link>
               </div>
-
               <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                   <Globe className="w-8 h-8 text-white" />
@@ -321,7 +304,6 @@ export default function ComprehensivePricing2029() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -338,7 +320,6 @@ export default function ComprehensivePricing2029() {
               Contact our team to discuss your specific needs and get a personalized quote 
               for our revolutionary 2029 services.
             </p>
-            
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <Phone className="w-6 h-6 text-purple-400" />
@@ -353,7 +334,6 @@ export default function ComprehensivePricing2029() {
                 <span>{contactInfo.address}</span>
               </div>
             </div>
-
             <div className="flex flex-wrap justify-center gap-4">
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -378,8 +358,7 @@ export default function ComprehensivePricing2029() {
           </motion.div>
         </div>
       </section>
-
       <UltraFuturisticFooter2029 />
     </div>
-  )
+  );
 };

@@ -15,7 +15,7 @@ import {
   Smartphone,
   Monitor,
   Award,
-  MessageCircle,
+  MessageCircle,;
   Calculator,;} from 'lucide-react';import {
   DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
@@ -56,8 +56,8 @@ export default function AIFinancialPlanningPlatform() {
       icon: <BarChart3 className='w-6 h-6' />,
       title: 'Real-Time Financial Insights',
       description:
-        'Live financial data, market analysis, and personalized recommendations updated in real-time.',
-    },
+        'Live financial data, market analysis, and personalized recommendations updated in real-time.',;
+    },;
   ];
 
   const benefits = [
@@ -181,7 +181,6 @@ export default function AIFinancialPlanningPlatform() {
           href='https://ziontechgroup.com/ai-financial-planning-platform'
         />
       </Head>
-
       <div className='min-h-screen bg-black text-white'>
         {/* Hero Section */}
         <section className='relative pt-32 pb-20 overflow-hidden'>
@@ -191,7 +190,6 @@ export default function AIFinancialPlanningPlatform() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center'      </Head>
-
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -252,7 +250,6 @@ export default function AIFinancialPlanningPlatform() {
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
@@ -276,7 +273,6 @@ export default function AIFinancialPlanningPlatform() {
                 wealth management solutions.
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Financial Planning Features
@@ -286,7 +282,6 @@ export default function AIFinancialPlanningPlatform() {
                 comprehensive financial planning and wealth management solutions.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -317,7 +312,6 @@ export default function AIFinancialPlanningPlatform() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className='py-20 bg-black'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
@@ -341,7 +335,6 @@ export default function AIFinancialPlanningPlatform() {
                 AI-powered financial planning platform.
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>              {benefits.map((benefit, index) => (            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Financial Future
@@ -351,7 +344,6 @@ export default function AIFinancialPlanningPlatform() {
                 goal achievement with our AI-powered financial planning platform.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -375,7 +367,6 @@ export default function AIFinancialPlanningPlatform() {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
@@ -399,7 +390,6 @@ export default function AIFinancialPlanningPlatform() {
                 life.
               </p>
             </motion.div>
-
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6'>              {useCases.map((useCase, index) => (            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Comprehensive Financial Planning Solutions
@@ -409,7 +399,6 @@ export default function AIFinancialPlanningPlatform() {
                 solutions for every aspect of your financial life.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
               {useCases.map((useCase, index) => (
                 <motion.div
@@ -434,7 +423,6 @@ export default function AIFinancialPlanningPlatform() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div        <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
@@ -484,4 +472,9 @@ export default function AIFinancialPlanningPlatform() {
       </div>
     </>
 );
+}
+
+}
+}
+}
 }

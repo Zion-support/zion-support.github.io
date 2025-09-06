@@ -486,7 +486,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       customers: 1100,
       rating: 4.8,
       reviews: 550,
-    },
+    },;
   ];    features: [
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication';
       'API accessMobile applications'

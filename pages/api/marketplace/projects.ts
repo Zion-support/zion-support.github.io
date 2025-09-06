@@ -5,7 +5,7 @@ import { getProjectById, saveProject } from "../../../utils/marketplace/store";
 import {
   Project,
   ProjectDocument,
-  ProjectNote,
+  ProjectNote,;
 } from "../../../utils/marketplace/types";
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message });
@@ -19,7 +19,7 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
+  try {;
     const user = getDemoUser(req);
     const { id } = (req.method === "GET" ? req.query : req.body) as {
       id?: string;

@@ -24,12 +24,12 @@ import {
   FileText,
   Heart,
   Eye,
-  Search,
+  Search,;
   Phone,;
 } from 'lucide-react';
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
-  Star, CheckCircle, ArrowRight, TrendingUp, Users, 
+  Star, CheckCircle, ArrowRight, TrendingUp, Users, ;
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
@@ -143,7 +143,7 @@ const serviceCategories = [
   }
 ];
 
-export default function UltraFuturisticServiceShowcase2034() {
+export default function UltraFuturisticServiceShowcase2034() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -190,7 +190,6 @@ export default function UltraFuturisticServiceShowcase2034() {
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
       </div>
-
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 
   return (
@@ -201,7 +200,6 @@ export default function UltraFuturisticServiceShowcase2034() {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -219,7 +217,6 @@ export default function UltraFuturisticServiceShowcase2034() {
             computing, and emerging technology solutions. Each service is
             designed to transform your business and propel you into the future.
           </p>
-
           {/* Stats */}
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-12'>
             {[
@@ -238,7 +235,6 @@ export default function UltraFuturisticServiceShowcase2034() {
             Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. 
             Each service is designed to transform your business and propel you into the future.
           </p>
-          
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             {[
@@ -267,7 +263,6 @@ export default function UltraFuturisticServiceShowcase2034() {
             ))}
           </div>
         </motion.div>
-
         {/* Search and Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -299,7 +294,6 @@ export default function UltraFuturisticServiceShowcase2034() {
               />
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             </div>
-
             {/* Category Filter */}
             <select
               value={selectedCategory}
@@ -317,7 +311,6 @@ export default function UltraFuturisticServiceShowcase2034() {
             </select>
           </div>
         </motion.div>
-
         {/* Service Categories */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -382,7 +375,6 @@ export default function UltraFuturisticServiceShowcase2034() {
             ))}
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -422,14 +414,12 @@ export default function UltraFuturisticServiceShowcase2034() {
                   </div>
                   <div className='text-sm text-gray-400'>{service.period}</div>                </div>
               </div>
-
               {/* Service Info */}
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                 {service.name}
               </h3>
               <p className='text-gray-300 mb-4 leading-relaxed'>                {service.description}
               </p>
-
               {/* Features */}              <div className="flex items-center justify-between mb-4">
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>
                   {service.icon}
@@ -438,7 +428,6 @@ export default function UltraFuturisticServiceShowcase2034() {
                   <div className="text-2xl font-bold text-white">{service.price}</div>
                   <div className="text-sm text-gray-400">{service.period}</div>
               </div>
-
               {/* Service Info */}
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                 {service.name}
@@ -448,7 +437,6 @@ export default function UltraFuturisticServiceShowcase2034() {
               </h3>
               <p className="text-gray-300 mb-4 leading-relaxed">
               </p>
-
               {/* Features */}
               <div className='space-y-2 mb-4'>
                 {service.features.slice(0, 3).map((feature, idx) => (
@@ -472,7 +460,6 @@ export default function UltraFuturisticServiceShowcase2034() {
                   </div>
                 )}
               </div>
-
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                 <div className='flex items-center space-x-2 text-gray-400'>
@@ -502,7 +489,6 @@ export default function UltraFuturisticServiceShowcase2034() {
                   <span>{service.growthRate}</span>
                 </div>
               </div>
-
               {/* Market Position */}
               <div className='mb-4 p-3 rounded-lg bg-white/5 border border-white/10'>
                 <div className='text-xs text-gray-400 mb-1'>
@@ -514,7 +500,6 @@ export default function UltraFuturisticServiceShowcase2034() {
                   {service.marketPosition}
                 </div>
               </div>
-
               {/* ROI */}
               <div className='mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30'>
                 <div className='text-xs text-green-400 mb-1 font-semibold'>
@@ -526,7 +511,6 @@ export default function UltraFuturisticServiceShowcase2034() {
                   {service.roi}
                 </div>
               </div>
-
               {/* Action Buttons */}
               <div className='flex space-x-3'>
                 <a
@@ -539,7 +523,6 @@ export default function UltraFuturisticServiceShowcase2034() {
                 <button className='px-4 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-200'>
                   <Eye className='w-4 h-4' />                </button>
               </div>
-
               {/* Trial Info */}                <a
                   href={service.link}
                   className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group"
@@ -551,7 +534,6 @@ export default function UltraFuturisticServiceShowcase2034() {
                   <Eye className="w-4 h-4" />
                 </button>
               </div>
-
               {/* Trial Info */}
               <div className='mt-4 text-center'>
                 <div className='text-sm text-gray-400'>
@@ -566,7 +548,6 @@ export default function UltraFuturisticServiceShowcase2034() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

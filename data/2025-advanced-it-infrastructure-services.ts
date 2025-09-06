@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface AdvancedITInfrastructureService {
+export interface AdvancedITInfrastructureService {;
   id: string;
   name: string;
   tagline: string;
@@ -1071,7 +1071,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       customers: 32,
       rating: 4.7,
       reviews: 24,
-    },
+    },;
   ];    features: [
       'Multi-cloud orchestration and managementHybrid cloud integration and optimizationIntelligent workload placementCross-cloud resource optimizationUnified monitoring and analyticsAutomated cloud migrationCustom cloud workflowsIntegration with cloud platforms';
       'Advanced cloud analyticsComprehensive cloud management'

@@ -8,7 +8,7 @@ import {Loader2, MessageSquare, ExternalLink} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {ApplicationStatus} from "@/types/jobs";
-export function MyApplications() {
+export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
   
   const getStatusBadge = (status: ApplicationStatus) => {
@@ -94,7 +94,6 @@ export function MyApplications() {
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
-                
                 <Button 
                   variant="default" 
                   size="sm"

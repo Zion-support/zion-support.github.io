@@ -21,4 +21,5 @@ export function BackToTopButton() {
       <ArrowUp className='h-5 w-5' />
     </button>
   )
-}"}
+}"};
+;

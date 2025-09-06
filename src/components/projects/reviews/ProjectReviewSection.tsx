@@ -45,7 +45,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           submit feedback
         </CardDescription>
       </CardHeader>
-
       <CardContent>
         {isCompleted ? (
           <div className='space-y-6'>
@@ -102,7 +101,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           </div>
         )}
       </CardContent>
-
       {/* Review Modal */}
       {(isClient || isTalent) && (
         <LeaveReviewModal
@@ -115,6 +113,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       )}
     </Card>
   )
-}
-}
+};
+};
 ;

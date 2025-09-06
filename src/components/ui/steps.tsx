@@ -40,7 +40,6 @@ export function Step({
           </span>
         )}
       </div>
-
       <div className="ml-4 min-w-0">
         <h3
           className={cn("text-sm font-medium", {
@@ -77,7 +76,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {
             status})
         })}
       </ol>
-      
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
@@ -91,3 +89,4 @@ export function Steps({ currentStep, className, children }: StepsProps) {
   )
 }/> </div> </div> </div>) 
 }"}
+;

@@ -9,5 +9,5 @@ export * from &quot;./sidebar-content&quot;
 export * from &quot;./sidebar-group&quot;
 export * from &quot;./sidebar-menu&quot;
 
-// Also export types 
+// Also export types ;
 export type { SafeRef } from &quot;../sidebar.types&quot;

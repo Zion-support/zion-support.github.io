@@ -69,5 +69,5 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
   )
 }
 '"},
-  )
-}
+  );
+};

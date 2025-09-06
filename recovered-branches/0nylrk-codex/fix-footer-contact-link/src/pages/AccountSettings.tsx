@@ -12,7 +12,7 @@ import {Separator} from '@/components/ui/separator';
 import {Switch} from '@/components/ui/switch';
 import {Label} from '@/components/ui/label';
 import {toast} from 'sonner';
-export default function AccountSettings() {
+export default function AccountSettings() {;
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
@@ -97,7 +97,6 @@ export default function AccountSettings() {
       <Header />
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
-        
         <div className="grid gap-6 md:grid-cols-2">
           <Card>
             <CardHeader>
@@ -114,7 +113,6 @@ export default function AccountSettings() {
                   className="bg-gray-100"
                 />
               </div>
-              
               <div className="space-y-2">
                 <Label htmlFor="didHandle">Web3 Identity Handle</Label>
                 <div className="flex gap-2">
@@ -138,7 +136,6 @@ export default function AccountSettings() {
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
-              
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="displayWeb3">Display Web3 Identity</Label>
@@ -150,9 +147,7 @@ export default function AccountSettings() {
                   onCheckedChange={setDisplayWeb3}
                 />
               </div>
-              
               <Separator />
-              
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
@@ -169,7 +164,6 @@ export default function AccountSettings() {
                   onCheckedChange={setEnableBackup}
                 />
               </div>
-              
               {enableBackup && (
                 <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">
                   Data will be backed up to decentralized storage. This feature is in beta.
@@ -186,7 +180,6 @@ export default function AccountSettings() {
               </Button>
             </CardContent>
           </Card>
-          
           <Card>
             <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
@@ -235,7 +228,6 @@ export default function AccountSettings() {
                   </div>
                 )}
               </div>
-              
               <div>
                 <h3 className="font-medium mb-2">Backup Status</h3>
                 <div className="grid grid-cols-2 gap-2">
@@ -265,7 +257,6 @@ export default function AccountSettings() {
                   </div>
                 </div>
               </div>
-              
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>
                 <Button 

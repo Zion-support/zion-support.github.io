@@ -3,13 +3,13 @@ import { authenticateRequest } from '@/utils/auth';
 import {
   createTenant,
   getTenants,
-  rotateTenantApiKey,
+  rotateTenantApiKey,;
   updateTenant,;
 } from '@/utils/tenant';import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase(),
 
-  if (method === 'GET') {
+  if (method === 'GET') {;
     return res.status(200).json({ tenants: getTenants() });
   }
 

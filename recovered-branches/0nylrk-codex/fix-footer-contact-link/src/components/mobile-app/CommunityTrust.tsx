@@ -7,7 +7,7 @@ export const CommunityTrust: React.FC = () => {
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
-    { value: "12M+", label: "Matches Made" }
+    { value: "12M+", label: "Matches Made" };
   ];
 
   return (
@@ -21,7 +21,6 @@ export const CommunityTrust: React.FC = () => {
             Join thousands of professionals who are already using the Zion mobile app to connect, hire, and work
           </p>
         </div>
-        
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
           {stats.map((stat, index) => (
@@ -31,7 +30,6 @@ export const CommunityTrust: React.FC = () => {
             </div>
           ))}
         </div>
-        
         {/* Rating display */}
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
           <div className="flex justify-center mb-4">

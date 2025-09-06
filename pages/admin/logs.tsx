@@ -10,7 +10,7 @@ import {
   Select,
   SelectContent,
   SelectItem,
-  SelectTrigger,
+  SelectTrigger,;
   SelectValue,;
 } from '@/components/ui/select';
 import {
@@ -19,7 +19,7 @@ import {
   AlertCircle,
   XCircle,
   Search,
-  Download,
+  Download,;
   RefreshCw,;
 } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -80,7 +80,7 @@ export default function LogsPage({
   errorCount,
   warningCount,
   totalCount,
-  lastUpdated,
+  lastUpdated,;
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
@@ -192,7 +192,6 @@ export default function LogsPage({
             Export
           </Button>
         </div>
-
       {/* Summary Cards */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
         <Card>
@@ -204,7 +203,6 @@ export default function LogsPage({
             <div className='text-2xl font-bold'>{totalCount}</div>
             <p className='text-xs text-muted-foreground'>All log entries</p>          </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
             <CardTitle className='text-sm font-medium'>Errors</CardTitle>
@@ -216,7 +214,6 @@ export default function LogsPage({
               Critical & error logs
             </p>          </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
             <CardTitle className='text-sm font-medium'>Warnings</CardTitle>
@@ -228,7 +225,6 @@ export default function LogsPage({
             </div>
             <p className='text-xs text-muted-foreground'>Warning logs</p>          </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
             <CardTitle className='text-sm font-medium'>Last Updated</CardTitle>
@@ -241,7 +237,6 @@ export default function LogsPage({
             <p className='text-xs text-muted-foreground'>Data freshness</p>          </CardContent>
         </Card>
       </div>
-
       {/* Filters */}
       <Card>
         <CardHeader>
@@ -258,7 +253,6 @@ export default function LogsPage({
                 onChange={e => setSearchTerm(e.target.value)}
               />
             </div>
-
             <Select value={levelFilter} onValueChange={setLevelFilter}>
               <SelectTrigger>
                 <SelectValue placeholder='All levels' />
@@ -271,7 +265,6 @@ export default function LogsPage({
                 <SelectItem value='error'>Error</SelectItem>
                 <SelectItem value='critical'>Critical</SelectItem>              </SelectContent>
             </Select>
-
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
               <SelectTrigger>
                 <SelectValue placeholder='All categories' />
@@ -284,7 +277,6 @@ export default function LogsPage({
                   </SelectItem>                ))}
               </SelectContent>
             </Select>
-
             <Select value={sourceFilter} onValueChange={setSourceFilter}>
               <SelectTrigger>
                 <SelectValue placeholder='All sources' />
@@ -323,9 +315,7 @@ export default function LogsPage({
                       {formatTimestamp(log.timestamp)}
                     </span>
                   </div>
-
                   <div className='text-sm font-medium'>{log.message}</div>
-
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className='text-xs'>
                       <summary className='cursor-pointer text-muted-foreground hover:text-foreground'>
@@ -379,7 +369,6 @@ export default function LogsPage({
                       {log.userId && ` • User: ${log.userId}`}
                     </div>
                   </div>
-
                   {log.url && (
                     <div className='text-xs text-muted-foreground truncate'>                      URL: {log.url}
                     </div>
@@ -397,7 +386,7 @@ export default function LogsPage({
   );
 };
 export const getServerSideProps: GetServerSideProps = async () => {
-  try {
+  try {;
     const logsDir = path.join(process.cwd(), 'logs');
     const logs: LogEntry[] = [];
               // Skip malformed log entries

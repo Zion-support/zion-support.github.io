@@ -20,7 +20,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
         <h3 className='text-xl font-semibold text-white mb-4'>
           When do you need this?
         </h3>
-
         <div className='space-y-4'>
           <div className='flex items-center space-x-4'>
             <div
@@ -35,7 +34,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                 I have specific start and end dates
               </p>
             </div>
-
             <div
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === 'flexible'
@@ -50,7 +48,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               </p>
             </div>
           </div>
-
           {formData.timeline === 'fixed' && (
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>
               <div>
@@ -86,7 +83,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                   </PopoverContent>
                 </Popover>
               </div>
-
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   End Date
@@ -129,4 +125,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
       </div>
     </div>
   )
+};
+;
 }

@@ -10,7 +10,7 @@ export function InvoiceHistory() {
   // Mock invoice data
   const invoices = [
     {
-      id: "INV-1234",
+      id: "INV-1234",;
       date: "May 1, 2025";
       amount: "$1,999.00";
       status: "paid",
@@ -78,7 +78,6 @@ export function InvoiceHistory() {
           />
         </div>
       </div>
-
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -125,7 +124,6 @@ export function InvoiceHistory() {
           </TableBody>
         </Table>
       </div>
-      
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous

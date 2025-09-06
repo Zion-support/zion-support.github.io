@@ -11,7 +11,7 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-} from 'lucide-react',
+} from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
 const Solutions: NextPage = () => {
@@ -154,7 +154,6 @@ const Solutions: NextPage = () => {
           <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
           <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
         </Head>
-
         {/* Hero Section */}
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
@@ -186,7 +185,6 @@ const Solutions: NextPage = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Solution Capabilities */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-6xl mx-auto">
@@ -204,7 +202,6 @@ const Solutions: NextPage = () => {
                 Comprehensive capabilities to deliver industry-specific technology solutions
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {solutionCapabilities.map((capability, index) => (
                 <motion.div
@@ -227,7 +224,6 @@ const Solutions: NextPage = () => {
             </div>
           </div>
         </section>
-
         {/* Industry Solutions */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -245,7 +241,6 @@ const Solutions: NextPage = () => {
                 Choose from our comprehensive suite of industry-specific solutions
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industrySolutions.map((solution, index) => (
                 <motion.div
@@ -279,7 +274,6 @@ const Solutions: NextPage = () => {
                       <span className="text-lg text-gray-400">/{solution.period}</span>
                     </div>
                   </div>
-                  
                   <ul className="space-y-3 mb-6">
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -288,7 +282,6 @@ const Solutions: NextPage = () => {
                       </li>
                     ))}
                   </ul>
-                  
                   <a 
                     href="/contact" 
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
@@ -322,7 +315,6 @@ const Solutions: NextPage = () => {
           </motion.div>
         </div>
       </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -360,5 +352,5 @@ const Solutions: NextPage = () => {
   )
 },
 
-export default Solutions,
+export default Solutions,;
 ;

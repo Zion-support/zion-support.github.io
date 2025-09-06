@@ -55,5 +55,5 @@ const Button: React.FC<ButtonProps> = ({
     </button>
   )
 }
-export { Button }
-export default Button
+export { Button };
+export default Button;

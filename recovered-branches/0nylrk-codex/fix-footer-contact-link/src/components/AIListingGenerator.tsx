@@ -28,7 +28,7 @@ interface AIListingGeneratorProps {
   }
 }
 
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title || "");
   const [category, setCategory] = useState(initialValues.category || "");
@@ -179,7 +179,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           </Button>
         </CardContent>
       </Card>
-
       {isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
           <CardHeader>
@@ -212,7 +211,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
               <p className="text-white">{generatedContent.description}</p>
             </div>
-            
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
               <div className="flex flex-wrap gap-2">
@@ -221,12 +219,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
                 ))}
               </div>
             </div>
-            
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
               <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>
             </div>
-            
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
               <ul className="list-disc pl-5 text-white space-y-1">

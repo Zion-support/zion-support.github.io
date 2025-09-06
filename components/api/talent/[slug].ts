@@ -24,7 +24,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== 'GET') {
+  if (req.method !== 'GET') {;
     return res.setHeader('Allow', 'GET').status(405).end('Method Not Allowed');
   }
   const { slug, lang } = req.query as { slug: string; lang?: string };
@@ -52,7 +52,7 @@ export default async function handler(
     return res.status(500).json({ error: e.message });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
+  if (req.method !== 'GET') {;
     return res.setHeader('AllowGET').status(405).end('Method Not Allowed');
   }
   const { slug, lang } = req.query as { slug: string, lang?: string };
@@ -72,4 +72,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e.message })
 };
+}
+
+}
 }

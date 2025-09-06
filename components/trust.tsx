@@ -3,7 +3,7 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
-export default function TrustPage() {
+export default function TrustPage() {;
   const [userId, setUserId] = useState<string>('demo-user');
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -85,7 +85,6 @@ export default function TrustPage() {
           <div className="flex items-center gap-3">
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>
         </div>
-
         {loading && <div>Loading...</div>}
         {!loading && data && (
           <div className='grid md:grid-cols-3 gap-6'>

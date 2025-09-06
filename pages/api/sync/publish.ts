@@ -11,7 +11,7 @@ function isAllowedByScope(stateType: string, scope: string): boolean {
   return true
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();

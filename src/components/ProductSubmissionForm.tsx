@@ -5,7 +5,7 @@ import z from 'zod'
 import { supabase } from '@/integrations/supabase/client'
 import { useAuth } from '@/hooks/useAuth'
 import { useToast } from '@/hooks/use-toast'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import Image from 'next/image'; // Import next/image
 import { logErrorToProduction } from '@/utils/productionLogger'
 import {
@@ -70,8 +70,8 @@ export function ProductSubmissionForm() {
       tags: '',
     },
   })
-  // Handle image upload preview
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // Handle image upload preview;
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
     const file = e.target.files?.[0];    if (file) {
       form.setValue('image', file)
       const reader = new FileReader()
@@ -262,7 +262,6 @@ export function ProductSubmissionForm() {
           AI-Powered Creation
         </TabsTrigger>
       </TabsList>
-
       <TabsContent value='manual'>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
@@ -371,7 +370,6 @@ export function ProductSubmissionForm() {
                 )}
               />
             </div>
-
             <FormField
               control={form.control}
               name='tags'
@@ -414,7 +412,6 @@ export function ProductSubmissionForm() {
                     size: 1200x800px)
                   </FormDescription>
                   <FormMessage />
-
                   {imagePreview && (
                     <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>
                       <AspectRatio ratio={3 / 2}>
@@ -488,7 +485,6 @@ export function ProductSubmissionForm() {
           </form>
         </Form>
       </TabsContent>
-
       <TabsContent value='ai'>
         <AIListingGenerator
           onApplyGenerated={handleApplyGenerated}          initialValues={{
@@ -556,7 +552,7 @@ const {
 }finally {
   setIsSubmitting (false) 
 }
-}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> 
+}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList>
 }"
 }/> <FormField Describe your product in detail..." className="min-h-32" {
   ...field '

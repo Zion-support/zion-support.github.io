@@ -481,7 +481,6 @@ const EnhancedFuturisticBackground: React.FC<
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`,
         }}
       />
-
 {/* Content */}
       <div className='relative z-10'>{children}</div>
     </div>

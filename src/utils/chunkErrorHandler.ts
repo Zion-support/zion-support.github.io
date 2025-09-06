@@ -11,7 +11,7 @@ interface ChunkErrorStats {
   url: string
 class ChunkErrorHandler {
   private errorStats: Map<string, ChunkErrorStats> = new Map()
-  private readonly MAX_RETRIES = 3
+  private readonly MAX_RETRIES = 3;
   private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
@@ -277,4 +277,6 @@ export default chunkErrorHandler
           Try Again
         </button>
         <button onclick="window.location.href='/'" style="
-export default chunkErrorHandler
+export default chunkErrorHandler;
+}
+}

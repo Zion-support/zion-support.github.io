@@ -149,5 +149,5 @@ export default function ServicesPage() {
       <TrustedBySection />
     </AppLayout>
   )
-}
+};
 ;

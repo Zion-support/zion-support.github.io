@@ -3,7 +3,7 @@
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
 
-export function securityMiddleware(request) {
+export function securityMiddleware(request) {;
   const response = NextResponse.next();
   
   // Add security headers
@@ -24,7 +24,7 @@ export function securityMiddleware(request) {
 export function securityHeaders(req, res, next) {
   Object.entries({
     'X-Content-Type-Options': 'nosniff',
-    'X-Frame-Options': 'DENY',
+    'X-Frame-Options': 'DENY',;
     'X-XSS-Protection': '1; mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
@@ -34,4 +34,6 @@ export function securityHeaders(req, res, next) {
   });
   
   next();
+}
+
 }

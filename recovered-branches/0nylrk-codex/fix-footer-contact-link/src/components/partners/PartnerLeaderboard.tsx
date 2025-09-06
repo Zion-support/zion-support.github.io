@@ -23,7 +23,7 @@ export function PartnerLeaderboard() {
       avatar: "", // URL would be here
       referrals: 178,
       earnings: 4500,
-      badges: ["gold", "trending"]
+      badges: ["gold", "trending"];
     };
     {
       id: "2",
@@ -145,7 +145,6 @@ export function PartnerLeaderboard() {
           </div>
         </CardContent>
       </Card>
-      
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Your Ranking</CardTitle>
@@ -162,7 +161,6 @@ export function PartnerLeaderboard() {
           </div>
         </CardContent>
       </Card>
-      
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Rewards Program</CardTitle>
@@ -183,7 +181,6 @@ export function PartnerLeaderboard() {
               <li>Monthly strategy call with Zion AI team</li>
             </ul>
           </div>
-          
           <div className="p-4 bg-zion-blue rounded-md">
             <div className="flex items-center gap-2 mb-2">
               <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300">

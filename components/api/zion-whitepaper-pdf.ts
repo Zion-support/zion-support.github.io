@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
 import {
-  getWhitepaperSections,
+  getWhitepaperSections,;
   OPERATOR_PROMPT,;
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
@@ -16,7 +16,7 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {
+) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition =
     editionParam === 'investor' || editionParam === 'developer'
@@ -28,7 +28,7 @@ export default async function handler(
     'Content-Disposition',
     `attachment; filename="zion-protocol-${edition}.pdf"`
   );
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
 
@@ -85,4 +85,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 
   doc.end()
+}
+
+}
 }

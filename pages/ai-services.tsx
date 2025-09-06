@@ -24,6 +24,6 @@ export default function AIServices() {
           </div>
         </div>
       </div>
-    </Layout>
+    </Layout>;
   );
 }

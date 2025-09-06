@@ -8,7 +8,7 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
-    hasError: false
+    hasError: false;
   });
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -263,12 +263,11 @@ export default function HomePage() {
           Get Started
         </Button>
       </div>
-    </div>
+    </div>;
   );
 }
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -285,7 +284,6 @@ export default function HomePage() {
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -320,7 +318,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* Featured Services */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -337,7 +334,6 @@ export default function HomePage() {
                 Our most popular and effective technology solutions
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
@@ -363,7 +359,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -380,7 +375,6 @@ export default function HomePage() {
 We deliver exceptional results through innovation, expertise, and dedication
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
                 <motion.div
@@ -400,7 +394,6 @@ We deliver exceptional results through innovation, expertise, and dedication
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

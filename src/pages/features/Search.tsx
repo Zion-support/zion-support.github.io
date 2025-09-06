@@ -9,8 +9,8 @@ export default function SearchFeature() {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Advanced Search',
-    description:
-      'Quickly locate products, services and talent using intelligent search filters.',
+    description:;
+      'Quickly locate products, services and talent using intelligent search filters.',;
     url: 'https://app.ziontechgroup.com/features/search',  };    "@context": "https://schema.org"
     "@type": "WebPage"
     "name": "Advanced Search",

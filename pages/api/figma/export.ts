@@ -4,14 +4,14 @@ import {
   getZionDesignMap,
   buildTokenSet,
   buildUIKit,
-  UIKitKind,
+  UIKitKind,;
 } from "../../../utils/design-map";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  try {
+  try {;
     const kit = (req.query.kit as string) || "tailwind";
     const kind = (
       ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"

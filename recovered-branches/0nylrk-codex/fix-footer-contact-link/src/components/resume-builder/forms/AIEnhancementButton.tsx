@@ -12,7 +12,7 @@ interface AIEnhancementButtonProps {
   className?: string
 }
 
-export function AIEnhancementButton({
+export function AIEnhancementButton({;
   currentContent;
   enhancementType;
   context;

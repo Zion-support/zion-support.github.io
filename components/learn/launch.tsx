@@ -4,11 +4,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
     redirect: {
       destination: '/academy/founder-course',
       permanent: false,
-    },
+    },;
   };      permanent: false}}
 };
 
-export default function LaunchRedirect() {
+export default function LaunchRedirect() {;
   return null;
 }
 ;

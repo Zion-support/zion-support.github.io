@@ -6,7 +6,7 @@ import { badgeVariants } from &quot;@/components/ui/badge-variants&quot;
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLSpanElement> {
-  variant?:
+  variant?:;
     | &quot;default&quot;
     | &quot;secondary&quot;
     | &quot;destructive&quot;
@@ -22,5 +22,5 @@ function Badge({ className, variant, ...props }: BadgeProps) {;
   );
 }
 ;
-export { Badge, badgeVariants }
+export { Badge, badgeVariants };
 ;

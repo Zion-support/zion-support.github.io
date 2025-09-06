@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { supabase } from '@/integrations/supabase/client'
-import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor'
+import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel'; // Import the new preview panel
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Trash2, Download, Share2 } from 'lucide-react'
+import { Trash2, Download, Share2 } from 'lucide-react';
 import { Send } from 'lucide-react'; // Added Send icon
 import { toast } from 'sonner'
 import { logErrorToProduction } from '@/utils/productionLogger'
@@ -23,7 +23,7 @@ value: number
 //Helper for slugifying filenames const slugify = (text: string) : string => {'
   return text.toString () .toLowerCase () .replace (/\s+/g, '-') //Replace spaces with - .replace (/[^\w-]+/g, '') //Remove all non-word chars .replace (/--+/g, '-') //Replace multiple - with single - .replace (/^-+/, '') //Trim - from start of text .replace (/-+$/,  ''), //Trim - from end of text 
 }
-const WhitepaperGeneratorPage: React.FC = () => {'
+const WhitepaperGeneratorPage: React.FC = () => {';
   const [tokenName, setTokenName] = useState ('My Awesome Token');'
 const [tokenSupply, setTokenSupply] = useState<string> ('1000000000');'
 const [useCases, setUseCases] = useState ('To facilitate transactions and reward users in our innovative freelance AI marketplace. It will be used for payments, staking for dispute resolution, and accessing premium features.');'
@@ -698,7 +698,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
             </Button>
           </div>
         </div>
-
         <form onSubmit={e => e.preventDefault()} className='space-y-6'>
           {/* ... (Input fields remain the same) ... */}
           <div>
@@ -749,7 +748,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
               rows={3}
             />
           </div>
-
           {/* Token Distribution Inputs */}
           <div className='space-y-3 p-3 border rounded-md'>
             <h2 className='text-lg font-semibold'>Token Distribution</h2>
@@ -811,7 +809,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
                 rows={2}
               />            </div>
           </div>
-
           <div>
             <label
               htmlFor='governanceLogic'
@@ -855,7 +852,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
             className='w-full'          >
             {isLoading ? 'Generating Draft...' : 'Generate Whitepaper Draft'}
           </Button>
-
           {isLoading && (
             <p className='text-center text-sm text-blue-600'>
               Draft generation in progress...
@@ -946,7 +942,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
             </p>
           )}
         </form>
-
         {/* Section Editors */}
         {sections.length > 0 && (
           <div className='mt-8 pt-6 border-t'>
@@ -981,7 +976,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
           </div>
         )}
       </div>
-
       {/* Right Column: Preview Panel - Pass ref here */}
       <div
         id='preview-panel-content'
@@ -999,3 +993,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
 }
 export default WhitepaperGeneratorPage
 '"
+;
+}
+}

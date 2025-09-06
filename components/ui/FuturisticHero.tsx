@@ -48,6 +48,8 @@ export default function FuturisticHero() {
           </p>
         </div>
       </div>
-    </section>
+    </section>;
   );
+}
+
 }

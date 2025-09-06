@@ -22,7 +22,7 @@ import {
   RefreshCw,
   Pause,
   StopCircle,
-  MapPin,
+  MapPin,;
 } from 'lucide-react';
 
 interface Deployment {
@@ -86,7 +86,7 @@ const mockDeployments: Deployment[] = [
   },
 ];
 
-export default function DeploymentsPage() {
+export default function DeploymentsPage() {;
   const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments);
   const [filter, setFilter] = useState<
     'all' | 'pending' | 'deploying' | 'completed' | 'failed'
@@ -183,7 +183,6 @@ const getVerticalIcon = (vertical: string) => {
           Monitor and manage your Zion ecosystem deployments
         </p>
       </div>
-
       {/* Stats Overview */}
       <div className='grid grid-cols-1 md:grid-cols-5 gap-4 mb-8'>
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
@@ -197,7 +196,6 @@ const getVerticalIcon = (vertical: string) => {
             </div>
           </div>
         </div>
-
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
           <div className='flex items-center gap-3'>
             <div className='p-2 bg-yellow-500/20 rounded-lg'>
@@ -209,7 +207,6 @@ const getVerticalIcon = (vertical: string) => {
             </div>
           </div>
         </div>
-
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
           <div className='flex items-center gap-3'>
             <div className='p-2 bg-blue-500/20 rounded-lg'>
@@ -223,7 +220,6 @@ const getVerticalIcon = (vertical: string) => {
             </div>
           </div>
         </div>
-
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
           <div className='flex items-center gap-3'>
             <div className='p-2 bg-green-500/20 rounded-lg'>
@@ -237,7 +233,6 @@ const getVerticalIcon = (vertical: string) => {
             </div>
           </div>
         </div>
-
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
           <div className='flex items-center gap-3'>
             <div className='p-2 bg-red-500/20 rounded-lg'>
@@ -254,7 +249,6 @@ const getVerticalIcon = (vertical: string) => {
         </h1>
         <p className="text-white/70 mt-2">Monitor and manage your Zion ecosystem deployments</p>
       </div>
-
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
@@ -313,7 +307,6 @@ const getVerticalIcon = (vertical: string) => {
           </div>
         </div>
       </div>
-
       {/* Filter Tabs */}
       <div className='flex flex-wrap gap-2'>
           { key: 'all', label: 'All Deployments', count: deployments.length },
@@ -347,7 +340,6 @@ const getVerticalIcon = (vertical: string) => {
           </button>
         ))}
       </div>
-
       {/* Deployments Grid */}
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>
         {filteredDeployments.map(deployment => (
@@ -395,7 +387,6 @@ const getVerticalIcon = (vertical: string) => {
                     </div>
                   </div>
                 </div>
-
                 <div className='flex items-center gap-2'>
                   {getStatusIcon(deployment.status)}
                   <span
@@ -408,7 +399,6 @@ const getVerticalIcon = (vertical: string) => {
                     {deployment.status.charAt(0).toUpperCase() + deployment.status.slice(1)}
                 </div>
               </div>
-
               {/* Progress Bar for Active Deployments */}
               {deployment.status === 'deploying' && (
                 <div className='space-y-2'>
@@ -430,7 +420,6 @@ const getVerticalIcon = (vertical: string) => {
                 </div>
               )}
             </div>
-
             {/* Deployment Details */}
             <div className='p-6 space-y-4'>
               {/* Domain & Location */}
@@ -465,7 +454,6 @@ const getVerticalIcon = (vertical: string) => {
                   </div>
                 )}
               </div>
-
               {/* Features */}
               <div className='space-y-2'>
                 <div className='text-sm font-medium text-white/80'>
@@ -495,7 +483,6 @@ const getVerticalIcon = (vertical: string) => {
                   )}
                 </div>
               </div>
-
               {/* Timestamps */}
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
                 <div className='flex items-center gap-1'>
@@ -516,7 +503,6 @@ const getVerticalIcon = (vertical: string) => {
                 )}
               </div>
             </div>
-
             {/* Action Buttons */}
             <div className='p-6 pt-0'>
               <div className='flex gap-2'>
@@ -588,7 +574,6 @@ const getVerticalIcon = (vertical: string) => {
           </div>
         ))}
       </div>
-
       {/* Empty State */}
       {filteredDeployments.length === 0 && (
         <div className='text-center py-16'>
@@ -630,7 +615,6 @@ const getVerticalIcon = (vertical: string) => {
           )}
         </div>
       </div>
-
       {/* Deployments Table */}
       <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">
         <div className="p-6 border-b border-white/10">

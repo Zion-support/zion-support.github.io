@@ -58,7 +58,6 @@ export function ApiDocsHub() {
           comprehensive guides and documentation to help you start working with
           our API as quickly as possible.
         </p>
-
         <div className='grid gap-6 md:grid-cols-2'>
           {sections.map(section => (
             <Link
@@ -81,7 +80,6 @@ export function ApiDocsHub() {
             </Link>
           ))}
         </div>
-
         <div className='mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800'>
           <h2 className='text-xl font-semibold text-white mb-4'>
             Ready to get started?
@@ -101,4 +99,6 @@ export function ApiDocsHub() {
       </div>
     </ApiDocsLayout>
   )
-export default ApiDocsHub
+export default ApiDocsHub;
+;
+}

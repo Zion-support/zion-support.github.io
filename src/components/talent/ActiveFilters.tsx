@@ -12,7 +12,7 @@ interface ActiveFiltersProps {
   priceRange: [number, number]
   setPriceRange: (range: [number, number]) => void
   experienceRange: [number, number]
-  setExperienceRange: (range: [number, number]) => void
+  setExperienceRange: (range: [number, number]) => void;
   clearFilters: () => void;interface ActiveFiltersProps {
   selectedSkills: string[],
   toggleSkill: (skill: string,) => void,
@@ -53,7 +53,6 @@ export function ActiveFilters({
   return (
     <div className='mb-6 flex flex-wrap gap-2 items-center'>
       <span className='text-zion-slate-light text-sm'>Active filters:</span>
-
       {selectedSkills.map(skill => (
         <ClickableBadge
           key={skill}
@@ -115,5 +114,6 @@ export function ActiveFilters({
       </Button>
     </div>
   )
-}
+};
 ;
+}

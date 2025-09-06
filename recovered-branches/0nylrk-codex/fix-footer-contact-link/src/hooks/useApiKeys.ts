@@ -5,7 +5,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
 
-export interface ApiKey {
+export interface ApiKey {;
   id: string;
   name: string;
   key_prefix: string;
@@ -16,7 +16,7 @@ export interface ApiKey {
   is_active: boolean
 }
 
-export interface ApiLog {
+export interface ApiLog {;
   id: string;
   endpoint: string;
   method: string;
@@ -26,7 +26,7 @@ export interface ApiLog {
   response_time_ms?: number
 }
 
-export function useApiKeys() {
+export function useApiKeys() {;
   const { user } = useAuth();
   const [keys, setKeys] = useState<ApiKey[]>([]);
   const [logs, setLogs] = useState<ApiLog[]>([]);

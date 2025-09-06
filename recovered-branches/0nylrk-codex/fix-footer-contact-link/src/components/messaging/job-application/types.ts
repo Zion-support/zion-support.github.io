@@ -1,4 +1,4 @@
-export interface Job {
+export interface Job {;
   id: string;
   title: string;
   description: string;
@@ -7,7 +7,7 @@ export interface Job {
   client_id: string;
 }
 
-export interface ApplyToJobModalProps {
+export interface ApplyToJobModalProps {;
   job: Job;
   isOpen: boolean;
   onClose: () => void;

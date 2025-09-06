@@ -181,7 +181,6 @@ export default function AdvancedITInfrastructureServices() {
           href='https://ziontechgroup.com/advanced-it-infrastructure-services'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20'></div>
@@ -230,7 +229,6 @@ export default function AdvancedITInfrastructureServices() {
             </div>
           </motion.div>
         </div>
-
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -249,7 +247,6 @@ export default function AdvancedITInfrastructureServices() {
               reliability
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
               <motion.div
                 key={index}
@@ -277,7 +274,6 @@ export default function AdvancedITInfrastructureServices() {
             ))}
           </div>
         </div>
-
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -295,7 +291,6 @@ export default function AdvancedITInfrastructureServices() {
               edge computing, security, and data centers
             </p>
           </motion.div>
-
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
@@ -318,7 +313,6 @@ export default function AdvancedITInfrastructureServices() {
                     {category.description}
                   </p>
                 </div>
-
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
@@ -391,7 +385,6 @@ export default function AdvancedITInfrastructureServices() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -409,7 +402,6 @@ export default function AdvancedITInfrastructureServices() {
               infrastructure with our advanced services
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -443,7 +435,6 @@ export default function AdvancedITInfrastructureServices() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
@@ -480,5 +471,7 @@ export default function AdvancedITInfrastructureServices() {
           </motion.div>
         </div>
       </section>
-    </Layout>
+    </Layout>;
 );
+
+}

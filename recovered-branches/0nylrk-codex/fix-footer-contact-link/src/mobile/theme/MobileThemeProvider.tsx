@@ -5,7 +5,7 @@ interface MobileThemeProviderProps {
   children: React.ReactNode
 }
 
-export function MobileThemeProvider({ children }: MobileThemeProviderProps) {
+export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
   const { theme } = useTheme();
   
   return (

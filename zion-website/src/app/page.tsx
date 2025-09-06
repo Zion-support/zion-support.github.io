@@ -4,7 +4,7 @@ import {
   GlobeAltIcon, 
   ShieldCheckIcon,
   ChartBarIcon,
-  UserGroupIcon
+  UserGroupIcon;
 } from '@heroicons/react/24/outline';
 
 const features = [
@@ -101,7 +101,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
       {/* Features section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -135,7 +134,6 @@ export default function HomePage() {
           </dl>
         </div>
       </div>
-
       {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -157,7 +155,6 @@ export default function HomePage() {
           </dl>
         </div>
       </div>
-
       {/* Solutions showcase */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -208,7 +205,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -231,6 +227,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-    </div>
+    </div>;
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-export type ModerationModalProps = {
+export type ModerationModalProps = {;
   flag: any | null;
   onClose: () => void;
   onAction: (
@@ -11,7 +11,7 @@ export default function ModerationModal({
   flag,
   onClose,
   onAction,
-}: ModerationModalProps) {
+}: ModerationModalProps) {;
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
   return (

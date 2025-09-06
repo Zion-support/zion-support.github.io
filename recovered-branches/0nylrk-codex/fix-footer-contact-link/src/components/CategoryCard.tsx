@@ -17,7 +17,7 @@ interface CategoryCardProps {
 }
 
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
-  // Create a URL-friendly slug from the category title
+  // Create a URL-friendly slug from the category title;
   const slug = slugify(title);
 
   return (

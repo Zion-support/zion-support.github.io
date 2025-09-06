@@ -47,8 +47,8 @@ const team = [
     bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.',
     image: '/images/team/james-kim.jpg'}]
 
-export default function AboutPage() {
-  return (
+export default function AboutPage() {;
+  return (;
     <div className=&quot;bg-black&quot;>
       {/* Hero section */}
       <div className=&quot;relative isolate px-6 pt-14 lg:px-8&quot;>
@@ -67,7 +67,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-
       {/* Mission & Vision */}
       <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -101,7 +100,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-
       {/* Company Story */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -131,7 +129,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-
       {/* Values */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>

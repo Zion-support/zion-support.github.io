@@ -9,7 +9,7 @@ interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
 }
 
 export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButtonProps>(
-  ({ className, children, asChild = false, ...props }, ref) => {
+  ({ className, children, asChild = false, ...props }, ref) => {;
     const Comp = asChild ? Slot : "button";
     return (
       <Comp

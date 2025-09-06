@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface AdvancedAIAutomationService {
+export interface AdvancedAIAutomationService {;
   id: string;
   name: string;
   tagline: string;
@@ -347,7 +347,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: '2024-10-01',
     customers: 89,
     rating: 4.8,
-    reviews: 38,
+    reviews: 38,;
   },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';

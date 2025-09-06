@@ -1,4 +1,4 @@
-export interface NextGenInnovativeService {
+export interface NextGenInnovativeService {;
   id: string;
   name: string;
   tagline: string;
@@ -941,7 +941,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     customers: 38,
     rating: 4.7,
     reviews: 26,
-  },
+  },;
 ];export const nextGenInnovativeServices: NextGenInnovativeService[] = [;
   // Quantum AI & Advanced Computing;
   {;

@@ -15,8 +15,8 @@ import {
   ExternalLink,
   Zap,
   Brain,
-  Globe,
-  Rocket,;} from 'lucide-react';import { 
+  Globe,;
+  Rocket,;} from 'lucide-react';import { ;
   Search;
   Filter, 
   TrendingUp, 
@@ -32,7 +32,7 @@ import {
   Globe;
   Rocket
 
-export default function ToolComparisonPage() {
+export default function ToolComparisonPage() {;
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
@@ -322,7 +322,6 @@ export default function ToolComparisonPage() {
           content='Comprehensive comparison of SaaS tools and AI services to help you make informed decisions.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         <div className='absolute inset-0'>
@@ -330,9 +329,7 @@ export default function ToolComparisonPage() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]' />
         </div>
-
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <div className='mb-20 animate-fade-in'>
             <div className='mb-8'>
@@ -341,7 +338,6 @@ export default function ToolComparisonPage() {
                 Smart Tool Selection
               </div>
             </div>
-
             <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
               Tool Comparison
             </h1>
@@ -350,7 +346,6 @@ export default function ToolComparisonPage() {
               informed decisions with our comprehensive analysis and expert
               insights.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               <Button
                 href='#comparison'
@@ -374,7 +369,6 @@ export default function ToolComparisonPage() {
               </Button>
             </div>
           </div>
-
           {/* Stats */}
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
@@ -427,7 +421,6 @@ export default function ToolComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* Filters and Search */}
       <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -442,7 +435,6 @@ export default function ToolComparisonPage() {
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />
             </div>
-
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>
               {categories.map(category => (                <button            {/* Search */}
@@ -456,7 +448,6 @@ export default function ToolComparisonPage() {
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
-
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>
               {categories.map(category => (            <div className="flex flex-wrap gap-2">
@@ -474,7 +465,6 @@ export default function ToolComparisonPage() {
                 </button>
               ))}
             </div>
-
             {/* Sort */}
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
@@ -498,7 +488,6 @@ export default function ToolComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* Comparison Table */}
       <section id='comparison' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -510,7 +499,6 @@ export default function ToolComparisonPage() {
               tools for your business needs.
             </p>
           </div>
-
           <div className='overflow-x-auto'>
             <table className='w-full'>
               <thead>
@@ -618,7 +606,6 @@ export default function ToolComparisonPage() {
               </tbody>
             </table>
           </div>
-
           {sortedTools.length === 0 && (
             <div className='text-center py-20'>
               <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />
@@ -634,7 +621,6 @@ export default function ToolComparisonPage() {
           )}
         </div>
       </section>
-
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -646,7 +632,6 @@ export default function ToolComparisonPage() {
               best decision for your business.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
               <Card
@@ -677,14 +662,12 @@ export default function ToolComparisonPage() {
                     </div>
                   </div>
                 </div>
-
                 <div className='mb-4'>
                   <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                     Best For:
                   </h4>
                   <p className='text-sm text-gray-400'>{tool.bestFor}</p>
                 </div>
-
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
                   <div>
                     <h4 className='text-sm font-semibold text-green-400 mb-2 flex items-center'>
@@ -698,7 +681,6 @@ export default function ToolComparisonPage() {
                           className='text-xs text-gray-400 flex items-start'
                         >
                           <span className='w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0' />                          {pro}                </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
                     <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
@@ -737,7 +719,6 @@ export default function ToolComparisonPage() {
                     </ul>
                   </div>
                 </div>
-
                 <div className='flex items-center justify-between'>
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
@@ -767,7 +748,6 @@ export default function ToolComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -803,4 +783,6 @@ export default function ToolComparisonPage() {
       </section>
     </>
 );
+}
+
 }

@@ -20,7 +20,7 @@ interface PricingSuggestionAnalytics {
 }
 
 export function usePricingSuggestionAnalytics(days = 30) {
-  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
+  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
     totalSuggestions: 0;
     acceptanceRate: 0;
     averagePriceGap: 0;

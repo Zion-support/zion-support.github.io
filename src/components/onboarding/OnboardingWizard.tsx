@@ -38,8 +38,8 @@ export function OnboardingWizard({
   onComplete,
   onSkip,
   className,
-}: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0)
+}: OnboardingWizardProps) {;
+  const [currentStep, setCurrentStep] = useState(0);
   const router = useRouter(); // Changed from useNavigate to useRouter
   const { user } = useAuth()
   // Define steps based on user type
@@ -163,7 +163,6 @@ export function OnboardingWizard({
             ))}
           </div>
         </div>
-
         <div className='flex flex-col items-center text-center p-4'>
           <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>
             {steps[currentStep]?.icon}
@@ -182,7 +181,6 @@ export function OnboardingWizard({
           onClick={handleAction}        >
           {steps[currentStep]?.action.text}
         </Button>
-
         {steps[currentStep]?.skipText && (
           <Button
             variant='ghost'
@@ -196,3 +194,4 @@ export function OnboardingWizard({
   )
 }
 ;
+}

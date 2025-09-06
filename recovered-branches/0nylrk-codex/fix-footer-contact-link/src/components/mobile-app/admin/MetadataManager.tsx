@@ -16,7 +16,7 @@ export type AppMetadataValues = {
   longDescription: string,
   keywords: string[],
   version: string,
-  platform: AppPlatform
+  platform: AppPlatform;
 };
 
 const defaultValues: AppMetadataValues = {
@@ -28,7 +28,7 @@ const defaultValues: AppMetadataValues = {
   platform: "ios"
 };
 
-export const MetadataManager: React.FC = () => {
+export const MetadataManager: React.FC = () => {;
   const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
   const [isSaving, setIsSaving] = useState(false);
   
@@ -69,7 +69,6 @@ export const MetadataManager: React.FC = () => {
               Google Play (Android)
             </TabsTrigger>
           </TabsList>
-          
           <Button 
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
@@ -77,28 +76,24 @@ export const MetadataManager: React.FC = () => {
             {isSaving ? "Saving..." : "Save Metadata"}
           </Button>
         </div>
-        
         <TabsContent value="ios" className="mt-0">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 space-y-6">
               <MetadataForm form={iosForm} />
               <ChangelogManager platform="ios" />
             </div>
-            
             <div className="space-y-6">
               <ScreenshotManager platform="ios" />
               <ExportPanel platform="ios" metadata={iosForm.getValues()} />
             </div>
           </div>
         </TabsContent>
-        
         <TabsContent value="android" className="mt-0">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 space-y-6">
               <MetadataForm form={androidForm} />
               <ChangelogManager platform="android" />
             </div>
-            
             <div className="space-y-6">
               <ScreenshotManager platform="android" />
               <ExportPanel platform="android" metadata={androidForm.getValues()} />

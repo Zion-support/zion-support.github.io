@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface InnovativeMicroSaas2030 {
+export interface InnovativeMicroSaas2030 {;
   id: string;
   name: string;
   tagline: string;
@@ -350,7 +350,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     customers: 89,
     rating: 4.7,
     reviews: 52,
-  },
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',

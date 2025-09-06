@@ -14,7 +14,7 @@ async function ensure() {
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
   await ensure();
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);

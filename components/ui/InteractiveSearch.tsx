@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function InteractiveSearch({
   placeholder = 'Search talent, skills, or jobs...',
-}: {
+}: {;
   placeholder?: string;
 }) {
   const [value, setValue] = useState('');
@@ -69,3 +69,5 @@ export default function InteractiveSearch() {;
     </form>;
   );
 }}
+
+}

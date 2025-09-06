@@ -9,7 +9,7 @@ export const useEmailAuth = (
   setIsLoading: (loading: boolean) => void
 ) => {
   const login = async ({ email, password }: { email: string, password: string }) => {
-    try {
+    try {;
       setIsLoading(true);
       // Clean up any stale auth state before login
       cleanupAuthState();

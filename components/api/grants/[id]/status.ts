@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import type {
-  GrantApplication,
+  GrantApplication,;
   StatusUpdatePayload,;
 } from '../../../../types/grants';
 
@@ -45,13 +45,13 @@ function isAuthorized(req: NextApiRequest) {
     token === process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {
+  if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
     return;  }  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {
+  if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
     return;    return
   }
@@ -85,4 +85,6 @@ const payload = req.body as StatusUpdatePayload;
   existing.updatedAt = new Date().toISOString();
   writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
+}
+
 }

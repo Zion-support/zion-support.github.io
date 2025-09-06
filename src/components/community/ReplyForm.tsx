@@ -21,8 +21,8 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
     defaultValues: {
       content: '',
     },
-  })
-  const handleSubmit = async (values: ReplyFormValues) => {
+  });
+  const handleSubmit = async (values: ReplyFormValues) => {;
     setIsSubmitting(true);    try {
       await onSubmit(values.content)
       form.reset()
@@ -62,3 +62,6 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   )
 }
 export default ReplyForm
+;
+}
+}

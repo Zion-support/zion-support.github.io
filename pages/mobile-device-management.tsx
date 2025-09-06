@@ -1,7 +1,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
-import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',;
 ;
 export default function MDMPage() {
   const features = [
@@ -37,7 +37,6 @@ export default function MDMPage() {
               <a href="/market-pricing" className="px-8 py-4">Market Pricing</a>
             </div>
           </header>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Key Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -49,7 +48,6 @@ export default function MDMPage() {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Typical Pricing Ranges</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -63,7 +61,6 @@ export default function MDMPage() {
             </div>
             <div className="text-sm text-gray-400 mt-3 text-center">We align with leading platforms like Intune, Jamf, and Workspace ONE.</div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Vendor References</h2>
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
@@ -75,7 +72,6 @@ export default function MDMPage() {
               ))}
             </div>
           </section>
-
           <section className="text-center">
             <div className="inline-flex items-center justify-center gap-3 text-gray-300">
               <Shield className="w-5 h-5 text-purple-400" />
@@ -85,5 +81,5 @@ export default function MDMPage() {
         </div>
       </div>
     </Layout>
-  )
+  );
 };

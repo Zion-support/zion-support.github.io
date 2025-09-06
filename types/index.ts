@@ -1,11 +1,11 @@
-export interface ContactInfo {
+export interface ContactInfo {;
   phone: string;
   email: string;
   address: string;
   site: string;
 }
 
-export interface Service {
+export interface Service {;
   id: string;
   name: string;
   description: string;
@@ -23,7 +23,7 @@ export interface Service {
   popular?: boolean;
 }
 
-export interface ServiceCategory {
+export interface ServiceCategory {;
   title: string;
   description: string;
   count: number;
@@ -32,7 +32,7 @@ export interface ServiceCategory {
   color: string;
 }
 
-export interface SEOProps {
+export interface SEOProps {;
   title: string;
   description: string;
   keywords?: string;
@@ -41,17 +41,17 @@ export interface SEOProps {
   noindex?: boolean;
 }
 
-export interface LoadingState {
+export interface LoadingState {;
   isLoading: boolean;
   error?: string;
 }
 
-export interface AnimationState {
+export interface AnimationState {;
   isLoaded: boolean;
   hasError: boolean;
 }
 
-export interface FormData {
+export interface FormData {;
   name: string;
   email: string;
   company?: string;
@@ -60,7 +60,7 @@ export interface FormData {
   message: string;
 }
 
-export interface Testimonial {
+export interface Testimonial {;
   id: string;
   name: string;
   role: string;
@@ -71,7 +71,7 @@ export interface Testimonial {
   project?: string;
 }
 
-export interface BlogPost {
+export interface BlogPost {;
   id: string;
   title: string;
   excerpt: string;
@@ -88,7 +88,7 @@ export interface BlogPost {
   readTime?: number;
 }
 
-export interface TeamMember {
+export interface TeamMember {;
   id: string;
   name: string;
   role: string;
@@ -103,7 +103,7 @@ export interface TeamMember {
   position?: string;
 }
 
-export interface Project {
+export interface Project {;
   id: string;
   title: string;
   description: string;
@@ -162,13 +162,13 @@ export interface Project {
   }[];
 }
 
-export interface FAQ {
+export interface FAQ {;
   question: string;
   answer: string;
   category?: string;
 }
 
-export interface PricingPlan {
+export interface PricingPlan {;
   id: string;
   name: string;
   price: number;
@@ -182,7 +182,7 @@ export interface PricingPlan {
   description?: string;
 }
 
-export interface NavigationItem {
+export interface NavigationItem {;
   name: string;
   href: string;
   children?: NavigationItem[];
@@ -190,7 +190,7 @@ export interface NavigationItem {
   external?: boolean;
 }
 
-export interface SocialLink {
+export interface SocialLink {;
   name: string;
   href: string;
   icon: string;
@@ -199,17 +199,17 @@ export interface SocialLink {
   url?: string;
 }
 
-export interface FooterLink {
+export interface FooterLink {;
   name: string;
   href: string;
 }
 
-export interface FooterSection {
+export interface FooterSection {;
   title: string;
   links: FooterLink[];
 }
 
-export interface HeroSection {
+export interface HeroSection {;
   title: string;
   subtitle: string;
   cta: {
@@ -225,20 +225,20 @@ export interface HeroSection {
   image?: string;
 }
 
-export interface Feature {
+export interface Feature {;
   title: string;
   description: string;
   icon: string;
   color: string;
 }
 
-export interface Stats {
+export interface Stats {;
   label: string;
   value: string;
   description?: string;
 }
 
-export interface CaseStudy {
+export interface CaseStudy {;
   id: string;
   title: string;
   client: string;
@@ -253,7 +253,7 @@ export interface CaseStudy {
   featured?: boolean;
 }
 
-export interface JobOpening {
+export interface JobOpening {;
   id: string;
   title: string;
   department: string;
@@ -270,7 +270,7 @@ export interface JobOpening {
   };
 }
 
-export interface NewsItem {
+export interface NewsItem {;
   id: string;
   title: string;
   excerpt: string;
@@ -282,7 +282,7 @@ export interface NewsItem {
   featured: boolean;
 }
 
-export interface Event {
+export interface Event {;
   id: string;
   title: string;
   description: string;
@@ -294,7 +294,7 @@ export interface Event {
   image?: string;
 }
 
-export interface Partner {
+export interface Partner {;
   name: string;
   logo: string;
   website: string;
@@ -302,7 +302,7 @@ export interface Partner {
   tier: 'platinum' | 'gold' | 'silver' | 'bronze';
 }
 
-export interface Award {
+export interface Award {;
   title: string;
   organization: string;
   year: number;
@@ -310,7 +310,7 @@ export interface Award {
   image?: string;
 }
 
-export interface Certification {
+export interface Certification {;
   name: string;
   issuer: string;
   date: string;
@@ -319,7 +319,7 @@ export interface Certification {
   image?: string;
 }
 
-export interface Technology {
+export interface Technology {;
   name: string;
   category: 'frontend' | 'backend' | 'database' | 'cloud' | 'mobile' | 'ai' | 'devops';
   proficiency: 'beginner' | 'intermediate' | 'advanced' | 'expert';
@@ -327,7 +327,7 @@ export interface Technology {
   projects: number;
 }
 
-export interface ContactFormData {
+export interface ContactFormData {;
   name: string;
   email: string;
   company?: string;
@@ -340,7 +340,7 @@ export interface ContactFormData {
   preferredContact?: 'email' | 'phone' | 'both';
 }
 
-export interface NewsletterSubscription {
+export interface NewsletterSubscription {;
   email: string;
   interests: string[];
   frequency: 'daily' | 'weekly' | 'monthly';
@@ -348,7 +348,7 @@ export interface NewsletterSubscription {
   subscribedAt: string;
 }
 
-export interface SearchResult {
+export interface SearchResult {;
   id: string;
   title: string;
   description: string;
@@ -358,19 +358,19 @@ export interface SearchResult {
   highlights?: string[];
 }
 
-export interface FilterOption {
+export interface FilterOption {;
   label: string;
   value: string;
   count?: number;
 }
 
-export interface SortOption {
+export interface SortOption {;
   label: string;
   value: string;
   direction: 'asc' | 'desc';
 }
 
-export interface Pagination {
+export interface Pagination {;
   currentPage: number;
   totalPages: number;
   totalItems: number;
@@ -383,7 +383,7 @@ export interface Pagination {
   pages?: number;
 }
 
-export interface APIResponse<T> {
+export interface APIResponse<T> {;
   data: T;
   success: boolean;
   message?: string;
@@ -391,14 +391,14 @@ export interface APIResponse<T> {
   pagination?: Pagination;
 }
 
-export interface ErrorResponse {
+export interface ErrorResponse {;
   success: false;
   message: string;
   errors: string[];
   code?: string;
 }
 
-export interface SuccessResponse<T> {
+export interface SuccessResponse<T> {;
   success: true;
   data: T;
   message?: string;
@@ -407,7 +407,7 @@ export interface SuccessResponse<T> {
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
 
 // Environment
-export interface Environment {
+export interface Environment {;
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_APP_URL?: string;
@@ -416,7 +416,7 @@ export interface Environment {
 }
 
 // Additional interfaces
-export interface User {
+export interface User {;
   id: string;
   email: string;
   name: string;
@@ -454,7 +454,7 @@ export interface User {
   };
 }
 
-export interface Notification {
+export interface Notification {;
   id: string;
   type: 'info' | 'success' | 'warning' | 'error';
   title: string;
@@ -470,7 +470,7 @@ export interface Notification {
   expires?: Date;
 }
 
-export interface BaseComponentProps {
+export interface BaseComponentProps {;
   className?: string;
   children?: React.ReactNode;
   id?: string;
@@ -480,7 +480,7 @@ export interface BaseComponentProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-export interface InputProps {
+export interface InputProps {;
   className?: string;
   children?: React.ReactNode;
   id?: string;
@@ -495,7 +495,7 @@ export interface InputProps {
   required?: boolean;
 }
 
-export interface ApiRequest {
+export interface ApiRequest {;
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   url: string;
   data?: any;
@@ -503,7 +503,7 @@ export interface ApiRequest {
   headers?: Record<string, string>;
 }
 
-export interface PerformanceMetrics {
+export interface PerformanceMetrics {;
   fcp?: number;
   lcp?: number;
   fid?: number;
@@ -511,14 +511,14 @@ export interface PerformanceMetrics {
   ttfb?: number;
 }
 
-export interface AccessibilitySettings {
+export interface AccessibilitySettings {;
   highContrast: boolean;
   fontSize: number;
   reducedMotion: boolean;
   screenReader: boolean;
 }
 
-export interface UserPreferences {
+export interface UserPreferences {;
   theme: 'light' | 'dark' | 'system';
   language: string;
   accessibility: AccessibilitySettings;
@@ -529,7 +529,7 @@ export interface UserPreferences {
   };
 }
 
-export interface CompanyInfo {
+export interface CompanyInfo {;
   name: string;
   tagline: string;
   description: string;
@@ -548,7 +548,7 @@ export interface CompanyInfo {
   certifications: string[];
 }
 
-export interface ErrorInfo {
+export interface ErrorInfo {;
   message: string;
   code?: string;
   details?: any;
@@ -557,7 +557,7 @@ export interface ErrorInfo {
   url?: string;
 }
 
-export interface FormField {
+export interface FormField {;
   name: string;
   label: string;
   type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';
@@ -575,14 +575,14 @@ export interface FormField {
   };
 }
 
-export interface PaginationParams {
+export interface PaginationParams {;
   page: number;
   limit: number;
   sort?: string;
   order?: 'asc' | 'desc';
 }
 
-export interface PaginatedResponse<T> {
+export interface PaginatedResponse<T> {;
   data: T[];
   pagination: {
     page: number;

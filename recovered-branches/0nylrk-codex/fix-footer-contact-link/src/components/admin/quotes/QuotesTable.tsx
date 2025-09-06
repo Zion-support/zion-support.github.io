@@ -17,7 +17,7 @@ interface QuotesTableProps {
   onViewDetails: (quote: QuoteRequest) => void
 }
 
-export const QuotesTable: React.FC<QuotesTableProps> = ({
+export const QuotesTable: React.FC<QuotesTableProps> = ({;
   quotes;
   isArchived = false;
   isLoading;
@@ -97,7 +97,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
-                    
                     {isArchived ? (
                       <>
                         <Button 

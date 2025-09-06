@@ -12,7 +12,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table'
+} from '@/components/ui/table';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'; import {
   Dialog,
   DialogContent,
@@ -267,7 +267,6 @@ export function ReviewsModerationTable({
           ))}
         </TableBody>
       </Table>
-
       {selectedReview && (
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>
           <DialogContent className='max-w-lg'>
@@ -278,7 +277,6 @@ export function ReviewsModerationTable({
                 {format(new Date(selectedReview.created_at), 'MMMM d, yyyy')}
               </DialogDescription>
             </DialogHeader>
-
             <div className='space-y-4'>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center gap-2'>
@@ -311,13 +309,11 @@ export function ReviewsModerationTable({
                 </div>
                 <div>{renderStars(selectedReview.rating)}</div>
               </div>
-
               <div className='border rounded-md p-3 bg-muted/20'>
                 <p className='whitespace-pre-wrap'>
                   {selectedReview.review_text}
                 </p>
               </div>
-
               <div className='space-y-2'>
                 <h4 className='text-sm font-medium'>Additional Ratings</h4>
                 <div className='flex flex-wrap gap-2'>
@@ -350,7 +346,6 @@ export function ReviewsModerationTable({
                   )}
                 </div>
               </div>
-
               {selectedReview.report_count > 0 && (
                 <div className='bg-red-50 border border-red-200 rounded-md p-3'>
                   <h4 className='text-sm font-medium text-red-800'>
@@ -363,7 +358,6 @@ export function ReviewsModerationTable({
                 </div>
               )}
             </div>
-
             <DialogFooter>
               {selectedReview.status === 'pending' && (
                 <>
@@ -415,13 +409,13 @@ export function ReviewsModerationTable({
 }
 })
   return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> </div> if (reviews.length === 0) {"
-  return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div> 
+  return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div>
 }
   return (<div className="flex"> {
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {
   star 
-}/>) ) 
-}</div>) 
+}/>) ) ;
+}</div>) ;
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   reviews.map ( (review) => (<TableRow key= {
@@ -432,7 +426,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }alt= {"
   review.reviewer profile.display name || "" 
 }/>) : (<AvatarFallback> {"
-  review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : <User className=" h-4 w-4"/> 
+  review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : <User className=" h-4 w-4"/>
 }</AvatarFallback>) "
 }</Avatar> <div>) : (<span className=" text-sm font-medium"> {"
   review.reviewer profile?.display name || " User" 
@@ -455,7 +449,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }alt= {"
   selectedReview.reviewer profile.display name || "" 
 }/>) : (<AvatarFallback> {"
-  selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/> 
+  selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>
 }</AvatarFallback>) 
 }</Avatar> <div> </Badge> </div> </div> <div> {
   renderStars (selectedReview.rating) "

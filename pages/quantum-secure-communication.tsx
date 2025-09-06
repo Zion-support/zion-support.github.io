@@ -7,7 +7,7 @@ import {
   DollarSign, Shield, Mail, MapPin, Rocket, Lock,
   Brain, Database, TrendingUp as TrendingUpIcon, Users,
   Target, BarChart, PieChart, Activity, Eye, Key
-} from 'lucide-react',
+} from 'lucide-react',;
 import Button from '../components/ui/Button',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
@@ -58,9 +58,7 @@ export default function QuantumSecureCommunication() {
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/quantum-secure-communication" />
         </Head>
-
         <UltraAdvancedNavigation />
-
         {/* Hero Section */}
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -82,7 +80,6 @@ export default function QuantumSecureCommunication() {
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
-
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -91,7 +88,6 @@ export default function QuantumSecureCommunication() {
               >
                 Quantum-Secure Communication
               </motion.h1>
-
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -100,7 +96,6 @@ export default function QuantumSecureCommunication() {
               >
                 Unbreakable encryption for the <span className="text-purple-400 font-bold">quantum era</span>
               </motion.p>
-
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -109,7 +104,6 @@ export default function QuantumSecureCommunication() {
               >
                 Next-generation communication platform that uses quantum cryptography to provide unbreakable encryption for sensitive communications, ensuring your data remains secure even against quantum computers.
               </motion.p>
-
               {/* Pricing and CTA */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
@@ -138,7 +132,6 @@ export default function QuantumSecureCommunication() {
                     </div>
                   </div>
                 </motion.div>
-
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -156,7 +149,6 @@ export default function QuantumSecureCommunication() {
                   </Button>
                 </motion.div>
               </motion.div>
-
               {/* Key Benefits */}
               <motion.div
                 initial={{ opacity: 0 }}
@@ -180,7 +172,6 @@ export default function QuantumSecureCommunication() {
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-7xl mx-auto">
@@ -200,7 +191,6 @@ export default function QuantumSecureCommunication() {
                 Advanced quantum cryptography and security features for unbreakable communications
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -225,7 +215,6 @@ export default function QuantumSecureCommunication() {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -245,7 +234,6 @@ export default function QuantumSecureCommunication() {
                 Discover how quantum-secure communication protects your most sensitive communications
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
                 <motion.div
@@ -270,7 +258,6 @@ export default function QuantumSecureCommunication() {
             </div>
           </div>
         </section>
-
         {/* Technology & Integrations */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-7xl mx-auto">
@@ -303,7 +290,6 @@ export default function QuantumSecureCommunication() {
                   ))}
                 </div>
               </motion.div>
-
               {/* Integrations */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -335,7 +321,6 @@ export default function QuantumSecureCommunication() {
             </div>
           </div>
         </section>
-
         {/* Market Position & ROI */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -352,7 +337,6 @@ export default function QuantumSecureCommunication() {
                 </span>
               </h2>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -381,7 +365,6 @@ export default function QuantumSecureCommunication() {
                   </div>
                 </div>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -412,7 +395,6 @@ export default function QuantumSecureCommunication() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-4xl mx-auto text-center">
@@ -428,7 +410,6 @@ export default function QuantumSecureCommunication() {
               <p className="text-gray-300 text-xl mb-8 leading-relaxed">
                 Join 1200+ organizations that have already secured their communications with quantum cryptography.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
@@ -447,7 +428,6 @@ export default function QuantumSecureCommunication() {
                     </span>
                   </Button>
                 </motion.div>
-
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -465,7 +445,6 @@ export default function QuantumSecureCommunication() {
                   </Button>
                 </motion.div>
               </div>
-
               <div className="mt-8 text-gray-400">
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</a></p>
                 <p className="mt-2">{contactInfo.address}</p>
@@ -475,5 +454,5 @@ export default function QuantumSecureCommunication() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 };

@@ -59,18 +59,18 @@ function fixUndefinedVariables(content, filePath) {}
   let fixed = content;,
   // Common _React patterns;
   if (content.includes('_React') && !content.includes("import _React")) {"}
-    if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'}
+    if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'};
       fixed = "import _React from 'react';\n" + fixed;",
     }
   }
   // Common Next.js patterns;
-  if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"}
+  if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"};
     fixed = "import { useRouter } from 'next/router';\n" + fixed;",
   }
-  if (content.includes('useState') && !content.includes("import { useState }")) {"}
+  if (content.includes('useState') && !content.includes("import { useState }")) {"};
     fixed = "import { useState } from 'react';\n" + fixed;",
   }
-  if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"}
+  if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"};
     fixed = "import { useEffect } from 'react';\n" + fixed;",
   }
   return fixed;

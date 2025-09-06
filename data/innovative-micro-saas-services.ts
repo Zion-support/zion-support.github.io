@@ -1,4 +1,4 @@
-export interface InnovativeMicroSaasService {
+export interface InnovativeMicroSaasService {;
   id: string;
   name: string;
   tagline: string;
@@ -1014,7 +1014,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     launchDate: '2024-01-01',
     customers: 8,
     rating: 4.9,
-    reviews: 6,
+    reviews: 6,;
   },];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1402,7 +1402,7 @@ export const newInnovativeServices = [
     customers: 12,
     rating: 4.9,
     reviews: 6,
-  },
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',

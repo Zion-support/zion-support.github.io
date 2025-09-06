@@ -43,11 +43,11 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     name: "BambooHR",
     category: "ats",
     description: "HRIS & ATS",
-  },
+  },;
 ];
 
 export function getProviderById(
   id: string,
-): IntegrationProviderMeta | undefined {
+): IntegrationProviderMeta | undefined {;
   return PROVIDERS.find((p) => p.id === id);
 }

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Loader2 } from 'lucide-react'
+import { Loader2 } from 'lucide-react';
 import { useState } from 'react'; import { useState } from 'react'
 interface YoutubeEmbedProps {
   videoId: string,
@@ -39,8 +39,8 @@ export default function YoutubeEmbed({
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
         src={src}
         title={title}
-        loading='lazy'
-        onLoad={() => setLoaded(true)}
+        loading='lazy';
+        onLoad={() => setLoaded(true)};
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen
       />
     </div>

@@ -44,4 +44,5 @@ export default function AITalentMatchingPage() {
       ctaLink="/contact"
     />
   )
-}
+};
+;

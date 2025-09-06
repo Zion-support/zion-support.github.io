@@ -66,7 +66,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     </p>
                   </div>
                 </div>
-
                 <button
                   className='h-8 w-8 flex items-center justify-center'
                   onClick={() => toggleSaved(item.id)}                >
@@ -77,7 +76,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   )}
                 </button>
               </div>
-
               <div className='mt-3 flex flex-wrap gap-1'>
                 {item.badges.map((badge, index) => (
                   <Badge
@@ -96,7 +94,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>
                   </div>
                 </div>
-                
                 <button 
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item.id)}
@@ -108,7 +105,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   )}
                 </button>
               </div>
-              
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
                   <Badge 
@@ -119,9 +115,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   </Badge>
                 ))}
               </div>
-
               <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
-
               <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
                 {item.location && (
                   <div className='flex items-center gap-1'>
@@ -173,7 +167,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 )}
               </div>
             </div>
-
             <div className='border-t border-border p-3 flex justify-end'>
               <Button
                 size='sm'
@@ -191,6 +184,10 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
         </Card>
       ))}
     </div>
-  )
-}
+  );
+};
 ;
+}
+}
+}
+}

@@ -36,7 +36,6 @@ export const AppTestimonials: React.FC = () => {
             Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
@@ -67,5 +66,5 @@ export const AppTestimonials: React.FC = () => {
         </div>
       </div>
     </section>
-  )
+  );
 };

@@ -22,4 +22,4 @@ export default function HealthcareAISolutions() {
 			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
 		/>
 	)
-}
+};

@@ -19,7 +19,7 @@
 export default function ResumePreviewPage({
   initialData,
   versions = [],
-}: ResumePreviewPageProps) {
+}: ResumePreviewPageProps) {;
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
     versions[0]?.id || 'current'
@@ -43,7 +43,6 @@ export default function ResumePreviewPage({
           >
             <option value='light'>Light</option>
             <option value='dark'>Dark</option>          </select>
-
           {versions.length > 0 && (
             <>
               <label className='text-sm ml-4'>Version</label>
@@ -62,19 +61,17 @@ export default function ResumePreviewPage({
           )}
         </div>
       </div>
-
       <PdfExportButton
         targetRef={targetRef}
         fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
       />
-
       <div className='mx-auto'>
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
   );
 
-export const getServerSideProps: GetServerSideProps = async ctx => {
+export const getServerSideProps: GetServerSideProps = async ctx => {;
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();
   const user = await (supabase as any).auth.getUser?.();
 
@@ -140,10 +137,12 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
         title: 'AI Marketplace',
         description: 'Talent dashboard with export features.',
       },
-    ],
+    ],;
   };
 
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 
 return { props: { initialData, versions } };
 };
+
+}

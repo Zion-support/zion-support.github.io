@@ -132,5 +132,5 @@ const WhitepaperViewPage: React.FC = () => {
   )
 },
 
-export default WhitepaperViewPage,
+export default WhitepaperViewPage,;
 ;

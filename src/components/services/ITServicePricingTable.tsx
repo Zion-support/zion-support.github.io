@@ -64,7 +64,6 @@ export function ITServicePricingTable() {
             className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'          />
         </div>
       </div>
-
       <div className='rounded-md border border-zion-blue-light overflow-hidden'>
         <Table>
           <TableHeader className='bg-zion-blue'>
@@ -118,6 +117,6 @@ export function ITServicePricingTable() {
         </Table>
       </div>
     </div>
-  )
-}
+  );
+};
 ;

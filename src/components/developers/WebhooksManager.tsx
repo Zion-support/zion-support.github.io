@@ -116,8 +116,8 @@ export function WebhooksManager() {
   const handleDeleteWebhook = async (webhookId: string) => {
     await deleteWebhook(webhookId)
     setShowDeleteConfirm(null) }
-  const handleTestWebhook = async (webhookId: string) => {
-    await testWebhook(webhookId, testEventType)
+  const handleTestWebhook = async (webhookId: string) => {;
+    await testWebhook(webhookId, testEventType);
     setShowTestResult(true);  const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
   }
@@ -192,14 +192,12 @@ export function WebhooksManager() {
           account.
         </CardDescription>
       </CardHeader>
-
       <CardContent>
         <div className='flex justify-between items-center mb-6'>
           <p className='text-sm text-zinc-400'>
             You have {webhooks.length}{' '}
             {webhooks.length === 1 ? 'webhook' : 'webhooks'}
           </p>
-
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
               <Button variant='default'>
@@ -213,7 +211,6 @@ export function WebhooksManager() {
                   Add a webhook endpoint to receive event notifications.
                 </DialogDescription>
               </DialogHeader>
-
               <div className='space-y-4 py-4'>
                 <div className='space-y-2'>
                   <Label htmlFor='webhook-name'>Webhook Name</Label>
@@ -224,7 +221,6 @@ export function WebhooksManager() {
                     placeholder='e.g. Application Notifications'
                     className='bg-zinc-800 border-zinc-700'                  />
                 </div>
-
                 <div className='space-y-2'>
                   <Label htmlFor='webhook-url'>Endpoint URL</Label>
                   <Input
@@ -238,7 +234,6 @@ export function WebhooksManager() {
                     occur.
                   </p>
                 </div>
-
                 <div className='space-y-2'>
                   <Label htmlFor='webhook-secret'>Secret Key (Optional)</Label>
                   <Input
@@ -254,7 +249,6 @@ export function WebhooksManager() {
                     and secure.
                   </p>
                 </div>
-
                 <div className='space-y-2'>
                   <Label>Event Types</Label>
                   <div className='grid gap-2 pt-2'>
@@ -287,7 +281,6 @@ export function WebhooksManager() {
                   </div>
                 </div>
               </div>
-
                 <Button
                   variant='outline'
                   onClick={() => {
@@ -314,7 +307,6 @@ export function WebhooksManager() {
             </DialogContent>
           </Dialog>
         </div>
-
         {/* Webhooks List */}
         <div className='space-y-4'>
           {loading ? (
@@ -344,7 +336,6 @@ export function WebhooksManager() {
                       <span className='max-w-md truncate'>{webhook.url}</span>
                     </div>
                   </div>
-
                   <div className='flex items-center space-x-2'>
                     <div className='flex items-center mr-2'>
                       <Switch
@@ -357,7 +348,6 @@ export function WebhooksManager() {
                         {webhook.is_active ? 'Active' : 'Inactive'}
                       </span>
                     </div>
-
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button
@@ -386,7 +376,6 @@ export function WebhooksManager() {
                     </DropdownMenu>
                   </div>
                 </div>
-
                 <div className='mt-3 flex flex-wrap gap-2'>
                   {webhook.event_types.map((event: WebhookEventType) => (
                     <Badge
@@ -400,7 +389,6 @@ export function WebhooksManager() {
                     </Badge>
                   ))}
                 </div>
-
                 <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>
                   <span>
                     Created:{' '}
@@ -424,7 +412,6 @@ export function WebhooksManager() {
           )}
         </div>
       </CardContent>
-
       <CardFooter className='justify-between border-t border-zinc-800 py-4'>
         <div className='text-xs text-zinc-500'>
           Webhooks will be sent with HTTPS POST requests to your endpoint.
@@ -432,7 +419,6 @@ export function WebhooksManager() {
         <Button variant='outline' size='sm' onClick={fetchWebhooks}>
           <RefreshCw size={14} className='mr-1' /> Refresh        </Button>
       </CardFooter>
-
       {/* Test Webhook Dialog */}
       <Dialog
         open={showTestDialog !== null}
@@ -444,7 +430,6 @@ export function WebhooksManager() {
         <Button variant="outline" size="sm" onClick={fetchWebhooks}>
           <RefreshCw size={14} className="mr-1" /> Refresh
       </CardFooter>
-
       {/* Test Webhook Dialog */}
       <Dialog
         open={showTestDialog !== null}
@@ -475,7 +460,6 @@ export function WebhooksManager() {
               Send a test webhook to your endpoint.
             </DialogDescription>
           </DialogHeader>
-
           {!showTestResult ? (
             <>
               <div className='space-y-4 py-4'>
@@ -508,7 +492,6 @@ export function WebhooksManager() {
                   </p>
                 </div>
               </div>
-
               <DialogFooter>
                 <Button
                   variant='outline'
@@ -523,7 +506,6 @@ export function WebhooksManager() {
                 >                  Send Test                  </p>
                 </div>
               </div>
-              
               <DialogFooter>
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>
                   Cancel
@@ -559,12 +541,11 @@ export function WebhooksManager() {
                       {testResult?.status} {testResult?.statusText}
                     </Badge>
                   </div>
-
                   <div className='space-y-2 mt-4'>
                     <Label>Response Body</Label>
                     <ScrollArea className='h-[200px] rounded border border-zinc-800 bg-black p-4'>
                       <pre className='text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all'>
-                        {testResult?.responseBody || 'No response body'}                      </pre>                  
+                        {testResult?.responseBody || 'No response body'}                      </pre>
                   <div className="space-y-2 mt-4">
                     <Label>Response Body</Label>
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
@@ -574,7 +555,6 @@ export function WebhooksManager() {
                   </div>
                 </div>
               </div>
-
                 <Button
                   variant='default'
                   onClick={() => {
@@ -600,7 +580,6 @@ export function WebhooksManager() {
           )}
         </DialogContent>
       </Dialog>
-
       {/* Delete Webhook Confirmation Dialog */}
       <AlertDialog
         open={showDeleteConfirm !== null}
@@ -680,7 +659,7 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
 }/> <Label htmlFor= {
   event.value "
 }className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" > </Label> </div>) ) 
-}</div> </div> </div> <DialogFooter> 
+}</div> </div> </div> <DialogFooter>
 }> Cancel </Button> <Button onClick={
   handleCreateWebhook 
 }disabled= {"
@@ -762,3 +741,4 @@ clearTestResult ()
 }'"  )
 }
 ;
+}

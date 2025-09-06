@@ -143,7 +143,6 @@ export default function BookBuilder() {
           </button>
         </div>
       </div>
-
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-4">
           <h2 className="font-semibold flex items-center gap-2">
@@ -186,7 +185,6 @@ export default function BookBuilder() {
           </div>
           <div className="pt-2">{coverPreview}</div>
         </div>
-
         <div className="space-y-4">
           <h2 className="font-semibold flex items-center gap-2">
             <Settings className="w-4 h-4" /> Visual Elements
@@ -214,7 +212,6 @@ export default function BookBuilder() {
           </div>
         </div>
       </section>
-
       <section className="space-y-4">
         <h2 className="font-semibold">Chapters</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -234,7 +231,6 @@ export default function BookBuilder() {
           ))}
         </div>
       </section>
-
       <section className="space-y-2">
         <h2 className="font-semibold">Quote Callouts</h2>
         <div className="space-y-2">
@@ -265,5 +261,5 @@ export default function BookBuilder() {
         </div>
       </section>
     </div>
-  )
+  );
 };

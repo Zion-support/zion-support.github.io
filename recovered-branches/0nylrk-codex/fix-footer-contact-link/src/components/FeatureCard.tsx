@@ -26,6 +26,6 @@ export function FeatureCard({
         <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>
         <p className="text-zion-slate-light">{description}</p>
       </div>
-    </div>
+    </div>;
   );
 }

@@ -159,7 +159,6 @@ export function InterviewRequestForm({
             </p>
           </div>
         </div>
-
         <FormField
           control={form.control}
           name='title'
@@ -252,7 +251,6 @@ export function InterviewRequestForm({
             )}
           />
         </div>
-
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
             control={form.control}
@@ -320,7 +318,6 @@ export function InterviewRequestForm({
             )}
           />
         </div>
-
         {form.watch('platform') !== 'in-app' && (
           <FormField
             control={form.control}
@@ -385,8 +382,8 @@ export function InterviewRequestForm({
 })
 toast ({
 }finally {
-  setIsSubmitting (false) 
-}"
+  setIsSubmitting (false) ;
+}";
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";"

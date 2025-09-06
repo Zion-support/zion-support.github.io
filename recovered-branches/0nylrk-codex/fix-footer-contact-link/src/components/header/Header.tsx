@@ -11,7 +11,7 @@ import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
 import {generateSearchSuggestions} from "@/data/marketplaceData";
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
-export interface HeaderProps {
+export interface HeaderProps {;
   hideLogin?: boolean;
   customLogo?: string;
   customTheme?: {
@@ -21,7 +21,7 @@ export interface HeaderProps {
   }
 }
 
-export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
+export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
   const navigate = useNavigate();
@@ -57,7 +57,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     >
       <div className="container flex h-16 items-center px-4 sm:px-6">
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
-
         <div className="ml-6 flex-1">
           <MainNavigation />
         </div>
@@ -68,7 +67,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             searchSuggestions={searchSuggestions}
           />
         </form>
-
         <div className="flex items-center gap-2">
           <LanguageSelector />
           {!hideLogin && <UserMenu />}

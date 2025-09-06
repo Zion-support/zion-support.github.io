@@ -20,7 +20,6 @@ export function ComparisonSection() {
             traditional providers
           </p>
         </div>
-
         <div className='max-w-4xl mx-auto'>
           <div className='bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden'>
             <Table>
@@ -100,7 +99,6 @@ export function ComparisonSection() {
               </TableBody>
             </Table>
           </div>
-
           <div className='mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20'>
             <div className='flex items-start'>
               <CheckCircle2 className='mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1' />
@@ -115,7 +113,6 @@ export function ComparisonSection() {
                 </span>
               </p>
             </div>
-
             <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap'>              Calculate Your Savings          <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">
             <div className="flex items-start">
               <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
@@ -125,7 +122,6 @@ export function ComparisonSection() {
                 <span className="block text-sm text-zion-slate-light mt-1">Results may vary based on specific requirements and service levels</span>
               </p>
             </div>
-            
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
             </Button>
           </div>
@@ -133,4 +129,6 @@ export function ComparisonSection() {
       </div>
     </section>
   )
+};
+;
 }

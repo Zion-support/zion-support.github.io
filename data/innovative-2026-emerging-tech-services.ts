@@ -541,10 +541,10 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       customers: 60,
       rating: 4.9,
       reviews: 30,
-    },
+    },;
   ];
 
-export const getPopularEmergingTechServices = () => {
+export const getPopularEmergingTechServices = () => {;
   return innovative2026EmergingTechServices.filter(service => service.popular);
 };
 // DNA Computing Platform realImplementation: true;
@@ -584,7 +584,7 @@ reviews: 30
 }];
 export const getEmergingTechServicesByCategory = (category: string) => {
   return innovative2026EmergingTechServices.filter(service =>
-    service.category.toLowerCase().includes(category.toLowerCase())
+    service.category.toLowerCase().includes(category.toLowerCase());
   );
 };
 
@@ -592,13 +592,13 @@ export const getEmergingTechServicesByPriceRange = (
   minPrice: number,
   maxPrice: number
 ) => {
-  return innovative2026EmergingTechServices.filter(service => {
+  return innovative2026EmergingTechServices.filter(service => {;
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
     return price >= minPrice && price <= maxPrice;
   });};
 
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return innovative2026EmergingTechServices.filter(service => {
+  return innovative2026EmergingTechServices.filter(service => {;
     const price = parseInt(service.price.replace('$', '').replace(, ''));
     return price >= minPrice && price <= maxPrice
   })

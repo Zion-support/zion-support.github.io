@@ -17,8 +17,8 @@ import {
   Globe,
   Lock,
   BarChart3,
-  Calendar,
-  Target,;} from 'lucide-react';import { 
+  Calendar,;
+  Target,;} from 'lucide-react';import { ;
   Brain;
   Monitor, 
   Search, 
@@ -409,7 +409,7 @@ export default function MicroSaasServicesPage() {
       marketPrice: '$19-129/month',
       competitors: ['Buffer', 'Hootsuite', 'Later'],
       website: 'https://social.ziontech.ai',
-      demo: 'https://demo.social.ziontech.ai',
+      demo: 'https://demo.social.ziontech.ai',;
     },  ];      demo: 'https://demo.social.ziontech.ai'
     }
   ];
@@ -514,13 +514,11 @@ export default function MicroSaasServicesPage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>
             <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />
@@ -534,13 +532,11 @@ export default function MicroSaasServicesPage() {
             modern businesses. From AI-powered content generation to
             enterprise-grade performance monitoring, we deliver professional
             solutions with competitive pricing and exceptional value.          </p>      </Head>
-
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
         <div className="absolute inset-0 bg-grid opacity-10" />
-        
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
             <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
@@ -555,7 +551,6 @@ export default function MicroSaasServicesPage() {
           </p>
         </div>
       </section>
-
       {/* Market Overview */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -568,7 +563,6 @@ export default function MicroSaasServicesPage() {
               strong demand and proven business models.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {marketInsights.map((insight, index) => (
               <Card
@@ -594,7 +588,6 @@ export default function MicroSaasServicesPage() {
               Our services are positioned competitively in growing markets with strong demand and proven business models.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {marketInsights.map((insight, index) => (
               <Card
@@ -615,7 +608,6 @@ export default function MicroSaasServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -628,7 +620,6 @@ export default function MicroSaasServicesPage() {
               with professional-grade features and competitive pricing.
             </p>
           </div>
-
           <div className='space-y-16'>
             {microSaasServices.map((service, index) => (
               <div
@@ -651,7 +642,6 @@ export default function MicroSaasServicesPage() {
                         <p className='text-gray-400'>{service.description}</p>
                       </div>
                     </div>
-
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
                       <div>
                         <h4 className='text-lg font-semibold text-white mb-3 flex items-center'>
@@ -670,7 +660,6 @@ export default function MicroSaasServicesPage() {
               Each service is designed to solve specific business challenges with professional-grade features and competitive pricing.
             </p>
           </div>
-
           <div className="space-y-16">
             {microSaasServices.map((service, index) => (
               <div key={service.id} className="bg-gray-900/50 rounded-2xl p-8 border border-gray-800">
@@ -686,7 +675,6 @@ export default function MicroSaasServicesPage() {
                         <p className="text-gray-400">{service.description}</p>
                       </div>
                     </div>
-
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
@@ -702,7 +690,6 @@ export default function MicroSaasServicesPage() {
                           ))}
                         </ul>
                       </div>
-
                       <div>
                         <h4 className='text-lg font-semibold text-white mb-3 flex items-center'>
                           <Target className='w-5 h-5 mr-2 text-cursor-blue' />
@@ -726,7 +713,6 @@ export default function MicroSaasServicesPage() {
                         </ul>
                       </div>
                     </div>
-
                     <div className='flex flex-wrap gap-4'>
                       <Button
                         href={service.website}
@@ -750,14 +736,12 @@ export default function MicroSaasServicesPage() {
                       </Button>
                     </div>
                   </div>
-
                   {/* Pricing & Market Info */}
                   <div className='lg:col-span-1'>
                     <div className='bg-gray-800/50 rounded-xl p-6 border border-gray-700'>
                       <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
                         <BarChart3 className='w-5 h-5 mr-2 text-cursor-blue' />
                       </h4>
-
                       <div className='space-y-4'>
                         <div>
                           <p className='text-sm text-gray-400 mb-1'>
@@ -767,7 +751,6 @@ export default function MicroSaasServicesPage() {
                             {service.marketPrice}
                           </p>
                         </div>
-
                         <div>
                           <p className='text-sm text-gray-400 mb-1'>
                             Our Pricing
@@ -789,7 +772,6 @@ export default function MicroSaasServicesPage() {
                               )
                             )}                          </div>
                         </div>
-
                         <div>                          <p className="text-sm text-gray-400 mb-1">Our Pricing</p>
                           <div className="space-y-2">
                             {Object.entries(service.pricing).map(([tier, details]) => (
@@ -799,7 +781,6 @@ export default function MicroSaasServicesPage() {
                               </div>
                             ))}
                         </div>
-
                         <div>
                           <p className='text-sm text-gray-400 mb-1'>
                             Key Competitors
@@ -831,7 +812,6 @@ export default function MicroSaasServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Our Services */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -844,7 +824,6 @@ export default function MicroSaasServicesPage() {
               deliver exceptional value for your business.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             <Card className='card-hover border-gradient-blue text-center'>
               <div className='p-6'>
@@ -859,7 +838,6 @@ export default function MicroSaasServicesPage() {
                 </p>
               </div>
             </Card>
-
             <Card className='card-hover border-gradient-blue text-center'>
               <div className='p-6'>
                 <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>
@@ -873,7 +851,6 @@ export default function MicroSaasServicesPage() {
                 </p>
               </div>
             </Card>
-
             <Card className='card-hover border-gradient-blue text-center'>
               <div className='p-6'>
                 <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>
@@ -887,7 +864,6 @@ export default function MicroSaasServicesPage() {
                 </p>
               </div>
             </Card>
-
             <Card className='card-hover border-gradient-blue text-center'>
               <div className='p-6'>
                 <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>
@@ -904,7 +880,6 @@ export default function MicroSaasServicesPage() {
               We combine professional-grade features with competitive pricing to deliver exceptional value for your business.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="card-hover border-gradient-blue text-center">
               <div className="p-6">
@@ -915,7 +890,6 @@ export default function MicroSaasServicesPage() {
                 <p className="text-gray-400 text-sm">Enterprise-grade features and reliability at micro SaaS prices</p>
               </div>
             </Card>
-
             <Card className="card-hover border-gradient-blue text-center">
               <div className="p-6">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center">
@@ -925,7 +899,6 @@ export default function MicroSaasServicesPage() {
                 <p className="text-gray-400 text-sm">Market-competitive pricing with better value than alternatives</p>
               </div>
             </Card>
-
             <Card className="card-hover border-gradient-blue text-center">
               <div className="p-6">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center">
@@ -935,7 +908,6 @@ export default function MicroSaasServicesPage() {
                 <p className="text-gray-400 text-sm">Professional support and guidance for your business needs</p>
               </div>
             </Card>
-
             <Card className="card-hover border-gradient-blue text-center">
               <div className="p-6">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center">
@@ -948,7 +920,6 @@ export default function MicroSaasServicesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-dots opacity-10' />

@@ -18,11 +18,10 @@ export function LoginCard() {
           </Link>
         </p>
       </div>
-
       <div className="bg-zion-blue-dark rounded-lg p-6">
         <LoginForm />
         <SocialLogin />
       </div>
-    </div>
+    </div>;
   );
 }

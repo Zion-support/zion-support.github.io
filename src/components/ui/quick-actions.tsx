@@ -31,8 +31,8 @@ export function QuickActions() {
   }
 
   const [isVisible, setIsVisible] = useState(false)
-  const [isProcessing, setIsProcessing] = useState<string | null>(null)
-  const executeAction = async (actionId: string, action: () => void) => {
+  const [isProcessing, setIsProcessing] = useState<string | null>(null);
+  const executeAction = async (actionId: string, action: () => void) => {;
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {

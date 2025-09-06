@@ -1,4 +1,4 @@
-export interface InnovativeAIService {
+export interface InnovativeAIService {;
   id: string;
   name: string;
   tagline: string;
@@ -429,7 +429,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     reviews: 220,
     marketSize: '$15B AI governance market',
     growthRate: '28% annually',
-  },
+  },;
 ];      'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'
     ];
     integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'];

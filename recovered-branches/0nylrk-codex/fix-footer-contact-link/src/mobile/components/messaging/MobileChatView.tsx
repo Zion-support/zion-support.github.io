@@ -29,7 +29,7 @@ interface MobileChatViewProps {
   onSendMessage: (content: string) => void
 }
 
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
   const [newMessage, setNewMessage] = useState("");
   const navigate = useNavigate();
   
@@ -74,7 +74,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           <Button variant="ghost" size="icon" onClick={onBack}>
             <ChevronLeft className="h-5 w-5" />
           </Button>
-          
           <div className="flex items-center flex-1 gap-3 mx-2">
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
@@ -87,23 +86,19 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               </p>
             </div>
           </div>
-          
           <div className="flex">
             <Button variant="ghost" size="icon" onClick={startAudioCall}>
               <Phone className="h-5 w-5" />
             </Button>
-            
             <Button variant="ghost" size="icon" onClick={startVideoCall}>
               <Video className="h-5 w-5" />
             </Button>
-            
             <Button variant="ghost" size="icon">
               <MoreVertical className="h-5 w-5" />
             </Button>
           </div>
         </div>
       </header>
-      
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message) => (
           <div 
@@ -137,13 +132,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </div>
         ))}
       </div>
-      
       <div className="sticky bottom-0 bg-background border-t border-border p-2">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon">
             <PaperclipIcon className="h-5 w-5" />
           </Button>
-          
           <Input
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}

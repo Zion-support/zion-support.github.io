@@ -1,4 +1,4 @@
-export type Real2036InnovativeService = {
+export type Real2036InnovativeService = {;
   id: string;
   name: string;
   tagline: string;
@@ -639,7 +639,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Logistics optimization',
       'Risk management',
     ],
-  },
+  },;
 ];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
     ];
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';

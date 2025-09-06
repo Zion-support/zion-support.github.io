@@ -79,7 +79,7 @@ const talentsData = [
   }
 ];
 
-export function MobileBrowse() {
+export function MobileBrowse() {;
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
@@ -95,7 +95,6 @@ export function MobileBrowse() {
         title={browseType === "jobs" ? "Browse Jobs" : "Browse Talents"}
         showBack
       />
-      
       <div className="flex justify-center my-3 px-4">
         <div className="inline-flex rounded-full border border-border p-1">
           <Button
@@ -114,9 +113,7 @@ export function MobileBrowse() {
           </Button>
         </div>
       </div>
-      
       <BrowseFilters type={browseType} />
-      
       <div className="py-4 px-4">
         <BrowseCards
           items={browseType === "jobs" ? jobsData : talentsData}
@@ -124,7 +121,6 @@ export function MobileBrowse() {
           onViewDetails={handleViewDetails}
         />
       </div>
-      
       <BottomNavigation />
     </div>
   )

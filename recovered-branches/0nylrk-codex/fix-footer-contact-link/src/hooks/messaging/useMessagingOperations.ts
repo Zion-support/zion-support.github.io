@@ -12,7 +12,7 @@ type UserWithProfile = UserProfile | UserDetails | null;
  */
 export function useMessagingOperations(user: UserWithProfile) {
   // State management
-  const {
+  const {;
     messages;
     setMessages;
     activeMessages;

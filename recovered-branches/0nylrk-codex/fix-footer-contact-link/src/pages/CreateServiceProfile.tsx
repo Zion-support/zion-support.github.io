@@ -12,9 +12,9 @@ export default function CreateServiceProfile() {
             to get discovered on the Zion Marketplace.
           </p>
         </div>
-        
         <ServiceProviderRegistrationForm />
       </div>
     </div>
   )
 }
+;

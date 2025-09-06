@@ -24,7 +24,7 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Alert, AlertDescription } from '@/components/ui/alert'
-import Link from 'next/link'
+import Link from 'next/link';
 import { Checkbox } from '@/components/ui/checkbox';// Form validation schema
 const loginSchema = z.object({
   email: z
@@ -56,7 +56,7 @@ export function LoginForm() {
       setIsSubmitting(true),
       // Pass email and password to the login function
       const result = await login(data.email, data.password, data.rememberMe)
-      if (result?.error) {
+      if (result?.error) {;
         let errorMessage = 'Login failed. Please try again.'; // Default generic error
         if (result?.error && result?.error?.message) {
           if (

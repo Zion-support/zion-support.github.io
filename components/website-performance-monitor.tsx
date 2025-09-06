@@ -11,10 +11,10 @@ import {
   ArrowRight,
   Monitor,
   Gauge,
-  BarChart3,
+  BarChart3,;
   Clock,;
 } from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
-export default function WebsitePerformanceMonitorPage() {
+export default function WebsitePerformanceMonitorPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
 
@@ -260,13 +260,11 @@ export default function WebsitePerformanceMonitorPage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>
             <Activity className='w-4 h-4 mr-2' />
@@ -294,13 +292,11 @@ export default function WebsitePerformanceMonitorPage() {
               ) : (
                 <>
                   <Zap className='w-5 h-5 mr-2' />                  Analyze Website      </Head>
-
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.06),transparent_50%)]" />
         <div className="absolute inset-0 bg-grid opacity-10" />
-        
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
             <Activity className="w-4 h-4 mr-2" />
@@ -344,7 +340,6 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -357,7 +352,6 @@ export default function WebsitePerformanceMonitorPage() {
               to keep your website fast and reliable.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -386,7 +380,6 @@ export default function WebsitePerformanceMonitorPage() {
               Our performance monitoring platform provides everything you need to keep your website fast and reliable.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <Card
@@ -415,7 +408,6 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
         </div>
       </section>
-
       {/* Metrics Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -428,7 +420,6 @@ export default function WebsitePerformanceMonitorPage() {
               and user experience.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {metrics.map((metric, index) => (
               <Card
@@ -448,7 +439,6 @@ export default function WebsitePerformanceMonitorPage() {
               Track all the metrics that matter for your website's performance and user experience.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {metrics.map((metric, index) => (
               <Card
@@ -464,7 +454,6 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
         </div>
       </section>
-
       {/* Demo Analysis Section */}
       {analysisResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -478,7 +467,6 @@ export default function WebsitePerformanceMonitorPage() {
                 for your own website.
               </p>
             </div>
-
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               {/* Score Card */}
               <Card className='border-gradient-blue text-center'>
@@ -507,7 +495,6 @@ export default function WebsitePerformanceMonitorPage() {
                   Good performance with room for improvement
                 </p>
               </Card>
-
               {/* Metrics Card */}
               <Card className='border-gradient-blue'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -554,7 +541,6 @@ export default function WebsitePerformanceMonitorPage() {
                 Here's a sample analysis of a website. Get real-time insights for your own website.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Score Card */}
               <Card className="border-gradient-blue text-center">
@@ -574,7 +560,6 @@ export default function WebsitePerformanceMonitorPage() {
                 </div>
                 <p className="text-gray-400">Good performance with room for improvement</p>
               </Card>
-
               {/* Metrics Card */}
               <Card className="border-gradient-blue">
                 <h3 className="text-2xl font-bold mb-6 text-white">Core Web Vitals</h3>
@@ -606,7 +591,6 @@ export default function WebsitePerformanceMonitorPage() {
                 </div>
               </Card>
             </div>
-
             {/* Recommendations */}
             <Card className='border-gradient-blue mt-8'>
               <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -642,14 +626,12 @@ export default function WebsitePerformanceMonitorPage() {
               needs.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the monitoring plan that best fits your website performance needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <Card
@@ -681,7 +663,6 @@ export default function WebsitePerformanceMonitorPage() {
                   </div>
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -691,7 +672,6 @@ export default function WebsitePerformanceMonitorPage() {
                       <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -700,7 +680,6 @@ export default function WebsitePerformanceMonitorPage() {
                     </li>
                   ))}
                 </ul>
-
                 <Button
                   href='/contact'
                   size='lg'
@@ -718,7 +697,6 @@ export default function WebsitePerformanceMonitorPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />

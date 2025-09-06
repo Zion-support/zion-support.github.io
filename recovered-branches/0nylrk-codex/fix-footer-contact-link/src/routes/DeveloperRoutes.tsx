@@ -20,4 +20,4 @@ export default function DeveloperRoutes() {
       <Route path="/docs/errors" element={<ApiErrorCodes />} />
     </Routes>
   )
-}
+};

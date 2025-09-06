@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { GradientHeading } from '@/components/GradientHeading'
 import { ProductListingCard } from '@/components/ProductListingCard'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input'; import { useRouter } from 'next/router'
 import { GradientHeading } from "@/components/GradientHeading"
 import { ProductListingCard } from "@/components/ProductListingCard"
@@ -166,8 +166,8 @@ export function DynamicListingPage({
 
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true)
-    const listing = allListings.find(item => item.id === listingId)
-    setTimeout(() => {
+    const listing = allListings.find(item => item.id === listingId);
+    setTimeout(() => {;
       setIsLoading(false);      if (listing) {
         toast({
           title: 'Quote Requested',
@@ -200,14 +200,12 @@ export function DynamicListingPage({
             {description}
           </p>
         </div>
-
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-6'>
           <div className='lg:col-span-1'>
             <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6'>
               <h3 className='text-lg font-medium text-white mb-4 flex items-center'>
                 <Filter className='mr-2 h-5 w-5' /> Filters
               </h3>
-
               <div className='mb-6'>
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>
                   Categories
@@ -230,7 +228,6 @@ export function DynamicListingPage({
                   ))}
                 </div>
               </div>
-
               {brandOptions.length > 0 && (
                 <div className='mb-6'>
                   <label className='text-sm font-medium text-zion-slate-light block mb-2'>
@@ -273,7 +270,6 @@ export function DynamicListingPage({
                   }
                   className='bg-zion-blue border border-zion-blue-light text-white'                />
               </div>
-
               {availabilityOptions.length > 0 && (
                 <div className='mb-6'>
                   <label className='text-sm font-medium text-zion-slate-light block mb-2'>
@@ -325,7 +321,6 @@ export function DynamicListingPage({
                   </div>
                 </div>
               </div>
-
               <div className='mb-6'>
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>
                   Minimum Rating
@@ -362,7 +357,6 @@ export function DynamicListingPage({
                   ))}
                 </div>
               </div>
-
               <Button
                 variant='outline'
                 className='w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10'
@@ -381,7 +375,6 @@ export function DynamicListingPage({
               </Button>
             </div>
           </div>
-
           <div className='lg:col-span-3'>
             <div className='bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light'>
               <div className='flex flex-col md:flex-row gap-4'>
@@ -397,7 +390,6 @@ export function DynamicListingPage({
                     className='pl-10 bg-zion-blue border border-zion-blue-light text-white'
                   />
                 </div>
-
                 <div className='flex items-center gap-2 ml-auto'>
                   <Select value={sortOption} onValueChange={setSortOption}>
                     <SelectTrigger className='w-[150px] bg-zion-blue border border-zion-blue-light text-white'>
@@ -433,7 +425,6 @@ export function DynamicListingPage({
                 </div>
               </div>
             </div>
-
             <div className='mb-6'>
               <p className='text-zion-slate-light'>
                 Showing {filteredListings.length} results
@@ -442,7 +433,6 @@ export function DynamicListingPage({
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
-
             {isLoading ? (
               <div
                 className={
@@ -535,7 +525,7 @@ return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <di
   (value: string) => setSelectedAvailability (value) "
 }> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) ) 
 }</SelectContent> </Select> </div>) "
-}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label> 
+}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label>
 }aria-pressed= {
   selectedRating === rating 
 }className= {

@@ -7,7 +7,7 @@ import {
   MapPin,
   Globe,
   Github,
-  Linkedin,
+  Linkedin,;
   Twitter,;
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 const EnhancedFooter: React.FC = () => {
@@ -91,7 +91,6 @@ const EnhancedFooter: React.FC = () => {
               platform. Empowering businesses with cutting-edge AI, quantum
               computing, and digital transformation.
             </p>
-
             {/* Contact Info */}
             <div className='space-y-3'>
               <div className='flex items-center space-x-3 text-white/70'>
@@ -119,7 +118,6 @@ const EnhancedFooter: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Footer Sections */}
           {footerSections.map(section => (
             <div key={section.title}>
@@ -146,14 +144,12 @@ const EnhancedFooter: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
             {/* Copyright */}
             <div className='text-white/60 text-sm'>              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-
             {/* Social Links */}
             <div className='flex items-center space-x-4'>
               {socialLinks.map(social => (        <div className="pt-8 border-t border-white/10">
@@ -161,7 +157,6 @@ const EnhancedFooter: React.FC = () => {
             {/* Copyright */}
             <div className="text-white/60 text-sm">
             </div>
-
             {/* Social Links */}
             <div className='flex items-center space-x-4'>
               {socialLinks.map(social => (

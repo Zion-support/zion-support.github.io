@@ -100,7 +100,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     roi: 'Enterprises see 4000%+ ROI through unhackable security and reduced breach risks.',
     competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne'],
     marketSize: '$200B cybersecurity market',    features: [
-      'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
+      'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration';
     ];
     popular: true;
     icon: '🔒';

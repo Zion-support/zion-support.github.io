@@ -4,7 +4,7 @@ import ProgressBar from '../../components/learn/ProgressBar';
 import Quiz from '../../components/learn/Quiz';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
-export default function CourseView() {
+export default function CourseView() {;
   const router = useRouter();
   const { courseId } = router.query as { courseId: string };
   const [course, setCourse] = useState<any>(null);
@@ -83,7 +83,6 @@ export default function CourseView() {
             </div>
           </div>
         </div>
-
         <div className='grid lg:grid-cols-5 gap-4'>
           <aside className='lg:col-span-2 border rounded p-3 h-max'>
             <div className='font-medium mb-2'>Lessons</div>
@@ -99,7 +98,6 @@ export default function CourseView() {
               ))}
             </ul>
           </aside>
-
           <section className='lg:col-span-3 space-y-4'>
             {currentLesson ? (
               <div className='border rounded p-4'>
@@ -144,7 +142,6 @@ export default function CourseView() {
             {finalPassed && <CertificatePreview courseId={courseId} />}          </section>
         </div>
       </div>
-
       <div className='space-y-4'>
         <CoachWidget />
         <div className='border rounded p-3'>
@@ -163,3 +160,5 @@ export default function CourseView() {
       </div>
     </div>
 );
+
+}

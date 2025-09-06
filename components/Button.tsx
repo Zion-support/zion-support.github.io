@@ -18,7 +18,7 @@ export default function Button({
   type = 'button',
   disabled = false,
 }: ButtonProps) {
-  const baseClasses =
+  const baseClasses =;
     'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
 
   const variantClasses = {
@@ -59,4 +59,6 @@ export default function Button({
       {children}
     </button>
 );
+}
+
 }

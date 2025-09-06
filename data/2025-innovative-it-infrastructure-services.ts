@@ -430,7 +430,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Uptime Institute',
       'Energy Star',
       'Industry-specific regulations',
-    ],
+    ],;
   },];
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     ];

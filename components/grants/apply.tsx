@@ -9,7 +9,7 @@ const categories: GrantCategory[] = [
   'Regional Expansion',
   'Research Grants',
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
-export default function ApplyGrantPage() {
+export default function ApplyGrantPage() {;
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -194,7 +194,6 @@ export default function ApplyGrantPage() {
             onChange={e => setPitchDeckUrl(e.target.value)}
           />
         </label>
-
         {error && <div className='text-sm text-red-600'>{error}</div>}
 
         <div className='flex gap-3'>
@@ -256,7 +255,6 @@ export default function ApplyGrantPage() {
         <label className="text-sm">Pitch Deck URL
           <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e.target.value)} />
         </label>
-
         {error && <div className="text-sm text-red-600">{error}</div>}
 
         <div className="flex gap-3">

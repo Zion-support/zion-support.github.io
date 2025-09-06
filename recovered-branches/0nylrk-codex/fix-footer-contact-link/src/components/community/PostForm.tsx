@@ -20,7 +20,7 @@ interface PostFormProps {
   isEditing?: boolean
 }
 
-export const PostForm = ({
+export const PostForm = ({;
   initialValues;
   onSubmit;
   isEditing = false

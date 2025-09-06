@@ -10,8 +10,8 @@ import {
   Wifi,
   Shield,
   BarChart3,
-  ArrowRight,
-  Zap,;} from 'lucide-react';import { 
+  ArrowRight,;
+  Zap,;} from 'lucide-react';import { ;
   Brain;
   Cloud, 
   RefreshCw, 
@@ -171,7 +171,6 @@ const ServicesSection: React.FC = () => {
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]' />
       </div>
-
       <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
 
   return (
@@ -181,7 +180,6 @@ const ServicesSection: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]" />
       </div>
-
       <div className="relative container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -200,22 +198,19 @@ const ServicesSection: React.FC = () => {
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>
-
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Comprehensive Technology
             <span className='block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
               Solutions
             </span>
           </h2>
-
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
             We deliver cutting-edge technology solutions that drive innovation,
-            efficiency, and growth for businesses across all industries.          </p>          
+            efficiency, and growth for businesses across all industries.          </p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth 
             for businesses across all industries.
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -238,41 +233,33 @@ const ServicesSection: React.FC = () => {
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
                 />
-
                 {/* Icon */}
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
                   <service.icon className='w-8 h-8 text-white' />
                 </div>
-
                 {/* Content */}
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>
                   {service.title}
                 </h3>
-
                 <p className='text-gray-300 mb-6 leading-relaxed'>                  {service.description}
                 </p>
-
                 {/* Features */}            >
               <div className="relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden">
                 {/* Background Gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-                
                 {/* Icon */}
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-
                 {/* Content */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
                   {service.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-
                 {/* Features */}
                 <ul className='space-y-2 mb-8'>
                   {service.features.map(feature => (
@@ -288,7 +275,6 @@ const ServicesSection: React.FC = () => {
                       <span className="text-sm">{feature}</span>
                   ))}
                 </ul>
-
                 {/* CTA */}
                 <Link
                   href={service.href}
@@ -297,20 +283,17 @@ const ServicesSection: React.FC = () => {
                   <span className='font-medium'>Learn More</span>
                   <ArrowRight className='w-4 h-4' />
                 </Link>
-
                 {/* Hover Effect */}
                 <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />              </div>                >
                   <span className="font-medium">Learn More</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-
                 {/* Hover Effect */}
                 <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />
               </div>
             </motion.div>
           ))}
         </motion.div>
-
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

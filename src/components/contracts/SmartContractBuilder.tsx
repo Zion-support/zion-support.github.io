@@ -79,7 +79,7 @@ const ESCROW_AGREEMENT_ABI: ethers.InterfaceAbi = [// From Ownable
 interface SmartContractBuilderProps {
   isOpen: boolean
   onClose: () => void
-  talent: TalentProfile
+  talent: TalentProfile;
   clientName: string; // Assuming clientName is passed as a prop
   onContractGenerated?: (contractContent: string) => void; // For Solidity
   onLegalDraftGenerated?: (markdownContent: string) => void; // For Markdown
@@ -110,7 +110,7 @@ export function SmartContractBuilder({
     network: 'ethereum', // Default network
     useEscrow: true,
     deployToChain: false // Default to not deploying to chain immediately
-})
+});
   const [deployStatus, setDeployStatus] = useState<string>(''); // e.g., 'deploying', 'deployed', 'error'
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null); // Existing from Solidity part
   // States for on-chain agreement UI and deployment
@@ -357,7 +357,6 @@ export function SmartContractBuilder({
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
-            
             <div className="flex gap-2">
               <Button 
                 variant="outline" 
@@ -370,7 +369,6 @@ export function SmartContractBuilder({
               </Button>
             </div>
           </div>
-          
           <TabsContent value="form" className="pt-4">
             <ContractForm 
               talent = {talent,}
@@ -380,7 +378,6 @@ export function SmartContractBuilder({
               onContractGenerated = {handleFormSubmit,}
             />
           </TabsContent>
-          
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
@@ -390,7 +387,6 @@ export function SmartContractBuilder({
                   onClose = {onClose,}
                   deploymentInfo = {deploymentInfo,}
                 />
-                
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button 
@@ -405,7 +401,6 @@ export function SmartContractBuilder({
             )}
           </TabsContent>
         </Tabs>
-        
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}

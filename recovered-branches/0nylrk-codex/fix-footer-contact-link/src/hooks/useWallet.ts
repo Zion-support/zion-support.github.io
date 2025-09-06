@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
 import type { Wallet, TokenTransaction } from '@/types/tokens';
-export function useWallet() {
+export function useWallet() {;
   const { user } = useAuth();
   const [wallet, setWallet] = useState<Wallet | null>(null);
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]);

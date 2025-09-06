@@ -4,7 +4,7 @@ import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
  
 import {cn} from "@/lib/utils"
-const Breadcrumb = React.forwardRef<
+const Breadcrumb = React.forwardRef<;
   HTMLElement;
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
@@ -95,7 +95,7 @@ const BreadcrumbEllipsis = ({
 )
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
  
-export {
+export {;
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;

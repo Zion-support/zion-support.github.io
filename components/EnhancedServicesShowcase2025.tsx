@@ -12,7 +12,7 @@ import {
   FaMobile,
   FaDatabase,
   FaNetworkWired,
-  FaRobot,
+  FaRobot,;
   FaSearch,;
 import {
   SiNextdotjs,
@@ -25,7 +25,7 @@ import {
   SiDocker,
   SiKubernetes,
   SiAws,
-  SiGooglecloud,
+  SiGooglecloud,;
   SiMicrosoftazure,;
 } from 'react-icons/si';
 
@@ -447,7 +447,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             From AI-powered automation to quantum computing, we're building tomorrow's innovations today.
           </p>
         </motion.div>
-
         {/* Search and Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -466,7 +465,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               />
               <FaSearch className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400' />
             </div>
-
             <select
               value={sortBy}
               onChange={e =>
@@ -488,7 +486,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               />
               <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
             </div>
-            
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
@@ -500,7 +497,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </select>
           </div>
         </motion.div>
-
         {/* Category Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -537,7 +533,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -571,11 +566,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <p className='text-gray-300 mb-4 line-clamp-3'>
                 {service.description}
               </p>
-
               <div className='flex flex-wrap gap-2 mb-4'>
                 {service.technologies.slice(0, 3).map(tech => (
                   <span
@@ -591,9 +584,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   <p className="text-sm text-gray-400">{serviceCategories.find(c => c.id === service.category)?.name}</p>
                 </div>
               </div>
-              
               <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-              
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.technologies.slice(0, 3).map((tech) => (
                   <span
@@ -608,14 +599,12 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   </span>
                 )}
               </div>
-
               <div className='flex items-center justify-between'>
                 <div className='text-2xl font-bold text-blue-400'>                  <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
                     +{service.technologies.length - 3} more
                   </span>
                 )}
               </div>
-
               <div className='flex items-center justify-between'>
                 <div className='text-2xl font-bold text-blue-400'>
                   ${service.pricing.starter}
@@ -633,7 +622,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div
@@ -654,7 +642,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             <p className="text-gray-400">Try adjusting your search terms or category filters</p>
         )}
       </div>
-
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && (
@@ -709,11 +696,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   <span className='text-2xl'>×</span>
                 </button>
               </div>
-
               <p className='text-gray-300 text-lg mb-8'>
                 {selectedService.description}
               </p>
-
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                 {/* Features */}
                 <div>
@@ -730,9 +715,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   <span className="text-2xl">×</span>
                 </button>
               </div>
-
               <p className="text-gray-300 text-lg mb-8">{selectedService.description}</p>
-
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Features */}
                 <div>
@@ -746,7 +729,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 {/* Benefits */}
                 <div>
                   <h3 className='text-xl font-bold text-white mb-4'>
@@ -768,7 +750,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   </ul>
                 </div>
               </div>
-
               {/* Technologies */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -790,7 +771,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Pricing */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>

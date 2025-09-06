@@ -2,9 +2,9 @@ import {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
-export default function GrantDetailPage() {
+export default function GrantDetailPage() {;
   const router = useRouter();
-  const { id } = router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {
+  const { id } = router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
   const { id } = router.query as { id: string },
   const [item, setItem] = useState<GrantApplication | null>(null);
@@ -77,7 +77,6 @@ export default function GrantDetailPage() {
           </span>
         </div>
       </div>
-
       <div className='grid md:grid-cols-3 gap-6'>
         <div className='md:col-span-2 space-y-4'>
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
@@ -113,7 +112,6 @@ export default function GrantDetailPage() {
               </div>
             )}
           </section>
-
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
             <h2 className='font-medium mb-2'>Updates</h2>
             <div className='space-y-3'>
@@ -160,7 +158,6 @@ export default function GrantDetailPage() {
             </div>
           </section>
         </div>
-
         <aside className='space-y-4'>
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
             <h3 className='font-medium mb-2'>Milestones</h3>
@@ -198,7 +195,6 @@ export default function GrantDetailPage() {
               Funds Released: {item.fundsReleased || 0}
             </div>
           </section>
-
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
             <h3 className='font-medium mb-2'>Team</h3>
             <div className='text-sm whitespace-pre-wrap'>{item.teamInfo}</div>          </section>                  <div>
@@ -213,7 +209,6 @@ export default function GrantDetailPage() {
             </ul>
             <div className="mt-3 text-sm">Funds Released: {item.fundsReleased || 0}</div>
           </section>
-
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h3 className="font-medium mb-2">Team</h3>
             <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>

@@ -14,5 +14,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 export function getShared(id: string) {
-  return store[id]
+  return store[id];
 };

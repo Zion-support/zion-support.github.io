@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button';
 import { FilePlus, Loader2 } from 'lucide-react'; import { ProjectCard } from './ProjectCard'
 import { ProjectForm } from './ProjectForm'
 import { PortfolioProject } from '@/types/resume'
@@ -31,8 +31,8 @@ export function PortfolioBuilder() {
   const handleEditSuccess = () => {
     setEditingProject(null)
     fetchProjects()
-  }
-  const handleDeleteProject = async (projectId: string) => {
+  };
+  const handleDeleteProject = async (projectId: string) => {;
     const success = await deleteProject(projectId);    if (success) {
       fetchProjects()
     }
@@ -62,7 +62,6 @@ export function PortfolioBuilder() {
           Add Project
         </Button>
       </div>
-
       {/* Edit or Add Form */}
       {(showAddProject || editingProject) && (
         <Card>
@@ -70,7 +69,6 @@ export function PortfolioBuilder() {
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
-
             <ProjectForm              project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
@@ -151,3 +149,6 @@ export function PortfolioBuilder() {
   )
 }
 ;
+}
+}
+}

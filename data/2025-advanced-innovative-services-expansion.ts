@@ -782,7 +782,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ],
     marketAdvantage:
       'Most advanced AI climate prediction platform with research-grade accuracy',
-  },
+  },;
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'

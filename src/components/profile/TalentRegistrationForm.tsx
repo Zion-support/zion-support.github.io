@@ -66,7 +66,7 @@ interface CategorizedSkills {
   devops: string[]
   platforms: string[]
   softSkills: string[]
-  other: string[]
+  other: string[];
 });"
 availability: z.enum (["available", "limited", "unavailable"])
 enhancedProfile: z.boolean () .default (true) 
@@ -119,7 +119,7 @@ export function TalentRegistrationForm() {
       handleAddSkill() }
   }
   // Handle avatar upload
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
     const file = e.target.files?.[0];    if (file) {
       const reader = new FileReader()
       reader.onloadend = () => {
@@ -398,7 +398,6 @@ export function TalentRegistrationForm() {
             employers.
           </CardDescription>
         </CardHeader>
-
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <CardContent className='space-y-8'>
@@ -431,7 +430,6 @@ export function TalentRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className='col-span-1'>
                     <FormField
                       control={form.control}
@@ -455,7 +453,6 @@ export function TalentRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className='col-span-1'>
                     <FormField
                       control={form.control}
@@ -479,7 +476,6 @@ export function TalentRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className='col-span-1'>
                     <FormField
                       control={form.control}
@@ -506,7 +502,6 @@ export function TalentRegistrationForm() {
                     />
                   </div>
                 </div>
-
                 {/* Upload Avatar */}
                 <div className='space-y-2'>
                   <FormLabel className='text-zion-slate-light'>
@@ -528,7 +523,6 @@ export function TalentRegistrationForm() {
                         </div>
                       )}
                     </div>
-
                     <label className='flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors'>
                       <Upload className='mr-2 h-4 w-4' />
                       <span>Upload Photo</span>
@@ -545,9 +539,7 @@ export function TalentRegistrationForm() {
                   </p>
                 </div>
               </div>
-
               <Separator className='bg-zion-blue-light/50' />
-
               {/* Bio Section */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-medium text-white'>
@@ -633,7 +625,6 @@ export function TalentRegistrationForm() {
                         <Check className='mr-1 h-3 w-3' /> Apply
                       </Button>
                     </div>
-
                     <div className='space-y-4'>
                       <div>
                         <h5 className='text-zion-slate-light text-sm mb-1'>
@@ -643,7 +634,6 @@ export function TalentRegistrationForm() {
                           {generatedContent.summary}
                         </p>
                       </div>
-
                       {generatedContent.categorizedSkills && (
                         <div>
                           <h5 className='text-zion-slate-light text-sm mb-1'>
@@ -679,9 +669,7 @@ export function TalentRegistrationForm() {
                   </div>
                 )}
               </div>
-
               <Separator className='bg-zion-blue-light/50' />
-
               {/* Skills and Availability */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                 {/* Skills Section */}
@@ -743,7 +731,6 @@ export function TalentRegistrationForm() {
                     )}
                   </div>
                 </div>
-
                 {/* Availability Section */}
                 <div className='space-y-4'>
                   <h3 className='text-lg font-medium text-white'>
@@ -774,7 +761,6 @@ export function TalentRegistrationForm() {
                                 Available Now
                               </label>
                             </div>
-
                             <div className='flex items-center space-x-2'>
                               <input
                                 type='radio'
@@ -791,7 +777,6 @@ export function TalentRegistrationForm() {
                                 Limited Availability
                               </label>
                             </div>
-
                             <div className='flex items-center space-x-2'>
                               <input
                                 type='radio'
@@ -817,7 +802,6 @@ export function TalentRegistrationForm() {
                 </div>
               </div>
             </CardContent>
-
             <CardFooter className='border-t border-zion-blue-light pt-6'>
               <div className='flex flex-col sm:flex-row gap-4 w-full sm:justify-between'>
                 <Button
@@ -884,7 +868,7 @@ if (Array.isArray (categorySkills) ) {
   body: {'"
   <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {
   new Date () .getFullYear () 
-}Zion Marketplace</p> 
+}Zion Marketplace</p>
 }
 //Handle form submission const onSubmit = async (values: TalentFormValues) => {
   if (skillTags.length === 0) {
@@ -1000,3 +984,6 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
 }/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) 
 }'"}
+
+}
+}

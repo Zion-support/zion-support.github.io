@@ -15,7 +15,7 @@ export type ElementRef<T extends React.ElementType> = React.ComponentPropsWithRe
 export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.ElementRef<T>>;
 
 // Helper for dealing with refs in complex situations
-export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = 
+export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = ;
   React.PropsWithChildren<Props & { as?: T }>;
 
 // Safe ref casting helper type - this is the key to fixing our issues
@@ -25,7 +25,7 @@ export type SafeRef<T> = React.Ref<T>;
 // Sidebar specific types
 export type SidebarState = "expanded" | "collapsed";
 
-export type SidebarContext = {
+export type SidebarContext = {;
   state: SidebarState;
   open: boolean;
   setOpen: (open: boolean) => void;

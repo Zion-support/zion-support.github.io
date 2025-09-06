@@ -3,7 +3,7 @@ import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
 export function ApiErrorCodes() {
-  const errorExample = `{
+  const errorExample = `{;
   "error": "validation_error";
   "message": "The request was invalid";
   "details": [
@@ -123,27 +123,21 @@ export function ApiErrorCodes() {
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
         <h1>Error Codes & Rate Limits</h1>
-        
         <h2>Error Format</h2>
         <p>
           When an error occurs, the API will return an appropriate HTTP status code along with 
           a JSON response body containing details about the error.
         </p>
-        
         <CodeBlock code={errorExample} language="json" showLineNumbers={true} />
-        
         <p>
           Most errors include:
         </p>
-        
         <ul>
           <li><code>error</code>: A machine-readable error code</li>
           <li><code>message</code>: A human-readable description of the error</li>
           <li><code>details</code>: Additional context about the error (when available)</li>
         </ul>
-
         <h2>Common Error Codes</h2>
-        
         <div className="overflow-x-auto mb-8">
           <table className="w-full border-collapse">
             <thead>
@@ -172,30 +166,24 @@ export function ApiErrorCodes() {
             </tbody>
           </table>
         </div>
-
         <h2>Handling Errors</h2>
         <p>
           Your application should be prepared to handle error responses appropriately: </p>
-        
         <ul>
           <li><strong>401 and 403 errors</strong>: Check your API key and permissions</li>
           <li><strong>429 errors</strong>: Implement retry logic with backoff</li>
           <li><strong>5xx errors</strong>: These are server-side issues, retry with backoff</li>
         </ul>
-        
         <h3>Rate Limiting</h3>
         <p>
           When you exceed the rate limit, you'll receive a 429 response with details on when to retry:
         </p>
-        
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />
-        
         <h2>Rate Limits</h2>
         <p>
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.
           The limits are based on the number of requests per minute per API key.
         </p>
-        
         <div className="overflow-x-auto mb-8">
           <table className="w-full border-collapse">
             <thead>
@@ -216,18 +204,15 @@ export function ApiErrorCodes() {
             </tbody>
           </table>
         </div>
-        
         <h3>Rate Limit Headers</h3>
         <p>
           All API responses include headers to help you track your rate limit usage:
         </p>
-        
         <ul>
           <li><code>X-RateLimit-Limit</code>: The maximum number of requests allowed per minute</li>
           <li><code>X-RateLimit-Remaining</code>: The number of requests remaining in the current window</li>
           <li><code>X-RateLimit-Reset</code>: The time at which the current rate limit window resets (Unix timestamp)</li>
         </ul>
-        
         <h3>Best Practices for Rate Limits</h3>
         <ul>
           <li>Monitor the rate limit headers to avoid hitting limits</li>
@@ -235,7 +220,6 @@ export function ApiErrorCodes() {
           <li>Cache responses when possible to reduce API calls</li>
           <li>For high-volume needs, contact us about increased limits</li>
         </ul>
-        
         <h2>Need Help?</h2>
         <p>
           If you're encountering persistent errors or need higher rate limits, please 

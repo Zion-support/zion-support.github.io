@@ -1,4 +1,4 @@
-export type EnterpriseITSolution = {
+export type EnterpriseITSolution = {;
   id: string;
   name: string;
   tagline?: string;
@@ -170,7 +170,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     useCases: ['Audit readiness', 'Insider risk reduction'],
     link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
     realService: true,
-  },
+  },;
 ];
 realService: true;
 launchDate: '2025-11-01' 
@@ -201,7 +201,7 @@ realService: true
 };
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
-	{
+	{;
 		id: 'zero-trust-network-architecture';
 		name: 'Zero Trust Network Architecture';
 		tagline: 'Identity-first perimeterless security for modern enterprises',

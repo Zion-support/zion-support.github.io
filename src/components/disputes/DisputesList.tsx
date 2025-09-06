@@ -30,8 +30,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       case 'open':
         return 'default'
       case 'under_review':
-        return 'secondary'
-      case 'resolved':
+        return 'secondary';
+      case 'resolved':;
         return 'outline'; // Changed from "success" to "outline"
       case 'closed':
         return 'outline'
@@ -227,7 +227,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           Closed
         </Button>
       </div>
-
       <div className='border rounded-md overflow-hidden'>        <Table>      <div className="border rounded-md overflow-hidden">
         <Table>
           <TableHeader>
@@ -322,4 +321,7 @@ if (isLoading) {"
 }) 
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) 
 }</TableBody> </Table> </div> </div>) 
-}"}
+}"};
+;
+}
+}

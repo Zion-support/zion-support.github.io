@@ -7,9 +7,9 @@ import { extraServices } from '../data/extra-services';
 
 export default function WCAGScannerPage() {
   const service = extraServices.find(s =>
-    s.link.endsWith('/wcag-accessibility-scanner')
+    s.link.endsWith('/wcag-accessibility-scanner');
   );  if (!service) return null;import { Star } from 'lucide-react';
-export default function WCAGScannerPage() {
+export default function WCAGScannerPage() {;
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
 
@@ -101,3 +101,4 @@ export default function WCAGScannerPage() {
 }
 
 ;
+}

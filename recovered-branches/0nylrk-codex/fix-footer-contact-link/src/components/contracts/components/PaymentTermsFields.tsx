@@ -13,7 +13,7 @@ interface PaymentTermsFieldsProps {
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
 }
 
-export function PaymentTermsFields({ 
+export function PaymentTermsFields({ ;
   form;
   talent;
   handleMilestonesGenerated 
@@ -65,7 +65,6 @@ export function PaymentTermsFields({
           )}
         />
       </div>
-
       {/* Project Milestones */}
       {form.watch("paymentTerms") === "milestone" && (
         <div className="pt-2">

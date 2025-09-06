@@ -6,7 +6,7 @@ import {
   MapPin,
   Check,
   ArrowRight,
-  Shield,
+  Shield,;
   Star,;
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -14,11 +14,11 @@ import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/quantum-internet-security-platform')
+    s.link.endsWith('/quantum-internet-security-platform');
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function QuantumInternetSecurityPage() {
+export default function QuantumInternetSecurityPage() {;
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-internet-security-platform'));
   if (!service) return null;
 
@@ -113,3 +113,4 @@ export default function QuantumInternetSecurityPage() {
   );
 }
 ;
+}

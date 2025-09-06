@@ -6,7 +6,7 @@ import {
   FormLabel,
   FormControl,
   FormDescription,
-  FormMessage,
+  FormMessage,;
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { JobSchemaType } from "./validation";
@@ -32,7 +32,7 @@ export function DescriptionFields({
             <FormControl>
               <Textarea
                 value={editorContent}
-                onChange={(e) => {
+                onChange={(e) => {;
                   handleEditorChange(e.target.value);
                   field.onChange(e.target.value);
                 }}

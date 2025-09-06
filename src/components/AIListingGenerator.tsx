@@ -209,7 +209,6 @@ export function AIListingGenerator({
           </Button>
         </CardContent>
       </Card>
-
       {isLoading && (
         <Card className='border border-zion-blue-light bg-zion-blue-dark overflow-hidden'>
           <CardHeader>
@@ -246,7 +245,6 @@ export function AIListingGenerator({
               </h3>
               <p className='text-white'>{generatedContent.description}</p>
             </div>
-
             <div>
               <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
                 Tags
@@ -256,7 +254,6 @@ export function AIListingGenerator({
                 ))}
               </div>
             </div>
-
             <div>
               <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
                 Suggested Price Range
@@ -266,7 +263,6 @@ export function AIListingGenerator({
                 {generatedContent.suggestedPrice.max.toFixed(2)}
               </p>
             </div>
-
             <div>
               <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
                 Key Selling Points
@@ -292,8 +288,8 @@ export function AIListingGenerator({
   target: {
   value: string 
 }, field: string) => {
-  switch (field) {
-  case 'title': setTitle (e.target.value)
+  switch (field) {;
+  case 'title': setTitle (e.target.value);
 break;'
 case 'category': setCategory (e.target.value)
 break;'
@@ -330,4 +326,6 @@ toast ({
 }'"  )
 }
   )
+}
+
 }

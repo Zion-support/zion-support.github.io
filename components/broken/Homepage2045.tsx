@@ -28,11 +28,11 @@ import {
   Grid,
   List,
   Atom,
-  Target,
+  Target,;
   Sparkles,;
 } from 'lucide-react';
 import Link from 'next/link';import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
 } from 'lucide-react';
@@ -235,7 +235,6 @@ const Homepage2045: React.FC = () => {
               }}
             />
           </div>
-
           {/* Hero Content */}
           <div className='relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -273,7 +272,6 @@ const Homepage2045: React.FC = () => {
                 Transform your business with Zion Tech Group's revolutionary AI services, quantum computing, and cutting-edge emerging technologies. Leading the future of technology innovation.
               </motion.p>
             </motion.div>
-
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -304,7 +302,6 @@ const Homepage2045: React.FC = () => {
                 Explore Services
               </Link>
             </motion.div>
-
             {/* Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -344,7 +341,6 @@ const Homepage2045: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Featured Services Section */}
         <section id='featured-services' className='py-20 relative'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div        <section id="featured-services" className="py-20 relative">
@@ -366,7 +362,6 @@ const Homepage2045: React.FC = () => {
                 industries and pushing the boundaries of what's possible with
                 technology.              </p>
             </motion.div>
-
             {/* Service Categories Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -378,7 +373,6 @@ const Homepage2045: React.FC = () => {
                 Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology.
               </p>
             </motion.div>
-
             {/* Service Categories Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {
@@ -468,7 +462,6 @@ const Homepage2045: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Latest Innovations Section */}
         <section
           id='latest-innovations'
@@ -492,7 +485,6 @@ const Homepage2045: React.FC = () => {
                 Explore our newest revolutionary services that are setting new
                 standards in technology innovation.              </p>
             </motion.div>
-
             {/* Featured New Services */}            >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -503,7 +495,6 @@ const Homepage2045: React.FC = () => {
                 Explore our newest revolutionary services that are setting new standards in technology innovation.
               </p>
             </motion.div>
-
             {/* Featured New Services */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               {revolutionary2043AdvancedServices
@@ -575,7 +566,6 @@ const Homepage2045: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Contact CTA Section */}
         <section id='contact-cta' className='py-20 relative'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div        <section id="contact-cta" className="py-20 relative">

@@ -4,7 +4,7 @@ import {Conversation, Message} from '@/types/messaging';
 /**
  * Hook to manage messaging state
  */
-export function useConversationState() {
+export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]);
   const [activeMessages, setActiveMessages] = useState<Message[]>([]);
   const [conversations, setConversations] = useState<Conversation[]>([]);

@@ -30,7 +30,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       headline: ""}}),
 
   const getTypeLabel = () => {
-    switch (userType) {
+    switch (userType) {;
       case "serviceProvider": return "Service Provider";
       case "talent":
         return "Talent";
@@ -49,7 +49,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           Help others get to know you better
         </p>
       </div>
-      
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField

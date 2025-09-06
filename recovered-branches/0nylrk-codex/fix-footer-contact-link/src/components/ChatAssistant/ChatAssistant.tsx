@@ -17,7 +17,7 @@ export interface ChatAssistantProps {
   onClose: () => void,
   recipient: {
     id: string,
-    name: string,
+    name: string,;
     avatarUrl?: string;
     role?: string
   };
@@ -27,7 +27,7 @@ export interface ChatAssistantProps {
   contextHeader?: ReactNode
 }
 
-export function ChatAssistant({
+export function ChatAssistant({;
   isOpen;
   onClose;
   recipient;
@@ -100,7 +100,6 @@ export function ChatAssistant({
             <X className="h-5 w-5" />
           </Button>
         </div>
-        
         {/* Context Header (Optional) */}
         {contextHeader && (
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
@@ -125,7 +124,6 @@ export function ChatAssistant({
           )}
           <div ref={messagesEndRef} />
         </div>
-        
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />

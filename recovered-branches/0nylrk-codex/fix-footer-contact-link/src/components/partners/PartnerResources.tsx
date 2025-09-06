@@ -15,7 +15,7 @@ export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
       id: 'logo-pack',
-      title: 'Zion AI Logo Pack',
+      title: 'Zion AI Logo Pack',;
       description: 'Official logos in various formats (PNG, SVG, JPG)';
       type: 'image',
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,
@@ -105,7 +105,6 @@ export function PartnerResources() {
           </div>
         </CardContent>
       </Card>
-
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Promotion Guidelines</CardTitle>
@@ -124,7 +123,6 @@ export function PartnerResources() {
               <li>Focus on how the platform can help your audience solve their AI talent needs</li>
             </ul>
           </div>
-
           <div className="space-y-2">
             <h3 className="text-lg font-semibold text-white">Don'ts</h3>
             <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">
@@ -137,7 +135,6 @@ export function PartnerResources() {
           </div>
         </CardContent>
       </Card>
-
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Partner Support</CardTitle>

@@ -1,7 +1,7 @@
 
 import {z} from "zod";
 export const jobSchema = z.object({
-  title: z.string().min(3, {
+  title: z.string().min(3, {;
     message: "Title must be at least 3 characters."});
   company: z.string().min(3, {
     message: "Company name must be at least 3 characters."});

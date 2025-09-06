@@ -83,8 +83,8 @@ export default function SavedTalentsPage() {
   }, [user])
   const handleViewProfile = (talentId: string) => {
     router.push(`/talent/${talentId}`)
-  }
-  const handleRequestHire = (talent: TalentProfile) => {
+  };
+  const handleRequestHire = (talent: TalentProfile) => {;
     logInfo('Request to hire:', { data: talent });    toast({
       title: 'Hire Request Sent',
       description: `A hire request has been sent to ${talent.full_name}.`,
@@ -184,7 +184,6 @@ export default function SavedTalentsPage() {
         <p className='text-muted-foreground'>
           Here are the talents you've saved for future reference.
         </p>
-
         {isLoading ? (
           <div className='text-center py-8'>Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (

@@ -5,7 +5,7 @@ import {
   ArrowRight, CheckCircle, Globe,
   Search, Grid, List, Star as StarIcon,
   Phone, Mail, MapPin
-} from 'lucide-react',
+} from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion',;
@@ -107,9 +107,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
       </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -125,7 +123,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
               Discover our extensive collection of cutting-edge micro SAAS services, AI solutions, 
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
-            
             {/* Contact Information */}
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
               <div className="flex items-center gap-2">
@@ -141,7 +138,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 <span>{contactInfo.address}</span>
               </div>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
@@ -164,7 +160,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
@@ -187,7 +182,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 />
               </div>
             </div>
-
             {/* Filters */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Category Filter */}
@@ -205,7 +199,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   ))}
                 </select>
               </div>
-
               {/* Price Range Filter */}
               <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">Price Range</label>
@@ -220,7 +213,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   <option value="enterprise">Enterprise ($5,000+)</option>
                 </select>
               </div>
-
               {/* Sort By */}
               <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">Sort By</label>
@@ -235,7 +227,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   <option value="newest">Newest</option>
                 </select>
               </div>
-
               {/* View Mode */}
               <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">View Mode</label>
@@ -266,7 +257,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
           </motion.div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -284,7 +274,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
               </p>
             </div>
-
             {filteredServices.length === 0 ? (
               <div className="text-center py-20">
                 <div className="text-6xl mb-4">🔍</div>
@@ -335,12 +324,10 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                           </div>
                         )}
                       </div>
-
                       {/* Description */}
                       <p className="text-white/80 text-sm mb-4 line-clamp-3">
                         {service.description}
                       </p>
-
                       {/* Features */}
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-white/70 mb-2">Key Features:</h4>
@@ -358,7 +345,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                           )}
                         </div>
                       </div>
-
                       {/* Price and Rating */}
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-2xl font-bold text-cyan-400">
@@ -371,7 +357,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                           <span className="text-xs text-white/50">({service.reviews})</span>
                         </div>
                       </div>
-
                       {/* Action Buttons */}
                       <div className="flex gap-2">
                         <a
@@ -389,7 +374,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                           Contact
                         </a>
                       </div>
-
                       {/* Additional Info */}
                       <div className="mt-4 pt-4 border-t border-white/10">
                         <div className="grid grid-cols-2 gap-4 text-xs text-white/50">
@@ -419,7 +403,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="px-6 pb-20">
         <div className="max-w-4xl mx-auto text-center">
@@ -464,8 +447,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
-  )
+  );
 };

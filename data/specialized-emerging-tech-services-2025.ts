@@ -573,7 +573,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       ],
       marketAdvantage:
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
-    },
+    },;
   ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
     features: [
       'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications';

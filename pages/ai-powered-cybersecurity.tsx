@@ -39,5 +39,7 @@ export default function AIPoweredCybersecurityPage() {
         ]}
         canonical='https: //ziontechgroup.com/ai-powered-cybersecurity'
       />
-    </>
+    </>;
   );
+
+}

@@ -80,9 +80,9 @@ export default function VendorsPage({ vendors }: Props) {
       <div className='text-center text-xs text-gray-500'>
         Powered by Zion • Co-brand available
       </div>
-    </div>
+    </div>;
   );
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
   return { props: { vendors } };
@@ -90,9 +90,11 @@ const { listVendors } = await import('../../utils/vendor-store');
     </div>
   );
 }
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
   return { props: { vendors } };
 };  return { props: { vendors } }
 };
+
+}

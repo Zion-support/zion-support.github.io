@@ -62,8 +62,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
     }
   }, [router.asPath, initialPosts])
   // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setPosts(prev => [...prev, generateRandomBlogPost()])
+  //   const interval = setInterval(() => {;
+  //     setPosts(prev => [...prev, generateRandomBlogPost()]);
   //   }, 120000); // every 2 minutes
   //   return () => clearInterval(interval)
   // }, [])
@@ -112,7 +112,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
               and digital transformation
             </p>
           </div>
-
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 &&
             (() => {
@@ -192,7 +191,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                   onChange={e => setSearchQuery(e.target.value)}
                   className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />
               </div>
-
               <Select
                 value={selectedCategory}
                 onValueChange={setSelectedCategory}
@@ -221,7 +219,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
               </div>
             )}
           </div>
-
           {/* Blog Posts Grid */}
           {!isLoading && filteredPosts.length > 0 ? (
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -313,7 +310,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 logInfo ('BlogPage filteredPosts:', {
   data: filteredPosts 
 });"
-min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" container mx-auto"> <div className=" text-center mb-12"> <GradientHeading>AI & Tech Insights</GradientHeading> 
+min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" container mx-auto"> <div className=" text-center mb-12"> <GradientHeading>AI & Tech Insights</GradientHeading>
 }"
 }/> </div> <div className=" flex flex-col justify-center"> <span className=" text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2"> {
   featuredPost.category "
@@ -411,7 +408,7 @@ export default function Blog() {
       author: &quot,Prof. Michael Rodriguez&quot,
       date: &quot,2025-01-12&quot,
       readTime: &quot,12 min read&quot,
-      category: &quot,Quantum Computing&quot,
+      category: &quot,Quantum Computing&quot,;
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot],
       image: &quot,/api/placeholder/600/400&quot,"
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.","

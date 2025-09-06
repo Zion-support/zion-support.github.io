@@ -27,7 +27,7 @@ const updatePasswordSchema = z
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
 
-export default function UpdatePassword() {
+export default function UpdatePassword() {;
   const [isLoading, setIsLoading] = useState(false);
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -121,7 +121,6 @@ export default function UpdatePassword() {
                 Enter your new password below.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {error && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
@@ -199,7 +198,6 @@ export default function UpdatePassword() {
                     >
                       {isLoading ? "Updating..." : "Update Password"}
                     </Button>
-
                     <div className="text-center">
                       <Button
                         variant="link"

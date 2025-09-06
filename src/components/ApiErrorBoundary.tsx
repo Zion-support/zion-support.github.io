@@ -156,7 +156,6 @@ export class ApiErrorBoundary extends Component<
                   : 'An unexpected error occurred while loading the page.'}
               </AlertDescription>
             </Alert>
-
             <div className='flex flex-col gap-2'>
               <Button
                 onClick={this.handleRetry}
@@ -174,7 +173,6 @@ export class ApiErrorBoundary extends Component<
                   </>
                 )}
               </Button>
-
               <Button
                 variant='outline'
                 onClick={() => window.location.reload()}
@@ -182,7 +180,6 @@ export class ApiErrorBoundary extends Component<
                 Reload Page
               </Button>
             </div>
-
             {!this.state.isOnline && (
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
                 <WifiOff className='h-4 w-4' />
@@ -223,4 +220,5 @@ export const useApiErrorHandler = () => {
   return { handleApiError }
 }, 
   return { handleApiError }
-},
+},;
+;

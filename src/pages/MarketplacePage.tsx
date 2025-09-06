@@ -83,7 +83,7 @@ import { addItem } from '@/store/cartSlice'
 import { useAuth } from '@/context/auth/AuthProvider'
 import { toast } from '@/hooks/use-toast'
 // Product card
-const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (id: string) => void, onAddToCart: () => void }) => {
+const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (id: string) => void, onAddToCart: () => void }) => {;
   const { formatPrice } = useCurrency();
   return (
   <Card className="h-full hover:shadow-lg transition-shadow">
@@ -314,7 +314,6 @@ function MarketplacePageContent() {
         </h1>
         <p className="text-muted-foreground text-lg">{t('marketplace.hero_subtitle')}</p>
       </motion.div>
-
       {marketStats && (
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
           <MarketplaceInsights stats={marketStats} />
@@ -333,7 +332,6 @@ function MarketplacePageContent() {
           loading = {isFetching,}
         />
       </motion.div>
-
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
           {products.map((item, index,) => (
@@ -372,7 +370,6 @@ function MarketplacePageContent() {
           ))}
         </AnimatePresence>
       </motion.div>
-
       {(isFetching || loading) && products.length > 0 && (
         <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <MarketplaceLoadingGrid count={4} />
@@ -421,8 +418,7 @@ function MarketplacePageContent() {
     </>
   )
 }
-// Main export
-export default function MarketplacePage() {
+// Main export export default function MarketplacePage() {
   return <MarketplacePageContent />
-}
+};
 ;

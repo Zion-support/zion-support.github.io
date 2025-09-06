@@ -10,10 +10,10 @@ import {
   ArrowRight,
   Copy,
   RefreshCw,
-  CheckCircle,
+  CheckCircle,;
   AlertTriangle,;
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
-export default function APIRateLimiterPage() {
+export default function APIRateLimiterPage() {;
   const [endpoint, setEndpoint] = useState('');
   const [rateLimit, setRateLimit] = useState('100');
   const [timeWindow, setTimeWindow] = useState('1m');
@@ -171,7 +171,6 @@ export default function APIRateLimiterPage() {
           content='Protect your APIs with intelligent rate limiting and prevent abuse.'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -188,7 +187,6 @@ export default function APIRateLimiterPage() {
             Protect your APIs from abuse with intelligent rate limiting. Ensure
             fair usage, prevent DDoS attacks, and maintain optimal performance
             for all your users with our enterprise-grade rate limiting solution.          </p>      </Head>
-
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -206,7 +204,6 @@ export default function APIRateLimiterPage() {
           </p>
         </div>
       </section>
-
       {/* Rate Limiter Configuration */}
       <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -219,7 +216,6 @@ export default function APIRateLimiterPage() {
               ensure fair usage across all users.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {/* Configuration Form */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
@@ -227,7 +223,6 @@ export default function APIRateLimiterPage() {
                 <Code className='w-6 h-6 mr-3 text-green-400' />
                 Rate Limiting Rules
               </h3>
-
               <div className='space-y-6'>
                 {/* API Endpoint */}
                 <div>
@@ -245,7 +240,6 @@ export default function APIRateLimiterPage() {
               Set up intelligent rate limiting rules to protect your APIs and ensure fair usage across all users.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Configuration Form */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
@@ -253,7 +247,6 @@ export default function APIRateLimiterPage() {
                 <Code className="w-6 h-6 mr-3 text-green-400" />
                 Rate Limiting Rules
               </h3>
-
               <div className="space-y-6">
                 {/* API Endpoint */}
                 <div>
@@ -270,7 +263,6 @@ export default function APIRateLimiterPage() {
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
-
                 {/* Rate Limit */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -301,7 +293,6 @@ export default function APIRateLimiterPage() {
                     ))}
                   </div>
                 </div>
-
                 {/* Time Window */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -332,7 +323,6 @@ export default function APIRateLimiterPage() {
                     ))}
                   </div>
                 </div>
-
                 {/* API Key Generation */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -366,7 +356,6 @@ export default function APIRateLimiterPage() {
                     </Button>
                   </div>
                 </div>
-
                 <Button
                   onClick={testRateLimiting}
                   disabled={
@@ -397,7 +386,6 @@ export default function APIRateLimiterPage() {
                 </Button>
               </div>
             </Card>
-
             {/* Test Results */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='flex items-center justify-between mb-6'>
@@ -420,7 +408,6 @@ export default function APIRateLimiterPage() {
                   </Button>
                 )}
               </div>
-
               {testResults.length > 0 ? (
                 <div className='space-y-3 max-h-96 overflow-y-auto'>                  {testResults.map((result, index) => (
                     <div
@@ -451,7 +438,6 @@ export default function APIRateLimiterPage() {
                           {result.timestamp}
                         </span>
                       </div>
-
                       <div className='grid grid-cols-2 gap-4 text-sm'>
                         <div>
                           <span className='text-gray-400'>Status:</span>
@@ -470,7 +456,6 @@ export default function APIRateLimiterPage() {
                             {result.responseTime.toFixed(0)}ms
                           </span>                        </div>
                       </div>
-
                       {result.status === 'rate_limited' && (
                         <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>
                           <strong>Rate Limited:</strong> Request exceeded the
@@ -485,7 +470,6 @@ export default function APIRateLimiterPage() {
                         </div>
                         <span className="text-sm text-gray-400">{result.timestamp}</span>
                       </div>
-                      
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
                           <span className="text-gray-400">Status:</span>
@@ -498,7 +482,6 @@ export default function APIRateLimiterPage() {
                           <span className="ml-2 text-white">{result.responseTime.toFixed(0)}ms</span>
                         </div>
                       </div>
-
                       {result.status === 'rate_limited' && (
                         <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>
                           <strong>Rate Limited:</strong> Request exceeded the
@@ -524,7 +507,6 @@ export default function APIRateLimiterPage() {
           </div>
         </div>
       </section>
-
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -536,7 +518,6 @@ export default function APIRateLimiterPage() {
               comprehensive monitoring.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🛡️</div>
@@ -548,7 +529,6 @@ export default function APIRateLimiterPage() {
                 service attacks in real-time.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>⚡</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -559,7 +539,6 @@ export default function APIRateLimiterPage() {
                 with minimal latency.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🎯</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -570,7 +549,6 @@ export default function APIRateLimiterPage() {
                 addresses.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📊</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -581,7 +559,6 @@ export default function APIRateLimiterPage() {
                 limiting strategy.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🔧</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -592,7 +569,6 @@ export default function APIRateLimiterPage() {
                 popular languages.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🌍</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -609,7 +585,6 @@ export default function APIRateLimiterPage() {
           </div>
         </div>
       </section>
-
       {/* Code Examples */}
       <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -622,7 +597,6 @@ export default function APIRateLimiterPage() {
               code.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             <Card className='p-6 bg-gray-800 border border-gray-700'>
               <h3 className='text-xl font-bold text-white mb-4 flex items-center'>
@@ -637,7 +611,6 @@ export default function APIRateLimiterPage() {
               Get started with our rate limiting service in just a few lines of code.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <Card className="p-6 bg-gray-800 border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -711,7 +684,6 @@ console.log('Rate Limit Info:', {
                 <Copy className="w-4 h-4 mr-2" />
               </Button>
             </Card>
-
             <Card className='p-6 bg-gray-800 border border-gray-700'>
               <h3 className='text-xl font-bold text-white mb-4 flex items-center'>
                 <Code className='w-5 h-5 mr-2 text-blue-400' />
@@ -741,7 +713,7 @@ response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
 
-response = requests.get(
+response = requests.get(;
     f'https://api.zion.tech{endpoint}';
 )
 
@@ -771,7 +743,7 @@ response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
 
-response = requests.get(
+response = requests.get(;
     f'https://api.zion.tech{endpoint}';
 )
 
@@ -799,7 +771,6 @@ print('Rate Limit Info:', {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-green-600 to-blue-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>

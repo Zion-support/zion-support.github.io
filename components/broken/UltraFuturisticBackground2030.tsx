@@ -142,7 +142,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
         }}
       />
-
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-10'>
         {/* Hexagon Grid */}
@@ -160,7 +159,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
       />
-
       {/* Floating Geometric Shapes */}
       <div className="fixed inset-0 pointer-events-none z-10">
         {/* Hexagon Grid */}
@@ -182,7 +180,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             ease: 'linear',
           }}
         />
-
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
           style={{
@@ -198,7 +195,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             repeat: Infinity,
             ease: 'linear',          }}          }}
         />
-        
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
           style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
@@ -213,7 +209,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             ease: 'linear',            ease: "linear"
           }}
         />
-
         {/* Floating Circles */}
         <motion.div
           className='absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40'
@@ -225,7 +220,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         <motion.div
           className='absolute top-80 right-1/3 w-20 h-20 rounded-full border border-blue-400/40'
           animate={{
@@ -245,7 +239,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
-
         <motion.div
           className='absolute top-80 right-1/3 w-20 h-20 rounded-full border border-blue-400/40'
           animate={{
@@ -260,7 +253,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
-
         {/* Animated Lines */}
         <motion.div
           className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
@@ -272,7 +264,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         <motion.div
           className='absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent'
           animate={{
@@ -292,7 +283,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
-
         <motion.div
           className='absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent'
           animate={{
@@ -308,25 +298,19 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
           }}
         />
       </div>
-
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>
         {/* Top gradient */}
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />
-
         {/* Bottom gradient */}
         <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-900/20 via-transparent to-transparent' />
-
         {/* Left gradient */}
         <div className='absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-indigo-900/20 via-transparent to-transparent' />
-
         {/* Right gradient */}
         <div className='absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-pink-900/20 via-transparent to-transparent' />
       </div>
-
       {/* Content */}
       <div className='relative z-30'>{children}</div>
-
       {/* Floating Particles */}
       <div className='fixed inset-0 pointer-events-none z-15'>
         {[...Array(20)].map((_, i) => (
@@ -342,22 +326,17 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
               opacity: [0, 1, 0],
               scale: [0, 1, 0],            }}        {/* Top gradient */}
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent" />
-        
         {/* Bottom gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-900/20 via-transparent to-transparent" />
-        
         {/* Left gradient */}
         <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-indigo-900/20 via-transparent to-transparent" />
-        
         {/* Right gradient */}
         <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-pink-900/20 via-transparent to-transparent" />
       </div>
-
       {/* Content */}
       <div className="relative z-30">
         {children}
       </div>
-
       {/* Floating Particles */}
       <div className="fixed inset-0 pointer-events-none z-15">
         {[...Array(20)].map((_, i) => (
@@ -382,7 +361,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
           />
         ))}
       </div>
-
       {/* Neon Glow Effects */}
       <div className='fixed inset-0 pointer-events-none z-25'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />
@@ -399,3 +377,5 @@ export default UltraFuturisticBackground2030;      </div>
 };
 
 export default UltraFuturisticBackground2030;
+
+}

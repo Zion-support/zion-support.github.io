@@ -9,7 +9,7 @@ interface CodeBlockProps {
   className?: string
 }
 
-export function CodeBlock({ 
+export function CodeBlock({ ;
   code;
   language = 'bash';
   showLineNumbers = false;

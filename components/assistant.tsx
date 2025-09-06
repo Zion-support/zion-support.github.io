@@ -7,13 +7,13 @@ interface Message {
 export default function Assistant() {
   const params =
     typeof window !== 'undefined'
-      ? new URLSearchParams(window.location.search)
+      ? new URLSearchParams(window.location.search);
       : new URLSearchParams();  const tenantId = params.get('tenantId') || '';
   const brand = params.get('brand') || 'Zion AI';
 
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
 
-export default function Assistant() {
+export default function Assistant() {;
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') || '';
   const brand = params.get('brand') || 'Zion AI';
@@ -138,4 +138,6 @@ export default function Assistant() {
       </form>
     </div>
 );
+}
+
 }

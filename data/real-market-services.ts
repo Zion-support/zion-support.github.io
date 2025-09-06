@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface RealMarketService {
+export interface RealMarketService {;
   id: string;
   name: string;
   tagline: string;
@@ -45,7 +45,7 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
-export const realMarketServices: RealMarketService[] = [
+export const realMarketServices: RealMarketService[] = [;
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -78,7 +78,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/llm-gateway',
-    marketPosition:
+    marketPosition:;
       'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.',
     targetAudience: 'Product teams, platform engineering, data/AI teams',
     trialDays: 14,
@@ -470,7 +470,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-400',
     link: 'https://ziontechgroup.com/vector-search-starter',
-    marketPosition:
+    marketPosition:;
       'Accelerator vs DIY; complements vendor docs with turnkey wiring.',
     targetAudience: 'Data engineers, ML engineers, startups',
     trialDays: 7,
@@ -1399,7 +1399,7 @@ export const realMarketServices: RealMarketService[] = [
     realService: true,
     technology: ['Node.js, Postgres, Redis, Airflow'],
     integrations: ['Salesforce, HubSpot, Stripe, Shopify'],
-    useCases: ['Fix data gaps, Ensure CRM/Warehouse parity, Improve trust'],
+    useCases: ['Fix data gaps, Ensure CRM/Warehouse parity, Improve trust'],;
     roi: 'Save weeks of manual cleanup; maintain accurate reporting and billing.',
     competitors: ['Fivetran (log-based), custom scripts'],
     marketSize: '$4B data integration',
@@ -2033,7 +2033,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/ai-rfp-response-copilot',
-    marketPosition:
+    marketPosition:;
       'Purpose-built for proposal teams; governance and citations built-in.',
     targetAudience: 'Sales engineering, proposal teams, compliance',
     trialDays: 14,
@@ -2429,7 +2429,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/local-micro-crm',
-    marketPosition:
+    marketPosition:;
       'Tooled for simplicity; avoids enterprise CRM bloat and costs.',
     targetAudience: 'Local service businesses',
     trialDays: 14,
@@ -2479,7 +2479,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/subjectline-optimizer-ai',
-    marketPosition:
+    marketPosition:;
       'Focused assistant vs. general copy tools; fast iteration for marketers.',
     targetAudience: 'Growth and lifecycle marketers',
     trialDays: 7,

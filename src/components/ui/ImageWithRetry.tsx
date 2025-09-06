@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image, { type ImageProps } from 'next/image'
 import { cn } from '@/lib/utils'
-interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
+interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
   src: string;  alt?: string
   /** Source to use if the main src fails */
   fallbackSrc?: string
@@ -33,7 +33,7 @@ export function ImageWithRetry({
     setFailed(true)
     setCurrentSrc(fallbackSrc) }
   const handleRetry = () => {
-    setFailed(false)
+    setFailed(false);
     setCurrentSrc(src) };    setCurrentSrc(fallbackSrc)
   }
   const handleRetry = () => {
@@ -70,3 +70,6 @@ export function ImageWithRetry({
     </div>
   )
 export default ImageWithRetry
+;
+}
+}

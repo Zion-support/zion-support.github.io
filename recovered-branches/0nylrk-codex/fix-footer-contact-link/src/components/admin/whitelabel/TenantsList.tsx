@@ -6,14 +6,14 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow,;
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-DropdownMenuTrigger,
+DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
@@ -25,10 +25,10 @@ import {
   Power,
   PowerOff,
   Users,
-  RefreshCcw,
+  RefreshCcw,;
 } from "@/components/icons";
 import { format } from "date-fns";
-export function TenantsList() {
+export function TenantsList() {;
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -129,7 +129,6 @@ export function TenantsList() {
           Refresh
         </Button>
       </div>
-
       {isLoading ? (
         <div className="flex justify-center p-8">
           <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>

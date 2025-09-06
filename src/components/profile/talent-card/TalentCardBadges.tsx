@@ -10,8 +10,8 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
       <Badge className='bg-transparent border-0 flex items-center gap-1 text-white px-0'>
         <Award className='h-3 w-3' />
         <span>Featured</span>
-      </Badge>
-    </div>
+      </Badge>;
+    </div>;
   );  )
 }
   )

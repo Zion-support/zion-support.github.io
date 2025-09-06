@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { readPosts, writePosts } from "@/utils/data/blogStore";
 import { requireAdmin } from "@/utils/api/auth";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query;
   if (typeof id !== "string")
     return res.status(400).json({ error: "Invalid id" });
@@ -18,7 +18,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 return res.status(405).end();
-  export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     const { id } = req.query;
     if (typeof id !== "string")
       return res.status(400).json({ error: "Invalid id" });

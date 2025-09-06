@@ -25,7 +25,7 @@ interface FraudDetectionContextType {
 // aren't available. Passing a generic argument to an untyped function causes
 // TS2347, so we cast the default value instead of using a type parameter.
 export const FraudDetectionContext = React.createContext(
-  undefined as FraudDetectionContextType | undefined
+  undefined as FraudDetectionContextType | undefined;
 );
 
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
@@ -37,7 +37,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     userEmail?: string
   ): Promise<{ isSafe: boolean, explanation?: string }> => {
     try {
-      // First do a quick local check using the fraud detection service
+      // First do a quick local check using the fraud detection service;
       const quickCheck = checkMessage(content);
       
       // If the quick check finds suspicious content, flag it
@@ -118,7 +118,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 };
 
 // Hook to use the fraud detection context
-export const useFraudDetection = () => {
+export const useFraudDetection = () => {;
   const context = React.useContext(FraudDetectionContext);
   if (context === undefined) {
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware')

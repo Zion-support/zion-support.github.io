@@ -19,7 +19,7 @@ import {
   Smartphone,
   Building,
   Phone,
-  Mail,
+  Mail,;
   MapPin,;} from 'lucide-react';
   Brain, Atom, Shield, Target, Rocket;
   ArrowRight, Check, Star, TrendingUp, Users;
@@ -52,7 +52,7 @@ const staggerContainer = {
 export default function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [      staggerChildren: 0.1
     }
-  }
+  };
 };
 
 export default function ComprehensiveServicesShowcase2025V2() {
@@ -60,7 +60,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
     ...innovativeMicroSaas2025ExpansionV2,
     ...innovativeITServices2025ExpansionV2,
     ...innovativeAIServices2025ExpansionV2,
-    ...industrySpecificSolutions2025V2,
+    ...industrySpecificSolutions2025V2,;
     ...emergingTechBreakthroughs2025V2,  ];    ...innovativeMicroSaas2025ExpansionV2;
     ...innovativeITServices2025ExpansionV2;
     ...innovativeAIServices2025ExpansionV2;
@@ -164,7 +164,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           'Zion Tech Group',
         ]}
       />
-
       {/* Hero Section */}
       <section className='relative py-20 px-4 overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -228,7 +227,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section id='contact' className='py-16 px-4 bg-black/20'>
         <div className='max-w-4xl mx-auto text-center'>
@@ -274,7 +272,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.div>
         </div>
       </section>
-
       {/* Services by Category */}
       <section id='services' className='py-20 px-4'>
         <div className='max-w-7xl mx-auto'>
@@ -289,7 +286,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           >
             Our Comprehensive Service Portfolio
           </motion.h2>
-
           <motion.div
             className='space-y-20'
             variants={staggerContainer}
@@ -312,7 +308,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                     {category.description}
                   </p>
                 </div>
-
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
                   {category.services.map(service => (
                     <motion.div
@@ -326,7 +321,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       <p className='text-gray-300 mb-4'>
                         {service.description}
                       </p>
-
                       <div className='space-y-3 mb-6'>
                         <div className='flex items-center text-sm text-cyan-400'>
                           <TrendingUp className='w-4 h-4 mr-2' />
@@ -337,7 +331,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                           {service.growthRate}
                         </div>
                       </div>
-
                       <div className='mb-6'>
                         <div className='text-2xl font-bold text-white mb-2'>
                           Starting at{' '}
@@ -349,7 +342,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                             : `${service.price} ${service.period}`}
                         </div>
                       </div>
-
                       <a
                         href={`/services/${service.slug}`}
                         className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200'
@@ -372,7 +364,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                     {category.description}
                   </p>
                 </div>
-                
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service) => (
                     <motion.div
@@ -386,7 +377,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       <p className="text-gray-300 mb-4">
                         {service.description}
                       </p>
-                      
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center text-sm text-cyan-400">
                           <TrendingUp className="w-4 h-4 mr-2" />
@@ -397,7 +387,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                           {service.growthRate}
                         </div>
                       </div>
-                      
                       <div className="mb-6">
                         <div className="text-2xl font-bold text-white mb-2">
                           Starting at {(service as any).pricing?.starter || service.price}
@@ -409,7 +398,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                           }
                         </div>
                       </div>
-                      
                       <a
                         href={`/services/${service.slug}`}
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
@@ -424,7 +412,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.div>
         </div>
       </section>
-
       {/* Market Statistics */}
       <section className='py-20 px-4 bg-black/20'>
         <div className='max-w-7xl mx-auto'>
@@ -439,7 +426,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           >
             Market Impact & Growth
           </motion.h2>
-
           <motion.div
             className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'            initial={{ opacity: 0, y: 20 }}          
           <motion.div 
@@ -487,7 +473,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className='py-20 px-4'>
         <div className='max-w-4xl mx-auto text-center'>

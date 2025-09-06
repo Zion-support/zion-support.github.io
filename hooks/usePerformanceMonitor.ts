@@ -6,7 +6,7 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number,
 }
 
-export function usePerformanceMonitor() {
+export function usePerformanceMonitor() {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
 

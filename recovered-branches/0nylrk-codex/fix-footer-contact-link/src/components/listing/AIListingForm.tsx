@@ -21,7 +21,7 @@ interface AIListingFormProps {
   }
 }
 
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title || "");
   const [category, setCategory] = useState(initialValues.category || "");

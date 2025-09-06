@@ -7,7 +7,7 @@ useEffect ( () => {
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
   threshold = 0.1,
   width,
-  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
+  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({;
   src;
   alt;
   className = '',
@@ -64,7 +64,6 @@ useEffect ( () => {
         }`}
         style={{ width, height }}
       />
-      
       {/* Actual Image */}
       {isInView && (
         <motion.img

@@ -17,7 +17,7 @@ interface ListingScoreCardProps {
   className?: string
 }
 
-export function ListingScoreCard({ 
+export function ListingScoreCard({ ;
   title;
   description, 
   image, 
@@ -58,7 +58,6 @@ export function ListingScoreCard({
         </div>
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
-        
         {/* Rating */}
         {rating > 0 && (
           <div className="flex items-center gap-1 mb-4">
@@ -94,7 +93,6 @@ export function ListingScoreCard({
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
           Request Quote
         </Button>
-        
         {author && (
           <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">
             {authorImage ? (

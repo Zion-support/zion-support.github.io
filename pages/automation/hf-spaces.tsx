@@ -18,5 +18,5 @@ export default function HfSpacesPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  )
+  );
 };

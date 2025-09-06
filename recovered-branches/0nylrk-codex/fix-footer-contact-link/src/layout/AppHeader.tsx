@@ -8,7 +8,7 @@ import {Menu, X} from 'lucide-react';
 import {MobileMenu} from '@/components/header/MobileMenu';
 import {useIsMobile} from '@/hooks/use-mobile';
 import {MobileBottomNav} from '@/components/header/MobileBottomNav';
-export function AppHeader() {
+export function AppHeader() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
   
@@ -29,7 +29,6 @@ export function AppHeader() {
           <div className="ml-6 flex-1 hidden md:block">
             <MainNavigation unreadCount={unreadCount} />
           </div>
-          
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
@@ -46,11 +45,9 @@ export function AppHeader() {
               )}
             </button>
           </div>
-          
           <ModeToggle />
         </div>
       </header>
-      
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-40 pt-16">

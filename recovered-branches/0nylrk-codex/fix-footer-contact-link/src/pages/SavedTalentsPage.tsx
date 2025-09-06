@@ -9,7 +9,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
-export default function SavedTalentsPage() {
+export default function SavedTalentsPage() {;
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -162,7 +162,6 @@ export default function SavedTalentsPage() {
         <p className="text-muted-foreground">
           Here are the talents you've saved for future reference.
         </p>
-        
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (

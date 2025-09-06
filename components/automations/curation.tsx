@@ -14,7 +14,7 @@ items: Experiment[] };
 
 export default function CurationPage({ updatedAt, items }: Props) {
   return (type Experiment = {
-  title: string,
+  title: string,;
   hypothesis?: string;
   metric?: string;
   effort?: number;
@@ -79,7 +79,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
           </div>
         )}
       </div>
-    </main>
+    </main>;
   );
 
 export async function getStaticProps() {
@@ -88,7 +88,7 @@ export async function getStaticProps() {
       process.cwd(),
       'data',
       'ai-curation',
-      'growth-experiments.json'
+      'growth-experiments.json';
     );
     const raw = fs.readFileSync(filePath, 'utf8');    const parsed = JSON.parse(raw);
     return {
@@ -103,7 +103,7 @@ export async function getStaticProps() {
         updatedAt: null,}
 
 export async function getStaticProps() {
-  try {
+  try {;
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
     const raw = fs.readFileSync(filePath, "utf8");
     return {

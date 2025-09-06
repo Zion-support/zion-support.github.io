@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
-export interface WhitelabelTenant {
+export interface WhitelabelTenant {;
   id: string;
   brand_name: string;
   subdomain: string;
@@ -21,7 +21,7 @@ export interface WhitelabelTenant {
   email_template_override: Record<string, any> | null
 }
 
-export function useWhitelabelTenant(externalSubdomain?: string) {
+export function useWhitelabelTenant(externalSubdomain?: string) {;
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -98,7 +98,7 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
 }
 
 // Hook to check if current user is a tenant admin
-export function useTenantAdminStatus(tenantId?: string) {
+export function useTenantAdminStatus(tenantId?: string) {;
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 

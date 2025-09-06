@@ -22,7 +22,6 @@ export default function FutureOfWork() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
           <div className='max-w-4xl mx-auto'>
@@ -34,7 +33,6 @@ export default function FutureOfWork() {
                 ← Back to Blog
               </Link>
             </nav>
-
             <article className='prose prose-invert prose-lg max-w-none'>
               <header className='mb-12 text-center'>
                 <div className='flex items-center gap-3 justify-center mb-4'>
@@ -54,7 +52,6 @@ export default function FutureOfWork() {
                   enhances productivity and innovation.
                 </p>
               </header>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-cyan-400'>
                   The Evolution of Work
@@ -66,14 +63,13 @@ export default function FutureOfWork() {
                   human-AI collaboration that amplifies human capabilities
                   rather than replacing them.
                 </p>
-                <p className='text-white/90 mb-4'>
-                  At Zion Tech Group, we believe the future of work lies in
+                <p className='text-white/90 mb-4'>;
+                  At Zion Tech Group, we believe the future of work lies in;
                   creating intelligent systems that work alongside humans;
                   handling routine tasks while humans focus on creative
                   problem-solving, strategic thinking, and innovation.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>
                   Augmented Intelligence in Practice
@@ -105,7 +101,6 @@ export default function FutureOfWork() {
                   than either humans or AI working alone.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-green-400'>
                   New Roles and Opportunities
@@ -138,7 +133,6 @@ export default function FutureOfWork() {
                   valuable in the modern workplace.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-blue-400'>
                   Skills for the Future
@@ -169,7 +163,6 @@ export default function FutureOfWork() {
                   employees develop these future-ready skills.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-purple-400'>
                   Building Collaborative Workplaces
@@ -201,7 +194,6 @@ export default function FutureOfWork() {
                   rather than disrupt human workflows.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-yellow-400'>
                   Measuring Success
@@ -234,7 +226,6 @@ export default function FutureOfWork() {
                   collaboration systems.
                 </p>
               </section>
-
               <div className='mt-12 p-6 bg-white/10 rounded-xl border border-white/20'>
                 <h3 className='text-xl font-semibold mb-4 text-cyan-400'>
                   Shape the Future of Work

@@ -56,3 +56,6 @@ if (require.main === module) {
   const client = new MCPClientIntegration(),
   client.connect()
 }
+
+}
+}

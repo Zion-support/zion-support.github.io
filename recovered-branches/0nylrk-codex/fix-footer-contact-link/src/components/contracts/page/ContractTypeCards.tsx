@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from "@/components/ui/card";
 import { FileText, ShieldCheck } from "lucide-react";
 interface ContractTypeCardsProps {
@@ -43,7 +43,6 @@ export function ContractTypeCards({
           </Button>
         </CardFooter>
       </Card>
-
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -77,6 +76,6 @@ export function ContractTypeCards({
           </Button>
         </CardFooter>
       </Card>
-    </div>
+    </div>;
   );
 }

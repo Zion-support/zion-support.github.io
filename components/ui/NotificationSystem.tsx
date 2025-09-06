@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface Notification {
+export interface Notification {;
   id: string;
   type: "success" | "error" | "warning" | "info";
   title?: string;
@@ -39,9 +39,9 @@ key={notification.id},
             </div>,
             {onDismiss && (,
               <button,
-                onClick={() => onDismiss(notification.id)},
+                onClick={() => onDismiss(notification.id)},;
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',;
-import { AnimatePresence, motion } from 'framer-motion',
+import { AnimatePresence, motion } from 'framer-motion',;
 ;
 export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },
 
@@ -66,7 +66,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
     }, 3000)
   }, []),
 
-}: NotificationSystemProps) {
+}: NotificationSystemProps) {;
   if (notifications.length === 0) return null;
 
   return (
@@ -96,4 +96,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       ))}
     </div>;
   );
+}
+
+}
 }

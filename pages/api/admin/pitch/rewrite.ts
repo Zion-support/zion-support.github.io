@@ -37,5 +37,5 @@ response_format: { type: 'json_object' } as any}),
 res.status(200).json({ title, content })
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Rewrite failed' })
-  }
+  };
 };

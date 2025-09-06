@@ -13,7 +13,7 @@ interface GeneratedDescriptionDisplayProps {
 export function GeneratedDescriptionDisplay({ 
   description, 
   onSave 
-}: GeneratedDescriptionDisplayProps) {
+}: GeneratedDescriptionDisplayProps) {;
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);

@@ -59,6 +59,6 @@ export function TalentCardSaveButton({
 }) 
 }
 }/> </button>) 
-}"
-}
+}";
+};
 ;

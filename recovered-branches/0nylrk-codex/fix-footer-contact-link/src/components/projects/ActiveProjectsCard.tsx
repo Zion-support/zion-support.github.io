@@ -7,7 +7,7 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Badge} from "@/components/ui/badge";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
-export function ActiveProjectsCard() {
+export function ActiveProjectsCard() {;
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
   

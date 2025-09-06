@@ -20,7 +20,7 @@ export default function IncubatorPage() {
             <a className='px-4 py-2 border rounded'>View Incubator Projects</a>
           </Link>        </div>
       </div>
-    </EnhancedLayout>
+    </EnhancedLayout>;
   );
 }      <div className="max-w-3xl">
         <h1 className="text-3xl font-semibold mb-3">Zion Incubator</h1>

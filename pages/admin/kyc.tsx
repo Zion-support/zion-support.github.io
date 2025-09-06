@@ -33,12 +33,10 @@ export default function AdminKycPage() {
       </Head>
       <main className="max-w-5xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">KYC Review Queue</h1>
-
         <div className="mb-4">
           <label className="block text-sm font-medium">Reason/Note (optional)</label>
           <input className="mt-1 w-full border rounded px-3 py-2" value={reason} onChange={(e) => setReason(e.target.value)} />
         </div>
-
         <div className="grid gap-4">
           {queue.map((p) => (
             <div key={p.userId} className="border rounded p-4">
@@ -73,5 +71,5 @@ export default function AdminKycPage() {
         </div>
       </main>
     </>
-  )
+  );
 };

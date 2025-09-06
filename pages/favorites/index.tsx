@@ -7,8 +7,8 @@ export default function FavoritesPage() {
     const raw = localStorage.getItem('zion.favorites')
     setFavorites(raw ? JSON.parse(raw) : [])
   }, [])
-
-  if (!favorites.length) {
+;
+  if (!favorites.length) {;
     return <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Save profiles to revisit them easily.&quot; ctaLabel=&quot;Browse Talent&quot; ctaHref=&quot;/talent&quot; />
   }
 

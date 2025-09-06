@@ -66,13 +66,13 @@ export interface HeuristicDeps {
   countEventsByIp: (
     ip: string,
     source: MonitoredSource,
-    withinMinutes: number
+    withinMinutes: number;
   ) => Promise<number>;
 
 export async function evaluateHeuristics(
   event: FraudEvent,
   deps: HeuristicDeps
-): Promise<HeuristicEvaluation> {
+): Promise<HeuristicEvaluation> {;
   const reasons: string[] = [];
   let severity: HeuristicEvaluation['severity'] = 'low';
 
@@ -112,7 +112,7 @@ export async function evaluateHeuristics(
     }
   }
 export function runHeuristics(data: any): HeuristicResult {
-  // Mock implementation - in production, this would run actual fraud detection heuristics
+  // Mock implementation - in production, this would run actual fraud detection heuristics;
   const flags = new Set<string>();
   
   // Simple heuristics
@@ -128,4 +128,7 @@ export function runHeuristics(data: any): HeuristicResult {
     reasons,
     severity,
   };
+}
+
+}
 }

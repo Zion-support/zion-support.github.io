@@ -27,7 +27,7 @@ function resolveHref(href: Href): string {
   return href?.pathname || (href as { href?: string })?.href || '#';
 }
 
-export default function Link({ href, children, className, ...rest }: LinkProps) {
+export default function Link({ href, children, className, ...rest }: LinkProps) {;
   const resolved = resolveHref(href);
 
   if (React.isValidElement(children)) {

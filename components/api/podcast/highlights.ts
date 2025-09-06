@@ -21,13 +21,13 @@ function ensureStorage() {
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
   const { episodeId } = req.body || {};
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes.findIndex(e => e.id === episodeId);  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
   const { episodeId } = req.body || {};
@@ -53,4 +53,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 
 return res.status(200).json({ episode });  return res.status(200).json({ episode })
+}
+
+}
 }

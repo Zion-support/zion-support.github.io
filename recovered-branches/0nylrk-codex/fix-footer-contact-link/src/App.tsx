@@ -16,7 +16,7 @@ import {
   ErrorRoutes,
   EnterpriseRoutes,
   CommunityRoutes,
-  DeveloperRoutes,
+  DeveloperRoutes,;
 } from "./routes";
 const Home = React.lazy(() => import("./pages/Home"));
 const AIMatcherPage = React.lazy(() => import("./pages/AIMatcher"));

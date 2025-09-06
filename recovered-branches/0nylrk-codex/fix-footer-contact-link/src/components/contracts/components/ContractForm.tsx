@@ -37,7 +37,7 @@ interface ContractFormProps {
   onDeployOptionsChange?: (options: DeploymentOptions) => void
 }
 
-export function ContractForm({
+export function ContractForm({;
   talent;
   clientName;
   initialValues;
@@ -124,23 +124,19 @@ export function ContractForm({
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
-    
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <ProjectDetailsFields 
             form={form} 
           />
-          
           <PaymentTermsFields 
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
           />
-          
           <AdditionalClausesFields 
             form={form}
           />
-          
           <Button 
             type="submit" 
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
@@ -157,7 +153,6 @@ export function ContractForm({
           </Button>
         </form>
       </Form>
-      
       <DialogFooter className="gap-2 flex-wrap mt-4">
         <Button 
           variant="outline" 

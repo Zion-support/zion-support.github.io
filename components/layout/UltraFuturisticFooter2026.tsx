@@ -20,9 +20,9 @@ import {
   Twitter,
   Linkedin,
   Instagram,
-  Youtube,
+  Youtube,;
   Github,;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, 
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
 
@@ -272,7 +272,7 @@ const socialLinks = [
 
 export default function UltraFuturisticFooter2026() {
   return (
-    <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>  { name: 'GitHub', href: '#', icon: Github }
+    <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>  { name: 'GitHub', href: '#', icon: Github };
 ];
 
 export default function UltraFuturisticFooter2026() {
@@ -283,7 +283,6 @@ export default function UltraFuturisticFooter2026() {
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]'></div>
       </div>
-
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         {/* Main Footer Content */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12'>
@@ -293,7 +292,6 @@ export default function UltraFuturisticFooter2026() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
@@ -317,7 +315,6 @@ export default function UltraFuturisticFooter2026() {
                 cybersecurity, fintech blockchain, and healthcare biotech
                 solutions. Transforming businesses with cutting-edge technology.
               </p>
-
               {/* Contact Info */}
               <div className='space-y-3'>
                 <div className='flex items-center text-gray-300'>
@@ -339,7 +336,6 @@ export default function UltraFuturisticFooter2026() {
               </div>
             </motion.div>
           </div>
-
           {/* Service Categories */}
           {serviceCategories.map((category, index) => (
             <motion.div
@@ -388,7 +384,6 @@ export default function UltraFuturisticFooter2026() {
             </motion.div>
           ))}
         </div>
-
         {/* Additional Links */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Company Links */}
@@ -421,7 +416,6 @@ export default function UltraFuturisticFooter2026() {
               ))}
             </ul>
           </motion.div>
-
           {/* Resources */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -452,7 +446,6 @@ export default function UltraFuturisticFooter2026() {
               ))}
             </ul>
           </motion.div>
-
           {/* Social Media */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -487,7 +480,6 @@ export default function UltraFuturisticFooter2026() {
             </div>
           </motion.div>
         </div>
-
         {/* Newsletter Signup */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -531,7 +523,6 @@ export default function UltraFuturisticFooter2026() {
             </div>
           </div>
         </motion.div>
-
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -587,6 +578,11 @@ export default function UltraFuturisticFooter2026() {
           </div>
         </motion.div>
       </div>
-    </footer>
+    </footer>;
 );
+}
+
+}
+}
+}
 }

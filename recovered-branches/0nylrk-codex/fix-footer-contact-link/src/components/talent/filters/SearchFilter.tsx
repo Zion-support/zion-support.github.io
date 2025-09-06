@@ -18,3 +18,4 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
     </div>
   )
 }
+;

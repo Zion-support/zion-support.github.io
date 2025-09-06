@@ -20,6 +20,6 @@ export function LoginContent() {
           </div>
         </div>
       </div>
-    </div>
+    </div>;
   );
 }

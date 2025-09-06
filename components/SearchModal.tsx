@@ -132,7 +132,7 @@ const searchData: SearchResult[] = [
   },
 ];
 
-export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
@@ -209,7 +209,6 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
           onClick={onClose}
         />
-
         {/* Modal */}
         <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">
           {/* Search Input */}
@@ -231,7 +230,6 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
               <X className="w-5 h-5" />
             </button>
           </div>
-
           {/* Results */}
           <div className="max-h-96 overflow-y-auto">
             {query.trim() ? (

@@ -72,4 +72,6 @@ export function ClickableBadge({
       )}
     </div>
   )
+};
+;
 }

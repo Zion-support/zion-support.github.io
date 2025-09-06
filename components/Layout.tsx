@@ -67,7 +67,6 @@ const Layout: React.FC<LayoutProps> = ({
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={canonical} />
         <meta property="og:type" content="website" />
-
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={ogTitle || title} />
@@ -76,14 +75,12 @@ const Layout: React.FC<LayoutProps> = ({
           content={ogDescription || description}
         />
         <meta name="twitter:image" content={ogImage} />
-
         {/* JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
-
       <Header />
       <main>{children}</main>
       <Footer />

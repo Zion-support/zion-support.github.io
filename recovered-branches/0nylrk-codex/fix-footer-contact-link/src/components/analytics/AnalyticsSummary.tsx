@@ -12,7 +12,7 @@ export function AnalyticsSummary() {
       const { data: pageViewsData, error: pageViewsError } = await supabase
         .from('analytics_events')
         .select('count')
-        .eq('event_typepage_view')
+        .eq('event_typepage_view');
         .single();
 
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError;

@@ -94,7 +94,6 @@ const Blueprint20250818122901: React.FC = () => {
         <meta name="description" content="Automated content generation system with AI-powered optimization" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
@@ -108,7 +107,6 @@ const Blueprint20250818122901: React.FC = () => {
             {blueprintDetails.description}
           </p>
         </div>
-
         {/* Blueprint Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -132,7 +130,6 @@ const Blueprint20250818122901: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Recently deployed</p>
           </div>
         </div>
-
         {/* System Components */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">System Components</h2>
@@ -155,7 +152,6 @@ const Blueprint20250818122901: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Features */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>
@@ -174,7 +170,6 @@ const Blueprint20250818122901: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Content Generation Pipeline */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Content Generation Pipeline</h2>
@@ -208,7 +203,6 @@ const Blueprint20250818122901: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Stack */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
@@ -237,7 +231,6 @@ const Blueprint20250818122901: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Navigation */}
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 

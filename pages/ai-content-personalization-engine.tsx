@@ -22,4 +22,4 @@ export default function AIContentPersonalizationEngine() {
 			canonical="https: //ziontechgroup.com/ai-content-personalization-engine"
 		/>
 	)
-}
+};

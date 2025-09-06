@@ -15,6 +15,6 @@ export function ApiLogs() {
   const hasPrevPage = currentPage > 0
   )
 }
-  )
-}
+  );
+};
 ;

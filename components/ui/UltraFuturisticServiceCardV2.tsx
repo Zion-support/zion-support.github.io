@@ -7,7 +7,7 @@ import {
   TrendingUp,
   Zap,
   Shield,
-  Globe,
+  Globe,;
   Rocket,;
 } from 'lucide-react';
 interface ServiceCardProps {
@@ -92,7 +92,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
     >
       {/* Glow effect */}
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>
-
       {/* Main card */}
       <div className='relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden'>
         {/* Background pattern */}
@@ -100,7 +99,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
           <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]'></div>
         </div>
-
         {/* Header */}
         <div className='relative z-10 mb-6'>
           <div className='flex items-start justify-between mb-4'>
@@ -131,7 +129,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
     >
       {/* Glow effect */}
       <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-      
       {/* Main card */}
       <div className="relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden">
         {/* Background pattern */}
@@ -139,7 +136,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]"></div>
         </div>
-
         {/* Header */}
         <div className="relative z-10 mb-6">
           <div className="flex items-start justify-between mb-4">
@@ -154,7 +150,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
                 </div>
               </div>
             </div>
-            
             {service.popular && (
               <motion.div
                 initial={{ scale: 0 }}
@@ -169,19 +164,15 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
               </motion.div>
             )}
           </div>
-
           <h3 className='text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300'>
             {service.name}
           </h3>
-
           <p className='text-gray-300 text-sm leading-relaxed'>            {service.tagline}          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300">
             {service.name}
           </h3>
-          
           <p className="text-gray-300 text-sm leading-relaxed">
           </p>
         </div>
-
         {/* Stats */}
         <div className='relative z-10 mb-6'>
           <div className='grid grid-cols-3 gap-4'>
@@ -212,7 +203,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
             </div>
           </div>
         </div>
-
         {/* Pricing */}
         <div className='relative z-10 mb-6'>
           <div className='bg-gray-800/50 rounded-xl p-4 border border-gray-600/30'>
@@ -258,7 +248,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
             )}
           </div>
         </div>
-
         {/* Features preview */}
         <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
@@ -292,7 +281,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
             )}
           </div>
         </div>
-
         {/* Benefits */}
         <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
@@ -317,7 +305,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
             ))}
           </div>
         </div>
-
         {/* Market info */}
         {service.marketSize && service.growthRate && (
           <div className='relative z-10 mb-6'>
@@ -361,19 +348,16 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
               <span>Learn More</span>
               <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200' />
             </span>
-
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'></div>          </motion.a>          >
             <span className="relative z-10 flex items-center space-x-2">
               <span>Learn More</span>
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
             </span>
-            
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
           </motion.a>
         </div>
-
         {/* Hover overlay */}
         <motion.div
           initial={{ opacity: 0 }}

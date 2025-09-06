@@ -111,7 +111,7 @@ function SiteMap() {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  // We generate the XML sitemap with the posts data
+  // We generate the XML sitemap with the posts data;
   const sitemap = generateSiteMap();
 
   res.setHeader("Content-Type", "text/xml");

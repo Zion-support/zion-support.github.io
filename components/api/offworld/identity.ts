@@ -5,7 +5,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  try {
+  try {;
     const { address } = req.query as { address?: string };
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);

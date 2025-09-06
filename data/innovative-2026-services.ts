@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface Innovative2026Service {
+export interface Innovative2026Service {;
   id: string;
   name: string;
   tagline: string;
@@ -442,7 +442,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     customers: 450,
     rating: 4.8,
     reviews: 234,
-  },
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',

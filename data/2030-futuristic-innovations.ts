@@ -63,7 +63,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     tagline: 'Develop genuine AI consciousness and self-awareness',
     price: '$19,999',
     period: '/month',
-    description: 'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. Enables AI systems to understand context, develop personality, and form genuine connections with users.',    features: [
+    description: 'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. Enables AI systems to understand context, develop personality, and form genuine connections with users.',    features: [;
       'Consciousness development algorithmsEmotional intelligence trainingPersonality customization engineContext awareness systemsSelf-reflection capabilitiesEthical decision-making frameworksConsciousness monitoring toolsMulti-modal consciousness fusion';
       'Real-time consciousness metricsConsciousness evolution tracking'
     ];

@@ -1,6 +1,6 @@
 
 // Define the types for our sitemap structure
-export type SitemapItem = {
+export type SitemapItem = {;
   path: string;
   label: string;
   description?: string;
@@ -17,7 +17,7 @@ const currentDate = '2025-05-15';
 
 // Public Pages - Accessible to all users
 export const publicPages: SitemapItem[] = [
-  {
+  {;
     path: '/';
     label: 'Home';
     description: 'The world\'s first free marketplace dedicated to high-tech and artificial intelligence';
@@ -104,7 +104,7 @@ export const publicPages: SitemapItem[] = [
 
 // Authentication Pages
 export const authPages: SitemapItem[] = [
-  {
+  {;
     path: '/login';
     label: 'Login';
     description: 'Sign in to your account';
@@ -145,7 +145,7 @@ export const authPages: SitemapItem[] = [
 
 // Talent/Creator Routes - Requires authentication and appropriate role
 export const talentRoutes: SitemapItem[] = [
-  {
+  {;
     path: '/talent-dashboard';
     label: 'Talent Dashboard';
     description: 'Overview for talent users';
@@ -184,7 +184,7 @@ export const talentRoutes: SitemapItem[] = [
 
 // Client/Employer Routes - Requires authentication and appropriate role
 export const clientRoutes: SitemapItem[] = [
-  {
+  {;
     path: '/client-dashboard';
     label: 'Client Dashboard';
     description: 'Overview for client users';
@@ -214,7 +214,7 @@ export const clientRoutes: SitemapItem[] = [
 
 // Shared Routes - Authenticated Users
 export const sharedRoutes: SitemapItem[] = [
-  {
+  {;
     path: '/messages';
     label: 'Messages';
     description: 'Your inbox and conversations';
@@ -249,7 +249,7 @@ export const sharedRoutes: SitemapItem[] = [
 
 // Admin Routes
 export const adminRoutes: SitemapItem[] = [
-  {
+  {;
     path: '/analytics';
     label: 'Analytics';
     description: 'System analytics and metrics';
@@ -278,7 +278,7 @@ export const adminRoutes: SitemapItem[] = [
     lastmod: currentDate}];
 
 // Dynamic Path Patterns
-export const dynamicPaths = {
+export const dynamicPaths = {;
   talentProfile: '/talent/:id';
   projectDetails: '/project/:projectId';
   projectMilestones: '/project/:projectId/milestones';
@@ -288,7 +288,7 @@ export const dynamicPaths = {
   disputeDetails: '/dashboard/disputes/:disputeId'};
 
 // The complete sitemap
-export const completeSitemap: SitemapItem[] = [
+export const completeSitemap: SitemapItem[] = [;
   ...publicPages;
   ...authPages;
   ...talentRoutes;
@@ -301,7 +301,7 @@ export const getAccessibleRoutes = (
   isAuthenticated: boolean, 
   userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null
 ) => {
-  // Public routes accessible to everyone
+  // Public routes accessible to everyone;
   let accessibleRoutes = [...publicPages, ...authPages];
   
   // Add authenticated-only routes

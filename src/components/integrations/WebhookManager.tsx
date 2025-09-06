@@ -37,8 +37,8 @@ export function WebhookManager() {
     url: '',
     selectedEvent: '' as WebhookEventType,
     eventTypes: [] as WebhookEventType[],
-    secret: '',
-  })
+    secret: '',;
+  });
   const eventOptions: { value: WebhookEventType; label: string }[] = [
     { value: 'new_application', label: 'New Application Received' },
     { value: 'quote_received', label: 'Quote Request Received' },
@@ -120,7 +120,6 @@ export function WebhookManager() {
                 }
               />
             </div>
-
             <div className='space-y-2'>
               <Label htmlFor='webhook-url'>URL</Label>
               <Input
@@ -132,7 +131,6 @@ export function WebhookManager() {
                 }              />
             </div>
           </div>
-
           <div className='space-y-2'>
             <Label>Events</Label>
             <div className='flex flex-wrap gap-2 mb-2'>
@@ -172,7 +170,6 @@ export function WebhookManager() {
               </Button>
             </div>
           </div>
-
           <div className='space-y-2'>
             <Label htmlFor='webhook-secret'>Secret (optional)</Label>
             <Input
@@ -193,10 +190,8 @@ export function WebhookManager() {
           </Button>
         </CardFooter>
       </Card>
-
       <div>
         <h3 className='text-lg font-medium mb-4'>Your Webhooks</h3>
-
         {loading ? (
           <p>Loading webhooks...</p>
         ) : error ? (
@@ -306,7 +301,6 @@ export function WebhookManager() {
                   >
                     <Trash className='h-4 w-4 mr-2' /> Delete
                   </Button>
-
                   <Select
                     onValueChange={value =>
                       handleTestWebhook(webhook.id, value as WebhookEventType)

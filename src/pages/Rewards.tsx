@@ -27,5 +27,5 @@ const REWARDS = [
       </ul>
     </div>
   )
-}
+};
 ;

@@ -5,7 +5,7 @@ return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 }</pre>) 
 }</section> </div>) import { useEffect, useState } from 'react';
 import Head from 'next/head';
-export default function AutomationInsightsPage() {
+export default function AutomationInsightsPage() {;
   const [intel, setIntel] = useState<any>(null);
   const [talentMd, setTalentMd] = useState<string>('');
 
@@ -44,7 +44,6 @@ export default function AutomationInsightsPage() {
           </div>
         )}
       </section>
-
       <section id="talent" className="mb-8">
         <h2 className="font-medium">Talent Highlights</h2>
         {!talentMd ? (

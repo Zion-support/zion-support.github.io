@@ -1,20 +1,20 @@
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
-export interface CodeSample {
+export interface CodeSample {;
   language: 'curl' | 'javascript' | 'python';
   code: string;
 
-export interface RateLimitInfo {
+export interface RateLimitInfo {;
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
   burst?: number;
 
-export interface ErrorCode {
+export interface ErrorCode {;
   code: string;
   httpStatus: number;
   message: string;
 
-export interface EndpointSpec {
+export interface EndpointSpec {;
   id: string;
   title: string;
   description: string;
@@ -31,13 +31,13 @@ export interface EndpointSpec {
   tags?: string[];
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
-export interface SectionSpec {
+export interface SectionSpec {;
   id: string;
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
 
-export interface ApiDocsSpec {
+export interface ApiDocsSpec {;
   product: 'Zion OS';
   versions: string[]; // available versions
   defaultVersion: string;
@@ -65,10 +65,17 @@ export interface EndpointSpec {
   id: string, title: string,
   description: string, path: string,
   method: HttpMethod, visibility: Visibility,
-  auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>,
+  auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>,;
   query?: Record<string, string>;
   params?: Record<string, string>;
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
   lastUpdatedIso: string
+}
+
+}
+}
+}
+}
+}
 }

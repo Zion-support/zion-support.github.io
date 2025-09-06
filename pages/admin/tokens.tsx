@@ -63,7 +63,6 @@ export default function AdminTokens() {
             </div>
           </div>
         </div>
-
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Conversion & Rules</h2>
           {config && (
@@ -77,7 +76,6 @@ export default function AdminTokens() {
             </div>
           )}
         </div>
-
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Transactions</h2>
           <div className="space-y-2 text-sm max-h-96 overflow-auto">
@@ -96,5 +94,5 @@ export default function AdminTokens() {
         </div>
       </div>
     </EnhancedLayout>
-  )
+  );
 };

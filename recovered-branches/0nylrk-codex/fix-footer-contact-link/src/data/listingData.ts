@@ -149,7 +149,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true,
     location: 'Global',
     availability: 'Immediate',
-    aiScore: 94,
+    aiScore: 94,;
   },];      name: "VisionTech AI";
       id: "visiontech";
       avatarUrl: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100"};
@@ -176,7 +176,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Content generation',
     'Code assistant',
     'Virtual assistant',
-    'Enterprise AI solutions',
+    'Enterprise AI solutions',;
   ];
 
   return suggestions.map(text => ({
@@ -194,7 +194,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
   const productTypes = [
-    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
   ].sort();
   const locations = [
     ...new Set(
@@ -224,10 +224,10 @@ export const generateFilterOptions = () => {
 };
 
 export const MAX_PRICE = Math.max(
-  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)
+  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
 );
 export const MIN_PRICE = Math.min(
-  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)
+  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
 );
 reviewCount: 58;
 featured: true;

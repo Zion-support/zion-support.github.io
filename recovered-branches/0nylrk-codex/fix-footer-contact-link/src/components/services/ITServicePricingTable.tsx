@@ -5,7 +5,7 @@ import {Input} from "@/components/ui/input";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Globe, Search, ArrowUpDown} from "lucide-react";
 import {Button} from "@/components/ui/button";
-export function ITServicePricingTable() {
+export function ITServicePricingTable() {;
   const [searchQuery, setSearchQuery] = useState("");
   const [sortConfig, setSortConfig] = useState<{
     key: keyof CountryPricing,
@@ -60,7 +60,6 @@ export function ITServicePricingTable() {
           />
         </div>
       </div>
-
       <div className="rounded-md border border-zion-blue-light overflow-hidden">
         <Table>
           <TableHeader className="bg-zion-blue">

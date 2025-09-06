@@ -8,7 +8,7 @@ interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
 }
 
-export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
+export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
   const { open, toggleSidebar } = useSidebar();
 
   return (

@@ -13,7 +13,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     applications, 
     isLoading, 
     error, 
-    updateApplicationStatus, 
+    updateApplicationStatus, ;
     markApplicationAsViewed;
     refetch
   } = useJobApplications(jobId);
@@ -70,7 +70,6 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
         onStatusChange={handleStatusChange}
         onViewScore={handleViewScore}
       />
-
       <ScoreDialog
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}

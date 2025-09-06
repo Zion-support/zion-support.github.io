@@ -34,8 +34,8 @@ export function PointsBadge() {
   }
   const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
-    e.stopPropagation()
-    if (!isAuthenticated) return
+    e.stopPropagation();
+    if (!isAuthenticated) return;
     setIsRefreshing(true);    try {
       await fetchLedger()
     } catch (error) {
@@ -96,7 +96,6 @@ export function PointsBadge() {
             )}
           </TooltipContent>
         </Tooltip>
-
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
@@ -119,7 +118,6 @@ export function PointsBadge() {
           </Tooltip>
         )}
       </div>
-
       {!isAuthenticated && (
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       )}

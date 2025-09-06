@@ -10,7 +10,7 @@ interface AddSkillFormProps {
   onAddSkill: (skill: Skill) => Promise<boolean>
 }
 
-export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
+export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
@@ -48,7 +48,6 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
             placeholder="Enter a skill (e.g., React)"
           />
         </div>
-        
         <div className="w-full md:w-44">
           <div className="flex justify-between items-center">
             <Label htmlFor="skill-category">Category</Label>
@@ -81,7 +80,6 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
             </SelectContent>
           </Select>
         </div>
-        
         <div>
           <Label htmlFor="skill-proficiency">Proficiency (1-5)</Label>
           <div className="flex gap-4">

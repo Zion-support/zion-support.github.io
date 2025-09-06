@@ -5,12 +5,12 @@ import {
   Card,
   CardContent,
   CardFooter,
-  CardHeader,
+  CardHeader,;
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { Check, Copy, ExternalLink } from "lucide-react";
-export function ZapierIntegration() {
+export function ZapierIntegration() {;
   const [copied, setCopied] = useState(false);
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
 
@@ -38,7 +38,6 @@ export function ZapierIntegration() {
               Connect Zion with 3,000+ apps via Zapier. Use your API key below
               to set up integrations.
             </p>
-
             <div className="space-y-4">
               <div className="space-y-2">
                 <label className="text-sm font-medium">Your Zion API Key</label>
@@ -70,7 +69,6 @@ export function ZapierIntegration() {
             </Button>
           </CardFooter>
         </Card>
-
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold">Popular Zaps</h3>
@@ -103,7 +101,6 @@ export function ZapierIntegration() {
           </CardFooter>
         </Card>
       </div>
-
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
@@ -113,7 +110,6 @@ export function ZapierIntegration() {
             Use these webhook triggers to start Zaps when events happen in your
             Zion account.
           </p>
-
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Job Posted</h4>
@@ -124,7 +120,6 @@ export function ZapierIntegration() {
                 Set Up Trigger
               </Button>
             </div>
-
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
@@ -134,7 +129,6 @@ export function ZapierIntegration() {
                 Set Up Trigger
               </Button>
             </div>
-
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
               <p className="text-xs text-muted-foreground mb-3">

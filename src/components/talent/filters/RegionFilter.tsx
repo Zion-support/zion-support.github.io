@@ -28,7 +28,6 @@ export function RegionFilter({
           <ChevronDown className='h-4 w-4 text-zion-slate-light' />
         )}
       </button>
-
       {expanded && (
         <div className='mt-4 space-y-2'>
           {REGION_OPTIONS.map(region => (
@@ -37,7 +36,6 @@ export function RegionFilter({
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
             <div key={region.id} className="flex items-center">
-
 import { Checkbox } from "@/components/ui/checkbox"
 import { RegionFilterProps } from "@/types/filters"
 const REGION_OPTIONS = [
@@ -62,7 +60,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-      
       {expanded && (
         <div className="mt-4 space-y-2">
           {REGION_OPTIONS.map(region => (
@@ -96,4 +93,5 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 }</label> </div>) ) 
 }</div>) 
 }</div>) 
-}"}
+}"};
+;

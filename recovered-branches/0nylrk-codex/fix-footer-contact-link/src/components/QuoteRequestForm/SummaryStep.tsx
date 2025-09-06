@@ -11,7 +11,7 @@ interface SummaryStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
-export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
+export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
   const [isMatching, setIsMatching] = useState(false);
   const [matches, setMatches] = useState<MatchResult[]>([]);
   
@@ -80,7 +80,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
-      
       {/* AI Matching Results */}
       <AIMatchingResults 
         serviceType={formData.serviceType}
@@ -89,7 +88,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
         onSelectMatch={handleItemSelect}
         isLoading={isMatching}
       />
-      
       {/* Service Information */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Service Information</h4>
@@ -100,7 +98,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                 <Label className="text-zion-slate-light">Service Type</Label>
                 <div className="text-white">{formData.serviceType}</div>
               </div>
-              
               {formData.specificItem && (
                 <div>
                   <Label className="text-zion-slate-light">Selected Item</Label>
@@ -111,7 +108,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           </CardContent>
         </Card>
       </div>
-      
       {/* Project Details */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Project Details</h4>
@@ -122,7 +118,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                 <Label className="text-zion-slate-light">Project Name</Label>
                 <div className="text-white">{formData.projectName}</div>
               </div>
-              
               <div>
                 <Label className="text-zion-slate-light">Project Description</Label>
                 <div className="text-white whitespace-pre-wrap">{formData.projectDescription}</div>
@@ -131,7 +126,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           </CardContent>
         </Card>
       </div>
-      
       {/* Timeline */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Timeline</h4>
@@ -142,7 +136,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                 <Label className="text-zion-slate-light">Timeline Type</Label>
                 <div className="text-white capitalize">{formData.timeline}</div>
               </div>
-              
               {formData.startDate && (
                 <div>
                   <Label className="text-zion-slate-light">Start Date</Label>
@@ -164,7 +157,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           </CardContent>
         </Card>
       </div>
-      
       {/* Budget */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Budget</h4>
@@ -175,7 +167,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                 <Label className="text-zion-slate-light">Budget Type</Label>
                 <div className="text-white capitalize">{formData.budget.type}</div>
               </div>
-              
               <div>
                 <Label className="text-zion-slate-light">Amount</Label>
                 <div className="text-white">
@@ -187,7 +178,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           </CardContent>
         </Card>
       </div>
-      
       {/* Contact Information */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Contact Information</h4>
@@ -198,17 +188,14 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                 <Label className="text-zion-slate-light">Name</Label>
                 <div className="text-white">{formData.contactInfo.name}</div>
               </div>
-              
               <div>
                 <Label className="text-zion-slate-light">Company</Label>
                 <div className="text-white">{formData.contactInfo.company || "N/A"}</div>
               </div>
-              
               <div>
                 <Label className="text-zion-slate-light">Email</Label>
                 <div className="text-white">{formData.contactInfo.email}</div>
               </div>
-              
               <div>
                 <Label className="text-zion-slate-light">Phone</Label>
                 <div className="text-white">{formData.contactInfo.phone || "N/A"}</div>

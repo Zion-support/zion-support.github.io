@@ -8,7 +8,7 @@ interface AnalyticsContainerProps {
   children: React.ReactNode;
 }
 
-export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
+export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
   const { isAuthenticated, isLoading, user } = useAuth();
 
   // Check if user is admin (using either role or userType)

@@ -1,5 +1,5 @@
 
-export interface TenantInfo {
+export interface TenantInfo {;
   id: string;
   brand_name: string;
   subdomain: string;
@@ -19,3 +19,4 @@ export interface TenantResponse {
   tenant: TenantInfo | null,
   error?: string
 }
+;

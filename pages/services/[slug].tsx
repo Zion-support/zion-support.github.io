@@ -45,7 +45,7 @@ function extractServiceSlugFromLink(link: string): string | null {
     return null;
   }
 
-export async function getStaticPaths() {
+export async function getStaticPaths() {;
   const services = getAllServices();
   const slugs = new Set<string>();
 
@@ -59,7 +59,7 @@ export async function getStaticPaths() {
     fallback: false,
   };
 
-export async function getStaticProps({ params }: { params: { slug: string } }) {
+export async function getStaticProps({ params }: { params: { slug: string } }) {;
   const services = getAllServices();
   const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 
@@ -96,7 +96,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
         />
         <link rel='canonical' href={service.link} />
       </Head>
-
       <div className='container mx-auto px-4 py-16'>
         <div className='text-center mb-10'>
           <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4'>
@@ -106,7 +105,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
             {service.tagline || service.description}
           </p>
         </div>
-
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12'>
           <div className='lg:col-span-2 space-y-6'>
             <Card className='p-6 bg-black/40 border border-gray-700/50'>
@@ -117,7 +115,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
                 {service.description}
               </p>
             </Card>
-
             <Card className='p-6 bg-black/40 border border-gray-700/50'>
               <h3 className='text-white text-lg font-semibold mb-4'>
                 Key Features
@@ -132,7 +129,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
               </ul>
             </Card>
           </div>
-
           <div className='space-y-6'>
             <Card className='p-6 bg-black/40 border border-gray-700/50'>
               <div className='text-sm text-gray-400 mb-1'>Pricing</div>
@@ -162,7 +158,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
                 </Button>
               </div>
             </Card>
-
 <Card className='p-6 bg-black/40 border border-gray-700/50'>
               <h3 className='text-white font-semibold mb-3'>Contact</h3>
               <div className='space-y-3 text-sm'>
@@ -200,5 +195,11 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
           </div>
         </div>
       </div>
-    </UltraFuturisticBackground>
+    </UltraFuturisticBackground>;
   );
+
+}
+}
+}
+}
+}

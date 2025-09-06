@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query,
@@ -11,5 +11,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     exportedAt: new Date().toISOString(),
     note: 'This is a stub export. Connect to persistence to return real deployment state.'},
   res.setHeader('Content-Typeapplication/json'),
-  return res.status(200).json(fake)
+  return res.status(200).json(fake);
 };

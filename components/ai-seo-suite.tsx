@@ -21,12 +21,12 @@ import {
   Sparkles,
   ChartBar,
   Lightbulb,
-  Rocket,
+  Rocket,;
   Settings,;
 } from 'lucide-react';
 export default function AISeosuitePage() {
   const features = [
-    {
+    {;
       icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
 export default function AISeosuitePage() {
   const features = [
@@ -77,7 +77,7 @@ export default function AISeosuitePage() {
         'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
       gradient: 'from-pink-400 to-rose-500',
-    },
+    },;
   ];
 
   const seoTools = [
@@ -370,14 +370,12 @@ export default function AISeosuitePage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         <div className='absolute inset-0'>
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.08),transparent_50%)]' />
         </div>
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <div className='mb-8'>
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>
@@ -385,7 +383,6 @@ export default function AISeosuitePage() {
               AI-Powered Search Engine Optimization
             </div>
           </div>
-
           <h1 className='text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight'>
             AI-Powered SEO Suite
           </h1>
@@ -393,7 +390,6 @@ export default function AISeosuitePage() {
             Dominate search rankings with AI-powered SEO tools, comprehensive
             analytics, and intelligent optimization
           </p>
-
           <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
             <Button
               href='#pricing'
@@ -410,14 +406,12 @@ export default function AISeosuitePage() {
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.08),transparent_50%)]" />
         </div>
-        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
@@ -425,14 +419,12 @@ export default function AISeosuitePage() {
               AI-Powered Search Engine Optimization
             </div>
           </div>
-          
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight">
             AI-Powered SEO Suite
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">
             Dominate search rankings with AI-powered SEO tools, comprehensive analytics, and intelligent optimization
           </p>
-
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
             <Button
               href="#pricing"
@@ -452,7 +444,6 @@ export default function AISeosuitePage() {
               Watch Demo
             </Button>
           </div>
-
           {/* Stats */}
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto'>
             <div className='text-center'>
@@ -493,7 +484,6 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -506,7 +496,6 @@ export default function AISeosuitePage() {
               traffic
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -530,7 +519,6 @@ export default function AISeosuitePage() {
               Everything you need to dominate search rankings and drive organic traffic
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
@@ -554,7 +542,6 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
-
       {/* SEO Tools Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -565,7 +552,6 @@ export default function AISeosuitePage() {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Professional-grade tools used by top SEO agencies and marketers
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -575,7 +561,6 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoTools.map((tool, index) => (
               <Card
@@ -620,7 +605,6 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
-
       {/* Success Metrics Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -631,7 +615,6 @@ export default function AISeosuitePage() {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              See the impact our AI-powered SEO suite has on businesses
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>      <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -641,7 +624,6 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {successMetrics.map((metric, index) => (
               <Card
@@ -669,7 +651,6 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -680,7 +661,6 @@ export default function AISeosuitePage() {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Trusted by businesses across industries for SEO success
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -690,7 +670,6 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <Card
@@ -741,7 +720,6 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -755,7 +733,6 @@ export default function AISeosuitePage() {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your SEO needs
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -765,7 +742,6 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <Card
@@ -794,7 +770,6 @@ export default function AISeosuitePage() {
                   </div>
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -804,7 +779,6 @@ export default function AISeosuitePage() {
                       <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -813,7 +787,6 @@ export default function AISeosuitePage() {
                     </li>
                   ))}
                 </ul>
-
                 <Button
                   href='/contact'
                   className={`w-full ${plan.buttonColor} text-white`}
@@ -831,7 +804,6 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -842,7 +814,6 @@ export default function AISeosuitePage() {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Connect with your favorite tools and platforms
             </p>
           </div>
-
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>      <section className="py-24 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -852,7 +823,6 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {integrations.map((integration, index) => (
               <Card
@@ -882,7 +852,6 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -939,4 +908,11 @@ export default function AISeosuitePage() {
       </section>
     </>
 );
+}
+
+}
+}
+}
+}
+}
 }

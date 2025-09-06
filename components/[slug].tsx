@@ -25,7 +25,7 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
 import { industryRealServices } from '../data/industry-real-services';
 import { professionalServices } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
-export default function DynamicServicePage() {
+export default function DynamicServicePage() {;
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
 
@@ -121,7 +121,6 @@ export default function DynamicServicePage() {
               {service.tagline}
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12'>
             <div className='lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6'>
               <h2 className='text-2xl font-semibold mb-4'>What you get</h2>
@@ -191,7 +190,7 @@ export default function DynamicServicePage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-// Static export support: generate root-level pages for service slugs
+// Static export support: generate root-level pages for service slugs;
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
 
 function collectAllServices(): Svc[] {
@@ -228,7 +227,7 @@ function normalizeSlug(value: string): string {
     return null
   };
 }
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {;
   const services = collectAllServices();
   const candidateSlugs = new Set<string>(),
 
@@ -262,7 +261,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed; the component resolves the service client-side.
   return { props: {} };};
   // Exclude any slug that conflicts with an existing root page file
@@ -276,5 +275,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
-  return { props: {} }
+  return { props: {} };
 };

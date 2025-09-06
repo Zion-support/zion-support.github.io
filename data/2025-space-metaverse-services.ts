@@ -1,4 +1,4 @@
-export interface SpaceMetaverseService {
+export interface SpaceMetaverseService {;
   id: string;
   name: string;
   tagline: string;
@@ -419,7 +419,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     customers: 1800,
     rating: 4.7,
     reviews: 1400,
-  },
+  },;
 ];      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
     ];
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'];

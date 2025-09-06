@@ -7,7 +7,7 @@ interface SkillsListProps {
   onDeleteSkill: (id: string, category: string) => Promise<void>
 }
 
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
+export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
   
   useEffect(() => {
@@ -31,7 +31,6 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
   return (
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
-      
       <div className="space-y-4">
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
           <SkillCategory 

@@ -28,7 +28,7 @@ interface ErrorBoundaryProps {
   onError?: (error: Error, errorInfo: ErrorInfo) => void
   enableRetry?: boolean
   maxRetries?: number
-  showReportButton?: boolean
+  showReportButton?: boolean;
   context?: string;  enableRetry?: boolean
   maxRetries?: number
   showReportButton?: boolean
@@ -103,7 +103,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       scope.setTag(
         'errorBoundary',
         this.props.context || 'GlobalErrorBoundary'
-      )
+      );
       scope.setLevel('error');      scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack,
         retryCount: this.state.retryCount,
@@ -452,26 +452,22 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                   )}
                 </div>
               </CardHeader>
-
               <CardContent className='space-y-6'>
                 <div className='text-center'>
                   <p className='text-gray-600 dark:text-gray-300 mb-4'>
                     {suggestion}
                   </p>
-
                   {this.state.retryCount > 0 && (
                     <p className='text-sm text-orange-600 dark:text-orange-400'>
                       Retry attempt: {this.state.retryCount}/
                       {this.props.maxRetries || 3}                    </p>                    {suggestion}
                   </p>
-                  
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>
                   )}
                 </div>
-
                 {/* Action Buttons */}
                 <div className='flex flex-col sm:flex-row gap-3 justify-center'>
                   {canRetry && (
@@ -492,7 +488,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                     <Home className='h-4 w-4' />
                     Go Home
                   </Button>
-
                   <Button
                     onClick={() =>
                       this.setState({ showDetails: !this.state.showDetails })
@@ -512,7 +507,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                     <Home className="h-4 w-4" />
                     Go Home
                   </Button>
-
                   <Button 
                     onClick={() => this.setState({ showDetails: !this.state.showDetails })}
                     variant="ghost" 
@@ -523,7 +517,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
                 </div>
-
                 {/* Error Details */}
                 <AnimatePresence>
                   {this.state.showDetails && (
@@ -549,7 +542,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                             {this.state.error.message}
                           </code>
                         </div>
-
                         {process.env.NODE_ENV === 'development' &&
                           this.state.error.stack && (
                             <div>
@@ -571,7 +563,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                             <Clipboard className='h-4 w-4 mr-2' />
                             Copy Details
                           </Button>
-
                           {this.props.showReportButton !== false && (
                             <Button
                               onClick={this.reportError}
@@ -584,7 +575,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                             <Clipboard className="h-4 w-4 mr-2" />
                             Copy Details
                           </Button>
-                          
                           {this.props.showReportButton !== false && (
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               <Send className="h-4 w-4 mr-2" />
@@ -639,3 +629,4 @@ export default GlobalErrorBoundary
 }
 
 export default GlobalErrorBoundary
+;

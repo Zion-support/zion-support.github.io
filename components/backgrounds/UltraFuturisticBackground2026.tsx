@@ -252,7 +252,6 @@ const UltraFuturisticBackground2026: React.FC<
             'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)',
         }}
       />
-
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-10'>
         <motion.div
@@ -265,7 +264,6 @@ const UltraFuturisticBackground2026: React.FC<
             duration: 8,
             repeat: Infinity,
             ease: 'linear',      />
-      
       {/* Floating Geometric Shapes */}
       <div className="fixed inset-0 pointer-events-none z-10">
         <motion.div
@@ -348,7 +346,6 @@ const UltraFuturisticBackground2026: React.FC<
           }}
         />
       </div>
-
       {/* Energy Field Effects */}
       <div className='fixed inset-0 pointer-events-none z-20'>
         <motion.div
@@ -390,10 +387,8 @@ const UltraFuturisticBackground2026: React.FC<
           }}
         />
       </div>
-
       {/* Content */}
       <div className='relative z-30'>{children}</div>
-
       {/* Holographic Overlay */}
       <div className='fixed inset-0 pointer-events-none z-40'>
         <div className='absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent' />

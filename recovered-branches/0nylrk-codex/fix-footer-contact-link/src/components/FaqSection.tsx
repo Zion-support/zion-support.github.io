@@ -32,13 +32,11 @@ export function FaqSection() {
             Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services
           </p>
         </div>
-
         <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">
           <div className="flex items-center mb-6">
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />
             <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
-          
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
@@ -55,5 +53,5 @@ export function FaqSection() {
       </div>
     </section>
   )
-}
+};
 ;

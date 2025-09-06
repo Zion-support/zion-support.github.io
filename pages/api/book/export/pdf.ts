@@ -33,5 +33,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message || 'Failed to render PDF' })
-  }
+  };
 };

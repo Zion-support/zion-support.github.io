@@ -11,7 +11,7 @@ export function SharedInbox() {
       subject: "Interview Scheduled",
       preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
       timestamp: "2h ago",
-      unread: true
+      unread: true;
     };
     {
       id: "msg-2",
@@ -58,7 +58,6 @@ export function SharedInbox() {
             </div>
           ))}
         </div>
-        
         {messages.length === 0 && (
           <div className="p-4 text-center text-muted-foreground">
             No new messages

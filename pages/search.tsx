@@ -21,7 +21,7 @@ import {
   CheckCircle,
   X,
   ChevronDown,
-  ChevronUp
+  ChevronUp;
 } from 'lucide-react';
 
 const searchResults = [
@@ -106,7 +106,7 @@ const filters = [
   { name: 'Recent', count: 4 },
   { name: 'Popular', count: 2 }
 ];
-export default function SearchPage() {
+export default function SearchPage() {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -127,7 +127,6 @@ export default function SearchPage() {
         <title>Search - Zion Tech Group</title>
         <meta name="description" content="Search our website for information, guides, services, and more." />
       </Head>
-
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -144,7 +143,6 @@ export default function SearchPage() {
               <p className="text-xl mb-8 text-blue-100">
                 Find the information you need quickly and easily.
               </p>
-              
               {/* Search Bar */}
               <div className="max-w-2xl mx-auto">
                 <div className="relative">
@@ -161,7 +159,6 @@ export default function SearchPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Filters Section */}
         <section className="py-8 bg-white border-b">
           <div className="container mx-auto px-4">
@@ -175,7 +172,6 @@ export default function SearchPage() {
                   Filters
                   {showFilters ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
                 </button>
-                
                 {categories.map((category) => (
                   <button
                     key={category.name}
@@ -190,12 +186,10 @@ export default function SearchPage() {
                   </button>
                 ))}
               </div>
-              
               <div className="text-sm text-gray-600">
                 {filteredResults.length} results found
               </div>
             </div>
-
             {showFilters && (
               <motion.div
                 className="mt-4 p-4 bg-gray-50 rounded-lg"
@@ -222,7 +216,6 @@ export default function SearchPage() {
             )}
           </div>
         </section>
-
         {/* Search Results */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -244,7 +237,6 @@ export default function SearchPage() {
                           <span className="mx-2 text-gray-300">•</span>
                           <span className="text-sm text-gray-500">{result.type}</span>
                         </div>
-                        
                         <h3 className="text-xl font-bold text-gray-900 mb-2">
                           <Link
                             href={result.url}
@@ -253,11 +245,9 @@ export default function SearchPage() {
                             {result.title}
                           </Link>
                         </h3>
-                        
                         <p className="text-gray-600 mb-4">
                           {result.description}
                         </p>
-                        
                         <div className="flex items-center text-sm text-gray-500">
                           <Clock className="w-4 h-4 mr-1" />
                           <span className="mr-4">Updated {result.lastUpdated}</span>
@@ -267,7 +257,6 @@ export default function SearchPage() {
                           </div>
                         </div>
                       </div>
-                      
                       <Link
                         href={result.url}
                         className="ml-4 text-blue-600 hover:text-blue-700 transition-colors"
@@ -306,7 +295,6 @@ export default function SearchPage() {
             )}
           </div>
         </section>
-
         {/* Popular Searches */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -323,7 +311,6 @@ export default function SearchPage() {
                 Common searches to help you find what you're looking for.
               </p>
             </motion.div>
-
             <div className="flex flex-wrap gap-3 justify-center">
               {[
                 'AI Development',

@@ -46,6 +46,7 @@ export function PromptCard({ prompt }: PromptCardProps) {
         </Button>
       </div>
     </div>
-  )
-}
+  );
+};
 ;
+}

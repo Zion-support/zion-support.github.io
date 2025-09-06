@@ -18,7 +18,7 @@ const SAMPLE_LISTINGS: ListingItem[] = [
   { id: "equipment-1", title: "Workstation", category: "Equipment", image: "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format" },
   { id: "equipment-2", title: "Server Rack", category: "Equipment", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format" }],
 
-export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
+export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState("");
   
   const handleTypeSelect = (type: ServiceType) => {
@@ -61,7 +61,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             <h4 className="font-medium text-white">Services</h4>
             <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>
           </Card>
-          
           <Card 
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent" 
@@ -73,7 +72,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             <h4 className="font-medium text-white">Talent</h4>
             <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>
           </Card>
-          
           <Card 
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment" 
@@ -87,11 +85,9 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </Card>
         </div>
       </div>
-      
       {formData.serviceType && (
         <div className="space-y-4">
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
-          
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
@@ -101,7 +97,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
             />
           </div>
-          
           <div className="grid grid-cols-1 gap-4 mt-4">
             {filteredListings.length > 0 ? (
               filteredListings.map((item) => (

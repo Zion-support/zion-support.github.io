@@ -8,7 +8,7 @@ import {
   Shield,
   Globe,
   Brain,
-  Rocket,
+  Rocket,;
   CheckCircle,;
 } from 'lucide-react';
 interface EnhancedHero2026Props {
@@ -37,7 +37,7 @@ export default function EnhancedHero2026({
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-      },
+      },;
     },  };        staggerChildren: 0.2
       }
     }
@@ -75,7 +75,6 @@ export default function EnhancedHero2026({
       <div className='absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900' />
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.4),transparent_50%)]' />
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.4),transparent_50%)]' />
-
       {/* Floating Elements */}
       <div className='absolute inset-0 pointer-events-none'>
         {Array.from({ length: 20 }).map((_, i) => (
@@ -102,7 +101,6 @@ export default function EnhancedHero2026({
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.4),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.4),transparent_50%)]" />
-      
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {Array.from({ length: 20 }).map((_, i) => (
@@ -127,7 +125,6 @@ export default function EnhancedHero2026({
           />
         ))}
       </div>
-
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           variants={containerVariants}
           initial='hidden'
@@ -143,7 +140,6 @@ export default function EnhancedHero2026({
               </span>
               <TrendingUp className='w-5 h-5 text-green-400' />
             </div>
-
             <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold leading-tight'>
               <span className='bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent'>
                 Future-Ready
@@ -153,7 +149,6 @@ export default function EnhancedHero2026({
                 Solutions
               </span>
             </h1>
-
             <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
               Transform your business with our revolutionary AI, Quantum, and IT
               infrastructure services.
@@ -163,14 +158,12 @@ export default function EnhancedHero2026({
               </span>{' '}
               delivering unprecedented ROI.            </p>
           </motion.div>
-
           {/* Enhanced Stats Grid */}
           <motion.div            
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Transform your business with our revolutionary AI, Quantum, and IT infrastructure services. 
               <span className="text-cyan-400 font-semibold"> 1000+ cutting-edge solutions</span> delivering unprecedented ROI.
           </motion.div>
-
           {/* Enhanced Stats Grid */}
           <motion.div
             className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto'
@@ -244,7 +237,6 @@ export default function EnhancedHero2026({
               </motion.div>
             ))}
           </motion.div>
-
           {/* Enhanced CTA Section */}
           <motion.div variants={itemVariants} className='space-y-6'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -260,7 +252,6 @@ export default function EnhancedHero2026({
                 </span>
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
-              
               <Button 
                 href="/contact" 
                 variant="secondary"
@@ -273,7 +264,6 @@ export default function EnhancedHero2026({
                 </span>
                 <ArrowRight className='ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform' />
               </Button>
-
               <Button
                 href='/contact'
                 variant='secondary'
@@ -287,7 +277,6 @@ export default function EnhancedHero2026({
                 </span>
               </Button>
             </div>
-
             {/* Trust Indicators */}
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400'>
               <div className='flex items-center space-x-2'>
@@ -310,7 +299,6 @@ export default function EnhancedHero2026({
               </div>
             </div>
           </motion.div>
-
           {/* Contact Information */}
           <motion.div
             variants={itemVariants}

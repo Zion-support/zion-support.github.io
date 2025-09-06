@@ -13,7 +13,7 @@ function ensureStorage() {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   ensureStorage();
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 
@@ -25,7 +25,7 @@ function ensureStorage() {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  ensureStorage(),
+  ensureStorage(),;
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes.map(e => ({
     id: e.id,
@@ -43,4 +43,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     summary: e.bestQuote || '',
     audio: e.audio || {}}));
   return res.status(200).json({ episodes: simplified })
+}
+
+}
 }

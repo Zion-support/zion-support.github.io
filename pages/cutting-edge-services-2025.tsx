@@ -65,7 +65,6 @@ export default function CuttingEdgeServices2025() {
         <meta property="og:description" content="Revolutionary technology services for the future. AI consciousness, quantum computing, enterprise IT, and micro SAAS solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/cutting-edge-services-2025" />
       </Head>
-
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
@@ -73,7 +72,6 @@ export default function CuttingEdgeServices2025() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(236,73,153,0.1),transparent_50%)]"></div>
         </div>
-        
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -89,7 +87,6 @@ export default function CuttingEdgeServices2025() {
               Experience the future of technology with our revolutionary services that combine AI consciousness, 
               quantum computing, enterprise IT, and innovative micro SAAS solutions.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a
                 href="/contact"
@@ -113,7 +110,6 @@ export default function CuttingEdgeServices2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Service Categories */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-6">
@@ -132,7 +128,6 @@ export default function CuttingEdgeServices2025() {
               and give you a competitive advantage in the digital age.
             </p>
           </motion.div>
-
           <div className="space-y-16">
             {serviceCategories.map((category, index) => (
               <motion.div
@@ -149,7 +144,6 @@ export default function CuttingEdgeServices2025() {
                   <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
@@ -172,9 +166,7 @@ export default function CuttingEdgeServices2025() {
                             <div className="text-sm text-gray-400">/month</div>
                           </div>
                         </div>
-                        
                         <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                        
                         <div className="mb-6">
                           <h5 className="text-white font-semibold mb-3">Key Features:</h5>
                           <div className="space-y-2">
@@ -186,7 +178,6 @@ export default function CuttingEdgeServices2025() {
                             ))}
                           </div>
                         </div>
-
                         <div className="mb-6">
                           <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
                             <span>Market Size:</span>
@@ -197,7 +188,6 @@ export default function CuttingEdgeServices2025() {
                             <span className="text-purple-400">{service.category}</span>
                           </div>
                         </div>
-
                         <div className="flex flex-col sm:flex-row gap-3">
                           <a
                             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
@@ -223,7 +213,6 @@ export default function CuttingEdgeServices2025() {
           </div>
         </div>
       </section>
-
       {/* Pricing Comparison */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-6">
@@ -242,7 +231,6 @@ export default function CuttingEdgeServices2025() {
               and expert support.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {['StarterProfessionalEnterprise'].map((plan, index) => (
               <motion.div
@@ -255,7 +243,6 @@ export default function CuttingEdgeServices2025() {
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan}</h3>
-                  
                   <div className="space-y-4 mb-8">
                     {plan === 'Starter' && (
                       <>
@@ -279,14 +266,12 @@ export default function CuttingEdgeServices2025() {
                       </>
                     )}
                   </div>
-
                   <div className="text-center mb-8">
                     <div className="text-4xl font-bold text-cyan-400 mb-2">
                       {plan === 'Starter' ? 'From $149' : plan === 'Professional' ? 'From $499' : 'From $999'}
                     </div>
                     <div className="text-gray-400">per month</div>
                   </div>
-
                   <a
                     href="/contact"
                     className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300"
@@ -300,7 +285,6 @@ export default function CuttingEdgeServices2025() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center px-6">
@@ -317,7 +301,6 @@ export default function CuttingEdgeServices2025() {
               Contact our team of experts to learn how our cutting-edge services can transform your business 
               and give you a competitive advantage in the digital age.
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
                 <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
@@ -335,7 +318,6 @@ export default function CuttingEdgeServices2025() {
                 <div className="text-green-400 text-sm">{contactInfo.address}</div>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a
                 href="/contact"
@@ -360,5 +342,5 @@ export default function CuttingEdgeServices2025() {
         </div>
       </section>
     </Layout>
-  )
+  );
 };

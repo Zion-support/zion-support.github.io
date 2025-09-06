@@ -10,7 +10,7 @@ interface RolePickerProps {
   onSelect: (role: UserRole) => void
 }
 
-export function RolePicker({ onSelect }: RolePickerProps) {
+export function RolePicker({ onSelect }: RolePickerProps) {;
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
 
   const handleSelect = (role: UserRole) => {
@@ -22,7 +22,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium">What brings you to Zion?</h2>
       <p className="text-muted-foreground">Choose how you want to use our platform</p>
-
       <div className="space-y-3 mt-6">
         <Card 
           className={`cursor-pointer transition-all ${
@@ -47,7 +46,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
             </div>
           </CardContent>
         </Card>
-
         <Card 
           className={`cursor-pointer transition-all ${
             selectedRole === 'client' 

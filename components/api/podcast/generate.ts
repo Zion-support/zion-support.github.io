@@ -34,7 +34,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
 function readEpisodes(): any[] {
   ensureStorage();
@@ -46,7 +46,7 @@ function writeEpisodes(episodes: any[]) {
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   const { persona, invitee, topic, operatorPrompt } = req.body || {};
@@ -155,4 +155,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     console.error(error);
     return res.status(500).json({ error: error?.message || 'Unknown error' })
 };
+}
+
+}
 }

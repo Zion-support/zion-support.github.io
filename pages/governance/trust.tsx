@@ -4,7 +4,6 @@ import Link from 'next/link';
             ))}
           </div>
         </section>
-
         <section className='space-y-4'>
           <h2 className='text-2xl font-semibold'>Governance</h2>
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>
@@ -38,7 +37,6 @@ import Link from 'next/link';
               </div>            </div>
           </div>
         </section>
-
         <section className='space-y-2'>
           <h2 className='text-2xl font-semibold'>Operator Prompt</h2>
           <p className='text-sm text-gray-600 dark:text-gray-400'>

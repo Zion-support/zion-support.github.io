@@ -37,7 +37,7 @@ export const realServicesQ32025: Q3Service[] = [
   {  reviews?: number
 }
 
-const contact = {
+const contact = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -69,7 +69,7 @@ export const realServicesQ32025: Q3Service[] = [
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition:
       'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',    features: [
-      'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries'
+      'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries';
     ];
     popular: true;
     icon: '📊';

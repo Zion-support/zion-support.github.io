@@ -8,7 +8,7 @@ interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 
-export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
   const location = useLocation();
   const currentPath = location.pathname;
   
@@ -29,7 +29,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
           </div>
           <span className="font-bold text-white">API Docs</span>
         </Link>
-
         <div className="mb-6">
           <div className="relative">
             <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
@@ -39,7 +38,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
             />
           </div>
         </div>
-
         <nav>
           <ul className="space-y-1">
             {navigationItems.map((item) => (
@@ -60,7 +58,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
           </ul>
         </nav>
       </div>
-
       {/* Main content */}
       <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">
         {children}

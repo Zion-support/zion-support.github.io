@@ -6,7 +6,7 @@ import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
 
 const FILE = "jobs.json";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!rateLimit(req, res)) return;
   const { id } = req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);

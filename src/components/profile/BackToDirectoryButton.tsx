@@ -21,5 +21,5 @@ export function BackToDirectoryButton() {
     </div>
   )
 }
-  )
-}
+  );
+};

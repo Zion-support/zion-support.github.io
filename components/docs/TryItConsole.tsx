@@ -8,14 +8,14 @@ export default function TryItConsole({
   method,
   path,
   requiresAuth,
-}: TryItProps) {
+}: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
-  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>('');
   const [loading, setLoading] = useState(false);

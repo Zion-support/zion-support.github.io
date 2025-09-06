@@ -36,7 +36,6 @@ export default function EnterprisePlans() {
         <h1>Enterprise Plans</h1>
         <p>Team-based access with admin controls, branded environments, and usage limits.</p>
       </header>
-
       <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
         {tiers.map(t => (
           <div key={t.id} style={{ border: '1px solid #e5e7eb', borderRadius: 12, padding: '1.25rem' }}>
@@ -57,7 +56,6 @@ export default function EnterprisePlans() {
           </div>
         ))}
       </section>
-
       <section style={{ marginTop: '2rem' }}>
         <h2>Feature comparison</h2>
         <div style={{ overflowX: 'auto', marginTop: 12 }}>
@@ -85,7 +83,6 @@ export default function EnterprisePlans() {
           </table>
         </div>
       </section>
-
       <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
         <div style={{ display: 'flex', gap: 8 }}>
           <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>
@@ -97,5 +94,5 @@ export default function EnterprisePlans() {
         </div>
       </section>
     </main>
-  )
+  );
 };

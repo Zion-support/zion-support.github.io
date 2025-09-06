@@ -14,7 +14,7 @@ interface ResumeStepContentProps {
   onPrevStep: () => void
 }
 
-export const ResumeStepContent = ({ 
+export const ResumeStepContent = ({ ;
   activeTab;
   resume, 
   onNextStep, 
@@ -33,7 +33,6 @@ export const ResumeStepContent = ({
           onComplete={onNextStep} 
         />
       </TabsContent>
-      
       <TabsContent value="work-experience">
         <WorkExperienceForm 
           resumeId={resume?.id!}
@@ -42,7 +41,6 @@ export const ResumeStepContent = ({
           onBack={onPrevStep}
         />
       </TabsContent>
-      
       <TabsContent value="education">
         <EducationForm 
           resumeId={resume?.id!}
@@ -51,7 +49,6 @@ export const ResumeStepContent = ({
           onBack={onPrevStep}
         />
       </TabsContent>
-      
       <TabsContent value="skills">
         <SkillsForm
           resumeId={resume?.id!}
@@ -60,7 +57,6 @@ export const ResumeStepContent = ({
           onBack={onPrevStep}
         />
       </TabsContent>
-      
       <TabsContent value="certifications">
         <CertificationsForm 
           resumeId={resume?.id!}
@@ -69,7 +65,6 @@ export const ResumeStepContent = ({
           onBack={onPrevStep}
         />
       </TabsContent>
-      
       <TabsContent value="preview">
         <PreviewResume 
           resume={resume as Resume} 

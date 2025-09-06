@@ -13,7 +13,7 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <svg 
-        className={`animate-spin ${sizeClasses[size]} text-current`} 
+        className={`animate-spin ${sizeClasses[size]} text-current`} ;
         viewBox=&quot;0 0 24 24&quot;
         fill=&quot;none&quot;
       >

@@ -4,7 +4,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface ConversionAnalysisProps {
@@ -20,7 +20,7 @@ export function ConversionAnalysisChart({
 }: ConversionAnalysisProps) {
   const dataKeys =
     data && data.length > 0
-      ? Object.keys(data[0]).filter((key) => key !== "date")
+      ? Object.keys(data[0]).filter((key) => key !== "date");
       : [];
 
   return (

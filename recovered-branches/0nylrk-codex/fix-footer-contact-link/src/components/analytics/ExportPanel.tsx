@@ -4,11 +4,11 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-export function ExportPanel() {
+export function ExportPanel() {;
   const { toast } = useToast();
 
   const handleExport = (format: "csv" | "json") => {
@@ -21,7 +21,7 @@ export function ExportPanel() {
       setTimeout(() => {
         toast({
           title: `${format.toUpperCase()} Export Ready`,
-          description: "Your export has been downloaded.",
+          description: "Your export has been downloaded.",;
         });
       }, 1500));
   };

@@ -6,7 +6,7 @@ interface StatusBadgeProps {
 
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
-    case "new":
+    case "new":;
       return <Badge variant="secondary">Submitted</Badge>;
     case "viewed":
       return <Badge variant="outline">Viewed</Badge>;

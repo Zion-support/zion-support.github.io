@@ -358,7 +358,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       customers: 34,
       rating: 4.8,
       reviews: 19,
-    },
+    },;
   ];    features: [
       'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
       'Mobile data collection appAPI for research platforms'

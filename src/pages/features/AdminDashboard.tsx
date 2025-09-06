@@ -9,8 +9,8 @@ export default function AdminDashboard() {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Admin Dashboard',
-    description:
-      'Monitor marketplace activity, manage listings and view analytics in one place.',
+    description:;
+      'Monitor marketplace activity, manage listings and view analytics in one place.',;
     url: 'https://app.ziontechgroup.com/features/admin-dashboard',  };    "@context": "https://schema.org"
     "@type": "WebPage"
     "name": "Admin Dashboard",
@@ -114,5 +114,5 @@ export default function AdminDashboard() {
       </main>
     </>
   )
-}
+};
 ;

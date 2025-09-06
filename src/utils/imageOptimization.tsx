@@ -145,7 +145,7 @@ export function preloadImage(src: string): Promise<void> {
   })
 // Utility to get image dimensions
 export function getImageDimensions(
-  src: string
+  src: string;
 ): Promise<{ width: number; height: number }> {
   return new Promise((resolve, reject) => {
     const img = new window.Image()

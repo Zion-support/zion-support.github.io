@@ -16,7 +16,7 @@ function ensure() {
     fs.writeFileSync(FILE_PATH, JSON.stringify([], null, 2), 'utf8');  if (!fs.existsSync(FILE_PATH)) fs.writeFileSync(FILE_PATH, JSON.stringify([], null, 2), 'utf8')
 }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).end();
   ensure(),
   const { email } = req.body || {};
@@ -30,4 +30,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!list.includes(email)) list.push(email);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
   res.status(200).json({ ok: true })
+}
+
 }

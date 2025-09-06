@@ -6,7 +6,7 @@ interface NotificationFooterProps {
   onClose: () => void
 }
 
-export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
   const navigate = useNavigate();
   
   const handleViewAll = () => {

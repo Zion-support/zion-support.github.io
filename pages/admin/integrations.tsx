@@ -273,7 +273,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
         <p className='text-sm text-gray-600 mb-6'>
           Connect your CRM and ATS to sync contacts, applicants, and activity.
         </p>
-
         <section className='mb-8'>
           <h2 className='text-lg font-semibold mb-3'>CRM</h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -282,7 +281,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
             ))}
           </div>
         </section>
-
         <section className='mb-10'>
           <h2 className='text-lg font-semibold mb-3'>ATS</h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -291,7 +289,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
             ))}
           </div>
         </section>
-
         <section className='mb-10'>
           <h2 className='text-lg font-semibold mb-2'>Zapier</h2>
           <div className='text-sm text-gray-600'>Polling endpoints:</div>
@@ -307,7 +304,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
               </code>
             </li>          </ul>
         </section>
-
         <section>
           <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />
         </section>
@@ -372,3 +368,10 @@ function ManualOverrideForm() {
       </div>
     </div>
 );
+
+}
+}
+}
+}
+}
+}

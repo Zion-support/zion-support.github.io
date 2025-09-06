@@ -9,7 +9,7 @@ interface ScoreDialogProps {
   onScoreUpdated: (updatedApplication: JobApplication) => void
 }
 
-export function ScoreDialog({
+export function ScoreDialog({;
   open;
   onOpenChange;
   application;

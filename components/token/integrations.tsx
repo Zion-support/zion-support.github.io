@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useWallet } from '../../hooks/useWallet';
 import {
   fetchDepinActivities,
-  calculateRewards,
+  calculateRewards,;
   DepinReward,;
 } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
@@ -14,7 +14,7 @@ const ClientOnlyBridge = dynamic(
 );import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
-export default function TokenIntegrationsPage() {
+export default function TokenIntegrationsPage() {;
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
   const [stake, setStake] = useState('');
@@ -52,11 +52,9 @@ export default function TokenIntegrationsPage() {
           Omnichain transfers via LayerZero and DePIN rewards.
         </p>
       </section>
-
       <section className='space-y-4'>
         <ClientOnlyBridge />
       </section>
-
       <section className='space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800'>
         <h2 className='text-lg font-semibold'>DePIN Hook</h2>
         <p className='text-sm text-gray-600 dark:text-gray-300'>
@@ -93,11 +91,9 @@ export default function TokenIntegrationsPage() {
         <h1 className="text-2xl font-bold">ZION$ Integrations</h1>
         <p className="text-gray-600 dark:text-gray-300">Omnichain transfers via LayerZero and DePIN rewards.</p>
       </section>
-
       <section className="space-y-4">
         <ClientOnlyBridge />
       </section>
-
       <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">
         <h2 className="text-lg font-semibold">DePIN Hook</h2>
         <p className="text-sm text-gray-600 dark:text-gray-300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>
@@ -116,7 +112,6 @@ export default function TokenIntegrationsPage() {
           </div>
         )}
       </section>
-
       <section className='space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800'>
         <h2 className='text-lg font-semibold'>Operator AI Actions</h2>
         <p className='text-sm text-gray-600 dark:text-gray-300'>
@@ -180,7 +175,6 @@ export default function TokenIntegrationsPage() {
           </div>
         )}
       </section>
-
       <section className='space-y-2 text-xs text-gray-500'>
         <div>Security</div>
         <ul className='list-disc ml-5 space-y-1'>

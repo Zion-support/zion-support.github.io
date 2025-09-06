@@ -21,8 +21,8 @@ export function SignUpForm() {
   const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({})
   const [showVerificationMessage, setShowVerificationMessage] = useState(false)
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
     setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }))
   }
   const handleSubmit = async (e: React.FormEvent) => {
@@ -97,7 +97,6 @@ export function SignUpForm() {
       <h2 className="text-xl font-medium text-center">
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
-      
       <div className="space-y-2">
         <Button 
           variant="outline" 
@@ -112,7 +111,6 @@ export function SignUpForm() {
           </svg>
           Continue with Google
         </Button>
-
         <Button 
           variant="outline" 
           className="w-full py-6 relative"
@@ -123,13 +121,11 @@ export function SignUpForm() {
           Continue with Facebook
         </Button>
       </div>
-
       <div className="relative flex items-center">
         <div className="flex-grow border-t border-border"></div>
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
-      
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -183,7 +179,6 @@ export function SignUpForm() {
             <p className="text-red-500 text-sm">{fieldErrors.email}</p>
           )}
         </div>
-
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
           <Input
@@ -201,7 +196,6 @@ export function SignUpForm() {
             <p className="text-red-500 text-sm">{fieldErrors.password}</p>
           )}
         </div>
-        
         <Button
           type="submit"
           className="w-full py-6"
@@ -217,7 +211,6 @@ export function SignUpForm() {
           )}
         </Button>
       </form>
-      
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "

@@ -24,7 +24,6 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
-      
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -74,6 +73,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   } else {
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
-  }
-}
+  };
+};
 ;

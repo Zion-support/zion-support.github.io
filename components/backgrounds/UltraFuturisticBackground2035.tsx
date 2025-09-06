@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-export default function UltraFuturisticBackground2035() {
+export default function UltraFuturisticBackground2035() {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -176,7 +176,6 @@ export default function UltraFuturisticBackground2035() {
             'radial-gradient(ellipse at center, rgba(139,92,246,0.04) 0%, rgba(0,0,0,0) 70%)',
         }}
       />
-
       {/* Animated Background Elements */}
       <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>
         {/* Floating Geometric Shapes */}
@@ -190,7 +189,6 @@ export default function UltraFuturisticBackground2035() {
             duration: 8,
             repeat: Infinity,
             ease: 'easeInOut',      />
-
       {/* Animated Background Elements */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         {/* Floating Geometric Shapes */}
@@ -206,7 +204,6 @@ export default function UltraFuturisticBackground2035() {
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-        
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45"
           animate={{
@@ -222,7 +219,6 @@ export default function UltraFuturisticBackground2035() {
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
-
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45'
           animate={{
@@ -234,7 +230,6 @@ export default function UltraFuturisticBackground2035() {
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         <motion.div
           className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full'
           animate={{
@@ -246,7 +241,6 @@ export default function UltraFuturisticBackground2035() {
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         {/* Neon Glow Effects */}
         <div className='absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse' />
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000' />
@@ -266,7 +260,6 @@ export default function UltraFuturisticBackground2035() {
         <div className='absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse' />
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000' />
         <div className='absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000' />
-
         {/* Animated Grid Lines */}
         <div className='absolute inset-0 opacity-10'>
           <div
@@ -289,7 +282,6 @@ export default function UltraFuturisticBackground2035() {
             backgroundSize: '50px 50px'
           }} />
         </div>
-
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -331,7 +323,6 @@ export default function UltraFuturisticBackground2035() {
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         <motion.div
           className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent'
           animate={{
@@ -347,7 +338,6 @@ export default function UltraFuturisticBackground2035() {
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
-
         <motion.div
           className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent'
           animate={{
@@ -363,7 +353,6 @@ export default function UltraFuturisticBackground2035() {
             ease: 'easeInOut',          }}            ease: "easeInOut"
           }}
         />
-
         {/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (
           <motion.div
@@ -409,7 +398,6 @@ export default function UltraFuturisticBackground2035() {
               <stop offset='100%' stopColor='#ec4899' stopOpacity='0.5' />
             </linearGradient>
           </defs>
-
           {[...Array(8)].map((_, i) => (
             <motion.circle
               key={`neural-${i}`}
@@ -426,7 +414,6 @@ export default function UltraFuturisticBackground2035() {
               <stop offset="100%" stopColor="#ec4899" stopOpacity="0.5" />
             </linearGradient>
           </defs>
-          
           {[...Array(8)].map((_, i) => (
             <motion.circle
               key={`neural-${i}`}
@@ -447,7 +434,6 @@ export default function UltraFuturisticBackground2035() {
             />
           ))}
         </svg>
-
         {/* Holographic Effects */}
         <div className='absolute inset-0'>
           <motion.div
@@ -472,7 +458,6 @@ export default function UltraFuturisticBackground2035() {
               ease: 'linear',
             }}
           />
-
           <motion.div
             className='absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full'
             animate={{
@@ -484,7 +469,6 @@ export default function UltraFuturisticBackground2035() {
               repeat: Infinity,
               ease: 'linear',            }}            }}
           />
-          
           <motion.div
             className="absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full"
             animate={{
@@ -499,7 +483,6 @@ export default function UltraFuturisticBackground2035() {
             }}
           />
         </div>
-
         {/* Data Streams */}
         <div className='absolute right-0 top-0 w-32 h-full opacity-30'>
           {[...Array(20)].map((_, i) => (

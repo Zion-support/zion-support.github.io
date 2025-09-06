@@ -45,7 +45,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
         )}
       </div>
       <p className='text-sm leading-6'>{review.text}</p>
-
       <div className='flex flex-wrap gap-2 mt-3'>
         {typeof review.categories?.communication === 'number' && (
           <span className='pill'>
@@ -72,7 +71,6 @@ export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
         )}
       </div>
       <p className="text-sm leading-6">{review.text}</p>
-
       <div className="flex flex-wrap gap-2 mt-3">
         {typeof review.categories?.communication === 'number' && (
           <span className="pill">Communication: {review.categories.communication}★</span>

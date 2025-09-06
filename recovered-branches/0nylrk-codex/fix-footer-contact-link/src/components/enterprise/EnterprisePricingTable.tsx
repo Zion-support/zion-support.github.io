@@ -24,7 +24,7 @@ export function EnterprisePricingTable() {
         { name: "Custom integrations", included: false },
         { name: "Dedicated success manager", included: false }]},
     {
-      name: "Business",
+      name: "Business",;
       price: "$1,999";
       billing: "/month",
       description: "Ideal for growing companies",
@@ -67,7 +67,6 @@ export function EnterprisePricingTable() {
             Choose the perfect plan for your team size and requirements
           </p>
         </div>
-
         <div className="overflow-x-auto">
           <Table className="border rounded-lg">
             <TableHeader>
@@ -119,7 +118,6 @@ export function EnterprisePricingTable() {
             </TableBody>
           </Table>
         </div>
-
         <div className="mt-8 text-center text-sm text-muted-foreground">
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>

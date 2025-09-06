@@ -15,9 +15,9 @@ import {
   Play,
   CheckCircle,
   Phone,
-  Mail,
+  Mail,;
   MapPin,;} from 'lucide-react';import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin
 
@@ -88,7 +88,7 @@ const featuredServices = [
 export default function UltraFuturisticHero2032() {
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black'>    href: '/quantum-internet-security-gateway'
-  }
+  };
 ];
 
 export default function UltraFuturisticHero2032() {
@@ -117,19 +117,16 @@ export default function UltraFuturisticHero2032() {
             />
           ))}
         </div>
-
         {/* Gradient Orbs */}
         <div className='absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse' />
         <div className='absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse' />
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow' />
       </div>
-
       {/* Main Content */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Hero Badge */}        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow" />
       </div>
-
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -147,7 +144,6 @@ export default function UltraFuturisticHero2032() {
           <Sparkles className="w-5 h-5 text-purple-400" />
           <span className="text-purple-300 font-medium">🚀 2032 Revolutionary Technology</span>
           <Sparkles className="w-5 h-5 text-cyan-400" />
-
         {/* Main Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -166,7 +162,6 @@ export default function UltraFuturisticHero2032() {
           <br />
           <span className="text-white">Technology is Here</span>
         </motion.h1>
-
         {/* Subheading */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -196,7 +191,6 @@ export default function UltraFuturisticHero2032() {
             <span>Explore All Services</span>
             <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
           </Link>
-
           <Link
             href={`tel:${contactInfo.mobile}`}
             className='group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300'
@@ -209,7 +203,6 @@ export default function UltraFuturisticHero2032() {
             <span>Explore All Services</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
-          
           <Link
             href={`tel:${contactInfo.mobile}`}
             className="group inline-flex items-center space-x-3 bg-transparent border-2 border-purple-500/50 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300"
@@ -218,7 +211,6 @@ export default function UltraFuturisticHero2032() {
             <span>Call {contactInfo.mobile}</span>
           </Link>
         </motion.div>
-
         {/* Stats Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -253,7 +245,6 @@ export default function UltraFuturisticHero2032() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Featured Services */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -286,14 +277,11 @@ export default function UltraFuturisticHero2032() {
                   >
                     <service.icon className='w-8 h-8 text-white' />
                   </div>
-
                   <h3 className='text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'>                    {service.name}
                   </h3>
-
                   <p className='text-gray-400 text-sm mb-4 leading-relaxed'>
                     {service.description}
                   </p>
-
                   <div className='flex items-center justify-between'>
                     <div className='text-2xl font-bold text-cyan-400'>
                       {service.price}
@@ -302,15 +290,13 @@ export default function UltraFuturisticHero2032() {
                       <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
                     </div>
                   </div>
-
-                  <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </Link>                  
+                  <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </Link>
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </Link>
               </motion.div>
             ))}
           </div>
         </motion.div>
-
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -321,7 +307,6 @@ export default function UltraFuturisticHero2032() {
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>
             Ready to Transform Your Business?
           </h3>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>
             <div className='flex items-center space-x-3 text-gray-300'>
               <Phone className='w-5 h-5 text-cyan-400' />
@@ -346,7 +331,6 @@ export default function UltraFuturisticHero2032() {
               <span>{contactInfo.address}</span>
             </div>
           </div>
-
           <div className='text-center'>
             <Link
               href='/contact'
@@ -357,7 +341,6 @@ export default function UltraFuturisticHero2032() {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">
             Ready to Transform Your Business?
           </h3>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div className="flex items-center space-x-3 text-gray-300">
               <Phone className="w-5 h-5 text-cyan-400" />
@@ -376,7 +359,6 @@ export default function UltraFuturisticHero2032() {
               <span>{contactInfo.address}</span>
             </div>
           </div>
-          
           <div className="text-center">
             <Link
               href="/contact"
@@ -388,7 +370,6 @@ export default function UltraFuturisticHero2032() {
           </div>
         </motion.div>
       </div>
-
       {/* Floating Action Button */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
@@ -403,7 +384,7 @@ export default function UltraFuturisticHero2032() {
           <Phone className='w-7 h-7 text-white group-hover:rotate-12 transition-transform' />
         </Link>
       </motion.div>
-    </section>
+    </section>;
   );      >
         <Link
           href={`tel:${contactInfo.mobile}`}

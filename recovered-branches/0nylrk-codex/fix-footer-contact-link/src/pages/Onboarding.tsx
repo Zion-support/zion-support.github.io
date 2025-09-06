@@ -10,7 +10,7 @@ import {ProfileSetup} from "@/components/onboarding/ProfileSetup";
 import {Steps, Step} from "@/components/ui/steps";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
-export default function Onboarding() {
+export default function Onboarding() {;
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
@@ -117,7 +117,6 @@ export default function Onboarding() {
               Complete your profile to get started
             </p>
           </div>
-
           <div className="mb-12">
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">
               {steps.map((step, index) => (
@@ -136,7 +135,6 @@ export default function Onboarding() {
               ))}
             </Steps>
           </div>
-
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">
             {currentStep === 0 ? (
               <UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType} />

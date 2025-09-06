@@ -11,7 +11,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from "@/components/ui/form";
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
@@ -19,7 +19,7 @@ interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>;
 }
 
-export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const { control, register, watch, setValue } = form;
   const keywords = watch("keywords");
   const platform = watch("platform");
@@ -123,7 +123,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                 onKeyDown={addKeyword}
                 className="mb-2"
               />
-
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
                   <Badge
@@ -146,7 +145,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                 total)
               </FormDescription>
             </div>
-
             <FormField
               control={control}
               name="version"

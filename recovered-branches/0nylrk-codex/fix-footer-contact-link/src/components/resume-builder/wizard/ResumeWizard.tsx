@@ -17,7 +17,7 @@ import {ResumeStepContent} from './ResumeStepContent';
 import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 import {RESUME_STEPS} from './constants';
-export function ResumeWizard() {
+export function ResumeWizard() {;
   const { user } = useAuth();
   const { 
     isLoading;
@@ -109,26 +109,23 @@ export function ResumeWizard() {
             size="sm"
             className="gap-2"
           >
-            <FilePlus className="h-4 w-4" /> 
+            <FilePlus className="h-4 w-4" />
             Create New
           </Button>
         </div>
       </div>
-      
       <Card>
         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
-          
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <ResumeSteps 
               steps={RESUME_STEPS} 
               activeTab={activeTab} 
               onChange={setActiveTab} 
             />
-            
             {resume && (
               <ResumeStepContent 
                 activeTab={activeTab}

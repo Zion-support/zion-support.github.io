@@ -50,7 +50,6 @@ export function ReviewStats({
           </div>
         </div>
       </div>
-
       {ratingDistribution && (
         <div className='space-y-2'>
           {[5, 4, 3, 2, 1].map(rating => (
@@ -79,4 +78,5 @@ export function ReviewStats({
   )
 }</div>) 
 }</div>) 
-}"}
+}"};
+;

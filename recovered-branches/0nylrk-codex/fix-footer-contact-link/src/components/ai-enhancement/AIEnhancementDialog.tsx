@@ -12,7 +12,7 @@ interface AIEnhancementDialogProps {
   initialContent?: string
 }
 
-export function AIEnhancementDialog({
+export function AIEnhancementDialog({;
   title;
   isOpen;
   onClose;

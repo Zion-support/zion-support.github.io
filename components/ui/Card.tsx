@@ -125,12 +125,10 @@ const Card: React.FC<CardProps> = ({
     >
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
-      
       {/* Content wrapper */}
       <div className="relative z-10">
         {children}
       </div>
-      
       {/* Hover glow effect */}
       {hover && (
         <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -139,7 +137,7 @@ const Card: React.FC<CardProps> = ({
   )
 },
 
-export default Card,
+export default Card,;
 ;
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };

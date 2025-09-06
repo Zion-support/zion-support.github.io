@@ -19,12 +19,12 @@ import {
   Grid,
   List,
   ArrowRight,
-  Award,
+  Award,;
   Target,;
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {
-  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
+  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, ;
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target
 } from 'lucide-react';
@@ -308,7 +308,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
             </div>
           </div>
         </motion.div>
-
         {/* Search and Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -328,7 +327,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20'              />
             </div>
-
             {/* Sort and View Controls */}
             <div className='flex items-center gap-4'>        >
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -343,7 +341,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
               />
             </div>
-
             {/* Sort and View Controls */}
             <div className='flex items-center gap-4'>
               <select
@@ -356,7 +353,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                 <option value='rating'>Highest Rated</option>
                 <option value='newest'>Newest First</option>
               </select>
-
               <div className='flex bg-white/10 rounded-xl p-1'>
                 <button
                   onClick={() => setViewMode('grid')}
@@ -390,7 +386,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
             </div>
           </div>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -421,7 +416,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
             ))}
           </div>
         </motion.div>
-
         {/* Services Display */}
         {viewMode === 'grid' ? (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -460,14 +454,12 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                         </div>
                       </div>
                     </div>
-
                     <h3 className='text-xl font-bold text-white mb-2'>
                       {service.name}
                     </h3>
                     <p className='text-white/70 text-sm mb-4'>
                       {service.tagline}
                     </p>
-
                     {/* Features */}
                     <div className='space-y-2 mb-6'>
                       {service.features.slice(0, 3).map((feature, idx) => (
@@ -477,10 +469,8 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                         >
                           <CheckCircle className='w-4 h-4 text-green-400' />                          {feature}                      </div>
                     </div>
-
                     <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
-
                     {/* Features */}
                     <div className="space-y-2 mb-6">
                       {service.features.slice(0, 3).map((feature, idx) => (
@@ -490,7 +480,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                         </div>
                       ))}
                     </div>
-
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
                       <div>
@@ -522,7 +511,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                         <div className="text-xs text-white/60">Trial</div>
                       </div>
                     </div>
-
                     {/* CTA */}
                     <a
                       href={service.link}
@@ -570,7 +558,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                         </div>
                       )}
                     </div>
-
                     {/* Center - Service Details */}
                     <div className='flex-1'>
                       <div className='flex items-start justify-between mb-4'>
@@ -591,7 +578,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                           </div>
                           <div className='text-white/60'>{service.period}</div>                        </div>
                       </div>
-
                       {/* Features Grid */}                        <div>
                           <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                           <p className="text-white/70 text-lg mb-3">{service.tagline}</p>
@@ -602,7 +588,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                           <div className="text-white/60">{service.period}</div>
                         </div>
                       </div>
-
                       {/* Features Grid */}
                       <div className='grid grid-cols-2 gap-2 mb-4'>
                         {service.features.slice(0, 6).map((feature, idx) => (
@@ -618,7 +603,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                             <span className="truncate">{feature}</span>
                         ))}
                       </div>
-
                       {/* Stats Row */}
                       <div className='flex items-center gap-6 text-sm text-white/60'>
                         <div className='flex items-center gap-2'>
@@ -642,7 +626,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                         </div>
                       </div>
                     </div>
-
                     {/* Right Side - CTA and Category */}
                     <div className='flex-shrink-0 flex flex-col items-end gap-4'>
                       <div className='text-right'>
@@ -658,7 +641,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                           <span>{getCategoryIcon(service.category)}</span>
                           <span className="text-sm">{service.category}</span>
                       </div>
-
                       <a
                         href={service.link}
                         target='_blank'
@@ -754,4 +736,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
       </div>
     </section>
 );
+}
+
 }

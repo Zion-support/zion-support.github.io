@@ -7,7 +7,7 @@ import {
   Zap, DollarSign, Shield, Mail, MapPin, Brain,
   Sparkles, Users, Clock, Award, Eye, Heart,
   MessageCircle, BarChart3, Globe, Smartphone
-} from 'lucide-react',
+} from 'lucide-react',;
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',;
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030',;
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030',;
@@ -120,10 +120,8 @@ export default function AIEmotionIntelligencePlatform() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <UltraFuturisticBackground2030>
         <UltraFuturisticNavigation2030 />
-        
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -138,7 +136,6 @@ export default function AIEmotionIntelligencePlatform() {
                 <Sparkles className="w-4 h-4 mr-2" />
                 AI & Customer Experience
               </motion.div>
-
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -147,14 +144,12 @@ export default function AIEmotionIntelligencePlatform() {
                   AI Emotion Intelligence Platform
                 </span>
               </motion.h1>
-
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }} className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Real-time emotion analysis and response for customer interactions
               </motion.p>
-
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -162,7 +157,6 @@ export default function AIEmotionIntelligencePlatform() {
                 Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights for better customer experience.
               </motion.p>
             </motion.div>
-
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -176,7 +170,6 @@ export default function AIEmotionIntelligencePlatform() {
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
-
               <Link
                 href="#pricing" className="group px-8 py-4 border-2 border-pink-500/30 text-pink-300 font-semibold rounded-2xl text-lg hover:bg-pink-500/10 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105">
                 <span className="flex items-center">
@@ -185,7 +178,6 @@ export default function AIEmotionIntelligencePlatform() {
                 </span>
               </Link>
             </motion.div>
-
             {/* Key Stats */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -210,7 +202,6 @@ export default function AIEmotionIntelligencePlatform() {
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -226,7 +217,6 @@ export default function AIEmotionIntelligencePlatform() {
                 Our platform provides comprehensive emotion analysis capabilities to transform your customer interactions
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -245,7 +235,6 @@ export default function AIEmotionIntelligencePlatform() {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -261,7 +250,6 @@ export default function AIEmotionIntelligencePlatform() {
                 Discover how emotion intelligence can revolutionize your customer experience and business outcomes
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
                 <motion.div
@@ -280,7 +268,6 @@ export default function AIEmotionIntelligencePlatform() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section id="pricing" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -296,7 +283,6 @@ export default function AIEmotionIntelligencePlatform() {
                 Start with our professional plan and scale as you grow
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <motion.div
@@ -327,7 +313,6 @@ export default function AIEmotionIntelligencePlatform() {
                     </div>
                     <p className="text-gray-400">{plan.description}</p>
                   </div>
-
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
@@ -336,7 +321,6 @@ export default function AIEmotionIntelligencePlatform() {
                       </li>
                     ))}
                   </ul>
-
                   <Link
                     href={plan.name === 'Enterprise' ? '/contact' : '/contact'}
                     className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
@@ -352,7 +336,6 @@ export default function AIEmotionIntelligencePlatform() {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -368,7 +351,6 @@ export default function AIEmotionIntelligencePlatform() {
               <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
                 Join hundreds of companies already using our AI Emotion Intelligence Platform to transform their customer experience
               </p>
-
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
                 <Link
                   href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25">
@@ -378,7 +360,6 @@ export default function AIEmotionIntelligencePlatform() {
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
-
                 <Link
                   href="/contact" className="group px-8 py-4 border-2 border-pink-500/30 text-pink-300 font-semibold rounded-2xl text-lg hover:bg-pink-500/10 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105">
                   <span className="flex items-center">
@@ -387,7 +368,6 @@ export default function AIEmotionIntelligencePlatform() {
                   </span>
                 </Link>
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center">
                   <Phone className="w-8 h-8 text-pink-400 mb-4" />
@@ -414,9 +394,8 @@ export default function AIEmotionIntelligencePlatform() {
             </motion.div>
           </div>
         </section>
-
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2030>
     </>
-  )
+  );
 };

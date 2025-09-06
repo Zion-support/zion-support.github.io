@@ -16,7 +16,7 @@ files.forEach((file) => {
     const modified = false;
 
     // Fix import statements with double punctuation
-    content = content.replace(
+    content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
       (match) => {
         return match.replace(",;", ";");
@@ -26,7 +26,7 @@ files.forEach((file) => {
     // Fix import statements missing semicolons
     content = content.replace(
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
-      (match) => {
+      (match) => {;
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
         }

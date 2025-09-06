@@ -100,8 +100,8 @@ export function SupportChatbot() {
         while (!done) {
           const result = await reader.read()
           done = result.done
-          buffer += decoder.decode(result.value || new Uint8Array())
-          const lines = buffer.split('\n')
+          buffer += decoder.decode(result.value || new Uint8Array());
+          const lines = buffer.split('\n');
           for (let i = 0; i < lines.length - 1; i++) {
             let line = lines[i]?.trim()
             if (!line) continue

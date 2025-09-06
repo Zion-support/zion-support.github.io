@@ -50,7 +50,6 @@ export default function HelpCenter() {
             Find answers to common questions or get in touch with our support
             team.
           </p>
-
           <div className='relative mb-8'>
             <Input
               placeholder='Search for help articles...'
@@ -59,14 +58,12 @@ export default function HelpCenter() {
               className='pl-10'            />
             <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400' />
           </div>
-
           <Tabs defaultValue='articles' className='mb-8'>
             <TabsList className='w-full grid grid-cols-3 mb-6'>
               <TabsTrigger value='articles'>Articles</TabsTrigger>
               <TabsTrigger value='faq'>FAQ</TabsTrigger>
               <TabsTrigger value='contact'>Contact Us</TabsTrigger>
             </TabsList>
-
             <TabsContent value='articles'>
               {!selectedCategory && !selectedArticle && (
                 <HelpCategoryList
@@ -103,13 +100,11 @@ export default function HelpCenter() {
                 </>
               )}
             </TabsContent>
-
             <TabsContent value='faq'>
               <div className='bg-zion-blue-light/20 rounded-lg p-6'>
                 <h2 className='text-xl font-semibold mb-4'>
                   Frequently Asked Questions
                 </h2>
-
                 <div className='space-y-6'>
                   <div>
                     <h3 className='font-medium text-zion-cyan mb-2'>
@@ -123,7 +118,6 @@ export default function HelpCenter() {
                       optimal results.
                     </p>
                   </div>
-
                   <div>
                     <h3 className='font-medium text-zion-cyan mb-2'>
                       How do I hire someone on Zion?
@@ -135,7 +129,6 @@ export default function HelpCenter() {
                       protects both parties throughout the engagement.
                     </p>
                   </div>
-
                   <div>
                     <h3 className='font-medium text-zion-cyan mb-2'>
                       What are the payment terms?
@@ -147,7 +140,6 @@ export default function HelpCenter() {
                       approved, ensuring security for both clients and talent.
                     </p>
                   </div>
-
                   <div>
                     <h3 className='font-medium text-zion-cyan mb-2'>
                       How do I contact support?
@@ -162,7 +154,6 @@ export default function HelpCenter() {
                 </div>
               </div>
             </TabsContent>
-
             <TabsContent value='contact'>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                 <div className='bg-zion-blue-light/20 rounded-lg p-6'>
@@ -173,7 +164,6 @@ export default function HelpCenter() {
                     Our support team is available 24/7 to assist you with any
                     questions or issues.
                   </p>
-
                   <div className='space-y-4'>
                     <div className='flex items-center'>
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>
@@ -194,7 +184,6 @@ export default function HelpCenter() {
                         support@ziontechgroup.com
                       </a>
                     </div>
-
                     <div className='flex items-center'>
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>
                         <svg
@@ -211,12 +200,10 @@ export default function HelpCenter() {
                       </span>
                     </div>
                   </div>
-
                   <Button className='w-full mt-6 bg-zion-purple hover:bg-zion-purple-light'>
                     Open Live Chat
                   </Button>
                 </div>
-
                 <div className='bg-zion-blue-light/20 rounded-lg p-6'>
                   <h2 className='text-xl font-semibold mb-4'>
                     Feedback & Suggestions
@@ -225,7 +212,6 @@ export default function HelpCenter() {
                     We value your input and are constantly looking to improve
                     our platform.
                   </p>
-
                   <form className='space-y-4'>
                     <div>
                       <Input placeholder='Your email' />
@@ -239,7 +225,6 @@ export default function HelpCenter() {
                         placeholder='Your feedback or suggestion'
                       />
                     </div>
-
                     <Button className='w-full bg-zion-cyan hover:bg-zion-cyan/80'>
                       Submit Feedback
                     </Button>
@@ -251,6 +236,7 @@ export default function HelpCenter() {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 ;
+}

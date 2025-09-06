@@ -15,7 +15,7 @@ files.forEach((file) => {
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
 
-    // Fix import statements with double punctuation (comma + semicolon)
+    // Fix import statements with double punctuation (comma + semicolon);
     const originalContent = content;
     content = content.replace(
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
@@ -28,7 +28,7 @@ files.forEach((file) => {
     // Fix import statements missing semicolons
     content = content.replace(
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
-      (match) => {
+      (match) => {;
         if (!match.trim().endsWith(";")) {
           modified = true;
           return match.trim() + ";";

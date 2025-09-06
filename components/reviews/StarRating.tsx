@@ -7,7 +7,7 @@ export const StarRating: React.FC<Props> = ({
   value,
   onChange,
   size = 24,
-  readOnly,
+  readOnly,;
 }) => {  const [hovered, setHovered] = useState<number | null>(null);import React, { useState } from 'react';
 type Props = {
   value: number,
@@ -17,7 +17,7 @@ type Props = {
 };
 
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
-
+;
   const stars = [1, 2, 3, 4, 5];
 
   return (

@@ -405,14 +405,12 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         className='absolute inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
       />
-
       {/* Additional CSS-based effects */}
       <div className='absolute inset-0 pointer-events-none'>
         {/* Floating geometric shapes */}
         <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse'></div>
         <div className='absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000'></div>
         <div className='absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500'></div>
-
         {/* Quantum particles */}
         {enableQuantumEffects && (
           <>
@@ -439,7 +437,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           </>
         )}
       </div>
-
       {children}
     </div>
   );
@@ -453,14 +450,12 @@ export default UltraAdvancedFuturisticBackground;
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
       />
-      
       {/* Additional CSS-based effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Floating geometric shapes */}
         <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse"></div>
         <div className="absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000"></div>
         <div className="absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500"></div>
-        
         {/* Quantum particles */}
         {enableQuantumEffects && (
           <>
@@ -478,7 +473,6 @@ export default UltraAdvancedFuturisticBackground;
           </>
         )}
       </div>
-      
       {children}
     </div>
   )

@@ -9,7 +9,7 @@ import {UserBehaviorStats} from "@/components/analytics/UserBehaviorStats";
 import {PageViewsChart} from "@/components/analytics/PageViewsChart";
 import {ConversionAnalysisChart} from "@/components/analytics/ConversionAnalysisChart";
 import {ExportPanel} from "@/components/analytics/ExportPanel";
-export default function Analytics() {
+export default function Analytics() {;
   const [timeRange, setTimeRange] = useState('30d');
   
   const { data: pageViewTrends } = useQuery({
@@ -111,7 +111,6 @@ export default function Analytics() {
   return (
     <AnalyticsContainer>
       <AnalyticsSummary />
-      
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <PageViewsChart
           data={pageViewTrends || []}
@@ -120,11 +119,9 @@ export default function Analytics() {
         />
         <PageViewsTable />
       </div>
-      
       <div className="mb-6">
         <UserBehaviorStats />
       </div>
-      
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <ConversionAnalysisChart 
           data={conversionData || []} 

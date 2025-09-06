@@ -79,8 +79,8 @@ export function CertificationsForm({
     } catch (err: any) {
       setError(err.message || 'An error occurred')
     }
-  }
-  const handleEdit = (cert: Certification) => {
+  };
+  const handleEdit = (cert: Certification) => {;
     setEditingId(cert.id!);    form.reset({
       ...cert,
   }
@@ -107,7 +107,6 @@ export function CertificationsForm({
           earned.
         </p>
       </div>
-
       {certifications.length > 0 && (
         <CertificationsList
           certifications={certifications}
@@ -119,14 +118,12 @@ export function CertificationsForm({
         <h3 className='text-md font-medium mb-4'>
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>
-
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(handleAddOrUpdate)}
             className='space-y-4'
           >
             <CertificationFormFields form={form} />
-
             {error && (
               <Alert variant='destructive'>
                 <AlertDescription>{error}</AlertDescription>
@@ -155,7 +152,6 @@ export function CertificationsForm({
               >
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
-
               <div className='flex gap-2'>
                 <Button type='submit' disabled={isLoading}>
                   {isLoading && (
@@ -163,7 +159,6 @@ export function CertificationsForm({
                   )}
                   {editingId ? 'Update' : 'Add'} Certification
                 </Button>
-
                 <Button type='button' onClick={onComplete}>
                   Next
                 </Button>

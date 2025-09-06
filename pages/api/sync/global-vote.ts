@@ -49,5 +49,5 @@ merkleRoot},
       })
   ),
 
-  return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId })
+  return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId });
 };

@@ -54,7 +54,7 @@
 }</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </>) 
 };export default EnhancedNavigation2025;
-export default function EnhancedNavigation2025() {
+export default function EnhancedNavigation2025() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -93,7 +93,6 @@ export default function EnhancedNavigation2025() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
@@ -115,7 +114,6 @@ export default function EnhancedNavigation2025() {
                 <p className="text-xs text-gray-400">Innovation • Intelligence • Impact</p>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navigationItems.map((item) => (
@@ -130,7 +128,6 @@ export default function EnhancedNavigation2025() {
                       activeSubmenu === item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
-
                   {/* Submenu */}
                   <AnimatePresence>
                     {activeSubmenu === item.name && (
@@ -190,7 +187,6 @@ export default function EnhancedNavigation2025() {
                 </div>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
@@ -206,7 +202,6 @@ export default function EnhancedNavigation2025() {
                 Get Started
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -217,7 +212,6 @@ export default function EnhancedNavigation2025() {
           </div>
         </div>
       </nav>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -236,7 +230,6 @@ export default function EnhancedNavigation2025() {
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
-
                   {activeDropdown === item.name && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
@@ -280,7 +273,6 @@ export default function EnhancedNavigation2025() {
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={closeMenu}
             />
-            
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">
               <div className="p-6">
@@ -293,7 +285,6 @@ export default function EnhancedNavigation2025() {
                     <X className="w-6 h-6" />
                   </button>
                 </div>
-
                 {/* Mobile Navigation Items */}
                 <div className="space-y-4">
                   {navigationItems.map((item) => (
@@ -310,7 +301,6 @@ export default function EnhancedNavigation2025() {
                           activeSubmenu === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
-
                       {/* Mobile Submenu */}
                       <AnimatePresence>
                         {activeSubmenu === item.name && (
@@ -338,7 +328,6 @@ export default function EnhancedNavigation2025() {
                     </div>
                   ))}
                 </div>
-
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">
                   <Link
@@ -356,7 +345,6 @@ export default function EnhancedNavigation2025() {
                     Contact Us
                   </Link>
                 </div>
-
                 {/* Mobile Contact Info */}
                 <div className="mt-8 pt-6 border-t border-gray-700/50">
                   <div className="space-y-3 text-sm">
@@ -379,7 +367,6 @@ export default function EnhancedNavigation2025() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>

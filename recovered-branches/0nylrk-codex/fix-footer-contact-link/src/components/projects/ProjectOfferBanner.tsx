@@ -6,7 +6,7 @@ import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
-export function ProjectOfferBanner() {
+export function ProjectOfferBanner() {;
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
@@ -58,7 +58,6 @@ export function ProjectOfferBanner() {
                   </p>
                 </div>
               </div>
-              
               <div className="flex items-center gap-2">
                 <Button size="sm" className="whitespace-nowrap">
                   View Offer

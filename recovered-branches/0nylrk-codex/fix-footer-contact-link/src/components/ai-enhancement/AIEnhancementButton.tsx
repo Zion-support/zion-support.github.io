@@ -14,7 +14,7 @@ interface AIEnhancementButtonProps {
   contentLength?: number
 }
 
-export function AIEnhancementButton({
+export function AIEnhancementButton({;
   options;
   onEnhanced;
   buttonText = "Enhance with AI";

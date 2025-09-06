@@ -29,17 +29,17 @@ import {
   Share2,
   Download,
   Phone,
-  Mail,
+  Mail,;
   MapPin,;} from 'lucide-react';import {
   Search, Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, 
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud, 
-  Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin
+  Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin;
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
-export default function ServicesShowcase2027() {
+export default function ServicesShowcase2027() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
@@ -259,7 +259,6 @@ export default function ServicesShowcase2027() {
           rel='canonical'
           href='https://ziontechgroup.com/2027-services-showcase/'
         />
-
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -274,7 +273,6 @@ export default function ServicesShowcase2027() {
           content='https://ziontechgroup.com/2027-services-showcase'
         />
         <meta property='og:type' content='website' />
-
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -289,15 +287,12 @@ export default function ServicesShowcase2027() {
         <meta property="og:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />
         <meta property="og:url" content="https://ziontechgroup.com/2027-services-showcase" />
         <meta property="og:type" content="website" />
-        
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2027 Services Showcase - Zion Tech Group" />
         <meta name="twitter:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />
       </Head>
-
       <UltraFuturisticNavigation2027 />
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -317,7 +312,6 @@ export default function ServicesShowcase2027() {
               services. From AI consciousness evolution to practical micro SAAS
               solutions.
             </p>
-
             {/* Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
               <div className='text-center'>
@@ -344,7 +338,6 @@ export default function ServicesShowcase2027() {
                 </div>
                 <div className='text-green-300'>Rating</div>              </div>
             </div>
-
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>                2027 Services Showcase
               </span>
@@ -352,7 +345,6 @@ export default function ServicesShowcase2027() {
             <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">
               Experience the future of technology with our revolutionary 2027 services. From AI consciousness evolution to practical micro SAAS solutions.
             </p>
-            
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="text-center">
@@ -380,7 +372,6 @@ export default function ServicesShowcase2027() {
                 <div className="text-green-300">Rating</div>
               </div>
             </div>
-
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
@@ -412,7 +403,6 @@ export default function ServicesShowcase2027() {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
       <section className='px-4 sm:px-6 lg:px-8 mb-16'>
         <div className='max-w-7xl mx-auto'>
@@ -439,7 +429,6 @@ export default function ServicesShowcase2027() {
                 />
               </div>
             </div>
-
             {/* Filters */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
               {/* Category Filter */}
@@ -467,7 +456,6 @@ export default function ServicesShowcase2027() {
                   ))}
                 </select>
               </div>
-
               {/* Price Range Filter */}
               <div>
                 <label className='block text-cyan-400 font-medium mb-2'>
@@ -490,7 +478,6 @@ export default function ServicesShowcase2027() {
                   ))}
                 </select>
               </div>
-
               {/* Sort By */}
               <div>
                 <label className='block text-cyan-400 font-medium mb-2'>
@@ -517,7 +504,6 @@ export default function ServicesShowcase2027() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='px-4 sm:px-6 lg:px-8 mb-20'>
         <div className='max-w-7xl mx-auto'>
@@ -539,14 +525,12 @@ export default function ServicesShowcase2027() {
                     <div className='flex items-start justify-between mb-4'>
                       <div className='text-4xl'>🚀</div>
                     </div>
-
                     {/* Service Info */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
                       {service.name}
                     </h3>
                     <p className='text-cyan-300 text-sm mb-4 line-clamp-3'>                      {service.description}
                     </p>
-
                     {/* Price */}
                     <div className='mb-4'>
                       <div className='text-2xl font-bold text-white'>                        {service.price}                >
@@ -555,7 +539,6 @@ export default function ServicesShowcase2027() {
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-4xl">🚀</div>
                     </div>
-
                     {/* Service Info */}
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
                       {service.name}
@@ -563,7 +546,6 @@ export default function ServicesShowcase2027() {
                     <p className="text-cyan-300 text-sm mb-4 line-clamp-3">
                       {service.description}
                     </p>
-
                     {/* Price */}
                     <div className='mb-4'>
                       <div className='text-2xl font-bold text-white'>                    <div className="mb-4">
@@ -571,7 +553,6 @@ export default function ServicesShowcase2027() {
                         {service.price}
                       </div>
                     </div>
-
                     {/* Features */}
                     <div className='mb-6'>
                       <h4 className='text-cyan-400 font-semibold mb-3'>
@@ -603,7 +584,6 @@ export default function ServicesShowcase2027() {
                         )}
                       </div>
                     </div>
-
                     {/* ROI */}
                     <div className='mb-6 text-center'>
                       <div className='text-green-400 font-semibold text-lg'>
@@ -613,7 +593,6 @@ export default function ServicesShowcase2027() {
                         Return on Investment
                       </div>
                     </div>
-
                     {/* Actions */}
                     <div className='flex space-x-3'>
                       <Link
@@ -624,7 +603,6 @@ export default function ServicesShowcase2027() {
                       <Link
                         href='/contact'
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >                    </div>
-
                     {/* Actions */}
                     <div className="flex space-x-3">
                       <Link
@@ -641,7 +619,6 @@ export default function ServicesShowcase2027() {
                         Contact
                       </Link>
                     </div>
-
                     {/* Category Badge */}
                     <div className='mt-4'>
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service.category}                    <div className="mt-4">
@@ -654,7 +631,6 @@ export default function ServicesShowcase2027() {
               ))}
             </AnimatePresence>
           </div>
-
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
@@ -694,7 +670,6 @@ export default function ServicesShowcase2027() {
           )}
         </div>
       </section>
-
       {/* Contact Section */}
       <section className='px-4 sm:px-6 lg:px-8 mb-20'>
         <div className='max-w-4xl mx-auto'>
@@ -706,7 +681,6 @@ export default function ServicesShowcase2027() {
               Contact our team to discuss how our 2027 services can
               revolutionize your operations and drive unprecedented growth.
             </p>
-
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
               <div className='flex items-center justify-center space-x-3'>
                 <Phone className='w-5 h-5 text-cyan-400' />
@@ -721,7 +695,6 @@ export default function ServicesShowcase2027() {
                 <span className='text-white'>{contactInfo.address}</span>
               </div>
             </div>
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
                 href='/contact'
@@ -735,7 +708,6 @@ export default function ServicesShowcase2027() {
             <p className="text-cyan-300 mb-8 text-lg">
               Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3">
                 <Phone className="w-5 h-5 text-cyan-400" />
@@ -750,7 +722,6 @@ export default function ServicesShowcase2027() {
                 <span className="text-white">{contactInfo.address}</span>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
@@ -769,7 +740,6 @@ export default function ServicesShowcase2027() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className='px-4 sm:px-6 lg:px-8 py-12 border-t border-cyan-500/30'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -782,7 +752,6 @@ export default function ServicesShowcase2027() {
             </h3>
             <p className='text-cyan-300'>2027 Innovation Hub</p>
           </div>
-
           <div className='text-cyan-300 text-sm'>
             <p>&copy; 2027 Zion Tech Group. All rights reserved.</p>
             <p className='mt-2'>
@@ -812,7 +781,6 @@ export default function ServicesShowcase2027() {
             </h3>
             <p className="text-cyan-300">2027 Innovation Hub</p>
           </div>
-          
           <div className="text-cyan-300 text-sm">
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>
             <p className="mt-2">
@@ -827,4 +795,6 @@ export default function ServicesShowcase2027() {
       </footer>
     </UltraFuturisticMatrixBackground2027>
 );  )
+}
+
 }

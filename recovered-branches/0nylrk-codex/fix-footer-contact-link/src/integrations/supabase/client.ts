@@ -12,7 +12,7 @@ export const checkOnline = async (): Promise<boolean> => {
   if (typeof navigator !== 'undefined' && !navigator.onLine) {
     return false
   }
-  try {
+  try {;
     const controller = new AbortController();
     const id = setTimeout(() => controller.abort(), 3000);
     await fetch('https://clients3.google.com/generate_204', {
@@ -33,14 +33,14 @@ export const safeFetch: typeof fetch = async (input, init) => {
   try {
     return await fetch(input, init)
   } catch (err) {
-    // Log the original error for debugging
+    // Log the original error for debugging;
     console.error('Supabase fetch failed:', err);
     throw new Error('Failed to connect to Supabase')
   }
 };
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  global: { fetch: safeFetch }
+  global: { fetch: safeFetch };
 });
 
 // Helper function to get profiles table

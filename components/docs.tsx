@@ -8,7 +8,7 @@ export default function DocsPage() {
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   };
 
@@ -126,7 +126,6 @@ export default function DocsPage() {
         />
         <link rel='canonical' href='https://ziontechgroup.com/docs' />
       </Head>
-
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto space-y-10'>
           <div className='text-center'>
@@ -137,7 +136,6 @@ export default function DocsPage() {
               Quick links, references, and integration guides for our services.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {sections.map(s => (
               <Card
@@ -156,14 +154,12 @@ export default function DocsPage() {
                       >
                         {l.name}
                       </a>                    </li>      </Head>
-
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Documentation</h1>
             <p className="text-slate-300 mt-4">Quick links, references, and integration guides for our services.</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {sections.map((s) => (
               <Card key={s.title} className="p-6 bg-black/40 border border-gray-700/50">
@@ -178,7 +174,6 @@ export default function DocsPage() {
               </Card>
             ))}
           </div>
-
           <Card className='p-6 bg-black/40 border border-gray-700/50'>
             <h2 className='text-xl font-semibold mb-4 text-white'>
               External References
@@ -204,7 +199,6 @@ export default function DocsPage() {
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
             </ul>
           </Card>
-
           <Card className='p-6 bg-black/40 border border-gray-700/50'>
             <h2 className='text-xl font-semibold mb-4 text-white'>
               Need help?
@@ -245,3 +239,4 @@ export default function DocsPage() {
   );
 }
 ;
+}

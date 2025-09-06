@@ -50,7 +50,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
       <NavLink
         to="/signup"
         className={({ isActive }) =>
-          cn(
+          cn(;
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground",
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light"

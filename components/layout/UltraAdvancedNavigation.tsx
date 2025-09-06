@@ -26,10 +26,10 @@ import {
   Atom,
   Database,
   Cloud,
-  Lock,
+  Lock,;
   Code,;
 } from 'lucide-react';
-import Link from 'next/link';import { 
+import Link from 'next/link';import { ;
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
   Bot, Car, Building2, DollarSign, Monitor, Users;
@@ -335,7 +335,6 @@ import Link from 'next/link';
               </div>
             </Link>
           </motion.div>
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
@@ -432,7 +431,6 @@ import Link from 'next/link';
               </div>
             ))}
           </div>
-
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>
             <div className='flex items-center space-x-4 text-sm text-gray-300'>
@@ -451,7 +449,6 @@ import Link from 'next/link';
                 <span className='hidden xl:inline'>{contactInfo.email}</span>
               </a>
             </div>
-
             <motion.a
               href='/contact'
               whileHover={{ scale: 1.05 }}
@@ -462,7 +459,6 @@ import Link from 'next/link';
                 <span className="hidden xl:inline">{contactInfo.email}</span>
               </a>
             </div>
-            
             <motion.a
               href="/contact"
               whileHover={{ scale: 1.05 }}
@@ -472,7 +468,6 @@ import Link from 'next/link';
               Get Started
             </motion.a>
           </div>
-
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>
             <button
@@ -492,7 +487,6 @@ import Link from 'next/link';
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -530,7 +524,6 @@ import Link from 'next/link';
                           }`}
                         />
                       </button>
-
                       {activeDropdown === item.name && (
                         <div className='ml-8 mt-2 space-y-2'>
                           {item.dropdown.map(dropdownItem => (                            <Link
@@ -588,7 +581,6 @@ import Link from 'next/link';
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
-
                 <motion.a
                   href='/contact'
                   whileHover={{ scale: 1.05 }}
@@ -609,7 +601,6 @@ import Link from 'next/link';
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
-                
                 <motion.a
                   href="/contact"
                   whileHover={{ scale: 1.05 }}

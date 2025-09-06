@@ -67,7 +67,7 @@ import {
   Factory as FactoryIcon,
   Truck as TruckIcon,
   Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,
+  GraduationCap as GraduationCapIcon,;
   ShieldCheck as ShieldCheckIcon,;
 } from 'lucide-react';
 import Button from '../components/ui/Button';
@@ -77,7 +77,7 @@ import {
   revolutionaryMicroSaasServices,
   revolutionaryServiceCategories,
   getRevolutionaryServicesByCategory,
-  getPopularRevolutionaryServices,
+  getPopularRevolutionaryServices,;
   getRevolutionaryServicesByPriceRange,;
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
@@ -86,7 +86,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, Star, Calendar } from 'lucide-react';
-export default function RevolutionaryServicesPage() {
+export default function RevolutionaryServicesPage() {;
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [priceRange, setPriceRange] = useState('All');
@@ -346,7 +346,6 @@ export default function RevolutionaryServicesPage() {
             href='https://ziontechgroup.com/revolutionary-services'
           />
         </Head>
-
         {/* Hero Section */}
         <section className='relative py-20 overflow-hidden'>
           <div className='container mx-auto px-4 text-center'>
@@ -392,14 +391,12 @@ export default function RevolutionaryServicesPage() {
                 SaaS platform. Quantum AI, autonomous systems, space technology,
                 and cutting-edge solutions that redefine what's possible.
               </motion.p>
-
               {/* Service Count Stats */}
               <motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >              </motion.p>
-              
               {/* Service Count Stats */}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -431,7 +428,6 @@ export default function RevolutionaryServicesPage() {
                   </div>
                   <div className='text-gray-400'>Average ROI</div>                </div>
               </motion.div>
-
               {/* CTA Buttons */}
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -451,7 +447,6 @@ export default function RevolutionaryServicesPage() {
                   <div className="text-gray-400">Average ROI</div>
                 </div>
               </motion.div>
-
               {/* CTA Buttons */}
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'              <motion.div 
@@ -485,7 +480,6 @@ export default function RevolutionaryServicesPage() {
             </div>
           </div>
         </section>
-
         {/* Contact Information Banner */}
         <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>
           <div className='container mx-auto px-4'>
@@ -508,7 +502,6 @@ export default function RevolutionaryServicesPage() {
             </div>
           </div>
         </section>
-
         {/* Category Navigation */}
         <section className='py-12'>
           <div className='container mx-auto px-4'>
@@ -565,7 +558,6 @@ export default function RevolutionaryServicesPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Popular Services Showcase */}
         <section className='py-16'>
           <div className='container mx-auto px-4'>
@@ -590,7 +582,6 @@ export default function RevolutionaryServicesPage() {
                 that are transforming industries worldwide.
               </p>
             </motion.div>
-
             <motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
               variants={containerVariants}
@@ -604,7 +595,6 @@ export default function RevolutionaryServicesPage() {
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
               </p>
             </motion.div>
-
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
@@ -637,7 +627,6 @@ export default function RevolutionaryServicesPage() {
                         {service.period}
                       </div>
                     </div>
-
                     <div className='space-y-3 mb-6'>
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <div key={idx} className='flex items-center gap-2'>
@@ -656,7 +645,6 @@ export default function RevolutionaryServicesPage() {
                       <div className="text-3xl font-bold text-cyan-400 mb-2">{service.price}</div>
                       <div className="text-sm text-gray-400">{service.period}</div>
                     </div>
-                    
                     <div className="space-y-3 mb-6">
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-2">
@@ -665,7 +653,6 @@ export default function RevolutionaryServicesPage() {
                         </div>
                       ))}
                     </div>
-
                     <div className='text-center'>
                       <Button
                         variant='primary'
@@ -691,7 +678,6 @@ export default function RevolutionaryServicesPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section id='services-grid' className='py-16'>
           <div className='container mx-auto px-4'>
@@ -731,7 +717,6 @@ export default function RevolutionaryServicesPage() {
                       </option>
                     ))}
                   </select>
-
                   <select
                     value={sortBy}
                     onChange={e => setSortBy(e.target.value)}
@@ -744,7 +729,6 @@ export default function RevolutionaryServicesPage() {
                     ))}
                   </select>
                 </div>
-
                 <div className='flex items-center gap-4'>
                   <div className='relative'>
                     <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -756,12 +740,11 @@ export default function RevolutionaryServicesPage() {
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64'
                     />
                   </div>
-
                   <div className='flex border border-gray-600 rounded-lg overflow-hidden'>                    <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
-                      <Grid className='w-4 h-4' />                    </button>                  
+                      <Grid className='w-4 h-4' />                    </button>
                   <div className="flex border border-gray-600 rounded-lg overflow-hidden">
                     <button
                       onClick={() => setViewMode('grid')}
@@ -779,7 +762,6 @@ export default function RevolutionaryServicesPage() {
                 </div>
               </div>
             </motion.div>
-
             {/* Services Display */}
             <motion.div
               className={
@@ -826,7 +808,6 @@ export default function RevolutionaryServicesPage() {
                         <div className='text-sm text-gray-400 mb-4'>
                           {service.period}
                         </div>
-
                         <div className='space-y-2 mb-6'>
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div
@@ -843,7 +824,6 @@ export default function RevolutionaryServicesPage() {
                         <p className="text-gray-300 mb-4 text-sm">{service.tagline}</p>
                         <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                         <div className="text-sm text-gray-400 mb-4">{service.period}</div>
-                        
                         <div className="space-y-2 mb-6">
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm">
@@ -851,7 +831,6 @@ export default function RevolutionaryServicesPage() {
                               <span className="text-gray-300">{feature}</span>
                           ))}
                         </div>
-
                         <div className='text-center'>
                           <Button
                             variant='primary'
@@ -887,7 +866,6 @@ export default function RevolutionaryServicesPage() {
                               </div>
                             </div>
                           </div>
-
                           <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
                             <div>
                               <h4 className='text-sm font-semibold text-cyan-400 mb-2'>
@@ -929,7 +907,6 @@ export default function RevolutionaryServicesPage() {
                               </div>
                             </div>
                           </div>
-
                           <div className='flex gap-2'>
                             <Button
                               variant='primary'
@@ -948,7 +925,7 @@ export default function RevolutionaryServicesPage() {
                             >
                               View Details
                               <Eye className='ml-2 w-4 h-4' />
-                            </Button>                          </div>                          
+                            </Button>                          </div>
                           <div className="flex gap-2">
                                                          <Button 
                                variant="primary" 
@@ -973,7 +950,6 @@ export default function RevolutionaryServicesPage() {
                 </motion.div>
               ))}
             </motion.div>
-
             {filteredServices.length === 0 && (
               <motion.div
                 className='text-center py-16'                initial={{ opacity: 0 }}
@@ -1017,7 +993,6 @@ export default function RevolutionaryServicesPage() {
             )}
           </div>
         </section>
-
         {/* Service Details Modal */}
         <AnimatePresence>
           {selectedService && (
@@ -1070,7 +1045,6 @@ export default function RevolutionaryServicesPage() {
                       ×
                     </button>
                   </div>
-
                   <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                       <h3 className='text-xl font-semibold text-cyan-400 mb-4'>
                         Service Details
@@ -1078,7 +1052,6 @@ export default function RevolutionaryServicesPage() {
                       <p className='text-gray-300 mb-6'>
                         {selectedService.description}
                       </p>
-
                       <div className='space-y-4'>
                         <div>
                           <h4 className='text-sm font-semibold text-purple-400 mb-2'>
@@ -1092,7 +1065,6 @@ export default function RevolutionaryServicesPage() {
                             {selectedService.marketPrice}
                           </div>
                         </div>
-
                         <div>
                           <h4 className='text-sm font-semibold text-green-400 mb-2'>
                             ROI & Market
@@ -1121,12 +1093,10 @@ export default function RevolutionaryServicesPage() {
                         </div>
                       </div>
                     </div>
-
                     <div>
                       <h3 className='text-xl font-semibold text-cyan-400 mb-4'>
                         Features & Capabilities
                       </h3>
-
                       <div className='space-y-4'>
                         <div>
                           <h4 className='text-sm font-semibold text-purple-400 mb-2'>
@@ -1154,7 +1124,6 @@ export default function RevolutionaryServicesPage() {
                             ))}
                           </div>
                         </div>
-
                         <div>
                           <h4 className='text-sm font-semibold text-green-400 mb-2'>
                             Benefits
@@ -1180,7 +1149,6 @@ export default function RevolutionaryServicesPage() {
                             ))}
                           </div>
                         </div>
-
                         <div>
                           <h4 className='text-sm font-semibold text-blue-400 mb-2'>
                             Capabilities
@@ -1210,14 +1178,12 @@ export default function RevolutionaryServicesPage() {
                       </div>
                     </div>
                   </div>
-
                   <div className='mt-8 pt-6 border-t border-gray-700'>
                     <div className='flex flex-col sm:flex-row gap-4 justify-between items-center'>
                       <div className='text-sm text-gray-400'>
                         <div>Setup Time: {selectedService.setupTime}</div>
                         <div>Trial: {selectedService.trialDays} days</div>
                       </div>
-
                       <div className='flex gap-4'>
                         <Button
                           variant='primary'
@@ -1239,7 +1205,7 @@ export default function RevolutionaryServicesPage() {
                         >
                           Contact Sales
                           <Mail className='ml-2 w-4 h-4' />
-                        </Button>                      </div>                      
+                        </Button>                      </div>
                       <div className="flex gap-4">
                                                  <Button 
                            variant="primary"
@@ -1262,7 +1228,6 @@ export default function RevolutionaryServicesPage() {
             </motion.div>
           )}
         </AnimatePresence>
-
         {/* Contact Section */}
         <section className='py-20'>
           <div className='container mx-auto px-4 text-center'>
@@ -1282,7 +1247,6 @@ export default function RevolutionaryServicesPage() {
                 Join thousands of companies already transforming their business
                 with our revolutionary micro SaaS services.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
                 <Button
                   variant='primary'
@@ -1305,7 +1269,6 @@ export default function RevolutionaryServicesPage() {
                   <Calendar className='ml-2 w-5 h-5' />
                 </Button>
               </div>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
                 <div>
                   <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />
@@ -1331,7 +1294,6 @@ export default function RevolutionaryServicesPage() {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of companies already transforming their business with our revolutionary micro SaaS services.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                                  <Button 
                    variant="primary" 
@@ -1350,7 +1312,6 @@ export default function RevolutionaryServicesPage() {
                    <Calendar className="ml-2 w-5 h-5" />
                  </Button>
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div>
                   <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />

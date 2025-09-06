@@ -61,7 +61,6 @@ export function ProductGallery({
             </div>
           )}
         </TabsContent>
-
         {videoUrl && (
           <TabsContent value='video' className='pt-4'>
             <AspectRatio ratio={16 / 9}>
@@ -125,6 +124,6 @@ export function ProductGallery({
       )}
     </Dialog>
   )
-}
-}
+};
+};
 ;

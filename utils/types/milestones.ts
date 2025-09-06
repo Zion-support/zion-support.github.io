@@ -1,7 +1,7 @@
 export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
 export type ProjectParticipantRole = 'client' | 'talent';
 
-export type ProjectParticipants = {
+export type ProjectParticipants = {;
   clientUserId: string;
   talentUserId: string;
 };
@@ -23,8 +23,8 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
     value === 'In Progress' ||
     value === 'Submitted' ||
     value === 'Approved' ||
-    value === 'Paid'
-  );export interface MilestoneAttachment {
+    value === 'Paid';
+  );export interface MilestoneAttachment {;
   id: string;
   name: string;
   url: string;
@@ -33,7 +33,7 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
   uploadedAt: string,
 }
 
-export interface CreateMilestoneRequest {
+export interface CreateMilestoneRequest {;
   title: string;
   description?: string;
   dueDate: string;
@@ -41,11 +41,13 @@ export interface CreateMilestoneRequest {
   attachments?: MilestoneAttachment[],
 }
 
-export interface UpdateMilestoneRequest {
+export interface UpdateMilestoneRequest {;
   title?: string;
   description?: string;
   dueDate?: string;
   amountUsd?: number;
   status?: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
+}
+
 }

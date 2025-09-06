@@ -32,6 +32,6 @@ export default function TenantOnboarding() {
   // Check if user has admin role
   const isAdmin = user?.role === "admin"
       }
-  )
-}
+  );
+};
 ;

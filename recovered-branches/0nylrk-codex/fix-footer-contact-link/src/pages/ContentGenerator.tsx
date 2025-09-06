@@ -16,7 +16,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {useNavigate} from "react-router-dom";
-export default function ContentGenerator() {
+export default function ContentGenerator() {;
   const { user, isLoading } = useAuth();
   const navigate = useNavigate();
   const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
@@ -113,7 +113,6 @@ export default function ContentGenerator() {
       <div className="min-h-screen bg-zion-blue py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold text-white mb-8">Content Generator</h1>
-          
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-1">
               <Card className="bg-zion-blue-dark border border-zion-blue-light">
@@ -136,7 +135,6 @@ export default function ContentGenerator() {
                       </SelectContent>
                     </Select>
                   </div>
-                  
                   <div className="space-y-2">
                     <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>
                     <Input
@@ -147,7 +145,6 @@ export default function ContentGenerator() {
                       onChange={(e) => setTopic(e.target.value)}
                     />
                   </div>
-                  
                   <div className="space-y-2">
                     <Label htmlFor="customPrompt" className="text-white">Custom Prompt (Optional)</Label>
                     <Textarea
@@ -158,7 +155,6 @@ export default function ContentGenerator() {
                       onChange={(e) => setCustomPrompt(e.target.value)}
                     />
                   </div>
-                  
                   {contentType === 'blog' && (
                     <>
                       <div className="flex items-center justify-between">
@@ -169,7 +165,6 @@ export default function ContentGenerator() {
                           onCheckedChange={setAutoPublish}
                         />
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
@@ -213,7 +208,6 @@ export default function ContentGenerator() {
                 </CardFooter>
               </Card>
             </div>
-            
             <div className="lg:col-span-2">
               <Card className="bg-zion-blue-dark border border-zion-blue-light h-full">
                 <CardHeader>
@@ -237,7 +231,6 @@ export default function ContentGenerator() {
                             <TabsTrigger value="markdown">Markdown</TabsTrigger>
                             <TabsTrigger value="metadata">Metadata</TabsTrigger>
                           </TabsList>
-                          
                           <TabsContent value="preview" className="pt-4">
                             <ScrollArea className="h-[500px] pr-4">
                               <div className="space-y-4">
@@ -257,7 +250,6 @@ export default function ContentGenerator() {
                               </div>
                             </ScrollArea>
                           </TabsContent>
-                          
                           <TabsContent value="markdown" className="pt-4">
                             <ScrollArea className="h-[500px]">
                               <pre className="bg-zion-blue whitespace-pre-wrap p-4 rounded-md text-zion-slate-light overflow-auto">
@@ -265,19 +257,16 @@ export default function ContentGenerator() {
                               </pre>
                             </ScrollArea>
                           </TabsContent>
-                          
                           <TabsContent value="metadata" className="pt-4">
                             <div className="space-y-4">
                               <div>
                                 <h3 className="text-white font-semibold mb-1">Title</h3>
                                 <p className="text-zion-slate-light">{previewContent.title}</p>
                               </div>
-                              
                               <div>
                                 <h3 className="text-white font-semibold mb-1">Meta Description</h3>
                                 <p className="text-zion-slate-light">{previewContent.metaDescription}</p>
                               </div>
-                              
                               <div>
                                 <h3 className="text-white font-semibold mb-1">Tags</h3>
                                 <div className="flex flex-wrap gap-2">
@@ -291,7 +280,6 @@ export default function ContentGenerator() {
                                   ))}
                                 </div>
                               </div>
-                              
                               {previewContent.tweetSummary && (
                                 <div>
                                   <h3 className="text-white font-semibold mb-1">Tweet Summary</h3>
@@ -316,7 +304,6 @@ export default function ContentGenerator() {
                             <TabsTrigger value="preview">Preview</TabsTrigger>
                             <TabsTrigger value="html">HTML</TabsTrigger>
                           </TabsList>
-                          
                           <TabsContent value="preview" className="pt-4">
                             <div className="bg-white rounded-lg p-6 text-black">
                               <h2 className="text-xl font-bold">{previewContent.subject}</h2>
@@ -332,7 +319,6 @@ export default function ContentGenerator() {
                                 </Button>
                               </div>
                             </div>
-                            
                             <div className="mt-4 flex justify-end">
                               <Button
                                 onClick={sendTestNewsletter}
@@ -343,7 +329,6 @@ export default function ContentGenerator() {
                               </Button>
                             </div>
                           </TabsContent>
-                          
                           <TabsContent value="html" className="pt-4">
                             <ScrollArea className="h-[500px]">
                               <pre className="bg-zion-blue whitespace-pre-wrap p-4 rounded-md text-zion-slate-light overflow-auto">

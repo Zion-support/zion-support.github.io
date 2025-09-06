@@ -7,9 +7,7 @@ const Dashboard: NextPage = () => {
       <Head>
         <title>Dashboard - Zion</title>
       </Head>
-
       <h1 className="text-2xl font-semibold">Dashboard</h1>
-
       <section>
         <h2 className="text-lg font-semibold mb-2">My Jobs</h2>
         <EmptyState
@@ -20,7 +18,6 @@ const Dashboard: NextPage = () => {
           secondaryAction={{ label: 'Explore talent', href: '/talent' }}
         />
       </section>
-
       <section>
         <h2 className="text-lg font-semibold mb-2">Messages</h2>
         <EmptyState

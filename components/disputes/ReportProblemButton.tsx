@@ -4,7 +4,7 @@ export default function ReportProblemButton({
   projectId,
   entityType,
   entityId,
-}: {
+}: {;
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
@@ -27,7 +27,7 @@ export default function ReportProblemButton({
   projectId,
   entityType,
   entityId,
-}: {
+}: {;
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;

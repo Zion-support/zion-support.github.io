@@ -1,7 +1,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
+import { Server, CheckCircle, Database, Cloud } from 'lucide-react',;
 ;
 export default function EnterpriseITPage() {
   const features = [
@@ -33,7 +33,6 @@ export default function EnterpriseITPage() {
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
             </div>
           </header>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Core Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -45,7 +44,6 @@ export default function EnterpriseITPage() {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -60,5 +58,5 @@ export default function EnterpriseITPage() {
         </div>
       </div>
     </Layout>
-  )
+  );
 };

@@ -10,7 +10,7 @@ export default function QuantumSecureCloudInfrastructure() {
 			pricePerMonthUSD={5999}
 			implementationWeeks="6-10 weeks"
 			roiNote="Meet emerging PQC compliance and safeguard long-lived data"
-			features={[
+			features={[;
 				"PQC algorithms for data at-rest and in-transit";
 				"Hybrid crypto transition plans";
 				"HSM/KMS integrations and key rotation";

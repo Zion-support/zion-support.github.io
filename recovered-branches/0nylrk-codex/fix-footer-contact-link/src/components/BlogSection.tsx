@@ -32,7 +32,6 @@ export function BlogSection() {
             <Link to="/blog">View All Articles</Link>
           </Button>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {recentPosts.map((post, index) => (
             <Card
@@ -47,7 +46,7 @@ export function BlogSection() {
                   loading="lazy"
                   onError={(
                     e: React.SyntheticEvent<HTMLImageElement, Event>,
-                  ) => {
+                  ) => {;
                     const target = e.currentTarget as HTMLImageElement;
                     target.src =
                       "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";

@@ -15,7 +15,7 @@ interface AIMatchingResultsProps {
   serviceType?: string
 }
 
-export function AIMatchingResults({
+export function AIMatchingResults({;
   matches;
   onSelectMatch;
   isLoading = false;
@@ -90,7 +90,6 @@ export function AIMatchingResults({
             Equipment ({categories.equipment.length})
           </TabsTrigger>
         </TabsList>
-        
         {Object.entries(categories).map(([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
             {items.length > 0 ? (
@@ -120,7 +119,6 @@ export function AIMatchingResults({
                               </AvatarFallback>
                             )}
                           </Avatar>
-                          
                           <div className="flex-1">
                             <div className="flex justify-between">
                               <div>
@@ -136,7 +134,6 @@ export function AIMatchingResults({
                                 </div>
                               )}
                             </div>
-                            
                             <div className="mt-2 flex flex-wrap gap-1">
                               <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">
                                 {match.category}

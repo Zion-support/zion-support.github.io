@@ -22,7 +22,7 @@ interface EnergyField {
 
 export default function UltraFuturisticBackground2029({
   children,
-}: {
+}: {;
   children: React.ReactNode;
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
@@ -50,7 +50,7 @@ interface EnergyField {
   pulse: number
 }
 
-export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -427,7 +427,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         className='absolute inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
       />
-
       {/* Floating geometric shapes */}
       <div className='absolute inset-0 pointer-events-none'>
         <motion.div
@@ -451,7 +450,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
       />
-      
       {/* Floating geometric shapes */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
@@ -467,7 +465,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full'
           animate={{
@@ -478,7 +475,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-        
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full"
           animate={{
@@ -491,7 +487,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45'
           animate={{
@@ -502,7 +497,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-        
         <motion.div
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"
           animate={{
@@ -515,7 +509,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20'
           animate={{
@@ -526,7 +519,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             repeat: Infinity,
             ease: 'easeInOut',          }}          }}
         />
-        
         <motion.div
           className="absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20"
           animate={{
@@ -540,11 +532,9 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
           }}
         />
       </div>
-
       {/* Gradient overlays for depth */}
       <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />
-
       {/* Content */}
       <div className='relative z-10'>{children}</div>
     </div>

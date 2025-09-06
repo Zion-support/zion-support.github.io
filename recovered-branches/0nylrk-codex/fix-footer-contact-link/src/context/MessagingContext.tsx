@@ -28,7 +28,7 @@ const MessagingContext = createContext(
 
 // Hook for using the messaging context
 export function useMessaging(): MessagingContextType {
-  // Cast to avoid type errors when React type definitions are missing
+  // Cast to avoid type errors when React type definitions are missing;
   const context = useContext(MessagingContext) as MessagingContextType;
   if (context === undefined) {
     throw new Error('useMessaging must be used within a MessagingProvider')
@@ -37,7 +37,7 @@ export function useMessaging(): MessagingContextType {
 }
 
 // Provider component
-export function MessagingProvider({ children }: { children: ReactNode }) {
+export function MessagingProvider({ children }: { children: ReactNode }) {;
   const { user } = useAuth();
   
   const {

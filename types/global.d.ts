@@ -86,5 +86,5 @@ declare global {
   }
 }
 
-// Re-export DOM types that might not be available
+// Re-export DOM types that might not be available;
 export {};

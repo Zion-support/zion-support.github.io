@@ -4,7 +4,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 import {TalentProfile} from "@/types/talent";
 export interface HireRequestData {
-  talent: {
+  talent: {;
     id: string;
     full_name: string;
     professional_title: string,
@@ -23,7 +23,7 @@ export interface HireRequestData {
   }
 }
 
-export function useHireRequest() {
+export function useHireRequest() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 

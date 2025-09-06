@@ -41,7 +41,6 @@ export function ResumePreviewCard({
             <span className='sr-only'>Download Resume</span>
           </Button>
         </div>
-
         {resume.basic_info.summary && (
           <p className='text-xs text-zion-slate line-clamp-2 mb-2'>
             {resume.basic_info.summary}
@@ -78,4 +77,7 @@ export function ResumePreviewCard({
       </CardContent>
     </Card>
   )
+};
+;
+}
 }

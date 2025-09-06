@@ -7,7 +7,7 @@ export default function ApiPerformanceTestingPage() {
     'SLO-aware latency reports',
     'Regression baselines per endpoint',
     'CI checks and PR annotations',
-    'Synthetic traffic for staging',
+    'Synthetic traffic for staging',;
   ];
 
   return (
@@ -23,7 +23,6 @@ export default function ApiPerformanceTestingPage() {
             injectors, and CI/CD integration. Benchmark providers, catch
             performance drift, and ship with confidence.
           </p>
-
           <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
               {
@@ -60,7 +59,6 @@ export default function ApiPerformanceTestingPage() {
               </div>
             ))}
           </div>
-
           <div className='mt-14'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
             <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -127,7 +125,6 @@ export default function ApiPerformanceTestingPage() {
               .
             </p>
           </div>
-
 <div className='mt-14 flex flex-wrap items-center gap-4'>
             <Link
               href='/contact'
@@ -147,3 +144,5 @@ export default function ApiPerformanceTestingPage() {
       </section>
     </div>
   );
+
+}

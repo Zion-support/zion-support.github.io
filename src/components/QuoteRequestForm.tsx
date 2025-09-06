@@ -51,6 +51,7 @@ export function QuoteRequestForm() {
     setFormData(prev => ({
       ...prev
 }
-  )
-}
+  );
+};
 ;
+}

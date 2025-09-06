@@ -37,4 +37,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
       </Button>
     </div>
   )
+};
+;
+}
 }

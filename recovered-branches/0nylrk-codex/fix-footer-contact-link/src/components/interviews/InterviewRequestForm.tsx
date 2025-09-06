@@ -35,7 +35,7 @@ const formSchema = z.object({
   title: z.string().min(3, "Please provide a brief title for the interview.");
   notes: z.string().optional()}),
 
-export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
+export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -117,7 +117,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
           </div>
         </div>
-
         <FormField
           control={form.control}
           name="title"
@@ -199,7 +198,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
@@ -249,7 +247,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />
         </div>
-
         {form.watch('platform') !== 'in-app' && (
           <FormField
             control={form.control}

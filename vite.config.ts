@@ -37,7 +37,7 @@ export default defineConfig({
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
+        assetFileNames: (assetInfo) => {;
           const name = assetInfo.name || '';
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';

@@ -172,14 +172,12 @@ export default function SupportRequests() {
               Manage and respond to user support requests and issues
             </p>
           </div>
-
           <div className='mt-4 md:mt-0'>
             <Button className='bg-zion-purple hover:bg-zion-purple-light'>
               New Support Case
             </Button>
           </div>
         </div>
-
         {/* Status Cards */}
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8'>
           <Card>
@@ -188,7 +186,6 @@ export default function SupportRequests() {
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
-
           <Card>
             <CardHeader className='pb-2'>
               <CardTitle className='text-2xl font-bold'>
@@ -197,7 +194,6 @@ export default function SupportRequests() {
               <CardDescription>In Progress</CardDescription>
             </CardHeader>
           </Card>
-
           <Card>
             <CardHeader className='pb-2'>
               <CardTitle className='text-2xl font-bold'>
@@ -206,7 +202,6 @@ export default function SupportRequests() {
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
-
           <Card>
             <CardHeader className='pb-2'>
               <CardTitle className='text-2xl font-bold'>{totalCount}</CardTitle>
@@ -214,7 +209,6 @@ export default function SupportRequests() {
             </CardHeader>
           </Card>
         </div>
-
         <Tabs defaultValue='all' className='mb-8'>
           <TabsList>
             <TabsTrigger value='all'>All Requests</TabsTrigger>
@@ -222,7 +216,6 @@ export default function SupportRequests() {
             <TabsTrigger value='ai-flagged'>AI Flagged</TabsTrigger>
             <TabsTrigger value='need-response'>Need Response</TabsTrigger>
           </TabsList>
-
           <TabsContent value='all' className='mt-6'>
             {/* Search and Filters */}
             <div className='flex flex-col md:flex-row gap-4 mb-6'>
@@ -234,7 +227,6 @@ export default function SupportRequests() {
                   onChange={e => setSearchQuery(e.target.value)}
                   className='pl-10'                />
               </div>
-
               <Select
                 value={statusFilter || ''}
                 onValueChange={value => setStatusFilter(value || null)}
@@ -249,7 +241,6 @@ export default function SupportRequests() {
                   <SelectItem value='resolved'>Resolved</SelectItem>
                 </SelectContent>
               </Select>
-
               <Select
                 value={priorityFilter || ''}
                 onValueChange={value => setPriorityFilter(value || null)}
@@ -264,7 +255,6 @@ export default function SupportRequests() {
                   <SelectItem value='low'>Low</SelectItem>
                 </SelectContent>
               </Select>
-
               <Select
                 value={categoryFilter || ''}
                 onValueChange={value => setCategoryFilter(value || null)}
@@ -282,7 +272,6 @@ export default function SupportRequests() {
                   <SelectItem value='profile'>Profile</SelectItem>
                 </SelectContent>
               </Select>
-
               <Button
                 variant='outline'
                 onClick={resetFilters}
@@ -291,7 +280,6 @@ export default function SupportRequests() {
                 <Filter className='h-4 w-4 mr-2' /> Reset Filters
               </Button>
             </div>
-
             {/* Support Requests Table */}
             <Card>
               <CardContent className='p-0'>
@@ -366,7 +354,6 @@ export default function SupportRequests() {
               </CardContent>
             </Card>
           </TabsContent>
-
           <TabsContent value='escalated' className='mt-6'>
             <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
               <h3 className='text-xl font-medium mb-4'>Escalated Requests</h3>
@@ -376,7 +363,6 @@ export default function SupportRequests() {
               </p>
             </div>
           </TabsContent>
-
           <TabsContent value='ai-flagged' className='mt-6'>
             <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
               <h3 className='text-xl font-medium mb-4'>AI Flagged Issues</h3>
@@ -386,7 +372,6 @@ export default function SupportRequests() {
               </p>
             </div>
           </TabsContent>
-
           <TabsContent value='need-response' className='mt-6'>
             <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
               <h3 className='text-xl font-medium mb-4'>Awaiting Response</h3>
@@ -423,4 +408,5 @@ export default function SupportRequests() {
   new Date (request.lastUpdated) .toLocaleDateString () "
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) 
-}'"}
+}'"};
+;

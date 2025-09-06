@@ -10,7 +10,7 @@ interface ExportToCSVProps {
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
   const handleExport = () => {
     // Define CSV Headers
-    const headers = [
+    const headers = [;
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
       'StatusCreated Date'
     ];

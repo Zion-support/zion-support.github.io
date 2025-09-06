@@ -4,7 +4,7 @@ import crypto from "crypto";
 import {
   updateArtifacts,
   getProposal,
-  savePdf,
+  savePdf,;
 } from "../../../utils/data/proposals";
 import { create as createIpfsClient } from "ipfs-http-client";
 import { ethers } from "ethers";
@@ -69,7 +69,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
     const { id } = req.body || {};

@@ -374,7 +374,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         className='absolute inset-0 w-full h-full'
         style={{ filter: `blur(${0.5 * intensity}px)` }}
       />
-
       {/* Framer Motion Geometric Shapes */}
       <div className='absolute inset-0'>
         {/* Floating geometric shapes */}
@@ -401,7 +400,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         className="absolute inset-0 w-full h-full"
         style={{ filter: `blur(${0.5 * intensity}px)` }}
       />
-      
       {/* Framer Motion Geometric Shapes */}
       <div className="absolute inset-0">
         {/* Floating geometric shapes */}
@@ -418,7 +416,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             ease: 'linear',
           }}
         />
-
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
           animate={{
@@ -430,7 +427,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             repeat: -1,
             ease: 'easeInOut',          }}
         />
-        
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
           animate={{
@@ -444,7 +440,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30'
           style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
@@ -456,7 +451,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             repeat: -1,
             ease: 'linear',          }}          }}
         />
-        
         <motion.div
           className="absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30"
           style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
@@ -471,7 +465,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           }}
         />
       </div>
-
       {/* Energy waves */}
       <div className='absolute inset-0'>
         <motion.div
@@ -492,7 +485,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             ease: 'linear',
           }}
         />
-
         <motion.div
           className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent'
           animate={{
@@ -502,7 +494,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             repeat: -1,
             ease: 'linear',          }}          }}
         />
-        
         <motion.div
           className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"
           animate={{
@@ -515,7 +506,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           }}
         />
       </div>
-
       {/* Holographic matrix effect */}
       <div className='absolute inset-0'>
         {Array.from({ length: 20 }).map((_, i) => (
@@ -543,7 +533,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           />
         ))}
       </div>
-
       {/* Cyberpunk grid */}
       <div className='absolute inset-0'>
         <motion.div

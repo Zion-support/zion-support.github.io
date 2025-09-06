@@ -29,3 +29,5 @@ for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
     if (content.includes('') || content.includes('
+}
+}

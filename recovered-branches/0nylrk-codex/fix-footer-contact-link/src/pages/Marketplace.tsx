@@ -14,7 +14,7 @@ import {toast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
 import {SearchSuggestion} from "@/types/search";
 import {AppLayout} from "@/layout/AppLayout";
-export default function Marketplace() {
+export default function Marketplace() {;
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
@@ -121,7 +121,6 @@ export default function Marketplace() {
             Browse our curated collection of solutions from verified providers.
           </p>
         </div>
-        
         {/* Search and filter bar */}
         <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
           <div className="flex flex-col md:flex-row gap-4">
@@ -143,7 +142,6 @@ export default function Marketplace() {
             </div>
           </div>
         </div>
-
         {/* Main layout with sidebar and results */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Sidebar Filters */}
@@ -161,7 +159,6 @@ export default function Marketplace() {
               onClearFilters={clearAllFilters}
             />
           </div>
-          
           {/* Main content */}
           <div className="lg:col-span-3">
             {/* Active filters display */}
@@ -183,7 +180,6 @@ export default function Marketplace() {
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
-            
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (

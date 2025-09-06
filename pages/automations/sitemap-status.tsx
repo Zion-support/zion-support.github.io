@@ -24,5 +24,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
   } catch {}
   return { props: { urlCount } }
 },
-
+;
 export default SitemapStatus,;

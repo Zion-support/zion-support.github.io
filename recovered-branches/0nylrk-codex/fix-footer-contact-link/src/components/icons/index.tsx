@@ -109,7 +109,7 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
   const IconComponent = (props: IconProps) => {
     // Fix: Use proper type casting to access the icon component
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
-    return <LucideIcon {...props} />
+    return <LucideIcon {...props} />;
   };
   IconComponent.displayName = aliasName;
   return IconComponent
@@ -129,7 +129,7 @@ Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   }
 });
 
-export const {
+export const {;
   LayoutGrid;
   List;
   Zap;
@@ -196,5 +196,5 @@ export const {
   Key;
   Tag} = iconExports;
 
-// Also export all original icons from lucide-react
+// Also export all original icons from lucide-react;
 export * from 'lucide-react';

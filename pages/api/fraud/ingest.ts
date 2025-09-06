@@ -8,7 +8,7 @@ import {
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
-  StoredFraudRecord,
+  StoredFraudRecord,;
 } from "../../../utils/fraud/types";
 import { sendWarningEmail } from "../../../utils/email";
 
@@ -24,7 +24,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  if (req.method !== "POST") {
+  if (req.method !== "POST") {;
     res.status(405).json({ error: "Method not allowed" });
     return;
   }

@@ -17,7 +17,7 @@ export default function Contact() {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "";
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -133,7 +133,6 @@ export default function Contact() {
               Have questions or want to learn more? We'd love to hear from you.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
@@ -141,7 +140,6 @@ export default function Contact() {
                 Whether you have a question about our platform, pricing, or anything else, 
                 our team is ready to answer all your questions.
               </p>
-              
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -170,7 +168,6 @@ export default function Contact() {
                     />
                   </div>
                 </div>
-                
                 <div>
                   <label htmlFor="subject" className="block text-white mb-2">Subject</label>
                   <Input 
@@ -183,7 +180,6 @@ export default function Contact() {
                     required
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="message" className="block text-white mb-2">Message</label>
                   <Textarea 
@@ -196,7 +192,6 @@ export default function Contact() {
                     required
                   />
                 </div>
-                
                 <Button 
                   type="submit" 
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
@@ -206,7 +201,6 @@ export default function Contact() {
                 </Button>
               </form>
             </div>
-            
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
               <div className="grid grid-cols-1 gap-6">
@@ -232,7 +226,6 @@ export default function Contact() {
                   </Card>
                 ))}
               </div>
-              
               <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk" 
@@ -245,7 +238,6 @@ export default function Contact() {
                   title="Zion Office Locations"
                 ></iframe>
               </div>
-              
               <div className="mt-8">
                 <Card className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 p-6">
                   <div className="flex items-center">
@@ -267,7 +259,6 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Need immediate assistance?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto">
@@ -295,7 +286,6 @@ export default function Contact() {
           </div>
         </div>
       </main>
-
       {/* Chat Assistant Modal */}
       {isChatOpen && (
         <ChatAssistant

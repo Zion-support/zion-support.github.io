@@ -6,7 +6,7 @@ import {
   ArrowRight, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react',
 
-// Import our new innovative services
+// Import our new innovative services;
 import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3',;
 import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3',;
 import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3',;
@@ -76,7 +76,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-2025-services-showcase" />
       </Head>
-
       <div className="min-h-screen bg-black text-white overflow-hidden">
         {/* Animated Background */}
         <div className="fixed inset-0 z-0">
@@ -84,7 +83,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]"></div>
-          
           {/* Floating Particles */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(20)].map((_, i) => (
@@ -101,7 +99,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Content */}
         <div className="relative z-10">
           {/* Header */}
@@ -117,7 +114,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
             <br />
             <span className="text-white">Services Showcase</span>
           </motion.h1>
-          
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
@@ -127,7 +123,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
             Experience the future of technology with our revolutionary AI platforms, quantum computing solutions, 
             autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
           </motion.p>
-
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ opacity: 0, y: 30 }}
@@ -148,7 +143,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 </div>
               </div>
-
               {/* Category Filters */}
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
@@ -171,7 +165,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
               </div>
             </div>
           </motion.section>
-
           {/* Services Grid */}
           <motion.section 
             className="relative z-20 py-16 px-4 sm:px-6 lg:px-8"
@@ -202,7 +195,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                             </div>
                           )}
                         </div>
-
                         {/* Service Name and Tagline */}
                         <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
                           {service.name}
@@ -210,13 +202,11 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                         <p className="text-gray-300 mb-6 leading-relaxed">
                           {(service as any).tagline || service.description?.substring(0, 100) || 'Innovative service solution'}
                         </p>
-
                         {/* Price */}
                         <div className="flex items-baseline mb-6">
                           <span className="text-3xl font-bold text-white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>
                           <span className="text-gray-400 ml-2">{(service as any).period || ''}</span>
                         </div>
-
                         {/* Features */}
                         <div className="space-y-3 mb-8">
                           {service.features.slice(0, 5).map((feature, featureIndex) => (
@@ -231,7 +221,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                             </div>
                           )}
                         </div>
-
                         {/* Service Stats */}
                         <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                           <div>
@@ -247,7 +236,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                             <div className="text-xs text-gray-400">Reviews</div>
                           </div>
                         </div>
-
                         {/* CTA Button */}
                         <Link
                           href={`/services/${service.id}`}
@@ -257,14 +245,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                           <ArrowRight className="w-5 h-5" />
                         </Link>
                       </div>
-
                       {/* Hover Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </motion.div>
                 ))}
               </div>
-
               {filteredServices.length === 0 && (
                 <motion.div 
                   className="text-center py-20"
@@ -289,7 +275,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
               )}
             </div>
           </motion.section>
-
           {/* Contact Section */}
           <motion.section 
             className="relative z-20 py-20 px-4 sm:px-6 lg:px-8"
@@ -305,7 +290,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                 Get in touch with our team to learn more about our innovative 2025 services 
                 and how they can revolutionize your operations.
               </p>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <div className="text-center">
                   <Phone className="w-8 h-8 text-purple-400 mx-auto mb-4" />
@@ -323,7 +307,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                   <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
@@ -340,7 +323,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
               </div>
             </div>
           </motion.section>
-
           {/* Footer */}
           <motion.footer 
             className="relative z-20 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800"
@@ -363,7 +345,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                     Transforming businesses with innovative technology solutions for the future.
                   </p>
                 </div>
-                
                 <div>
                   <h3 className="text-white font-semibold mb-4">Services</h3>
                   <ul className="space-y-2 text-sm text-gray-400">
@@ -373,7 +354,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                     <li><Link href="/services" className="hover:text-white transition-colors">Cybersecurity</Link></li>
                   </ul>
                 </div>
-                
                 <div>
                   <h3 className="text-white font-semibold mb-4">Company</h3>
                   <ul className="space-y-2 text-sm text-gray-400">
@@ -383,7 +363,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                     <li><Link href="/news" className="hover:text-white transition-colors">News</Link></li>
                   </ul>
                 </div>
-                
                 <div>
                   <h3 className="text-white font-semibold mb-4">Connect</h3>
                   <ul className="space-y-2 text-sm text-gray-400">
@@ -394,7 +373,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                   </ul>
                 </div>
               </div>
-              
               <div className="mt-12 pt-8 border-t border-gray-800 text-center">
                 <p className="text-gray-400 text-sm">
                   © 2025 Zion Tech Group. All rights reserved. | 
@@ -410,5 +388,5 @@ const Innovative2025ServicesShowcase: React.FC = () => {
   )
 },
 
-export default Innovative2025ServicesShowcase,
+export default Innovative2025ServicesShowcase,;
 ;

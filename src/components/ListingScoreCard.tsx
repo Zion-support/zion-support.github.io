@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { StarIcon } from 'lucide-react'
+import { StarIcon } from 'lucide-react';
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
@@ -80,7 +80,6 @@ export function ListingScoreCard({
         <p className='text-zion-slate mb-4 flex-grow line-clamp-2'>
           {description}
         </p>
-
         {rating > 0 && (
           <div className='flex items-center gap-1 mb-4'>
             <div className='flex'>
@@ -117,7 +116,6 @@ export function ListingScoreCard({
         <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>
           Request Quote
         </Button>
-
         {author && (
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
             {authorImage && !authorImageError ? (
@@ -141,6 +139,7 @@ export function ListingScoreCard({
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 ;
+}

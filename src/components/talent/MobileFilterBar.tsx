@@ -20,7 +20,6 @@ export function MobileFilterBar({
         <Sliders className='h-4 w-4' />
         Filter Talents
       </Button>
-
       <div className='relative mt-4'>
         <label htmlFor='mobile-talent-search' className='sr-only'>
           Search talents
@@ -39,4 +38,6 @@ export function MobileFilterBar({
       </div>
     </div>
   )
+};
+;
 }

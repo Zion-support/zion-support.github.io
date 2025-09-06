@@ -9,7 +9,7 @@ export default function TechnologyInsightsPage() {
       description:
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
-      featured: true
+      featured: true;
     };
     {
       id: 'edge-ai',
@@ -134,7 +134,6 @@ export default function TechnologyInsightsPage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
           <section className='text-center mb-16'>
@@ -146,7 +145,6 @@ export default function TechnologyInsightsPage() {
               AI, automation, and emerging technologies
             </p>
           </section>
-
           <section className='mx-auto max-w-7xl'>
             {/* Technology Trends */}
             <div className='mb-16'>
@@ -176,7 +174,6 @@ export default function TechnologyInsightsPage() {
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
                       Read More <span className='ml-1'>→</span>                    </Link>      </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
@@ -187,7 +184,6 @@ export default function TechnologyInsightsPage() {
               Research insights, technology trends, and thought leadership in AI, automation, and emerging technologies
             </p>
           </section>
-
           <section className="mx-auto max-w-7xl">
             {/* Technology Trends */}
             <div className="mb-16">
@@ -211,7 +207,6 @@ export default function TechnologyInsightsPage() {
                 ))}
               </div>
             </div>
-
             {/* Research Areas */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -251,7 +246,6 @@ export default function TechnologyInsightsPage() {
                 ))}
               </div>
             </div>
-
             {/* Whitepapers */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -297,7 +291,6 @@ export default function TechnologyInsightsPage() {
                 ))}
               </div>
             </div>
-
             {/* Innovation Lab */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -337,7 +330,6 @@ export default function TechnologyInsightsPage() {
                 </div>
               </div>
             </div>
-
             {/* Call to Action */}
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>

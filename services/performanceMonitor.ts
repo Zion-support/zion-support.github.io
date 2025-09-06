@@ -1,4 +1,4 @@
-export interface PerformanceMetrics {
+export interface PerformanceMetrics {;
   url: string;
   timestamp: Date;
   loadTime: number;
@@ -15,7 +15,7 @@ export interface PerformanceMetrics {
   seoScore: number
 }
 
-export interface PerformanceAlert {
+export interface PerformanceAlert {;
   id: string;
   url: string;
   type: 'critical' | 'warning' | 'info';
@@ -27,7 +27,7 @@ export interface PerformanceAlert {
   resolved: boolean
 }
 
-export interface MonitoringConfig {
+export interface MonitoringConfig {;
   urls: string[];
   frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
   thresholds: {
@@ -43,7 +43,7 @@ export interface MonitoringConfig {
   }
 }
 
-export class PerformanceMonitorService {
+export class PerformanceMonitorService {;
   private apiKey: string;
   private baseUrl: string,
 
@@ -244,7 +244,7 @@ export class PerformanceMonitorService {
 
 // Pricing tiers for the Performance Monitor
 export const PERFORMANCE_MONITOR_PRICING = {
-  starter: {
+  starter: {;
     name: 'Starter';
     price: 19;
     period: '/month',

@@ -55,7 +55,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
           <Badge variant='outline' className={confidenceColor}>            {suggestion.confidence} confidence
           </Badge>
         </div>
-
         <div className='bg-muted/50 rounded-md p-3 text-center'>
           <span className='text-2xl font-bold'>    <Card className="border-2 border-dashed border-muted-foreground/20">
       <CardContent className="p-5 space-y-4">
@@ -64,7 +63,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
           <Badge variant="outline" className={confidenceColor}>
           </Badge>
         </div>
-
         <div className='bg-muted/50 rounded-md p-3 text-center'>
           <span className='text-2xl font-bold'>
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
@@ -73,12 +71,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             {rateType === 'hourly' ? '/hour' : ' total'}
           </span>
         </div>
-
         <div className='flex items-start space-x-2 text-sm text-muted-foreground'>
           <Info className='h-4 w-4 flex-shrink-0 mt-1' />
           <p>{suggestion.explanation}</p>
         </div>
-
         <div className='flex items-center justify-between'>          <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -89,12 +85,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             {rateType === "hourly" ? "/hour" : " total"}
           </span>
         </div>
-
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
           <p>{suggestion.explanation}</p>
         </div>
-
         <div className="flex items-center justify-between">
           <TooltipProvider>
             <Tooltip>
@@ -117,7 +111,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             </Tooltip>
           </TooltipProvider>
         </div>
-
         <p className='text-xs text-center text-muted-foreground pt-2'>          Based on market data & trends. You can adjust as needed.
         </p>
       </CardContent>
@@ -132,5 +125,5 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     </Card>
   )
 }
-"  )
-}
+"  );
+};

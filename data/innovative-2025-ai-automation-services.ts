@@ -1,4 +1,4 @@
-export interface InnovativeAIAutomationService {
+export interface InnovativeAIAutomationService {;
   id: string;
   name: string;
   tagline: string;
@@ -360,7 +360,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       customers: 35,
       rating: 4.9,
       reviews: 28,
-    },
+    },;
   ];    features: [
       '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI, CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts';
       'Comprehensive medical reportsHIPAA-compliant security'

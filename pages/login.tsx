@@ -178,13 +178,13 @@ import {
   TiredFace2,
   SleepyFace2,
   YawningFace2,
-  DizzyFace2,
+  DizzyFace2,;
 } from "lucide-react";
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
     email: "",
-    password: "",
+    password: "",;
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -230,7 +230,6 @@ export default function LoginPage() {
           content="Sign in to your Zion Tech Group account to access your dashboard and services."
         />
       </Head>
-
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <motion.div
@@ -255,7 +254,6 @@ export default function LoginPage() {
               </Link>
             </p>
           </motion.div>
-
           <motion.div
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
             initial={{ opacity: 0, y: 30 }}
@@ -299,7 +297,6 @@ export default function LoginPage() {
                   />
                 </div>
               </div>
-
               <div>
                 <label
                   htmlFor="password"
@@ -335,7 +332,6 @@ export default function LoginPage() {
                   </button>
                 </div>
               </div>
-
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <input
@@ -351,7 +347,6 @@ export default function LoginPage() {
                     Remember me
                   </label>
                 </div>
-
                 <div className="text-sm">
                   <Link
                     href="/forgot-password"
@@ -361,7 +356,6 @@ export default function LoginPage() {
                   </Link>
                 </div>
               </div>
-
               <div>
                 <button
                   type="submit"
@@ -382,7 +376,6 @@ export default function LoginPage() {
                 </button>
               </div>
             </form>
-
             <div className="mt-6">
               <div className="relative">
                 <div className="absolute inset-0 flex items-center">
@@ -394,13 +387,11 @@ export default function LoginPage() {
                   </span>
                 </div>
               </div>
-
               <div className="mt-6 grid grid-cols-2 gap-3">
                 <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">
                   <Globe className="h-5 w-5" />
                   <span className="ml-2">Google</span>
                 </button>
-
                 <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">
                   <User className="h-5 w-5" />
                   <span className="ml-2">Microsoft</span>
@@ -408,7 +399,6 @@ export default function LoginPage() {
               </div>
             </div>
           </motion.div>
-
           <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 30 }}

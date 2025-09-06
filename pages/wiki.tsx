@@ -44,7 +44,6 @@ export default function WikiPage() {
           </li>
         </ul>
       </aside>
-
       <article className="prose dark:prose-invert max-w-none">
         <h1>{wiki.title}</h1>
         <div className="not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4">
@@ -56,7 +55,6 @@ export default function WikiPage() {
           </div>
         </div>
         <p>{wiki.intro}</p>
-
         {wiki.sections.map((s) => (
           <section key={s.id} id={slugify(s.title)}>
             <h2>{s.title}</h2>
@@ -72,7 +70,6 @@ export default function WikiPage() {
             <li key={i}>{r}</li>
           ))}
         </ol>
-
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>
@@ -85,12 +82,11 @@ export default function WikiPage() {
 {md}
           </pre>
         </div>
-
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="font-semibold mb-2">Operator Prompt</div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
         </div>
       </article>
-    </div>
-  )
+    </div>;
+  );
 };

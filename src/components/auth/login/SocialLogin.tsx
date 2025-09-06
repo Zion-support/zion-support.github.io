@@ -21,7 +21,6 @@ export function SocialLogin() {
           </span>
         </div>
       </div>
-
       <div className='mt-6 grid grid-cols-4 gap-3'>
         <Button
           type='button'
@@ -80,4 +79,5 @@ export function SocialLogin() {
       </div>
     </div>
   )
-}
+};
+;

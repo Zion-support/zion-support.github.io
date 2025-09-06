@@ -1,4 +1,4 @@
-export interface EnterpriseService2034 {
+export interface EnterpriseService2034 {;
   id: string;
   name: string;
   description: string;
@@ -436,7 +436,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     uptime: '99.999% data center platform availability',
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com/ai-autonomous-data-center',
-  },
+  },;
 ];      'Advanced AI algorithmsIoT sensorsMachine learning systemsAutomation frameworksPredictive analyticsReal-time monitoring'
     ];
     marketSize: '$38.9B by 2035';

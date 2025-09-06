@@ -5,7 +5,7 @@ import {useToast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {ContractTemplate} from "@/types/contracts";
 import {ContractFormValues} from "@/components/contracts/components/ContractForm";
-export function useContractTemplates() {
+export function useContractTemplates() {;
   const { user, isAuthenticated } = useAuth();
   const queryClient = useQueryClient();
   const { toast } = useToast();

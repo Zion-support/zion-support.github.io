@@ -31,7 +31,7 @@ interface Transaction {
   }
 }
 
-export function TransactionHistory() {
+export function TransactionHistory() {;
   const { user } = useAuth();
   const { toast } = useToast();
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
@@ -157,7 +157,6 @@ export function TransactionHistory() {
       <div className="p-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold text-white">Transaction History</h2>
-          
           <div className="flex space-x-2">
             <Button 
               size="sm" 
@@ -193,7 +192,6 @@ export function TransactionHistory() {
             </Button>
           </div>
         </div>
-        
         {isLoading ? (
           Array(3).fill(0).map((_, i) => (
             <div key={i} className="mb-4">
@@ -245,7 +243,6 @@ export function TransactionHistory() {
                           )}
                         </CardDescription>
                       </div>
-                      
                       {getStatusBadge(transaction.status, transaction.in_escrow)}
                     </div>
                   </CardHeader>
@@ -256,7 +253,6 @@ export function TransactionHistory() {
                         {formatCurrency(transaction.amount, transaction.currency)}
                       </span>
                     </div>
-                    
                     <div className="flex justify-between items-center text-sm">
                       <span className="text-zion-slate-light">Date:</span>
                       <span className="text-zion-slate-light">
@@ -264,7 +260,6 @@ export function TransactionHistory() {
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
                     </div>
-                    
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">

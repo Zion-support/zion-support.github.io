@@ -14,10 +14,9 @@ export default function PrivatePage({ user }: PrivatePageProps) {
   return (
     <>
       <Head>
-        <title>Private Profile - Zion Tech Marketplace</title>
+        <title>Private Profile - Zion Tech Marketplace</title>;
         <meta name=&quot;description&quot; content=&quot;Private user profile page&quot; />
       </Head>
-      
       <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
         <Card>
           <CardHeader>
@@ -59,7 +58,6 @@ export default function PrivatePage({ user }: PrivatePageProps) {
                 </div>
               </div>
             </div>
-
             <div className=&quot;p-4 bg-muted/50 rounded-lg&quot;>
               <h4 className=&quot;font-medium mb-2&quot;>Authentication Details</h4>
               <div className=&quot;grid gap-2 text-sm&quot;>
@@ -78,7 +76,6 @@ export default function PrivatePage({ user }: PrivatePageProps) {
                 </div>
               </div>
             </div>
-
             <div className=&quot;flex gap-2&quot;>
               <Button asChild>
                 <Link href=&quot;/dashboard&quot;>

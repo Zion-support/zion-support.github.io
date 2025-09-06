@@ -151,7 +151,7 @@ main(),"}),"})
 ,"}),"})
       filelist.push(full)}
   }
-  return filelist}
+  return filelist};
 function main() {;
   const repoRoot = process.cwd();
   const srcDirs = [path.join(repoRoot, 'pages')

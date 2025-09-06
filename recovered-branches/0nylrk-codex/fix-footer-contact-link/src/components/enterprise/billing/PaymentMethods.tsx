@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
@@ -29,7 +29,7 @@ export function PaymentMethods() {
       expMonth: 4,
       expYear: 2026,
       isDefault: false,
-    },
+    },;
   ];
 
   return (

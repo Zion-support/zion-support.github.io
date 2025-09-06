@@ -3,7 +3,7 @@ import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, event, url, referrer } = req.body || {};
   if (!code || !event) return res.status($1).json({ $2 });

@@ -144,7 +144,6 @@ export default function EmailValidatorPage() {;
         <meta property=&quot;og:title&quot; content=&quot;Email Validator - Zion Tech Group&quot; />
         <meta property=&quot;og:description&quot; content=&quot;Advanced email validation service to ensure deliverability and prevent typos.&quot; />
       </Head>
-
       {/* Hero Section */}
       <section className=&quot;pt-32 pb-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
@@ -163,7 +162,6 @@ export default function EmailValidatorPage() {;
           </p>
         </div>
       </section>
-
       {/* Email Validation Tool */}
       <section className=&quot;py-20 bg-gray-900&quot;>
         <div className=&quot;max-w-6xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -175,7 +173,6 @@ export default function EmailValidatorPage() {;
               Our advanced validation engine checks multiple factors to ensure email quality and deliverability.
             </p>
           </div>
-
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
             {/* Input Form */}
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
@@ -194,7 +191,6 @@ export default function EmailValidatorPage() {;
                   />
                 </div>
               </div>
-
               <div className=&quot;space-y-6&quot;>
                 {bulkMode ? (
                   <div>
@@ -217,7 +213,6 @@ variant=&quot;outline&quot;
                     </Button>
                   )}
                 </div>
-
                 <div className=&quot;text-sm text-gray-400&quot;>
                   <p>• Validates email format and syntax</p>
                   <p>• Checks for disposable email domains</p>
@@ -226,7 +221,6 @@ variant=&quot;outline&quot;
                 </div>
               </div>
             </Card>
-
             {/* Validation Results */}
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;flex items-center justify-between mb-6&quot;>
@@ -246,7 +240,6 @@ variant=&quot;outline&quot;
                   </Button>
                 )}
               </div>
-
               {stats && (
                 <div className=&quot;mb-6 p-4 bg-gray-900 rounded-lg border border-gray-700&quot;>
                   <div className=&quot;grid grid-cols-2 gap-4 text-sm&quot;>
@@ -294,12 +287,10 @@ variant=&quot;outline&quot;
                           Score: {result.score}
 </span>
                       </div>
-                      
                       <div className=&quot;text-sm text-gray-300 mb-2&quot;>
                         <span className=&quot;text-gray-400&quot;>Domain:</span>
                         <span className=&quot;ml-2&quot;>{result.domain}</span>
                       </div>
-
                       {result.issues.length > 0 && (
                         <div className=&quot;text-sm&quot;>
                           <span className=&quot;text-gray-400&quot;>Issues:</span>
@@ -350,7 +341,6 @@ variant=&quot;outline&quot;
               Comprehensive email validation with real-time checking and intelligent analysis.
             </p>
           </div>
-
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
               <div className=&quot;text-4xl mb-4&quot;>🔍</div>
@@ -359,7 +349,6 @@ variant=&quot;outline&quot;
                 Checks email format, length, and RFC compliance standards for maximum accuracy.
               </p>
             </Card>
-
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
               <div className=&quot;text-4xl mb-4&quot;>🛡️</div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Disposable Detection</h3>
@@ -367,7 +356,6 @@ variant=&quot;outline&quot;
                 Identifies temporary and disposable email addresses to prevent fraud and abuse.
               </p>
             </Card>
-
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
               <div className=&quot;text-4xl mb-4&quot;>💡</div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Typo Detection</h3>
@@ -375,7 +363,6 @@ variant=&quot;outline&quot;
                 Smart algorithms detect common typos in popular email domains like Gmail and Yahoo.
               </p>
             </Card>
-
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
               <div className=&quot;text-4xl mb-4&quot;>📊</div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Deliverability Score</h3>
@@ -383,7 +370,6 @@ variant=&quot;outline&quot;
                 Get a comprehensive score indicating the likelihood of successful email delivery.
               </p>
             </Card>
-
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
               <div className=&quot;text-4xl mb-4&quot;>⚡</div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Bulk Validation</h3>
@@ -391,7 +377,6 @@ variant=&quot;outline&quot;
                 Validate thousands of email addresses simultaneously with our high-performance engine.
               </p>
             </Card>
-
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
               <div className=&quot;text-4xl mb-4&quot;>🌍</div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Global Coverage</h3>
@@ -402,7 +387,6 @@ variant=&quot;outline&quot;
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
       <section className=&quot;py-20 bg-gray-900&quot;>
         <div className=&quot;max-w-6xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -414,7 +398,6 @@ variant=&quot;outline&quot;
               From user registration to email marketing, our validation service ensures quality and deliverability.
             </p>
           </div>
-
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;text-4xl mb-4&quot;>👥</div>
@@ -428,7 +411,6 @@ variant=&quot;outline&quot;
                 <li>• Reduce support tickets</li>
               </ul>
             </Card>
-
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;text-4xl mb-4&quot;>📧</div>
               <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Email Marketing</h3>
@@ -441,7 +423,6 @@ variant=&quot;outline&quot;
                 <li>• Reduced bounce rates</li>
               </ul>
             </Card>
-
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;text-4xl mb-4&quot;>🛒</div>
               <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>E-commerce</h3>
@@ -454,7 +435,6 @@ variant=&quot;outline&quot;
                 <li>• Better customer support</li>
               </ul>
             </Card>
-
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;text-4xl mb-4&quot;>🏢</div>
               <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Business Applications</h3>
@@ -470,7 +450,6 @@ variant=&quot;outline&quot;
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 
 }

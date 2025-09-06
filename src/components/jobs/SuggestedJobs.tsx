@@ -19,8 +19,8 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
       viewedMatches,
       appliedMatches 
     } 
-  } = useJobSuggestions(currentTalentId)
-  const handleApply = (matchId: string, jobId: string) => {
+  } = useJobSuggestions(currentTalentId);
+  const handleApply = (matchId: string, jobId: string) => {;
     updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal
   }
   const handleDecline = (matchId: string) => {
@@ -49,7 +49,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
               {newMatches.length} New
             </Badge>
           </div>
-          
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -69,7 +68,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
-          
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -89,7 +87,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Applied Jobs</h3>
           </div>
-          
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
               <JobMatchesCard 

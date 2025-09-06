@@ -43,7 +43,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           Help others get to know you better
         </p>
       </div>
-      
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
@@ -122,8 +121,8 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           </Button>
         </form>
       </Form>
-    </div>
-  )
+    </div>;
+  );
 case "talent": return "Talent";"
 case "client": return "Client"
 default: 

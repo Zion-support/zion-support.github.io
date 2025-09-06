@@ -1,4 +1,4 @@
-export interface Revolutionary2026MicroSaasService {
+export interface Revolutionary2026MicroSaasService {;
   id: string;
   name: string;
   tagline: string;
@@ -38,7 +38,7 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
       },
-    },
+    },;
   ];    features: [
       "Revolutionary features";
       "Transformative capabilities";

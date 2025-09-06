@@ -428,7 +428,7 @@ export const cuttingEdgeAIServices2025 = [
       'CCPA',
       'Intellectual property protection',
     ],
-  },
+  },;
 ];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
     ];
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'];

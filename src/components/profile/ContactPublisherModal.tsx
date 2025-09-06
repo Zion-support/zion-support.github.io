@@ -4,7 +4,7 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
+  DialogTitle,;
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -22,7 +22,7 @@ import { Input } from '@/components/ui/input'
 } from '@/components/ui/form'
 import { useForm, type Resolver } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import * as yup from 'yup'
+import * as yup from 'yup';
 import { SendIcon, Mail } from 'lucide-react'; import api from '@/services/apiClient'
 import { toast } from '@/hooks/use-toast'
 import { useAuth } from '@/hooks/useAuth'
@@ -265,6 +265,6 @@ export function ContactPublisherModal({  isOpen,  isOpen,
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   ) </>
-  )
-}
+  );
+};
 ;

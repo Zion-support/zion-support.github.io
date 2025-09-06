@@ -12,7 +12,7 @@ interface ModelVersionData extends ModelConfig {
   errorMessage?: string
 }
 
-export function ZionGPTModelManager() {
+export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),

@@ -23,7 +23,7 @@ export default function FilterBar({
   category: string,
   level: string,
   isFree: string,
-  onChange: (next: { category: string, level: string, isFree: string }) => void
+  onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
 
 export default function FilterBar({ category, level, isFree, onChange }: Props) {
@@ -62,7 +62,7 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
         <option value='true'>Free</option>
         <option value='false'>Paid</option>
       </select>
-    </div>
+    </div>;
   );        value={isFree}
         onChange={(e) => onChange({ category, level, isFree: e.target.value })}
       >
@@ -72,4 +72,6 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
       </select>
     </div>
   );
+}
+
 }

@@ -5,12 +5,12 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ProductListing } from '@/types/listings'
 import { DollarSign } from 'lucide-react'
-import { RatingStars } from '@/components/RatingStars'
+import { RatingStars } from '@/components/RatingStars';
 import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
 import type { AppDispatch } from '@/store'
 import { addItem } from '@/store/cartSlice'
 import { toast } from '@/hooks/use-toast'
-import { useCurrency } from '@/hooks/useCurrency'
+import { useCurrency } from '@/hooks/useCurrency';
 import Image from 'next/image'; // Import next/image
 
 interface ProductListingCardProps {
@@ -185,7 +185,6 @@ const ProductListingCardComponent = ({
           <FavoriteButton itemId={listing.id} />
         </div>
       </div>
-
       {/* Content */}
       <div
         className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}
@@ -203,7 +202,6 @@ const ProductListingCardComponent = ({
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
           </div>
-
           {/* Title & Description */}
           <div onClick={handleViewListing} className='block'>
             {listing.uspHeadline && (
@@ -218,7 +216,6 @@ const ProductListingCardComponent = ({
           <p className='text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]'>
             {listing.description}
           </p>
-
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className='flex flex-wrap gap-1 mb-4'>
@@ -232,7 +229,6 @@ const ProductListingCardComponent = ({
             </div>
           )}
         </div>
-
         {/* Footer with price and button */}
         <div className='flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20'>
           <div className='text-sm font-medium'>
@@ -245,7 +241,6 @@ const ProductListingCardComponent = ({
               <span className='text-foreground/80'>{getPrice()}</span>
             )}
           </div>
-
           <div className='flex gap-2'>
             <Button
               size='sm'
@@ -283,7 +278,6 @@ const ProductListingCardComponent = ({
                 'Add to Cart'
               )}
             </Button>
-
             <Button
               size='sm'
               variant='default'
@@ -303,7 +297,6 @@ const ProductListingCardComponent = ({
             >
               Buy Now
             </Button>
-
             {onRequestQuote && (
               <Button
                 size='sm'
@@ -391,7 +384,7 @@ ProductListingCard.displayName = 'ProductListingCard'
               </Button>) }
           </div>
         </div>
-      </div>
+      </div>;
     </div>;) }
 export default React.memo(ProductListingCard)
 export default ProductListingCard
@@ -403,4 +396,4 @@ export default ProductListingCard
 export default ProductListingCard
 '"`
 export const ProductListingCard = React.memo(ProductListingCardComponent)
-ProductListingCard.displayName = 'ProductListingCard'
+ProductListingCard.displayName = 'ProductListingCard';

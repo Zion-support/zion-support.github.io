@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-export type AdminNotesPanelProps = {
+export type AdminNotesPanelProps = {;
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
 };
@@ -15,7 +15,7 @@ type Note = {
 
 export default function AdminNotesPanel({
   targetType,
-  targetId,
+  targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
 type Note = {
@@ -27,7 +27,7 @@ type Note = {
   createdAt: number
 };
 
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -138,7 +138,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
           />
         </div>
       </div>
-
       <div className='space-y-2'>
         <textarea
           className='w-full border rounded-md px-3 py-2'
@@ -155,7 +154,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
           {adding ? 'Adding…' : 'Add Note'}
         </button>
       </div>
-
       <div className='border-t pt-3'>
         <div className='text-sm opacity-70 mb-2'>
           Notes are private, time-stamped, and include author ID.

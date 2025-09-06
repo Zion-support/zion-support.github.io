@@ -17,7 +17,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
       <p className='text-muted-foreground'>
         Choose how you want to use our platform
       </p>
-
       <div className='space-y-3 mt-6'>
         <Card
           className={`cursor-pointer transition-all ${
@@ -44,7 +43,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
             </div>
           </CardContent>
         </Card>
-
         <Card
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
@@ -72,6 +70,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
         </Card>
       </div>
     </div>
-  )
-}
+  );
+};
 ;
+}

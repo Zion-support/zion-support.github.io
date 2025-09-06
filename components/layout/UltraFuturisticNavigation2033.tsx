@@ -23,9 +23,9 @@ import {
   Briefcase,
   DollarSign,
   BookOpen,
-  Users,
+  Users,;
   MessageCircle,;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, ;
   Cpu, Target, Microscope, Shield, Zap, Sparkles;
   Menu, X, Search, ChevronDown, Home, Briefcase, 
   DollarSign, BookOpen, Users, MessageCircle
@@ -296,7 +296,7 @@ const quickLinks = [
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
 
-export default function UltraFuturisticNavigation2033() {
+export default function UltraFuturisticNavigation2033() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -356,7 +356,6 @@ export default function UltraFuturisticNavigation2033() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav className='bg-gradient-to-r from-black via-gray-900/95 to-black border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -401,7 +400,6 @@ export default function UltraFuturisticNavigation2033() {
                 </div>
               </Link>
             </motion.div>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {/* Services Mega Menu */}
@@ -422,7 +420,6 @@ export default function UltraFuturisticNavigation2033() {
                   <span>Services</span>
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
-
                 {/* Mega Menu */}
                 <AnimatePresence>
                   {activeCategory === 'services' && (
@@ -504,7 +501,6 @@ export default function UltraFuturisticNavigation2033() {
                   )}
                 </AnimatePresence>
               </div>
-
               {/* Quick Links */}
               {quickLinks.map(link => (
                 <Link
@@ -533,7 +529,6 @@ export default function UltraFuturisticNavigation2033() {
                 </Link>
               </motion.div>
             </div>
-
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>
               <button
@@ -553,7 +548,6 @@ export default function UltraFuturisticNavigation2033() {
             </div>
           </div>
         </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -596,7 +590,6 @@ export default function UltraFuturisticNavigation2033() {
                     </div>
                   ))}
                 </div>
-
                 {/* Mobile Quick Links */}
                 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white'>
@@ -621,7 +614,6 @@ export default function UltraFuturisticNavigation2033() {
                     ))}
                   </div>
                 </div>
-
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>
                   <Link

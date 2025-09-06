@@ -9,7 +9,7 @@ interface BadgeEarnedProps {
   earnedDate?: string
 }
 
-export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
   badge;
   size = 44;
   showName = true;

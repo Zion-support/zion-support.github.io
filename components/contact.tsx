@@ -152,7 +152,6 @@ setSubmitSuccess (true);
                   Tell us about your project and we'll connect you with the perfect revolutionary technology solution
                 </p>
               </div>
-
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/20">
                 {submitSuccess ? (
                   <motion.div
@@ -186,7 +185,6 @@ setSubmitSuccess (true);
                           placeholder="Enter your full name"
                         />
                       </div>
-                      
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
                           Email Address *
@@ -205,7 +203,6 @@ setSubmitSuccess (true);
                         />
                       </div>
                     </div>
-
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
@@ -223,7 +220,6 @@ setSubmitSuccess (true);
                           placeholder="Enter your company name"
                         />
                       </div>
-                      
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
                           Phone Number
@@ -241,7 +237,6 @@ setSubmitSuccess (true);
                         />
                       </div>
                     </div>
-
                     <div>
                       <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
                         Service of Interest
@@ -264,7 +259,6 @@ setSubmitSuccess (true);
                         <option value="custom-solution">Custom Solution Development</option>
                       </select>
                     </div>
-
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
                         Project Details *
@@ -282,7 +276,6 @@ setSubmitSuccess (true);
                         placeholder="Tell us about your project, goals, and how we can help transform your business with revolutionary technology..."
                       />
                     </div>
-
                     <div className="text-center">
                       <button
                         type="submit"
@@ -308,7 +301,6 @@ setSubmitSuccess (true);
             </motion.div>
           </div>
         </section>
-
         {/* Popular Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -326,7 +318,6 @@ setSubmitSuccess (true);
                 Explore some of our most sought-after 2029 technology solutions
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularServices.map((service, index) => (
                 <motion.div
@@ -342,7 +333,6 @@ setSubmitSuccess (true);
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <span className="text-2xl">{service.icon}</span>
                     </div>
-
                     {/* Popular Badge */}
                     {service.popular && (
                       <div className="flex items-center space-x-2 mb-4">
@@ -354,12 +344,10 @@ setSubmitSuccess (true);
                     {/* Service Title and Tagline */}
                     <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                     <p className="text-sm text-cyan-400 mb-3">{service.tagline}</p>
-                    
                     {/* Description */}
                     <p className="text-gray-300 leading-relaxed mb-4 line-clamp-3">
                       {service.description}
                     </p>
-
                     {/* Price */}
                     <div className="mb-4">
                       <span className={`${service.textColor} font-semibold text-lg`}>
@@ -367,7 +355,6 @@ setSubmitSuccess (true);
                       </span>
                       <span className="text-gray-400 text-sm">{service.period}</span>
                     </div>
-
                     {/* CTA */}
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-400">Setup: {service.setupTime}</span>
@@ -379,7 +366,6 @@ setSubmitSuccess (true);
             </div>
           </div>
         </section>
-
         {/* Why Choose Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -396,7 +382,6 @@ setSubmitSuccess (true);
               <p className="text-xl text-gray-300 mb-12">
                 We're not just another technology company - we're your partners in building the future
               </p>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -405,7 +390,6 @@ setSubmitSuccess (true);
                   <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3>
                   <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Brain className="w-8 h-8 text-white" />
@@ -413,7 +397,6 @@ setSubmitSuccess (true);
                   <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
                   <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Shield className="w-8 h-8 text-white" />
@@ -426,9 +409,21 @@ setSubmitSuccess (true);
           </div>
         </section>
       </main>
-
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
   ),
 }
 ;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

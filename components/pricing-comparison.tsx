@@ -35,7 +35,7 @@ export default function PricingComparisonPage() {
           pricing: '$19/month',
           rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations'],
           cons: ['Higher pricingLimited customizationNo unlimited plan'],
-          savings: 'Save $20/month with Zion'
+          savings: 'Save $20/month with Zion';
         };
           name: 'Copy.ai',
           pricing: '$36/month',
@@ -245,7 +245,6 @@ export default function PricingComparisonPage() {
           content="Compare Zion's pricing to Jasper AI, Datadog, GitHub Actions and more. Save 30-60% with better features."
         />
         <meta name='twitter:card' content='summary_large_image' />
-
       <div className='min-h-screen bg-black'>
         {/* Hero Section */}
         <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20'>
@@ -295,7 +294,6 @@ export default function PricingComparisonPage() {
             </div>
           </div>
         </section>
-
         {/* Market Insights */}
         <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -338,7 +336,6 @@ export default function PricingComparisonPage() {
             </div>
           </div>
         </section>
-
         {/* Detailed Comparison */}
         <section id='comparison' className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -350,7 +347,6 @@ export default function PricingComparisonPage() {
                 See exactly how each service compares in features, pricing, and
                 value.              </p>
             </div>
-
             {serviceComparisons.map((service, serviceIndex) => (        <section id="comparison" className="py-24 bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
@@ -360,7 +356,6 @@ export default function PricingComparisonPage() {
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See exactly how each service compares in features, pricing, and value.
             </div>
-
             {serviceComparisons.map((service, serviceIndex) => (
               <div key={serviceIndex} className='mb-24'>
                 <div className='text-center mb-16'>
@@ -393,7 +388,6 @@ export default function PricingComparisonPage() {
                     </span>
                   </div>
                 </div>
-
                 <div className='grid grid-cols-1 lg:grid-cols-4 gap-8'>
                   {/* Zion Service */}
                   <div className='lg:col-span-1'>
@@ -431,7 +425,6 @@ export default function PricingComparisonPage() {
                     <span>Enterprise: <span className="text-purple-400 font-semibold">{service.zionPricing.enterprise}</span></span>
                   </div>
                 </div>
-
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                   {/* Zion Service */}
                   <div className="lg:col-span-1">
@@ -456,7 +449,6 @@ export default function PricingComparisonPage() {
                       </div>
                     </Card>
                   </div>
-
                   {/* Competitors */}
                   {service.competitors.map((competitor, compIndex) => (
                     <div key={compIndex} className='lg:col-span-1'>
@@ -552,7 +544,6 @@ export default function PricingComparisonPage() {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>

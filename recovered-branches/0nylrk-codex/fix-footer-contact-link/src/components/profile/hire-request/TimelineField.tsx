@@ -15,7 +15,7 @@ export function TimelineField({ form }: TimelineFieldProps) {
     { value: "1-2 months", label: "1-2 months" },
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
-    { value: "Ongoing", label: "Ongoing" }
+    { value: "Ongoing", label: "Ongoing" };
   ];
 
   return (

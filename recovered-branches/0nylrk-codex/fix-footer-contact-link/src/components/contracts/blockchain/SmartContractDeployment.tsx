@@ -15,7 +15,7 @@ interface SmartContractDeploymentProps {
   isDeploying: boolean
 }
 
-export function SmartContractDeployment({ 
+export function SmartContractDeployment({ ;
   solidityCode;
   onDeploy;
   isDeploying
@@ -70,7 +70,6 @@ export function SmartContractDeployment({
           Deploy your agreement as a smart contract for enhanced security and automation
         </CardDescription>
       </CardHeader>
-      
       <CardContent className="space-y-6">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
@@ -84,7 +83,6 @@ export function SmartContractDeployment({
             />
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
           </div>
-          
           {deploymentOptions.deployToChain && (
             <>
               <div className="space-y-2">
@@ -107,7 +105,6 @@ export function SmartContractDeployment({
                   </div>
                 </RadioGroup>
               </div>
-              
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
                 <Input 
@@ -120,7 +117,6 @@ export function SmartContractDeployment({
                   })}
                 />
               </div>
-              
               <div className="flex items-center space-x-2">
                 <Switch 
                   id="use-escrow"
@@ -143,13 +139,11 @@ export function SmartContractDeployment({
           </div>
         </div>
       </CardContent>
-      
       <CardFooter className="flex justify-between">
         <Button variant="outline" onClick={handleDownloadSolidity}>
           <Download className="mr-2 h-4 w-4" />
           Download .sol File
         </Button>
-        
         <Button onClick={handleDeployContract} disabled={isDeploying}>
           {isDeploying ? (
             <>

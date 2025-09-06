@@ -18,12 +18,12 @@ import {
   CheckCircle,
   DollarSign,
   Clock,
-  Target,
+  Target,;
   Crown,;} from 'lucide-react';
 
 export default function UltraFuturisticHero2028() {
-  const features = [import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  const features = [import {;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
   ArrowRight, Star, TrendingUp, Users, Award, Play;
   CheckCircle, DollarSign, Clock, Target, Crown
 
@@ -47,7 +47,7 @@ export default function UltraFuturisticHero2028() {
     {
       icon: Shield,
       text: 'Quantum Internet Security',
-      color: 'from-red-500 to-orange-500',
+      color: 'from-red-500 to-orange-500',;
     },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' },
     { icon: Atom, text: 'Quantum Time Manipulation', color: 'from-violet-500 to-purple-500' },
     { icon: Rocket, text: 'Space Debris Management', color: 'from-blue-500 to-cyan-500' },
@@ -69,7 +69,6 @@ export default function UltraFuturisticHero2028() {
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)] animate-pulse' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)] animate-pulse' />
       </div>
-
       {/* Floating Elements */}
       <div className='absolute inset-0 overflow-hidden pointer-events-none'>
         <motion.div
@@ -93,7 +92,6 @@ export default function UltraFuturisticHero2028() {
           className='absolute bottom-20 right-10 w-1 h-1 bg-cyan-400 rounded-full opacity-30'
         />
       </div>
-
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Badge */}  ];
 
   return (
@@ -105,7 +103,6 @@ export default function UltraFuturisticHero2028() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)] animate-pulse" />
       </div>
-
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -129,7 +126,6 @@ export default function UltraFuturisticHero2028() {
           className="absolute bottom-20 right-10 w-1 h-1 bg-cyan-400 rounded-full opacity-30"
         />
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
         <motion.div
@@ -148,7 +144,6 @@ export default function UltraFuturisticHero2028() {
             <span className="text-cyan-400 font-mono text-sm">2028 Future Technology</span>
             <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
         </motion.div>
-
         {/* Main Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -179,16 +174,14 @@ export default function UltraFuturisticHero2028() {
               </span>
             </span>
           </h1>
-
           <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed'>
             Experience revolutionary 2028 technology with AI Consciousness
             Evolution, Quantum Time Manipulation, and Autonomous AI
-            Civilization. We're building tomorrow's solutions today.          </p>          
+            Civilization. We're building tomorrow's solutions today.          </p>
           <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
             Experience revolutionary 2028 technology with AI Consciousness Evolution, Quantum Time Manipulation, and Autonomous AI Civilization. We're building tomorrow's solutions today.
           </p>
         </motion.div>
-
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -208,7 +201,6 @@ export default function UltraFuturisticHero2028() {
             <span>Explore 2028 Services</span>
             <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />
           </motion.button>
-
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -218,7 +210,6 @@ export default function UltraFuturisticHero2028() {
             <span>Explore 2028 Services</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </motion.button>
-          
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -228,7 +219,6 @@ export default function UltraFuturisticHero2028() {
             <span>Watch Demo</span>
           </motion.button>
         </motion.div>
-
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -266,7 +256,6 @@ export default function UltraFuturisticHero2028() {
             ))}
           </div>
         </motion.div>
-
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -305,7 +294,6 @@ export default function UltraFuturisticHero2028() {
             ))}
           </div>
         </motion.div>
-
         {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -333,7 +321,6 @@ export default function UltraFuturisticHero2028() {
               <div className="text-emerald-400 font-semibold">Startups</div>
           </div>
         </motion.div>
-
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -365,7 +352,6 @@ export default function UltraFuturisticHero2028() {
           </div>
         </motion.div>
       </div>
-
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -396,4 +382,9 @@ export default function UltraFuturisticHero2028() {
       </motion.div>
     </section>
 );
+}
+
+}
+}
+}
 }

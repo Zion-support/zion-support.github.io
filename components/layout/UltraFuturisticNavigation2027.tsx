@@ -33,11 +33,11 @@ import {
   Phone,
   Mail,
   MapPin,
-  ExternalLink,
+  ExternalLink,;
   Building,;} from 'lucide-react';import {
   Menu, X, Zap, Sparkles, ChevronDown, ChevronRight, 
   Brain, Atom, Globe, Shield, Cpu, Database, 
-  Cloud, Smartphone, Palette, Search, MessageSquare, 
+  Cloud, Smartphone, Palette, Search, MessageSquare, ;
   FileText, Calendar, CreditCard, BarChart3, Settings;
   Rocket, Star, TrendingUp, Users, Target, Award;
   Phone, Mail, MapPin, ExternalLink, Building
@@ -307,7 +307,7 @@ const technologyLinks = [
   { name: '🔄 Automation', href: '/automation', icon: Cpu },];  { name: '🔄 Automation', href: '/automation', icon: Cpu }
 ];
 
-export default function UltraFuturisticNavigation2027() {
+export default function UltraFuturisticNavigation2027() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
@@ -698,7 +698,6 @@ export default function UltraFuturisticNavigation2027() {
     >
       {/* Animated Background */}
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse' />
-
       <div className='relative container mx-auto px-4'>
         <div className='flex items-center justify-between h-20'>
           {/* Logo */}
@@ -734,7 +733,6 @@ export default function UltraFuturisticNavigation2027() {
     }`}>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />
-      
       <div className="relative container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -755,7 +753,6 @@ export default function UltraFuturisticNavigation2027() {
               </div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className='hidden xl:flex items-center space-x-1'>
             {navigation.map(item => (
@@ -781,7 +778,6 @@ export default function UltraFuturisticNavigation2027() {
                   </div>
                   <span className="font-medium">{item.name}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-
                 {/* Dropdown Menu */}
                 <AnimatePresence>
                   {activeDropdown === item.name && (
@@ -808,7 +804,6 @@ export default function UltraFuturisticNavigation2027() {
                             </p>
                           </div>
                         </div>
-
                         <div className='space-y-2'>
                           {item.children.map(child => (
                             <Link
@@ -840,7 +835,6 @@ export default function UltraFuturisticNavigation2027() {
                             <p className="text-sm text-gray-400">{item.description}</p>
                           </div>
                         </div>
-                        
                         <div className="space-y-2">
                           {item.children.map((child) => (
                             <Link
@@ -869,7 +863,6 @@ export default function UltraFuturisticNavigation2027() {
               </div>
             ))}
           </nav>
-
           {/* Right Side */}
           <div className='flex items-center space-x-4'>
             {/* Contact Info */}
@@ -902,7 +895,6 @@ export default function UltraFuturisticNavigation2027() {
                 <span>{contactInfo.email}</span>
               </a>
             </div>
-
             {/* CTA Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
@@ -917,7 +909,6 @@ export default function UltraFuturisticNavigation2027() {
                 <span>Get Started</span>
               </Link>
             </motion.div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -934,7 +925,6 @@ export default function UltraFuturisticNavigation2027() {
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
@@ -995,7 +985,6 @@ export default function UltraFuturisticNavigation2027() {
                     ))}
                   </div>
                 </div>
-
                 {/* Quick Links & Contact */}
                 <div className='space-y-6'>
                   <div>
@@ -1025,7 +1014,6 @@ export default function UltraFuturisticNavigation2027() {
                       ))}
                     </div>
                   </div>
-
                   <div>
                     <h3 className='text-lg font-semibold text-white mb-4'>
                       Contact Info
@@ -1070,7 +1058,6 @@ export default function UltraFuturisticNavigation2027() {
                   </div>
                 </div>
               </div>
-
               {/* Mobile CTA */}
               <div className='mt-6 pt-6 border-t border-gray-700/50'>
                 <Link

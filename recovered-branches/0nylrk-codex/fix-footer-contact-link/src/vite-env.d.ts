@@ -51,9 +51,7 @@ declare let process: {;
 
 // Badge component type fixes
 declare module '@/components/ui/badge' {
-  export interface BadgeProps {
-
-  }
+  export interface BadgeProps {};
 ;
   export const Badge: React.FC<BadgeProps>;
 }

@@ -23,8 +23,8 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
           metadata.platform
         ]
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join()
-        // Add keywords as additional rows
-        content += '\n\nKeywords:\n' + metadata.keywords.join()
+        // Add keywords as additional rows;
+        content += '\n\nKeywords:\n' + metadata.keywords.join();
 };        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       
@@ -74,7 +74,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
               </Button>
             </div>
           </div>
-          
           <div className="border-t border-zion-purple/20 pt-4">
             <h4 className="font-medium mb-2">Installation Analytics</h4>
             <p className="text-sm text-gray-400 mb-3">
@@ -88,5 +87,5 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
       </CardContent>
     </Card>
   )
-},
+},;
 ;

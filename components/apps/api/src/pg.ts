@@ -3,7 +3,7 @@ let pool: Pool | null = null;
 export async function withUser<T>(
   userId: string,
   fn: (client: PoolClient) => Promise<T>
-): Promise<T> {
+): Promise<T> {;
   const client = await getPool().connect();
   try {
     await client.query('BEGIN');

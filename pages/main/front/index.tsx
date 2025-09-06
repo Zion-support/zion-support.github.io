@@ -11,7 +11,6 @@ export default function FrontLanding() {
           content='Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously.'
         />
       </Head>
-
       {/* Animated background layers */}
       <div aria-hidden className='pointer-events-none absolute inset-0 -z-10'>
         <div className='absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float' />
@@ -21,7 +20,6 @@ export default function FrontLanding() {
         <div className='absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]'>
           <div className='twinkle-field absolute inset-0' />        </div>
       </div>
-
       {/* Header */}
       <header className='relative z-10'>
         <nav className='mx-auto flex max-w-7xl items-center justify-between px-6 py-6'>
@@ -47,7 +45,6 @@ export default function FrontLanding() {
             </Link>          </div>
         </nav>
       </header>
-
       {/* Hero */}
       <main className='relative z-10'>
         <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'>
@@ -59,7 +56,6 @@ export default function FrontLanding() {
             >
               <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />              Autonomous agents running continuous improvements
             </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -69,7 +65,6 @@ export default function FrontLanding() {
               <span className='gradient-text'>
                 Autonomous Cloud Automations
               </span>            </motion.h1>
-
             <motion.p
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,7 +74,6 @@ export default function FrontLanding() {
               Self-improving, cloud-native agents that invent, generate, and run
               new automation factories—fixing, optimizing, and syncing changes
               to the repository continuously.            </motion.p>
-
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -100,7 +94,6 @@ export default function FrontLanding() {
                 Live Meta Factory
               </a>
             </motion.div>
-
             {/* Quick stats */}
             <div className='mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4'>
               {[
@@ -122,7 +115,6 @@ export default function FrontLanding() {
             </div>
           </div>
         </section>
-
         {/* Features */}
         <section className='mx-auto max-w-7xl px-6 pb-14'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -168,7 +160,6 @@ export default function FrontLanding() {
             ))}
           </div>
         </section>
-
         {/* Capabilities */}
         <section className='mx-auto max-w-7xl px-6 pb-14'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -202,7 +193,6 @@ export default function FrontLanding() {
             ))}
           </div>
         </section>
-
         {/* Benefits */}
         <section className='mx-auto max-w-7xl px-6 pb-20'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -227,7 +217,6 @@ export default function FrontLanding() {
             ))}
           </div>
         </section>
-
         {/* CTA */}
         <section className='mx-auto max-w-7xl px-6 pb-24'>          <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
@@ -256,7 +245,6 @@ export default function FrontLanding() {
               </Link>            </div>
           </motion.div>
         </section>
-
         {/* Explore more */}
         <section className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -321,5 +309,7 @@ export default function FrontLanding() {
             </Link>          </div>
         </section>
       </main>
-    </div>
+    </div>;
   );
+
+}

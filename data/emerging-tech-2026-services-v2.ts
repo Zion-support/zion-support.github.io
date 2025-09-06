@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface EmergingTech2026ServiceV2 {
+export interface EmergingTech2026ServiceV2 {;
   id: string;
   name: string;
   tagline: string;
@@ -689,7 +689,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     customers: 65,
     rating: 4.9,
     reviews: 45,
-  },
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',

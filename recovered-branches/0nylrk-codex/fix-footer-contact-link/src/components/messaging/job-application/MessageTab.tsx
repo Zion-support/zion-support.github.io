@@ -2,7 +2,7 @@ import React from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-export interface MessageTabProps {
+export interface MessageTabProps {;
   message: string;
   setMessage: (message: string) => void;
   proposalLink: string;
@@ -29,7 +29,6 @@ export function MessageTab({
           placeholder="Write a message to the job poster..."
         />
       </div>
-
       <div>
         <Label htmlFor="proposalLink" className="text-white">
           Link to Proposal/Portfolio (Optional)
@@ -43,6 +42,6 @@ export function MessageTab({
           placeholder="https: //..."
         />
       </div>
-    </div>
+    </div>;
   );
 }

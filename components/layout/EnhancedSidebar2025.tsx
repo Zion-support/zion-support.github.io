@@ -274,7 +274,6 @@ const supportLinks = [
             <p className="text-xs text-gray-400">Navigation</p>
           </div>
         </div>
-
         {/* Contact Info */}
         <div className="space-y-2 text-xs text-gray-300">
           <div className="flex items-center space-x-2">
@@ -291,7 +290,6 @@ const supportLinks = [
           </div>
         </div>
       </div>
-
       {/* Navigation Sections */}
       <div className="p-4 space-y-2">
         {sidebarSections.map((section) => (
@@ -317,7 +315,6 @@ const supportLinks = [
                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
               )}
             </button>
-
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
@@ -330,7 +327,6 @@ const supportLinks = [
                   <CloseIcon className="w-5 h-5" />
                 </button>
               </div>
-
               {/* Search Bar */}
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -342,7 +338,6 @@ const supportLinks = [
                   className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 />
               </div>
-              
               {/* Search Results */}
               {searchQuery && (
                 <div className="mt-4 space-y-2">
@@ -378,7 +373,6 @@ const supportLinks = [
                 </div>
               )}
             </div>
-
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -404,7 +398,6 @@ const supportLinks = [
                 </div>
               </div>
             </div>
-
             {/* Quick Stats */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -426,7 +419,6 @@ const supportLinks = [
                 ))}
               </div>
             </div>
-
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -451,7 +443,6 @@ const supportLinks = [
                 ))}
               </div>
             </div>
-
             {/* Service Categories */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -479,7 +470,6 @@ const supportLinks = [
                         }`} 
                       />
                     </button>
-                    
                     <AnimatePresence>
                       {expandedCategory === item.name && (
                         <motion.div
@@ -513,7 +503,6 @@ const supportLinks = [
                 ))}
               </div>
             </div>
-
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -567,7 +556,6 @@ const supportLinks = [
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="pt-4 border-t border-gray-800 px-3">
           <Link
@@ -579,7 +567,6 @@ const supportLinks = [
           </Link>
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
       <div className="absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>

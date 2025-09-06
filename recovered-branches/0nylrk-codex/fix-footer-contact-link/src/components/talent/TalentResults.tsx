@@ -27,7 +27,7 @@ interface TalentResultsProps {
   }
 }
 
-export function TalentResults({
+export function TalentResults({;
   filteredTalents;
   isLoading;
   viewProfile;
@@ -41,13 +41,11 @@ export function TalentResults({
     <div className="flex-1">
       {/* Active filters */}
       <ActiveFilters {...activeFiltersProps} />
-      
       {/* Results count */}
       <ResultsHeader 
         isLoading={isLoading} 
         resultCount={filteredTalents.length} 
       />
-      
       {/* Talents grid */}
       <TalentGrid 
         talents={filteredTalents}

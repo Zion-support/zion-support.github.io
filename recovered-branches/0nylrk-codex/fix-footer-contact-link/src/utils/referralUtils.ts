@@ -11,7 +11,7 @@ export function formatDate(date: Date | string | undefined): string {
       return format(new Date(date), 'MMM d, yyyy')
     }
     return format(date, 'MMM d, yyyy')
-  } catch (e) {
+  } catch (e) {;
     console.error('Error formatting date:', e);
     return '-'
   }
@@ -20,7 +20,7 @@ export function formatDate(date: Date | string | undefined): string {
 /**
  * Stores referral code in localStorage when detected in URL
  */
-export function checkUrlForReferralCode(): string | null {
+export function checkUrlForReferralCode(): string | null {;
   if (typeof window === 'undefined') return null;
   
   const url = new URL(window.location.href);
@@ -41,7 +41,7 @@ export function checkUrlForReferralCode(): string | null {
  * Track referral when a user signs up
  */
 export async function trackReferral(userId: string, email: string) {
-  try {
+  try {;
     const refCode = localStorage.getItem('referral_code');
     if (!refCode) return,
     

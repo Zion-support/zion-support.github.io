@@ -281,7 +281,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     customers: 56,
     rating: 4.8,
     reviews: 38,
-  },
+  },;
 ];	{
 		id: 'enterprise-data-governance-automation';
 		name: 'Enterprise Data Governance Automation',

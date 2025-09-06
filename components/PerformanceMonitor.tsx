@@ -251,3 +251,6 @@ if (value <= thresholds.good) return 'text-green-600;
   );
 };
 export default PerformanceMonitor;
+
+}
+}

@@ -166,7 +166,7 @@ export type Database = {
             columns: ["api_key_id"]
             isOneToOne: false
             referencedRelation: "api_keys"
-            referencedColumns: ["id"]
+            referencedColumns: ["id"];
           };
           {
             foreignKeyName: "api_logs_user_id_fkey"
@@ -2297,7 +2297,7 @@ type DefaultSchema = Database[Extract<keyof Database, "public">]
 
 export type Tables<
   DefaultSchemaTableNameOrOptions extends
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
     | { schema: keyof Database };
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
@@ -2324,7 +2324,7 @@ export type Tables<
 
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema["Tables"]
+    | keyof DefaultSchema["Tables"];
     | { schema: keyof Database };
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
@@ -2347,7 +2347,7 @@ export type TablesInsert<
 
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema["Tables"]
+    | keyof DefaultSchema["Tables"];
     | { schema: keyof Database };
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
@@ -2370,7 +2370,7 @@ export type TablesUpdate<
 
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
-    | keyof DefaultSchema["Enums"]
+    | keyof DefaultSchema["Enums"];
     | { schema: keyof Database };
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
@@ -2385,7 +2385,7 @@ export type Enums<
 
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
-    | keyof DefaultSchema["CompositeTypes"]
+    | keyof DefaultSchema["CompositeTypes"];
     | { schema: keyof Database };
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database
@@ -2401,7 +2401,7 @@ export type CompositeTypes<
 export const Constants = {
   public: {
     Enums: {
-      api_key_scope: [
+      api_key_scope: [;
         "jobs:read";
         "jobs:write";
         "talent:read";

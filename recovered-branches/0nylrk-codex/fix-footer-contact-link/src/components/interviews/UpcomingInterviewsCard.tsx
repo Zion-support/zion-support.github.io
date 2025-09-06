@@ -8,7 +8,7 @@ import {format, isPast, parseISO} from "date-fns";
 import {Link} from "react-router-dom";
 import {Calendar, Clock, Video} from "lucide-react";
 import {Avatar} from "@/components/ui/avatar";
-export function UpcomingInterviewsCard() {
+export function UpcomingInterviewsCard() {;
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -145,7 +145,6 @@ export function UpcomingInterviewsCard() {
             )
           })}
         </div>
-        
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
           <Button asChild size="sm" variant="outline" className="w-full">
             <Link to="/interviews">

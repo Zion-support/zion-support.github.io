@@ -5,7 +5,7 @@ import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
   const { id } = req.query;
   if (typeof id !== "string")
     return res.status(400).json({ error: "Invalid id" });

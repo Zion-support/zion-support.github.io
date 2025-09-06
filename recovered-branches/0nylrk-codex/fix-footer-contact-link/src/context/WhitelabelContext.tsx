@@ -10,7 +10,7 @@ export interface WhitelabelContextType {
   landingPageCopy: {
     headline: string,
     subtitle: string,
-    cta: string
+    cta: string;
   };
   tenant: WhitelabelTenant | null
 }
@@ -32,7 +32,7 @@ const defaultContext: WhitelabelContextType = {
 // without falling back to an empty object which triggers TS2740 errors.
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
 
-export const useWhitelabel = (): WhitelabelContextType => {
+export const useWhitelabel = (): WhitelabelContextType => {;
   const context = useContext(WhitelabelContext);
   if (!context) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider')
@@ -46,7 +46,7 @@ interface WhitelabelProviderProps {
   children: ReactNode
 }
 
-export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
 

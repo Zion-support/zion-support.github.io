@@ -6,11 +6,10 @@ export default function Custom404() {
   return (
     <>
       <Head>
-
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
 

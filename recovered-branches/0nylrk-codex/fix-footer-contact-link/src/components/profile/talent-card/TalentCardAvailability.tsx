@@ -9,7 +9,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   // Format availability status
   const getAvailabilityColor = (status: string) => {
     switch (status) {
-      case 'full-time':
+      case 'full-time':;
         return 'bg-green-500/20 text-green-400';
       case 'part-time':
         return 'bg-yellow-500/20 text-yellow-400';

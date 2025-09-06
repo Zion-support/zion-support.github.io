@@ -3,7 +3,7 @@ import {useState} from "react";
 import {TALENT_PROFILES} from "@/data/talentData";
 import {JOB_POSTS} from "@/data/jobsData";
 import {PROJECTS} from "@/data/projectsData";
-export interface SearchResult {
+export interface SearchResult {;
   id: string;
   type: "talent" | "job" | "project";
   title: string,
@@ -18,7 +18,7 @@ interface SearchFilters {
   availability?: string | null
 }
 
-export function useAISearch() {
+export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
 

@@ -121,7 +121,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             and emerging technology solutions. Transform your business with
             services that were once science fiction.          </p>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           className='flex flex-wrap justify-center gap-4 mb-12'          initial={{ opacity: 0, y: 20 }}              Revolutionary 2025
@@ -134,7 +133,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             Transform your business with services that were once science fiction.
           </p>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           className='flex flex-wrap justify-center gap-4 mb-12'        <motion.div 
@@ -168,7 +166,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             </button>
           ))}
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -192,7 +189,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                 <div className='absolute inset-0 rounded-2xl overflow-hidden'>
                   <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
                   <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>                </div>
-
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>
@@ -205,7 +201,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 </div>
-
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>
@@ -237,7 +232,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                         {service.period}
                       </div>                    </div>
                   </div>
-
                   {/* Description */}
                   <p className='text-gray-300 mb-4 leading-relaxed'>
                     {service.description}
@@ -253,12 +247,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                       <div className="text-gray-400 text-sm">{service.period}</div>
                     </div>
                   </div>
-
                   {/* Description */}
                   <p className='text-gray-300 mb-4 leading-relaxed'>
                     {service.description}
                   </p>
-
                   {/* Stats Grid */}
                   <div className='grid grid-cols-2 gap-3 mb-4'>
                     <div className='flex items-center space-x-2 text-sm'>
@@ -285,7 +277,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                         {service.trialDays} day trial
                       </span>                    </div>
                   </div>
-
                   {/* Action Buttons */}
                   <div className='flex space-x-3 mt-6'>
                   {/* Stats Grid */}
@@ -307,7 +298,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                       <span className="text-gray-300">{service.trialDays} day trial</span>
                     </div>
                   </div>
-
                   {/* Action Buttons */}
                   <div className='flex space-x-3 mt-6'>
                     <a
@@ -333,7 +323,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                     </button>
                   </div>
                 </div>
-
                 {/* Floating Particles */}
                 <div className='absolute inset-0 pointer-events-none overflow-hidden'>
                   <div
@@ -365,7 +354,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Load More Button */}
         {visibleServices < filteredServices.length && (
           <motion.div

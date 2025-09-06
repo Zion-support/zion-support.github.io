@@ -4,7 +4,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {CreateResumeFormProps} from "./types";
-export const CreateResumeForm = ({ 
+export const CreateResumeForm = ({ ;
   onCreateResume;
   onCancel;
   isLoading 
@@ -22,7 +22,6 @@ export const CreateResumeForm = ({
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>
           <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>
-          
           <div className="flex gap-2 max-w-md mx-auto">
             <input
               type="text"
@@ -39,7 +38,6 @@ export const CreateResumeForm = ({
               Create
             </Button>
           </div>
-          
           <Button
             variant="ghost"
             onClick={onCancel}

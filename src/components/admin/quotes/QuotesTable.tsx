@@ -7,13 +7,13 @@ import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {
   TableCell, 
   TableHead, 
   TableHeader, 
-  TableRow 
+  TableRow ;
 } from "@/components/ui/table"; import { Button } from "@/components/ui/button"
 import { 
   DropdownMenu
   DropdownMenuContent, 
   DropdownMenuItem, 
-  DropdownMenuTrigger 
+  DropdownMenuTrigger ;
 } from "@/components/ui/dropdown-menu"; import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge"
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes"
 import {formatDate} from "@/utils/dateUtils"
@@ -107,7 +107,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
-                    
                     {isArchived ? (
                       <>
                         <Button 
@@ -183,4 +182,5 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
     </div>
   )
 }
-'"
+'";
+;

@@ -105,7 +105,6 @@ export function AIMilestoneGenerator({
           )}
         </Button>
       </div>
-
       {generatedMilestones.length > 0 && (
         <Card>
           <CardContent className='pt-6'>
@@ -120,7 +119,6 @@ export function AIMilestoneGenerator({
                 Add Selected to Project
               </Button>
             </div>
-
             <Accordion type='multiple' className='w-full'>
               {generatedMilestones.map((milestone, index) => (
                 <AccordionItem
@@ -178,6 +176,6 @@ export function AIMilestoneGenerator({
         </Card>
       )}
     </div>
-  )
-}
+  );
+};
 ;

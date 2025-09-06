@@ -17,8 +17,8 @@ import {
   ExternalLink,
   Play,
   BookOpen,
-  Github,
-  Terminal,;} from 'lucide-react';import { 
+  Github,;
+  Terminal,;} from 'lucide-react';import { ;
   Code;
   Database, 
   Globe, 
@@ -243,7 +243,7 @@ export default function ApiToolsPage() {
       status: 'Live',
       users: '4,200+',
       responseTime: '<20ms',
-    },
+    },;
   ];
 
   const categories = [
@@ -289,12 +289,10 @@ export default function ApiToolsPage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]' />
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6'>
             <Terminal className='w-4 h-4 mr-2' />
@@ -308,15 +306,12 @@ export default function ApiToolsPage() {
             collection of developer APIs. Each tool is designed for performance,
             reliability, and ease of integration.
           </p>
-
           <div className='flex flex-wrap justify-center gap-4 mb-8'>
             {categories.map(category => (              <button      </Head>
-
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]" />
-        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">
             <Terminal className="w-4 h-4 mr-2" />
@@ -328,7 +323,6 @@ export default function ApiToolsPage() {
           <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
             Build faster, scale better, and deliver more with our comprehensive collection of developer APIs. Each tool is designed for performance, reliability, and ease of integration.
           </p>
-          
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (
               <button
@@ -346,7 +340,6 @@ export default function ApiToolsPage() {
           </div>
         </div>
       </section>
-
       {/* API Tools Grid */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -362,7 +355,6 @@ export default function ApiToolsPage() {
               support.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
               <Card
@@ -397,17 +389,14 @@ export default function ApiToolsPage() {
                         </span>
                       </div>
                     </div>
-
                     <p className='text-gray-400 leading-relaxed mb-6'>                        <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
                           {tool.status}
                         </span>
                       </div>
                     </div>
-
                     <p className='text-gray-400 leading-relaxed mb-6'>
                       {tool.description}
                     </p>
-
                     <div className='grid grid-cols-3 gap-4 mb-6'>
                       <div className='text-center p-3 bg-gray-800/50 rounded-lg'>
                         <div className='text-lg font-bold text-indigo-400'>
@@ -430,7 +419,6 @@ export default function ApiToolsPage() {
                         </div>
                       </div>
                     </div>
-
                     <ul className='space-y-2 mb-6'>
                       {tool.features
                         .slice(0, 3)
@@ -444,7 +432,6 @@ export default function ApiToolsPage() {
                           </li>
                         ))}
                     </ul>
-
                     <div className='flex flex-wrap gap-3'>
                       <Button
                         href={tool.website}
@@ -457,7 +444,6 @@ export default function ApiToolsPage() {
                       <Button
                         href={tool.docs}                      {tool.description}
                     </p>
-                    
                     <div className="grid grid-cols-3 gap-4 mb-6">
                       <div className="text-center p-3 bg-gray-800/50 rounded-lg">
                         <div className="text-lg font-bold text-indigo-400">{tool.users}</div>
@@ -472,7 +458,6 @@ export default function ApiToolsPage() {
                         <div className="text-lg font-bold text-green-400">{tool.pricing.free}</div>
                       </div>
                     </div>
-
                     <ul className="space-y-2 mb-6">
                       {tool.features.slice(0, 3).map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
@@ -481,7 +466,6 @@ export default function ApiToolsPage() {
                         </li>
                       ))}
                     </ul>
-
                     <div className="flex flex-wrap gap-3">
                       <Button
                         href={tool.website}
@@ -527,7 +511,6 @@ export default function ApiToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -540,7 +523,6 @@ export default function ApiToolsPage() {
               with our APIs.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>
               <div className='w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6'>
@@ -557,7 +539,6 @@ export default function ApiToolsPage() {
                 Explore Docs
                 <ArrowRight className='w-4 h-4 ml-2' />              </Button>
             </Card>
-
             <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>
               <div className='w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6'>
                 <Play className='w-8 h-8 text-indigo-400' />
@@ -574,7 +555,6 @@ export default function ApiToolsPage() {
                 <ArrowRight className='w-4 h-4 ml-2' />
               </Button>
             </Card>
-
             <Card className='text-center border border-gray-700 hover:border-indigo-500/30'>
               <div className='w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6'>
                 <Github className='w-8 h-8 text-indigo-400' />
@@ -594,7 +574,6 @@ export default function ApiToolsPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -630,4 +609,7 @@ export default function ApiToolsPage() {
       </section>
     </>
 );
+}
+
+}
 }

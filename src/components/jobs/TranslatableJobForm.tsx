@@ -65,6 +65,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const ensureAllTranslations = async () => {
     const promises = []
 }
-  )
-}
+  );
+};
 ;

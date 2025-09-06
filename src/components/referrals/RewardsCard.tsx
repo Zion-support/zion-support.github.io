@@ -137,4 +137,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       </CardContent>
     </Card>
   )
+};
+;
+}
 }

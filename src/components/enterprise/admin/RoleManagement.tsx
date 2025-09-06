@@ -8,7 +8,7 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { Badge } from '@/components/ui/badge'
-import { Switch } from '@/components/ui/switch'
+import { Switch } from '@/components/ui/switch';
 import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-react'
   Tooltip,
   TooltipContent,
@@ -110,7 +110,6 @@ export function RoleManagement() {
           ))}
         </div>
       </div>
-
       <div className='rounded-md border'>
         <Table>
           <TableHeader>
@@ -266,6 +265,6 @@ export function RoleManagement() {
         </Table>
       </div>
     </div>
-  )
-}
+  );
+};
 ;

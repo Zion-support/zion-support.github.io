@@ -1,6 +1,6 @@
 import { NextApiRequest } from 'next';
 export function getUserFromRequest(req: any): User | null {
-  // Mock implementation - in production, this would extract user from JWT or session
+  // Mock implementation - in production, this would extract user from JWT or session;
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return null;
@@ -20,7 +20,7 @@ export function getUserFromRequest(req: any): User | null {
 }
 
 export function assertTalentOrClientForOffer(
-  req: NextApiRequest,
+  req: NextApiRequest,;
   offer: { clientId: string; talentSlug: string },
   talentSlugHeader?: string
 ): DemoUser {
@@ -34,10 +34,12 @@ export function assertTalentOrClientForOffer(
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
   err.statusCode = 403;
-  throw err;export function requireAuth(req: any): User {
+  throw err;export function requireAuth(req: any): User {;
   const user = getUserFromRequest(req);
   if (!user) {
     throw new Error('Authentication required'),
   }
   return user;
+}
+
 }

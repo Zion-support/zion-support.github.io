@@ -1,13 +1,13 @@
 import type { NextApiRequest } from 'next';
 
-export interface Session {
+export interface Session {;
   userId: string;
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
 
 export function getSessionFromReq(req: NextApiRequest): Session | null {
-  // Mock implementation - replace with actual session logic
+  // Mock implementation - replace with actual session logic;
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return null;
@@ -22,7 +22,7 @@ export function getSessionFromReq(req: NextApiRequest): Session | null {
 }
 
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
-  // Check for internal agent headers or IPs
+  // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
   
@@ -30,6 +30,6 @@ export function isInternalAgentRequest(req: NextApiRequest): boolean {
 }
 
 export const isAdmin = () => {
-  // Placeholder implementation
+  // Placeholder implementation;
   return true;
 };

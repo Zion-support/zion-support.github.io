@@ -5,7 +5,7 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import {useCurrentUser} from '../../utils/auth';
 
 const fetcher = (url: string) => fetch(url).then(r => r.json());
-export default function DisputeDetailPage() {
+export default function DisputeDetailPage() {;
   const router = useRouter();
   const { id } = router.query as { id?: string };
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
@@ -51,7 +51,6 @@ export default function DisputeDetailPage() {
               {dispute.status}
             </span>
           </div>
-
           <div className='mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
             <div className='p-3 border rounded'>
               <div className='font-medium text-gray-500'>Project</div>
@@ -66,7 +65,6 @@ export default function DisputeDetailPage() {
               <div className='mt-1'>{dispute.talentUserId}</div>
             </div>
           </div>
-
           <div className='border-b mb-4 flex gap-4 text-sm'>
             {(
               ['Overview', 'Messages', 'Attachments', 'Admin Notes'] as const
@@ -79,7 +77,6 @@ export default function DisputeDetailPage() {
                 {t}
               </button>            ))}
           </div>
-
           {activeTab === 'Overview' && (
             <div className='space-y-6'>
               <div className='p-4 border rounded'>
@@ -228,3 +225,5 @@ export default function DisputeDetailPage() {
       )}
     </EnhancedLayout>
 );
+
+}

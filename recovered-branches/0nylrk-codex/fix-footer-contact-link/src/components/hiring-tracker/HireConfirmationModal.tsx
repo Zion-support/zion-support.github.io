@@ -12,14 +12,14 @@ import {useAuth} from "@/hooks/useAuth";
 import {JobApplication} from "@/types/jobs";
 export interface HireConfirmationModalProps {
   isOpen: boolean,
-  onClose: () => void,
+  onClose: () => void,;
   candidateData?: TalentProfile;
   application?: JobApplication;
   onConfirm: () => void,
   isSubmitting?: boolean
 }
 
-export function HireConfirmationModal({ 
+export function HireConfirmationModal({ ;
   isOpen;
   onClose, 
   candidateData, 

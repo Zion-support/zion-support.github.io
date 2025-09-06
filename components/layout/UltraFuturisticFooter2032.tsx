@@ -36,9 +36,9 @@ import {
   Users as UsersIcon,
   Briefcase as BriefcaseIcon,
   BookOpen as BookOpenIcon,
-  MessageCircle as MessageCircleIcon,
+  MessageCircle as MessageCircleIcon,;
   Star as StarIcon,;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
@@ -342,7 +342,7 @@ export default function UltraFuturisticFooter2032() {
   return (
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>      staggerChildren: 0.1
     }
-  }
+  };
 };
 
 const itemVariants = {
@@ -359,7 +359,6 @@ export default function UltraFuturisticFooter2032() {
         <div className='absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
         <div className='absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
       </div>
-
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10'>
         <motion.div
           variants={footerVariants}
@@ -385,14 +384,12 @@ export default function UltraFuturisticFooter2032() {
                   </p>
                 </div>
               </div>
-
               <p className='text-slate-300 mb-6 leading-relaxed'>
                 Leading the future of technology with revolutionary AI, quantum
                 computing, space technology, and autonomous systems. Empowering
                 businesses with cutting-edge solutions for tomorrow's
                 challenges.
               </p>
-
               {/* Contact Information */}
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors'>
@@ -430,7 +427,6 @@ export default function UltraFuturisticFooter2032() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
         <motion.div
           variants={footerVariants}
@@ -454,12 +450,10 @@ export default function UltraFuturisticFooter2032() {
                   <p className="text-sm text-cyan-300 font-medium">2032 Future Technology</p>
                 </div>
               </div>
-              
               <p className="text-slate-300 mb-6 leading-relaxed">
                 Leading the future of technology with revolutionary AI, quantum computing, space technology, and autonomous systems. 
                 Empowering businesses with cutting-edge solutions for tomorrow's challenges.
               </p>
-
               {/* Contact Information */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">
@@ -486,7 +480,6 @@ export default function UltraFuturisticFooter2032() {
                 </div>
               </div>
             </motion.div>
-
             {/* Service Categories */}
             <motion.div variants={itemVariants} className='lg:col-span-2'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
@@ -524,13 +517,11 @@ export default function UltraFuturisticFooter2032() {
                 ))}
               </div>
             </motion.div>
-
             {/* Quick Links & Company Info */}
             <motion.div variants={itemVariants} className='lg:col-span-1'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 Quick Access
               </h3>
-
               {/* Quick Links */}
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>
@@ -544,7 +535,6 @@ export default function UltraFuturisticFooter2032() {
                       >
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />                        <span>{link.name}</span>                Quick Access
               </h3>
-              
               {/* Quick Links */}
               <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
@@ -564,7 +554,6 @@ export default function UltraFuturisticFooter2032() {
                   ))}
                 </ul>
               </div>
-
               {/* Company Info */}
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
@@ -587,7 +576,6 @@ export default function UltraFuturisticFooter2032() {
                   ))}
                 </ul>
               </div>
-
               {/* Social Links */}
               <div>
                 <h4 className='text-lg font-medium text-white mb-4'>
@@ -616,7 +604,6 @@ export default function UltraFuturisticFooter2032() {
               </div>
             </motion.div>
           </div>
-
           {/* Newsletter Signup */}
           <motion.div
             variants={itemVariants}
@@ -654,7 +641,6 @@ export default function UltraFuturisticFooter2032() {
               </div>
             </div>
           </motion.div>
-
           {/* Bottom Bar */}
           <motion.div
             variants={itemVariants}
@@ -666,7 +652,6 @@ export default function UltraFuturisticFooter2032() {
                 <span className='text-cyan-400'>|</span>
                 <span>Leading the Future of Technology</span>
               </div>
-
               <div className='flex items-center space-x-6 text-sm'>
                 <Link
                   href='/privacy'
@@ -687,7 +672,6 @@ export default function UltraFuturisticFooter2032() {
                 <span className="text-cyan-400">|</span>
                 <span>Leading the Future of Technology</span>
               </div>
-              
               <div className="flex items-center space-x-6 text-sm">
                 <Link href="/privacy" className="text-slate-400 hover:text-cyan-300 transition-colors">
                   Privacy Policy
@@ -703,7 +687,6 @@ export default function UltraFuturisticFooter2032() {
           </motion.div>
         </motion.div>
       </div>
-
       {/* Floating Action Button */}
       <div className='fixed bottom-8 right-8 z-50'>
         <motion.button
@@ -714,7 +697,7 @@ export default function UltraFuturisticFooter2032() {
         >
           <ArrowRight className='w-6 h-6 transform rotate-[-90deg]' />        </motion.button>
       </div>
-    </footer>
+    </footer>;
   );
 }        <motion.button
           whileHover={{ scale: 1.1 }}
@@ -727,4 +710,6 @@ export default function UltraFuturisticFooter2032() {
       </div>
     </footer>
 );
+}
+
 }

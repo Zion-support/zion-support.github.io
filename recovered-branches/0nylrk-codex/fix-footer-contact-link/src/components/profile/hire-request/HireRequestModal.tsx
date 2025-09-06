@@ -13,7 +13,7 @@ interface HireRequestModalProps {
 
 export function HireRequestModal({ talent, isOpen, onClose, userDetails }: HireRequestModalProps) {
   const handleClose = () => {
-    onClose()
+    onClose();
   };
 
   if (!talent) return null;
@@ -26,7 +26,6 @@ export function HireRequestModal({ talent, isOpen, onClose, userDetails }: HireR
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
-        
         <HireRequestForm 
           talent={talent}
           onClose={handleClose}

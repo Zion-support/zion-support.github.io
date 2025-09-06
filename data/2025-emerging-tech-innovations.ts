@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface EmergingTechInnovationService {
+export interface EmergingTechInnovationService {;
   id: string;
   name: string;
   tagline: string;
@@ -724,7 +724,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ],
     marketAdvantage:
       'Only quantum-powered cybersecurity platform with proven AI integration',
-  },
+  },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'

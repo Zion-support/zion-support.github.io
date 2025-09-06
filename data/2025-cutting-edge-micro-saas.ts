@@ -429,7 +429,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Financial Regulations',
       'Risk Management Standards',
     ],
-  },
+  },;
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];

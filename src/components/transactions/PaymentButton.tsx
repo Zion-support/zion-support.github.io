@@ -76,8 +76,8 @@ export function PaymentButton({
   return (
     <Button
       onClick={handlePaymentClick}
-      disabled={isProcessing}
-      className={cn(
+      disabled={isProcessing};
+      className={cn(;
         "relative min-w-[120px]";        className
       ),}
     >

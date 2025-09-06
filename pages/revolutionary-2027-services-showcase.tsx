@@ -10,7 +10,7 @@ import {
   Mail,
   Phone,
   MapPin,
-  MessageSquare,
+  MessageSquare,;
   Globe,;
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
@@ -156,7 +156,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           href='https://ziontechgroup.com/revolutionary-2027-services-showcase'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='pt-24 pb-16 px-4 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center relative z-10'>          <motion.div
@@ -175,7 +174,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
               Quantum Computing, and Next-Generation IT services. Each solution
               delivers measurable ROI and transforms industries.
             </p>
-
             {/* Contact Information */}
             <div className='flex flex-wrap items-center justify-center gap-6 text-center mb-8'>
               <motion.div
@@ -204,7 +202,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   {contactInfo.address}
                 </span>              </motion.div>
             </div>
-
             {/* CTA Buttons */}
             <div className='flex flex-wrap items-center justify-center gap-4'>
               <a
@@ -224,7 +221,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
       <section className='py-8 px-4'>
         <div className='max-w-7xl mx-auto'>
@@ -239,7 +235,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full pl-12 pr-4 py-4 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'              />
             </div>
-
             {/* Filters */}
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
               {/* Category Filter */}
@@ -258,7 +253,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   ))}
                 </select>
               </div>
-
               {/* Price Range Filter */}
               <div>
                 <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -275,7 +269,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   ))}
                 </select>
               </div>
-
               {/* Sort By */}
               <div>
                 <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -292,7 +285,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   ))}
                 </select>
               </div>
-
               {/* Results Count */}
               <div className='flex items-end'>
                 <div className='text-gray-300'>
@@ -310,7 +302,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-12 px-4'>
         <div className='max-w-7xl mx-auto'>
@@ -336,13 +327,11 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                             </div>
                           )}
                         </div>
-
                         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                           {service.name}
                         </h3>
                         <p className='text-gray-300 text-sm mb-3 line-clamp-2'>                          {service.tagline}
                         </p>
-
                         {/* Price */}
                         <div className='flex items-baseline gap-2 mb-4'>
                           <span className='text-3xl font-bold text-white'>
@@ -352,11 +341,9 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                             {service.period}
                           </span>
                         </div>
-
                         {/* Description */}
                         <p className='text-gray-300 text-sm mb-4 line-clamp-3'>                          {service.description}
                         </p>
-
                         {/* Features */}
                         <div className='mb-4'>
                           <h4 className='text-sm font-semibold text-gray-200 mb-2'>
@@ -377,7 +364,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                                 </li>
                               ))}                          </ul>
                         </div>
-
                         {/* Stats */}
                         <div className='grid grid-cols-3 gap-4 mb-4 text-center'>
                           <div>
@@ -400,7 +386,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                             </div>
                             <div className='text-xs text-gray-400'>Reviews</div>                          </div>
                         </div>
-
                         {/* Category Badge */}
                         <div className='mb-4'>
                           <span
@@ -408,7 +393,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                           >                            {service.category}
                           </span>
                         </div>
-
                         {/* Action Buttons */}
                         <div className='flex gap-2'>
                           <a
@@ -456,7 +440,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           </AnimatePresence>
         </div>
       </section>
-
       {/* Contact CTA Section */}
       <section className='py-16 px-4'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -474,7 +457,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
               services. Each solution is designed to deliver measurable ROI and
               competitive advantage.
             </p>
-
             <div className='flex flex-wrap items-center justify-center gap-6 mb-8'>
               <div className='flex items-center gap-2 text-cyan-400'>
                 <Phone className='w-5 h-5' />
@@ -491,7 +473,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                 </span>
               </div>
             </div>
-
             <div className='flex flex-wrap items-center justify-center gap-4'>
               <a
                 href='/contact'

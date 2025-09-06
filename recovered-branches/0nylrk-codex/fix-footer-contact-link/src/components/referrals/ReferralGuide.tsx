@@ -6,7 +6,7 @@ export function ReferralGuide() {
       title: "Share your referral link",
       description: "Copy your unique referral link and share it with potential clients or talent"},
     {
-      title: "They sign up",
+      title: "They sign up",;
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
     {
       title: "They complete onboarding",

@@ -40,7 +40,6 @@ export function SkillsFilter({
           <ChevronDown className='h-4 w-4 text-zion-slate-light' />
         )}
       </button>
-
       {expanded && (
         <div className='mt-4 space-y-2'>
           {POPULAR_SKILLS.map(skill => (
@@ -49,7 +48,6 @@ export function SkillsFilter({
                 checked={selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
             <div key={skill} className="flex items-center">
-
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { SkillsFilterProps } from "@/types/filters"
@@ -86,7 +84,6 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-      
       {expanded && (
         <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
@@ -109,6 +106,9 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 ;
+}
+}
+}

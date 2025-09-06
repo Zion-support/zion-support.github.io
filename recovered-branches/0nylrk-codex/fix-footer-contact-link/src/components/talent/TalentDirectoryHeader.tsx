@@ -19,3 +19,4 @@ export function TalentDirectoryHeader({ title, description }: TalentDirectoryHea
     </div>
   )
 }
+;

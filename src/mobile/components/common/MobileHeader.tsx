@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-interface MobileHeaderProps {
+interface MobileHeaderProps {;
   title: string;  showBack?: boolean;  title: string,
   showBack?: boolean
   showNotifications?: boolean
@@ -105,7 +105,10 @@ export function MobileHeader({
           )}
         </div>
       </div>
-    </header>
+    </header>;
   );  )
 }
 ;
+}
+}
+}

@@ -22,11 +22,11 @@ import {
   Zap,
   Globe,
   BarChart3,
-  Search,
+  Search,;
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 
-export default function Navigation() {
+export default function Navigation() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -232,7 +232,6 @@ export default function Navigation() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav className="bg-white shadow-lg sticky top-0 z-50">
         <div className="container mx-auto px-4">
@@ -251,7 +250,6 @@ export default function Navigation() {
                 </div>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               <Link
@@ -260,7 +258,6 @@ export default function Navigation() {
               >
                 Home
               </Link>
-
               {/* Services Dropdown */}
               <div className="relative group">
                 <button
@@ -316,7 +313,6 @@ export default function Navigation() {
                   )}
                 </AnimatePresence>
               </div>
-
               {/* Solutions Dropdown */}
               <div className="relative group">
                 <button
@@ -372,7 +368,6 @@ export default function Navigation() {
                   )}
                 </AnimatePresence>
               </div>
-
               {/* Industries Dropdown */}
               <div className="relative group">
                 <button
@@ -413,7 +408,6 @@ export default function Navigation() {
                   )}
                 </AnimatePresence>
               </div>
-
               {/* Resources Dropdown */}
               <div className="relative group">
                 <button
@@ -454,7 +448,6 @@ export default function Navigation() {
                   )}
                 </AnimatePresence>
               </div>
-
               <Link
                 href="/pricing"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -462,7 +455,6 @@ export default function Navigation() {
                 Pricing
               </Link>
             </div>
-
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <button
@@ -485,7 +477,6 @@ export default function Navigation() {
                 Call Now
               </a>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2"
@@ -498,7 +489,6 @@ export default function Navigation() {
               )}
             </button>
           </div>
-
           {/* Mobile Menu */}
           <AnimatePresence>
             {isMenuOpen && (
@@ -516,7 +506,6 @@ export default function Navigation() {
                   >
                     Home
                   </Link>
-
                   {/* Mobile Services */}
                   <div className="px-4 py-2">
                     <div className="font-medium text-gray-900 mb-2">
@@ -535,7 +524,6 @@ export default function Navigation() {
                       ))}
                     </div>
                   </div>
-
                   {/* Mobile Solutions */}
                   <div className="px-4 py-2">
                     <div className="font-medium text-gray-900 mb-2">
@@ -554,7 +542,6 @@ export default function Navigation() {
                       ))}
                     </div>
                   </div>
-
                   {/* Mobile Industries */}
                   <div className="px-4 py-2">
                     <div className="font-medium text-gray-900 mb-2">
@@ -573,7 +560,6 @@ export default function Navigation() {
                       ))}
                     </div>
                   </div>
-
                   {/* Mobile Resources */}
                   <div className="px-4 py-2">
                     <div className="font-medium text-gray-900 mb-2">
@@ -592,7 +578,6 @@ export default function Navigation() {
                       ))}
                     </div>
                   </div>
-
                   <Link
                     href="/pricing"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
@@ -600,7 +585,6 @@ export default function Navigation() {
                   >
                     Pricing
                   </Link>
-
                   <div className="px-4 py-2 space-y-2">
                     <Link
                       href="/contact"
@@ -623,7 +607,6 @@ export default function Navigation() {
           </AnimatePresence>
         </div>
       </nav>
-
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}

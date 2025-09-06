@@ -91,7 +91,7 @@ function fixRemainingLintErrors(content) {
       "import $1;\nimport Link from \"next/link\";"
     );
   if (fixed.includes("<Link") && !fixed.includes("import Link  from "next/link)) {";
-    fixed = fixed.replace(/import\s+([^]+);/, "import $1;\nimport Link from "next/link)"}
+    fixed = fixed.replace(/import\s+([^]+);/, "import $1;\nimport Link from "next/link)"};
 ;
     } catch (error) {,;
 ;    try {};

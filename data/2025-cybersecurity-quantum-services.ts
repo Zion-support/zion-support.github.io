@@ -1,4 +1,4 @@
-export interface CybersecurityQuantumService {
+export interface CybersecurityQuantumService {;
   id: string;
   name: string;
   tagline: string;
@@ -415,7 +415,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     customers: 2500,
     rating: 4.8,
     reviews: 1900,
-  },
+  },;
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];

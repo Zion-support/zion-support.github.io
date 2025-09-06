@@ -16,7 +16,7 @@ interface UseHireRequestFormProps {
   }
 }
 
-export interface FormValues {
+export interface FormValues {;
   requesterName: string;
   requesterEmail: string;
   projectOverview: string;
@@ -25,7 +25,7 @@ export interface FormValues {
   budgetMax: number
 }
 
-export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {
+export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { submitHireRequest } = useHireRequest();
 

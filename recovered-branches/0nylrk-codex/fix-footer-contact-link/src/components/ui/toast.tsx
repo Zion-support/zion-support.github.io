@@ -123,15 +123,16 @@ export {
   ToastTitle,
   ToastDescription,
   ToastClose,
-  ToastAction,
+  ToastAction,;
 };
 
-// Add useToast hook export
-export function useToast() {
+// Add useToast hook export export function useToast() {
   return {
     // Accept a loosely typed props object to allow custo</typeof>m fields like `description`
     toast: (props: any) => {
-      // Implementation of toast functionality
+      // Implementation of toast functionality;
       console.log('Toast:', props);
     },
   };
+
+}

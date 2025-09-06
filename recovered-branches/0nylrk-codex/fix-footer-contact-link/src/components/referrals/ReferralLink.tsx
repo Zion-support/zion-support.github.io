@@ -10,7 +10,7 @@ interface ReferralLinkProps {
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
 }
 
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false);
   
   const handleCopy = () => {
@@ -43,7 +43,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               <span className="sr-only">Copy</span>
             </Button>
           </div>
-          
           {copied && (
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!

@@ -14,7 +14,7 @@ const REASONS = [
 
 type ReasonType = (typeof REASONS)[number];
 
-export default function NewDisputePage() {
+export default function NewDisputePage() {;
   const router = useRouter();
   const {
     projectId: qProjectId,
@@ -179,3 +179,6 @@ const reader = new FileReader();
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
+
+}
+}

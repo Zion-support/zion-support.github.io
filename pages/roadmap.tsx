@@ -1,5 +1,5 @@
 import Head from 'next/head',;
-import React, { useMemo, useState } from 'react',
+import React, { useMemo, useState } from 'react',;
 ;
 type RoadmapInputs = {
   milestones: string,
@@ -124,7 +124,6 @@ export default function RoadmapPage(): JSX.Element {
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Roadmap</h1>
             <p className="mt-3 text-gray-700">Public-facing product evolution from v1 → v10 with a generator for operators.</p>
           </header>
-
           <section className="mb-10 grid gap-6 rounded-lg border border-gray-200 bg-gray-50 p-6 md:grid-cols-3">
             <div className="md:col-span-1">
               <h2 className="text-xl font-semibold">Generator Inputs</h2>
@@ -161,7 +160,6 @@ export default function RoadmapPage(): JSX.Element {
               </div>
             </div>
           </section>
-
           <section className="mb-12">
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
@@ -174,7 +172,6 @@ export default function RoadmapPage(): JSX.Element {
             </div>
             <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>
           </section>
-
           <section>
             <h2 className="mb-4 text-xl font-semibold">Zion v1 → v10</h2>
             <div className="grid gap-6 md:grid-cols-2">
@@ -221,5 +218,5 @@ export default function RoadmapPage(): JSX.Element {
         </div>
       </main>
     </>
-  )
+  );
 };

@@ -37,8 +37,8 @@ export function TransactionHistory() {
           provider:profiles!provider_id(display_name)
       query = query.order('created_at', { ascending: false }),
       
-    }, 
-
+    }, ;
+;
               const isClient = user?.id === transaction.user_id;              const isPending =
                 transaction.status === 'pending' || transaction.status === 'in_escrow'
               const isInEscrow = transaction.in_escrow

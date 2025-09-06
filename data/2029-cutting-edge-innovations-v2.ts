@@ -1,7 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
 import { ServiceVariant  } from "../types/service-variants";
-export interface CuttingEdge2029Service {
+export interface CuttingEdge2029Service {;
   id: string;
   name: string;
   tagline: string;
@@ -415,7 +415,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     customers: 8,
     rating: 4.9,
     reviews: 6,
-  },
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',

@@ -22,4 +22,4 @@ export default function AIAutonomousResearchAssistant() {
 			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
 		/>
 	)
-}
+};

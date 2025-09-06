@@ -4,10 +4,10 @@ export type NotificationType =
   | 'quote_request'
   | 'booking_confirmation'
   | 'hire_request'
-  | 'onboarding'
+  | 'onboarding';
   | 'system';
 
-export interface Notification extends BaseNotification {
+export interface Notification extends BaseNotification {;
   type: NotificationType;
   action_url?: string,
   action_text?: string
@@ -17,10 +17,10 @@ export type FilterType =
   | 'all'
   | 'unread'
   | 'messages'
-  | 'onboarding'
+  | 'onboarding';
   | 'system';
 
-export interface NotificationContextType {
+export interface NotificationContextType {;
   notifications: Notification[];
   filteredNotifications: Notification[];
   unreadCount: number;

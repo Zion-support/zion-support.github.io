@@ -1,6 +1,6 @@
 export type MediaBundle = 'general' | 'web3' | 'institutional';
 export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
-export interface MediaGenerationResponse {
+export interface MediaGenerationResponse {;
   ok: boolean;
   text?: string;
   error?: string,
@@ -10,7 +10,7 @@ export async function generateMediaContent(request: MediaGenerationRequest): Pro
   // Mock implementation - in production, this would call OpenAI or other AI service
   return {
     ok: true,
-    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
   };
 
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
@@ -32,7 +32,7 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       filename: 'legal/jurisdictional-disclosures.md',
       type: 'text',
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
-    },
+    },;
   ];
 
   const web3Extras: MediaAsset[] = [
@@ -55,7 +55,7 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 export function buildPressRelease(
   type: PressReleaseType,
-  params: {
+  params: {;
     companyName: string;
     date: string;
     raiseAmount?: string;
@@ -75,7 +75,7 @@ export function buildPressRelease(
   return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params.companyName}:\n${boilerplate}`;
 
 export function buildTimeline(startDate: Date) {
-  const addDays = (d: Date, days: number) =>
+  const addDays = (d: Date, days: number) =>;
     new Date(d.getFullYear(), d.getMonth(), d.getDate() + days);
   const fmt = (d: Date) => d.toISOString().substring(0, 10);
   return [
@@ -93,3 +93,8 @@ function titleCase(s: string) {
     /\w\S*/g,
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
   );}
+
+}
+}
+}
+}

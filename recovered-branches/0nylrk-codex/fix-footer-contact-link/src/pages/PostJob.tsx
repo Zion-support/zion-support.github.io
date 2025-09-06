@@ -7,7 +7,7 @@ import {SEO} from "@/components/SEO";
 import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 import {useIsMobile} from "@/hooks/use-mobile";
-export default function PostJob() {
+export default function PostJob() {;
   const { isAuthenticated, isLoading } = useAuth();
   const isMobile = useIsMobile();
   

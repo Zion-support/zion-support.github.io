@@ -9,7 +9,7 @@ interface TalentCardContentProps {
   skills: string[] | undefined
 }
 
-export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {
+export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {;
   const [isHovering, setIsHovering] = useState(false);
 
   return (
@@ -33,7 +33,6 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
           {summary || bio}
         </p>
       </div>
-      
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>

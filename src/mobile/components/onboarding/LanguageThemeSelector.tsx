@@ -22,7 +22,6 @@ export function LanguageThemeSelector() {
       <div className='space-y-2'>
         <h2 className='text-xl font-medium'>Select your language</h2>
         <p className='text-muted-foreground'>Choose your preferred language</p>
-
         <div className='grid grid-cols-2 gap-3 mt-4'>
           {languages.map(language => (
             <Card
@@ -30,7 +29,6 @@ export function LanguageThemeSelector() {
       <div className="space-y-2">
         <h2 className="text-xl font-medium">Select your language</h2>
         <p className="text-muted-foreground">Choose your preferred language</p>
-        
         <div className="grid grid-cols-2 gap-3 mt-4">
           {languages.map((language,) => (
             <Card 
@@ -71,13 +69,11 @@ export function LanguageThemeSelector() {
           ))}
         </div>
       </div>
-
       <div className='space-y-2'>
         <h2 className='text-xl font-medium'>Choose theme</h2>
         <p className='text-muted-foreground'>
           Select your preferred appearance
         </p>
-
         <div className='flex gap-3 mt-4'>
           <Card
               theme === 'light'
@@ -94,7 +90,6 @@ export function LanguageThemeSelector() {
               )}
             </CardContent>
           </Card>
-
           <Card
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
@@ -114,7 +109,6 @@ export function LanguageThemeSelector() {
               )}
             </CardContent>
           </Card>
-          
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark' 
@@ -134,6 +128,6 @@ export function LanguageThemeSelector() {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 ;

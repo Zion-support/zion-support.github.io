@@ -27,7 +27,7 @@ interface Activity {
   }
 }
 
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 

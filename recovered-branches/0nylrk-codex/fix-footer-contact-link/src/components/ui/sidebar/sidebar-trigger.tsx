@@ -13,7 +13,7 @@ export const SidebarTrigger = React.forwardRef<
 
   return (
     <Button
-      ref={ref}
+      ref={ref};
       data-sidebar=&quot;trigger&quot;
       variant=&quot;ghost&quot;
       size=&quot;icon&quot;

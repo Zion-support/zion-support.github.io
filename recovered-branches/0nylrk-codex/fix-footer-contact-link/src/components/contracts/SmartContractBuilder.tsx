@@ -20,7 +20,7 @@ interface SmartContractBuilderProps {
   onDeploy?: (contractContent: string) => void
 }
 
-export function SmartContractBuilder({
+export function SmartContractBuilder({;
   isOpen;
   onClose;
   talent;
@@ -106,7 +106,6 @@ export function SmartContractBuilder({
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
-            
             <div className="flex gap-2">
               <Button 
                 variant="outline" 
@@ -119,7 +118,6 @@ export function SmartContractBuilder({
               </Button>
             </div>
           </div>
-          
           <TabsContent value="form" className="pt-4">
             <ContractForm 
               talent={talent}
@@ -131,7 +129,6 @@ export function SmartContractBuilder({
               onDeployOptionsChange={setDeployOptions}
             />
           </TabsContent>
-          
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
@@ -142,7 +139,6 @@ export function SmartContractBuilder({
                   deployStatus={deployStatus}
                   deploymentInfo={deploymentInfo}
                 />
-                
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button 
@@ -158,7 +154,6 @@ export function SmartContractBuilder({
             )}
           </TabsContent>
         </Tabs>
-        
         <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}

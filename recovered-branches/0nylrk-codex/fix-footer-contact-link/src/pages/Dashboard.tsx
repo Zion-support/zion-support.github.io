@@ -9,7 +9,7 @@ import {createTestNotification, createOnboardingNotification, createSystemNotifi
 import {NotificationCenter} from "@/components/NotificationCenter";
 import {useToast} from "@/hooks/use-toast";
 import {Link} from "react-router-dom";
-export default function Dashboard() {
+export default function Dashboard() {;
   const { user, logout } = useAuth();
   const { toast } = useToast();
 
@@ -44,13 +44,11 @@ export default function Dashboard() {
                   </div>
                   <h2 className="text-xl font-bold text-white">{user.displayName}</h2>
                   <p className="text-zion-slate-light mb-2">{user.email}</p>
-                  
                   <Badge 
                     className="bg-zion-purple text-white mb-4"
                   >
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
                   </Badge>
-                  
                   <Button 
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     onClick={() => window.location.href = "/profile"}
@@ -60,7 +58,6 @@ export default function Dashboard() {
                   </Button>
                 </div>
               </div>
-              
               {/* Stats & Metrics */}
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
@@ -72,7 +69,6 @@ export default function Dashboard() {
                   <div className="w-full bg-zion-blue rounded-full h-2">
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
                   </div>
-                  
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Community Points</span>
                     <span className="text-zion-cyan font-medium">125</span>
@@ -83,12 +79,10 @@ export default function Dashboard() {
                       <a href="/wallet" className="hover:underline">View Wallet</a>
                     </span>
                   </div>
-                  
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Badges Earned</span>
                     <span className="text-zion-cyan font-medium">3/12</span>
                   </div>
-                  
                   {/* Test notification buttons */}
                   <div className="flex flex-col gap-2 mt-4">
                     <Button 
@@ -99,7 +93,6 @@ export default function Dashboard() {
                       <Send size={16} className="text-zion-cyan" />
                       Send Test Notification
                     </Button>
-
                     <Button 
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
@@ -118,7 +111,6 @@ export default function Dashboard() {
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
                     </Button>
-
                     <Button 
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
@@ -142,7 +134,6 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-              
               {/* Notifications */}
               <div className="bg-zion-blue-dark rounded-xl p-6">
                 <h3 className="text-lg font-bold text-white mb-4 flex items-center">
@@ -159,7 +150,6 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            
             {/* Main Content - Dashboard */}
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
@@ -177,7 +167,6 @@ export default function Dashboard() {
                     </Button>
                   </div>
                 </div>
-                
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
                   <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">
                     <h3 className="text-lg font-medium text-white">Welcome, {user.displayName.split(' ')[0]}</h3>
@@ -188,7 +177,6 @@ export default function Dashboard() {
                     <p className="text-zion-slate-light mt-1">Complete your profile to unlock all features.</p>
                   </div>
                 </div>
-                
                 {/* Badges Preview */}
                 <div className="mb-8">
                   <h3 className="text-lg font-bold text-white mb-4">Your Badges</h3>
@@ -219,7 +207,6 @@ export default function Dashboard() {
                     </div>
                   </div>
                 </div>
-                
                 {/* Community Section */}
                 <div>
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>

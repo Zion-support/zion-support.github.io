@@ -106,11 +106,12 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
             </span>
           </div>
         </div>
-
         <Button onClick={handleSignOut} variant='outline' className='w-full'>
           <LogOut className='h-4 w-4 mr-2' />
           Sign Out
         </Button>
       </CardContent>
-    </Card>
-  )
+    </Card>;
+  );
+}
+}

@@ -29,7 +29,7 @@ export function ChatBotPanel() {
       id: "welcome",
       content: "Hi! How can I help you?",
       sender: "bot",
-      timestamp: new Date()}]),
+      timestamp: new Date()}]),;
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [failedAttempts, setFailedAttempts] = useState(0);
@@ -229,7 +229,6 @@ export function ChatBotPanel() {
           )}
         </div>
       </ScrollArea>
-      
       {messages.length === 1 && (
         <div className="px-4 py-3">
           <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" : "text-gray-600")}>

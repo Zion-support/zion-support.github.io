@@ -74,11 +74,11 @@ import {
   GlobeIcon,
   ZapIcon,
   SparklesIcon,
-  BrainIcon,
+  BrainIcon,;
   AtomIcon,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -335,7 +335,7 @@ const mainNavigation = [
   { name: 'Resources', href: '/resources', icon: BookOpen },];  { name: 'Resources', href: '/resources', icon: BookOpen }
 ];
 
-export default function UltraFuturisticNavigation2031() {
+export default function UltraFuturisticNavigation2031() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -380,7 +380,6 @@ export default function UltraFuturisticNavigation2031() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -412,7 +411,6 @@ export default function UltraFuturisticNavigation2031() {
                 </h1>
                 <p className='text-xs text-gray-400'>2031 Future Technology</p>              </div>
             </motion.div>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>              {mainNavigation.map((item, index) => (            >
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
@@ -425,7 +423,6 @@ export default function UltraFuturisticNavigation2031() {
                 <p className="text-xs text-gray-400">2031 Future Technology</p>
               </div>
             </motion.div>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>            <div className="hidden lg:flex items-center space-x-8">
               {mainNavigation.map((item, index) => (
@@ -443,7 +440,6 @@ export default function UltraFuturisticNavigation2031() {
                     <item.icon className='w-4 h-4' />
                     <span>{item.name}</span>
                   </Link>
-
                   {/* Hover effect */}
                   <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>                >
                   <Link
@@ -453,13 +449,11 @@ export default function UltraFuturisticNavigation2031() {
                     <item.icon className="w-4 h-4" />
                     <span>{item.name}</span>
                   </Link>
-                  
                   {/* Hover effect */}
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
                 </motion.div>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>              <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -483,7 +477,6 @@ export default function UltraFuturisticNavigation2031() {
                 Contact Us
               </motion.button>
             </div>
-
             {/* Mobile menu button */}
             <div className='lg:hidden'>              <motion.button            <div className="lg:hidden">
               <motion.button
@@ -504,7 +497,6 @@ export default function UltraFuturisticNavigation2031() {
             </div>
           </div>
         </div>
-
         {/* Service Categories Bar */}
         <div className='hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -530,7 +522,6 @@ export default function UltraFuturisticNavigation2031() {
                     <category.icon className="w-4 h-4" />
                     <span className="text-sm font-medium">{category.title.split(' ')[0]}</span>
                     <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
-
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeCategory === category.title && (
@@ -614,7 +605,6 @@ export default function UltraFuturisticNavigation2031() {
           </div>
         </div>
       </nav>
-
       {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -635,7 +625,6 @@ export default function UltraFuturisticNavigation2031() {
                   <X className='w-6 h-6' />
                 </button>
               </div>
-
               <div className='space-y-6'>
                 {mainNavigation.map(item => (                  <Link
                     key={item.name}
@@ -652,7 +641,6 @@ export default function UltraFuturisticNavigation2031() {
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               <div className="space-y-6">
                 {mainNavigation.map((item) => (
                   <Link
@@ -692,7 +680,6 @@ export default function UltraFuturisticNavigation2031() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Spacer for fixed navigation */}
       <div className='h-32 lg:h-40'></div>
     </>

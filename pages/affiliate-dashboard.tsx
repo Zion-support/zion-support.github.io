@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react',
+import { useEffect, useMemo, useState } from 'react',;
 ;
 function getRefCode(): string {
   if (typeof window === 'undefined') return '',
@@ -86,5 +86,5 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       <div className="text-2xl font-semibold">{value}</div>
     </div>
-  )
+  );
 };

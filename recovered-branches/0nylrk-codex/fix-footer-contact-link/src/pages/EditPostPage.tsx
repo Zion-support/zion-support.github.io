@@ -35,7 +35,7 @@ const mockPost: ForumPost = {
   isFeatured: true
 };
 
-export default function EditPostPage() {
+export default function EditPostPage() {;
   const { postId } = useParams() as { postId?: string };
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -127,7 +127,6 @@ export default function EditPostPage() {
         description="Edit your discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, edit post"
       />
-      
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
@@ -140,9 +139,7 @@ export default function EditPostPage() {
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">Edit</span>
         </div>
-        
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
-        
         <PostForm 
           initialValues={initialValues} 
           onSubmit={handleSubmit} 

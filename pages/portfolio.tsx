@@ -12,7 +12,7 @@ import {
   ExternalLink,
   Star,
   Users,
-  Clock,
+  Clock,;
   TrendingUp,;
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
@@ -120,7 +120,7 @@ export default function PortfolioPage() {
       image: '/api/placeholder/600/400',
       icon: Rocket,
       color: 'from-yellow-500 to-orange-500',
-    },
+    },;
   ];
 
   const stats = [
@@ -161,9 +161,7 @@ export default function PortfolioPage() {
           content='Explore our portfolio of innovative technology projects and solutions.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/portfolio' />      </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -179,7 +177,6 @@ export default function PortfolioPage() {
               Innovative technology solutions that drive business transformation
               and growth            </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -193,7 +190,6 @@ export default function PortfolioPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -217,7 +213,6 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className='py-8 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -237,7 +232,6 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
-
       {/* Projects Grid */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -261,12 +255,10 @@ export default function PortfolioPage() {
                       {project.category}
                     </span>
                   </div>
-
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {project.title}
                   </h3>
                   <p className='text-white/70 mb-6'>{project.description}</p>
-
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider'>
                       Technologies
@@ -281,7 +273,6 @@ export default function PortfolioPage() {
                       ))}
                     </div>
                   </div>
-
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider'>
                       Results
@@ -297,7 +288,6 @@ export default function PortfolioPage() {
                       ))}
                     </ul>
                   </div>
-
                   <div className='flex items-center justify-between'>
                     <span className='text-sm text-white/60'>
                       Client: {project.client}
@@ -311,7 +301,6 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -337,7 +326,6 @@ export default function PortfolioPage() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
 ),

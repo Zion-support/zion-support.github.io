@@ -84,7 +84,6 @@ export default function WhitepaperPage() {
         <meta property="og:title" content={whitepaper.title} />
         <meta property="og:description" content={whitepaper.description} />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           {/* Breadcrumb */}
@@ -93,7 +92,6 @@ export default function WhitepaperPage() {
               ← Back to Resources
             </Link>
           </nav>
-
           {/* Header */}
           <header className="text-center mb-16">
             <div className="mb-6">
@@ -115,14 +113,12 @@ export default function WhitepaperPage() {
               <span>{whitepaper.publishDate}</span>
             </div>
           </header>
-
           {/* Whitepaper Content */}
           <div className="max-w-4xl mx-auto">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Executive Summary</h2>
               <p className="text-lg text-white/80">{whitepaper.content.executiveSummary}</p>
             </section>
-
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Key Topics Covered</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -136,12 +132,10 @@ export default function WhitepaperPage() {
                 ))}
               </div>
             </section>
-
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-green-400">Target Audience</h2>
               <p className="text-lg text-white/80">{whitepaper.content.targetAudience}</p>
             </section>
-
             {/* Download Section */}
             <section className="mb-12">
               <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center">
@@ -157,7 +151,6 @@ export default function WhitepaperPage() {
                 </p>
               </div>
             </section>
-
             {/* Related Whitepapers */}
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
@@ -182,7 +175,6 @@ export default function WhitepaperPage() {
                   ))}
               </div>
             </section>
-
             {/* CTA */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
@@ -204,5 +196,5 @@ export default function WhitepaperPage() {
         </main>
       </div>
     </>
-  )
+  );
 };

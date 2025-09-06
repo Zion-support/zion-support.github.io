@@ -6,7 +6,7 @@ export default function FAQ() {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",
-    site: "https://ziontechgroup.com",
+    site: "https://ziontechgroup.com",;
   };
   const faqs = [
     {
@@ -75,7 +75,6 @@ export default function FAQ() {
         />
         <link rel="canonical" href={`${contact.site}/faq`} />
       </Head>
-
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
@@ -93,7 +92,6 @@ export default function FAQ() {
             </p>
           </div>
         </section>
-
         {/* FAQ Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
@@ -112,7 +110,6 @@ export default function FAQ() {
             </div>
           </div>
         </section>
-
         {/* Contact CTA */}
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
@@ -124,7 +121,6 @@ export default function FAQ() {
               your specific questions and to discuss how we can help your
               business.
             </p>
-
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href={`tel:${contact.phone.replace(/[^\d+]/g, "")}`}

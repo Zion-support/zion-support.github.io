@@ -10,7 +10,7 @@ export default function SpaceTechnologyAIPlatform() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
+    website: 'https://ziontechgroup.com',;
   };
 
   const features = [
@@ -83,9 +83,7 @@ export default function SpaceTechnologyAIPlatform() {
             rel='canonical'
             href='https://ziontechgroup.com/space-technology-ai-platform'
           />        </Head>
-
         <EnhancedNavigation2026 />
-
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30'></div>
@@ -101,7 +99,6 @@ export default function SpaceTechnologyAIPlatform() {
                   2026 Revolutionary Innovation
                 </span>
               </div>
-
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent'>
                   Space Technology
@@ -109,13 +106,11 @@ export default function SpaceTechnologyAIPlatform() {
                 <br />
                 <span className='text-white'>AI Platform</span>
               </h1>
-
               <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
                 Revolutionary AI platform that combines space technology with
                 artificial intelligence to enable autonomous space exploration,
                 satellite operations, and space data analysis.
               </p>
-
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12'>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -125,7 +120,6 @@ export default function SpaceTechnologyAIPlatform() {
                   <span className='text-2xl font-bold'>$3,999</span>
                   <span>/month</span>
                 </motion.div>
-
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -135,7 +129,6 @@ export default function SpaceTechnologyAIPlatform() {
                   <ArrowRight className='w-5 h-5' />
                 </motion.div>
               </div>
-
               <div className='flex items-center justify-center space-x-8 text-gray-400'>
                 <div className='flex items-center space-x-2'>
                   <CheckCircle className='w-5 h-5 text-green-400' />
@@ -152,7 +145,6 @@ export default function SpaceTechnologyAIPlatform() {
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -172,7 +164,6 @@ export default function SpaceTechnologyAIPlatform() {
                 operations and autonomous exploration
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (
                 <motion.div
                   key={feature}
@@ -199,7 +190,6 @@ export default function SpaceTechnologyAIPlatform() {
             </div>
           </div>
         </section>
-
         {/* Market Position Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -219,7 +209,6 @@ export default function SpaceTechnologyAIPlatform() {
                 capabilities
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -250,7 +239,6 @@ export default function SpaceTechnologyAIPlatform() {
                     </span>                  </div>
                 </div>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -290,7 +278,6 @@ export default function SpaceTechnologyAIPlatform() {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -310,7 +297,6 @@ export default function SpaceTechnologyAIPlatform() {
                 intelligence
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map((useCase, index) => (
                 <motion.div
                   key={useCase}
@@ -337,7 +323,6 @@ export default function SpaceTechnologyAIPlatform() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
@@ -356,7 +341,6 @@ export default function SpaceTechnologyAIPlatform() {
                 Technology AI Platform to achieve unprecedented exploration
                 capabilities and operational efficiency.
               </p>
-
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8'>                <motion.a
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
@@ -375,7 +359,6 @@ export default function SpaceTechnologyAIPlatform() {
                   <Mail className='w-5 h-5' />                  <span>Email Us</span>
                 </motion.a>
               </div>
-
               <div className='p-6 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20'>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
                   <div>
@@ -403,3 +386,5 @@ export default function SpaceTechnologyAIPlatform() {
       </div>
     </UltraAdvancedFuturisticBackground>
 );
+
+}

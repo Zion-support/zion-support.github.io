@@ -9,8 +9,8 @@ export default function Ecommerce() {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'E-commerce Platform',
-    description:
-      'Sell or purchase AI solutions and IT equipment through our secure marketplace.',
+    description:;
+      'Sell or purchase AI solutions and IT equipment through our secure marketplace.',;
     url: 'https://app.ziontechgroup.com/features/e-commerce',  };    "@context": "https://schema.org"
     "@type": "WebPage"
     "name": "E-commerce Platform"

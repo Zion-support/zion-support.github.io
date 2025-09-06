@@ -9,7 +9,7 @@ interface SuggestedJobsProps {
   talentId?: string
 }
 
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
   const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
   const { 
@@ -54,7 +54,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
               {newMatches.length} New
             </Badge>
           </div>
-          
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -74,7 +73,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
-          
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -94,7 +92,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Applied Jobs</h3>
           </div>
-          
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
               <JobMatchesCard 

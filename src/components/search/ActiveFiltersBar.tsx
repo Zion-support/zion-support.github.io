@@ -108,7 +108,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
   return (
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
-      
       {activeFilters.map(filter => (
         <Badge 
           key = {filter.key,}
@@ -159,5 +158,5 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
         Clear all
       </button>
     </div>
-  )}
-'"
+  )};
+'";

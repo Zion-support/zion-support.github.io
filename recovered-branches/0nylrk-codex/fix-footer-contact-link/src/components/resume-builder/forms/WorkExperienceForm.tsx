@@ -33,7 +33,7 @@ interface WorkExperienceFormProps {
   onBack: () => void
 }
 
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -116,7 +116,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           Add your work history to showcase your professional experience.
         </p>
       </div>
-
       {workExperiences.length > 0 && (
         <div className="space-y-4">
           <h3 className="text-md font-medium">Added Experience</h3>
@@ -170,7 +169,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Experience' : 'Add Experience'}
         </h3>
-
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -202,7 +200,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 )}
               />
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
@@ -262,7 +259,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 )}
               </div>
             </div>
-
             <FormField
               control={form.control}
               name="location"
@@ -326,13 +322,11 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               >
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
-
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
-
                 {!editingId && workExperiences.length > 0 && (
                   <Button type="button" onClick={onComplete}>
                     Next

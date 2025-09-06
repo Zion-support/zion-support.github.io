@@ -7,14 +7,14 @@ import {
   Check,
   ArrowRight,
   Brain,
-  Star,
+  Star,;
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
-    s.link.endsWith("/quantum-ai-brain-computer-interface"),
+    s.link.endsWith("/quantum-ai-brain-computer-interface"),;
   );
   if (!service) return null;
 

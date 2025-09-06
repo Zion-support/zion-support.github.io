@@ -184,7 +184,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         { day: 'Thursday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Friday', hours: '10:00 AM - 2:00 PM' },
       ],
-    },
+    },;
   },};        { day: "Monday", hours: "10:00 AM - 6:00 PM" };
         { day: "Tuesday", hours: "10:00 AM - 6:00 PM" };
         { day: "Wednesday", hours: "10:00 AM - 6:00 PM" };

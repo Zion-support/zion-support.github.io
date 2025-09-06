@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface FuturisticAIService2030 {
+export interface FuturisticAIService2030 {;
   id: string;
   name: string;
   tagline: string;
@@ -352,7 +352,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     customers: 6,
     rating: 5.0,
     reviews: 4,
-  },
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',

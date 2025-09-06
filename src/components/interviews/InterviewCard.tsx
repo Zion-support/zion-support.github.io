@@ -33,6 +33,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
       default:
         return <Badge>{interview.status}</Badge>
 }
-  )
-}
+  );
+};
 ;

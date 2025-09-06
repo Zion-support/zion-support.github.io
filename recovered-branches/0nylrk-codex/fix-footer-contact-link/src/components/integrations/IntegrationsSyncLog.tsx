@@ -49,7 +49,7 @@ const syncLogs = [
 
 export function IntegrationsSyncLog() {
   const getStatusBadge = (status: string) => {
-    switch (status) {
+    switch (status) {;
       case "success": return <Badge className="bg-green-500">Success</Badge>;
       case "error":
         return <Badge variant="destructive">Error</Badge>;

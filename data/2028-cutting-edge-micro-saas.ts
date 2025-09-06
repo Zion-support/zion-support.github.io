@@ -1,4 +1,4 @@
-export interface CuttingEdgeMicroSaas2028 {
+export interface CuttingEdgeMicroSaas2028 {;
   id: string;
   name: string;
   tagline: string;
@@ -37,7 +37,7 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
-  },
+  },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"

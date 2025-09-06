@@ -98,7 +98,7 @@ function getExistingRootPageSlugs(): Set<string> {
 export async function getStaticPaths() {
 	const services = getAllServices(),
 	const slugs = new Set<string>(),
-	 })),
+	 })),;
 		fallback: false;
 	}
 
@@ -146,7 +146,6 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 							2;
 							);}
 				/>;			</Head>
-
           {/* Service Details */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <Card className="p-8">
@@ -170,7 +169,6 @@ export default function RootServiceDetailPage({ service }: { service: Service })
                 </div>
               </div>
             </Card>
-
             <Card className="p-8">
               <h2 className="text-2xl font-bold text-white mb-6">Features</h2>
               <ul className="space-y-3">
@@ -183,7 +181,6 @@ export default function RootServiceDetailPage({ service }: { service: Service })
               </ul>
             </Card>
           </div>
-
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
@@ -195,7 +192,6 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 								))}
 							</ul>
 						</Card>
-
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
 							<div className="flex flex-wrap gap-2">
@@ -205,7 +201,6 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 							</div>
 						</Card>
 					</div>
-
 					<div className="space-y-6">
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<div className="text-3xl font-bold text-white">{service.price} <span className="text-base text-gray-400">{service.period}</span></div>
@@ -224,7 +219,6 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
-
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
 							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
@@ -237,3 +231,8 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 		</UltraFuturisticBackground>
 );
 ;
+
+}
+}
+}
+}

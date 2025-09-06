@@ -11,20 +11,20 @@ import {
   MapPin,
   Rocket,
   Brain,
-  Atom,
+  Atom,;
   Shield,;
 } from 'lucide-react';
 interface UltraFuturisticNavigationProps {
   className?: string;
 
 export default function UltraFuturisticNavigation({
-  className = '',
+  className = '',;
 }: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
 interface UltraFuturisticNavigationProps {
   className?: string
 }
 
-export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {
+export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -127,7 +127,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                 Revolutionary Technology
               </div>            </div>
           </motion.div>
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
@@ -142,7 +141,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
               <div className="text-xs text-gray-400 -mt-1">Revolutionary Technology</div>
             </div>
           </motion.div>
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
@@ -160,7 +158,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                     </button>                      <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                     </button>
-                    
                     {/* Dropdown Menu */}
                     <AnimatePresence>
                       {activeDropdown === item.name && (
@@ -229,7 +226,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
               </div>
             ))}
           </div>
-
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>
             {/* Contact Info */}
@@ -242,7 +238,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                 <Phone className="w-4 h-4 text-cyan-400" />
               </div>
             </div>
-
             {/* CTA Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
@@ -258,7 +253,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
               </Link>
             </motion.div>
           </div>
-
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>
             <button
@@ -278,7 +272,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -315,7 +308,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                           }`}
                         />
                       </button>
-                      
                       {activeDropdown === item.name && (
                         <motion.div
                           initial={{ opacity: 0, y: -10 }}
@@ -381,7 +373,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-sm'>{contactInfo.address}</span>                </div>
               </div>
-
               {/* Mobile CTA */}
               <div className='pt-4'>                  <span>{contactInfo.mobile}</span>
                 </div>
@@ -394,7 +385,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                   <span className="text-sm">{contactInfo.address}</span>
                 </div>
               </div>
-
               {/* Mobile CTA */}
               <div className='pt-4'>
                 <Link
@@ -417,4 +407,11 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
       </AnimatePresence>
     </nav>
 );
+}
+
+}
+}
+}
+}
+}
 }

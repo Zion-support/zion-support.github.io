@@ -5,10 +5,10 @@ export type AdminActionType =
   | 'flag_content'
   | 'remove_content'
   | 'investigate'
-  | 'dismiss'
+  | 'dismiss';
   | 'escalate';
 
-export interface AdminAction {
+export interface AdminAction {;
   id: string;
   caseId: string;
   type: AdminActionType;
@@ -20,7 +20,7 @@ export interface AdminAction {
   status: 'pending' | 'executed' | 'failed',
 }
 
-export interface FraudDetectionResult {
+export interface FraudDetectionResult {;
   isFraud: boolean;
   confidence: number;
   reasons: string[];
@@ -28,7 +28,7 @@ export interface FraudDetectionResult {
   metadata: Record<string, any>;
 }
 
-export interface FraudDetectionConfig {
+export interface FraudDetectionConfig {;
   enabled: boolean;
   rules: {
     suspiciousActivity: {

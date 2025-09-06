@@ -13,7 +13,7 @@ import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {ExportToCSV} from "@/components/quotes/ExportToCSV";
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
 
-export default function QuoteManager() {
+export default function QuoteManager() {;
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
   
@@ -75,10 +75,8 @@ export default function QuoteManager() {
               </div>
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
-            
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />
-            
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -91,14 +89,12 @@ export default function QuoteManager() {
               setDateRange={setDateRange}
               onReset={handleResetFilters}
             />
-            
             {/* Tabs for Active/Archived */}
             <Tabs defaultValue="active" className="mb-6">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
                 <TabsTrigger value="active">Active Quotes</TabsTrigger>
                 <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
               </TabsList>
-              
               <TabsContent value="active">
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
@@ -112,7 +108,6 @@ export default function QuoteManager() {
                   />
                 </Card>
               </TabsContent>
-              
               <TabsContent value="archived">
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
@@ -129,7 +124,6 @@ export default function QuoteManager() {
             </Tabs>
           </div>
         </div>
-        
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}

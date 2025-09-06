@@ -11,7 +11,7 @@ interface MilestoneCreatorProps {
   projectType?: string
 }
 
-export function MilestoneCreator({
+export function MilestoneCreator({;
   onSubmit;
   isSubmitting;
   onCancel;

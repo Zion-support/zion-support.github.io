@@ -8,7 +8,7 @@ interface MobileBottomNavProps {
   unreadCount?: number
 }
 
-export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;

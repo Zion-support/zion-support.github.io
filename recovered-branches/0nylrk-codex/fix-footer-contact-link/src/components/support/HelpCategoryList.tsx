@@ -20,7 +20,7 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
               article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
               article.content.toLowerCase().includes(searchQuery.toLowerCase())
           )
-      )
+      );
     : categories;
 
   if (filteredCategories.length === 0) {

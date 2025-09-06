@@ -18,3 +18,4 @@ export interface FlagResult {
 }
 
 export interface SignupCheckResult extends AnalysisResult {}
+;

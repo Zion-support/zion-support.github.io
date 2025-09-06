@@ -25,7 +25,6 @@ export default function CaseStudyPage() {
         <meta name="description" content={`Learn how ${caseStudy.company} achieved ${caseStudy.results[0]} with AI automation.`} />
         <meta name="keywords" content="AI automation, content generation, marketing, case study, NLP, SEO automation" />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
         <main className="pt-20 pb-16">
           <div className="max-w-4xl mx-auto px-6">
@@ -35,7 +34,6 @@ export default function CaseStudyPage() {
                 ← Back to Case Studies
               </Link>
             </nav>
-
             {/* Header */}
             <header className="mb-12 text-center">
               <div className="mb-4">
@@ -50,7 +48,6 @@ export default function CaseStudyPage() {
                 <span>Team: {caseStudy.teamSize}</span>
               </div>
             </header>
-
             {/* Challenge */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>
@@ -58,7 +55,6 @@ export default function CaseStudyPage() {
                 <p className="text-white/90 text-lg">{caseStudy.challenge}</p>
               </div>
             </section>
-
             {/* Solution */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>
@@ -66,7 +62,6 @@ export default function CaseStudyPage() {
                 <p className="text-white/90 text-lg">{caseStudy.solution}</p>
               </div>
             </section>
-
             {/* Technologies */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
@@ -78,7 +73,6 @@ export default function CaseStudyPage() {
                 ))}
               </div>
             </section>
-
             {/* Results */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
@@ -95,7 +89,6 @@ export default function CaseStudyPage() {
                 ))}
               </div>
             </section>
-
             {/* Call to Action */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
@@ -124,5 +117,5 @@ export default function CaseStudyPage() {
         </main>
       </div>
     </>
-  )
+  );
 };

@@ -8,7 +8,7 @@ export type LanguageContextType = {
   currentLanguage: SupportedLanguage,
   changeLanguage: (lang: SupportedLanguage) => Promise<void>,
   isRTL: boolean,
-  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]
+  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[];
 };
 
 const supportedLanguages = [
@@ -40,7 +40,7 @@ interface LanguageProviderProps {
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
   children, 
   authState = { isAuthenticated: false, user: null } 
-}) => {
+}) => {;
   const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(

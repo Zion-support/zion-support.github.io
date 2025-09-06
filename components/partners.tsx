@@ -32,7 +32,7 @@ export default function PartnersPage() {
           </a>
         </div>
       </div>
-    </div>
+    </div>;
   );	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>

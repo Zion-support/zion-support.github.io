@@ -7,7 +7,7 @@ const localeLabelKey: Record<string, string> = {
   es: "lang.spanish",
   ar: "lang.arabic",
 };
-export default function LanguageSwitchPrompt() {
+export default function LanguageSwitchPrompt() {;
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
 

@@ -15,7 +15,7 @@ interface ListingCardProps {
   profileType?: 'service' | 'talent'
 }
 
-export function ListingCard({ 
+export function ListingCard({ ;
   id;
   title, 
   description, 
@@ -56,7 +56,6 @@ export function ListingCard({
         </div>
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
-        
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (

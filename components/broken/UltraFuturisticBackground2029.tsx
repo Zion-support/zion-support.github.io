@@ -146,7 +146,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
         className='absolute inset-0 w-full h-full'
         style={{ background: 'transparent' }}
       />
-
       {/* Animated gradient background */}
       <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/20 to-black'>
         <motion.div
@@ -171,7 +170,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
         className="absolute inset-0 w-full h-full"
         style={{ background: 'transparent' }}
       />
-      
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/20 to-black">
         <motion.div
@@ -188,7 +186,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
           }}
         />
       </div>
-
       {/* Floating geometric shapes */}
       <motion.div
         className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
@@ -210,7 +207,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
           ease: 'linear',
         }}
       />
-
       <motion.div
         className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
         animate={{
@@ -220,7 +216,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
           duration: 8,
           repeat: Infinity,
           ease: 'easeInOut',        }}      />
-
       <motion.div
         className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45'
         animate={{
@@ -231,7 +226,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
           repeat: Infinity,
           ease: 'linear',        }}
       />
-
       {/* Animated grid lines */}
       <div className='absolute inset-0 opacity-20'>          y: [0, -20, 0];
           opacity: [0.2, 0.5, 0.2]
@@ -257,7 +251,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
           ease: 'linear',          ease: "linear"
         }}
       />
-
       {/* Animated grid lines */}
       <div className='absolute inset-0 opacity-20'>
         <motion.div
@@ -293,7 +286,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
           }}
         />
       </div>
-
       {/* Quantum energy waves */}
       <div className='absolute inset-0'>
         <motion.div
@@ -324,7 +316,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
           }}
         />
       </div>
-
       {/* Holographic elements */}
       <motion.div
         className='absolute top-1/2 left-1/2 w-64 h-64 border border-cyan-400/20 rounded-full'
@@ -337,7 +328,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
           repeat: Infinity,
           ease: 'linear',        }}
       />
-
       <motion.div        className="absolute top-1/2 left-1/2 w-64 h-64 border border-cyan-400/20 rounded-full"
         animate={{
           rotate: [0, 360];
@@ -349,7 +339,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
           ease: 'linear',          ease: "linear"
         }}
       />
-
       <motion.div
         className='absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full'
         animate={{
@@ -361,7 +350,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
           repeat: Infinity,
           ease: 'linear',        }}
       />
-
       {/* Neural network connections */}
       <div className='absolute inset-0'>        className="absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full"
         animate={{
@@ -408,7 +396,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Data streams */}
       <div className='absolute inset-0 overflow-hidden'>
         {Array.from({ length: 5 }).map((_, i) => (
@@ -448,3 +435,6 @@ export default UltraFuturisticBackground2029;  )
 };
 
 export default UltraFuturisticBackground2029;
+
+}
+}

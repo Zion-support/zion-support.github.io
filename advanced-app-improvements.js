@@ -12,7 +12,7 @@ function createAdvancedMonitoring() {
   
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
-export class HealthChecker {
+export class HealthChecker {;
   constructor() {;
     this.checks = new Map();
     this.results = new Map();  }
@@ -40,7 +40,7 @@ export const healthChecker = new HealthChecker();`,
 
     'monitoring/performance-monitor.js': `// Performance monitoring system
 export class PerformanceMonitor {
-  constructor() {
+  constructor() {;
     this.metrics = new Map();
     this.observers = [];
   }
@@ -118,7 +118,7 @@ export const performanceMonitor = new PerformanceMonitor();`,
 
     'monitoring/error-tracker.js': `// Error tracking system
 export class ErrorTracker {
-  constructor() {
+  constructor() {;
     this.errors = [];
     this.errorCounts = new Map();  }
   trackError(error, context = {}) {
@@ -191,7 +191,7 @@ if (typeof window !== 'undefined') {
 
     'monitoring/analytics.js': `// Analytics tracking system
 export class AnalyticsTracker {
-  constructor() {
+  constructor() {;
     this.events = [];
     this.sessionId = this.generateSessionId();
   }
@@ -232,7 +232,7 @@ export const queryOptimizer = new QueryOptimizer();`,
     
     'database/connection-pool.js': `// Database connection pooling
 export class ConnectionPool {
-  constructor(options = {}) {
+  constructor(options = {}) {;
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
     this.connections = [];
@@ -338,3 +338,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
+
+}
+}
+}
+}
+}
+}

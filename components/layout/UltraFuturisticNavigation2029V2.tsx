@@ -58,8 +58,8 @@ import {
   Briefcase,
   Lightbulb,
   Award,
-  Clock,
-  CheckCircle,;} from 'lucide-react';import { 
+  Clock,;
+  CheckCircle,;} from 'lucide-react';import { ;
   Menu, X, Search, ChevronDown, ChevronRight;
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
   BookOpen, MessageCircle, Star, TrendingUp;
@@ -367,7 +367,7 @@ const quickLinks = [
   { name: 'Support', href: '/support', icon: MessageCircle },];  { name: 'Support', href: '/support', icon: MessageCircle }
 ];
 
-export default function UltraFuturisticNavigation2029V2() {
+export default function UltraFuturisticNavigation2029V2() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -418,7 +418,6 @@ export default function UltraFuturisticNavigation2029V2() {
               </div>
             </Link>
           </motion.div>
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
             {mainNavigation.map(item => (              <motion.div
@@ -442,13 +441,11 @@ export default function UltraFuturisticNavigation2029V2() {
                   <item.icon className='w-4 h-4' />
                   <span>{item.name}</span>
                 </Link>
-
                 {/* Hover effect */}
                 <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />              </motion.div>                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
               </motion.div>
             ))}
           </div>
-
           {/* Right side - Contact & Search */}
           <div className='hidden lg:flex items-center space-x-4'>
             {/* Search */}
@@ -470,7 +467,6 @@ export default function UltraFuturisticNavigation2029V2() {
                 className="pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64"
               />
             </div>
-
             {/* Contact Button */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -488,7 +484,6 @@ export default function UltraFuturisticNavigation2029V2() {
               </Link>
             </motion.div>
           </div>
-
           {/* Mobile menu button */}
           <div className='lg:hidden'>
             <button
@@ -508,7 +503,6 @@ export default function UltraFuturisticNavigation2029V2() {
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -530,7 +524,6 @@ export default function UltraFuturisticNavigation2029V2() {
                   onChange={e => setSearchQuery(e.target.value)}
                   className='w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50'                />
               </div>
-
               {/* Mobile Navigation Links */}
               <div className='space-y-2'>
                 {mainNavigation.map(item => (                  <Link
@@ -552,7 +545,6 @@ export default function UltraFuturisticNavigation2029V2() {
                   className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 />
               </div>
-
               {/* Mobile Navigation Links */}
               <div className='space-y-2'>
                 {mainNavigation.map(item => (              <div className="space-y-2">
@@ -570,7 +562,6 @@ export default function UltraFuturisticNavigation2029V2() {
                   </Link>
                 ))}
               </div>
-
               {/* Quick Links */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -601,7 +592,6 @@ export default function UltraFuturisticNavigation2029V2() {
                   ))}
                 </div>
               </div>
-
               {/* Contact Info */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -633,7 +623,6 @@ export default function UltraFuturisticNavigation2029V2() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Service Categories Dropdown */}
       <AnimatePresence>
         {activeCategory && (
@@ -663,7 +652,6 @@ export default function UltraFuturisticNavigation2029V2() {
                         </p>
                       </div>
                     </div>
-
                     <div className='space-y-3'>                      {category.services.map((service, index) => (
                         <Link
                           key={service.name}
@@ -682,7 +670,6 @@ export default function UltraFuturisticNavigation2029V2() {
                         <p className="text-sm text-gray-400">{category.description}</p>
                       </div>
                     </div>
-                    
                     <div className="space-y-3">
                       {category.services.map((service, index) => (
                         <Link

@@ -1,5 +1,5 @@
 // Message channel handler for real-time communication
-export class MessageChannelHandler {
+export class MessageChannelHandler {;
   private channels: Map<string, MessageChannel> = new Map();
 
   createChannel(id: string): MessageChannel {

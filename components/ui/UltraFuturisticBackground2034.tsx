@@ -151,7 +151,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
             'radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)',
         }}
       />
-
       {/* Animated Grid */}
       <div className='absolute inset-0 opacity-20'>
         <div
@@ -164,7 +163,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
             backgroundSize: '50px 50px',
           }}
         />      </div>
-
       {/* Floating Geometric Shapes */}
       <motion.div  }, []);
 
@@ -176,7 +174,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
         className="absolute inset-0 w-full h-full"
         style={{ background: 'radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)' }}
       />
-
       {/* Animated Grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
@@ -187,7 +184,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           backgroundSize: '50px 50px'
         }} />
       </div>
-
       {/* Floating Geometric Shapes */}
       <motion.div
         className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-full'
@@ -200,7 +196,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           repeat: Infinity,
           ease: 'linear',        }}
       />
-
       <motion.div        className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-full"
         animate={{
           rotate: 360,
@@ -212,7 +207,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           ease: 'linear',          ease: "linear"
         }}
       />
-
       <motion.div
         className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 transform rotate-45'
         animate={{
@@ -224,7 +218,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           repeat: Infinity,
           ease: 'linear',        }}
       />
-
       <motion.div        className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 transform rotate-45"
         animate={{
           rotate: -360,
@@ -236,7 +229,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           ease: 'linear',          ease: "linear"
         }}
       />
-
       <motion.div
         className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg'
         animate={{
@@ -257,7 +249,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           ease: 'linear',          ease: "linear"
         }}
       />
-
       {/* Energy Orbs */}
       <motion.div
         className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
@@ -270,7 +261,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           repeat: Infinity,
           ease: 'easeInOut',        }}
       />
-
       <motion.div        className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm"
         animate={{
           y: [0, -20, 0];
@@ -282,7 +272,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           ease: 'easeInOut',          ease: "easeInOut"
         }}
       />
-
       <motion.div
         className='absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-sm'
         animate={{
@@ -295,7 +284,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           ease: 'easeInOut',
           delay: 1,        }}
       />
-
       {/* Quantum Field Lines */}
       <div className='absolute inset-0'>        className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-sm"
         animate={{
@@ -350,7 +338,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Holographic Rings */}
       <motion.div
         className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full'
@@ -363,7 +350,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           repeat: Infinity,
           ease: 'linear',        }}
       />
-
       <motion.div        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full"
         animate={{
           rotate: 360,
@@ -375,7 +361,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           ease: 'linear',          ease: "linear"
         }}
       />
-
       <motion.div
         className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-400/20 rounded-full'
         animate={{
@@ -387,7 +372,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           repeat: Infinity,
           ease: 'linear',        }}
       />
-
       {/* Neural Network Nodes */}
       <div className='absolute inset-0'>        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-400/20 rounded-full"
         animate={{
@@ -440,7 +424,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Data Streams */}
       <div className='absolute inset-0 overflow-hidden'>
         {[...Array(6)].map((_, i) => (
@@ -480,7 +463,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Quantum Entanglement Effect */}
       <motion.div
         className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'
@@ -495,7 +477,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           repeat: Infinity,
           ease: 'easeInOut',        }}
       />
-
       <motion.div        className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full"
         animate={{
           boxShadow: [
@@ -507,7 +488,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           ease: 'easeInOut',          ease: "easeInOut"
         }}
       />
-
       <motion.div
         className='absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full'
         animate={{
@@ -533,7 +513,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           delay: 1
         }}
       />
-
       {/* Metaverse Portal Effect */}
       <motion.div
         className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full'
@@ -546,7 +525,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           repeat: Infinity,
           ease: 'linear',        }}
       />
-
       {/* AI Consciousness Waves */}
       <div className='absolute inset-0'>        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full"
         animate={{
@@ -607,3 +585,17 @@ export default UltraFuturisticBackground2034;  )
 };
 
 export default UltraFuturisticBackground2034;
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

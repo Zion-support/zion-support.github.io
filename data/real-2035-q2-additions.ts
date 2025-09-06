@@ -27,7 +27,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     icon: '📧',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/services/ai-email-responder',
+    link: 'https://ziontechgroup.com/services/ai-email-responder',;
     marketPosition: 'Competes with Superhuman/Front add-ons; turnkey for SMBs',
     targetAudience: 'Sales, support, founder-led teams',
     trialDays: 14,
@@ -796,7 +796,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     realService: true,
     technology: ['Git APIs', 'Static analysis'],
     integrations: ['GitHub', 'GitLab', 'Flagsmith'],
-    useCases: ['Cleanup debt', 'Reduce risk'],
+    useCases: ['Cleanup debt', 'Reduce risk'],;
     roi: 'Avoid outages; reduce toil',
     competitors: ['LaunchDarkly add-ons'],
     marketSize: '$1B flags',
@@ -942,7 +942,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     tagline: 'Schema diffs with CI gates and notifications',
     price: '$49',
     period: '/month',
-    description:
+    description:;
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
     features: [
       'Schema registry',

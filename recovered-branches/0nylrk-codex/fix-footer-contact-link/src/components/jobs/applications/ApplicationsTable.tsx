@@ -22,7 +22,7 @@ interface ApplicationsTableProps {
 export function ApplicationsTable({ 
   applications, 
   processingId, 
-  onViewApplication, 
+  onViewApplication, ;
   onStatusChange;
   onViewScore
 }: ApplicationsTableProps) {
@@ -121,7 +121,6 @@ export function ApplicationsTable({
           </TableBody>
         </Table>
       </div>
-      
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
         isOpen={hireModalOpen}

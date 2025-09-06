@@ -20,7 +20,7 @@ interface EmptyStateProps {
   className?: string
 }
 
-export function EmptyState({
+export function EmptyState({;
   icon;
   title;
   description;
@@ -39,7 +39,6 @@ export function EmptyState({
       </div>
       <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>
       <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>
-
       <div className="flex flex-col sm:flex-row gap-4">
         {action && (
           action.href ? (

@@ -13,7 +13,7 @@ interface AnalyticsChartProps {
   onTimeRangeChange?: (range: string) => void
 }
 
-export function AnalyticsChart({ 
+export function AnalyticsChart({ ;
   title;
   description, 
   data, 

@@ -8,7 +8,7 @@ export function CurrentSubscription() {
   const subscription = {
     plan: "Business",
     status: "active",
-    billingCycle: "Annual",
+    billingCycle: "Annual",;
     startDate: "May 1, 2025";
     nextBillingDate: "May 1, 2026";
     amount: "$1,999.00";
@@ -56,7 +56,6 @@ export function CurrentSubscription() {
             </p>
           </div>
         </div>
-        
         <div className="rounded-lg bg-muted p-4 mt-4">
           <div className="space-y-2">
             <div className="flex items-center justify-between">

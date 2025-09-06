@@ -25,9 +25,9 @@ import {
   MessageSquare,
   Sparkles,
   BarChart3,
-  Smartphone,
+  Smartphone,;
 } from 'lucide-react';
-export default function LandingPage() {
+export default function LandingPage() {;
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 
@@ -81,7 +81,6 @@ export default function LandingPage() {
         canonical='https://app.ziontechgroup.com/'      />
       <Header />
       <HeroSection />
-
       {/* Quick Access Tools Section */}
       <section className='py-16 bg-zion-blue-dark'>
         <div className='container mx-auto px-4'>
@@ -93,7 +92,6 @@ export default function LandingPage() {
               {t('home.tools_description')}
             </p>
           </div>
-
           <div
             className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}
           >
@@ -127,34 +125,27 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
       <CategoriesSection />
       <BenefitsSection />
       <CategoriesSection />
       <BenefitsSection />
-      
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
-
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
       <CategoriesSection />
       <BenefitsSection />
-      
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
-      
       <HowItWorksSection />
       <FeaturedListingsSection />
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
-
-      {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />      
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
-      
+      {/* Add social share section to encourage users to spread the word */}
+      <SocialShareSection />
       <FloatingCTA />
     </div>
   );

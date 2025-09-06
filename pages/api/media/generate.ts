@@ -12,7 +12,7 @@ export default async function handler(
       date = new Date().toISOString().substring(0, 10),
       raiseAmount,
       description = "Innovative technology company",
-      contactEmail = "press@zion.com",
+      contactEmail = "press@zion.com",;
     } = req.body || {};
 
     if (req.method !== "POST") {

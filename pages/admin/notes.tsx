@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react',
+import { useEffect, useState } from 'react',;
 ;
 type Note = {
   id: string,
@@ -38,7 +38,6 @@ export default function AdminNotesConsole() {
           <span>Admin</span>
         </label>
       </div>
-
       {loading ? (
         <div>Loading…</div>
       ) : notes.length === 0 ? (
@@ -55,5 +54,5 @@ export default function AdminNotesConsole() {
         </div>
       )}
     </div>
-  )
+  );
 };

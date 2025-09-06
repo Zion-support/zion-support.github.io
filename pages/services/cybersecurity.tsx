@@ -12,7 +12,7 @@ import {
   CheckCircle,
   Star,
   Users,
-  Clock,
+  Clock,;
   TrendingUp,;
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
@@ -71,7 +71,7 @@ export default function CybersecurityServicesPage() {
       price: 'From $15,000',
       icon: Zap,
       color: 'from-emerald-500 to-teal-500',
-    },
+    },;
   ];
 
   const stats = [
@@ -101,9 +101,7 @@ export default function CybersecurityServicesPage() {
           rel='canonical'
           href='https://ziontechgroup.com/services/cybersecurity'
         />      </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -119,7 +117,6 @@ export default function CybersecurityServicesPage() {
               Advanced security solutions that protect your digital assets and
               ensure business continuity            </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -137,7 +134,6 @@ export default function CybersecurityServicesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -161,7 +157,6 @@ export default function CybersecurityServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -179,7 +174,6 @@ export default function CybersecurityServicesPage() {
               from evolving threats
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -220,7 +214,6 @@ export default function CybersecurityServicesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -246,7 +239,6 @@ export default function CybersecurityServicesPage() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
 ),
@@ -269,3 +261,7 @@ export default function CybersecurityServicesPage() {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+
+}
+}
+}

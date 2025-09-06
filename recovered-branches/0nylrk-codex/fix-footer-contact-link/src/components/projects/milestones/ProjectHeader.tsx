@@ -7,7 +7,7 @@ interface ProjectHeaderProps {
   title: string
 }
 
-export function ProjectHeader({ title }: ProjectHeaderProps) {
+export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
   
   return (

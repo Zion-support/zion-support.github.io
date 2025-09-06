@@ -12,7 +12,7 @@ interface ProjectReviewSectionProps {
   project: Project
 }
 
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
   const { user } = useAuth();
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
@@ -44,7 +44,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           Reviews are visible once the project is completed and both parties submit feedback
         </CardDescription>
       </CardHeader>
-      
       <CardContent>
         {isCompleted ? (
           <div className="space-y-6">
@@ -91,7 +90,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           </div>
         )}
       </CardContent>
-      
       {/* Review Modal */}
       {(isClient || isTalent) && (
         <LeaveReviewModal

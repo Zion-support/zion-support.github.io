@@ -22,4 +22,4 @@ export default function AIConsciousnessEvolution2025() {
 			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
 		/>
 	)
-}
+};

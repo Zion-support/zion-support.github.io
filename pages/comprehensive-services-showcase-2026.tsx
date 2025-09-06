@@ -17,7 +17,7 @@ import {
   Database,
   Globe,
   Robot,
-  Cube,
+  Cube,;
   Sparkles,;
 } from 'lucide-react';
 
@@ -228,7 +228,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Search and Filters */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
         <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20'>
@@ -244,7 +243,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 className='w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400'
               />
             </div>
-
             {/* Category Filter */}
             <div>
               <select
@@ -263,7 +261,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 ))}
               </select>
             </div>
-
             {/* Price Range Filter */}
             <div>
               <select
@@ -282,7 +279,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 ))}
               </select>
             </div>
-
             {/* Sort By */}
             <div>
               <select
@@ -310,7 +306,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
-
 {/* Services Grid */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
         <div className='mb-8'>
@@ -321,7 +316,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
             Discover innovative solutions tailored to your business needs
           </p>
         </div>
-
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {sortedServices.map((service, index) => (
             <motion.div
@@ -352,10 +346,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   </div>
                 )}
               </div>
-
               {/* Service Details */}
               <p className='text-gray-300 mb-4'>{service.tagline}</p>
-
               {/* Price and Trial */}
               <div className='flex items-center justify-between mb-4'>
                 <div className='text-2xl font-bold text-white'>
@@ -368,7 +360,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   {service.trialDays} days free trial
                 </div>
               </div>
-
               {/* Features */}
               <div className='mb-4'>
                 <h4 className='text-sm font-semibold text-white mb-2'>
@@ -386,7 +377,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   ))}
                 </ul>
               </div>
-
               {/* Stats */}
               <div className='grid grid-cols-3 gap-4 mb-4 text-center'>
                 <div>
@@ -408,7 +398,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   <div className='text-xs text-gray-400'>Setup</div>
                 </div>
               </div>
-
               {/* Market Info */}
               <div className='mb-4 p-3 bg-white/5 rounded-lg'>
                 <div className='text-xs text-gray-300 mb-1'>
@@ -418,7 +407,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   Growth Rate: {service.growthRate}
                 </div>
               </div>
-
               {/* CTA Button */}
               <a
                 href={service.link}
@@ -428,7 +416,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               >
                 Learn More & Get Started
               </a>
-
               {/* Contact Info */}
               <div className='mt-4 text-center'>
                 <div className='text-xs text-gray-400'>
@@ -442,7 +429,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Contact Section */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30'>

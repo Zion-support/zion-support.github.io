@@ -12,7 +12,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
-    { id: "summary", label: "Summary" }
+    { id: "summary", label: "Summary" };
   ];
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
@@ -34,7 +34,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           }}
         />
       </div>
-      
       <div className="flex justify-between relative">
         {steps.map((step) => {
           const status = getStepStatus(step.id);

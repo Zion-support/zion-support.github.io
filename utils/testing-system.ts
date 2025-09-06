@@ -4,7 +4,7 @@ export class TestingSystem {
     action: 'click' | 'type' | 'hover'
   ) {
     switch (action) {
-      case 'click':
+      case 'click':;
         element.click();
         break;
       case 'type': // Handle typing
@@ -13,3 +13,5 @@ export class TestingSystem {
         break;
     }
   }
+
+}

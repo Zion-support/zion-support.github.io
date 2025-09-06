@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { Web3Login } from "./Web3Login";
 export function SocialLogin() {
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
     useAuth();
 
   return (
@@ -18,7 +18,6 @@ export function SocialLogin() {
           </span>
         </div>
       </div>
-
       <div className="mt-6 grid grid-cols-4 gap-3">
         <Button
           type="button"

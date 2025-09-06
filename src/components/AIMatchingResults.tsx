@@ -11,7 +11,7 @@ interface AIMatchingResultsProps {
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
   isLoading?: boolean
-  projectDescription?: string
+  projectDescription?: string;
   serviceType?: string;interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem,) => void,
@@ -116,7 +116,6 @@ export function AIMatchingResults({
             Equipment ({categories.equipment.length})
           </TabsTrigger>
         </TabsList>
-
         {Object.entries(categories).map(([tab, items]) => (
           <TabsContent key={tab} value={tab} className='mt-4 space-y-3'>
             {items.length > 0 ? (
@@ -148,7 +147,6 @@ export function AIMatchingResults({
                               </AvatarFallback>
                             )}
                           </Avatar>
-
                           <div className='flex-1'>
                             <div className='flex justify-between'>
                               <div>
@@ -174,7 +172,6 @@ export function AIMatchingResults({
                                 </div>
                               )}
                             </div>
-
                             <div className='mt-2 flex flex-wrap gap-1'>
                               <Badge variant='outline'>{match.category}</Badge>
                               {match.skills &&
@@ -202,4 +199,6 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   )
+}
+;
 }

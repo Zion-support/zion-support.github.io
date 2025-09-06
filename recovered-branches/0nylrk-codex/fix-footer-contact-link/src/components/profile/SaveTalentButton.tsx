@@ -21,3 +21,4 @@ export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButton
     </Button>
   )
 }
+;

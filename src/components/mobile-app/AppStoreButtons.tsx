@@ -12,8 +12,8 @@ interface AppStoreButtonsProps {
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
   className
-  appStoreUrl = "#"
-  googlePlayUrl = "#"
+  appStoreUrl = "#";
+  googlePlayUrl = "#";
 };  className,
   appStoreUrl = "#",
   googlePlayUrl = "#",
@@ -52,7 +52,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
           <div className="text-xl font-semibold">App Store</div>
         </div>
       </a>
-
       <a
         href = {googlePlayUrl,}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"

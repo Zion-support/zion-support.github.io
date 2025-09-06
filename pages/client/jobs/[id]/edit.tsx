@@ -3,7 +3,7 @@ import useSWR from 'swr';
 import {useEffect, useState} from 'react';
 
 const fetcher = (url: string) => fetch(url).then(r => r.json());
-export default function EditJobPage() {
+export default function EditJobPage() {;
   const router = useRouter();
   const { id } = router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
@@ -68,3 +68,5 @@ export default function EditJobPage() {
       </div>
     </div>
 );
+
+}

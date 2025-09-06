@@ -9,7 +9,7 @@ interface StepProps {
   className?: string
 }
 
-export function Step({
+export function Step({;
   status;
   label;
   description;
@@ -43,7 +43,6 @@ export function Step({
           </span>
         )}
       </div>
-
       <div className="ml-4 min-w-0">
         <h3
           className={cn("text-sm font-medium", {
@@ -66,7 +65,7 @@ interface StepsProps {
   children: React.ReactNode
 }
 
-export function Steps({ currentStep, className, children }: StepsProps) {
+export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children);
   
   return (
@@ -83,7 +82,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {
             status})
         })}
       </ol>
-      
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div

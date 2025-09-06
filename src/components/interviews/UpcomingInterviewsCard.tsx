@@ -25,8 +25,8 @@ export function UpcomingInterviewsCard() {
           )
           .sort(
             (a, b) =>
-              parseISO(a.scheduled_date).getTime() -
-              parseISO(b.scheduled_date).getTime()          )
+              parseISO(a.scheduled_date).getTime() -;
+              parseISO(b.scheduled_date).getTime()          );
           .slice(0, 3); // Take only the next 3 interviews
 
         setUpcomingInterviews(upcoming)
@@ -159,7 +159,6 @@ export function UpcomingInterviewsCard() {
             )
           })}
         </div>
-
         <div className='mt-4 pt-3 border-t border-zion-blue-light/40'>
           <Button asChild size='sm' variant='outline' className='w-full'>
             <Link href='/interviews'>View All Interviews</Link>

@@ -77,7 +77,6 @@ export function MobileChatView({
             aria-label='Go back'          >
             <ChevronLeft className='h-5 w-5' />
           </Button>
-
           <div className='flex items-center flex-1 gap-3 mx-2'>
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
@@ -92,7 +91,6 @@ export function MobileChatView({
               </p>
             </div>
           </div>
-
           <div className='flex'>
             <Button
               variant='ghost'
@@ -101,7 +99,6 @@ export function MobileChatView({
               aria-label='Start audio call'            >
               <Phone className='h-5 w-5' />
             </Button>
-
             <Button
               variant='ghost'
               size='icon'
@@ -109,14 +106,12 @@ export function MobileChatView({
               aria-label='Start video call'            >
               <Video className='h-5 w-5' />
             </Button>
-
             <Button variant='ghost' size='icon' aria-label='More options'>
               <MoreVertical className='h-5 w-5' />
             </Button>
           </div>
         </div>
       </header>
-
       <div className='flex-1 overflow-y-auto p-4 space-y-4'>
         {messages.map(message => (
           <div
@@ -153,13 +148,11 @@ export function MobileChatView({
           </div>
         ))}
       </div>
-
       <div className='sticky bottom-0 bg-background border-t border-border p-2'>
         <div className='flex items-center gap-2'>
           <Button variant='ghost' size='icon' aria-label='Attach file'>
             <PaperclipIcon className='h-5 w-5' />
           </Button>
-
           <Input
             value={newMessage}
             onChange={e => setNewMessage(e.target.value)}
@@ -178,6 +171,8 @@ export function MobileChatView({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 ;
+}
+}

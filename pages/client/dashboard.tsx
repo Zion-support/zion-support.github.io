@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
-export default function ClientDashboard() {
+export default function ClientDashboard() {;
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
 
   if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading…</div>;
@@ -77,3 +77,5 @@ export default function ClientDashboard() {
       </div>
     </div>
 );
+
+}

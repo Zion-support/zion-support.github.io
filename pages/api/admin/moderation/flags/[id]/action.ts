@@ -23,6 +23,6 @@ ban: 'banned'},
     return res.status(200).json({ flag })
   }
 
-  res.setHeader('AllowPOST'),
+  res.setHeader('AllowPOST'),;
   return res.status(405).end('Method Not Allowed');
 };

@@ -1,12 +1,12 @@
 
-export interface ResumeBasicInfo {
+export interface ResumeBasicInfo {;
   id?: string;
   title: string;
   headline?: string,
   summary?: string
 }
 
-export interface WorkExperience {
+export interface WorkExperience {;
   id?: string;
   company_name: string;
   role_title: string;
@@ -18,7 +18,7 @@ export interface WorkExperience {
   location?: string
 }
 
-export interface Education {
+export interface Education {;
   id?: string;
   institution: string;
   degree: string;
@@ -31,7 +31,7 @@ export interface Education {
   location?: string
 }
 
-export interface Skill {
+export interface Skill {;
   id?: string;
   name: string;
   proficiency?: number;
@@ -39,7 +39,7 @@ export interface Skill {
   years_experience?: number
 }
 
-export interface Certification {
+export interface Certification {;
   id?: string;
   name: string;
   issuing_organization: string;
@@ -49,7 +49,7 @@ export interface Certification {
   credential_url?: string
 }
 
-export interface PortfolioProject {
+export interface PortfolioProject {;
   id?: string;
   title: string;
   description?: string;
@@ -60,7 +60,7 @@ export interface PortfolioProject {
   pdf_url?: string
 }
 
-export interface Resume {
+export interface Resume {;
   id?: string;
   user_id?: string;
   basic_info: ResumeBasicInfo;

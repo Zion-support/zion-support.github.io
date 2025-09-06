@@ -8,10 +8,10 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 
-export function UserMenu() {
+export function UserMenu() {;
   const { user, logout } = useAuth();
   const { toast } = useToast();
 

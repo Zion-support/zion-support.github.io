@@ -22,3 +22,4 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
     </div>
   )
 }
+;

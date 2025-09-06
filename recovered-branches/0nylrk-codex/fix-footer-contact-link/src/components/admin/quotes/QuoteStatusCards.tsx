@@ -29,7 +29,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
           </p>
         </CardContent>
       </Card>
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -43,7 +42,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
           </p>
         </CardContent>
       </Card>
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -57,7 +55,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
           </p>
         </CardContent>
       </Card>
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -71,7 +68,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
           </p>
         </CardContent>
       </Card>
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -85,6 +81,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
           </p>
         </CardContent>
       </Card>
-    </div>
+    </div>;
 );
 };

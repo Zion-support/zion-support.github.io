@@ -12,7 +12,7 @@ import {
   CheckCircle,
   Star,
   Users,
-  Clock,
+  Clock,;
   TrendingUp,;
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
@@ -72,7 +72,7 @@ export default function QuantumServicesPage() {
       price: 'From $20,000',
       icon: Zap,
       color: 'from-emerald-500 to-teal-500',
-    },
+    },;
   ];
 
   const stats = [
@@ -102,9 +102,7 @@ export default function QuantumServicesPage() {
           rel='canonical'
           href='https://ziontechgroup.com/services/quantum'
         />      </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -120,7 +118,6 @@ export default function QuantumServicesPage() {
               Revolutionary quantum solutions that unlock unprecedented
               computational power            </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -138,7 +135,6 @@ export default function QuantumServicesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -162,7 +158,6 @@ export default function QuantumServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -180,7 +175,6 @@ export default function QuantumServicesPage() {
               and secure the future
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -221,7 +215,6 @@ export default function QuantumServicesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -247,7 +240,6 @@ export default function QuantumServicesPage() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
 ),
@@ -270,3 +262,7 @@ export default function QuantumServicesPage() {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Experience Quantum Computing? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's explore how quantum computing can revolutionize your business operations and solve previously impossible problems. </p> Schedule Quantum Demo </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+
+}
+}
+}

@@ -123,5 +123,5 @@ export default function TalentsPage() {
       initialPrice={{ min: 100, max: 200 }}
     />
   )
-}
+};
 ;

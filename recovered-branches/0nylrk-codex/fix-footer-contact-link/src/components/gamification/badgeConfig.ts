@@ -7,10 +7,10 @@ export type BadgeKey =
   | "top_contributor"
   | "profile_complete"
   | "featured_creator"
-  | "first_action"
+  | "first_action";
   | "monetized";
 
-export interface BadgeMeta {
+export interface BadgeMeta {;
   key: BadgeKey;
   name: string;
   description: string;
@@ -20,7 +20,7 @@ export interface BadgeMeta {
 }
 
 export const badgeList: BadgeMeta[] = [
-  {
+  {;
     key: "first_listing";
     name: "First Listing",
     description: "Published your first product, service, or listing.";
@@ -71,5 +71,5 @@ export const badgeList: BadgeMeta[] = [
 
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key),
-
+;
 ;

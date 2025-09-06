@@ -1,7 +1,7 @@
 import React from 'react'
 import { cn } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
-import Link from 'next/link'
+import Link from 'next/link';
 import Image from 'next/image';interface ListingCardProps {
   id?: string,
   title: string,
@@ -62,7 +62,6 @@ export function ListingCard({
           {title}
         </h3>
         <p className='text-zion-slate mb-4 flex-grow'>{description}</p>
-
         {tags && tags.length > 0 && (
           <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag, i) => (
@@ -107,5 +106,6 @@ export function ListingCard({
       </div>
     </Link>
   )
-}
+};
 ;"}) })"
+}

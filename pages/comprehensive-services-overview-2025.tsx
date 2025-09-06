@@ -5,7 +5,7 @@ import {
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown, Search,
   Filter, Grid, List, BarChart3, DollarSign, Target as TargetIcon
-} from 'lucide-react',
+} from 'lucide-react',;
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',;
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',;
 export default function ComprehensiveServicesOverviewPage() {
@@ -86,7 +86,6 @@ export default function ComprehensiveServicesOverviewPage() {
         <meta name="keywords" content="micro SAAS services, AI services, quantum computing, cybersecurity, emerging technology, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-overview-2025" />
       </Head>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         {/* Hero Section */}
         <section className="py-20 px-6">
@@ -102,7 +101,6 @@ export default function ComprehensiveServicesOverviewPage() {
               <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
                 Discover our cutting-edge micro SAAS solutions that are transforming industries and driving the future of technology with AI, quantum computing, and emerging technologies
               </p>
-              
               {/* Market Statistics */}
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
@@ -122,7 +120,6 @@ export default function ComprehensiveServicesOverviewPage() {
                   <div className="text-white/60">Average ROI</div>
                 </div>
               </div>
-
               {/* Key Benefits */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl p-6 border border-blue-500/30">
@@ -144,7 +141,6 @@ export default function ComprehensiveServicesOverviewPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filters */}
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
@@ -165,7 +161,6 @@ export default function ComprehensiveServicesOverviewPage() {
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
                 />
               </div>
-
               {/* Sort and View Controls */}
               <div className="flex items-center gap-4">
                 <select
@@ -178,7 +173,6 @@ export default function ComprehensiveServicesOverviewPage() {
                   <option value="rating">Highest Rated</option>
                   <option value="newest">Newest First</option>
                 </select>
-
                 <div className="flex bg-white/10 rounded-xl p-1">
                   <button
                     onClick={() => setViewMode('grid')}
@@ -201,7 +195,6 @@ export default function ComprehensiveServicesOverviewPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Category Filter */}
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
@@ -229,7 +222,6 @@ export default function ComprehensiveServicesOverviewPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Display */}
         <section className="px-6 pb-20">
           <div className="max-w-7xl mx-auto">
@@ -262,10 +254,8 @@ export default function ComprehensiveServicesOverviewPage() {
                             <div className="text-white/60 text-sm">{service.period}</div>
                           </div>
                         </div>
-
                         <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                         <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
-
                         {/* Features */}
                         <div className="space-y-2 mb-6">
                           {service.features.slice(0, 3).map((feature, idx) => (
@@ -275,7 +265,6 @@ export default function ComprehensiveServicesOverviewPage() {
                             </div>
                           ))}
                         </div>
-
                         {/* Stats */}
                         <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                           <div>
@@ -291,7 +280,6 @@ export default function ComprehensiveServicesOverviewPage() {
                             <div className="text-xs text-white/60">Trial</div>
                           </div>
                         </div>
-
                         {/* CTA */}
                         <a
                           href={service.link}
@@ -329,7 +317,6 @@ export default function ComprehensiveServicesOverviewPage() {
                             </div>
                           )}
                         </div>
-
                         {/* Center - Service Details */}
                         <div className="flex-1">
                           <div className="flex items-start justify-between mb-4">
@@ -343,7 +330,6 @@ export default function ComprehensiveServicesOverviewPage() {
                               <div className="text-white/60">{service.period}</div>
                             </div>
                           </div>
-
                           {/* Features Grid */}
                           <div className="grid grid-cols-2 gap-2 mb-4">
                             {service.features.slice(0, 6).map((feature, idx) => (
@@ -353,7 +339,6 @@ export default function ComprehensiveServicesOverviewPage() {
                               </div>
                             ))}
                           </div>
-
                           {/* Stats Row */}
                           <div className="flex items-center gap-6 text-sm text-white/60">
                             <div className="flex items-center gap-2">
@@ -370,7 +355,6 @@ export default function ComprehensiveServicesOverviewPage() {
                             </div>
                           </div>
                         </div>
-
                         {/* Right Side - CTA and Category */}
                         <div className="flex-shrink-0 flex flex-col items-end gap-4">
                           <div className="text-right">
@@ -380,7 +364,6 @@ export default function ComprehensiveServicesOverviewPage() {
                               <span className="text-sm">{service.category}</span>
                             </div>
                           </div>
-
                           <a
                             href={service.link}
                             target="_blank"
@@ -412,7 +395,6 @@ export default function ComprehensiveServicesOverviewPage() {
             )}
           </div>
         </section>
-
         {/* Contact CTA */}
         <section className="px-6 pb-20">
           <div className="max-w-4xl mx-auto">
@@ -451,5 +433,5 @@ export default function ComprehensiveServicesOverviewPage() {
         </section>
       </div>
     </>
-  )
+  );
 };

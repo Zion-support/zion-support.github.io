@@ -1,6 +1,6 @@
 import * as React from &quot;react&quot;
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react'
-
+;
 import { cn } from &quot;@/lib/utils&quot;
 import { ButtonProps, buttonVariants } from &quot;@/components/ui/button&quot;
 
@@ -38,7 +38,6 @@ type PaginationLinkProps = {
   isActive?: boolean
   size?: ButtonProps[&quot;size&quot;]
 } & React.ComponentProps<&quot;a&quot;>
-
 interface PaginationButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
@@ -139,5 +138,5 @@ export {
   PaginationLink,
   PaginationButton,
   PaginationNext,
-  PaginationPrevious}
+  PaginationPrevious};
 ;

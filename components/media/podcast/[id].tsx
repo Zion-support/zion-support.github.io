@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-export default function EpisodePage() {
+export default function EpisodePage() {;
   const router = useRouter();
   const { id } = router.query as { id?: string };
   const [episode, setEpisode] = useState<any>(null);

@@ -43,5 +43,5 @@ it('treats underscores as spaces in slug', () => {
 
   const link = screen.getByRole('link', { name: /ai_tools/i }),
   expect(link).toHaveAttribute('href/category/ai-tools'),
-}),
+}),;
 ;

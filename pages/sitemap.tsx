@@ -13,7 +13,7 @@ import {
   BarChart3, 
   Settings, 
   Globe, 
-  ArrowRight 
+  ArrowRight ;
 } from 'lucide-react';
 
 const sitemapData = [
@@ -63,7 +63,6 @@ export default function SitemapPage() {
         <title>Sitemap - Zion Tech Group</title>
         <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />
       </Head>
-
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -83,7 +82,6 @@ export default function SitemapPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Sitemap Content */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4">
@@ -122,7 +120,7 @@ export default function SitemapPage() {
           </div>
         </section>
       </div>
-    </>
+    </>;
   );
 }
 import {
@@ -136,7 +134,7 @@ import {
   ArrowRight,
   ExternalLink,
   ChevronRight,
-  Globe,
+  Globe,;
   Building,;
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
@@ -168,7 +166,7 @@ export default function SitemapPage() {
       href: '/contact',
       label: '📧 Contact',
       description: 'Get in touch and start your project',
-    },
+    },;
   ];
 
   const serviceCategories = [
@@ -335,9 +333,7 @@ export default function SitemapPage() {
           content='Complete website sitemap and navigation guide.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/sitemap' />      </Head>
-
       <SmartHeader />
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -371,7 +367,6 @@ export default function SitemapPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Main Pages */}
       <section id='main-pages' className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -389,7 +384,6 @@ export default function SitemapPage() {
               and services
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages.map((page, index) => (
               <motion.div
                 key={page.href}
@@ -417,7 +411,6 @@ export default function SitemapPage() {
           </div>
         </div>
       </section>
-
       {/* Service Categories */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -435,7 +428,6 @@ export default function SitemapPage() {
               by category
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.href}
@@ -463,7 +455,6 @@ export default function SitemapPage() {
           </div>
         </div>
       </section>
-
       {/* Featured Services */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -479,7 +470,6 @@ export default function SitemapPage() {
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
               <motion.div
                 key={service.href}
@@ -505,7 +495,6 @@ export default function SitemapPage() {
           </div>
         </div>
       </section>
-
       {/* Resources & Tools */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -521,7 +510,6 @@ export default function SitemapPage() {
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources.map((resource, index) => (
               <motion.div
                 key={resource.href}
@@ -549,7 +537,6 @@ export default function SitemapPage() {
           </div>
         </div>
       </section>
-
       {/* External Resources */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -565,7 +552,6 @@ export default function SitemapPage() {
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks.map((link, index) => (
               <motion.div
                 key={link.href}
@@ -595,7 +581,6 @@ export default function SitemapPage() {
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-4xl mx-auto'>          <motion.div
@@ -613,7 +598,6 @@ export default function SitemapPage() {
               project
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {contactInfo.map((contact, index) => (
               <motion.div
                 key={contact.type}
@@ -644,7 +628,6 @@ export default function SitemapPage() {
           </div>
         </div>
       </section>
-
       {/* Quick Navigation */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -677,7 +660,6 @@ export default function SitemapPage() {
           </motion.div>
         </div>
       </section>
-
       <SmartFooter />
     </div>
   ),

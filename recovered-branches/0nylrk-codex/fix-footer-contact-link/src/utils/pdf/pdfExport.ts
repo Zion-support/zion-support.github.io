@@ -10,7 +10,7 @@ import {addWorkExperienceSection} from './sections/workExperienceSection';
 import {addEducationSection} from './sections/educationSection';
 import {addCertificationsSection} from './sections/certificationsSection';
 import {addPortfolioSection} from './sections/portfolioSection';
-export interface ExportOptions {
+export interface ExportOptions {;
   theme: 'light' | 'dark';
   includePortfolio?: boolean;
   maxProjects?: number,
@@ -27,7 +27,7 @@ const defaultOptions: ExportOptions = {
 export async function exportResumeToPDF(
   resume: Resume, 
   options: Partial<ExportOptions> = {}
-): Promise<Blob> {
+): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   

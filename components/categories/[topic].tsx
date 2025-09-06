@@ -65,7 +65,7 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ctx => {
+export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx.params?.topic || '');
   const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
   return { props: { topic, posts } };
@@ -93,7 +93,7 @@ export default TopicPage;      </Head>
   )
 };
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }

@@ -27,7 +27,7 @@ const productSchema = z.object({
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>;
 
-export function ProductSubmissionForm() {
+export function ProductSubmissionForm() {;
   const { user } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
@@ -164,7 +164,6 @@ export function ProductSubmissionForm() {
           AI-Powered Creation
         </TabsTrigger>
       </TabsList>
-      
       <TabsContent value="manual">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -249,7 +248,6 @@ export function ProductSubmissionForm() {
                 )}
               />
             </div>
-
             <FormField
               control={form.control}
               name="tags"
@@ -285,7 +283,6 @@ export function ProductSubmissionForm() {
                     Upload a high-quality image of your product (recommended size: 1200x800px)
                   </FormDescription>
                   <FormMessage />
-                  
                   {imagePreview && (
                     <div className="mt-2 w-full max-w-md border rounded overflow-hidden">
                       <AspectRatio ratio={3/2}>
@@ -313,7 +310,6 @@ export function ProductSubmissionForm() {
           </form>
         </Form>
       </TabsContent>
-      
       <TabsContent value="ai">
         <AIListingGenerator 
           onApplyGenerated={handleApplyGenerated}

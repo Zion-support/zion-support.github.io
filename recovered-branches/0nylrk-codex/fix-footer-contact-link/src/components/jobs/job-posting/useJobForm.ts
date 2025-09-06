@@ -7,12 +7,12 @@ import {toast} from "sonner";
 import {useNavigate} from 'react-router-dom';
 import {jobSchema, JobSchemaType} from './validation';
 import {useAuth} from "@/hooks/useAuth";
-export interface JobPostingProps {
+export interface JobPostingProps {;
   jobId?: string;
   onSuccess?: () => void
 }
 
-export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
+export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
   

@@ -2,13 +2,13 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent,
-    },
+    },;
   };};import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
 import content from '../../../data/docs/content.json';
 export type Section = {
   id: string,
-  title: string,
+  title: string,;
   html?: string;
   code?: { language?: string, content: string }[]
 };
@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
       docs: content as DocsContent}}
 
 export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {
+  useEffect(() => {;
     const id = setTimeout(() => window.print(), 500);
     return () => clearTimeout(id);
   }, []);
@@ -67,4 +67,6 @@ export default function PrintDocs({ docs }: PageProps) {
       </div>
     </div>
 );
+}
+
 }

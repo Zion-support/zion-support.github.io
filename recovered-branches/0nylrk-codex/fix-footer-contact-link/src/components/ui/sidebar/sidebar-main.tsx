@@ -14,7 +14,7 @@ export interface SidebarProps extends React.ComponentProps<&quot;div&quot;> {
 
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
-
+;
   if (props.collapsible === &quot;none&quot;) {
     return (
       <div
@@ -95,7 +95,7 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
 Sidebar.displayName = &quot;Sidebar&quot;
 
 export const SidebarRail = React.forwardRef<
-  HTMLButtonElement,
+  HTMLButtonElement,;
   React.ComponentProps<&quot;button&quot;>
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
@@ -124,7 +124,7 @@ export const SidebarRail = React.forwardRef<
 SidebarRail.displayName = &quot;SidebarRail&quot;
 
 export const SidebarInset = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement,;
   React.ComponentProps<&quot;main">
 >((props, ref) => {
   return (

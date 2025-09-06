@@ -116,7 +116,7 @@ import {
   MessageCircle,
   Share,
   Users as UsersIcon2,
-  Target as TargetIcon,
+  Target as TargetIcon,;
   Zap as ZapIcon2,;
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
@@ -126,7 +126,7 @@ import {revolutionaryITInfrastructure2025Services} from '../data/revolutionary-2
 import {revolutionary2025MicroSaasServices} from '../data/revolutionary-2025-micro-saas';
 export default function Revolutionary2025Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
-    'monthly'
+    'monthly';
   );  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const contactInfo = {
@@ -315,9 +315,7 @@ export default function Revolutionary2025Pricing() {
             rel='canonical'
             href='https://ziontechgroup.com/revolutionary-2025-pricing'
           />        </Head>
-
         <UltraAdvancedNavigation />
-
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div
@@ -333,7 +331,6 @@ export default function Revolutionary2025Pricing() {
                 revolutionary services deliver 10x better performance at 50%
                 lower costs than traditional solutions.
               </p>
-
               {/* Billing Toggle */}
               <div className='flex items-center justify-center gap-4 mb-12'>
                 <span className='text-gray-400'>Monthly</span>
@@ -356,7 +353,6 @@ export default function Revolutionary2025Pricing() {
                 </button>
                 <span className='text-gray-400'>Yearly (Save 20%)</span>
               </div>
-
               {/* Market Analysis */}
               <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12'>
                 <motion.div
@@ -370,7 +366,6 @@ export default function Revolutionary2025Pricing() {
                   </div>
                   <div className='text-xs text-gray-400'>Market Size</div>
                 </motion.div>
-
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -382,7 +377,6 @@ export default function Revolutionary2025Pricing() {
                   </div>
                   <div className='text-xs text-gray-400'>Growth Rate</div>
                 </motion.div>
-
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -394,7 +388,6 @@ export default function Revolutionary2025Pricing() {
                   </div>
                   <div className='text-xs text-gray-400'>Satisfaction</div>
                 </motion.div>
-
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -406,7 +399,6 @@ export default function Revolutionary2025Pricing() {
                   </div>
                   <div className='text-xs text-gray-400'>Average ROI</div>
                 </motion.div>
-
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -418,7 +410,6 @@ export default function Revolutionary2025Pricing() {
                   </div>
                   <div className='text-xs text-gray-400'>Time to Value</div>
                 </motion.div>
-
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -433,7 +424,6 @@ export default function Revolutionary2025Pricing() {
             </motion.div>
           </div>
         </section>
-
         {/* Pricing Tiers */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -451,7 +441,6 @@ export default function Revolutionary2025Pricing() {
                 include our revolutionary AI and quantum computing services.
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>              {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
@@ -479,20 +468,17 @@ export default function Revolutionary2025Pricing() {
                       {tier.name}
                     </h3>
                     <p className='text-gray-400 mb-6'>{tier.description}</p>
-
                     <div className='mb-4'>
                       <span className='text-4xl font-bold text-white'>
                         ${tier.price}
                       </span>
                       <span className='text-gray-400'>{tier.period}</span>
                     </div>
-
                     {tier.savings && (
                       <div className='text-green-400 text-sm font-semibold mb-6'>                        {tier.savings}
                       </div>
                     )}
                   </div>
-
                   <ul className='space-y-4 mb-8'>
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className='flex items-start gap-3'>
@@ -500,7 +486,6 @@ export default function Revolutionary2025Pricing() {
                         <span className='text-gray-300'>{feature}</span>                      </li>
                     ))}
                   </ul>
-
                   <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200'>                    {tier.cta}
                   </button>
                 </motion.div>
@@ -508,7 +493,6 @@ export default function Revolutionary2025Pricing() {
             </div>
           </div>
         </section>
-
         {/* Service Pricing Grid */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -525,7 +509,6 @@ export default function Revolutionary2025Pricing() {
                 Choose individual services or bundle them for maximum savings.                All services include free trials and comprehensive support.
               </p>
             </motion.div>
-
             {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-4 mb-12'>
               {serviceCategories.map(category => (                <button
@@ -544,7 +527,6 @@ export default function Revolutionary2025Pricing() {
                 </button>
               ))}
             </div>
-
             {/* Services Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {filteredServices.map(service => (                <motion.div
@@ -574,12 +556,10 @@ export default function Revolutionary2025Pricing() {
                       </div>
                     )}
                   </div>
-
                   {/* Service Description */}
                   <p className='text-gray-300 mb-4 line-clamp-3'>
                     {service.description}
                   </p>
-
                   {/* Price and Rating */}
                   <div className='flex items-center justify-between mb-4'>
                     <div className='flex items-center gap-2'>
@@ -595,7 +575,6 @@ export default function Revolutionary2025Pricing() {
                         ({service.reviews})
                       </span>                    </div>
                   </div>
-
                   {/* Key Features */}
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-gray-300 mb-2'>
@@ -616,7 +595,6 @@ export default function Revolutionary2025Pricing() {
                       )}
                     </div>
                   </div>
-
                   {/* Market Position */}
                   <div className='mb-4 p-3 bg-gray-800/50 rounded-lg'>
                     <h4 className='text-xs font-semibold text-gray-300 mb-1'>
@@ -626,7 +604,6 @@ export default function Revolutionary2025Pricing() {
                       {service.marketPosition}
                     </p>
                   </div>
-
                   {/* Actions */}
                   <div className='flex items-center gap-3'>
                     <button className='flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'>
@@ -636,14 +613,12 @@ export default function Revolutionary2025Pricing() {
                     <button className='border-blue-500 text-blue-400 hover:bg-blue-500/20'>
                       <Phone className='w-4 h-4' />                    </button>
                   </div>
-
                   {/* Hover Effects */}
                   <div className='absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>                </motion.div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
@@ -660,7 +635,6 @@ export default function Revolutionary2025Pricing() {
                 quote. We offer flexible pricing and payment options to fit your
                 budget.
               </p>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30'>
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-3' />
@@ -671,7 +645,6 @@ export default function Revolutionary2025Pricing() {
                     {contactInfo.mobile}
                   </p>
                 </div>
-
                 <div className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30'>
                   <Mail className='w-8 h-8 text-green-400 mx-auto mb-3' />
                   <h3 className='text-lg font-semibold text-white mb-2'>
@@ -679,7 +652,6 @@ export default function Revolutionary2025Pricing() {
                   </h3>
                   <p className='text-green-400'>{contactInfo.email}</p>
                 </div>
-
                 <div className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30'>
                   <MapPin className='w-8 h-8 text-purple-400 mx-auto mb-3' />
                   <h3 className='text-lg font-semibold text-white mb-2'>
@@ -690,7 +662,6 @@ export default function Revolutionary2025Pricing() {
                   </p>
                 </div>
               </div>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'>
                   <Phone className='w-5 h-5 mr-2' />
@@ -706,3 +677,5 @@ export default function Revolutionary2025Pricing() {
       </div>
     </UltraQuantumHolographicBackground>
 );
+
+}

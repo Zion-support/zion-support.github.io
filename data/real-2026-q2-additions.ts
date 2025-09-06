@@ -312,8 +312,8 @@ export const real2026Q2Additions = [
     trialDays: 14,
     setupTime: 'Fast',
     marketPosition: 'Cost-effective RMM for partners and IT teams',
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
   },;
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     ];

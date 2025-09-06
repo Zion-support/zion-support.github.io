@@ -17,8 +17,8 @@ export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects()
   const [activeProjects, setActiveProjects] = useState<Project[]>([])
   useEffect(() => {    if (projects && !isLoading) {
-      const active = projects
-        .filter(p => ['offer_accepted', 'in_progress'].includes(p.status))
+      const active = projects;
+        .filter(p => ['offer_accepted', 'in_progress'].includes(p.status));
         .slice(0, 3); // Limit to 3 most recent projects
       setActiveProjects(active)
     }
@@ -93,7 +93,7 @@ export function ActiveProjectsCard() {
         </CardTitle>
         <CardDescription>Your ongoing work</CardDescription>
       </CardHeader>
-      <CardContent className='space-y-4'>  
+      <CardContent className='space-y-4'>
   return (
     <Card>
       <CardHeader>

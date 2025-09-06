@@ -2,7 +2,7 @@ import React from 'react';
 import {useRouter} from 'next/router';
 import TalentGrid from '../../components/seo/TalentGrid';
 import FAQ from '../../components/seo/FAQ';
-export type LandingPayload = {
+export type LandingPayload = {;
   title: string;
   h1: string;
   bodyHtml: string;
@@ -10,7 +10,7 @@ export type LandingPayload = {
   service?: string;
   faq: Array<{ q: string; a: string }>;};
 
-export default function SEOLandingPage() {
+export default function SEOLandingPage() {;
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
 
@@ -51,11 +51,11 @@ export default function SEOLandingPage() {
         className='prose dark:prose-invert max-w-none'
         dangerouslySetInnerHTML={{ __html: payload.bodyHtml }}
       />
-
       <div className='mt-8'>
         <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>        <TalentGrid region={payload.region} service={payload.service} />
       </div>
-
       <FAQ items={payload.faq} />
     </div>
 );
+
+}

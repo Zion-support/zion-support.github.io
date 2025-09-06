@@ -77,11 +77,11 @@ import {
   BrainIcon,
   AtomIcon,
   MenuIcon,
-  CloseIcon,
+  CloseIcon,;
   ChevronRightIcon,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -341,7 +341,7 @@ const companyLinks = [
   { name: 'Status', href: '/status' },];  { name: 'Status', href: '/status' }
 ];
 
-export default function UltraFuturisticNavigation2032() {
+export default function UltraFuturisticNavigation2032() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -440,7 +440,6 @@ export default function UltraFuturisticNavigation2032() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -464,7 +463,6 @@ export default function UltraFuturisticNavigation2032() {
                   2030 Future Technology
                 </div>              </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {mainNavigation.map(item => (            {/* Logo */}
@@ -479,7 +477,6 @@ export default function UltraFuturisticNavigation2032() {
                 <div className="text-xs text-gray-400">2030 Future Technology</div>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {mainNavigation.map(item => (
@@ -500,7 +497,6 @@ export default function UltraFuturisticNavigation2032() {
                   <span>Services</span>
                   <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform' />
                 </button>
-
                 {/* Mega Menu */}
                 <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4'>
                   <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>
@@ -543,7 +539,6 @@ export default function UltraFuturisticNavigation2032() {
                   <span>Services</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" />
                 </button>
-                
                 {/* Mega Menu */}
                 <div className="absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
                   <div className="bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20">
@@ -588,7 +583,6 @@ export default function UltraFuturisticNavigation2032() {
                 </div>
               </div>
             </div>
-
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
@@ -599,7 +593,6 @@ export default function UltraFuturisticNavigation2032() {
                 </button>
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -616,7 +609,6 @@ export default function UltraFuturisticNavigation2032() {
           </div>
         </div>
       </nav>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -663,7 +655,6 @@ export default function UltraFuturisticNavigation2032() {
                   >
                     <X className='w-6 h-6' />                  </button>
                 </div>
-
                 {/* Mobile Navigation */}
                 <div className='space-y-6'>
                   {mainNavigation.map(item => (                    <Link
@@ -676,7 +667,6 @@ export default function UltraFuturisticNavigation2032() {
                     <X className="w-6 h-6" />
                   </button>
                 </div>
-
                 {/* Mobile Navigation */}
                 <div className='space-y-6'>
                   {mainNavigation.map(item => (                <div className="space-y-6">
@@ -710,7 +700,6 @@ export default function UltraFuturisticNavigation2032() {
                         className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`}
                       />
                     </button>
-
                     {activeCategory === 0 && (
                       <div className='pl-8 space-y-2'>
                         {serviceCategories.map((category, index) => (
@@ -727,7 +716,6 @@ export default function UltraFuturisticNavigation2032() {
                       </span>
                       <ChevronRightIcon className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`} />
                     </button>
-                    
                     {activeCategory === 0 && (
                       <div className="pl-8 space-y-2">
                         {serviceCategories.map((category, index) => (
@@ -748,7 +736,6 @@ export default function UltraFuturisticNavigation2032() {
                       </div>
                     )}
                   </div>
-
                   {/* Company Links */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
@@ -773,7 +760,6 @@ export default function UltraFuturisticNavigation2032() {
                       ))}
                     </div>
                   </div>
-
                   {/* Contact Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
@@ -802,7 +788,6 @@ export default function UltraFuturisticNavigation2032() {
                       </div>
                     </div>
                   </div>
-
                   {/* CTA Button */}
                   <div className='pt-4'>
                     <Link href='/contact' onClick={closeMenu}>
@@ -819,11 +804,12 @@ export default function UltraFuturisticNavigation2032() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>
 );      <div className="h-20" />
     </>
   );
+}
+
 }

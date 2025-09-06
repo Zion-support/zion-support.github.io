@@ -14,6 +14,6 @@ export function EmptyState() {
           <Link to="/jobs">Browse Jobs</Link>
         </Button>
       </CardContent>
-    </Card>
+    </Card>;
   );
 }

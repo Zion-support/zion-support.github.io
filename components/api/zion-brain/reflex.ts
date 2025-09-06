@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   appendLog,
   evaluateReflexes,
-  readState,
+  readState,;
   writeState,;
 } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
@@ -15,13 +15,13 @@ function isAuthorized(req: NextApiRequest): boolean {
   return !superToken || token === superToken;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req))
+  if (!isAuthorized(req));
     return res.status(401).json({ error: 'Unauthorized' });
 
   if (req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
     return res.status(200).json({ metrics: state.metrics || {} });  }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
 
   if (req.method === 'GET') {
@@ -67,4 +67,6 @@ return res.status(405).json({ error: 'Method not allowed' });
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
+}
+
 }

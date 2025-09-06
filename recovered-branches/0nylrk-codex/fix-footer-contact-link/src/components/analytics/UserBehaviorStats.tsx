@@ -8,7 +8,7 @@ import {useState} from "react";
 import {AnalyticsChart} from "./AnalyticsChart";
 type TimeRange = '7d' | '30d' | '90d' | '365d';
 
-export function UserBehaviorStats() {
+export function UserBehaviorStats() {;
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
   
   const { data: behaviorData, isLoading } = useQuery({
@@ -115,7 +115,6 @@ export function UserBehaviorStats() {
           }
         />
       </div>
-      
       <AnalyticsChart
         title="User Behavior Over Time"
         description="Track different types of user interactions"

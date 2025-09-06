@@ -26,5 +26,5 @@ export function SeverityIndicator({
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
-}
+};
 ;

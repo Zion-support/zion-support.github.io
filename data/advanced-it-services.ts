@@ -1,4 +1,4 @@
-export interface AdvancedITService {
+export interface AdvancedITService {;
   id: string;
   name: string;
   tagline: string;
@@ -724,7 +724,7 @@ export const advancedITServices: AdvancedITService[] = [
     customers: 89,
     rating: 4.8,
     reviews: 45,
-  },
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',

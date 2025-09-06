@@ -1,7 +1,7 @@
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',;
 ;
 export default function CybersecurityPage() {
   const features = [
@@ -34,7 +34,6 @@ export default function CybersecurityPage() {
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
             </div>
           </header>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Key Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -46,7 +45,6 @@ export default function CybersecurityPage() {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -69,5 +67,5 @@ export default function CybersecurityPage() {
         </div>
       </div>
     </Layout>
-  )
+  );
 };

@@ -20,7 +20,7 @@ function save(db: Record<string, KycProfile>) {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   const {    userId,
     role,
@@ -68,4 +68,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     requiredDocuments: getRequiredDocuments(role),
 optionalDocuments: getOptionalDocuments(role),
   });
+}
+
 }

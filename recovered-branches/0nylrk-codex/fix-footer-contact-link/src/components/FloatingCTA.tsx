@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
-export function FloatingCTA() {
+export function FloatingCTA() {;
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
 

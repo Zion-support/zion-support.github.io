@@ -8,7 +8,7 @@ type PersonaConfig = {
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
     voice: 'Visionary',
-    language: 'English',
+    language: 'English',;
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
@@ -18,7 +18,7 @@ export default function StudioHostPage() {
   );};
 
 export default function StudioHostPage() {
-  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
@@ -112,7 +112,6 @@ export default function StudioHostPage() {
   return (
     <div className='space-y-8'>
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>
-
       <section className='space-y-3'>
         <h2 className='text-xl font-semibold'>AI Persona</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -155,13 +154,11 @@ export default function StudioHostPage() {
             />          </div>
         </div>
       </section>
-
       <section className='space-y-3'>
         <h2 className='text-xl font-semibold'>Episode Generator</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>          </div>
         </div>
       </section>
-
       <section className='space-y-3'>
         <h2 className='text-xl font-semibold'>Episode Generator</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -230,7 +227,6 @@ export default function StudioHostPage() {
           </div>
         </div>
       </section>
-
           <div>
             <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
             <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
@@ -252,7 +248,6 @@ export default function StudioHostPage() {
           {generating ? 'Generating…' : 'Generate Episode'}
         </button>
       </section>
-
       {episode && (
         <section className='space-y-4'>
           <h2 className='text-xl font-semibold'>Episode Draft</h2>

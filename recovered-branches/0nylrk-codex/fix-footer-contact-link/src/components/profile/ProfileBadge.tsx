@@ -27,7 +27,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       icon: Award,
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
-
+;
   const { icon: Icon, text, colors } = badgeConfig[type];
 
   return (

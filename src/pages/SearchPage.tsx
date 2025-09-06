@@ -45,8 +45,8 @@ export default function SearchPage() {
   const [results, setResults] = useState<SearchResult[]>([])
   const [loading, setLoading] = useState(false)
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-  // Force re-render and reset state when route changes
-  const routeKey = useRouteChange(() => {
+  // Force re-render and reset state when route changes;
+  const routeKey = useRouteChange(() => {;
     setResults([]);    setLoading(false)
   })
   const productResults = results.filter(
@@ -120,7 +120,6 @@ export default function SearchPage() {
             placeholder="Search talent, jobs, and projects..."
           />
         </form>
-
         {loading && (
           <div className="flex justify-center py-8">
             <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />

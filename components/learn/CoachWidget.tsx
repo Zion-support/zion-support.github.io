@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-export default function CoachWidget() {
+export default function CoachWidget() {;
   const [input, setInput] = useState('');
   const [reply, setReply] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);

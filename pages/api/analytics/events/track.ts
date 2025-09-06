@@ -32,5 +32,5 @@ ip: (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '') as string
     // ignore file errors in serverless
   }
 
-res.status(200).json({ ok: true })
+res.status(200).json({ ok: true });
 };

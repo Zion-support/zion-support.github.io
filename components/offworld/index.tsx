@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import Head from 'next/head';
-export default function OffworldConsole() {
+export default function OffworldConsole() {;
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
   const [proposalId, setProposalId] = useState('prop-1');
@@ -66,7 +66,6 @@ export default function OffworldConsole() {
         <title>Zion Offworld Console</title>
       </Head>
       <h1 className='text-2xl font-bold'>Offworld Console</h1>
-
       <section className='space-y-2'>
         <h2 className='font-semibold'>Chat</h2>
         <input
@@ -82,7 +81,6 @@ export default function OffworldConsole() {
           Send
         </button>
       </section>
-
       <section className='space-y-2'>
         <h2 className='font-semibold'>DAO Voting</h2>
         <input
@@ -107,7 +105,6 @@ export default function OffworldConsole() {
           Vote
         </button>
       </section>
-
       <section className='space-y-2'>
         <h2 className='font-semibold'>Talent Profile Sync</h2>
         <input
@@ -129,7 +126,6 @@ export default function OffworldConsole() {
           Pin Profile to IPFS
         </button>
       </section>
-
       <section className='space-y-2'>
         <h2 className='font-semibold'>Broadcast Manifesto</h2>
         <button
@@ -139,8 +135,9 @@ export default function OffworldConsole() {
           Broadcast
         </button>
       </section>
-
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
 );
+}
+
 }

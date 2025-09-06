@@ -8,7 +8,7 @@ interface CountrySelectorProps {
   selectedCountry: CountryPricing | null
 }
 
-export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {
+export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {;
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
   
   // Set top/popular countries
@@ -32,7 +32,6 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
         <Globe className="mr-2 h-5 w-5 text-zion-cyan" />
         {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` : "Select Country for IT Onsite Service"}
       </h3>
-      
       <Select 
         onValueChange={handleCountryChange} 
         value={selectedCountry?.country}

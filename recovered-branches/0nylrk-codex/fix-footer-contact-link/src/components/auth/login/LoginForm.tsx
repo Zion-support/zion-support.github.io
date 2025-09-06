@@ -17,7 +17,7 @@ const loginSchema = z.object({
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
-export function LoginForm() {
+export function LoginForm() {;
   const { login, isLoading } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -114,7 +114,6 @@ export function LoginForm() {
             </Link>
           </div>
         </div>
-
         <Button
           type="submit"
           className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"

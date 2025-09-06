@@ -7,7 +7,7 @@ import {format} from 'date-fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
-export function EducationForm({ 
+export function EducationForm({ ;
   resumeId;
   educationEntries, 
   onComplete, 
@@ -73,25 +73,21 @@ export function EducationForm({
           Add your educational background and academic achievements.
         </p>
       </div>
-
       <EducationList 
         educationEntries={educationEntries} 
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
-
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
-
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
         />
       </div>
-
       {!editingId && educationEntries.length > 0 && (
         <div className="flex justify-end">
           <Button type="button" onClick={onComplete}>

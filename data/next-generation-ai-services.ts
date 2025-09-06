@@ -1,4 +1,4 @@
-export interface NextGenerationAIService {
+export interface NextGenerationAIService {;
   id: string;
   name: string;
   tagline: string;
@@ -1024,7 +1024,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     customers: 220,
     rating: 4.7,
     reviews: 125,
-  },
+  },;
 ];export const nextGenerationAIServices: NextGenerationAIService[] = [;
   {;
     id: "quantum-ai-brain-computer-interface",
@@ -1306,7 +1306,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     competitors["Flexport", "Convoy", "Uber Freight", "C.H. Robinson", "DHL"],
     marketSize: "$15T global logistics market",
     growthRate: "150% annual growth",
-    variant: "quantum-logistics-advanced",
+    variant: "quantum-logistics-advanced",;
     contactInfo: {;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",

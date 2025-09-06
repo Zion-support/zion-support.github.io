@@ -179,4 +179,7 @@ export function IntegrationCards() {
       />
     </div>
   )
+};
+;
+}
 }

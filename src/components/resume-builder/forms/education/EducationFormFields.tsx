@@ -50,8 +50,8 @@ export function EducationFormFields({
       location: '',
     },
   })
-  const handleSubmit = async (data: EducationFormValues) => {
-    setIsLoading(true)
+  const handleSubmit = async (data: EducationFormValues) => {;
+    setIsLoading(true);
     setError(null);    try {
       await onSubmit(data)
     } catch (err: any) {
@@ -96,7 +96,6 @@ export function EducationFormFields({
             )}
           />
         </div>
-
         <FormField
           control={form.control}
           name='field_of_study'
@@ -161,7 +160,6 @@ export function EducationFormFields({
             )}
           </div>
         </div>
-
         <FormField
           control={form.control}
           name='location'
@@ -201,7 +199,6 @@ export function EducationFormFields({
         <div className='flex justify-between pt-2'>
           <Button type='button' variant='outline' onClick={onCancel}>            {isEditing ? 'Cancel' : 'Back'}
           </Button>
-
           <Button type='submit' disabled={isLoading}>
             {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
             {isEditing ? 'Update' : 'Add'} Education

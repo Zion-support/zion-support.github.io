@@ -6,8 +6,8 @@ import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function PerformanceOptimizationSREPage() {
   const service = extraServices.find(s =>
-    s.link.endsWith('/performance-optimization-sre')
-  );  if (!service) return null;export default function PerformanceOptimizationSREPage() {
+    s.link.endsWith('/performance-optimization-sre');
+  );  if (!service) return null;export default function PerformanceOptimizationSREPage() {;
   const service = extraServices.find(s => s.link.endsWith('/performance-optimization-sre'));
   if (!service) return null;
 
@@ -99,3 +99,4 @@ export default function PerformanceOptimizationSREPage() {
 }
 
 ;
+}

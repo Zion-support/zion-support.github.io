@@ -17,7 +17,7 @@ import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, A
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 export function WebhooksManager() {
-  const {
+  const {;
     webhooks;
     loading;
     testResult;
@@ -107,13 +107,11 @@ export function WebhooksManager() {
           Set up webhooks to get notified when events happen in your Zion account.
         </CardDescription>
       </CardHeader>
-      
       <CardContent>
         <div className="flex justify-between items-center mb-6">
           <p className="text-sm text-zinc-400">
             You have {webhooks.length} {webhooks.length === 1 ? 'webhook' : 'webhooks'}
           </p>
-          
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
               <Button variant="default">
@@ -127,7 +125,6 @@ export function WebhooksManager() {
                   Add a webhook endpoint to receive event notifications.
                 </DialogDescription>
               </DialogHeader>
-              
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <Label htmlFor="webhook-name">Webhook Name</Label>
@@ -139,7 +136,6 @@ export function WebhooksManager() {
                     className="bg-zinc-800 border-zinc-700"
                   />
                 </div>
-                
                 <div className="space-y-2">
                   <Label htmlFor="webhook-url">Endpoint URL</Label>
                   <Input
@@ -153,7 +149,6 @@ export function WebhooksManager() {
                     The URL where webhook payloads will be sent when events occur.
                   </p>
                 </div>
-
                 <div className="space-y-2">
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
                   <Input
@@ -168,7 +163,6 @@ export function WebhooksManager() {
                     Used to verify webhook payload signatures. Keep it secret and secure.
                   </p>
                 </div>
-                
                 <div className="space-y-2">
                   <Label>Event Types</Label>
                   <div className="grid gap-2 pt-2">
@@ -191,7 +185,6 @@ export function WebhooksManager() {
                   </div>
                 </div>
               </div>
-              
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
                   setShowCreateDialog(false);
@@ -210,7 +203,6 @@ export function WebhooksManager() {
             </DialogContent>
           </Dialog>
         </div>
-        
         {/* Webhooks List */}
         <div className="space-y-4">
           {loading ? (
@@ -232,7 +224,6 @@ export function WebhooksManager() {
                       <span className="max-w-md truncate">{webhook.url}</span>
                     </div>
                   </div>
-                  
                   <div className="flex items-center space-x-2">
                     <div className="flex items-center mr-2">
                       <Switch
@@ -243,7 +234,6 @@ export function WebhooksManager() {
                         {webhook.is_active ? "Active" : "Inactive"}
                       </span>
                     </div>
-                    
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button variant="ghost" size="icon">
@@ -267,7 +257,6 @@ export function WebhooksManager() {
                     </DropdownMenu>
                   </div>
                 </div>
-                
                 <div className="mt-3 flex flex-wrap gap-2">
                   {webhook.event_types.map((event) => (
                     <Badge 
@@ -279,7 +268,6 @@ export function WebhooksManager() {
                     </Badge>
                   ))}
                 </div>
-                
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
                   {webhook.last_triggered_at && (
@@ -291,7 +279,6 @@ export function WebhooksManager() {
           )}
         </div>
       </CardContent>
-      
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
           Webhooks will be sent with HTTPS POST requests to your endpoint.
@@ -300,7 +287,6 @@ export function WebhooksManager() {
           <RefreshCw size={14} className="mr-1" /> Refresh
         </Button>
       </CardFooter>
-
       {/* Test Webhook Dialog */}
       <Dialog 
         open={showTestDialog !== null} 
@@ -322,7 +308,6 @@ export function WebhooksManager() {
               Send a test webhook to your endpoint.
             </DialogDescription>
           </DialogHeader>
-          
           {!showTestResult ? (
             <>
               <div className="space-y-4 py-4">
@@ -348,7 +333,6 @@ export function WebhooksManager() {
                   </p>
                 </div>
               </div>
-              
               <DialogFooter>
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>
                   Cancel
@@ -374,7 +358,6 @@ export function WebhooksManager() {
                       {testResult?.status} {testResult?.statusText}
                     </Badge>
                   </div>
-                  
                   <div className="space-y-2 mt-4">
                     <Label>Response Body</Label>
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
@@ -385,7 +368,6 @@ export function WebhooksManager() {
                   </div>
                 </div>
               </div>
-              
               <DialogFooter>
                 <Button variant="default" onClick={() => {
                   setShowTestDialog(null);
@@ -405,7 +387,6 @@ export function WebhooksManager() {
           )}
         </DialogContent>
       </Dialog>
-
       {/* Delete Webhook Confirmation Dialog */}
       <AlertDialog 
         open={showDeleteConfirm !== null} 

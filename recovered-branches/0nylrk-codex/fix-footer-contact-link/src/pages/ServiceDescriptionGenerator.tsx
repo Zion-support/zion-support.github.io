@@ -7,7 +7,7 @@ import {GeneratedDescriptionDisplay} from "@/components/services/GeneratedDescri
 import {SEO} from "@/components/SEO";
 import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
-export default function ServiceDescriptionGenerator() {
+export default function ServiceDescriptionGenerator() {;
   const { isAuthenticated, isLoading } = useAuth();
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
   
@@ -46,10 +46,8 @@ export default function ServiceDescriptionGenerator() {
           <p className="text-zion-slate mb-8">
             Create professional service descriptions with the help of AI. Just provide basic details about your service.
           </p>
-          
           <div className="space-y-8">
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
-            
             {generatedDescription && (
               <GeneratedDescriptionDisplay 
                 description={generatedDescription}

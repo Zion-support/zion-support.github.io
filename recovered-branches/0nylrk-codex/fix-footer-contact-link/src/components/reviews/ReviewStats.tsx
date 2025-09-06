@@ -8,7 +8,7 @@ interface ReviewStatsProps {
 }
 
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
-  // Format the average rating to one decimal place
+  // Format the average rating to one decimal place;
   const formattedRating = averageRating.toFixed(1);
   
   // Calculate percentages for distribution if available
@@ -39,7 +39,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
           </div>
         </div>
       </div>
-      
       {ratingDistribution && (
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (

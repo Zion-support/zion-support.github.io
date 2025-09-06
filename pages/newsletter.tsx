@@ -17,7 +17,7 @@ import {
   Star,
   TrendingUp,
   Award,
-  Clock,
+  Clock,;
 } from "lucide-react";
 
 const benefits = [
@@ -71,7 +71,7 @@ const testimonials = [
   },
 ];
 
-export default function NewsletterPage() {
+export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -96,7 +96,6 @@ export default function NewsletterPage() {
           content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
         />
       </Head>
-
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -114,7 +113,6 @@ export default function NewsletterPage() {
                 Get exclusive insights, industry trends, and early access to new
                 features delivered directly to your inbox.
               </p>
-
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -159,7 +157,6 @@ export default function NewsletterPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -177,7 +174,6 @@ export default function NewsletterPage() {
                 the latest insights and updates.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -199,7 +195,6 @@ export default function NewsletterPage() {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -247,7 +242,6 @@ export default function NewsletterPage() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -265,7 +259,6 @@ export default function NewsletterPage() {
                 to say.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -299,7 +292,6 @@ export default function NewsletterPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
           <div className="container mx-auto px-4">
@@ -316,7 +308,6 @@ export default function NewsletterPage() {
                 Subscribe now and start receiving valuable insights delivered to
                 your inbox every week.
               </p>
-
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">

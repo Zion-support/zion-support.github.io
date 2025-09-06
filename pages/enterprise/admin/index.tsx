@@ -22,7 +22,7 @@ const COMPANY_ID = 'cmp_acme';
 
 export default function CompanyAdmin() {
   const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
-    'members'
+    'members';
   );  const [members, setMembers] = useState<Member[]>([]);
   const [usage, setUsage] = useState<Usage | null>(null);
   const [activity, setActivity] = useState<any[]>([]);
@@ -58,7 +58,6 @@ export default function CompanyAdmin() {
         <div style={{ marginLeft: 'auto' }}>
           <Link href='/workspace/acme'>Go to Workspace</Link>        </div>
       </header>
-
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
         {(['members', 'usage', 'activity', 'billing'] as const).map(t => (
           <button
@@ -75,7 +74,6 @@ export default function CompanyAdmin() {
             {t}
           </button>        ))}
       </nav>
-
       {tab === 'members' && (
         <MembersTab members={members} setMembers={setMembers} />
       )}
@@ -155,7 +153,6 @@ function MembersTab({
         <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>
           Add
         </button>      </div>
-
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
@@ -418,3 +415,9 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
       </table>
     </section>
 );
+
+}
+}
+}
+}
+}

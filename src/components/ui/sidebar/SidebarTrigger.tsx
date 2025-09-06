@@ -12,6 +12,6 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) { c
       <span className='sr-only'>Toggle Sidebar</span>
     </Button>
   )
-}
-}
+};
+};
 ;

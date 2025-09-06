@@ -23,5 +23,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
     <Card data-testid="post-card" className={cn(
       "transition-shadow hover:shadow-md"
 export const PostCard = React.memo(PostCardComponent)
-PostCard.displayName = 'PostCard'
-export default PostCard
+PostCard.displayName = 'PostCard';
+export default PostCard;
+}
+}

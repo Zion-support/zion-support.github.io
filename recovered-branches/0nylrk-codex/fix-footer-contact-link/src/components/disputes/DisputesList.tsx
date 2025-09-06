@@ -13,7 +13,7 @@ type DisputesListProps = {
   isLoading: boolean
 };
 
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
 
   const filteredDisputes = statusFilter === "all" 
@@ -123,7 +123,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           Closed
         </Button>
       </div>
-
       <div className="border rounded-md overflow-hidden">
         <Table>
           <TableHeader>

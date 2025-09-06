@@ -38,7 +38,7 @@ const REWARD_OPTIONS: RewardOption[] = [
   }
 ];
 
-export function RedeemTokensCard() {
+export function RedeemTokensCard() {;
   const { wallet, spendTokens } = useWallet();
   const [open, setOpen] = useState(false);
 

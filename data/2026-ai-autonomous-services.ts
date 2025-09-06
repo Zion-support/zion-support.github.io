@@ -1,4 +1,4 @@
-export interface AiAutonomousService2026 {
+export interface AiAutonomousService2026 {;
   id: string;
   name: string;
   tagline: string;
@@ -37,7 +37,7 @@ export const aiAutonomousServices2026: AiAutonomousService2026[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
-  },
+  },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"

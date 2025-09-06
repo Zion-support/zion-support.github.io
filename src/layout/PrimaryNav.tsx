@@ -38,8 +38,8 @@ export function PrimaryNav() {
     // context not available
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = (e: React.FormEvent) => {;
+    e.preventDefault();
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -62,13 +62,11 @@ export function PrimaryNav() {
       >
         <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap'>
           <Logo />
-
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className='hidden lg:block order-1 flex-shrink-0'>
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
             />          </div>
-
           {/* Actions container with responsive layout */}
           <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>
             {/* Search form with clamped width */}
@@ -136,13 +134,11 @@ export function PrimaryNav() {
                 searchSuggestions = {suggestions,}
               />
             </form>
-
             {/* Compact actions group */}
             <div className='flex items-center gap-1'>
               <PointsBadge />
               <CartDrawer />
             </div>
-
             {/* Compact controls group */}
             <div className='flex items-center gap-1 border-l border-primary/20 pl-1 ml-1'>
               <ModeToggle />
@@ -173,7 +169,6 @@ export function PrimaryNav() {
               {isLoggedIn && <UserMenu />}
             </div>
           </div>
-
           {/* Tablet view (md to lg) - simplified controls */}
           <div className='hidden md:flex lg:hidden items-center gap-2 order-2'>
             <ModeToggle />
@@ -192,7 +187,6 @@ export function PrimaryNav() {
             )}
             {isLoggedIn && <UserMenu />}
           </div>
-
               {isLoggedIn && <UserMenu  />}
             </div>
           </div>
@@ -229,7 +223,7 @@ export function PrimaryNav() {
     </>
   )
 }
-return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo /> 
+return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
 }setQuery ('')
 //Track analytics event 
 }searchSuggestions= {
@@ -242,7 +236,7 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
   t ('auth.signup') 
 }</Link> </>) 
 }{
-  isLoggedIn && <UserMenu /> 
+  isLoggedIn && <UserMenu />
 }</div> </div> <ModeToggle /> <LanguageSelector /> {"
   !isLoggedIn && (<Link href="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={
   (e) => {
@@ -252,7 +246,7 @@ setLoginOpen (true)
 }t ('auth.login') 
 }</Link>) 
 }{
-  isLoggedIn && <UserMenu /> 
+  isLoggedIn && <UserMenu />
 }</div> {
   /* Mobile menu button */ "
 }<button) : (<Menu className="h-6 w-6" />) "
@@ -268,7 +262,7 @@ setLoginOpen (true)
 }{
   isMobile && <MobileBottomNav unreadCount= {
   unreadCount 
-}/> 
+}/>
 }<LoginModal isOpen= {
   loginOpen 
 }onOpenChange= {

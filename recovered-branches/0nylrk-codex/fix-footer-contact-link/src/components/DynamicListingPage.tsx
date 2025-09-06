@@ -24,7 +24,7 @@ interface DynamicListingPageProps {
   initialPrice?: PriceRange
 }
 
-export function DynamicListingPage({
+export function DynamicListingPage({;
   title;
   description;
   categorySlug;
@@ -116,14 +116,12 @@ export function DynamicListingPage({
             {description}
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-1">
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
               <h3 className="text-lg font-medium text-white mb-4 flex items-center">
                 <Filter className="mr-2 h-5 w-5" /> Filters
               </h3>
-              
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Category
@@ -148,7 +146,6 @@ export function DynamicListingPage({
                   </SelectContent>
                 </Select>
               </div>
-              
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Price Range
@@ -169,7 +166,6 @@ export function DynamicListingPage({
                   </div>
                 </div>
               </div>
-              
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Minimum Rating
@@ -204,7 +200,6 @@ export function DynamicListingPage({
                   ))}
                 </div>
               </div>
-              
               <Button 
                 variant="outline" 
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
@@ -220,7 +215,6 @@ export function DynamicListingPage({
               </Button>
             </div>
           </div>
-          
           <div className="lg:col-span-3">
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
               <div className="flex flex-col md:flex-row gap-4">
@@ -237,7 +231,6 @@ export function DynamicListingPage({
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                   />
                 </div>
-                
                 <div className="flex items-center gap-2 ml-auto">
                   <Button
                     variant="outline"
@@ -258,7 +251,6 @@ export function DynamicListingPage({
                 </div>
               </div>
             </div>
-
             <div className="mb-6">
               <p className="text-zion-slate-light">
                 Showing {filteredListings.length} results
@@ -266,7 +258,6 @@ export function DynamicListingPage({
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
-
             {isLoading ? (
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
                 {[1, 2, 3, 4].map((i) => (

@@ -3,7 +3,7 @@ import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status($1).json({ $2 });
   const usingPlaceholder =

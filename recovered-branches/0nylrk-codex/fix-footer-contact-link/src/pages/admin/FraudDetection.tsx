@@ -10,7 +10,7 @@ import {FraudFlag, FraudStats} from "@/types/fraud";
 // Import refactored components
 import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@/components/admin/fraud-detection";
 
-export default function FraudDetection() {
+export default function FraudDetection() {;
   const [flags, setFlags] = useState<FraudFlag[]>([]);
   const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -147,7 +147,6 @@ export default function FraudDetection() {
         title="Fraud Detection | Admin Dashboard" 
         description="Monitor and manage fraud detection alerts on the Zion AI Marketplace" 
       />
-      
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
           <div>
@@ -158,7 +157,6 @@ export default function FraudDetection() {
               Monitor suspicious activities and protect the marketplace from fraud and abuse
             </p>
           </div>
-          
           <div className="mt-4 md:mt-0">
             <Button 
               onClick={fetchFraudFlags} 
@@ -169,10 +167,8 @@ export default function FraudDetection() {
             </Button>
           </div>
         </div>
-        
         {/* Stats Cards */}
         <FraudStatsCards stats={stats} />
-        
         <Tabs defaultValue="all" className="mb-8">
           <TabsList>
             <TabsTrigger value="all">All Flags</TabsTrigger>
@@ -180,7 +176,6 @@ export default function FraudDetection() {
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
           </TabsList>
-          
           <TabsContent value="all" className="mt-6">
             {/* Search and Filters */}
             <FraudFilters
@@ -194,7 +189,6 @@ export default function FraudDetection() {
               setContentTypeFilter={setContentTypeFilter}
               resetFilters={resetFilters}
             />
-            
             {/* Flags Table */}
             <Card>
               <CardContent className="p-0">
@@ -208,15 +202,12 @@ export default function FraudDetection() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="pending">
             <FraudTabContent tabValue="pending" />
           </TabsContent>
-          
           <TabsContent value="dangerous">
             <FraudTabContent tabValue="dangerous" />
           </TabsContent>
-          
           <TabsContent value="actioned">
             <FraudTabContent tabValue="actioned" />
           </TabsContent>

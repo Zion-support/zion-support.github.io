@@ -14,7 +14,7 @@ import {
   Users,
   Globe,
   Code,
-  Shield,
+  Shield,;
 } from "lucide-react";
 import Layout from "../components/Layout";
 
@@ -194,7 +194,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -216,7 +215,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Leadership Team */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -228,7 +226,6 @@ export default function TeamPage() {
               Visionary leaders driving innovation and growth
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.slice(0, 3).map((member, index) => (
               <motion.div
@@ -287,7 +284,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* All Team Members */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -299,7 +295,6 @@ export default function TeamPage() {
               Dedicated professionals across all departments
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
@@ -359,7 +354,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Departments */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -371,7 +365,6 @@ export default function TeamPage() {
               Specialized teams working together to deliver excellence
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {departments.map((dept, index) => (
               <motion.div
@@ -392,7 +385,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Join Our Team CTA */}
       <section className="py-16 bg-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -417,7 +409,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
@@ -436,7 +427,6 @@ export default function TeamPage() {
               Get Free Consultation
             </Link>
           </div>
-
           {/* Contact Information */}
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="flex items-center justify-center">
@@ -454,7 +444,7 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-    </Layout>
+    </Layout>;
   );
 }
 import Head from "next/head";
@@ -510,7 +500,7 @@ export default function TeamPage() {
           Profiles coming soon. For inquiries, contact us.
         </p>
       </div>
-    </>
+    </>;
   );
   return (
     <>

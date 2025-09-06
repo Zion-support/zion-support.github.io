@@ -81,24 +81,20 @@ export default function FuturisticServices2030Page() {
         <meta name="keywords" content="2030 technology services, AI consciousness, quantum computing, space mining, metaverse development, neuromorphic computing, DNA computing, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        
         {/* Open Graph */}
         <meta property="og:title" content="2030 Futuristic Technology Services | Zion Tech Group" />
         <meta property="og:description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/services/2030-futuristic-services" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image-2030.jpg" />
-        
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2030 Futuristic Technology Services | Zion Tech Group" />
         <meta name="twitter:description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development." />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image-2030.jpg" />
-        
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />
         <link rel="canonical" href="https://ziontechgroup.com/services/2030-futuristic-services" />
-        
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -124,15 +120,12 @@ export default function FuturisticServices2030Page() {
           }}
         />
       </Head>
-
       <UltraFuturisticBackground2031>
         {/* Ultra Advanced Navigation */}
         <UltraFuturisticNavigation2031 />
-
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20"></div>
-          
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -165,7 +158,6 @@ export default function FuturisticServices2030Page() {
                 </motion.button>
               </div>
             </motion.div>
-
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               {[
@@ -190,12 +182,10 @@ export default function FuturisticServices2030Page() {
             </div>
           </div>
         </section>
-
         {/* Services by Category */}
         {serviceCategories.map((category, categoryIndex) => (
           <section key={category.title} className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-800/10"></div>
-            
             <div className="max-w-7xl mx-auto relative z-10">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -214,7 +204,6 @@ export default function FuturisticServices2030Page() {
                   {category.description}
                 </p>
               </motion.div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
@@ -228,7 +217,6 @@ export default function FuturisticServices2030Page() {
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
                       <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                      
                       <div className="space-y-3 mb-4">
                         <div className="flex items-center justify-between">
                           <span className="text-cyan-400 font-semibold">{service.price}{service.period}</span>
@@ -236,7 +224,6 @@ export default function FuturisticServices2030Page() {
                             {service.innovationLevel}
                           </span>
                         </div>
-                        
                         <div className="flex items-center space-x-4 text-xs text-gray-400">
                           <div className="flex items-center space-x-1">
                             <Clock className="w-3 h-3" />
@@ -252,7 +239,6 @@ export default function FuturisticServices2030Page() {
                           </div>
                         </div>
                       </div>
-
                       <div className="flex items-center justify-between">
                         <span className="text-xs text-gray-400">Trial: {service.trialDays} days</span>
                         <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
@@ -284,7 +270,6 @@ export default function FuturisticServices2030Page() {
                 Contact our team of technology experts to discuss how our revolutionary 2030 services 
                 can transform your business and propel you into the future.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -297,7 +282,6 @@ export default function FuturisticServices2030Page() {
                   View Pricing
                 </motion.button>
               </div>
-
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
                 <div className="flex items-center justify-center space-x-2">
                   <Phone className="w-5 h-5 text-cyan-400" />
@@ -315,10 +299,9 @@ export default function FuturisticServices2030Page() {
             </motion.div>
           </div>
         </section>
-
         {/* Footer */}
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2031>
     </>
-  )
+  );
 };

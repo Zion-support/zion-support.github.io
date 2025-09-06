@@ -41,7 +41,7 @@ import {
   ChartBar,
   Clock,
   CheckCircle,
-  AlertCircle,
+  AlertCircle,;
   MessageSquare,;
 } from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
 export default function BusinessToolsPage() {
@@ -101,7 +101,7 @@ export default function BusinessToolsPage() {
     },    {          icon: <Calendar className="w-6 h-6" />,
           color: 'bg-gradient-to-br from-red-500 to-pink-600'
         }
-      ]
+      ];
     };
       category: 'Communication & Collaboration',
       tools: [
@@ -479,13 +479,11 @@ export default function BusinessToolsPage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>
             <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />
@@ -498,13 +496,11 @@ export default function BusinessToolsPage() {
             Discover the most powerful business tools that successful companies
             use to manage projects, communicate effectively, market their
             products, and grow their operations. Real pricing and features.          </p>      </Head>
-
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
         <div className="absolute inset-0 bg-grid opacity-10" />
-        
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
             <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
@@ -518,7 +514,6 @@ export default function BusinessToolsPage() {
           </p>
         </div>
       </section>
-
       {/* Business Insights */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -531,7 +526,6 @@ export default function BusinessToolsPage() {
               landscape and emerging opportunities.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {businessInsights.map((insight, index) => (
               <Card
@@ -553,7 +547,6 @@ export default function BusinessToolsPage() {
               Stay ahead of the curve with our analysis of the business tools landscape and emerging opportunities.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {businessInsights.map((insight, index) => (
               <Card
@@ -571,7 +564,6 @@ export default function BusinessToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Business Tools */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -584,7 +576,6 @@ export default function BusinessToolsPage() {
               organization. Each tool has been evaluated for features, pricing,
               and business impact.            </p>
           </div>
-
           {businessTools.map((category, categoryIndex) => (      <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -595,7 +586,6 @@ export default function BusinessToolsPage() {
               Hand-picked business tools that deliver real value for your organization. Each tool has been evaluated 
               for features, pricing, and business impact.
           </div>
-
           {businessTools.map((category, categoryIndex) => (
             <div key={categoryIndex} className='mb-20'>
               <div className='text-center mb-12'>
@@ -604,7 +594,6 @@ export default function BusinessToolsPage() {
                 </h3>
                 <div className='w-24 h-1 bg-gradient-to-r from-cursor-blue to-purple-500 mx-auto rounded-full' />
               </div>
-
               <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>                {category.tools.map((tool, toolIndex) => (
                   <Card
                     key={toolIndex}
@@ -613,7 +602,6 @@ export default function BusinessToolsPage() {
                 <h3 className="text-3xl font-bold text-white mb-4">{category.category}</h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-cursor-blue to-purple-500 mx-auto rounded-full" />
               </div>
-
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   <Card
                     key={toolIndex}
@@ -648,7 +636,6 @@ export default function BusinessToolsPage() {
                         {tool.description}
                       </p>
                     </div>
-
                     <div className='mb-6'>
                       <div className='text-center mb-4'>
                         <span className='text-2xl font-bold text-cursor-blue'>
@@ -666,7 +653,6 @@ export default function BusinessToolsPage() {
                       <h4 className="text-xl font-bold text-white mb-2">{tool.name}</h4>
                       <p className="text-gray-400 text-sm leading-relaxed">{tool.description}</p>
                     </div>
-
                     <div className="mb-6">
                       <div className="text-center mb-4">
                         <span className="text-2xl font-bold text-cursor-blue">{tool.pricing}</span>
@@ -680,7 +666,6 @@ export default function BusinessToolsPage() {
                         ))}
                       </ul>
                     </div>
-
                     <Button
                       href={tool.website}
                       variant='primary'
@@ -703,7 +688,6 @@ export default function BusinessToolsPage() {
           ))}
         </div>
       </section>
-
       {/* Productivity Tips */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -715,7 +699,6 @@ export default function BusinessToolsPage() {
               strategies and best practices.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {productivityTips.map((tip, index) => (
               <Card
@@ -738,7 +721,6 @@ export default function BusinessToolsPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />

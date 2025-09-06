@@ -17,7 +17,7 @@ interface ApplicationRowProps {
   onViewScore: (application: JobApplication) => void
 }
 
-export function ApplicationRow({
+export function ApplicationRow({;
   application;
   processingId;
   onViewApplication;

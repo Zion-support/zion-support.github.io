@@ -1,7 +1,7 @@
 import React from 'react';
 import {useRouter} from 'next/router';
 import {useCurrentUser} from '../../hooks/useCurrentUser';
-export default function ComposePage() {
+export default function ComposePage() {;
   const router = useRouter();
   const {
     type,
@@ -111,3 +111,5 @@ export default function ComposePage() {
       </div>
     </div>
 );
+
+}

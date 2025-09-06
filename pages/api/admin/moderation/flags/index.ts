@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',;
-import { createFlag, readAllFlags } from '../../../../../utils/moderationDb',
+import { createFlag, readAllFlags } from '../../../../../utils/moderationDb',;
 ;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req),
@@ -29,5 +29,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   res.setHeader('AllowGET,POST'),
-  return res.status(405).end('Method Not Allowed')
+  return res.status(405).end('Method Not Allowed');
 };

@@ -52,7 +52,7 @@ export function WhitelabelRequestForm() {
         landing_page_copy: {
           headline: values.headline,
           subtitle: values.subtitle,
-          cta: values.cta}
+          cta: values.cta};
       };
       
       // Submit to Supabase
@@ -179,7 +179,6 @@ export function WhitelabelRequestForm() {
               
               <div className="border rounded-md p-4 space-y-4">
                 <h3 className="text-sm font-medium">Landing Page Copy</h3>
-                
                 <FormField
                   control={form.control}
                   name="headline"
@@ -223,7 +222,6 @@ export function WhitelabelRequestForm() {
                 />
               </div>
             </div>
-            
             <Button type="submit" className="w-full" size="lg">
               Create White-Label Instance
             </Button>

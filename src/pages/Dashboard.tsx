@@ -80,8 +80,8 @@ const GuidedTour = dynamic(
 )
 // Lazy load notification functions
 const loadNotificationFunctions = () => import('@/utils/notifications')
-export default function Dashboard() {
-  const { logout } = useAuth()
+export default function Dashboard() {;
+  const { logout } = useAuth();
   const { user, loading } = useRequireAuth(); // This will handle authentication and redirects
   const { toast } = useToast()
   // Add safe checks for user ID to prevent premature API calls
@@ -165,13 +165,11 @@ export default function Dashboard() {
                       userWithExtendedProps?.email}
                   </h2>
                   <p className='text-zion-slate-light mb-2'>{user?.email}</p>
-
                   <Badge className='bg-zion-purple text-white mb-4'>
                     {userType
                       ? userType.charAt(0).toUpperCase() + userType.slice(1)
                       : 'New User'}
                   </Badge>
-
                   <Button
                     id='profile-link'
                     className='w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
@@ -181,7 +179,6 @@ export default function Dashboard() {
                   </Button>
                 </div>
               </div>
-
               {/* Stats & Metrics */}
               <div className='bg-zion-blue-dark rounded-xl p-6 mb-6'>
                 <h3 className='text-lg font-bold text-white mb-4'>
@@ -200,7 +197,6 @@ export default function Dashboard() {
                       style={{ width: '65%' }}
                     ></div>
                   </div>
-
                   <div className='flex justify-between items-center'>
                     <span className='text-zion-slate-light'>Points</span>
                     <PointsBadge />
@@ -213,12 +209,10 @@ export default function Dashboard() {
                       </Link>
                     </span>
                   </div>
-
                   <div className='flex justify-between items-center'>
                     <span className='text-zion-slate-light'>Badges Earned</span>
                     <span className='text-zion-cyan font-medium'>3/12</span>
                   </div>
-
                   {/* Test notification buttons */}
                   <div className='flex flex-col gap-2 mt-4'>
                     <Button
@@ -228,7 +222,6 @@ export default function Dashboard() {
                       <Send size={16} className='text-zion-cyan' />
                       Send Test Notification
                     </Button>
-
                     <Button
                       className='w-full flex items-center justify-center gap-2'
                       variant='outline'
@@ -257,7 +250,6 @@ export default function Dashboard() {
                       <Settings size={16} className='text-zion-purple' />
                       Send Onboarding Nudge
                     </Button>
-
                     <Button
                       className='w-full flex items-center justify-center gap-2'
                       variant='outline'
@@ -292,7 +284,6 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-
               {/* Notifications */}
               <div className='bg-zion-blue-dark rounded-xl p-6'>
                 <h3 className='text-lg font-bold text-white mb-4 flex items-center'>
@@ -313,7 +304,6 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-
             {/* Main Content - Dashboard */}
             <div className='lg:col-span-2'>
               <div className='bg-zion-blue-dark rounded-xl p-6 mb-6'>
@@ -335,7 +325,6 @@ export default function Dashboard() {
                     </Button>
                   </div>
                 </div>
-
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6'>
                   <div className='p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light'>
                     <h3 className='text-lg font-medium text-white'>
@@ -356,7 +345,6 @@ export default function Dashboard() {
                     </p>
                   </div>
                 </div>
-
                 {/* Badges Preview */}
                 <div className='mb-8'>
                   <h3 className='text-lg font-bold text-white mb-4'>
@@ -397,7 +385,6 @@ export default function Dashboard() {
                     </div>
                   </div>
                 </div>
-
                 {/* Community Section */}
                 <div id='community-section'>
                   <h3 className='text-lg font-bold text-white mb-4'>
@@ -405,7 +392,6 @@ export default function Dashboard() {
                   </h3>
                   <CommunityDiscussion />
                 </div>
-
                 {/* User Overview */}
                 <div className='mt-8 space-y-8'>
                   <div className='bg-zion-blue-dark rounded-xl p-6'>
@@ -448,7 +434,6 @@ export default function Dashboard() {
                       </Link>
                     </div>
                   </div>
-
                   <div className='bg-zion-blue-dark rounded-xl p-6'>
                     <h3 className='text-lg font-bold text-white mb-4 flex items-center'>
                       <Heart className='mr-2' size={18} /> Wishlist
@@ -471,7 +456,6 @@ export default function Dashboard() {
                       </Link>
                     </div>
                   </div>
-
                   <div className='bg-zion-blue-dark rounded-xl p-6'>
                     <h3 className='text-lg font-bold text-white mb-4 flex items-center'>
                       <Key className='mr-2' size={18} /> API Keys

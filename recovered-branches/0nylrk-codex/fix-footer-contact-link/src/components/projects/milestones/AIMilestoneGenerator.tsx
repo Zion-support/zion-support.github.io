@@ -16,7 +16,7 @@ interface AIMilestoneGeneratorProps {
   onAddMilestone: (milestone: GeneratedMilestone) => void
 }
 
-export function AIMilestoneGenerator({
+export function AIMilestoneGenerator({;
   scope;
   startDate;
   endDate;
@@ -102,7 +102,6 @@ export function AIMilestoneGenerator({
           )}
         </Button>
       </div>
-
       {generatedMilestones.length > 0 && (
         <Card>
           <CardContent className="pt-6">
@@ -117,7 +116,6 @@ export function AIMilestoneGenerator({
                 Add Selected to Project
               </Button>
             </div>
-
             <Accordion type="multiple" className="w-full">
               {generatedMilestones.map((milestone, index) => (
                 <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">

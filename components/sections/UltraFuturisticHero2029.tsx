@@ -11,7 +11,7 @@ import {
   Target,
   Shield,
   Cpu,
-  Globe,
+  Globe,;
   Sparkles,;
 } from 'lucide-react';
 export default function UltraFuturisticHero2029() {
@@ -44,7 +44,7 @@ export default function UltraFuturisticHero2029() {
     {
       icon: Cpu,
       text: 'Autonomous IT Operations',
-      color: 'from-cyan-500 to-teal-600',
+      color: 'from-cyan-500 to-teal-600',;
     },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-violet-500 to-purple-600' },
     { icon: Atom, text: 'Quantum Computing Solutions', color: 'from-blue-500 to-cyan-600' },
     { icon: Rocket, text: 'Space Technology Innovation', color: 'from-emerald-500 to-teal-600' },
@@ -109,7 +109,6 @@ export default function UltraFuturisticHero2029() {
             />
           ))}
         </div>
-
         {/* Grid Pattern */}
         <div className='absolute inset-0 opacity-10'>
           <div
@@ -120,20 +119,16 @@ export default function UltraFuturisticHero2029() {
             }}
           />
         </div>
-
         {/* Gradient Orbs */}
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse' />
         <div className='absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000' />
       </div>
-
       {/* Content */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}        </div>
-
         {/* Gradient Orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
-
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
@@ -153,16 +148,14 @@ export default function UltraFuturisticHero2029() {
               Revolution
             </span>
           </h1>
-
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
             Experience the future of technology with Zion Tech Group's
             revolutionary 2029 services. From AI consciousness evolution to
-            quantum space mining, we're building tomorrow's solutions today.          </p>          
+            quantum space mining, we're building tomorrow's solutions today.          </p>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the future of technology with Zion Tech Group's revolutionary 2029 services. 
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.
         </motion.div>
-
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -177,7 +170,6 @@ export default function UltraFuturisticHero2029() {
             <span>Explore Services</span>
             <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
           </Link>
-
           <Link
             href='/contact'
             className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center space-x-2'
@@ -191,7 +183,6 @@ export default function UltraFuturisticHero2029() {
             <span>Explore Services</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
-          
           <Link
             href="/contact"
             className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center space-x-2"
@@ -200,7 +191,6 @@ export default function UltraFuturisticHero2029() {
             <Zap className="w-5 h-5" />
           </Link>
         </motion.div>
-
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -231,7 +221,6 @@ export default function UltraFuturisticHero2029() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -266,7 +255,6 @@ export default function UltraFuturisticHero2029() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -295,7 +283,6 @@ export default function UltraFuturisticHero2029() {
           </motion.div>
         </motion.div>
       </div>
-
       {/* Floating Elements */}
       <motion.div
         animate={{ rotate: 360 }}
@@ -316,4 +303,6 @@ export default function UltraFuturisticHero2029() {
       />
     </section>
   )
+}
+
 }

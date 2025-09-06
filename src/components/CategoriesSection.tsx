@@ -186,7 +186,6 @@ export function CategoriesSection({
             </Link>
           ))}
         </div>
-        
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
@@ -201,7 +200,6 @@ export function CategoriesSection({
               </Link>            ))}
           </div>
         </div>
-        
         <div className="mt-12 flex justify-center">
           <Link 
             href="/categories/all"
@@ -233,8 +231,8 @@ categories: fetchedCategories, //Rename prop for clarity
   const {
   t 
 }= useTranslation ()
-const defaultCategories = getDefaultCategories (t)
-//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
+const defaultCategories = getDefaultCategories (t);
+//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description || "No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link || `/category/$ {

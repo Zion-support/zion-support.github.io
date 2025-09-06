@@ -58,7 +58,6 @@ const Services: React.FC = () => {
           </p>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,7 +98,6 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Process Section */}
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,7 +105,6 @@ const Services: React.FC = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
             <p className="text-xl text-gray-600">How we deliver exceptional results for your business</p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -116,7 +113,6 @@ const Services: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Discovery</h3>
               <p className="text-gray-600">We analyze your business needs and challenges to understand your goals.</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-purple-600">2</span>
@@ -124,7 +120,6 @@ const Services: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Strategy</h3>
               <p className="text-gray-600">We develop a comprehensive strategy tailored to your specific requirements.</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-green-600">3</span>
@@ -132,7 +127,6 @@ const Services: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Development</h3>
               <p className="text-gray-600">Our expert team builds and implements your solution with precision.</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-orange-600">4</span>
@@ -143,7 +137,6 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">

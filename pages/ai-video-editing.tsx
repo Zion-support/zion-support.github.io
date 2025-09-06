@@ -49,5 +49,5 @@ export default function AIVideoEditingPage() {
         </div>
       </div>
     </Layout>
-  )
+  );
 };

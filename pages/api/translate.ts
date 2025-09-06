@@ -34,5 +34,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err: any) {
     console.error('Translation error', err),
     return res.status(500).json({ error: 'Translation failed' })
-  }
+  };
 };

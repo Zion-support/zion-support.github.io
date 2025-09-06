@@ -18,7 +18,6 @@ export default function Categories() {
               Find exactly what you're looking for to enhance your business or personal projects.
             </p>
           </div>
-          
           {/* Reuse the Categories Section component */}
           <CategoriesSection showTitle={false} />
         </div>
@@ -27,3 +26,4 @@ export default function Categories() {
     </>
   )
 }
+;

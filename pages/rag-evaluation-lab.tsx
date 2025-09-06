@@ -57,7 +57,7 @@ export default function RAGEvaluationLabPage() {
           </div>
           const useCases = [ 'Enterprise Knowledge Management', 'Customer
           Support Systems', 'Research & Development', 'Content Generation
-          Platforms', 'Educational Applications', 'Legal & Compliance Systems'
+          Platforms', 'Educational Applications', 'Legal & Compliance Systems';
           ];
           <div className='mt-12 flex flex-wrap items-center gap-4'>
             <Link
@@ -78,3 +78,5 @@ export default function RAGEvaluationLabPage() {
       </section>
     </>
   );
+
+}

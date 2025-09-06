@@ -27,9 +27,7 @@ const ResumeBuilder: NextPage = () => {
       <Head>
         <title>Resume Builder - Zion AI Marketplace</title>
       </Head>
-
       <h1 className="text-2xl font-semibold mb-4">Resume Builder</h1>
-
       <section className="mb-8">
         <h2 className="text-lg font-semibold mb-2">Profile</h2>
         <div className="grid gap-3 sm:grid-cols-2">
@@ -47,7 +45,6 @@ const ResumeBuilder: NextPage = () => {
           </label>
         </div>
       </section>
-
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold">Summary</h2>
@@ -70,7 +67,6 @@ const ResumeBuilder: NextPage = () => {
         </div>
         <textarea value={summary} onChange={e => setSummary(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
       </section>
-
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold">Experience</h2>
@@ -84,7 +80,6 @@ const ResumeBuilder: NextPage = () => {
         </div>
         <textarea value={experience} onChange={e => setExperience(e.target.value)} rows={10} className="w-full rounded-md border p-3" />
       </section>
-
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold">Skills</h2>

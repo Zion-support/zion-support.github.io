@@ -17,7 +17,7 @@ import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, A
 
 import CodeBlock from "./CodeBlock";
 export function ApiKeysManager() {
-  const { 
+  const { ;
     keys;
     loading, 
     newApiKey;
@@ -100,13 +100,11 @@ export function ApiKeysManager() {
           Create and manage API keys for accessing the Zion APIs.
         </CardDescription>
       </CardHeader>
-      
       <CardContent>
         <div className="flex justify-between items-center mb-6">
           <p className="text-sm text-zinc-400">
             You have {keys.length} API {keys.length === 1 ? 'key' : 'keys'}
           </p>
-          
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
               <Button variant="default">Create New API Key</Button>
@@ -118,7 +116,6 @@ export function ApiKeysManager() {
                   Generate a new API key for accessing the Zion APIs.
                 </DialogDescription>
               </DialogHeader>
-              
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <Label htmlFor="key-name">Key Name</Label>
@@ -130,7 +127,6 @@ export function ApiKeysManager() {
                     className="bg-zinc-800 border-zinc-700"
                   />
                 </div>
-                
                 <div className="space-y-2">
                   <Label>Scopes</Label>
                   <div className="grid gap-2 pt-2">
@@ -153,7 +149,6 @@ export function ApiKeysManager() {
                   </div>
                 </div>
               </div>
-              
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>
@@ -163,7 +158,6 @@ export function ApiKeysManager() {
             </DialogContent>
           </Dialog>
         </div>
-        
         {/* New API Key Alert */}
         {newApiKey && (
           <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">
@@ -218,7 +212,6 @@ export function ApiKeysManager() {
                       </div>
                     </div>
                   </div>
-                  
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" size="icon">
@@ -243,7 +236,6 @@ export function ApiKeysManager() {
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
-                
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope) => (
                     <Badge 
@@ -255,7 +247,6 @@ export function ApiKeysManager() {
                     </Badge>
                   ))}
                 </div>
-                
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
                   <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
                   <Popover>
@@ -283,7 +274,6 @@ export function ApiKeysManager() {
           )}
         </div>
       </CardContent>
-      
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
           Keep your API keys secure. They have the same permissions as your account.
@@ -292,7 +282,6 @@ export function ApiKeysManager() {
           Refresh
         </Button>
       </CardFooter>
-
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog 
         open={showRegenerateConfirm !== null} 
@@ -319,7 +308,6 @@ export function ApiKeysManager() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-
       {/* Delete Key Confirmation Dialog */}
       <AlertDialog 
         open={showDeleteConfirm !== null} 

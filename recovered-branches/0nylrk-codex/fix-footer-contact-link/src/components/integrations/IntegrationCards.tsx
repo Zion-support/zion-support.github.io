@@ -13,7 +13,7 @@ interface IntegrationCardProps {
   onConnect?: () => void
 }
 
-export function IntegrationCard({
+export function IntegrationCard({;
   title;
   description;
   icon;
@@ -73,3 +73,4 @@ export function IntegrationCards() {
     </div>
   )
 }
+;

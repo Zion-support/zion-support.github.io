@@ -5,11 +5,11 @@ import {
   Project,
   Milestone,
   MilestoneStatus,
-  isMilestoneStatus,
+  isMilestoneStatus,;
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
-export interface Milestone {
+export interface Milestone {;
   id: string;
   title: string;
   description?: string;
@@ -24,11 +24,11 @@ export interface Milestone {
 // Mock storage
 const projects: Project[] = [];
 
-export function getProjectById(id: string): Project | null {
+export function getProjectById(id: string): Project | null {;
   return projects.find(p => p.id === id) || null;
 }
 
-export function getAllProjects(): Project[] {
+export function getAllProjects(): Project[] {;
   return projects;
 }
 
@@ -37,13 +37,13 @@ export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updat
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
+    updatedAt: new Date().toISOString();
   };
   projects.push(newProject);
   return newProject;
 }
 
-export function updateProject(id: string, updates: Partial<Project>): Project | null {
+export function updateProject(id: string, updates: Partial<Project>): Project | null {;
   const project = projects.find(p => p.id === id);
   if (!project) return null;
   
@@ -57,7 +57,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     id: `milestone_${Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
+    updatedAt: new Date().toISOString();
   };
   
   project.milestones.push(newMilestone);
@@ -66,7 +66,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   return newMilestone;
 }
 
-export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
+export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {;
   const milestone = project.milestones.find(m => m.id === milestoneId);
   if (!milestone) return null;
   
@@ -76,7 +76,7 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
   return milestone;
 }
 
-export function deleteMilestone(project: Project, milestoneId: string): boolean {
+export function deleteMilestone(project: Project, milestoneId: string): boolean {;
   const index = project.milestones.findIndex(m => m.id === milestoneId);
   if (index === -1) return false;
   

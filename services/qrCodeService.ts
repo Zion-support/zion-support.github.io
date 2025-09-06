@@ -1,4 +1,4 @@
-export interface QRCodeOptions {
+export interface QRCodeOptions {;
   text: string;
   size?: number;
   foregroundColor?: string;
@@ -13,7 +13,7 @@ export interface QRCodeOptions {
   }
 }
 
-export interface QRCodeResult {
+export interface QRCodeResult {;
   dataUrl: string;
   options: QRCodeOptions;
   generatedAt: Date;
@@ -23,7 +23,7 @@ export interface QRCodeResult {
   }
 }
 
-export interface QRCodeTemplate {
+export interface QRCodeTemplate {;
   id: string;
   name: string;
   description: string;

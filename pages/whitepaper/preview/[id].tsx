@@ -1,6 +1,6 @@
 import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
-export default function WhitepaperPreview() {
+export default function WhitepaperPreview() {;
   const router = useRouter();
   const { id } = router.query;
   const [markdown, setMarkdown] = useState<string>('');
@@ -31,3 +31,5 @@ export default function WhitepaperPreview() {
       <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>
     </div>
 );
+
+}

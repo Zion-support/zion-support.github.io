@@ -45,7 +45,7 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
-export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
+export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -79,7 +79,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/ai-autonomous-business-processor',
-    marketPosition:
+    marketPosition:;
       'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.',
     targetAudience: [
       'Enterprise companies',

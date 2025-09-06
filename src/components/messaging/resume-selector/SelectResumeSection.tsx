@@ -66,4 +66,5 @@ export function SelectResumeSection({
     </div>
   )
 }}
-}
+};
+;

@@ -41,13 +41,13 @@ function isAuthorized(req: NextApiRequest) {
     token === process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {
+  if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
     return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {
+  if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
     return;
   }
@@ -93,4 +93,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
+}
+
+}
+}
 }

@@ -1,14 +1,14 @@
 
 
 // Define types for the pricing recommendation
-export interface PricingSuggestion {
+export interface PricingSuggestion {;
   minRate: number;
   maxRate: number;
   confidence: "High" | "Medium" | "Low",
   explanation: string
 }
 
-export interface ClientBudgetParams {
+export interface ClientBudgetParams {;
   jobTitle: string;
   category: string;
   timeline?: string;
@@ -16,7 +16,7 @@ export interface ClientBudgetParams {
   experienceLevel?: string
 }
 
-export interface TalentRateParams {
+export interface TalentRateParams {;
   skills: string[];
   yearsExperience: number,
   location?: string
@@ -27,7 +27,7 @@ export interface TalentRateParams {
 export async function getClientBudgetSuggestion(params: ClientBudgetParams): Promise<PricingSuggestion> {
   try {
     // This would be replaced with an actual API call to an AI model
-    // For now, we'll simulate a response based on job category
+    // For now, we'll simulate a response based on job category;
     const { jobTitle, category } = params;
     
     // Simulate API call delay
@@ -93,7 +93,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
 }
 
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
-  try {
+  try {;
     const { skills, yearsExperience, location } = params;
     
     // Simulate API call delay
@@ -168,7 +168,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 }
 
 // Function to save pricing analytics data
-export async function trackPricingSuggestion(data: {
+export async function trackPricingSuggestion(data: {;
   userId: string;
   suggestionType: 'client' | 'talent';
   suggestedMin: number;

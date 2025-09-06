@@ -7,7 +7,7 @@ interface VerifiedBadgeProps {
   size?: 'sm' | 'md' | 'lg'
 }
 
-export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
+export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {;
   if (!verified) return null;
   
   const sizeClasses = {

@@ -11,7 +11,7 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
     }
-    return format(date, 'MMM yyyy')
+    return format(date, 'MMM yyyy');
   };
 
   if (certifications.length === 0) return null;

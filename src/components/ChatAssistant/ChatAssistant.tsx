@@ -221,7 +221,6 @@ export function ChatAssistant({
             <X className="h-5 w-5" />
           </Button>
         </div>
-
         {/* Context Header (Optional) */}
         {contextHeader && (
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
@@ -259,13 +258,11 @@ export function ChatAssistant({
           )}
           <div ref={messagesEndRef} />
         </div>
-
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />
         </div>
       </div>
-
       {showGuestModal && guestMessage && (
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
@@ -304,4 +301,5 @@ export function ChatAssistant({
     </div>
   )
 }
-}
+};
+;

@@ -1,4 +1,4 @@
-export interface Revolutionary2026ItService {
+export interface Revolutionary2026ItService {;
   id: string;
   name: string;
   tagline: string;
@@ -37,7 +37,7 @@ export const revolutionary2026ITServices: Revolutionary2026ItService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
-  },
+  },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"

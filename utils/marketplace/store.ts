@@ -1,4 +1,4 @@
-// Marketplace data store utilitiesexport interface Project {
+// Marketplace data store utilitiesexport interface Project {;
   id: string;
   title: string;
   summary: string;
@@ -29,7 +29,7 @@
   updatedAt: string,
 }
 
-export interface Offer {
+export interface Offer {;
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -52,7 +52,7 @@ export interface Offer {
   notes?: string,
 }
 
-export interface Application {
+export interface Application {;
   id: string;
   projectId: string;
   talentSlug: string;
@@ -65,7 +65,7 @@ export interface Application {
   notes?: string,
 }
 
-export interface Message {
+export interface Message {;
   id: string;
   conversationId: string;
   senderId: string;
@@ -80,7 +80,7 @@ export interface Message {
   isRead: boolean,
 }
 
-export interface Conversation {
+export interface Conversation {;
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -370,7 +370,7 @@ export async function getProject(id: string): Promise<Project | null> {
   return marketplaceStore.getProject(id),
 }
 
-export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
+export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
   return marketplaceStore.updateProject(id, updates);
 }
 
@@ -386,7 +386,7 @@ export async function getOffer(id: string): Promise<Offer | null> {
   return marketplaceStore.getOffer(id),
 }
 
-export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
+export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
   return marketplaceStore.updateOffer(id, updates);
 }
 
@@ -402,7 +402,7 @@ export async function getApplication(id: string): Promise<Application | null> {
   return marketplaceStore.getApplication(id),
 }
 
-export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
+export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
   return marketplaceStore.updateApplication(id, updates);
 }
 
@@ -418,7 +418,7 @@ export async function getMessage(id: string): Promise<Message | null> {
   return marketplaceStore.getMessage(id),
 }
 
-export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
   return marketplaceStore.updateMessage(id, updates);
 }
 
@@ -441,7 +441,7 @@ export function createProjectData(
     status: 'DRAFT',
     timeline: [],
     documents: [],
-    ...additionalData
+    ...additionalData;
   };
 }
 
@@ -459,7 +459,7 @@ export function createOfferData(
     scopeSummary,
     paymentTerms,
     status: 'SENT',
-    ...additionalData
+    ...additionalData;
   };
 }
 
@@ -472,7 +472,7 @@ export function createApplicationData(
     projectId,
     talentSlug,
     status: 'PENDING',
-    ...additionalData
+    ...additionalData;
   };
 }
 
@@ -489,10 +489,10 @@ export function createMessageData(
     recipientId,
     body,
     isRead: false,
-    ...additionalData
+    ...additionalData;
   };
 }
 
-export function generateId(prefix: string = 'item'): string {
+export function generateId(prefix: string = 'item'): string {;
   return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }

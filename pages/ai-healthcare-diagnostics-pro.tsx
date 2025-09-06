@@ -262,19 +262,16 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           href='https://ziontechgroup.com/ai-healthcare-diagnostics-pro'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         {/* Background Effects */}
         <div className='absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_50%)]'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]'></div>
-
         {/* Floating Elements */}
         <div className='absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse'></div>
         <div className='absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500'></div>
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -298,7 +295,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               reduce diagnosis time by 80%, and save countless lives through
               early intervention.
             </p>
-
             {/* Key Metrics */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto'>              <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -329,7 +325,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 </div>
                 <div className='text-gray-300'>Continuous Monitoring</div>              </motion.div>
             </div>
-
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>              <motion.button
                 initial={{ opacity: 0, y: 20 }}
@@ -348,7 +343,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             </div>
           </motion.div>
         </div>
-
       {/* Features Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
@@ -371,7 +365,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               accuracy and speed.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -395,7 +388,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             ))}
           </div>
         </div>
-
       {/* Medical Specialties Section */}
       <section className='py-20 bg-black relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
@@ -424,7 +416,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               <li>• Ultrasound imaging</li>
             </ul>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {specialties.map((specialty, index) => (
               <motion.div
                 key={index}
@@ -454,7 +445,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             ))}
           </div>
         </div>
-
       {/* Use Cases Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]'></div>
@@ -476,7 +466,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               specific medical specialty and workflow requirements.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
@@ -514,7 +503,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className='py-20 bg-black relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
@@ -536,7 +524,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               practice. Start with our Starter plan and upgrade as you grow.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
@@ -568,7 +555,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                   </div>
                   <p className='text-gray-300'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -579,7 +565,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                       <span className='text-gray-300'>{feature}</span>                    </li>
                   ))}
                 </ul>
-
                 <button
                   className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
                 >                  Get Started
@@ -589,7 +574,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
@@ -612,7 +596,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               platforms.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {integrations.map((integration, index) => (
               <motion.div
                 key={index}
@@ -637,7 +620,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]'></div>
@@ -658,7 +640,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               Join leading healthcare institutions worldwide who have already
               revolutionized patient care with AI-powered diagnostics.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25'>
                 Schedule Demo
@@ -667,7 +648,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 Contact Sales
               </button>
             </div>
-
             <div className='mt-8 text-sm text-gray-400'>
               <p>
                 Questions? Call us at{' '}

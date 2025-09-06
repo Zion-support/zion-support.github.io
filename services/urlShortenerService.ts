@@ -1,4 +1,4 @@
-export interface ShortUrl {
+export interface ShortUrl {;
   id: string;
   originalUrl: string;
   shortCode: string;
@@ -9,7 +9,7 @@ export interface ShortUrl {
   userId?: string
 }
 
-export interface UrlAnalytics {
+export interface UrlAnalytics {;
   totalClicks: number;
   uniqueVisitors: number;
   referrers: string[];
@@ -20,7 +20,7 @@ export interface UrlAnalytics {
   clickHistory: ClickEvent[]
 }
 
-export interface ClickEvent {
+export interface ClickEvent {;
   id: string;
   timestamp: Date;
   ipAddress: string;
@@ -33,7 +33,7 @@ export interface ClickEvent {
   os: string
 }
 
-export interface CreateShortUrlRequest {
+export interface CreateShortUrlRequest {;
   originalUrl: string;
   customCode?: string;
   expiresAt?: Date,

@@ -9,7 +9,7 @@ import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
+  // definitions, so avoid passing a type argument to prevent TS2347.;
   const { roomId } = useParams();
   const navigate = useNavigate();
   const [isJoining, setIsJoining] = useState(false);
@@ -96,7 +96,6 @@ export default function VideoCall() {
               participants={participants}
               onLeave={handleLeaveCall} 
             />
-            
             {/* This button is just for demo/testing purposes */}
             <div className="flex justify-center mt-4">
               <Button variant="outline" onClick={simulateUserJoining} className="text-sm">

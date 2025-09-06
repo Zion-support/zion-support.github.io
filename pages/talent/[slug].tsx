@@ -60,7 +60,6 @@ const TalentProfile: NextPage = () => {
               Experienced developer specializing in React, Next.js, and Node.js.
             </p>
           </div>
-
           <div className="border rounded-md p-4">
             <h2 className="font-semibold mb-2">Testimonials</h2>
             <MicroTestimonial
@@ -69,7 +68,6 @@ const TalentProfile: NextPage = () => {
             />
           </div>
         </div>
-
         <aside className="space-y-4">
           <div className="border rounded-md p-4">
             <h3 className="font-semibold mb-2">Response Log</h3>

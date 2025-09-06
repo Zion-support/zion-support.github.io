@@ -38,7 +38,6 @@ export function GlobalServiceSection() {
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
@@ -50,7 +49,6 @@ export function GlobalServiceSection() {
             </div>
           ))}
         </div>
-
         <div className="flex justify-center mt-12">
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
             Get Your Free Commercial Proposal
@@ -59,5 +57,5 @@ export function GlobalServiceSection() {
       </div>
     </section>
   )
-}
+};
 ;

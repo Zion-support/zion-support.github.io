@@ -12,9 +12,9 @@ export default function CreateTalentProfile() {
             to get discovered for AI and tech projects on the Zion Marketplace.
           </p>
         </div>
-        
         <TalentRegistrationForm />
       </div>
     </div>
   )
 }
+;

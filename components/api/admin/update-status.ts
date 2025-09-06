@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     res.status(405).json({ error: 'Method Not Allowed' });
     return;
   }
@@ -26,7 +26,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   };
   fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2));
   res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     res.status(405).json({ error: 'Method Not Allowed' });
     return
   }
@@ -46,4 +46,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     updatedAt: new Date().toISOString()};
   fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2));
   res.status(200).json({ ok: true })
+}
+
 }

@@ -12,7 +12,7 @@ import {
   CheckCircle,
   Star,
   Users,
-  Clock,
+  Clock,;
   TrendingUp,;
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
@@ -73,7 +73,7 @@ export default function CloudServicesPage() {
       price: 'From $12,000',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
-    },
+    },;
   ];
 
   const stats = [
@@ -100,9 +100,7 @@ export default function CloudServicesPage() {
           content='Scalable cloud infrastructure solutions for modern businesses.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/services/cloud' />      </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -118,7 +116,6 @@ export default function CloudServicesPage() {
               Scalable cloud solutions that drive efficiency and accelerate
               digital transformation            </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -136,7 +133,6 @@ export default function CloudServicesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -160,7 +156,6 @@ export default function CloudServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -178,7 +173,6 @@ export default function CloudServicesPage() {
               infrastructure and drive innovation
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -219,7 +213,6 @@ export default function CloudServicesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -245,7 +238,6 @@ export default function CloudServicesPage() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
 ),
@@ -268,3 +260,7 @@ export default function CloudServicesPage() {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Infrastructure? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation. </p> Infrastructure Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+
+}
+}
+}

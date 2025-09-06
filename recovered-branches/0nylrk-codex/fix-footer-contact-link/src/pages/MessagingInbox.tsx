@@ -9,7 +9,7 @@ import {toast} from 'sonner';
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 export default function MessagingInbox() {
-  const { 
+  const { ;
     conversations;
     activeConversation, 
     setActiveConversation, 
@@ -62,7 +62,6 @@ export default function MessagingInbox() {
               <MessageSquare className="h-6 w-6" />
               Messages
             </h1>
-            
             {activeConversation && (
               <Button 
                 onClick={startVideoCall}
@@ -73,7 +72,6 @@ export default function MessagingInbox() {
               </Button>
             )}
           </div>
-          
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
@@ -95,7 +93,6 @@ export default function MessagingInbox() {
             </div>
           </div>
         </div>
-
         {/* Add extra bottom padding on mobile to account for the bottom nav */}
         {isMobile && <div className="h-16"></div>}
       </div>

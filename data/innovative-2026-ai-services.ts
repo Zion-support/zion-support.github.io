@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface Innovative2026AIService {
+export interface Innovative2026AIService {;
   id: string;
   name: string;
   tagline: string;
@@ -469,7 +469,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     launchDate: '2025-06-20',
     customers: 1900,
     rating: 4.8,
-    reviews: 950,
+    reviews: 950,;
   },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';

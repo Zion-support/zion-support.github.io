@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import EnhancedButton from "./EnhancedButton";
-export type EmptyStateProps = {
+export type EmptyStateProps = {;
   title: string;
   description?: string;
   icon?: React.ReactNode;
@@ -29,7 +29,7 @@ export default function EmptyState({
             <Link href={primaryAction.href}>
               <a>
                 <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>              </a>export type EmptyStateProps = {
-  title: string,
+  title: string,;
   description?: string;
   icon?: React.ReactNode;
   primaryAction?: { label: string, href: string },
@@ -62,6 +62,10 @@ export default function EmptyState({ title, description, icon, primaryAction, se
           )}
         </div>
       )}
-    </div>
+    </div>;
   );
+}
+
+}
+}
 }

@@ -19,7 +19,7 @@ interface LoadingState {
   isOnline: boolean
 interface DynamicLoaderProps {
   importFn: () => Promise<{ default: ComponentType<any> }>
-  fallback?: React.ReactNode
+  fallback?: React.ReactNode;
   errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
   loadingComponent?: React.ComponentType
   enableRetry?: boolean
@@ -160,7 +160,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       }, 100)
       return () => clearInterval(interval)
     }
-
+;
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
   // Load component
@@ -308,5 +308,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //     )
 //   }
 // )
-
+;
 export default DynamicComponentLoader; export default DynamicComponentLoader 
+;
+}
+}

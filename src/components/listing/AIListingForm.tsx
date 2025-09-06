@@ -10,7 +10,7 @@ interface AIListingFormProps {
     category: string
     keyFeatures: string
     targetAudience: string
-  }) => void
+  }) => void;
   isLoading: boolean;  initialValues?: {
     title?: string
     category?: string
@@ -198,5 +198,8 @@ export function AIListingForm({
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) 
 }</Button> </div>) 
 }'"
-}
+};
 ;
+}
+}
+}

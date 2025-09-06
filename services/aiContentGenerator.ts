@@ -1,4 +1,4 @@
-export interface ContentGenerationRequest {
+export interface ContentGenerationRequest {;
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
@@ -7,7 +7,7 @@ export interface ContentGenerationRequest {
   targetAudience?: string
 }
 
-export interface ContentGenerationResponse {
+export interface ContentGenerationResponse {;
   content: string;
   wordCount: number;
   seoScore: number;
@@ -20,7 +20,7 @@ export interface ContentGenerationResponse {
   }
 }
 
-export interface ContentTemplate {
+export interface ContentTemplate {;
   id: string;
   name: string;
   description: string;
@@ -29,7 +29,7 @@ export interface ContentTemplate {
   price: number
 }
 
-export class AIContentGeneratorService {
+export class AIContentGeneratorService {;
   private apiKey: string;
   private baseUrl: string,
 
@@ -151,7 +151,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
 
 // Pricing tiers for the AI Content Generator
 export const AI_CONTENT_PRICING = {
-  starter: {
+  starter: {;
     name: 'Starter';
     price: 29;
     period: '/month',

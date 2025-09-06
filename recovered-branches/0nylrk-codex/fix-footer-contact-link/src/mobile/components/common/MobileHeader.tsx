@@ -14,7 +14,7 @@ interface MobileHeaderProps {
   onSettingsClick?: () => void
 }
 
-export function MobileHeader({
+export function MobileHeader({;
   title;
   showBack = false;
   showNotifications = false;

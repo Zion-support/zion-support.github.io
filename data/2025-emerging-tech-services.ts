@@ -1,4 +1,4 @@
-export interface EmergingTechService {
+export interface EmergingTechService {;
   id: string;
   name: string;
   tagline: string;
@@ -818,16 +818,16 @@ export const emergingTechServices2025: EmergingTechService[] = [
     customers: 150,
     rating: 4.8,
     reviews: 89,
-  },
+  },;
 ];
 
-export const getPopularEmergingTechServices = () => {
+export const getPopularEmergingTechServices = () => {;
   return emergingTechServices2025.filter(service => service.popular);
 };
 
 export const getEmergingTechServicesByCategory = (category: string) => {
   return emergingTechServices2025.filter(
-    service => service.category === category
+    service => service.category === category;
   );
 };
 
@@ -835,7 +835,7 @@ export const getEmergingTechServicesByPriceRange = (
   minPrice: number,
   maxPrice: number
 ) => {
-  return emergingTechServices2025.filter(service => {
+  return emergingTechServices2025.filter(service => {;
     const price = parseInt(service.price.monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
   });
@@ -1300,5 +1300,5 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 ]}
 export interface EmergingTechService {
     return price >= minPrice && price <= maxPrice
-  })
+  });
 };

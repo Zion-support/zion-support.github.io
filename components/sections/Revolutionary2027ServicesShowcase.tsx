@@ -21,7 +21,7 @@ import {
   Earth,
   TestTube,
   Megaphone,
-  Scale,
+  Scale,;
   Network,;
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
@@ -201,11 +201,9 @@ const Revolutionary2027ServicesShowcase = () => {
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20'></div>
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]'></div>
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0.1),transparent_50%)]'></div>
-
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-      
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -233,7 +231,6 @@ const Revolutionary2027ServicesShowcase = () => {
             Transform your business with solutions that were once science fiction.
           </p>
         </motion.div>
-
         {/* Category Overview */}
         <motion.div
           variants={containerVariants}
@@ -272,7 +269,6 @@ const Revolutionary2027ServicesShowcase = () => {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Featured Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -296,33 +292,27 @@ const Revolutionary2027ServicesShowcase = () => {
                 >
                   <service.icon className='w-8 h-8 text-white' />
                 </div>
-
                 {/* Service Content */}
                 <div className='space-y-4'>
                   <h3 className='text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'>
                     {service.name}
                   </h3>
-
                   <p className='text-gray-300 leading-relaxed'>                    {service.description}
                   </p>
-
                   {/* Features */}            >
               <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20">
                 {/* Service Icon */}
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-
                 {/* Service Content */}
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
                     {service.name}
                   </h3>
-                  
                   <p className="text-gray-300 leading-relaxed">
                     {service.description}
                   </p>
-
                   {/* Features */}
                   <div className='space-y-2'>
                     {service.features.slice(0, 3).map((feature, idx) => (
@@ -335,7 +325,6 @@ const Revolutionary2027ServicesShowcase = () => {
                         <span className="text-sm text-gray-400">{feature}</span>
                     ))}
                   </div>
-
                   {/* Market Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='flex justify-between items-center text-sm text-gray-400'>
@@ -344,7 +333,6 @@ const Revolutionary2027ServicesShowcase = () => {
                         ↑ {service.growthRate}
                       </span>                    </div>
                   </div>
-
                   {/* Price and CTA */}
                   <div className='pt-4 flex items-center justify-between'>
                     <div className='text-3xl font-bold text-white'>                  <div className="pt-4 border-t border-gray-700/50">
@@ -352,7 +340,6 @@ const Revolutionary2027ServicesShowcase = () => {
                       <span>Market: {service.marketSize}</span>
                       <span className="text-green-400">↑ {service.growthRate}</span>
                   </div>
-
                   {/* Price and CTA */}
                   <div className='pt-4 flex items-center justify-between'>
                     <div className='text-3xl font-bold text-white'>
@@ -378,14 +365,12 @@ const Revolutionary2027ServicesShowcase = () => {
                     </Link>
                   </div>
                 </div>
-
                 {/* Hover Effect Overlay */}
                 <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>              </div>                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

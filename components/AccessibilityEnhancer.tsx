@@ -202,7 +202,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           </div>
         </div>
       </div>
-
       {/* Skip to main content link */}
       <a
         href="#main-content"
@@ -210,7 +209,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       >
         Skip to main content
       </a>
-
       {/* Screen reader only content */}
       <div className="sr-only">
         <h1>Zion Tech Group - Technology Solutions Provider</h1>
@@ -219,7 +217,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           computing, blockchain infrastructure, and innovative development services.
         </p>
       </div>
-
       {/* Main content */}
       <div id="main-content">{children}</div>
     </>

@@ -111,7 +111,6 @@ const InnovationPage: React.FC = () => {
         <meta name="description" content="AI automation trends and technological innovations" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
@@ -125,7 +124,6 @@ const InnovationPage: React.FC = () => {
             Exploring the cutting edge of AI automation and technological advancement
           </p>
         </div>
-
         {/* Innovation Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -144,7 +142,6 @@ const InnovationPage: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Quantum integration</p>
           </div>
         </div>
-
         {/* Innovation Areas */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Innovation Areas</h2>
@@ -174,7 +171,6 @@ const InnovationPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Recent Innovations */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Innovations</h2>
@@ -198,7 +194,6 @@ const InnovationPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Upcoming Innovations */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Upcoming Innovations</h2>
@@ -217,7 +212,6 @@ const InnovationPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Innovation Metrics */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Innovation Metrics</h2>
@@ -250,7 +244,6 @@ const InnovationPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Navigation */}
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 

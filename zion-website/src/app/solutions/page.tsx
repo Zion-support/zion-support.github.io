@@ -92,8 +92,8 @@ const implementationSteps = [
     description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.',
     icon: ShieldCheckIcon}]
 
-export default function SolutionsPage() {
-  return (
+export default function SolutionsPage() {;
+  return (;
     <div className=&quot;bg-black&quot;>
       {/* Hero section */}
       <div className=&quot;relative isolate px-6 pt-14 lg:px-8&quot;>
@@ -112,7 +112,6 @@ export default function SolutionsPage() {
           </div>
         </div>
       </div>
-
       {/* Flagship Solutions */}
       <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>

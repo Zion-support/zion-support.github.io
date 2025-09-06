@@ -105,7 +105,6 @@ function InterviewsContent() {
             </p>
           </div>
         </div>
-
         <Tabs
           defaultValue={activeTab}
           onValueChange={setActiveTab}
@@ -131,7 +130,6 @@ function InterviewsContent() {
             </TabsTrigger>
             <TabsTrigger value='past'>Past</TabsTrigger>
           </TabsList>
-
           <TabsContent value='upcoming' className='space-y-6'>
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -151,7 +149,6 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
-
           <TabsContent value='pending' className='space-y-6'>
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -172,7 +169,6 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
-
           <TabsContent value='past' className='space-y-6'>
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -200,6 +196,8 @@ export default function Interviews() {
       <InterviewsContent />
     </ProtectedRoute>
   )
-}
-}
+};
+};
 ;
+}
+}

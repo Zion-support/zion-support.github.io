@@ -1,7 +1,7 @@
 import React from "react";
 import { ResumeSelector, ResumeOption } from "../resume-selector";
 import { Button } from "@/components/ui/button";
-export interface ResumeTabProps {
+export interface ResumeTabProps {;
   selectedResumeId?: string | null;
   onSelectResume?: (resumeId: string) => void;
   onResumeSelected?: (resume: ResumeOption) => void;
@@ -17,7 +17,7 @@ export function ResumeTab({
   isSubmitting = false,
 }: ResumeTabProps) {
   const handleResumeSelected = (resume: ResumeOption) => {
-    if (onResumeSelected) {
+    if (onResumeSelected) {;
       onResumeSelected(resume);
     }
 
@@ -29,7 +29,6 @@ export function ResumeTab({
   return (
     <div className="space-y-4">
       <ResumeSelector onResumeSelected={handleResumeSelected} />
-
       {onApply && (
         <div className="mt-6">
           <Button
@@ -39,7 +38,6 @@ export function ResumeTab({
           >
             {isSubmitting ? "Submitting..." : "Submit Application"}
           </Button>
-
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue

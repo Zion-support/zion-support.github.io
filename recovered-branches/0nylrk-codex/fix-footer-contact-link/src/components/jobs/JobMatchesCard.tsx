@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-  CardFooter,
+  CardFooter,;
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -24,7 +24,7 @@ export function JobMatchesCard({
   onApply,
   onDecline,
   showApplied = false,
-}: JobMatchCardProps) {
+}: JobMatchCardProps) {;
   const job = match.job;
 
   if (!job) return null;
@@ -53,7 +53,6 @@ export function JobMatchesCard({
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
           {job.description}
         </p>
-
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">

@@ -12,7 +12,7 @@ import {
   ExternalLink,
   Star,
   Users,
-  Clock,
+  Clock,;
   TrendingUp,;
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
@@ -97,7 +97,7 @@ export default function PartnersPage() {
         'Performance tuning',
       ],
       icon: Brain,
-      color: 'from-indigo-500 to-purple-500',
+      color: 'from-indigo-500 to-purple-500',;
     },  ];
 
   const partnershipTypes = [
@@ -161,9 +161,7 @@ export default function PartnersPage() {
           content='Strategic partnerships and collaboration opportunities.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/partners' />      </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -179,7 +177,6 @@ export default function PartnersPage() {
               Building the future of technology through strategic partnerships
               and collaboration            </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -197,7 +194,6 @@ export default function PartnersPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -221,7 +217,6 @@ export default function PartnersPage() {
           </div>
         </div>
       </section>
-
       {/* Partnership Types */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -239,7 +234,6 @@ export default function PartnersPage() {
               objectives and growth goals
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {partnershipTypes.map((type, index) => (
               <motion.div
                 key={type.title}
@@ -273,7 +267,6 @@ export default function PartnersPage() {
           </div>
         </div>
       </section>
-
       {/* Current Partners */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -289,7 +282,6 @@ export default function PartnersPage() {
               deliver innovative solutions
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {partners.map((partner, index) => (
               <motion.div
                 key={partner.name}
@@ -314,14 +306,12 @@ export default function PartnersPage() {
                       </span>
                     </div>
                   </div>
-
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {partner.name}
                   </h3>
                   <p className='text-white/70 text-sm mb-4'>
                     {partner.description}
                   </p>
-
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider'>
                       Benefits
@@ -337,7 +327,6 @@ export default function PartnersPage() {
                       ))}
                     </ul>
                   </div>
-
                   <div className='flex items-center justify-between'>
                     <a
                       href={partner.website}
@@ -357,7 +346,6 @@ export default function PartnersPage() {
           </div>
         </div>
       </section>
-
       {/* Become a Partner CTA */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -383,7 +371,6 @@ export default function PartnersPage() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
 ),

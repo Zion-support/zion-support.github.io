@@ -79,13 +79,10 @@ export function FilterSidebar({
           Clear All
         </Button>
       </div>
-
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
-
       {/* Skills */}
       <SkillsFilter
         selectedSkills={selectedSkills}
@@ -137,10 +134,8 @@ export function FilterSidebar({
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
-      
       {/* Skills */}
       <SkillsFilter 
         selectedSkills={selectedSkills} 
@@ -196,4 +191,6 @@ export function FilterSidebar({
       )}
     </>
   )
+};
+;
 }

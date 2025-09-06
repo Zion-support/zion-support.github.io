@@ -9,5 +9,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = generateUser(name, role),
   upsertUser(user),
   setUserCookie(res, user),
-  res.status(200).json({ user })
+  res.status(200).json({ user });
 };

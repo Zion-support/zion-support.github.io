@@ -4,13 +4,13 @@ import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
   parseUserFromRequest,
-  ensureInvolvedOrAdmin,
+  ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
   if (
     !id ||

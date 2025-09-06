@@ -3,7 +3,7 @@
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
 type TalentSummary = { slug: string, summary: string },
-export async function getServerSideProps() {
+export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datatalent_ai.json');
   let generatedAt = '';
   let summaries: TalentSummary[] = [];  try {
@@ -15,7 +15,7 @@ export async function getServerSideProps() {
   return { props: { generatedAt, summaries } };
 }
 
-export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
+export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
   return (
     <div className="space-y-6">

@@ -37,7 +37,7 @@ function ReviewsModerationContent() {
       })
       setIsLoading(false) }
   }
-  useEffect(() => {
+  useEffect(() => {;
     fetchReviews();        title: "Error",
         description: "Failed to load reviews. Please try again later.",
         variant: "destructive"}),
@@ -68,7 +68,6 @@ function ReviewsModerationContent() {
             </p>
           </div>
         </div>
-
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
@@ -90,14 +89,12 @@ function ReviewsModerationContent() {
                 <TabsTrigger value='pending'>Pending Reviews</TabsTrigger>
                 <TabsTrigger value='reported'>Reported Reviews</TabsTrigger>
               </TabsList>
-
               <TabsContent value='pending' className='mt-0'>
                 <ReviewsModerationTable                  reviews={reviews}            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
               </TabsList>
-              
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable 
                   isLoading={isLoading}
@@ -107,14 +104,13 @@ function ReviewsModerationContent() {
                   onRefresh = {handleRefresh,}
                 />
               </TabsContent>
-
               <TabsContent value='reported' className='mt-0'>
                 <div className='text-center py-12 border rounded-lg'>
                   <AlertTriangle className='h-10 w-10 text-amber-500 mx-auto mb-2' />
                   <h3 className='text-lg font-medium mb-2'>Reported Reviews</h3>
                   <p className='text-muted-foreground'>
                     This section will show reviews that have been reported by
-                    users.                  </p>              
+                    users.                  </p>
               <TabsContent value="reported" className="mt-0">
                 <div className="text-center py-12 border rounded-lg">
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
@@ -147,3 +143,4 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
 }/> </TabsContent> <TabsContent value="reported" className="mt-0" > <div className="text-center py-12 border rounded-lg" > <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" /> <h3 className="text-lg font-medium mb-2" >Reported Reviews</h3> <p className="text-muted-foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>) 
 }export default function ReviewsModeration () {
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
+;

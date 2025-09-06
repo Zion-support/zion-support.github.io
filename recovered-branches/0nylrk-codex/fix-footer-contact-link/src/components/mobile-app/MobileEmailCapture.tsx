@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
-export const MobileEmailCapture: React.FC = () => {
+export const MobileEmailCapture: React.FC = () => {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -40,7 +40,6 @@ export const MobileEmailCapture: React.FC = () => {
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Subscribe to our mobile app updates and be the first to try new features before they're released to the public.
           </p>
-          
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <Input
               type="email"
@@ -58,7 +57,6 @@ export const MobileEmailCapture: React.FC = () => {
               {isSubmitting ? "Subscribing..." : isSuccess ? "Subscribed!" : "Subscribe"}
             </Button>
           </form>
-          
           <p className="text-sm text-gray-400 mt-4">
             We respect your privacy and will never share your information.
           </p>

@@ -14,7 +14,7 @@ interface NotificationListProps {
   onRetry: () => void
 }
 
-export const NotificationList: React.FC<NotificationListProps> = ({
+export const NotificationList: React.FC<NotificationListProps> = ({;
   loading;
   error;
   notifications;

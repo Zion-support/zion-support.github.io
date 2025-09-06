@@ -10,7 +10,7 @@ interface LazyLoadProps {
   className?: string
 }
 
-export function LazyLoad({
+export function LazyLoad({;
   height = "200px";
   width = "100%";
   children;

@@ -41,9 +41,9 @@ import {
   Satellite,
   Dna,
   Battery,
-  Gamepad,
+  Gamepad,;
   Cpu as CpuIcon,;} from 'lucide-react';import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
@@ -55,7 +55,7 @@ import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas';
 import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-solutions';
 import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-autonomous-services';
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations';
-export default function UltimateServicesShowcase2029() {
+export default function UltimateServicesShowcase2029() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -259,7 +259,6 @@ export default function UltimateServicesShowcase2029() {
           rel='canonical'
           href='https://ziontechgroup.com/2029-ultimate-services-showcase'
         />
-
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -274,7 +273,6 @@ export default function UltimateServicesShowcase2029() {
           content='https://ziontechgroup.com/2029-ultimate-services-showcase'
         />
         <meta property='og:type' content='website' />
-
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -289,15 +287,12 @@ export default function UltimateServicesShowcase2029() {
         <meta property="og:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />
         <meta property="og:url" content="https://ziontechgroup.com/2029-ultimate-services-showcase" />
         <meta property="og:type" content="website" />
-        
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />
         <meta name="twitter:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />
       </Head>
-
       <UltraFuturisticNavigation2029 />
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black'>
         {/* Animated Background */}
@@ -306,7 +301,6 @@ export default function UltimateServicesShowcase2029() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.15),transparent_50%)] animate-spin-slow' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)] animate-pulse' />
         </div>
-
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -317,7 +311,6 @@ export default function UltimateServicesShowcase2029() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.15),transparent_50%)] animate-spin-slow" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)] animate-pulse" />
         </div>
-
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -336,7 +329,6 @@ export default function UltimateServicesShowcase2029() {
                 <Atom className='w-9 h-9 text-white' />
               </div>
             </div>
-
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
               <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 2029 Ultimate
@@ -346,14 +338,12 @@ export default function UltimateServicesShowcase2029() {
                 Services Showcase
               </span>
             </h1>
-
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
               Experience the future of technology with our revolutionary AI
               consciousness, quantum computing, space technology, and autonomous
               systems. Transform your business with innovations that define
               tomorrow.
             </p>
-
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
               <Link
                 href='/contact'
@@ -374,7 +364,6 @@ export default function UltimateServicesShowcase2029() {
                 <Atom className="w-9 h-9 text-white" />
               </div>
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 2029 Ultimate
@@ -384,11 +373,9 @@ export default function UltimateServicesShowcase2029() {
                 Services Showcase
               </span>
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Experience the future of technology with our revolutionary AI consciousness, quantum computing, space technology, and autonomous systems. Transform your business with innovations that define tomorrow.
             </p>
-
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="/contact"
@@ -404,7 +391,6 @@ export default function UltimateServicesShowcase2029() {
                 View Pricing
               </Link>
             </div>
-
             {/* Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-16'>
               <div className='text-center'>
@@ -446,7 +432,6 @@ export default function UltimateServicesShowcase2029() {
           </motion.div>
         </div>
       </section>
-
       {/* Filters Section */}
       <section className='py-16 bg-gray-900/50 border-b border-cyan-500/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -461,7 +446,6 @@ export default function UltimateServicesShowcase2029() {
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200'              />
             </div>
-
             {/* Category Filter */}
             <div className='flex flex-wrap items-center space-x-2'>
               {categories.map(category => (                <button            {/* Search */}
@@ -475,7 +459,6 @@ export default function UltimateServicesShowcase2029() {
                 className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
               />
             </div>
-
             {/* Category Filter */}
             <div className='flex flex-wrap items-center space-x-2'>
               {categories.map(category => (            <div className="flex flex-wrap items-center space-x-2">
@@ -501,7 +484,6 @@ export default function UltimateServicesShowcase2029() {
                 </button>
               ))}
             </div>
-
             {/* Price Filter */}
             <div className='flex items-center space-x-2'>
               {priceRanges.map(range => (                <button            <div className="flex items-center space-x-2">
@@ -522,7 +504,6 @@ export default function UltimateServicesShowcase2029() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -557,11 +538,9 @@ export default function UltimateServicesShowcase2029() {
                         <div className='text-xs text-gray-400'>per month</div>
                       </div>
                     </div>
-
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>
                       {service.name}
                     </h3>
-
                     <p className='text-gray-400 text-sm leading-relaxed mb-4'>                      {service.description}              >
                 <div className="relative p-6 rounded-2xl border border-gray-700/50 bg-gray-800/20 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 h-full">
                   {/* Service Header */}
@@ -575,16 +554,13 @@ export default function UltimateServicesShowcase2029() {
                         <div className="text-xs text-gray-400">per month</div>
                       </div>
                     </div>
-                    
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
                       {service.name}
                     </h3>
-                    
                     <p className="text-gray-400 text-sm leading-relaxed mb-4">
                       {service.description}
                     </p>
                   </div>
-
                   {/* Categories */}
                   <div className='mb-4'>
                     <div className='flex flex-wrap gap-2'>
@@ -607,7 +583,6 @@ export default function UltimateServicesShowcase2029() {
                       )}
                     </div>
                   </div>
-
                   {/* Features Preview */}
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-white mb-2'>
@@ -638,7 +613,6 @@ export default function UltimateServicesShowcase2029() {
                       )}
                     </ul>
                   </div>
-
                   {/* Market Info */}
                   <div className='mb-6 space-y-2'>
                     <div className='flex items-center justify-between text-sm'>
@@ -653,7 +627,6 @@ export default function UltimateServicesShowcase2029() {
                         {service.roi}
                       </span>                    </div>
                   </div>
-
                   {/* Action Button */}
                   <div className='mt-auto'>                  <div className="mb-6 space-y-2">
                     <div className="flex items-center justify-between text-sm">
@@ -664,7 +637,6 @@ export default function UltimateServicesShowcase2029() {
                       <span className="text-gray-400">ROI:</span>
                       <span className="text-cyan-400 font-medium">{service.roi}</span>
                   </div>
-
                   {/* Action Button */}
                   <div className='mt-auto'>
                     <Link
@@ -674,7 +646,6 @@ export default function UltimateServicesShowcase2029() {
                       Learn More
                       <ArrowRight className='inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200' />                    </Link>
                   </div>
-
                   {/* Hover Effect */}
                   <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </div>                    <Link
                       href={`/services/${service.id}`}
@@ -684,14 +655,12 @@ export default function UltimateServicesShowcase2029() {
                       <ArrowRight className="inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                     </Link>
                   </div>
-
                   {/* Hover Effect */}
                   <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
               </motion.div>
             ))}
           </motion.div>
-
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className='text-center py-20'>
@@ -730,7 +699,6 @@ export default function UltimateServicesShowcase2029() {
           )}
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
@@ -749,7 +717,6 @@ export default function UltimateServicesShowcase2029() {
               Contact us today to discuss how we can help you achieve your
               goals.
             </p>
-
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
               <Link
                 href='/contact'
@@ -769,7 +736,6 @@ export default function UltimateServicesShowcase2029() {
               Join the future of technology with our revolutionary services. 
               Contact us today to discuss how we can help you achieve your goals.
             </p>
-            
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="/contact"
@@ -791,7 +757,6 @@ export default function UltimateServicesShowcase2029() {
           </motion.div>
         </div>
       </section>
-
       <UltraFuturisticFooter2029 />
     </>
 );  )

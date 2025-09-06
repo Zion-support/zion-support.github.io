@@ -71,13 +71,11 @@ export function MobileResumeBuilder() {
           Skills
         </Button>
       </div>
-      
       {renderStepContent()}
       
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
-      
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
       </Button>
@@ -140,6 +138,6 @@ function ExperienceStep() {
     setSkills(skills.filter(skill => skill.id !== id))
   }
 }
-  )
-}
+  );
+};
 ;

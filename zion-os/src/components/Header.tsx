@@ -51,7 +51,6 @@ role=&quot;banner&quot;
               </span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <nav className=&quot;hidden lg:flex items-center space-x-8&quot; role=&quot;navigation&quot; aria-label=&quot;Main menu&quot;>
             {navigation.map((item) => (

@@ -11,7 +11,6 @@ const SystemAdministrationChat: NextPage = () => {
           content="SystemAdministrationChat blog post"
         />{" "}
       </Head>
-
       <main>
         <h1>SystemAdministrationChat</h1>
         <p>Blog content coming soon...</p>

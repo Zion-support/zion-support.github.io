@@ -7,7 +7,7 @@ import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
   const user = parseUserFromRequest(req);
 
   if (req.method === "GET") {

@@ -4,7 +4,7 @@ interface ApiResponse {
   nodes: TreeNode[],
 status: {
   gitConnected: boolean, gitBranch?: string 
-export default function DevTreePage() {
+export default function DevTreePage() {;
   const [nodes, setNodes] = useState<TreeNode[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [git, setGit] = useState<ApiResponse['status'] | null>(null);
@@ -81,7 +81,6 @@ export default function DevTreePage() {
           </button>
         </div>
       </div>
-
       {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
 
       {nodes ? (
@@ -92,3 +91,7 @@ export default function DevTreePage() {
       )}
     </div>
 );
+
+}
+}
+}

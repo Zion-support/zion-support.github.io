@@ -5,5 +5,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
       destination: '/plans/enterprise',
       permanent: false}}
 },
-
+;
 export default function EnterpriseRedirect() { return null };

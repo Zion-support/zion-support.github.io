@@ -27,8 +27,8 @@ import {
   List,
   ExternalLink,
   Phone,
-  Mail,
-  MapPin,;} from 'lucide-react';import { 
+  Mail,;
+  MapPin,;} from 'lucide-react';import { ;
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
   CheckCircle, ArrowRight, Zap, Target, Microscope;
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
@@ -126,7 +126,7 @@ const serviceCategories = [
   }
 ];
 
-export default function CuttingEdgeServicesShowcase2025() {
+export default function CuttingEdgeServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -195,7 +195,6 @@ export default function CuttingEdgeServicesShowcase2025() {
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />      </Head>
-
       <Layout>
         {/* Hero Section */}
         <section className='relative overflow-hidden'>
@@ -212,7 +211,6 @@ export default function CuttingEdgeServicesShowcase2025() {
         <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-
       <Layout>
         {/* Hero Section */}
         <section className='relative overflow-hidden'>
@@ -239,7 +237,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   Showcase 2025
                 </span>
               </motion.h1>
-
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -248,7 +245,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   Showcase 2025
                 </span>
               </motion.h1>
-              
               <motion.p 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
                 animate={{ opacity: 1, y: 0 }}
@@ -258,13 +254,11 @@ export default function CuttingEdgeServicesShowcase2025() {
                 industries and defining the future. From AI consciousness to
                 space mining, experience the cutting edge of innovation.
               </motion.p>
-
               {/* Hero Stats */}
               <motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion.p>
-
               {/* Hero Stats */}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
@@ -291,7 +285,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                     <div className="text-sm text-white/70">{stat.label}</div>
                 ))}
               </motion.div>
-
               {/* CTA Buttons */}
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
@@ -323,7 +316,6 @@ export default function CuttingEdgeServicesShowcase2025() {
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filter Section */}
         <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -346,7 +338,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   onChange={e => setSearchTerm(e.target.value)}
                   className='w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'                />
               </div>
-
               {/* Category Filter */}
               <div className='flex flex-wrap gap-2'>                <button                <input
                   type="text"
@@ -356,7 +347,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   className="w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
                 />
               </div>
-
               {/* Category Filter */}
               <div className='flex flex-wrap gap-2'>              <div className="flex flex-wrap gap-2">
                 <button
@@ -383,7 +373,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   </button>
                 ))}
               </div>
-
               {/* View Mode Toggle */}
               <div className='flex items-center gap-2'>                <button              <div className="flex items-center gap-2">
                 <button
@@ -410,7 +399,6 @@ export default function CuttingEdgeServicesShowcase2025() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section
           id='services'
@@ -468,7 +456,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                         </div>
                       </div>
                     </div>
-
                     {/* Tags */}
                     <div className='flex flex-wrap gap-2 mb-4'>
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
@@ -483,13 +470,11 @@ export default function CuttingEdgeServicesShowcase2025() {
                         </span>
                       ))}
                     </div>
-
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>                    </div>
                   </div>
-
                   {/* Service Details */}
                   <div
                     className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
@@ -498,7 +483,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
                   </div>
-
                   {/* Service Details */}
                   <div
                     className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
@@ -520,7 +504,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                             </li>
                           ))}                      </ul>
                     </div>
-
                     {/* Pricing */}
                     <div className='mb-6'>
                       <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>                      <ul className="space-y-2">
@@ -531,7 +514,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                           </li>
                         ))}
                     </div>
-
                     {/* Pricing */}
                     <div className='mb-6'>
                       <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>
@@ -543,7 +525,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                           /{service.pricing.starter.period}
                         </span>                      </div>
                     </div>
-
                     {/* CTA */}
                     <div className='flex items-center justify-between'>                        Starting From
                       </h4>
@@ -552,7 +533,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                         <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>
                       </div>
                     </div>
-
                     {/* CTA */}
                     <div className='flex items-center justify-between'>
                       <a
@@ -583,13 +563,11 @@ export default function CuttingEdgeServicesShowcase2025() {
                       </a>
                     </div>
                   </div>
-
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
               ))}
             </motion.div>
-
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -626,7 +604,6 @@ export default function CuttingEdgeServicesShowcase2025() {
             )}
           </div>
         </section>
-
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
@@ -645,7 +622,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                 advantage in the rapidly evolving technology landscape. Let's
                 discuss how we can help you achieve your goals.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
                 <a
                   href='/contact'
@@ -664,7 +640,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                 Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape. 
                 Let's discuss how we can help you achieve your goals.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a
                   href="/contact"
@@ -681,7 +656,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   Call Now
                 </a>
               </div>
-
               {/* Contact Info */}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
                 <div className='flex flex-col items-center'>

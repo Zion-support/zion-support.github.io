@@ -94,7 +94,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
         <p className='text-sm text-gray-600 mb-6'>
           Guided step-by-step KYC/AML verification with progress tracking.
         </p>
-
         {labels.length > 0 && (
           <div className='mb-4'>            <VerifiedBadge labels={labels} />
           </div>
@@ -152,7 +151,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
             </>
           )}
         </div>
-
         <div className='mb-6'>
           <button
             disabled={busy}
@@ -162,7 +160,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
             Start/Update
           </button>
         </div>
-
         {profile && (
           <div className='space-y-6'>
             <div>
@@ -179,7 +176,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
                   style={{ width: `${progress}%` }}
                 />              </div>
             </div>
-
             <section>
               <h2 className='font-semibold mb-2'>Required documents</h2>
               <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
@@ -206,7 +202,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
                   );                })}
               </div>
             </section>
-
             {optionalDocs.length > 0 && (
               <section>
                 <h2 className='font-semibold mb-2'>Optional documents</h2>
@@ -249,7 +244,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
                 Submit for review
               </button>
             </div>
-
             {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
         )}
       </main>

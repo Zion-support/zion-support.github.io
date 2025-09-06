@@ -12,7 +12,7 @@ interface TalentCardSaveButtonProps {
 }
 
 export function TalentCardSaveButton({ 
-  profileId, 
+  profileId, ;
   profileName;
   isSaved, 
   onToggleSave;

@@ -22,7 +22,7 @@ interface JobMatchProps {
   onInvite?: (matchId: string) => void
 }
 
-export function JobMatchCard({ 
+export function JobMatchCard({ ;
   matchId;
   talentId, 
   name, 
@@ -72,7 +72,6 @@ export function JobMatchCard({
             {formatDistanceToNow(postedDate, { addSuffix: true })}
           </Badge>
         </div>
-        
         {/* Talent details */}
         <div className="p-4">
           <div className="flex justify-between items-start gap-2 mb-3">
@@ -81,13 +80,10 @@ export function JobMatchCard({
               Available
             </Badge>
           </div>
-          
           <div className="text-lg font-medium mb-2">{title}</div>
-          
           <div className="flex flex-wrap gap-2 mb-3">
             <Badge variant="outline">{category}</Badge>
           </div>
-          
           <div className="flex items-center gap-2 mb-2">
             <Avatar className="h-6 w-6">
               {avatar ? (
@@ -100,14 +96,12 @@ export function JobMatchCard({
             </Avatar>
             <span className="text-sm font-medium">{company || 'Independent'}</span>
           </div>
-          
           <div className="space-y-1 text-sm text-muted-foreground mb-3">
             <div className="flex items-center gap-1">
               <MapPin className="h-3.5 w-3.5" />
               <span>{location || 'Remote'}</span>
             </div>
           </div>
-          
           <div className="flex flex-wrap gap-1 mb-4">
             {skills?.slice(0, 5).map((skill) => (
               <Badge key={skill} variant="secondary" className="text-xs">
@@ -115,7 +109,6 @@ export function JobMatchCard({
               </Badge>
             ))}
           </div>
-          
           <div className="flex gap-2 justify-end">
             {onInvite && (
               <Button onClick={handleInvite} variant="default" size="sm">

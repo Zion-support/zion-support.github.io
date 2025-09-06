@@ -1,4 +1,4 @@
-export interface InnovativeAIService {
+export interface InnovativeAIService {;
   id: string;
   name: string;
   tagline: string;
@@ -785,7 +785,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     customers: 67,
     rating: 4.7,
     reviews: 34,
-  },
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',

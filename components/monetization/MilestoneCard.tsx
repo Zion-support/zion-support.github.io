@@ -23,7 +23,7 @@ export default function MilestoneCard({
   projectId,
   role,
   onAction,
-}: Props) {
+}: Props) {;
   const [expanded, setExpanded] = useState(false);
 
   const currentIndex = statusSteps.findIndex(s => s === milestone.status);
@@ -53,7 +53,6 @@ export default function MilestoneCard({
         >          {expanded ? 'Hide' : 'Details'}
         </button>
       </div>
-
       <div className='mt-3'>
         <div className='flex items-center gap-2'>type Props = {
   milestone: Milestone,
@@ -64,7 +63,7 @@ export default function MilestoneCard({
 
 const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
 
-export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
+export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {;
   const [expanded, setExpanded] = useState(false);
 
   const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
@@ -85,7 +84,6 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
           {expanded ? 'Hide' : 'Details'}
         </button>
       </div>
-
       <div className='mt-3'>
         <div className='flex items-center gap-2'>
           {statusSteps.map((step, idx) => (
@@ -122,14 +120,12 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
           Status: {milestone.status}
         </div>
       </div>
-
       {expanded && (
         <div className='mt-4 space-y-2 text-sm text-gray-800'>          {milestone.description && <p>{milestone.description}</p>}
           <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>
           {milestone.attachments && milestone.attachments.length > 0 && (
             <div>        <div className="mt-2 text-xs text-gray-700">Status: {milestone.status}</div>
       </div>
-
       {expanded && (
         <div className="mt-4 space-y-2 text-sm text-gray-800">
           <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>
@@ -196,4 +192,10 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
       </div>
     </div>
 );
+}
+
+}
+}
+}
+}
 }

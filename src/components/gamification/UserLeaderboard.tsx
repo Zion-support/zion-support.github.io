@@ -55,4 +55,6 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
       </CardContent>
     </Card>
   )
+};
+;
 }

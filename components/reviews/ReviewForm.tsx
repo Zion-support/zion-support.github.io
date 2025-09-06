@@ -12,7 +12,7 @@ export type ReviewFormValues = {
   fromId: string,
   rating: number,
   text: string,
-  categories?: {
+  categories?: {;
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
@@ -23,7 +23,6 @@ export type ReviewFormValues = {
 
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
-
 const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
@@ -72,7 +71,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
       <div>
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />
       </div>
-
       <div>
         <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {
             communication;
@@ -97,7 +95,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
         <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
         <StarRating value={rating} onChange={setRating} />
       </div>
-
       <div>
         <label className='block text-sm font-medium mb-2'>Your Review</label>
         <textarea
@@ -115,7 +112,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
           required
         />
       </div>
-
       <div className='flex items-center gap-3'>
         <input
           id='anonymous'
@@ -124,7 +120,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
           onChange={e => setAnonymous(e.target.checked)}
         />
         <label htmlFor='anonymous'>Submit anonymously</label>
-
       <div className='grid md:grid-cols-2 gap-4'>
         <div className='enhanced-card'>
           <div className='flex items-center justify-between mb-2'>
@@ -167,13 +162,11 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
           </div>
           <span className='pill'>Optional</span>        </div>
       </div>
-
       <button
         type='submit'
         className='enhanced-button enhanced-button-primary'        disabled={submitting}          <span className="pill">Optional</span>
         </div>
       </div>
-
       <button
         type='submit'
         className='enhanced-button enhanced-button-primary'        type="submit"
@@ -182,7 +175,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>
-
       {message && <p className='text-sm'>{message}</p>}
     </form>
   );

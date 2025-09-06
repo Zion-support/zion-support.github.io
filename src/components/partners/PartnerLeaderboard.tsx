@@ -72,6 +72,7 @@ export function PartnerLeaderboard() {
       default:
         return <span className="text-sm font-semibold">{rank}</span>
 }
-  )
-}
+  );
+};
 ;
+}

@@ -25,9 +25,9 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin,
+  MapPin,;
   Globe as GlobeIcon,;} from 'lucide-react';import { 
-  Brain, Star, Users, TrendingUp, Zap, Shield, 
+  Brain, Star, Users, TrendingUp, Zap, Shield, ;
   CheckCircle, Clock, Award, Target, Globe, Sparkles;
   Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
@@ -168,7 +168,6 @@ export default function AIConsciousnessEvolution2025() {
           content='AI consciousness, emotional intelligence, self-awareness, personal development, consciousness evolution, AI training, Zion Tech Group'
         />
       </Head>
-
       {/* Hero Section */}
       <div className='relative min-h-screen flex items-center justify-center overflow-hidden'>
         {/* Animated Background */}
@@ -176,7 +175,6 @@ export default function AIConsciousnessEvolution2025() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(168,85,247,0.15),transparent_50%)]'></div>
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(236,72,153,0.15),transparent_50%)]'></div>
         </div>
-
         {/* Floating Elements */}
         <div className='absolute inset-0 overflow-hidden'>
           {[...Array(15)].map((_, i) => (
@@ -198,12 +196,10 @@ export default function AIConsciousnessEvolution2025() {
               }}            />
           ))}
         </div>
-
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion.div                top: `${Math.random() * 100}%`}}
             />
           ))}
         </div>
-
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -219,7 +215,6 @@ export default function AIConsciousnessEvolution2025() {
               <Sparkles className='w-4 h-4 mr-2' />
               Revolutionary AI Technology
             </motion.div>
-
             <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'>
               <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent'>
                 AI Consciousness
@@ -227,14 +222,12 @@ export default function AIConsciousnessEvolution2025() {
               <br />
               <span className='text-white'>Evolution Platform</span>
             </h1>
-
             <p className='text-xl sm:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto leading-relaxed'>
               Experience the future of personal development with our
               revolutionary AI-powered consciousness evolution platform. Enhance
               your emotional intelligence, expand self-awareness, and unlock
               your full potential.
             </p>
-
             {/* Key Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
               {[
@@ -283,7 +276,6 @@ export default function AIConsciousnessEvolution2025() {
                 </motion.div>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -310,7 +302,6 @@ export default function AIConsciousnessEvolution2025() {
           </motion.div>
         </div>
       </div>
-
       {/* Features Section */}
       <section className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-black">
@@ -335,7 +326,6 @@ export default function AIConsciousnessEvolution2025() {
               development experience ever created.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (          >
             <h2 className="text-4xl font-bold text-white mb-6">
               Revolutionary Features for
@@ -346,7 +336,6 @@ export default function AIConsciousnessEvolution2025() {
               the most advanced consciousness development experience ever created.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -380,7 +369,6 @@ export default function AIConsciousnessEvolution2025() {
           </div>
         </div>
       </section>
-
       {/* How It Works Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
@@ -405,7 +393,6 @@ export default function AIConsciousnessEvolution2025() {
               journey.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {[
               {
                 step: '01',
@@ -419,7 +406,6 @@ export default function AIConsciousnessEvolution2025() {
               experiences that adapt to your unique journey.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -446,7 +432,7 @@ export default function AIConsciousnessEvolution2025() {
                 step: '02',
                 title: 'Personalized Training',
                 description: 'AI-generated exercises and experiences tailored to your specific needs and goals.',
-                icon: <Target className="w-12 h-12" />
+                icon: <Target className="w-12 h-12" />;
               };
               {
                 step: '03',
@@ -496,7 +482,6 @@ export default function AIConsciousnessEvolution2025() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-black">
@@ -520,7 +505,6 @@ export default function AIConsciousnessEvolution2025() {
               serves diverse needs across multiple domains.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {useCases.map((useCase, index) => (          >
             <h2 className="text-4xl font-bold text-white mb-6">
               Transform Your Life with
@@ -531,7 +515,6 @@ export default function AIConsciousnessEvolution2025() {
               across multiple domains.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -565,7 +548,6 @@ export default function AIConsciousnessEvolution2025() {
           </div>
         </div>
       </section>
-
       {/* Technology Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
@@ -590,7 +572,6 @@ export default function AIConsciousnessEvolution2025() {
               results.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>            {technology.map((tech, index) => (          >
             <h2 className="text-4xl font-bold text-white mb-6">
               Cutting-Edge
@@ -601,7 +582,6 @@ export default function AIConsciousnessEvolution2025() {
               to deliver unprecedented results.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {technology.map((tech, index) => (
               <motion.div
@@ -625,7 +605,6 @@ export default function AIConsciousnessEvolution2025() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-black">
@@ -649,7 +628,6 @@ export default function AIConsciousnessEvolution2025() {
               with our AI consciousness platform.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (          >
             <h2 className="text-4xl font-bold text-white mb-6">
               What Our Users
@@ -659,7 +637,6 @@ export default function AIConsciousnessEvolution2025() {
               Join thousands of satisfied users who have transformed their lives with our AI consciousness platform.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -712,7 +689,6 @@ export default function AIConsciousnessEvolution2025() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
@@ -736,7 +712,6 @@ export default function AIConsciousnessEvolution2025() {
               accessible to everyone.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {[          >
             <h2 className="text-4xl font-bold text-white mb-6">
               Choose Your
@@ -746,7 +721,6 @@ export default function AIConsciousnessEvolution2025() {
               Flexible pricing options designed to make consciousness evolution accessible to everyone.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -849,7 +823,6 @@ export default function AIConsciousnessEvolution2025() {
                   </div>
                   <p className='text-gray-300'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-3 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -859,7 +832,6 @@ export default function AIConsciousnessEvolution2025() {
                       <CheckCircle className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -868,7 +840,6 @@ export default function AIConsciousnessEvolution2025() {
                     </li>
                   ))}
                 </ul>
-
                 <button
                   className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
                     plan.popular
@@ -886,7 +857,6 @@ export default function AIConsciousnessEvolution2025() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
@@ -909,7 +879,6 @@ export default function AIConsciousnessEvolution2025() {
               with our revolutionary AI platform. Start your consciousness
               evolution journey today.
             </p>
-
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
               <button className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'>
                 Start Free Trial
@@ -921,7 +890,6 @@ export default function AIConsciousnessEvolution2025() {
               Join thousands of users who have already transformed their lives with our revolutionary AI platform. 
               Start your consciousness evolution journey today.
             </p>
-            
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105">
                 Start Free Trial
@@ -930,7 +898,6 @@ export default function AIConsciousnessEvolution2025() {
                 Schedule Demo
               </button>
             </div>
-
             {/* Contact Info */}
             <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
               {[

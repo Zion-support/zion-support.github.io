@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react',;
 import type { NextPage, GetServerSideProps } from 'next',;
 import ReviewSummary from '../../components/reviews/ReviewSummary',;
 import ReviewCard from '../../components/reviews/ReviewCard',;
-import type { PublicReview, ReviewsSummary } from '../../types/reviews',
+import type { PublicReview, ReviewsSummary } from '../../types/reviews',;
 ;
 type Props = { clientId: string },
 
@@ -41,5 +41,5 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { slug } = ctx.query as { slug: string },
   return { props: { clientId: slug } }
 },
-
+;
 export default ClientPage,;

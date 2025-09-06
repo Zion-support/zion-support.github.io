@@ -49,7 +49,6 @@ export function JobMatchesCard({
         <p className='text-sm text-muted-foreground line-clamp-2 mb-3'>
           {job.description}
         </p>
-
         {match.matched_skills?.length > 0 && (
           <div className='mb-3'>
             <p className='text-xs text-muted-foreground mb-1'>
@@ -109,6 +108,7 @@ export function JobMatchesCard({
         )}
       </CardFooter>
     </Card>
-  )
-}
+  );
+};
 ;
+}

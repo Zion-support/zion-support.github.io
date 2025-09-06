@@ -61,8 +61,8 @@ export default function TalentProfilePage() {
         created_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
         updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
         role: '', // Default empty string since userDetails doesn't have this property
-        name: '',
-        points: 0,
+        name: '',;
+        points: 0,;
       };  const userProfile: UserProfile = user ? {
     id: user.id || '',
     displayName: user.displayName || '',
@@ -144,7 +144,6 @@ export default function TalentProfilePage() {
           onMessageTalent={handleMessageTalent}
         />
         <BackToDirectoryButton />
-
         {/* Sticky action buttons that appear when scrolling */}
         <StickyAction>
           <div className='p-2 flex gap-2'>
@@ -167,7 +166,6 @@ export default function TalentProfilePage() {
             </Button>
           </div>
         </StickyAction>
-
         {/* Request to Hire Modal */}
         <HireRequestModal
           talent={profile}
@@ -235,7 +233,6 @@ return (<> <SEO title= {
         onMessageTalent = {handleMessageTalent,}
       />
       <BackToDirectoryButton />
-      
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>
         <div className="p-2 flex gap-2">
@@ -258,7 +255,6 @@ return (<> <SEO title= {
           </Button>
         </div>
       </StickyAction>
-      
       {/* Request to Hire Modal */}
       <HireRequestModal 
         talent = {profile,}

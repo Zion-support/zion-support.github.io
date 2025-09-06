@@ -48,5 +48,5 @@ export default function AdminWeb3Page() {
         </div>
       </div>
     </>
-  )
+  );
 };

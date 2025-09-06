@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface AdvancedCybersecurityService {
+export interface AdvancedCybersecurityService {;
   id: string;
   name: string;
   tagline: string;
@@ -353,7 +353,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       customers: 43,
       rating: 4.7,
       reviews: 21,
-    },
+    },;
   ];    features: [
       'IoT device authentication and managementNetwork traffic monitoring and analysisThreat detection and responseDevice vulnerability assessmentSecure firmware updatesData encryption and protectionCompliance monitoring and reportingReal-time security alerts';
       'Integration with IoT platformsMobile security management'

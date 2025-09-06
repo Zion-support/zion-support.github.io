@@ -285,18 +285,15 @@ const getServiceFeatures = (service: any) => {
       >
         <span className='text-4xl'>{service.icon}</span>
       </div>
-
       <div className='p-6'>
         <div className='flex items-start justify-between mb-3'>
           <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-2'>
             {service.name}
           </h3>
         </div>
-
         <p className='text-gray-600 dark:text-gray-300 mb-4 line-clamp-2'>
           {service.tagline}
         </p>
-
         <div className='flex items-center justify-between mb-4'>
           <span className='text-2xl font-bold text-gray-900 dark:text-white'>
             {getServicePricing(service)}
@@ -305,7 +302,6 @@ const getServiceFeatures = (service: any) => {
             {service.trialDays} day trial
           </span>
         </div>
-
         <div className='space-y-3 mb-6'>
           <div className='flex items-center gap-2'>
             <CheckCircle className='w-4 h-4 text-green-500' />
@@ -332,18 +328,15 @@ const getServiceFeatures = (service: any) => {
       <div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>
         <span className="text-4xl">{service.icon}</span>
       </div>
-      
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
             {service.name}
           </h3>
         </div>
-        
         <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
           {service.tagline}
         </p>
-        
         <div className="flex items-center justify-between mb-4">
           <span className="text-2xl font-bold text-gray-900 dark:text-white">
             {getServicePricing(service)}
@@ -352,7 +345,6 @@ const getServiceFeatures = (service: any) => {
             {service.trialDays} day trial
           </span>
         </div>
-        
         <div className="space-y-3 mb-6">
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-500" />
@@ -373,7 +365,6 @@ const getServiceFeatures = (service: any) => {
             </span>
           </div>
         </div>
-
         <div className='mb-6'>
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
             Key Features:
@@ -406,7 +397,6 @@ const getServiceFeatures = (service: any) => {
             )}
           </div>
         </div>
-
         <div className='mb-6'>
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
             ROI & Benefits:
@@ -415,7 +405,6 @@ const getServiceFeatures = (service: any) => {
             {service.roi}
           </p>
         </div>
-
         <div className='mb-6'>
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
             Market Position:
@@ -424,7 +413,6 @@ const getServiceFeatures = (service: any) => {
             {service.marketPosition}
           </p>
         </div>
-
         <div className='flex items-center justify-between'>
           <a
             href={service.link}
@@ -433,20 +421,17 @@ const getServiceFeatures = (service: any) => {
             Learn More
             <ArrowRight className='w-4 h-4' />
           </a>
-
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'          >            {service.roi}
           </p>
         </div>
-        
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {service.marketPosition}
           </p>
         </div>
-        
         <div className="flex items-center justify-between">
           <a
             href={service.link}
@@ -455,7 +440,6 @@ const getServiceFeatures = (service: any) => {
             Learn More
             <ArrowRight className="w-4 h-4" />
           </a>
-          
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -483,7 +467,6 @@ const getServiceFeatures = (service: any) => {
           >
             <span className='text-3xl'>{service.icon}</span>
           </div>
-
           <div className='flex-1'>
             <div className='flex items-start justify-between mb-3'>
               <div>
@@ -495,7 +478,6 @@ const getServiceFeatures = (service: any) => {
                   )}
                 </h3>
                 <p className='text-gray-600 dark:text-gray-300 mb-3'>          </div>
-          
           <div className="flex-1">
             <div className="flex items-start justify-between mb-3">
               <div>
@@ -511,7 +493,6 @@ const getServiceFeatures = (service: any) => {
                   {service.tagline}
                 </p>
               </div>
-
               <div className='text-right'>
                 <div className='text-2xl font-bold text-gray-900 dark:text-white'>
                   {getServicePricing(service)}
@@ -522,7 +503,6 @@ const getServiceFeatures = (service: any) => {
             </div>                  {service.tagline}
                 </p>
               </div>
-              
               <div className="text-right">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">
                   {getServicePricing(service)}
@@ -532,7 +512,6 @@ const getServiceFeatures = (service: any) => {
                 </div>
               </div>
             </div>
-
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mb-4'>
               <div className='flex items-center gap-2'>
                 <CheckCircle className='w-4 h-4 text-green-500' />
@@ -555,7 +534,6 @@ const getServiceFeatures = (service: any) => {
                 </span>
               </div>
             </div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>                  {service.setupTime} setup
                 </span>
               </div>
@@ -572,7 +550,6 @@ const getServiceFeatures = (service: any) => {
                 </span>
               </div>
             </div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>
               <div>
                 <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
@@ -591,7 +568,6 @@ const getServiceFeatures = (service: any) => {
                     ))}
                 </div>
               </div>
-
               <div>
                 <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
                   ROI & Benefits:
@@ -599,7 +575,6 @@ const getServiceFeatures = (service: any) => {
                 <p className='text-sm text-gray-600 dark:text-gray-400 mb-3'>
                   {service.roi}
                 </p>
-
                 <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
                   Market Position:
                 </h4>
@@ -607,7 +582,6 @@ const getServiceFeatures = (service: any) => {
                 </p>
               </div>
             </div>
-
             <div className='flex items-center gap-4'>              <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
                 <div className="space-y-1">
@@ -619,20 +593,17 @@ const getServiceFeatures = (service: any) => {
                   ))}
                 </div>
               </div>
-              
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                   {service.roi}
                 </p>
-                
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   {service.marketPosition}
                 </p>
               </div>
             </div>
-
             <div className='flex items-center gap-4'>
               <a
                 href={service.link}
@@ -641,7 +612,6 @@ const getServiceFeatures = (service: any) => {
                 Learn More
                 <ArrowRight className='w-4 h-4' />
               </a>
-
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                 className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'              >              <a
@@ -651,7 +621,6 @@ const getServiceFeatures = (service: any) => {
                 Learn More
                 <ArrowRight className="w-4 h-4" />
               </a>
-              
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                 className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -679,7 +648,6 @@ const getServiceFeatures = (service: any) => {
           'Zion Tech Group',
         ]}
       />
-
       {/* Hero Section */}
       <div className='relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700'>
         <div className='absolute inset-0 bg-black opacity-20'></div>
@@ -725,7 +693,6 @@ const getServiceFeatures = (service: any) => {
           </div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className='bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -792,7 +759,6 @@ const getServiceFeatures = (service: any) => {
           </div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         {/* Filters and Search */}
@@ -810,7 +776,6 @@ const getServiceFeatures = (service: any) => {
                 />
               </div>
             </div>
-
             <div className='flex items-center gap-4'>
               <div className='flex items-center gap-2'>
                 <button
@@ -851,7 +816,6 @@ const getServiceFeatures = (service: any) => {
               </div>
             </div>
           </div>
-
           {/* Category Filters */}
           <div className='mt-6'>
             <div className='flex flex-wrap gap-3'>
@@ -875,7 +839,6 @@ const getServiceFeatures = (service: any) => {
             </div>
           </div>
         </div>
-
         {/* Results Summary */}
         <div className='mb-8'>
           <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>
@@ -890,7 +853,6 @@ const getServiceFeatures = (service: any) => {
                   {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>
               </div>
-
               <div className='flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400'>
                 <div className='flex items-center gap-2'>
                   <TrendingUp className='w-4 h-4 text-green-500' />
@@ -906,7 +868,6 @@ const getServiceFeatures = (service: any) => {
                   {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>
               </div>
-              
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />
@@ -920,7 +881,6 @@ const getServiceFeatures = (service: any) => {
             </div>
           </div>
         </div>
-
         {/* Services Grid/List */}
         <div className='space-y-6'>
           {filteredServices.length === 0 ? (
@@ -965,7 +925,6 @@ const getServiceFeatures = (service: any) => {
             </AnimatePresence>
           )}
         </div>
-
         {/* Call to Action */}
         <div className='mt-16 text-center'>
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>
@@ -1015,7 +974,6 @@ const getServiceFeatures = (service: any) => {
               </a>
             </div>
           </div>
-
           <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
             Get Started Today
           </button>

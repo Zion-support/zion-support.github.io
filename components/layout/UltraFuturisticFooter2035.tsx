@@ -52,9 +52,9 @@ import {
   BookOpenCheck,
   HelpCircle,
   FileText,
-  Video,
+  Video,;
   Headphones,;} from 'lucide-react';import {
-  Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
+  Zap, Globe, Phone, Mail, MapPin, ArrowRight, ;
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
@@ -430,12 +430,10 @@ const UltraFuturisticFooter2035: React.FC = () => {
             ease: 'linear',          }}
         />
       </div>
-
       <div className='relative z-10'>            ease: 'linear'
           }}
         />
       </div>
-
       <div className='relative z-10'>
         {/* Main Footer Content */}
         <div className='container mx-auto px-4 py-20'>
@@ -469,13 +467,11 @@ const UltraFuturisticFooter2035: React.FC = () => {
                     </p>
                   </div>
                 </div>
-
                 <p className='text-gray-300 leading-relaxed max-w-md'>
                   Leading the future with cutting-edge AI consciousness, quantum
                   computing, and innovative micro SAAS solutions. Transform your
                   business with our revolutionary technology.
                 </p>
-
                 {/* Contact Info */}
                 <div className='space-y-3'>
                   <a
@@ -495,7 +491,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                   <div className='flex items-center gap-3 text-gray-300'>
                     <MapPin className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.address}</span>                  </div>                </div>
-
                 {/* Social Links */}                {/* Contact Info */}
                 <div className="space-y-3">
                   <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200">
@@ -511,7 +506,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                     <span className="text-sm">{contactInfo.address}</span>
                   </div>
                 </div>
-
                 {/* Social Links */}
                 <div className='flex items-center gap-4'>
                   {socialLinks.map(social => (
@@ -534,7 +528,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 </div>
               </motion.div>
             </div>
-
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <motion.div
@@ -581,7 +574,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
               </motion.div>
             ))}
           </div>
-
           {/* Bottom Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -593,7 +585,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
               <div className='text-sm text-gray-400'>
                 © 2025 Zion Tech Group. All rights reserved.
               </div>
-
               <div className='flex items-center gap-6 text-sm text-gray-400'>
                 <Link
                   href='/privacy'
@@ -615,7 +606,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
               <div className="text-sm text-gray-400">
                 © 2025 Zion Tech Group. All rights reserved.
               </div>
-              
               <div className="flex items-center gap-6 text-sm text-gray-400">
                 <Link href="/privacy" className="hover:text-white transition-colors duration-200">
                   Privacy Policy
@@ -627,7 +617,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                   Cookie Policy
                 </Link>
               </div>
-
               <button
                 onClick={scrollToTop}
                 className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110'

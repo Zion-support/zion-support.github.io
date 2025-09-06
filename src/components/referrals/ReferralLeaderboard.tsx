@@ -83,6 +83,6 @@ export function ReferralLeaderboard() {
         </div>
       </CardContent>
     </Card>
-  )
-}
+  );
+};
 ;

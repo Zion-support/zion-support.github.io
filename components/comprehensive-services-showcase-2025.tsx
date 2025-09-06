@@ -40,9 +40,9 @@ import {
   Database,
   Shield as ShieldIcon,
   Globe as GlobeIcon,
-  Zap as ZapIcon,
+  Zap as ZapIcon,;
   Target as TargetIcon,;} from 'lucide-react';import {
-  Search, Filter, Grid3X3, List, 
+  Search, Filter, Grid3X3, List, ;
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
@@ -139,7 +139,7 @@ const sortOptions = [
   { label: 'Price: High to Low', value: 'price-high' },];  { label: 'Price: High to Low', value: 'price-high' }
 ];
 
-export default function ComprehensiveServicesShowcase2025() {
+export default function ComprehensiveServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -290,7 +290,6 @@ export default function ComprehensiveServicesShowcase2025() {
           content='micro SAAS, AI services, IT solutions, quantum computing, emerging technology, business solutions, Zion Tech Group'
         />
       </Head>
-
       {/* Hero Section */}
       <div className='relative min-h-screen flex items-center justify-center overflow-hidden'>
         {/* Animated Background */}
@@ -298,7 +297,6 @@ export default function ComprehensiveServicesShowcase2025() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]'></div>
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1),transparent_50%)]'></div>
         </div>
-
         {/* Floating Elements */}
         <div className='absolute inset-0 overflow-hidden'>
           {[...Array(20)].map((_, i) => (
@@ -320,12 +318,10 @@ export default function ComprehensiveServicesShowcase2025() {
               }}            />
           ))}
         </div>
-
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion.div                top: `${Math.random() * 100}%`}}
             />
           ))}
         </div>
-
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -342,7 +338,6 @@ export default function ComprehensiveServicesShowcase2025() {
               Discover our complete portfolio of {allServices.length}+
               innovative micro SAAS, AI, IT, and emerging technology services
             </p>
-
             {/* Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
               {[
@@ -391,7 +386,6 @@ export default function ComprehensiveServicesShowcase2025() {
                 </motion.div>
               ))}
             </div>
-
             {/* Search Bar */}
             <div className='max-w-2xl mx-auto'>
               <div className='relative'>
@@ -413,7 +407,6 @@ export default function ComprehensiveServicesShowcase2025() {
           </motion.div>
         </div>
       </div>
-
       {/* Filters and Controls */}
       <div className='bg-black/50 backdrop-blur-lg border-b border-cyan-500/20 sticky top-20 z-40'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -442,7 +435,6 @@ export default function ComprehensiveServicesShowcase2025() {
                 </button>
               ))}
             </div>
-
             {/* Price and Sort Controls */}
             <div className='flex flex-wrap items-center space-x-4'>
               {/* Price Range Filter */}
@@ -468,7 +460,6 @@ export default function ComprehensiveServicesShowcase2025() {
                   </option>
                 ))}
               </select>
-
               {/* Sort Options */}
               <select
                 value={sortBy}
@@ -488,7 +479,6 @@ export default function ComprehensiveServicesShowcase2025() {
                   </option>
                 ))}
               </select>
-
               {/* View Mode Toggle */}
               <div className='flex items-center space-x-1 bg-white/10 rounded-lg p-1'>                <button              <div className="flex items-center space-x-1 bg-white/10 rounded-lg p-1">
                 <button
@@ -516,7 +506,6 @@ export default function ComprehensiveServicesShowcase2025() {
           </div>
         </div>
       </div>
-
       {/* Services Grid/List */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         {/* Results Count */}
@@ -527,7 +516,6 @@ export default function ComprehensiveServicesShowcase2025() {
           <p className="text-gray-400">
           </p>
         </div>
-
         {viewMode === 'grid' ? (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {filteredServices.map((service, index) => (          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
@@ -546,7 +534,6 @@ export default function ComprehensiveServicesShowcase2025() {
                     {getCategoryIcon(service.category)}
                     <span className='ml-2'>{service.category}</span>                  </span>
                 </div>
-
                 {/* Service Icon */}
                 <div className='mb-4'>
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>                    {service.icon}              >
@@ -557,7 +544,6 @@ export default function ComprehensiveServicesShowcase2025() {
                     <span className="ml-2">{service.category}</span>
                   </span>
                 </div>
-
                 {/* Service Icon */}
                 <div className='mb-4'>
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>                <div className="mb-4">
@@ -565,7 +551,6 @@ export default function ComprehensiveServicesShowcase2025() {
                     {service.icon}
                   </div>
                 </div>
-
                 {/* Service Info */}
                 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
                   {service.name}
@@ -575,7 +560,6 @@ export default function ComprehensiveServicesShowcase2025() {
                 </p>
                 <p className='text-sm text-gray-500 mb-4 line-clamp-3'>                  {service.description}
                 </p>
-
                 {/* Price */}                  {service.name}
                 </h3>
                 <p className="text-gray-400 mb-3 line-clamp-2">
@@ -584,14 +568,12 @@ export default function ComprehensiveServicesShowcase2025() {
                 <p className="text-sm text-gray-500 mb-4 line-clamp-3">
                   {service.description}
                 </p>
-
                 {/* Price */}
                 <div className='mb-4'>
                   <span className='text-2xl font-bold text-cyan-400'>
                     {service.price}
                   </span>
                   <span className='text-gray-500 text-sm ml-2'>/month</span>
-
                 {/* Stats */}
                 <div className='flex items-center justify-between mb-4 text-sm'>
                   <div className='flex items-center space-x-1 text-yellow-400'>
@@ -605,7 +587,6 @@ export default function ComprehensiveServicesShowcase2025() {
                     <span>{service.customers.toLocaleString()}</span>
                   </div>
                 </div>
-
                 {/* Features Preview */}
                 <div className='mb-4'>
                   <div className='text-xs text-gray-500 mb-2'>
@@ -635,7 +616,6 @@ export default function ComprehensiveServicesShowcase2025() {
                     )}
                   </div>
                 </div>
-
                 {/* Market Info */}
                 <div className='mb-4 text-xs text-gray-500'>
                   <div className='flex items-center justify-between'>                    <span>Market Size: {service.marketSize}</span>                <div className="mb-4 text-xs text-gray-500">
@@ -644,7 +624,6 @@ export default function ComprehensiveServicesShowcase2025() {
                     <span>Growth: {service.growthRate}</span>
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <button className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>                  Learn More                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
                   Learn More
@@ -673,7 +652,6 @@ export default function ComprehensiveServicesShowcase2025() {
                       {service.icon}
                     </div>
                   </div>
-
                   {/* Service Details */}
                   <div className='flex-1 min-w-0'>
                     <div className='flex items-start justify-between mb-3'>
@@ -701,7 +679,6 @@ export default function ComprehensiveServicesShowcase2025() {
                         </span>
                       </div>
                     </div>
-
                     {/* Stats Row */}
                     <div className='flex items-center space-x-8 mb-4 text-sm'>
                       <div className='flex items-center space-x-1 text-yellow-400'>
@@ -733,13 +710,11 @@ export default function ComprehensiveServicesShowcase2025() {
                         </span>
                         <span className='text-gray-500'>market</span>                      </div>
                     </div>
-
                     {/* Features */}                      <div className="flex items-center space-x-1 text-gray-400">
                         <Globe className="w-4 h-4" />
                         <span className="text-white font-medium">{service.marketSize}</span>
                         <span className="text-gray-500">market</span>
                     </div>
-
                     {/* Features */}
                     <div className='mb-4'>
                       <div className='text-sm text-gray-500 mb-2'>
@@ -761,7 +736,6 @@ export default function ComprehensiveServicesShowcase2025() {
                         ))}
                       </div>
                     </div>
-
                     {/* CTA */}
                     <div className='flex items-center justify-between'>
                       <button className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>
@@ -816,7 +790,6 @@ export default function ComprehensiveServicesShowcase2025() {
           </div>
         )}
       </div>
-
       {/* CTA Section */}
       <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>          <motion.div      <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">

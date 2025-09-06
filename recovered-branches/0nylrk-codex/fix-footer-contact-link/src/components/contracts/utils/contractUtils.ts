@@ -12,7 +12,7 @@ interface Milestone {
 
 export async function generateContract(
   values: ContractFormValues,
-  talent: TalentProfile, 
+  talent: TalentProfile, ;
   clientName: string;
   generatedMilestones: GeneratedMilestone[]
 ): Promise<string> {

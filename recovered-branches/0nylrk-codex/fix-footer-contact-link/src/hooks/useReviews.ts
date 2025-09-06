@@ -4,7 +4,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
 import {Review, ReviewReport} from "@/types/reviews";
 import {toast} from "@/hooks/use-toast";
-export function useReviews(projectId?: string) {
+export function useReviews(projectId?: string) {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [reviews, setReviews] = useState<Review[]>([]);

@@ -5,7 +5,7 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
+  FormMessage,;
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
@@ -16,7 +16,7 @@ interface BasicInfoFieldsProps {
 
 export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
   control,
-}) => {
+}) => {;
   const [minBudget, setMinBudget] = useState<string>("");
   const [maxBudget, setMaxBudget] = useState<string>("");
 
@@ -127,7 +127,6 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
           )}
         />
       </div>
-
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
@@ -138,7 +137,6 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
           />
         </CardContent>
       </Card>
-
       <FormField
         control={control}
         name="location"

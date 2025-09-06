@@ -23,4 +23,4 @@ export default function AIPredictiveMaintenancePlatform() {
 			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"
 		/>
 	)
-}
+};

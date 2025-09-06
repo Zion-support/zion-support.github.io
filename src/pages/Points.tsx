@@ -6,7 +6,7 @@ import {
   ShoppingBag,
   MessageSquare,
   TrendingUp,
-  History,
+  History,;
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
@@ -14,9 +14,9 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardHeader,
+  CardHeader,;
   CardTitle,;
-} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
+} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -30,7 +30,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { formatDistanceToNow } from 'date-fns';
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
-export default function PointsPage() {
+export default function PointsPage() {;
   const { isAuthenticated, user } = useAuth();
   const { ledger, balance, loading, fetchLedger } = usePoints();
   const [loginOpen, setLoginOpen] = useState(false);
@@ -139,7 +139,6 @@ export default function PointsPage() {
               Join Now to Start Earning
             </Button>
           </div>
-
           <div className='grid md:grid-cols-2 gap-8 mb-12'>
             <Card>
               <CardHeader>
@@ -177,7 +176,6 @@ export default function PointsPage() {
                 ))}
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader>
                 <CardTitle className='flex items-center gap-2'>
@@ -214,7 +212,6 @@ export default function PointsPage() {
               </CardContent>
             </Card>
           </div>
-
           <Card className='text-center'>
             <CardContent className='pt-6'>
               <Star className='h-12 w-12 text-primary mx-auto mb-4' />
@@ -259,7 +256,6 @@ export default function PointsPage() {
           </p>
         )}
       </div>
-
       <div className='grid md:grid-cols-2 gap-8 mb-12'>
         <Card>
           <CardHeader>
@@ -306,7 +302,6 @@ export default function PointsPage() {
             ))}
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
@@ -364,7 +359,6 @@ export default function PointsPage() {
           </CardContent>
         </Card>
       </div>
-
       <Card>
         <CardHeader>
           <CardTitle className='flex items-center gap-2'>
@@ -413,7 +407,6 @@ export default function PointsPage() {
           )}
         </CardContent>
       </Card>
-
       <Card className='text-center'>
         <CardContent className='pt-6'>
           <Star className='h-12 w-12 text-primary mx-auto mb-4' />

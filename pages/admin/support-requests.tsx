@@ -35,5 +35,5 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
         ))}
       </div>
     </div>
-  )
+  );
 };

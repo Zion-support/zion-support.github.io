@@ -621,7 +621,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Threat detection',
       'Performance monitoring',
     ],
-  },
+  },;
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 

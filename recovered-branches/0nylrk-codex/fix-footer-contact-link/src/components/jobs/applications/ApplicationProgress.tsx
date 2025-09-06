@@ -14,7 +14,7 @@ export function ApplicationProgress({
   // Define the progress value based on status
   const getProgressValue = () => {
     switch (status) {
-      case "new":
+      case "new":;
         return 20;
       case "viewed":
         return 40;
@@ -36,7 +36,6 @@ export function ApplicationProgress({
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
-
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />

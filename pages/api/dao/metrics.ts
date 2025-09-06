@@ -23,7 +23,7 @@ export default async function handler(
   _req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  try {
+  try {;
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date.now();

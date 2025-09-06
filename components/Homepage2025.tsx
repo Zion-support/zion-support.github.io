@@ -4,16 +4,16 @@ import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-rea
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
-  innovativeRealMicroSaasServices2025 
+  innovativeRealMicroSaasServices2025 ;
 } from '../data/2025-innovative-real-micro-saas-services';
 import { 
-  innovativeAIServicesEnhanced2025 
+  innovativeAIServicesEnhanced2025 ;
 } from '../data/2025-innovative-ai-services-enhanced';
 import { 
-  innovativeITServicesEnhanced2025 
+  innovativeITServicesEnhanced2025 ;
 } from '../data/2025-innovative-it-services-enhanced';
 import { 
-  emergingTechServicesEnhanced2025 
+  emergingTechServicesEnhanced2025 ;
 } from '../data/2025-emerging-tech-services-enhanced';
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
@@ -35,7 +35,7 @@ import {
   Rocket,
   Cpu,
   Lock,
-  BarChart3,
+  BarChart3,;
   Cloud,;
 } from 'lucide-react';
 
@@ -183,7 +183,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     ZionTech Group
                   </span>
                 </motion.div>
-
                 {/* Desktop Navigation */}
                 <div className='hidden lg:flex space-x-8'>
                   {navigationSections.map(section => (                    <button  };
@@ -204,7 +203,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
                   <span className="text-white font-bold text-xl">ZionTech Group</span>
                 </motion.div>
-                
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex space-x-8">
                   {navigationSections.map((section) => (
@@ -222,7 +220,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     </button>
                   ))}
                 </div>
-
                 {/* Contact Info */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -252,7 +249,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     Contact Us
                   </a>
                 </motion.div>
-
                 {/* Mobile Menu Button */}
                 <button
                   className='lg:hidden text-white p-2'
@@ -276,7 +272,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </button>
               </div>
-
               {/* Mobile Navigation Menu */}
               <AnimatePresence>
                 {isMobileMenuOpen && (
@@ -366,7 +361,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <Star className='w-5 h-5' />
                 <span>Innovation Leader 2025-2026</span>
               </motion.div>
-
               <h1 className='text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 Zion Tech Group
               </h1>
@@ -374,7 +368,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Pioneering the future of technology with innovative solutions
                 that drive business transformation
               </p>
-
               {/* Enhanced CTA Section */}
               <motion.div
                 variants={itemVariants}
@@ -401,14 +394,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <Star className="w-5 h-5" />
                 <span>Innovation Leader 2025-2026</span>
               </motion.div>
-              
               <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
               </h1>
               <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
                 Pioneering the future of technology with innovative solutions that drive business transformation
               </p>
-              
               {/* Enhanced CTA Section */}
               <motion.div 
                 variants={itemVariants}
@@ -433,7 +424,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   </button>
                 </Link>
               </motion.div>
-              
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -467,7 +457,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className='py-20 px-4 relative'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-20 px-4 relative">
@@ -487,7 +476,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               tools you need to stay ahead of the competition.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
             {features.map((feature, index) => (
               <motion.div
@@ -500,7 +488,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               From AI-powered automation to quantum computing, we provide the tools you need to stay ahead of the competition.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
@@ -534,7 +521,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </div>
         </div>
       </section>
-
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
@@ -555,7 +541,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               emerging technologies, we're building the future today
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {[
               {
@@ -616,7 +601,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-500 to-pink-500", link: "/comprehensive-services-showcase-2026" },
@@ -663,7 +647,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </motion.div>
             ))}
           </div>
-
           {/* Call to Action for Services Showcase */}
           <motion.div
             className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
@@ -686,7 +669,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section id='contact' className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
@@ -707,7 +689,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               can help you achieve your goals.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
             <div className='text-center'>
               <div className='w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -742,7 +723,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Round-the-clock assistance
               </p>            </div>
           </div>
-
           <motion.div
             className='text-center'            initial={{ opacity: 0, y: 20 }}              Ready to Transform Your Business?
             </h2>
@@ -750,7 +730,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               Get in touch with our team to discuss how our innovative services can help you achieve your goals.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -774,7 +753,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <p className="text-gray-300 text-sm">Round-the-clock assistance</p>
             </div>
           </div>
-
           <motion.div
             className='text-center'            className="text-center"
             initial={{ opacity: 0, y: 20 }}
@@ -808,7 +786,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className='py-12 px-4 border-t border-white/10'>
         <div className='max-w-6xl mx-auto text-center'>

@@ -418,7 +418,7 @@ export const cuttingEdgeITServices2025 = [
       'Security Standards',
       'Quality Assurance Protocols',
     ],
-  },
+  },;
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];

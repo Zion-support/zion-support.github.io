@@ -28,7 +28,7 @@ interface VideoCallRoomProps {
 
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 
   roomId,
-  participants = [], 
+  participants = [], ;
   onLeave;
   onToggleMute;
   onToggleVideo;
@@ -121,7 +121,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           </Badge>
         </div>
       </CardHeader>
-      
       <CardContent className="p-0">
         <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {participants.length > 0 ? (
@@ -165,7 +164,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
             </div>
           )}
         </div>
-        
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
           <Button 
             variant="outline" 
@@ -175,7 +173,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           >
             {isMuted ? <MicOff /> : <Mic />}
           </Button>
-          
           <Button 
             variant="outline" 
             size="icon" 
@@ -184,7 +181,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           >
             {isVideoEnabled ? <Video /> : <VideoOff />}
           </Button>
-          
           <Button 
             variant="outline" 
             size="icon"
@@ -193,7 +189,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           >
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
           </Button>
-          
           <Button 
             variant="outline" 
             size="icon"
@@ -202,7 +197,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           >
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
           </Button>
-          
           <Button 
             variant="destructive" 
             size="icon"

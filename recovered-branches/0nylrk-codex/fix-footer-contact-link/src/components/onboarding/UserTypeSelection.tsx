@@ -20,7 +20,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       id: "serviceProvider",
       name: "Service Provider",
       description: "I want to offer services on the platform",
-      icon: Briefcase
+      icon: Briefcase;
     };
     {
       id: "talent",
@@ -44,7 +44,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
           This helps us personalize your experience
         </p>
       </div>
-      
       <div className="grid gap-4 md: grid-cols-3">
         {userTypes.map((type) => {
           const Icon = type.icon;

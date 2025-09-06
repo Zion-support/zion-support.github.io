@@ -5,7 +5,7 @@ export async function ensureAnalyticsTablesExist() {
     // Check if analytics_events table exists
     const { error } = await supabase
       .from('analytics_events')
-      .select('id')
+      .select('id');
       .limit(1);
       
     if (error && error.code === 'PGRST204') {

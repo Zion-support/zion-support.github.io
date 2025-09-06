@@ -20,5 +20,5 @@ export default function SEOIndex() {
         </ul>
       )}
     </div>
-  )
+  );
 };

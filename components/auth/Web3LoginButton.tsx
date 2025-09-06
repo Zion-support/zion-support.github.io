@@ -14,7 +14,7 @@ async function resolveDisplayName(addr: string): Promise<string | null> {
     return null;
   }
 
-export default function Web3LoginButton() {
+export default function Web3LoginButton() {;
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{
     address: string;
@@ -26,7 +26,7 @@ export default function Web3LoginButton() {
   } catch { return null };
 }
 
-export default function Web3LoginButton() {
+export default function Web3LoginButton() {;
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
   const [displayName, setDisplayName] = useState<string | null>(null);
@@ -123,4 +123,9 @@ export default function Web3LoginButton() {
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
     </>
 );
+}
+
+}
+}
+}
 }

@@ -10,7 +10,7 @@ const mockScreenshots = [
   { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
   { id: 5, alt: "Profile screen", src: "/placeholder.svg" }],
 
-export const AppScreenshots: React.FC = () => {
+export const AppScreenshots: React.FC = () => {;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -31,7 +31,6 @@ export const AppScreenshots: React.FC = () => {
             Take a visual tour through the Zion app's intuitive interface.
           </p>
         </div>
-        
         <div className="relative">
           <Button 
             variant="ghost" 
@@ -41,7 +40,6 @@ export const AppScreenshots: React.FC = () => {
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
-          
           <div 
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -60,7 +58,6 @@ export const AppScreenshots: React.FC = () => {
               </div>
             ))}
           </div>
-          
           <Button 
             variant="ghost" 
             size="icon" 

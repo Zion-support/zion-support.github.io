@@ -1,4 +1,4 @@
-export interface PracticalBusinessSolution2029 {
+export interface PracticalBusinessSolution2029 {;
   id: string;
   name: string;
   tagline: string;
@@ -38,7 +38,7 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
       },
-    },
+    },;
   ];    features: [
       "Practical solutions";
       "Business applications";

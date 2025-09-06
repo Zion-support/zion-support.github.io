@@ -8,7 +8,7 @@ import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Badge} from "@/components/ui/badge";
-export function ApiLogs() {
+export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
@@ -55,7 +55,6 @@ export function ApiLogs() {
           View logs of requests made using your API keys.
         </CardDescription>
       </CardHeader>
-      
       <CardContent>
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center space-x-2">
@@ -79,12 +78,10 @@ export function ApiLogs() {
             </Select>
             <span className="text-sm text-zinc-400">per page</span>
           </div>
-          
           <Button variant="outline" size="sm" onClick={handleRefresh}>
             <RefreshCw size={14} className="mr-1" /> Refresh
           </Button>
         </div>
-        
         <div className="overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
@@ -156,7 +153,6 @@ export function ApiLogs() {
             </tbody>
           </table>
         </div>
-        
         {logs.length > 0 && (
           <div className="mt-4 flex justify-between items-center">
             <div className="text-sm text-zinc-500">

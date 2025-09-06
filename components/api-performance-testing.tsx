@@ -7,7 +7,7 @@ export default function ApiPerformanceTestingPage() {
     "SLO-aware latency reports",
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
-    "Synthetic traffic for staging",
+    "Synthetic traffic for staging",;
   ];
 
 return (

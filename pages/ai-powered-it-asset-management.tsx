@@ -95,7 +95,6 @@ const AIPoweredITAssetManagement = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-powered-it-asset-management" />
       </Head>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -133,7 +132,6 @@ const AIPoweredITAssetManagement = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -151,7 +149,6 @@ const AIPoweredITAssetManagement = () => {
                 Experience the future of IT asset management with our AI-powered platform
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -172,7 +169,6 @@ const AIPoweredITAssetManagement = () => {
             </div>
           </div>
         </section>
-
         {/* Asset Types Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="max-w-7xl mx-auto">
@@ -190,7 +186,6 @@ const AIPoweredITAssetManagement = () => {
                 Manage every type of IT asset across your entire infrastructure
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {assetTypes.map((assetType, index) => (
                 <motion.div
@@ -208,7 +203,6 @@ const AIPoweredITAssetManagement = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -226,7 +220,6 @@ const AIPoweredITAssetManagement = () => {
                 See the real impact of AI-powered asset management on your IT operations
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -250,7 +243,6 @@ const AIPoweredITAssetManagement = () => {
             </div>
           </div>
         </section>
-
         {/* Capabilities Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="max-w-7xl mx-auto">
@@ -268,7 +260,6 @@ const AIPoweredITAssetManagement = () => {
                 Comprehensive asset management capabilities powered by artificial intelligence
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {capabilities.map((capability, index) => (
                 <motion.div
@@ -286,7 +277,6 @@ const AIPoweredITAssetManagement = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -319,5 +309,5 @@ const AIPoweredITAssetManagement = () => {
   )
 },
 
-export default AIPoweredITAssetManagement,
+export default AIPoweredITAssetManagement,;
 ;

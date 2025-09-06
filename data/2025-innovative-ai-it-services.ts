@@ -1,4 +1,4 @@
-export interface InnovativeAIService {
+export interface InnovativeAIService {;
   id: string;
   name: string;
   tagline: string;
@@ -807,7 +807,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     customers: 350,
     rating: 4.9,
     reviews: 189,
-  },
+  },;
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
     ];
     integrations: ['EHR systems, Medical devices, Imaging equipment, Laboratory systems, Telemedicine platforms'];

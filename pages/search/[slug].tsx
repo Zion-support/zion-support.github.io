@@ -200,7 +200,7 @@ export default function SearchResultsPage({
   initialResults,
   query,
   slug,
-  totalCount,
+  totalCount,;
 }: SearchResultsPageProps) {  const router = useRouter();
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
@@ -404,7 +404,6 @@ export default function SearchResultsPage({
         keywords={`${query}, search, marketplace, products, talent, services`}
         canonical={`https://app.ziontechgroup.com/search/${slug}`}
       />
-
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
         <div
           className='container mx-auto px-4 py-8'
@@ -425,7 +424,6 @@ export default function SearchResultsPage({
                     : `No results found for "${query}"`}
                 </p>
               </div>
-
               {/* Search Input */}
               <div className='relative w-full lg:w-96'>
                 <Search className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200' />
@@ -437,7 +435,6 @@ export default function SearchResultsPage({
                   className='pl-10'                />
               </div>
             </div>
-
             {/* Controls */}
             <div className='flex flex-wrap items-center justify-between gap-4 mt-6'>
               <div className='flex items-center gap-2 flex-wrap'>
@@ -449,7 +446,6 @@ export default function SearchResultsPage({
                 >
                   <Filter className='h-4 w-4' />                  Filters
                 </Button>
-
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e.target.value)}
@@ -461,7 +457,6 @@ export default function SearchResultsPage({
                   <option value='price_asc'>Price: Low to High</option>
                   <option value='price_desc'>Price: High to Low</option>
                   <option value='rating'>Highest Rated</option>                </select>
-
                 <select
                   value={categoryFilter}
                   onChange={e => setCategoryFilter(e.target.value)}
@@ -473,7 +468,6 @@ export default function SearchResultsPage({
                     </option>
                   ))}
                 </select>
-
                 <div className='flex items-center gap-1'>
                   <input
                     type='number'
@@ -490,7 +484,6 @@ export default function SearchResultsPage({
                     onChange={e => setMaxPrice(e.target.value)}
                     className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />
                 </div>
-
                 <select
                   value={minRating}
                   onChange={e => setMinRating(e.target.value)}
@@ -502,7 +495,6 @@ export default function SearchResultsPage({
                   <option value='2'>2★ & up</option>
                 </select>
               </div>
-
               <div className='flex items-center gap-2'>
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'}
@@ -524,7 +516,6 @@ export default function SearchResultsPage({
               </div>
             </div>
           </div>
-
           {/* Loading State */}
           {loading && results.length === 0 && (
             <div className='flex justify-center py-12'>
@@ -544,7 +535,6 @@ export default function SearchResultsPage({
                 <div key={type}>
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults.length})
                   </h2>
-
                   <div
                     className={
                       viewMode === 'grid'
@@ -583,7 +573,7 @@ export default function SearchResultsPage({
   );
 export const getServerSideProps: GetServerSideProps<
   SearchResultsPageProps
-> = async (context: any) => {
+> = async (context: any) => {;
   const params = context.params;
   const slug = params?.slug as string,
 
@@ -637,3 +627,13 @@ totalCount: offline.totalCount,
       },
     };  }
 };
+
+}
+}
+}
+}
+}
+}
+}
+}
+}

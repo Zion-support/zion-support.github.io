@@ -3,7 +3,7 @@ canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
 if (ctx) {
 
 export default function UltraFuturisticBackground2035({
-  children,
+  children,;
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
@@ -12,7 +12,7 @@ interface UltraFuturisticBackground2035Props {
 
 export default function UltraFuturisticBackground2035({ children }: UltraFuturisticBackground2035Props) {
 
-  useEffect(() => {
+  useEffect(() => {;
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -422,7 +422,6 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
       <div className='fixed inset-0 z-0 overflow-hidden'>
         {/* Enhanced background layers */}
         <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black' />
-
         {/* Animated gradient overlay */}
         <motion.div
           className='absolute inset-0 opacity-30'
@@ -434,7 +433,6 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)',
             ],          }}        {/* Enhanced background layers */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-        
         {/* Animated gradient overlay */}
         <motion.div
           className="absolute inset-0 opacity-30"
@@ -449,7 +447,6 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             ease: 'easeInOut',
           }}
         />
-
         {/* Holographic grid effect */}
         <div className='absolute inset-0 opacity-20'>
           <div
@@ -471,14 +468,12 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             backgroundSize: '50px 50px'
           }} />
         </div>
-
         {/* Canvas for animated particles */}
         <canvas
           ref={canvasRef}
           className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}          className="absolute inset-0 w-full h-full"
           style={{ filter: 'blur(0.5px)' }}
         />
-
         {/* Floating neon orbs */}
         <motion.div
           className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20'
@@ -500,7 +495,6 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20'
           animate={{
@@ -512,7 +506,6 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         {/* Quantum energy waves */}
         <div className='absolute inset-0 overflow-hidden'>          }}
         />
@@ -530,7 +523,6 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
         />
-
         {/* Quantum energy waves */}
         <div className='absolute inset-0 overflow-hidden'>
           <motion.div
@@ -580,7 +572,6 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
           />
         </div>
       </div>
-
       {/* Render children */}
       {children}
     </>

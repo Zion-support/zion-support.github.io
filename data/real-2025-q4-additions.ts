@@ -1,4 +1,4 @@
-export interface Q4Service {
+export interface Q4Service {;
   id: string;
   name: string;
   tagline: string;
@@ -65,7 +65,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-fuchsia-400',
     link: 'https://ziontechgroup.com/services/affiliate-marketing-hub',
-    marketPosition:
+    marketPosition:;
       'Comparable to Refersion and LeadDyno; stronger fraud prevention and flexible payouts.',
     targetAudience: 'E-commerce stores, marketplaces, media sites',
     trialDays: 14,
@@ -159,7 +159,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/micro-crm-local-business',
-    marketPosition:
+    marketPosition:;
       'Simpler than HubSpot/Zoho; fast and focused for local SMBs.',
     targetAudience: 'Local businesses, consultants, freelancers',
     trialDays: 14,
@@ -248,7 +248,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
-    marketPosition:
+    marketPosition:;
       'Simpler than Zendesk/Freshdesk; MSP-first workflows and pricing.',
     targetAudience: 'Managed service providers, internal IT teams',
     trialDays: 14,
@@ -295,7 +295,7 @@ export const real2025Q4Additions = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
-    marketPosition:
+    marketPosition:;
       'Safer alternative to DIY RAG; comparable to Guardrails/Evals + vector DB stacks.',
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14,

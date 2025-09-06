@@ -24,10 +24,10 @@ import {
   Palette,
   Cloud,
   Server,
-  Network,
+  Network,;
   Cpu,;
 } from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
-export default function UltraAdvancedNavigation2026V2() {
+export default function UltraAdvancedNavigation2026V2() {;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -206,7 +206,6 @@ export default function UltraAdvancedNavigation2026V2() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -231,7 +230,6 @@ export default function UltraAdvancedNavigation2026V2() {
                 </div>
                 <div className='text-xs text-gray-400'>Innovation 2026</div>              </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
@@ -251,7 +249,6 @@ export default function UltraAdvancedNavigation2026V2() {
                 <div className="text-xs text-gray-400">Innovation 2026</div>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
@@ -324,7 +321,6 @@ export default function UltraAdvancedNavigation2026V2() {
                 </div>
               ))}
             </div>
-
             {/* CTA Button */}
             <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
@@ -335,7 +331,6 @@ export default function UltraAdvancedNavigation2026V2() {
                 </button>
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -352,7 +347,6 @@ export default function UltraAdvancedNavigation2026V2() {
           </div>
         </div>
       </nav>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -372,7 +366,6 @@ export default function UltraAdvancedNavigation2026V2() {
                   <X className='w-6 h-6' />
                 </button>
               </div>
-
               <div className='space-y-6'>
                 {navigationItems.map(item => (
                   <div key={item.name}>
@@ -437,7 +430,6 @@ export default function UltraAdvancedNavigation2026V2() {
                     </button>
                   </Link>
                 </div>
-
                 {/* Mobile Contact Info */}
                 <div className='pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400'>
                   <div className='flex items-center space-x-2'>
@@ -466,7 +458,6 @@ export default function UltraAdvancedNavigation2026V2() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Overlay */}
       {isOpen && (
         <motion.div
@@ -485,4 +476,6 @@ export default function UltraAdvancedNavigation2026V2() {
 );      <div className="h-32"></div>
     </>
   );
+}
+
 }

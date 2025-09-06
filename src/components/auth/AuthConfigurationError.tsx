@@ -5,7 +5,7 @@ import {
   ExternalLink,
   RefreshCw,
   Settings,
-  CheckCircle,
+  CheckCircle,;
 } from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
@@ -51,7 +51,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               accounts
             </p>
           </div>
-
           <Alert variant='destructive' className='mb-6'>
             <AlertTriangle className='h-4 w-4' />
             <AlertDescription>
@@ -59,7 +58,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               are not configured. New users cannot sign up until this is
               resolved.            </AlertDescription>
           </Alert>
-
           {/* Technical Details */}        {/* Main Error Card */}
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
           <div className="text-center mb-6">
@@ -73,7 +71,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               The sign-up system needs to be configured before users can create accounts
             </p>
           </div>
-
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
@@ -81,7 +78,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               New users cannot sign up until this is resolved.
             </AlertDescription>
           </Alert>
-
           {/* Technical Details */}
           <div className='bg-gray-50 rounded-lg p-4 mb-6'>
             <h3 className='font-semibold text-gray-900 mb-2'>
@@ -97,7 +93,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <li>• AUTH0_CLIENT_SECRET</li>
             </ul>
           </div>
-
           {/* Action Buttons */}
           <div className='flex flex-col sm:flex-row gap-3 mb-6'>
             {showSetupButton && (
@@ -122,7 +117,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               Check Again
             </Button>
           </div>
-
           {/* Quick Setup Steps */}
           <div className='border-t pt-6'>
             <h3 className='font-semibold text-gray-900 mb-3'>
@@ -146,7 +140,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                   </a>
                 </div>
               </li>
-
               <li className='flex items-start gap-3'>
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
                   2
@@ -163,7 +156,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                   </a>
                 </div>
               </li>
-              
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>
                 <div>
@@ -172,7 +164,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                   Create a "Regular Web Application" named "Zion AI Marketplace"
                 </div>
               </li>
-
               <li className='flex items-start gap-3'>
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
                   3
@@ -187,7 +178,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                   file
                 </div>
               </li>
-
               <li className='flex items-start gap-3'>
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
                   4
@@ -205,7 +195,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                   Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
                 </div>
               </li>
-              
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>
                 <div>
@@ -217,7 +206,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             </ol>
           </div>
         </div>
-
         {/* Alternative Actions Card */}
         <div className='bg-blue-50 rounded-xl border border-blue-200 p-6'>
           <h3 className='font-semibold text-blue-900 mb-3'>
@@ -232,7 +220,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-            
             <Link 
               href="/talent" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
@@ -240,7 +227,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <span>View Talent Pool</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-            
             <Link 
               href="/help" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
@@ -248,7 +234,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <span>Contact Support</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-            
             <Link 
               href="/status" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
@@ -256,7 +241,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <span>System Status</span>
               <ExternalLink className='w-4 h-4' />
             </Link>
-
             <Link
               href='/talent'
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
@@ -264,7 +248,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <span>View Talent Pool</span>
               <ExternalLink className='w-4 h-4' />
             </Link>
-
             <Link
               href='/help'
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
@@ -272,7 +255,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               <span>Contact Support</span>
               <ExternalLink className='w-4 h-4' />
             </Link>
-
             <Link
               href='/status'
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
@@ -282,7 +264,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             </Link>
           </div>
         </div>
-
         {/* Setup Script Info */}
         {showSetupButton && (
           <div className='mt-6 text-center'>
@@ -328,4 +309,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
   )
 export default AuthConfigurationError }
 
-export default AuthConfigurationError,
+export default AuthConfigurationError,;
+;
+}
+}

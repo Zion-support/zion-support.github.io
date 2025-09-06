@@ -8,12 +8,12 @@ import { supabase } from '@/utils/supabase/client';
 import type {
   AuthError,
   User,
-  AuthChangeEvent,
+  AuthChangeEvent,;
   Session,;
 } from '@supabase/supabase-js';
 import {
   logInfo,
-  logWarn,
+  logWarn,;
   logErrorToProduction,;
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
@@ -23,7 +23,7 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardHeader,
+  CardHeader,;
   CardTitle,;
 } from '@/components/ui/card';
 const LoginPage = () => {
@@ -443,7 +443,6 @@ const LoginPage = () => {
           content='Sign in to your Zion Tech Marketplace account'
         />
       </Head>
-
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
         <Card className='w-full max-w-md'>          <CardHeader>
             <CardTitle>Sign In</CardTitle>
@@ -471,7 +470,6 @@ const LoginPage = () => {
                   disabled={isLoading}
                 />
               </div>
-
               <div className='space-y-2'>
                 <label htmlFor='password' className='text-sm font-medium'>
                   Password
@@ -484,7 +482,6 @@ const LoginPage = () => {
                   disabled={isLoading}
                 />
               </div>
-
               <Button
                 type='submit'
                 className='w-full'
@@ -497,7 +494,6 @@ const LoginPage = () => {
                     : t('auth.sign_in')}
               </Button>
             </form>
-
             <div className='mt-6 text-center'>
               <p className='text-sm text-gray-600'>
                 Don't have an account?{' '}

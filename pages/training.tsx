@@ -20,7 +20,7 @@ export default function Training() {
           </div>
         </div>
       </div>
-    </Layout>
+    </Layout>;
   );
 }
 };

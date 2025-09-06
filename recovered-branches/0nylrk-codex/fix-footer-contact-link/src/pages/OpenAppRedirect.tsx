@@ -64,7 +64,6 @@ const OpenAppRedirect: React.FC = () => {
       />
       <div className="text-center p-8">
         <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
-        
         {status === 'redirecting' && (
           <>
             <h1 className="text-2xl font-bold mb-2">Opening Zion App...</h1>

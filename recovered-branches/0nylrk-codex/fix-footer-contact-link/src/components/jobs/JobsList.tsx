@@ -14,7 +14,7 @@ interface JobsListProps {
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
 
-export function JobsList({ filter, onSelectJob }: JobsListProps) {
+export function JobsList({ filter, onSelectJob }: JobsListProps) {;
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);

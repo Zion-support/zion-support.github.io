@@ -33,7 +33,7 @@ interface ProjectFormProps {
   onCancel: () => void
 }
 
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -171,7 +171,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             )}
           />
         </div>
-        
         <FormField
           control={form.control}
           name="image_url"

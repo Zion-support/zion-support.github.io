@@ -10,12 +10,12 @@ import {
   Phone,
   Mail,
   MapPin,
-  Globe,
+  Globe,;
   ChevronDown,;
 } from 'lucide-react';
 import Link from 'next/link';import { 
   Menu, X, Home, Brain, Cpu, Rocket, 
-  Phone, Mail, MapPin, Globe, ChevronDown
+  Phone, Mail, MapPin, Globe, ChevronDown;
 } from 'lucide-react';
 import Link from 'next/link';
   const [isOpen, setIsOpen] = useState(false);
@@ -162,7 +162,6 @@ import Link from 'next/link';
                 </div>
               </Link>
             </motion.div>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
@@ -184,7 +183,6 @@ import Link from 'next/link';
                     >
                       <span className="font-medium">{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
-                      
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -253,7 +251,6 @@ import Link from 'next/link';
                 </div>
               ))}
             </div>
-
             {/* CTA Button */}
             <div className='hidden lg:block'>
               <motion.a
@@ -269,7 +266,6 @@ import Link from 'next/link';
                 Get Started
               </motion.a>
             </div>
-
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>
               <motion.button
@@ -292,7 +288,6 @@ import Link from 'next/link';
           </div>
         </div>
       </motion.nav>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -332,7 +327,6 @@ import Link from 'next/link';
                   >
                     <X className='w-6 h-6' />                  </motion.button>
                 </div>
-
                 {/* Mobile Menu Items */}
                 <div className='space-y-4'>
                   {navigationItems.map(item => (            >
@@ -347,7 +341,6 @@ import Link from 'next/link';
                     <X className="w-6 h-6" />
                   </motion.button>
                 </div>
-
                 {/* Mobile Menu Items */}
                 <div className='space-y-4'>
                   {navigationItems.map(item => (
@@ -417,7 +410,6 @@ import Link from 'next/link';
                     </div>
                   ))}
                 </div>
-
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -446,7 +438,6 @@ import Link from 'next/link';
                     </div>
                   </div>
                 </div>
-
                 {/* Mobile CTA */}
                 <div className='mt-6'>
                   <motion.a

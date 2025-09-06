@@ -84,7 +84,7 @@ export default function ${serviceName}() {
     "Automated ${displayName.toLowerCase()} management",
     "Real-time ${displayName.toLowerCase()} analytics",
     "Predictive ${displayName.toLowerCase()} insights",
-    "Custom AI models for ${displayName.toLowerCase()}",
+    "Custom AI models for ${displayName.toLowerCase()}",;
     "Enterprise-grade security and compliance"];
   const benefits = ["Improve ${displayName.toLowerCase()} performance by 50-80%",
     "Reduce operational costs by 35-65%",

@@ -54,7 +54,6 @@ function ReviewsModerationContent() {
             <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>
           </div>
         </div>
-        
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -71,7 +70,6 @@ function ReviewsModerationContent() {
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
               </TabsList>
-              
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable 
                   reviews={reviews}
@@ -79,7 +77,6 @@ function ReviewsModerationContent() {
                   onRefresh={handleRefresh}
                 />
               </TabsContent>
-              
               <TabsContent value="reported" className="mt-0">
                 <div className="text-center py-12 border rounded-lg">
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
@@ -105,3 +102,4 @@ export default function ReviewsModeration() {
     </ProtectedRoute>
   )
 }
+;

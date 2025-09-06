@@ -273,7 +273,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     customers: 29,
     rating: 4.6,
     reviews: 41,
-    contactInfo: contact,
+    contactInfo: contact,;
   },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
       'Integration capabilitiesMobile access'
     ];

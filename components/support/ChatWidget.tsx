@@ -16,7 +16,7 @@ function generateSessionId(): string {
   window.localStorage.setItem('zion_support_session_id', id);
   return id
 }
-export default function ChatWidget() {
+export default function ChatWidget() {;
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -206,14 +206,12 @@ export default function ChatWidget() {
             >              <X size={18} />
             </button>
           </div>
-
           <div className='flex-1 overflow-y-auto p-3 space-y-3'>        <div className="w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col">
           <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800">
             <div className="font-semibold">Zion Support</div>
             <button onClick={() => setIsOpen(false)} aria-label="Close" className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
             </button>
           </div>
-
           <div className='flex-1 overflow-y-auto p-3 space-y-3'>
             {messages.map((m, idx) => (
               <div
@@ -248,7 +246,6 @@ export default function ChatWidget() {
             )}
             <div ref={messagesEndRef} />
           </div>
-
           {!showEscalation && (
             <div className='px-3 pb-2'>
               <div className='flex flex-wrap gap-2 mb-2'>

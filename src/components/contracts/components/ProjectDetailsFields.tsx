@@ -33,7 +33,7 @@ import { Button } from "@/components/ui/button"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Calendar } from "@/components/ui/calendar"
 import { ContractFormValues } from "./ContractForm"
-interface ProjectDetailsFieldsProps {
+interface ProjectDetailsFieldsProps {;
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
 }
 
@@ -109,7 +109,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           }: {
             field: ControllerRenderProps<ContractFormValues, 'startDate'>
           }) => (
-            <FormItem className='flex flex-col'>              <FormLabel>Start Date</FormLabel>      
+            <FormItem className='flex flex-col'>              <FormLabel>Start Date</FormLabel>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           control = {form.control,}
@@ -173,7 +173,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           }: {
             field: ControllerRenderProps<ContractFormValues, 'endDate'>
           }) => (
-            <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>        
+            <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>
         <FormField
           control = {form.control,}
           name="endDate"
@@ -233,4 +233,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
       </div>
     </>
   )
+}
+;
+}
+}
+}
 }

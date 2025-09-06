@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-export default function PartnerDashboard() {
+export default function PartnerDashboard() {;
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
 import Head from "next/head";
-export default function PartnerDashboard() {
+export default function PartnerDashboard() {;
   const [apiKey, setApiKey] = useState("");
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
@@ -81,7 +81,6 @@ export default function PartnerDashboard() {
         <p className='text-gray-600 mb-6'>
           Manage access, view usage, and download SDKs.
         </p>
-
         {!token && (
           <div className='bg-white p-6 rounded-lg shadow mb-8'>
             <h2 className='text-lg font-medium mb-3'>Authenticate</h2>
@@ -121,7 +120,6 @@ export default function PartnerDashboard() {
               Old key becomes inactive.
             </p>
           </div>
-
           <div className='bg-white p-6 rounded-lg shadow md:col-span-2'>
             <h3 className='font-medium mb-2'>Usage</h3>
             <button
@@ -142,7 +140,6 @@ export default function PartnerDashboard() {
                       <li key={k}>
                         {k}: {v as any}
                       </li>                    ))}          </div>
-
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
             <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
@@ -166,7 +163,6 @@ export default function PartnerDashboard() {
             )}
           </div>
         </div>
-
         <div className='bg-white p-6 rounded-lg shadow mt-6'>
           <h3 className='font-medium mb-2'>SDKs</h3>
           <a

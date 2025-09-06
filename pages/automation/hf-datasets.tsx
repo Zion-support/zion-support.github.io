@@ -18,5 +18,5 @@ export default function HfDatasetsPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  )
+  );
 };

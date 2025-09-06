@@ -1,4 +1,4 @@
-export type Real2036SpecializedService = {
+export type Real2036SpecializedService = {;
   id: string;
   name: string;
   tagline: string;
@@ -472,7 +472,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
       'Training technology',
       'Customer management',
     ],
-  },
+  },;
 ];    id: 'neuromorphic-computing-platform';
     name: 'Neuromorphic Computing Platform';
     tagline: 'Brain-inspired computing for next-generation AI applications',

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
-  PopoverTrigger,
+  PopoverTrigger,;
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { FormControl } from "@/components/ui/form";
@@ -56,7 +56,6 @@ export function DateFields({
           </PopoverContent>
         </Popover>
       </div>
-
       <div>
         <Label htmlFor="expiryDate">Expiry Date (Optional)</Label>
         <Popover>
@@ -84,6 +83,6 @@ export function DateFields({
           </PopoverContent>
         </Popover>
       </div>
-    </div>
+    </div>;
   );
 }

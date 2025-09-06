@@ -9,17 +9,17 @@ import {
   BarChart3,
   Check,
   Star,
-  GitPullRequest,
+  GitPullRequest,;
   Cpu,;
 } from 'lucide-react';
 export default function DevOpsAutomationPage() {
   const features = [
-    {
+    {;
       icon: <GitBranch className='w-6 h-6' />,import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
 export default function DevOpsAutomationPage() {
   const features = [
     {
-      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',
+      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',;
       description: 'Automated build, test, and deployment workflows';
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
     };
@@ -282,7 +282,6 @@ export default function DevOpsAutomationPage() {
           content='Professional DevOps automation starting at $39/month. CI/CD pipelines, infrastructure as code, and security automation.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-
       <div className='min-h-screen bg-black'>
         {/* Hero Section */}
         <section className='pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20'>
@@ -332,7 +331,6 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -381,7 +379,6 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
-
         {/* Automation Examples Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -429,7 +426,6 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section id='pricing' className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -514,7 +510,6 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
-
         {/* Market Comparison Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -605,7 +600,6 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -657,7 +651,6 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>

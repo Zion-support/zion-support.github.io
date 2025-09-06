@@ -66,7 +66,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </Button>
         </CardFooter>
       </Card>
-
       <Card>
         <CardHeader className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg'>
           <div className='flex justify-between items-center'>
@@ -119,4 +118,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
       </Card>
     </div>
   )
+};
+;
+}
 }

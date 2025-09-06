@@ -1,4 +1,4 @@
-export interface QuantumAiService2025 {
+export interface QuantumAiService2025 {;
   id: string;
   name: string;
   tagline: string;
@@ -37,7 +37,7 @@ export const quantumAIServices2025: QuantumAiService2025[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
-  },
+  },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"

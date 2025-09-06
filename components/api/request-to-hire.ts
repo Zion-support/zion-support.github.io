@@ -5,13 +5,13 @@ import path from 'path';
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {  if (req.method !== 'POST') {
+) {  if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req.body || {};  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
@@ -60,4 +60,6 @@ console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
   }    return res.status(500).json({ error: 'Internal error' })
   };
+}
+
 }

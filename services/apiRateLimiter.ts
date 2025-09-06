@@ -1,4 +1,4 @@
-export interface RateLimitConfig {
+export interface RateLimitConfig {;
   requestsPerMinute: number;
   requestsPerHour: number;
   requestsPerDay: number;
@@ -6,7 +6,7 @@ export interface RateLimitConfig {
   windowSize: number
 }
 
-export interface RateLimitRule {
+export interface RateLimitRule {;
   id: string;
   name: string;
   pattern: string;
@@ -17,7 +17,7 @@ export interface RateLimitRule {
   updatedAt: Date
 }
 
-export interface RateLimitStats {
+export interface RateLimitStats {;
   endpoint: string;
   method: string;
   totalRequests: number;
@@ -31,7 +31,7 @@ export interface RateLimitStats {
   }
 }
 
-export interface APIKey {
+export interface APIKey {;
   id: string;
   name: string;
   key: string;
@@ -42,7 +42,7 @@ export interface APIKey {
   isActive: boolean
 }
 
-export interface RateLimitViolation {
+export interface RateLimitViolation {;
   id: string;
   apiKey: string;
   endpoint: string;
@@ -53,7 +53,7 @@ export interface RateLimitViolation {
   userAgent: string
 }
 
-export class APIRateLimiterService {
+export class APIRateLimiterService {;
   private apiKey: string;
   private baseUrl: string,
 
@@ -403,7 +403,7 @@ export class APIRateLimiterService {
 
 // Pricing tiers for the API Rate Limiter service
 export const API_RATE_LIMITER_PRICING = {
-  starter: {
+  starter: {;
     name: 'Starter';
     price: 25;
     period: '/month',

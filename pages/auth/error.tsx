@@ -15,7 +15,7 @@ export default function AuthErrorPage() {
   return (
     <>
       <Head>
-        <title>Authentication Error - Zion Tech Marketplace</title>
+        <title>Authentication Error - Zion Tech Marketplace</title>;
         <meta name=&quot;description&quot; content=&quot;Authentication error page&quot; />
       </Head>
       <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>

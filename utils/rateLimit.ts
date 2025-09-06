@@ -6,7 +6,7 @@ const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window
 
 export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() || 
-             req.socket.remoteAddress || 
+             req.socket.remoteAddress || ;
              'unknown';
   
   const now = Date.now();

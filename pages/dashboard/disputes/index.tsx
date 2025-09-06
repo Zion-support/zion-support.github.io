@@ -5,7 +5,7 @@ import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
   const cookies = (req.headers.cookie || '').split(';').reduce(
     (acc: any, part: string) => {
       const [k, v] = part.trim().split('=');
@@ -24,7 +24,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   }
   return { props: {} };};
 
-export default function AdminDisputesDashboard() {
+export default function AdminDisputesDashboard() {;
   const { data } = useSWR('/api/disputes', fetcher);
   const [statusFilter, setStatusFilter] = useState<
     'All' | 'Open' | 'Under Review' | 'Resolved'
@@ -102,3 +102,5 @@ export default function AdminDisputesDashboard() {
       </div>
     </EnhancedLayout>
 );
+
+}

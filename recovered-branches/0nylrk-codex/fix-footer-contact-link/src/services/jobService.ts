@@ -6,7 +6,7 @@ export async function createJob(jobData: any) {
     const { data, error } = await supabase
       .from('jobs')
       .insert([jobData])
-      .select()
+      .select();
       .single();
       
     if (error) throw error;
@@ -23,7 +23,7 @@ export async function updateJob(jobId: string, jobData: any) {
       .from('jobs')
       .update(jobData)
       .eq('id', jobId)
-      .select()
+      .select();
       .single();
       
     if (error) throw error;
@@ -39,7 +39,7 @@ export async function getJobById(jobId: string) {
     const { data, error } = await supabase
       .from('jobs')
       .select('*')
-      .eq('id', jobId)
+      .eq('id', jobId);
       .single();
       
     if (error) throw error;

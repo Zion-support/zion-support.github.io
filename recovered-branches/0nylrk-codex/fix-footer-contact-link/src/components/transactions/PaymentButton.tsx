@@ -17,7 +17,7 @@ interface PaymentButtonProps {
   redirectUrl?: string
 }
 
-export function PaymentButton({
+export function PaymentButton({;
   amount;
   serviceId;
   providerId;

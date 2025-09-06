@@ -3,7 +3,7 @@ import React from "react";
 export default function EnhancedCard({
   children,
   className = "",
-}: {
+}: {;
   children: React.ReactNode;
   className?: string;
 }) {

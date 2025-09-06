@@ -11,7 +11,7 @@ import {
   FormControl
   FormField
   FormItem
-  FormLabel
+  FormLabel;
   FormMessage} from "@/components/ui/form"; import { toast } from "@/hooks/use-toast"
 import { cleanupAuthState } from "@/utils/authUtils"
 import { logErrorToProduction } from '@/utils/productionLogger'
@@ -30,5 +30,5 @@ const updatePasswordSchema = z
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 }
   )
-}
+};
 ;

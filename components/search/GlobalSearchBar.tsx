@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
-export default function GlobalSearchBar() {
+export default function GlobalSearchBar() {;
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);

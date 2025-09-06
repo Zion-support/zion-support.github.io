@@ -195,7 +195,7 @@ const v1: ApiDocsSpec = {
         }
       ]
     }
-  ]
+  ];
 };
 
 export default v1;

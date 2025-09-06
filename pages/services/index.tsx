@@ -154,7 +154,6 @@ export default function ServicesIndexPage() {
             </div>
           </div>
         </section>
-
             {/* Featured Services */}
             {featuredServices.length > 0 && (
               <section className="mb-20">
@@ -256,7 +255,6 @@ export default function ServicesIndexPage() {
                 })}
               </div>
             </section>
-
             {/* CTA Section */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-12">
@@ -286,7 +284,6 @@ export default function ServicesIndexPage() {
           </div>
         </div>
       </UltraFuturisticBackground>
-
         {categories.map((cat) => (
           <section key={cat} id={anchorMap[cat] || toSlug(cat)}>
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">{cat}</h2>
@@ -309,7 +306,6 @@ export default function ServicesIndexPage() {
               })}
             </div>
           </div>
-
           {/* Featured Services */}
           {featuredServices.length > 0 && (
             <section className="mb-20">
@@ -412,19 +408,15 @@ export default function ServicesIndexPage() {
                       </div>
                       <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition-colors duration-300" />
                     </div>
-                    
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
                       {service.name}
                     </h3>
-                    
                     <p className="text-cyan-400 text-sm mb-4">
                       {service.tagline}
                     </p>
-                    
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-
                     <div className="space-y-2 mb-6">
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-400">
@@ -433,7 +425,6 @@ export default function ServicesIndexPage() {
                         </div>
                       ))}
                     </div>
-
                     <div className="flex items-center justify-between">
                       <div className="text-2xl font-bold text-white">
                         {service.price}
@@ -451,7 +442,6 @@ export default function ServicesIndexPage() {
                 </motion.div>
               ))}
             </div>
-
             {filteredServices.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
@@ -459,7 +449,6 @@ export default function ServicesIndexPage() {
             )}
           </div>
         </section>
-
         {/* Call to Action */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-4xl text-center">
@@ -502,5 +491,5 @@ export default function ServicesIndexPage() {
       />
     </div>
   )
-}
+};
 ;

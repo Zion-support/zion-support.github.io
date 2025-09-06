@@ -22,4 +22,4 @@ export default function AIAutonomousEcosystemManager() {
 			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
 		/>
 	)
-}
+};

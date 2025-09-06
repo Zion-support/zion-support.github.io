@@ -3,10 +3,10 @@ export type ForumCategory =
   | 'getting-hired'
   | 'project-help'
   | 'ai-tools'
-  | 'feedback'
+  | 'feedback';
   | 'announcements';
 
-export interface ForumCategoryInfo {
+export interface ForumCategoryInfo {;
   id: ForumCategory;
   name: string;
   description: string;
@@ -14,7 +14,7 @@ export interface ForumCategoryInfo {
   icon: string
 }
 
-export interface ForumPost {
+export interface ForumPost {;
   id: string;
   title: string;
   content: string;
@@ -35,7 +35,7 @@ export interface ForumPost {
   isFeatured?: boolean
 }
 
-export interface ForumReply {
+export interface ForumReply {;
   id: string;
   postId: string;
   parentReplyId?: string;
@@ -51,7 +51,7 @@ export interface ForumReply {
   isAnswer?: boolean
 }
 
-export interface Badge {
+export interface Badge {;
   id: string;
   name: string;
   description: string;
@@ -59,13 +59,13 @@ export interface Badge {
   color: string
 }
 
-export interface UserBadge {
+export interface UserBadge {;
   userId: string;
   badgeId: string,
   awardedAt: string
 }
 
-export interface CommunityUser {
+export interface CommunityUser {;
   id: string;
   name: string;
   avatar?: string;

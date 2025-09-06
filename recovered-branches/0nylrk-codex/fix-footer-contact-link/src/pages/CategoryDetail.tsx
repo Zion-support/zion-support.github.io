@@ -10,7 +10,7 @@ import {MARKETPLACE_LISTINGS} from "@/data/listingData";
 import {useNavigate} from "react-router-dom";
 import {toast} from "@/hooks/use-toast";
 export default function CategoryDetail() {
-  // Cast to specify the expected route param type since useParams may be untyped
+  // Cast to specify the expected route param type since useParams may be untyped;
   const { slug } = useParams() as { slug?: string };
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
@@ -163,7 +163,6 @@ export default function CategoryDetail() {
               ← Back to Categories
             </Link>
           </div>
-          
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
@@ -177,7 +176,6 @@ export default function CategoryDetail() {
               {category.description}
             </p>
           </div>
-          
           {isLoading ? (
             <div className="flex justify-center items-center h-64">
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-purple"></div>

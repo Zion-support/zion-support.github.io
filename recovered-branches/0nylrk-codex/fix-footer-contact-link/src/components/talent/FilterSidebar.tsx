@@ -10,7 +10,7 @@ import {RegionFilter} from "./filters/RegionFilter";
 import {ExperienceFilter} from "./filters/ExperienceFilter";
 import {PriceFilter} from "./filters/PriceFilter";
 import {FilterSidebarProps} from "@/types/filters";
-export function FilterSidebar({
+export function FilterSidebar({;
   searchTerm;
   setSearchTerm;
   selectedSkills;
@@ -47,13 +47,10 @@ export function FilterSidebar({
           Clear All
         </Button>
       </div>
-      
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
-      
       {/* Skills */}
       <SkillsFilter 
         selectedSkills={selectedSkills} 

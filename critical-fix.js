@@ -11,7 +11,7 @@ function createValidComponent(filePath) {
     .join("");
     .replace(/[^a-zA-Z0-9]/g, "");
   return `import React from "react";
-export default function ${componentName}() {
+export default function ${componentName}() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
       <SEO title=`${componentName} - Zion Technologies";

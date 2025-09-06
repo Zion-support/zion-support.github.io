@@ -14,7 +14,7 @@ import {
   Lock,
   Cloud,
   Eye,
-  Timer,
+  Timer,;
   Sparkles,;
 } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
@@ -182,7 +182,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
         <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
       </div>
-
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 
   return (
@@ -193,7 +192,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -219,7 +217,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             {subtitle}
           </motion.p>
         </motion.div>
-
         {/* Filters and Controls */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -250,7 +247,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               ))}
             </div>
           </div>
-
           {/* Sort Options */}
           <div className='flex items-center space-x-2'>
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
@@ -272,7 +268,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             </select>
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -299,7 +294,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -348,7 +342,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             </div>
           </div>
         </motion.div>
-
         {/* Innovation Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

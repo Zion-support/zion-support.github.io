@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === "GET") {
+  if (req.method === "GET") {;
     const state = readState();
     return res.status(200).json({ overrides: state.overrides });
   }

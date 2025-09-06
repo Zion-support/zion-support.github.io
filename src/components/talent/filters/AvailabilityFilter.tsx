@@ -25,7 +25,6 @@ export function AvailabilityFilter({
           <ChevronDown className='h-4 w-4 text-zion-slate-light' />
         )}
       </button>
-
       {expanded && (
         <div className='mt-4 space-y-2'>
           {AVAILABILITY_OPTIONS.map(option => (
@@ -34,7 +33,6 @@ export function AvailabilityFilter({
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
             <div key={option.id} className="flex items-center">
-
 import { Checkbox } from "@/components/ui/checkbox"
 import { AvailabilityFilterProps } from "@/types/filters"
 const AVAILABILITY_OPTIONS = [
@@ -56,7 +54,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-      
       {expanded && (
         <div className="mt-4 space-y-2">
           {AVAILABILITY_OPTIONS.map(option => (
@@ -90,4 +87,5 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 }</label> </div>) ) 
 }</div>) 
 }</div>) 
-}"}
+}"};
+;

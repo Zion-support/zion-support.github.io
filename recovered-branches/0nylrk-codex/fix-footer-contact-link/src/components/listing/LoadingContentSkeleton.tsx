@@ -21,6 +21,6 @@ export function LoadingContentSkeleton() {
           ))}
         </div>
       </CardContent>
-    </Card>
+    </Card>;
   );
 }

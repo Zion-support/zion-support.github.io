@@ -115,8 +115,8 @@ export {
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbSeparator,
-  BreadcrumbEllipsis,
+  BreadcrumbSeparator,;
+  BreadcrumbEllipsis,;
 };)
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
  
@@ -126,5 +126,5 @@ export {
   BreadcrumbItem
   BreadcrumbLink
   BreadcrumbSeparator
-  BreadcrumbEllipsis}
+  BreadcrumbEllipsis};
 ;

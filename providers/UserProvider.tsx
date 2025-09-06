@@ -2,12 +2,12 @@ import React, {
   createContext,
   useContext,
   useEffect,
-  useMemo,
+  useMemo,;
   useState,;} from 'react';} from 'react';
 
 export type UserRole = 'client' | 'talent';
 
-export type User = {
+export type User = {;
   id: string;
   name: string;
   role: UserRole;
@@ -15,7 +15,7 @@ export type User = {
   onboardingCompleted: boolean;
 };
 
-export type UserContextValue = {
+export type UserContextValue = {;
   user: User | null;
   setUser: (user: User | null) => void;
   logout: () => void;
@@ -63,7 +63,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {  con
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 
-export function useUser() {
+export function useUser() {;
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;

@@ -4,7 +4,7 @@ export default function YouTubeRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.location.replace('https: //youtube.com/@ziontechgroup'),
-    }
+    };
   }, []);
   return (
     <>
@@ -27,3 +27,5 @@ export default function YouTubeRedirect() {
       </div>
     </>
   );
+
+}

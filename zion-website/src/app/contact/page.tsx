@@ -60,8 +60,8 @@ const faqs = [
     question: 'What security measures do you have?',
     answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
 
-export default function ContactPage() {
-  return (
+export default function ContactPage() {;
+  return (;
     <div className=&quot;bg-black&quot;>
       {/* Hero section */}
       <div className=&quot;relative isolate px-6 pt-14 lg:px-8&quot;>
@@ -80,7 +80,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-
       {/* Contact methods */}
       <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -206,7 +205,6 @@ export default function ContactPage() {
           </form>
         </div>
       </div>
-
       {/* Office locations */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>

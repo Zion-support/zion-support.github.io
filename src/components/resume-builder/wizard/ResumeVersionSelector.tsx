@@ -76,7 +76,6 @@ export function ResumeVersionSelector({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
             <Plus className="h-4 w-4 mr-2" />
             onClick={() => setSaveDialogOpen(true)}
             className="cursor-pointer"
@@ -86,7 +85,6 @@ export function ResumeVersionSelector({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className='sm:max-w-md'>
           <DialogHeader>
@@ -139,6 +137,6 @@ export function ResumeVersionSelector({
   resume.basic info.title 
 }</DropdownMenuItem>) ) 
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>) 
-}"
-}
+}";
+};
 ;

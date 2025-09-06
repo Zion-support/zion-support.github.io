@@ -79,8 +79,8 @@ export default function Page() {
 ]
 const stats = [ "
   { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },"
-  { icon: <Target className="w-6 h-6"  />, value: "99.9%", label: "Success Rate" },"
-  { icon: <TrendingUp className="w-6 h-6"  />, value: "50%", label: "Cost Reduction" },"
+  { icon: <Target className="w-6 h-6"  />, value: "99.9%", label: "Success Rate" },";
+  { icon: <TrendingUp className="w-6 h-6"  />, value: "50%", label: "Cost Reduction" },";
   { icon: <Award className="w-6 h-6"  />, value: "1000+", label: "Projects Completed" };]
   const [hoveredStep, setHoveredStep] = useState < number | null> (null) 
   const [activeStep, setActiveStep] = useState < number> (0) 
@@ -115,8 +115,7 @@ export function HowItWorksSection({
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>            {t('home.how_it_works_subtitle')}
           </p>
         </div>
-
-        <div className='relative'>  
+        <div className='relative'>
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -126,10 +125,8 @@ export function HowItWorksSection({
             {t('home.how_it_works_subtitle')}
           </p>
         </div>
-
         <div className='relative'>
           <div className='absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>
-
           <div className='space-y-12 md:space-y-0'>
             {steps.map((step, index) => (
               <div
@@ -152,7 +149,6 @@ export function HowItWorksSection({
                 <div className='relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0'>
                   <step.icon className='w-6 h-6 text-zion-cyan' />
                 </div>
-
                 <div className='md:w-1/2 md:px-12 text-center md:text-left'>
                   {index % 2 !== 0 ? (
                     <div>
@@ -169,11 +165,9 @@ export function HowItWorksSection({
                     </div>
                   ) : null}
                 </div>
-                
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">
                   <step.icon className="w-6 h-6 text-zion-cyan" />
                 </div>
-
                 <div className="md:w-1/2 md:px-12 text-center md:text-left">
                   {index % 2 !== 0 ? (
                     <div>
@@ -191,5 +185,5 @@ export function HowItWorksSection({
   )
 }
 }
-}
+};
 ;

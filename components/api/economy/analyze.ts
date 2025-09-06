@@ -9,23 +9,23 @@ const completion = await client.chat.completions.create ({
   role: 'system', content: system 
 };
 
-export type AnalyzeResponse = {
+export type AnalyzeResponse = {;
   analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
   operatorPrompt: string,
-  context?: Record<string, unknown>
+  context?: Record<string, unknown>;
 };
 
 export type AnalyzeResponse = {
-  analysis: string
+  analysis: string;
 };
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<AnalyzeResponse | { error: string }>
 ) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }
 
   const { operatorPrompt, context } = (req.body || {}) as AnalyzeRequestBody;

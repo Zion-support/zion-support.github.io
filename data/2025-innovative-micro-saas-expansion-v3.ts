@@ -1078,7 +1078,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       customers: 34,
       rating: 4.9,
       reviews: 28,
-    },
+    },;
   ];    features: [
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
       'API integration capabilities'

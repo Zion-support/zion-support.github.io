@@ -17,7 +17,7 @@ import {
   CreditCard,
   Phone,
   Mail,
-  ExternalLink
+  ExternalLink;
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -79,7 +79,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
-
           <motion.div
             initial={{ x: -300 }}
             animate={{ x: 0 }}
@@ -102,7 +101,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               {/* Navigation */}
               <nav className="space-y-4">
                 {Object.entries(navigation).map(([title, links]) => (
@@ -126,7 +124,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                   ))}
                 </div>
               </div>
-
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
@@ -159,3 +156,5 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
 };
 
 export default Sidebar;
+
+}

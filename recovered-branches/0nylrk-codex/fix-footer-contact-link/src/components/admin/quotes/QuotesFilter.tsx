@@ -21,7 +21,7 @@ interface QuotesFilterProps {
   onReset: () => void
 }
 
-export const QuotesFilter: React.FC<QuotesFilterProps> = ({
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   searchQuery;
   setSearchQuery;
   statusFilter;
@@ -44,7 +44,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Status</p>
             <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>
@@ -61,7 +60,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-          
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Archive</p>
             <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>
@@ -75,7 +73,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-          
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Date Range</p>
             <Popover>
@@ -112,7 +109,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             </Popover>
           </div>
         </div>
-        
         <div className="mt-4 flex justify-end">
           <Button 
             variant="outline" 

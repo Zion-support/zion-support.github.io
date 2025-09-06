@@ -11,7 +11,7 @@ type RequestsHeaderProps = {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
 };
 
-export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
+export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   unreadCount;
   statusFilter;
   setStatusFilter;
@@ -33,7 +33,6 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
           Manage client requests to hire your services
         </p>
       </div>
-      
       <div className="flex gap-3 mt-4 md:mt-0">
         <Select 
           value={statusFilter} 
@@ -51,7 +50,6 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
             <SelectItem value="closed">Closed</SelectItem>
           </SelectContent>
         </Select>
-        
         <Select 
           value={archiveFilter} 
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}

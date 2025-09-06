@@ -103,11 +103,11 @@ import {
   Twitter,
   Facebook,
   Instagram,
-  Youtube,
+  Youtube,;
   Github,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -416,7 +416,7 @@ const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
 ];
 
-export default function UltraFuturisticNavigation2034() {
+export default function UltraFuturisticNavigation2034() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -506,7 +506,6 @@ export default function UltraFuturisticNavigation2034() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -543,7 +542,6 @@ export default function UltraFuturisticNavigation2034() {
                   Future Technology Solutions
                 </p>              </div>
             </motion.div>
-
             {/* Desktop Navigation */}            >
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
@@ -558,7 +556,6 @@ export default function UltraFuturisticNavigation2034() {
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>
               </div>
             </motion.div>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {quickLinks.map(link => (
@@ -651,7 +648,6 @@ export default function UltraFuturisticNavigation2034() {
                   </div>
                 </div>
               </div>
-
               {/* Contact Button */}
               <Link
                 href='/contact'
@@ -661,7 +657,6 @@ export default function UltraFuturisticNavigation2034() {
                 Get Started
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>
               <button
@@ -681,7 +676,6 @@ export default function UltraFuturisticNavigation2034() {
             </div>
           </div>
         </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -787,7 +781,6 @@ export default function UltraFuturisticNavigation2034() {
           )}
         </AnimatePresence>
       </nav>
-
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>

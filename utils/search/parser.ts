@@ -5,7 +5,7 @@ export const parseSearchQuery = (query: string) => {
     keywords: [],
     skills: [],
     location: null,
-    type: null
+    type: null;
   };
 };
 
@@ -15,11 +15,11 @@ export const searchAll = (parsed: any, access: any) => {
     all: [],
     talent: [],
     jobs: [],
-    projects: []
+    projects: [];
   };
 };
 
 export const suggestDidYouMean = (query: string) => {
-  // Add did you mean functionality here
+  // Add did you mean functionality here;
   return null;
 };

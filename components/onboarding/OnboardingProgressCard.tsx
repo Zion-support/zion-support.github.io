@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
-export type OnboardingStep = {
+export type OnboardingStep = {;
   id: string;
   label: string;
   completed: boolean;
@@ -9,7 +9,7 @@ export type OnboardingStep = {
   ctaHref?: string;
 };
 
-export type OnboardingProgressCardProps = {
+export type OnboardingProgressCardProps = {;
   title: string;
   steps: OnboardingStep[];
   highlightColorClass?: string;};
@@ -24,7 +24,7 @@ function computePercentage(steps: OnboardingStep[]): number {
 export type OnboardingProgressCardProps = {
   title: string,
   steps: OnboardingStep[],
-  highlightColorClass?: string
+  highlightColorClass?: string;
 };
 
 function computePercentage(steps: OnboardingStep[]): number {
@@ -36,7 +36,7 @@ export default function OnboardingProgressCard({
   title,
   steps,
   highlightColorClass = 'from-neon-green to-neon-blue',
-}: OnboardingProgressCardProps) {
+}: OnboardingProgressCardProps) {;
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
 
@@ -50,12 +50,11 @@ export default function OnboardingProgressCard({
         <h3 className='text-lg font-semibold'>{title}</h3>
         <div className='text-sm opacity-75'>{percentage}% complete</div>
       </div>
-
       {/* Progress Bar */}
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
         <div
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
-export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {
+export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {;
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
 
@@ -67,7 +66,6 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
         <h3 className="text-lg font-semibold">{title}</h3>
         <div className="text-sm opacity-75">{percentage}% complete</div>
       </div>
-
       {/* Progress Bar */}
       <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
         <div
@@ -77,7 +75,6 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
           style={{ width: `${percentage}%` }}
         />
       </div>
-
       {allDone ? (
         <div className='mt-4 flex items-center gap-2 text-green-600 dark:text-green-400'>
           <PartyPopper size={18} />
@@ -116,7 +113,6 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
           </li>
         ))}
       </ul>
-
       {/* Primary CTA for next step */}
       {!allDone && firstIncomplete ? (
         <div className='mt-5'>

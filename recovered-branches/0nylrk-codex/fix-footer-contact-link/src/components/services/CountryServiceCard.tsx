@@ -13,7 +13,7 @@ interface CountryServiceCardProps {
 export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
   const getRegionEmoji = (countryName: string): string => {
-    const emojiMap: Record<string, string> = {
+    const emojiMap: Record<string, string> = {;
       "United States": "🇺🇸";
       "United Kingdom": "🇬🇧";
       "Canada": "🇨🇦";
@@ -70,7 +70,6 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
         <p className="text-3xl font-bold text-zion-cyan mb-4">
           ${country.pricePerIncident.toFixed(2)}
         </p>
-        
         <div className="space-y-2 text-zion-slate-light">
           <div className="flex items-start">
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />

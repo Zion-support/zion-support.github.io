@@ -3,7 +3,7 @@ import {Button} from "./ui/button";
 import {Input} from "./ui/input";
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
-export function QuoteFormSection() {
+export function QuoteFormSection() {;
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -27,7 +27,6 @@ export function QuoteFormSection() {
             Request your instant commercial proposal and discover how Zion can revolutionize your IT operations
           </p>
         </div>
-
         <div className="max-w-2xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-8">
           {isSubmitted ? (
             <div className="text-center py-8">
@@ -94,7 +93,6 @@ export function QuoteFormSection() {
                   />
                 </div>
               </div>
-              
               <div className="mt-6">
                 <label htmlFor="interest" className="block text-sm font-medium text-zion-slate-light mb-1">
                   I'm interested in (select all that apply)
@@ -114,7 +112,6 @@ export function QuoteFormSection() {
                   ))}
                 </div>
               </div>
-              
               <div className="mt-6">
                 <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">
                   Additional Details
@@ -125,7 +122,6 @@ export function QuoteFormSection() {
                   className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                 ></textarea>
               </div>
-              
               <div className="mt-6">
                 <Button 
                   type="submit" 

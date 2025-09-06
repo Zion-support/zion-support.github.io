@@ -8,14 +8,14 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-AlertDialogTitle,
+AlertDialogTitle,;
 } from "../components/ui/alert-dialog";
 import {
   useLanguage,
   SupportedLanguage,
-  LanguageContextType,
+  LanguageContextType,;
 } from "../context/LanguageContext";
-export function LanguageDetectionPopup() {
+export function LanguageDetectionPopup() {;
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
   const { changeLanguage, currentLanguage, supportedLanguages } =

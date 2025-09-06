@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import type {
   RemoteParticipant,
   LocalParticipant,
-  TrackPublication,
+  TrackPublication,;
   Track,;
 } from 'livekit-client';
 type Props = {
@@ -14,7 +14,7 @@ type Props = {
 export default function ParticipantTile({
   participant,
   isLocal,
-  displayName,
+  displayName,;
 }: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
 type Props = {
   participant: RemoteParticipant | LocalParticipant,
@@ -22,7 +22,7 @@ type Props = {
   displayName?: string
 };
 
-export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
+export default function ParticipantTile({ participant, isLocal, displayName }: Props) {;
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 

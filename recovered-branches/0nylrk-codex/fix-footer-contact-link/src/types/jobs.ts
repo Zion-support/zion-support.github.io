@@ -7,16 +7,16 @@ export type JobCategory =
   | 'marketing' 
   | 'content' 
   | 'data' 
-  | 'business' 
+  | 'business' ;
   | 'other';
 
-export interface JobBudget {
+export interface JobBudget {;
   min: number;
   max: number,
   currency: string
 }
 
-export interface Job {
+export interface Job {;
   id: string;
   client_id: string;
   title: string;
@@ -30,7 +30,7 @@ export interface Job {
   updated_at: string
 }
 
-export interface JobFormData {
+export interface JobFormData {;
   title: string;
   description: string;
   category: JobCategory;
@@ -41,7 +41,7 @@ export interface JobFormData {
 }
 
 // Add JobMatch interface to be shared across components
-export interface JobMatch {
+export interface JobMatch {;
   id: string;
   job_id: string;
   talent_id: string;
@@ -68,7 +68,7 @@ export interface JobMatch {
   }
 }
 
-export interface ResumeAttachment {
+export interface ResumeAttachment {;
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
@@ -80,7 +80,7 @@ export interface ResumeAttachment {
 
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
 
-export interface JobApplication {
+export interface JobApplication {;
   id: string;
   job_id: string;
   talent_id: string;

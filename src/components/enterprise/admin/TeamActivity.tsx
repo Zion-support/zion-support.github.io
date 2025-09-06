@@ -107,7 +107,6 @@ export function TeamActivity() {
           </Button>
         </div>
       </div>
-
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -136,7 +135,6 @@ export function TeamActivity() {
           </TableBody>
         </Table>
       </div>
-      
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -150,8 +148,8 @@ export function TeamActivity() {
       </div>
     </div>
   )
-}
-const getCategoryBadge = (category: string) => {
+};
+const getCategoryBadge = (category: string) => {;
 };"
   activities.map ( (activity) => (<TableRow key= {
   activity.id 

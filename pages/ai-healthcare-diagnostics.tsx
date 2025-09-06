@@ -10,4 +10,4 @@ export default function AIHealthcareDiagnosticsPage() {
       </div>
     </div>
   )
-}
+};

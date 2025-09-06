@@ -6,7 +6,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
-export default function Profile() {
+export default function Profile() {;
   const { user, isLoading, logout } = useAuth();
   const navigate = useNavigate();
 

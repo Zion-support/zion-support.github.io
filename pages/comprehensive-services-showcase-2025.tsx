@@ -33,7 +33,7 @@ const pricingRanges = [
   '$500 - $800',
   '$800+',];
 
-export default function ComprehensiveServicesShowcase2025() {
+export default function ComprehensiveServicesShowcase2025() {;
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
@@ -141,7 +141,6 @@ export default function ComprehensiveServicesShowcase2025() {
           href='https://ziontechgroup.com/comprehensive-services-showcase-2025'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden'>
         {/* Animated Background */}
@@ -152,7 +151,6 @@ export default function ComprehensiveServicesShowcase2025() {
           <div className='absolute top-3/4 right-1/4 w-24 h-24 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000'></div>
           <div className='absolute bottom-1/4 left-1/3 w-20 h-20 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-2000'></div>
         </div>
-
         <div className='relative z-10 container mx-auto px-4 text-center'>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -179,7 +177,6 @@ export default function ComprehensiveServicesShowcase2025() {
               </span>{' '}
               that delivers measurable results.
             </p>
-
             {/* Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'>
               <div className='text-center'>
@@ -207,7 +204,6 @@ export default function ComprehensiveServicesShowcase2025() {
                 <div className='text-gray-400'>Average ROI</div>
               </div>
             </div>
-
             {/* Contact CTA */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link
@@ -228,7 +224,6 @@ export default function ComprehensiveServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Filters and Search Section */}
       <section className='py-12 bg-gray-900 border-b border-gray-800'>
         <div className='container mx-auto px-4'>
@@ -244,7 +239,6 @@ export default function ComprehensiveServicesShowcase2025() {
                 className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
               />
             </div>
-
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
@@ -261,7 +255,6 @@ export default function ComprehensiveServicesShowcase2025() {
                 </button>
               ))}
             </div>
-
             {/* Price Range Filter */}
             <div className='flex items-center gap-2'>
               <Filter className='w-5 h-5 text-gray-400' />
@@ -277,7 +270,6 @@ export default function ComprehensiveServicesShowcase2025() {
                 ))}
               </select>
             </div>
-
             {/* View Mode Toggle */}
             <div className='flex items-center gap-2 bg-gray-800 rounded-lg p-1'>
               <button
@@ -301,7 +293,6 @@ export default function ComprehensiveServicesShowcase2025() {
                 <List className='w-5 h-5' />
               </button>
             </div>
-
             {/* Sort Options */}
             <div className='flex items-center gap-2'>
               <span className='text-gray-400 text-sm'>Sort by:</span>
@@ -319,7 +310,6 @@ export default function ComprehensiveServicesShowcase2025() {
           </div>
         </div>
       </section>
-
       {/* Services Grid/List */}
       <section className='py-20 bg-black'>
         <div className='container mx-auto px-4'>
@@ -337,7 +327,6 @@ export default function ComprehensiveServicesShowcase2025() {
               services
             </p>
           </div>
-
           {viewMode === 'grid' ? (
             /* Grid View */
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -361,7 +350,6 @@ export default function ComprehensiveServicesShowcase2025() {
 
                     {/* Service Icon */}
                     <div className='text-6xl mb-6'>{service.icon}</div>
-
                     {/* Service Info */}
                     <h3 className='text-2xl font-bold text-white mb-3'>
                       {service.name}
@@ -369,7 +357,6 @@ export default function ComprehensiveServicesShowcase2025() {
                     <p className='text-gray-300 mb-4 line-clamp-3'>
                       {service.description}
                     </p>
-
                     {/* Price */}
                     <div className='flex items-center justify-between mb-6'>
                       <div className='text-3xl font-bold text-cyan-400'>
@@ -388,7 +375,6 @@ export default function ComprehensiveServicesShowcase2025() {
                         </span>
                       </div>
                     </div>
-
                     {/* Key Features */}
                     <div className='space-y-2 mb-6'>
                       {service.features.slice(0, 3).map((feature, idx) => (
@@ -400,7 +386,6 @@ export default function ComprehensiveServicesShowcase2025() {
                         </div>
                       ))}
                     </div>
-
                     {/* Category and Setup */}
                     <div className='flex items-center justify-between mb-6 text-sm'>
                       <span className='px-3 py-1 bg-gray-700 text-gray-300 rounded-full'>
@@ -410,7 +395,6 @@ export default function ComprehensiveServicesShowcase2025() {
                         Setup: {service.setupTime}
                       </span>
                     </div>
-
                     {/* Key Benefits */}
                     <div className='mb-6'>
                       <h4 className='text-white font-semibold mb-3'>
@@ -427,7 +411,6 @@ export default function ComprehensiveServicesShowcase2025() {
                         ))}
                       </div>
                     </div>
-
                     {/* CTA Button */}
                     <Link
                       href={service.link}
@@ -477,7 +460,6 @@ export default function ComprehensiveServicesShowcase2025() {
                           </div>
                         </div>
                       </div>
-
                       {/* Price and Rating */}
                       <div className='text-right'>
                         <div className='text-3xl font-bold text-cyan-400 mb-2'>
@@ -500,7 +482,6 @@ export default function ComprehensiveServicesShowcase2025() {
                         </span>
                       </div>
                     </div>
-
                     {/* Features and Benefits */}
                     <div className='mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6'>
                       <div>
@@ -535,7 +516,6 @@ export default function ComprehensiveServicesShowcase2025() {
                         </div>
                       </div>
                     </div>
-
                     {/* CTA and Additional Info */}
                     <div className='mt-6 flex flex-col lg:flex-row items-center justify-between gap-4'>
                       <div className='flex items-center gap-4 text-sm text-gray-400'>
@@ -582,7 +562,6 @@ export default function ComprehensiveServicesShowcase2025() {
           )}
         </div>
       </section>
-
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='container mx-auto px-4 text-center'>
@@ -604,7 +583,6 @@ export default function ComprehensiveServicesShowcase2025() {
               Let's discuss how our innovative services can help you achieve
               your business goals. Get in touch with our experts today.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-8'>
               <a
                 href={`tel:${contactInfo.mobile}`}
@@ -621,7 +599,6 @@ export default function ComprehensiveServicesShowcase2025() {
                 {contactInfo.email}
               </a>
             </div>
-
             <div className='text-center text-gray-400'>
               <p className='mb-2'>{contactInfo.address}</p>
               <p>
@@ -640,3 +617,5 @@ export default function ComprehensiveServicesShowcase2025() {
     </>
 );
 export default ComprehensiveServicesShowcase2025;
+
+}

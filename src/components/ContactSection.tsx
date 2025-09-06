@@ -21,7 +21,7 @@ export function ContactSection() {
     setFormData((prev) => ({ ...prev, [name]: value }))
     setErrors((prev) => ({ ...prev, [name]: undefined }))
   }
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();  const contactInfo = [{
       icon: Phone,
       title: "Phone",

@@ -20,8 +20,8 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'project-based':
         return 'bg-blue-500/20 text-blue-400',
       default:
-        return 'bg-gray-500/20 text-gray-400'
-    }
+        return 'bg-gray-500/20 text-gray-400';
+    };
   }; return 'bg-gray-500/20 text-gray-400'
     }
   }
@@ -43,3 +43,5 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   )
 }
 ;
+}
+}

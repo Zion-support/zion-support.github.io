@@ -23,7 +23,7 @@ export const crm = {
   async syncContact(
     connection: ProviderConnection,
     contact: Record<string, any>,
-  ) {
+  ) {;
     return mockProviderCall(connection, "sync_contact", { contact });
   },
 
@@ -47,7 +47,7 @@ export const ats = {
   async updateStatus(
     connection: ProviderConnection,
     status: Record<string, any>,
-  ) {
+  ) {;
     return mockProviderCall(connection, "update_status", { status });
   },
 };

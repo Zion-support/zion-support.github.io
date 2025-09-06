@@ -7,7 +7,7 @@ import {useNavigate} from "react-router-dom";
 import {useAuth} from "@/hooks/useAuth";
 import {AlertCircle} from "lucide-react";
 import {Alert, AlertDescription} from "@/components/ui/alert";
-export function SignUpForm() {
+export function SignUpForm() {;
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
   
@@ -69,7 +69,6 @@ export function SignUpForm() {
       <h2 className="text-xl font-medium text-center">
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
-      
       <div className="space-y-2">
         <Button 
           variant="outline" 
@@ -84,7 +83,6 @@ export function SignUpForm() {
           </svg>
           Continue with Google
         </Button>
-
         <Button 
           variant="outline" 
           className="w-full py-6 relative"
@@ -95,13 +93,11 @@ export function SignUpForm() {
           Continue with Facebook
         </Button>
       </div>
-
       <div className="relative flex items-center">
         <div className="flex-grow border-t border-border"></div>
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
-      
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
@@ -136,7 +132,6 @@ export function SignUpForm() {
             placeholder="Enter your email"
           />
         </div>
-        
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
           <Input
@@ -149,7 +144,6 @@ export function SignUpForm() {
             placeholder="Create a password"
           />
         </div>
-        
         <Button 
           type="submit" 
           className="w-full py-6"
@@ -163,7 +157,6 @@ export function SignUpForm() {
           }
         </Button>
       </form>
-      
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react',;
 ;
 export default function PrivacySettingsPage() {
   const [userId, setUserId] = useState(''),
@@ -60,5 +60,5 @@ export default function PrivacySettingsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 };

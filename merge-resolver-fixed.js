@@ -50,3 +50,6 @@ async function main() {;
     try {;
       const content = fs.readFileSync(file, 'utf8'),;
       if (content.includes('') || content.includes('
+}
+}
+}

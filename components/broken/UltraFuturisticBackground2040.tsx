@@ -287,11 +287,9 @@ const UltraFuturisticBackground2040: React.FC = () => {
         className='absolute inset-0 w-full h-full'
         style={{ zIndex: -1 }}
       />
-
       {/* Overlay Gradients */}
       <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80' />
       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />
-
       {/* Floating Elements */}
       <div className='absolute inset-0'>
         {/* Animated Grid Pattern */}
@@ -308,7 +306,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             }}
           />
         </div>
-
         {/* Floating Geometric Elements */}
         <motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg'
@@ -329,11 +326,9 @@ const UltraFuturisticBackground2040: React.FC = () => {
         className="absolute inset-0 w-full h-full"
         style={{ zIndex: -1 }}
       />
-      
       {/* Overlay Gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60" />
-      
       {/* Floating Elements */}
       <div className="absolute inset-0">
         {/* Animated Grid Pattern */}
@@ -347,7 +342,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             animation: 'gridMove 20s linear infinite'
           }} />
         </div>
-        
         {/* Floating Geometric Elements */}
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
@@ -362,7 +356,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             ease: 'linear',
           }}
         />
-
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full'
           animate={{
@@ -374,7 +367,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             repeat: Infinity,
             ease: 'linear',          }}
         />
-        
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
           animate={{
@@ -388,7 +380,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             ease: 'linear',
           }}
         />
-
         <motion.div
           className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45'
           animate={{
@@ -400,7 +391,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             repeat: Infinity,
             ease: 'linear',          }}
         />
-        
         <motion.div
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
           animate={{
@@ -414,7 +404,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             ease: 'linear',
           }}
         />
-
         {/* Additional Floating Elements */}
         <motion.div
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
@@ -427,7 +416,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             repeat: Infinity,
             ease: 'linear',          }}
         />
-        
         {/* Additional Floating Elements */}
         <motion.div
           className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
@@ -442,7 +430,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             ease: 'linear',
           }}
         />
-
         <motion.div
           className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full'
           animate={{
@@ -454,7 +441,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             repeat: Infinity,
             ease: 'linear',          }}
         />
-        
         <motion.div
           className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
           animate={{
@@ -468,7 +454,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             ease: 'linear',
           }}
         />
-
         {/* Particle Effects */}
         <motion.div
           className='absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full'
@@ -480,7 +465,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-        
         {/* Particle Effects */}
         <motion.div
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
@@ -494,7 +478,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full'
           animate={{
@@ -506,7 +489,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             ease: 'easeInOut',
             delay: 1,          }}
         />
-        
         <motion.div
           className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full"
           animate={{
@@ -520,7 +502,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             delay: 1,
           }}
         />
-
         <motion.div
           className='absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-pink-400/40 rounded-full'
           animate={{
@@ -530,7 +511,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
             duration: 5,
             repeat: Infinity,          }}
         />
-        
         <motion.div
           className="absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-pink-400/40 rounded-full"
           animate={{
@@ -550,7 +530,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
           }}
         />
       </div>
-      
       <style jsx>{`
         @keyframes gridMove {
           0% {

@@ -24,5 +24,5 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
         </Button>
       )}
     </div>
-  )
+  );
 };

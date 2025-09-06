@@ -23,7 +23,6 @@ export default function Innovations2034Page() {
           rel='canonical'
           href='https://ziontechgroup.com/2034-innovations'
         />
-
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -39,7 +38,6 @@ export default function Innovations2034Page() {
         />
         <meta property='og:type' content='website' />
         <meta property='og:site_name' content='Zion Tech Group' />
-
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -51,10 +49,8 @@ export default function Innovations2034Page() {
           content='Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms.'
         />
       </Head>
-
       <div className='min-h-screen bg-black'>
         <UltraFuturisticNavigation2032 />
-
         {/* Hero Section */}
         <section className='relative min-h-screen flex items-center justify-center overflow-hidden pt-20'>
           {/* Animated Background */}
@@ -62,7 +58,6 @@ export default function Innovations2034Page() {
             <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,255,255,0.15),transparent_50%)] animate-pulse'></div>
             <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(139,92,246,0.15),transparent_50%)] animate-pulse delay-1000'></div>
             <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(236,73,153,0.15),transparent_50%)] animate-pulse delay-2000'></div>
-
             {/* Floating Elements */}
             <div className='absolute inset-0'>
               {[...Array(15)].map((_, i) => (
@@ -87,7 +82,6 @@ export default function Innovations2034Page() {
               ))}
             </div>
           </div>
-
           <div className='relative z-10 container mx-auto px-4 text-center'>            <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -104,7 +98,6 @@ export default function Innovations2034Page() {
                 <br />
                 <span className='text-6xl md:text-8xl'>Innovations</span>
               </motion.h1>
-
               <motion.p
                 className='text-xl md:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -114,7 +107,6 @@ export default function Innovations2034Page() {
                 services, IT solutions, and AI platforms. From AI consciousness
                 to space mining automation, we're building tomorrow's technology
                 today.              </motion.p>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -128,7 +120,6 @@ export default function Innovations2034Page() {
                 >
                   Explore Innovations
                 </motion.button>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -138,7 +129,6 @@ export default function Innovations2034Page() {
               </motion.div>
             </motion.div>
           </div>
-
           {/* Scroll Indicator */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -158,7 +148,6 @@ export default function Innovations2034Page() {
             </motion.div>
           </motion.div>
         </section>
-
         {/* Innovation Categories Overview */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
           <div className='container mx-auto px-4'>            <motion.div
@@ -177,7 +166,6 @@ export default function Innovations2034Page() {
                 and accelerate human progress.
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              {[
                 {
                   icon: '🧠',
@@ -269,7 +257,6 @@ export default function Innovations2034Page() {
             </div>
           </div>
         </section>
-
         {/* Services Showcase */}
 
         {/* Why Choose Zion Tech Group */}
@@ -289,7 +276,6 @@ export default function Innovations2034Page() {
                 building the future, one breakthrough innovation at a time.
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {[
                 {
                   icon: '🚀',
@@ -356,7 +342,6 @@ export default function Innovations2034Page() {
             </div>
           </div>
         </section>
-
         {/* Contact CTA */}
         <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20'>
           <div className='container mx-auto px-4 text-center'>            <motion.div
@@ -374,7 +359,6 @@ export default function Innovations2034Page() {
                 already leveraging our 2034 innovations to transform their
                 industries and accelerate their growth.
               </p>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='flex items-center justify-center space-x-3 text-gray-300'>
                   <span className='text-cyan-400'>📱</span>
@@ -388,7 +372,6 @@ export default function Innovations2034Page() {
                   <span className='text-pink-400'>📍</span>                  <span>{contactInfo.address}</span>
                 </div>
               </div>
-
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -399,7 +382,6 @@ export default function Innovations2034Page() {
           </div>
         </section>
       </div>
-
       <UltraFuturisticFooter2034 />
-    </>
+    </>;
 );

@@ -16,12 +16,12 @@ export type AnalyticsEventType =
   | 'listing_contact'
   | 'payment_initiated'
   | 'payment_completed'
-  | 'signup'
+  | 'signup';
   | 'login';
 
 // Interface for analytics events
 export interface AnalyticsEvent {
-  type: AnalyticsEventType,
+  type: AnalyticsEventType,;
   path?: string;
   component?: string;
   elementId?: string;
@@ -30,7 +30,7 @@ export interface AnalyticsEvent {
   metadata?: Record<string, any>
 }
 
-export interface AnalyticsContextType {
+export interface AnalyticsContextType {;
   trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
   trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
   pageViews: number,
@@ -43,7 +43,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 );
 
-export function AnalyticsProvider({ children }: { children: ReactNode }) {
+export function AnalyticsProvider({ children }: { children: ReactNode }) {;
   const [pageViews, setPageViews] = useState(0);
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
   const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null);
@@ -116,7 +116,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
   )
 }
 
-export const useAnalytics = (): AnalyticsContextType => {
+export const useAnalytics = (): AnalyticsContextType => {;
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')

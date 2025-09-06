@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react',;
 ;
 export default function InternationalProposals() {
   const [items, setItems] = useState<any[]>([]),
@@ -53,5 +53,5 @@ export default function InternationalProposals() {
         </div>
       )}
     </div>
-  )
+  );
 };

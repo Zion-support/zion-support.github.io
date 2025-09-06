@@ -101,7 +101,6 @@ export default function UsageAnalytics() {
           <h1 className="text-2xl font-semibold">Usage Analytics</h1>
           <button onClick={refresh} disabled={loading} className="px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50">Refresh</button>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border rounded p-4 bg-white/70 dark:bg-gray-900">
           <div>
             <div className="text-sm">Start</div>
@@ -122,7 +121,6 @@ export default function UsageAnalytics() {
             </select>
           </div>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
             <div className="font-medium mb-2">Most Used Features</div>
@@ -135,7 +133,6 @@ export default function UsageAnalytics() {
               </ul>
             </div>
           </div>
-
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2">
             <div className="font-medium mb-2">Events Over Time</div>
             <LineChart data={line} />
@@ -149,16 +146,14 @@ export default function UsageAnalytics() {
             </div>
           </div>
         </div>
-
         <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
           <div className="font-medium mb-2">Funnel</div>
           <Funnel data={funnel} />
         </div>
-
         <div className="text-xs text-gray-500 dark:text-gray-400">
           Optional providers supported (setup via env): Plausible, PostHog. Currently using local event log for aggregation.
         </div>
       </div>
     </EnhancedLayout>
-  )
+  );
 };

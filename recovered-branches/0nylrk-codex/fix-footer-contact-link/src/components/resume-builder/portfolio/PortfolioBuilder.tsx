@@ -7,7 +7,7 @@ import {ProjectCard} from './ProjectCard';
 import {ProjectForm} from './ProjectForm';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
-export function PortfolioBuilder() {
+export function PortfolioBuilder() {;
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
   const [showAddProject, setShowAddProject] = useState(false);
   const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null);
@@ -57,7 +57,6 @@ export function PortfolioBuilder() {
           Add Project
         </Button>
       </div>
-      
       {/* Edit or Add Form */}
       {(showAddProject || editingProject) && (
         <Card>
@@ -65,7 +64,6 @@ export function PortfolioBuilder() {
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
-            
             <ProjectForm 
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}

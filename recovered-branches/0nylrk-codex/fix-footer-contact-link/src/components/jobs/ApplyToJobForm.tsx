@@ -18,7 +18,7 @@ interface ApplyToJobFormProps {
   onSuccess?: () => void
 }
 
-export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
+export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
   const { resumes, isLoading: isResumesLoading } = useResume(),
@@ -71,7 +71,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
         </p>
       </div>
-      
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
@@ -94,7 +93,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
             Provide a brief introduction and highlight your relevant skills and experience.
           </p>
         </div>
-        
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
@@ -137,7 +135,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           )}
         </div>
       </div>
-      
       <div className="flex justify-end gap-2">
         <Button
           type="button"

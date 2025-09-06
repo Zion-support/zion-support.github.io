@@ -15,7 +15,7 @@ const timeRangeToInterval = {
   '365d': { days: 365, interval: 'month' }
 };
 
-export function PageViewsTable() {
+export function PageViewsTable() {;
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
   
   const { data: pageViews, isLoading } = useQuery({

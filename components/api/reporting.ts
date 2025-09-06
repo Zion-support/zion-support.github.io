@@ -22,7 +22,7 @@ const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} };
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const method = (req.method || 'GET').toUpperCase(),
+  const method = (req.method || 'GET').toUpperCase(),;
   const auth = authenticateRequest(req, method === 'GET');
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!;

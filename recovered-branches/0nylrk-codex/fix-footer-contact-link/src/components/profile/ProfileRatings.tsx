@@ -12,7 +12,7 @@ interface ProfileRatingsProps {
   ratingCount?: number
 }
 
-export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {
+export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {;
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
   
@@ -46,7 +46,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             ratingDistribution={ratingDistribution}
           />
         </div>
-        
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
@@ -54,7 +53,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <TabsTrigger value="positive">Positive</TabsTrigger>
               <TabsTrigger value="critical">Critical</TabsTrigger>
             </TabsList>
-            
             <TabsContent value="all">
               <ReviewsList
                 reviews={reviews}
@@ -62,7 +60,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 onReportReview={reportReview}
               />
             </TabsContent>
-            
             <TabsContent value="positive">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating >= 4)}
@@ -70,7 +67,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 onReportReview={reportReview}
               />
             </TabsContent>
-            
             <TabsContent value="critical">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating < 4)}

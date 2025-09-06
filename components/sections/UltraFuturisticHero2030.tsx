@@ -18,9 +18,9 @@ import {
   Award,
   Users,
   Clock,
-  Phone,
+  Phone,;
   Mail,;} from 'lucide-react';import {
-  ArrowRight, Zap, Brain, Atom, Rocket, Star, 
+  ArrowRight, Zap, Brain, Atom, Rocket, Star, ;
   TrendingUp, Shield, Globe, Cpu, Sparkles;
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
 
@@ -76,7 +76,7 @@ const stats = [
 
 export default function UltraFuturisticHero2030() {
   return (
-    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>  { number: '2030', label: 'Future Ready', icon: Star }
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>  { number: '2030', label: 'Future Ready', icon: Star };
 ];
 
 export default function UltraFuturisticHero2030() {
@@ -88,14 +88,12 @@ export default function UltraFuturisticHero2030() {
         <div className='absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl'></div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl'></div>
       </div>
-
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}      {/* Background Glow Effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
         <motion.div
@@ -115,7 +113,6 @@ export default function UltraFuturisticHero2030() {
             <Sparkles className="w-4 h-4 mr-2" />
             Welcome to 2030 - The Future is Now
           </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -128,7 +125,6 @@ export default function UltraFuturisticHero2030() {
               Zion Tech Group
             </span>
           </motion.h1>
-
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -152,7 +148,6 @@ export default function UltraFuturisticHero2030() {
             <span className="text-purple-400 font-semibold">AI Consciousness</span>,{' '}
             <span className="text-cyan-400 font-semibold">Quantum Computing</span>, and{' '}
             <span className="text-emerald-400 font-semibold">Space Technology</span>
-
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -166,7 +161,6 @@ export default function UltraFuturisticHero2030() {
             Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.
           </motion.p>
         </motion.div>
-
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -184,7 +178,6 @@ export default function UltraFuturisticHero2030() {
             </span>
             <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
           </Link>
-
           <Link
             href='/services'
             className='group px-8 py-4 border-2 border-purple-500/30 text-purple-300 font-semibold rounded-2xl text-lg hover:bg-purple-500/10 hover:border-purple-500/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
@@ -202,7 +195,6 @@ export default function UltraFuturisticHero2030() {
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
-
           <Link
             href="/services"
             className="group px-8 py-4 border-2 border-purple-500/30 text-purple-300 font-semibold rounded-2xl text-lg hover:bg-purple-500/10 hover:border-purple-500/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
@@ -213,7 +205,6 @@ export default function UltraFuturisticHero2030() {
             </span>
           </Link>
         </motion.div>
-
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -244,7 +235,6 @@ export default function UltraFuturisticHero2030() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -275,7 +265,6 @@ export default function UltraFuturisticHero2030() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -320,7 +309,6 @@ export default function UltraFuturisticHero2030() {
             </div>
           </div>
         </motion.div>
-
         {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -360,7 +348,6 @@ export default function UltraFuturisticHero2030() {
           </div>
         </motion.div>
       </div>
-
       {/* Floating Elements */}
       <div className='absolute inset-0 pointer-events-none'>
         <motion.div
@@ -398,7 +385,7 @@ export default function UltraFuturisticHero2030() {
             ease: 'easeInOut',          }}
         />
       </div>
-    </section>
+    </section>;
   );            ease: "easeInOut"
           }}
         />

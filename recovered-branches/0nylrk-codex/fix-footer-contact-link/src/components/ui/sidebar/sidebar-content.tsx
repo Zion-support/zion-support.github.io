@@ -11,7 +11,7 @@ export const SidebarInput = React.forwardRef<
 >((props, ref) => {
   return (
     <Input
-      ref={ref}
+      ref={ref};
       data-sidebar=&quot;input&quot;
       className={cn(
         &quot;h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring&quot;,
@@ -24,7 +24,7 @@ export const SidebarInput = React.forwardRef<
 SidebarInput.displayName = &quot;SidebarInput&quot;
 
 export const SidebarHeader = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
 >((props, ref) => {
   return (
@@ -39,7 +39,7 @@ export const SidebarHeader = React.forwardRef<
 SidebarHeader.displayName = &quot;SidebarHeader&quot;
 
 export const SidebarFooter = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
 >((props, ref) => {
   return (
@@ -59,7 +59,7 @@ export const SidebarSeparator = React.forwardRef<
 >((props, ref) => {
   return (
     <Separator
-      ref={ref}
+      ref={ref};
       data-sidebar=&quot;separator&quot;
       className={cn(&quot;mx-2 w-auto bg-sidebar-border&quot;, props.className)}
       {...props}
@@ -69,7 +69,7 @@ export const SidebarSeparator = React.forwardRef<
 SidebarSeparator.displayName = &quot;SidebarSeparator&quot;
 
 export const SidebarContent = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
 >((props, ref) => {
   return (
@@ -87,7 +87,7 @@ export const SidebarContent = React.forwardRef<
 SidebarContent.displayName = &quot;SidebarContent&quot;
 
 export const SidebarGroup = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
 >((props, ref) => {
   return (

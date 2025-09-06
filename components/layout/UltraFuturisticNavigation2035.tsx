@@ -57,13 +57,13 @@ import {
   Music,
   Film,
   BookOpenCheck,
-  Building,
+  Building,;
   MessageCircle,;
 } from 'lucide-react';
 
 interface NavigationItem {
   name: string;
-  href: string;  icon?: React.ReactNode;import { 
+  href: string;  icon?: React.ReactNode;import { ;
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles, 
@@ -883,7 +883,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5' />
         </div>
       </div>
-
       <div className='relative z-10'>
         <div className='container mx-auto px-4'>
           <div className='flex items-center justify-between h-20'>
@@ -900,7 +899,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   Revolutionary Technology
                 </div>              </div>
             </Link>
-
             {/* Desktop Navigation */}  };
 
   return (
@@ -918,7 +916,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />
         </div>
       </div>
-
       <div className="relative z-10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
@@ -934,7 +931,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                 <div className="text-xs text-gray-400">Revolutionary Technology</div>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center gap-8'>
               {navigationItems.map(item => (
@@ -992,7 +988,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
-
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -1018,7 +1013,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                               )}
                             </div>
                           </div>
-
                           <div className='space-y-2'>
                             {item.children?.map(child => (                              <Link
                                 key={child.name}
@@ -1040,7 +1034,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                               )}
                             </div>
                           </div>
-                          
                           <div className="space-y-2">
                             {item.children?.map((child) => (
                               <Link
@@ -1077,7 +1070,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Right Side Actions */}
             <div className='hidden lg:flex items-center gap-4'>
               {/* Quick Actions */}
@@ -1099,7 +1091,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   </Link>
                 ))}
               </div>
-
               {/* Contact Info */}
               <div className='flex items-center gap-4 text-sm text-gray-400'>
                 <a
@@ -1124,7 +1115,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   <span className="hidden xl:inline">{contactInfo.email}</span>
               </div>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -1141,7 +1131,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </div>
         </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -1194,7 +1183,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
-
                       {/* Mobile Dropdown */}
                       <AnimatePresence>
                         {activeDropdown === item.name && (
@@ -1265,7 +1253,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Mobile Contact Info */}
                   <div className='pt-4 border-t border-gray-800/50'>
                     <div className='space-y-3 text-sm text-gray-400'>

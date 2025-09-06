@@ -356,7 +356,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       customers: 520,
       rating: 4.9,
       reviews: 267,
-    },
+    },;
   ];    features: [
       'AI-powered project risk predictionIntelligent resource allocation optimizationAutomated task dependency managementReal-time progress tracking and alertsAdvanced project analytics and reportingTeam collaboration and communication toolsIntegration with development toolsMobile app for field teams';
       'Automated milestone trackingCustom workflow automation'

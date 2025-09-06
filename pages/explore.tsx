@@ -4,7 +4,7 @@ import {motion, AnimatePresence} from 'framer-motion';
 import {Search, Filter, Grid, List, ArrowRight, ChevronRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon,} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
-export default function ExplorePage() {
+export default function ExplorePage() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
@@ -173,9 +173,7 @@ export default function ExplorePage() {
           content='Comprehensive technology categories and innovative solutions.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/explore' />      </Head>
-
       <SmartHeader />
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -202,7 +200,6 @@ export default function ExplorePage() {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
       <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
@@ -220,7 +217,6 @@ export default function ExplorePage() {
                     className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all'                  />
                 </div>
               </div>
-
               {/* Sort Options */}
               <div className='flex items-center gap-4'>
                 <select
@@ -236,7 +232,6 @@ export default function ExplorePage() {
           </div>
         </div>
       </section>
-
       {/* Featured Services */}
       <section className='px-6 pb-16'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -251,7 +246,6 @@ export default function ExplorePage() {
             <p className='text-white/60'>              Explore our most innovative and cutting-edge technology solutions
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -267,7 +261,6 @@ export default function ExplorePage() {
                   >
                     <service.icon className='w-8 h-8 text-white' />
                   </div>
-
                   <div className='flex items-center justify-between mb-3'>
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium ${
@@ -284,20 +277,17 @@ export default function ExplorePage() {
                       {service.category}
                     </span>
                   </div>
-
                   <h3 className='text-lg font-bold mb-2 text-white'>
                     {service.title}
                   </h3>
                   <p className='text-sm text-white/70 mb-4 leading-relaxed'>
                     {service.description}
                   </p>
-
                   <div className='mb-4'>
                     <span className='text-xl font-bold text-cyan-400'>
                       {service.price}
                     </span>
                   </div>
-
                   <a
                     href={`/services#${service.id}`}
                     className='inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'
@@ -310,7 +300,6 @@ export default function ExplorePage() {
           </div>
         </div>
       </section>
-
       {/* Categories Grid */}
       <section className='px-6 pb-20'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -325,7 +314,6 @@ export default function ExplorePage() {
             <p className='text-white/60'>              {sortedCategories.length} categories available for exploration
             </p>
           </motion.div>
-
           <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -375,7 +363,6 @@ export default function ExplorePage() {
                       >
                         <category.icon className='w-10 h-10 text-white' />
                       </div>
-
                       {/* Category Info */}
                       <h3 className='text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300'>
                         {category.name}
@@ -383,7 +370,6 @@ export default function ExplorePage() {
                       <p className='text-white/70 leading-relaxed mb-6'>
                         {category.description}
                       </p>
-
                       {/* Stats */}
                       <div className='flex items-center justify-between mb-6'>
                         <div className='text-center'>
@@ -400,7 +386,6 @@ export default function ExplorePage() {
                           </div>
                         </div>
                       </div>
-
                       {/* CTA */}
                       <div className='flex items-center justify-between'>
                         <span className='text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>
@@ -415,7 +400,6 @@ export default function ExplorePage() {
           </AnimatePresence>
         </div>
       </section>
-
       {/* Technology Trends */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -433,7 +417,6 @@ export default function ExplorePage() {
               technology developments
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {[
               {
                 icon: Brain,
@@ -496,7 +479,6 @@ export default function ExplorePage() {
                 >
                   <trend.icon className='w-8 h-8 text-white' />
                 </div>
-
                 <div className='flex items-center justify-between mb-3'>
                   <h3 className='text-xl font-bold text-white'>
                     {trend.title}
@@ -519,7 +501,6 @@ export default function ExplorePage() {
                     {trend.trend}
                   </span>
                 </div>
-
                 <p className='text-white/70 leading-relaxed'>
                   {trend.description}
                 </p>              </motion.div>
@@ -527,7 +508,6 @@ export default function ExplorePage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -560,7 +540,8 @@ export default function ExplorePage() {
           </motion.div>
         </div>
       </section>
-
       <SmartFooter />
     </div>
 );
+
+}

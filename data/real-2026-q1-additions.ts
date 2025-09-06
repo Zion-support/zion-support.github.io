@@ -498,7 +498,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     customers: 9,
     rating: 4.7,
     reviews: 6,
-  },
+  },;
 ];	{
 		id: 'affiliate-analytics-starter';
 		name: 'Affiliate Analytics Starter',

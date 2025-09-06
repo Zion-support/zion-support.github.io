@@ -25,7 +25,7 @@ const partnerFormSchema = z.object({
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>;
 
-export function PartnerRegistrationForm() {
+export function PartnerRegistrationForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
 
@@ -194,7 +194,6 @@ export function PartnerRegistrationForm() {
                   )}
                 />
               </div>
-
               <div className="grid sm:grid-cols-2 gap-4">
                 <FormField
                   control={form.control}
@@ -224,7 +223,6 @@ export function PartnerRegistrationForm() {
                   )}
                 />
               </div>
-
               <FormField
                 control={form.control}
                 name="niche"
@@ -292,7 +290,6 @@ export function PartnerRegistrationForm() {
                   )}
                 />
               </div>
-
               <FormField
                 control={form.control}
                 name="bio"
@@ -314,7 +311,6 @@ export function PartnerRegistrationForm() {
                 )}
               />
             </div>
-
             <Button 
               type="submit" 
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"

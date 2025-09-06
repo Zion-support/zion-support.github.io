@@ -14,7 +14,7 @@ interface ClientBudgetRecommenderProps {
   onSuggestionApplied: (minValue: number, maxValue: number) => void
 }
 
-export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
   jobTitle;
   category;
   timeline;

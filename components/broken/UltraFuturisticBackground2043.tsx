@@ -159,7 +159,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
             'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
         }}
       />
-
       {/* Enhanced floating orbs */}
       <div className='absolute inset-0'>
         {/* Primary orb */}
@@ -177,7 +176,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
         className="absolute inset-0 w-full h-full"
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
       />
-
       {/* Enhanced floating orbs */}
       <div className="absolute inset-0">
         {/* Primary orb */}
@@ -196,7 +194,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         {/* Secondary orb */}
         <motion.div
           className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl'
@@ -218,7 +215,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
             ease: 'easeInOut',
             delay: 2,          }}
         />
-
         {/* Tertiary orb */}
         <motion.div
           className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl'
@@ -240,7 +236,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
             ease: 'easeInOut',
             delay: 4,          }}
         />
-
         {/* Additional orbs */}
         <motion.div
           className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl'
@@ -261,7 +256,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
             ease: 'easeInOut',
             delay: 1,          }}
         />
-
         <motion.div
           className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl'
           animate={{
@@ -277,7 +271,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
             delay: 1
           }}
         />
-
         <motion.div
           animate={{
             scale: [1, 1.4, 1];
@@ -296,7 +289,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
             delay: 3,          }}
         />
       </div>
-
       {/* Enhanced grid pattern */}
       <div className='absolute inset-0 opacity-10'>
         <div
@@ -315,7 +307,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
           }}
         />
       </div>
-
       {/* Floating geometric shapes */}
       <div className='absolute inset-0'>
         {/* Triangle */}
@@ -339,7 +330,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
             repeat: Infinity,
             ease: 'linear',          }}
         />
-
         {/* Square */}
         <motion.div
           className='absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20'
@@ -366,7 +356,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
             ease: "easeInOut"
           }}
         />
-
         {/* Circle */}
         <motion.div
           className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full'
@@ -389,7 +378,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
             delay: 2,          }}
         />
       </div>
-
       {/* Energy waves */}
       <div className='absolute inset-0'>
         {[...Array(3)].map((_, i) => (
@@ -419,7 +407,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Quantum particles */}
       <div className='absolute inset-0'>
           <motion.div
@@ -452,7 +439,6 @@ const UltraFuturisticBackground2043: React.FC = () => {
               top: `${Math.random() * 100}%`}}
         ))}
       </div>
-
       {/* Consciousness energy field */}
       <div className='absolute inset-0'>
         <motion.div
@@ -479,3 +465,12 @@ const UltraFuturisticBackground2043: React.FC = () => {
 };
 
 export default UltraFuturisticBackground2043;
+
+}
+}
+}
+}
+}
+}
+}
+}

@@ -5,7 +5,7 @@ import {EmailAnalysisResult} from './types';
 /**
  * Analyzes email for suspicious patterns
  */
-export const analyzeEmail = (email: string): EmailAnalysisResult => {
+export const analyzeEmail = (email: string): EmailAnalysisResult => {;
   const domain = email.split('@')[1]?.toLowerCase();
   const reasons: string[] = [],
   

@@ -589,7 +589,7 @@ export const advancedAIServices2025 = [
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies',
     competitiveAdvantage:
       'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
-  },
+  },;
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     };

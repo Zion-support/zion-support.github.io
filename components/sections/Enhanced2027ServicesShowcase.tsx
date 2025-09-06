@@ -16,12 +16,12 @@ import {
   Search,
   Filter,
   Grid,
-  List,
+  List,;
   ChevronDown,;} from 'lucide-react';
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
-  ArrowRight, Star, TrendingUp, Zap, Brain, Atom, 
+  ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
   Rocket, Shield, Target, CheckCircle, ExternalLink;
   Search, Filter, Grid, List, ChevronDown
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
@@ -155,7 +155,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             beyond. Each service delivers measurable ROI and transforms your
             business into a future-ready powerhouse.          </p>
         </motion.div>
-
         {/* Search and Filters */}
         <motion.div
           className='mb-12'          initial={{ opacity: 0, y: 20 }}
@@ -168,7 +167,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             quantum computing, synthetic biology, and beyond. Each service delivers measurable ROI 
             and transforms your business into a future-ready powerhouse.
         </motion.div>
-
         {/* Search and Filters */}
         <motion.div
           className='mb-12'        <motion.div 
@@ -201,7 +199,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   />
                 </div>
               </div>
-
               {/* Category Filter */}
               <div className='flex items-center space-x-4'>
                 <div className='relative'>
@@ -223,7 +220,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   </select>
                   <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />
                 </div>
-
                 {/* Sort */}
                 <div className='relative'>
                   <select
@@ -237,7 +233,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   </select>
                   <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />
                 </div>
-
                 {/* View Mode */}
                 <div className='flex bg-gray-700/50 rounded-xl p-1'>
                   <button
@@ -277,7 +272,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Results Count */}
         <motion.div
           className='mb-8'          initial={{ opacity: 0 }}
@@ -300,7 +294,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </span>{' '}
             services          </p>
         </motion.div>
-
         {/* Services Grid/List */}
         <AnimatePresence mode='wait'>
           {viewMode === 'grid' ? (
@@ -314,7 +307,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <span className="text-cyan-400 font-semibold">{all2027Services.length}</span> services
           </p>
         </motion.div>
-
         {/* Services Grid/List */}
         <AnimatePresence mode='wait'>
           {viewMode === 'grid' ? (
@@ -352,14 +344,12 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           ROI: {service.roi}
                         </div>                      </div>
                     </div>
-
                     {/* Content */}
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
                       {service.name}
                     </h3>
                     <p className='text-gray-300 mb-4 leading-relaxed'>                      {service.description}
                     </p>
-
                     {/* Features */}                >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">
                     {/* Header */}
@@ -372,7 +362,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         <div className="text-sm text-gray-400">ROI: {service.roi}</div>
                       </div>
                     </div>
-
                     {/* Content */}
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
                       {service.name}
@@ -382,7 +371,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     </h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">
                     </p>
-
                     {/* Features */}
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-400 mb-2'>
@@ -404,7 +392,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-
                     {/* Tags */}
                     <div className='flex flex-wrap gap-2 mb-6'>
                       {service.tags.slice(0, 3).map((tag, idx) => (
@@ -419,7 +406,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         </span>
                       ))}
                     </div>
-
                     {/* CTA */}
                     <Link
                       href={service.link}
@@ -472,7 +458,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                             {service.price}
                           </div>                        </div>
                       </div>
-
                       {/* Content */}
                       <div className='flex-1'>
                         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>                >
@@ -488,7 +473,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                         </div>
                       </div>
-
                       {/* Content */}
                       <div className='flex-1'>
                         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
@@ -517,7 +501,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           ))}
                         </div>
                       </div>
-
                       {/* Stats and CTA */}
                       <div className='flex flex-col items-end space-y-3'>
                         <div className='text-right'>
@@ -547,7 +530,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </motion.div>
           )}
         </AnimatePresence>
-
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div

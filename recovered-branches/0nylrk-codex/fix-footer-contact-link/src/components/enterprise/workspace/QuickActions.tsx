@@ -10,7 +10,7 @@ export function QuickActions() {
       label: "Post New Job",
       icon: <FileText className="h-5 w-5 mr-2" />,
       description: "Create a new job posting",
-      color: "bg-blue-100 dark:bg-blue-900/20"
+      color: "bg-blue-100 dark:bg-blue-900/20";
     };
     {
       id: "add-member",

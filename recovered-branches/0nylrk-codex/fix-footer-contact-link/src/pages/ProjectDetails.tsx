@@ -216,7 +216,6 @@ function ProjectDetailsContent() {
                 </span>
               </div>
             </div>
-            
             {/* Action Buttons Based on Role and Status */}
             <div className="space-x-2">
               {isTalent && isOfferPending && (
@@ -243,7 +242,6 @@ function ProjectDetailsContent() {
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
-                  
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
                   </Button>
@@ -302,7 +300,6 @@ function ProjectDetailsContent() {
             </div>
           </div>
         </div>
-        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="order-2 lg:order-1 lg:col-span-2">
             <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>
@@ -315,7 +312,6 @@ function ProjectDetailsContent() {
                   <TabsTrigger value="reviews">Reviews</TabsTrigger>
                 )}
               </TabsList>
-              
               <TabsContent value="details">
                 <Card>
                   <CardHeader>
@@ -332,14 +328,12 @@ function ProjectDetailsContent() {
                           <p className="whitespace-pre-wrap">{project.scope_summary}</p>
                         </div>
                       </div>
-                      
                       <div>
                         <h3 className="font-semibold mb-2">Payment Terms</h3>
                         <Badge variant="outline" className="capitalize">
                           {project.payment_terms} Payment
                         </Badge>
                       </div>
-                      
                       <div>
                         <h3 className="font-semibold mb-2">Job Details</h3>
                         <div className="bg-muted/30 p-4 rounded-md">
@@ -350,7 +344,6 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-              
               <TabsContent value="timeline">
                 <Card>
                   <CardHeader>
@@ -368,7 +361,6 @@ function ProjectDetailsContent() {
                           <p>{format(new Date(project.start_date), "PPP")}</p>
                         </div>
                       </div>
-                      
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
                         <Clock className="h-5 w-5 text-primary mt-0.5" />
                         <div>
@@ -382,7 +374,6 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-              
               <TabsContent value="documents">
                 <Card>
                   <CardHeader>
@@ -421,7 +412,6 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-              
               <TabsContent value="notes">
                 <Card>
                   <CardHeader>
@@ -466,7 +456,6 @@ function ProjectDetailsContent() {
                           </div>
                         )}
                       </div>
-                      
                       {isOfferAccepted && (
                         <div>
                           <Textarea
@@ -487,13 +476,11 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-              
               <TabsContent value="reviews">
                 <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
           </div>
-          
           <div className="order-1 lg:order-2 lg:col-span-1">
             <Card>
               <CardHeader>
@@ -531,7 +518,6 @@ function ProjectDetailsContent() {
                       )}
                     </div>
                   </div>
-                  
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
                       {project.client_profile?.avatar_url ? (
@@ -563,7 +549,6 @@ function ProjectDetailsContent() {
                 </div>
               </CardContent>
             </Card>
-            
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -575,14 +560,12 @@ function ProjectDetailsContent() {
                     <span className="text-sm font-medium">Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
-                  
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
                     <span className="text-sm">
                       {format(new Date(project.created_at), "PPP")}
                     </span>
                   </div>
-                  
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Start Date:</span>
                     <span className="text-sm">
@@ -591,7 +574,6 @@ function ProjectDetailsContent() {
                   </div>
                 </div>
               </CardContent>
-              
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
@@ -646,5 +628,5 @@ export default function ProjectDetails() {
       <ProjectDetailsContent />
     </ProtectedRoute>
   )
-}
+};
 ;

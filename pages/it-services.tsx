@@ -38,7 +38,7 @@ import {
   BookOpen,
   Brain,
   DollarSign,
-  Rocket
+  Rocket;
 } from 'lucide-react';
 const itServices = [{
     title: 'Cloud Infrastructure Management',
@@ -592,7 +592,7 @@ export default function ITServicesPage() {
                 </span>
 </h1>
                   </div>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
               Comprehensive IT solutions to keep your business running smoothly. From cloud infrastructure to cybersecurity, we&apos;ve got you covered.
             </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -670,7 +670,7 @@ import {
   Search, 
   ShoppingCart, 
   BookOpen, 
-  Rocket,
+  Rocket,;
   Laptop;
 } from 'lucide-react';
 import Layout from '../components/Layout';
@@ -722,7 +722,7 @@ const industries = [
   { name: 'Education', icon: GraduationCap, description: 'Educational technology and learning management systems' },
   { name: 'Government', icon: Globe, description: 'Secure government IT solutions and compliance' }
 ];
-export default function ITServices() {
+export default function ITServices() {;
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -1021,7 +1021,6 @@ export default function ITServices() {
         <meta name='robots' content='index, follow' />
         <link rel='canonical' href={`${contact.site}/it-services`} />
       </Head>
-
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
           {/* Hero Section */}
@@ -1045,7 +1044,6 @@ export default function ITServices() {
                 and drive innovation.              </p>
             </div>
           </section>
-
           {/* Category Filter */}
           <section className='py-8 px-4'>
             <div className='max-w-6xl mx-auto'>
@@ -1065,7 +1063,6 @@ export default function ITServices() {
               </div>
             </div>
           </section>
-
           {/* Services Grid */}
           <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
@@ -1085,7 +1082,6 @@ export default function ITServices() {
                     <p className='text-slate-300 mb-4 text-sm'>
                       {service.description}
                     </p>
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-green-400 mb-2'>
                         Key Features:
@@ -1098,7 +1094,6 @@ export default function ITServices() {
                         ))}
                       </ul>
                     </div>
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-blue-400 mb-2'>
                         Benefits:
@@ -1113,7 +1108,6 @@ export default function ITServices() {
                         ))}
                       </div>
                     </div>
-
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-2xl font-bold text-green-400'>
                         {service.price}
@@ -1122,7 +1116,6 @@ export default function ITServices() {
                         {service.category.replace('-', ' ')}
                       </span>
                     </div>
-
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
                   </div>
@@ -1130,14 +1123,12 @@ export default function ITServices() {
               </div>
             </div>
           </section>
-
           {/* Technology Stack Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
               <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
                 Our Technology Stack
               </h2>
-
               <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -1160,7 +1151,6 @@ export default function ITServices() {
                     AWS, Azure, GCP, and hybrid cloud solutions
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -1182,7 +1172,6 @@ export default function ITServices() {
                     Zero-trust architecture and advanced threat protection
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -1210,7 +1199,6 @@ export default function ITServices() {
                     CI/CD pipelines and infrastructure automation
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -1234,7 +1222,6 @@ export default function ITServices() {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className='py-16 px-4'>
             <div className='max-w-4xl mx-auto text-center'>
@@ -1246,7 +1233,6 @@ export default function ITServices() {
                 technology solutions can modernize your infrastructure and
                 accelerate your digital transformation.
               </p>
-
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
                 <Link
                   href='/contact'
@@ -1270,7 +1256,6 @@ export default function ITServices() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -1286,7 +1271,6 @@ export default function ITServices() {
                 Comprehensive IT solutions designed to enhance your business operations and security.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service, index) => (
                 <motion.div

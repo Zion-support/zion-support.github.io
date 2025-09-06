@@ -5,9 +5,7 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
       <Head>
         <title>Post a Job - Zion</title>
       </Head>
-
       <h1 className='text-2xl font-semibold'>Post a Job</h1>
-
       <div className='grid md:grid-cols-2 gap-6'>
         <form className='space-y-4'>
           <div>
@@ -54,7 +52,6 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
             <EnhancedButton type='submit'>Post Job</EnhancedButton>
           </div>
         </form>
-
         <aside className='border rounded-md p-4'>
           <h2 className='font-semibold mb-2'>Preview</h2>
           {preview ? (

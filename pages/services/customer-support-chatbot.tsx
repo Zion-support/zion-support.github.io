@@ -9,7 +9,6 @@ const CustomerSupportChatbot: NextPage = () => {
         <title>CustomerSupportChatbot - Zion Tech Solutions</title>
         <meta name="description" content="CustomerSupportChatbot service" />
       </Head>
-      
       <main className="space-y-4">
         <h1>CustomerSupportChatbot</h1>
         <p>Service details coming soon...</p>

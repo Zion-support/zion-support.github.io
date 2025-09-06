@@ -8,12 +8,12 @@ export default function FeedbackModal({
   defaultContext,
   defaultKind = 'general',
   userHeaders,
-}: {
+}: {;
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
-  userHeaders?: Record<string, string>;}) {export default function FeedbackModal({
+  userHeaders?: Record<string, string>;}) {export default function FeedbackModal({;
   isOpen;
   onClose;
   defaultContext;
@@ -152,4 +152,6 @@ export default function FeedbackModal({
       </div>
     </div>
 );
+}
+
 }

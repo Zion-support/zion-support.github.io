@@ -12,6 +12,6 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
       severity={severity as "safe" | "suspicious" | "dangerous"}
       showIcon={true}
       showText={true}
-    />
+    />;
 );
 };

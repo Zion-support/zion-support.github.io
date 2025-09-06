@@ -22,4 +22,4 @@ export default function RetailTechnologySolutions() {
 			canonical="https: //ziontechgroup.com/retail-technology-solutions"
 		/>
 	)
-}
+};

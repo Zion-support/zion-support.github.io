@@ -8,7 +8,7 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {
       // Clean up existing auth state
       cleanupAuthState(),
       
-      // Sign out
+      // Sign out;
       await supabase.auth.signOut({ scope: 'global' });
       
       // Update state

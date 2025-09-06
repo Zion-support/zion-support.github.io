@@ -12,7 +12,7 @@ import {
   CheckCircle,
   Star,
   Clock,
-  TrendingUp,
+  TrendingUp,;
   Globe,;
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
@@ -72,7 +72,7 @@ export default function DigitalTransformationPage() {
       price: 'From $8,000',
       icon: Users,
       color: 'from-emerald-500 to-teal-500',
-    },
+    },;
   ];
 
   const stats = [
@@ -102,9 +102,7 @@ export default function DigitalTransformationPage() {
           rel='canonical'
           href='https://ziontechgroup.com/services/transformation'
         />      </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -120,7 +118,6 @@ export default function DigitalTransformationPage() {
               End-to-end digital transformation solutions that modernize your
               business            </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -138,7 +135,6 @@ export default function DigitalTransformationPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -162,7 +158,6 @@ export default function DigitalTransformationPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -180,7 +175,6 @@ export default function DigitalTransformationPage() {
               business operations
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -221,7 +215,6 @@ export default function DigitalTransformationPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -247,7 +240,6 @@ export default function DigitalTransformationPage() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
 ),
@@ -270,3 +262,7 @@ export default function DigitalTransformationPage() {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+
+}
+}
+}

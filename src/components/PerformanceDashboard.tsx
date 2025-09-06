@@ -141,7 +141,6 @@ const PerformanceDashboard: React.FC = () => {
           {completedImprovements.length} Improvements Completed
         </Badge>
       </div>
-
       {/* Metrics Overview */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
         <Card>
@@ -155,7 +154,6 @@ const PerformanceDashboard: React.FC = () => {
             <p className='text-xs text-gray-500'>Total build output</p>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -167,7 +165,6 @@ const PerformanceDashboard: React.FC = () => {
             <p className='text-xs text-gray-500'>Generated pages</p>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -179,7 +176,6 @@ const PerformanceDashboard: React.FC = () => {
             <p className='text-xs text-gray-500'>Average page load</p>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -196,7 +192,6 @@ const PerformanceDashboard: React.FC = () => {
           </CardContent>
         </Card>
       </div>
-
       {/* Completed Improvements */}
       <Card>
         <CardHeader>
@@ -239,7 +234,6 @@ const PerformanceDashboard: React.FC = () => {
           </div>
         </CardContent>
       </Card>
-
       {/* Action Buttons */}
       <div className='flex space-x-4'>
         <Button
@@ -264,4 +258,6 @@ const PerformanceDashboard: React.FC = () => {
 }
 export default PerformanceDashboard
 export default PerformanceDashboard, 
-export default PerformanceDashboard,
+export default PerformanceDashboard,;
+;
+}

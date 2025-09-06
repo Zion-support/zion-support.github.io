@@ -3,12 +3,12 @@ import Head from 'next/head';
 import DatePicker from 'react-datepicker';
 import type {
   MediaBundle,
-  MediaAsset,
+  MediaAsset,;
   PressReleaseType,;
 } from '../../utils/mediaKit';
 import {
   getDefaultAssets,
-  buildPressRelease,
+  buildPressRelease,;
   buildTimeline,;
 } from '../../utils/mediaKit';
 const KitPage = () => {
@@ -151,7 +151,6 @@ const KitPage = () => {
           content='Zion media kit: brand, assets, legal, and rollout playbooks.'
         />
       </Head>
-
       <div className='space-y-8'>
         <header className='flex items-center justify-between'>
           <h1 className='text-2xl font-bold'>Media Kit</h1>
@@ -170,7 +169,6 @@ const KitPage = () => {
             </button>
           </div>
         </header>
-
         <section className='grid md:grid-cols-3 gap-6'>
           <div className='p-4 border rounded-lg'>
             <h3 className='font-semibold mb-2'>Bundle</h3>
@@ -239,7 +237,6 @@ const KitPage = () => {
             )}
           </div>
         </section>
-
         <section className='p-4 border rounded-lg'>
           <h3 className='font-semibold mb-3'>Assets Included</h3>
           <ul className='grid md:grid-cols-2 gap-3'>
@@ -259,7 +256,6 @@ const KitPage = () => {
             ))}
           </ul>
         </section>
-
         <section className='p-4 border rounded-lg space-y-4'>
           <h3 className='font-semibold'>Prewritten Press Releases</h3>
           <div className='grid md:grid-cols-3 gap-4'>

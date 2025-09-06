@@ -13,7 +13,7 @@ export interface SupabaseUser {
  * Maps Supabase profile data to our app's user model
  */
 export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
-  return {
+  return {;
     id: user.id;
     email: user.email || "";
     displayName: profile.display_name || "";

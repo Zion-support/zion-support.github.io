@@ -52,7 +52,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     growthRate: '200% annual growth',
     variant: 'holographic-matrix',
     contactInfo: contact,    features: [
-      'Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates'
+      'Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates';
     ];
     popular: true;
     icon: '🛡️';
@@ -1448,5 +1448,5 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     customers: 10,
     rating: 4.6,
 reviews: 6,
-  },
+  },;
 ];

@@ -20,8 +20,8 @@ interface MobileBottomNavProps {
   unreadCount?: number
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const router = useRouter()
-  const { user } = useAuth()
-  const isAuthenticated = !!user
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
   const { items: wishlistItems } = useWishlist(); // Renamed to avoid conflict
   const favoritesCount = wishlistItems.length
   const cartContextValue = useCart(); // Call hook at top level
@@ -116,3 +116,4 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   )
 }
 ;
+}

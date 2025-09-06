@@ -22,5 +22,5 @@ export default function InnovationRadarPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  )
+  );
 };

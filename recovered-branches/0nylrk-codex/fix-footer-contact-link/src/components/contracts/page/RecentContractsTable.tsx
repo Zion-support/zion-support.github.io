@@ -99,6 +99,6 @@ export function RecentContractsTable({
           </tbody>
         </table>
       </div>
-    </>
+    </>;
   );
 }

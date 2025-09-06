@@ -11,10 +11,10 @@ import {
   RefreshCw,
   CheckCircle,
   XCircle,
-  AlertTriangle,
+  AlertTriangle,;
   ArrowRight,;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
-export default function PasswordCheckerPage() {
+export default function PasswordCheckerPage() {;
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
@@ -284,7 +284,6 @@ export default function PasswordCheckerPage() {
           content='Advanced password strength analyzer with security recommendations.'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -301,7 +300,6 @@ export default function PasswordCheckerPage() {
             Analyze your password security with our advanced strength checker.
             Get detailed feedback, suggestions, and generate strong passwords to
             protect your accounts and data.          </p>      </Head>
-
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -320,7 +318,6 @@ export default function PasswordCheckerPage() {
           </p>
         </div>
       </section>
-
       {/* Password Checker Tool */}
       <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -333,7 +330,6 @@ export default function PasswordCheckerPage() {
               determine password strength and security.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {/* Input Form */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
@@ -341,7 +337,6 @@ export default function PasswordCheckerPage() {
                 <Lock className='w-6 h-6 mr-3 text-indigo-400' />
                 Password Analysis
               </h3>
-
               <div className='space-y-6'>
                 {/* Password Input */}
                 <div>
@@ -371,7 +366,6 @@ export default function PasswordCheckerPage() {
               Our advanced security analyzer evaluates multiple factors to determine password strength and security.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Input Form */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
@@ -379,7 +373,6 @@ export default function PasswordCheckerPage() {
                 <Lock className="w-6 h-6 mr-3 text-indigo-400" />
                 Password Analysis
               </h3>
-
               <div className="space-y-6">
                 {/* Password Input */}
                 <div>
@@ -405,7 +398,6 @@ export default function PasswordCheckerPage() {
                     </button>
                   </div>
                 </div>
-
                 {/* Generate Password */}
                 <div>
                   <Button
@@ -418,7 +410,6 @@ export default function PasswordCheckerPage() {
                     Generate Strong Password
                   </Button>
                 </div>
-
                 {/* Generated Password Display */}
                 {generatedPassword && (
                   <div className='p-4 bg-gray-700 rounded-lg border border-gray-600'>
@@ -460,19 +451,16 @@ export default function PasswordCheckerPage() {
                 </div>
               </div>
             </Card>
-
             {/* Strength Analysis */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>
                 <Shield className='w-6 h-6 mr-3 text-purple-400' />                Security Analysis
               </h3>
-
               {password ? (            <Card className="p-8 bg-gray-800 border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <Shield className="w-6 h-6 mr-3 text-purple-400" />
                 Security Analysis
               </h3>
-
               {password ? (
                 <div className='space-y-6'>
                   {/* Strength Score */}
@@ -501,7 +489,6 @@ export default function PasswordCheckerPage() {
                       />
                     </div>
                   </div>
-
                   {/* Security Checks */}
                   <div>
                     <h4 className='text-lg font-semibold text-white mb-3'>
@@ -530,7 +517,6 @@ export default function PasswordCheckerPage() {
                       ))}
                     </div>
                   </div>
-
                   {/* Suggestions */}
                   {suggestions.length > 0 && (
                     <div>
@@ -572,7 +558,6 @@ export default function PasswordCheckerPage() {
           </div>
         </div>
       </section>
-
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -584,7 +569,6 @@ export default function PasswordCheckerPage() {
               security recommendations.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🔍</div>
@@ -596,7 +580,6 @@ export default function PasswordCheckerPage() {
                 advanced security algorithms.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📊</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -607,7 +590,6 @@ export default function PasswordCheckerPage() {
                 password detection.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>💡</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -618,7 +600,6 @@ export default function PasswordCheckerPage() {
                 and strength.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🔐</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -629,7 +610,6 @@ export default function PasswordCheckerPage() {
                 security requirements.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🛡️</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -640,7 +620,6 @@ export default function PasswordCheckerPage() {
                 maximum protection.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🔒</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -657,7 +636,6 @@ export default function PasswordCheckerPage() {
           </div>
         </div>
       </section>
-
       {/* Security Tips */}
       <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -670,7 +648,6 @@ export default function PasswordCheckerPage() {
               passwords for all your accounts.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='text-4xl mb-4'>✅</div>
@@ -698,7 +675,6 @@ export default function PasswordCheckerPage() {
                 </li>
               </ul>
             </Card>
-
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='text-4xl mb-4'>❌</div>
               <h3 className='text-2xl font-bold text-white mb-4'>Don'ts</h3>
@@ -742,7 +718,6 @@ export default function PasswordCheckerPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-indigo-600 to-purple-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>

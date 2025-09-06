@@ -22,4 +22,4 @@ export default function AIEthicsGovernanceFramework() {
 			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
 		/>
 	)
-}
+};

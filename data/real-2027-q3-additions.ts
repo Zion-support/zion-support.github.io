@@ -320,7 +320,7 @@ export const real2027Q3Additions = [
     link: '/api-security-scanner',
     realService: true,
     roi: 'Prevent high-severity API incidents and cut MTTR.',
-  },
+  },;
 ];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
     category: 'Security & Identity';

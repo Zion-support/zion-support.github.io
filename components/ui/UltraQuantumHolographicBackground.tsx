@@ -45,10 +45,10 @@ export default function UltraQuantumHolographicBackground({
   particleCount = 300,
   animationSpeed = 1.5,
   className = '',
-}: UltraQuantumHolographicBackgroundProps) {
+}: UltraQuantumHolographicBackgroundProps) {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
-export default function UltraQuantumHolographicBackground({
+export default function UltraQuantumHolographicBackground({;
   children;
   intensity = 'high';
   colorScheme = 'quantum';
@@ -439,7 +439,6 @@ export default function UltraQuantumHolographicBackground({
           background: colors.background,
           filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`,        }}
       />
-
       {/* Holographic Overlay Effects */}
       <div className='fixed inset-0 z-10 pointer-events-none'>        className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{
@@ -463,7 +462,6 @@ export default function UltraQuantumHolographicBackground({
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         {/* Holographic Scan Lines */}              `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`;
               `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`;
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`;
@@ -500,7 +498,6 @@ export default function UltraQuantumHolographicBackground({
               />
             )
           )}        </div>
-
         {/* Quantum Fluctuations */}
         <motion.div        <div className="absolute inset-0 opacity-20">
           {Array.from({ length: Math.ceil(dimensions.height / 4) }).map((_, i) => (
@@ -549,7 +546,6 @@ export default function UltraQuantumHolographicBackground({
           }}
         />
       </div>
-
       {/* Content Layer */}
       <div className='relative z-20'>{children}</div>
       {/* Quantum Noise Effect */}

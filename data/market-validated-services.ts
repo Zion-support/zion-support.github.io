@@ -524,9 +524,9 @@ export const marketValidatedServices: MarketValidatedService[] = [
     trialDays: 14,
     setupTime: '2 hours',
     contactInfo,
-  },
+  },;
 ];import { ServiceVariant  } from "../types/service-variants";
-export interface MarketValidatedService {
+export interface MarketValidatedService {;
 	id: string;
 	name: string;
 	tagline: string;
@@ -892,7 +892,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		rating: 4.5,
 		customers: 420,
 		trialDays: 14,
-		setupTime: "30 minutes",
+		setupTime: "30 minutes",;
 		contactInfo;,
 },
 	// AI Channels;

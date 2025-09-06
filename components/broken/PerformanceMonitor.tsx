@@ -75,3 +75,5 @@ if (score >= 50) return 'Needs Improvement';
 };
 
 export default PerformanceMonitor;
+
+}

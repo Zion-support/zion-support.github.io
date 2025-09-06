@@ -12,7 +12,7 @@ type QuoteRequestsListProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 };
 
-export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
+export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
   quotes;
   isLoading;
   isArchived;

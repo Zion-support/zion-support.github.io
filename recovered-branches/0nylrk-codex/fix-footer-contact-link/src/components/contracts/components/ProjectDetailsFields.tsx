@@ -7,7 +7,7 @@ import {
   FormLabel,
   FormControl,
   FormDescription,
-  FormMessage,
+  FormMessage,;
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
-  PopoverTrigger,
+  PopoverTrigger,;
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
@@ -139,6 +139,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           )}
         />
       </div>
-    </>
+    </>;
   );
 }

@@ -39,5 +39,7 @@ export default function QuantumCloudInfrastructurePlatformPage() {
         ]}
         canonical='https: //ziontechgroup.com/quantum-cloud-infrastructure-platform'
       />
-    </>
+    </>;
   );
+
+}

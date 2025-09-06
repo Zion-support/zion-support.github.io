@@ -50,10 +50,10 @@ import {
   Mountain,
   Globe2,
   Bot,
-  Crown,
+  Crown,;
   Infinity,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, 
-  Brain, Rocket, Target, Shield, Cpu, 
+  Brain, Rocket, Target, Shield, Cpu, ;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, MessageCircle, Star, Zap, Sparkles;
   Home, Users, Briefcase, BookOpen, TrendingUp;
@@ -460,7 +460,7 @@ export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>      { name: 'Research', href: '/research' }
     ]
-  }
+  };
 ];
 
 export default function UltraFuturisticFooter2029V2() {
@@ -497,13 +497,11 @@ export default function UltraFuturisticFooter2029V2() {
                   </p>
                 </div>
               </Link>
-
               <p className='text-gray-300 mb-6 leading-relaxed'>
                 Leading the future with cutting-edge AI, quantum computing,
                 space technology, and innovative micro SAAS solutions.
                 Transforming businesses through next-generation technology.
               </p>
-
               {/* Contact Info */}
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3 text-gray-300'>
@@ -530,12 +528,10 @@ export default function UltraFuturisticFooter2029V2() {
                   <p className="text-sm text-gray-400">Future Technology Solutions</p>
                 </div>
               </Link>
-              
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Leading the future with cutting-edge AI, quantum computing, space technology, and innovative micro SAAS solutions. 
                 Transforming businesses through next-generation technology.
               </p>
-              
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -557,7 +553,6 @@ export default function UltraFuturisticFooter2029V2() {
               </div>
             </motion.div>
           </div>
-
           {/* Service Categories */}
           {footerSections.map((section, index) => (
             <motion.div
@@ -596,7 +591,6 @@ export default function UltraFuturisticFooter2029V2() {
             </motion.div>
           ))}
         </div>
-
         {/* Service Showcase */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -666,7 +660,6 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
         </motion.div>
       </div>
-
       {/* Bottom Footer */}
       <div className='border-t border-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
@@ -699,7 +692,6 @@ export default function UltraFuturisticFooter2029V2() {
               © 2025 Zion Tech Group. All rights reserved. | 
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Terms of Service</Link>
-
             {/* Social Links */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -732,7 +724,6 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
         </div>
       </div>
-
       {/* Newsletter Signup */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -779,6 +770,6 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
         </div>
       </motion.div>
-    </footer>
+    </footer>;
 );
 }

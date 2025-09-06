@@ -7,7 +7,7 @@ import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from
 import { AuthLayout } from '@/layout',;
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger',;
 ;
 export default function VerifyStatus() {
 
@@ -148,7 +148,6 @@ export default function VerifyStatus() {
               Check and manage your email verification status
             </p>
           </div>
-
           {/* Success Message */}
           {message && (
             <Alert className="border-green-500 bg-green-50 text-green-900">
@@ -184,7 +183,6 @@ export default function VerifyStatus() {
               </p>
             )}
           </div>
-
           {/* Status Info */}
           {email && (
             <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">
@@ -224,7 +222,6 @@ export default function VerifyStatus() {
                 </>
               )}
             </Button>
-
             {/* Resend Email Button */}
             <Button
               onClick={handleResendEmail}
@@ -249,7 +246,6 @@ export default function VerifyStatus() {
                 </>
               )}
             </Button>
-
             {/* Try Login Button */}
             <Button
               onClick={handleTryLogin}
@@ -259,7 +255,6 @@ export default function VerifyStatus() {
               Try Login
             </Button>
           </div>
-
           {/* Help Text */}
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
@@ -275,7 +270,6 @@ export default function VerifyStatus() {
               Go Back
             </Button>
           </div>
-
           {/* Additional Options */}
           <div className="border-t pt-4 space-y-2">
             <Button
@@ -297,5 +291,5 @@ export default function VerifyStatus() {
       </div>
     </AuthLayout>
   )
-}
+};
 ;

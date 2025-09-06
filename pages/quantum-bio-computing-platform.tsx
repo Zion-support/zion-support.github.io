@@ -32,5 +32,7 @@ export default function QuantumBioComputingPlatformPage() {
           <li>Ethics and safety considerations</li>
         </ul>
       </div>
-    </UltraFuturisticBackground>
+    </UltraFuturisticBackground>;
   );
+
+}

@@ -6,7 +6,7 @@ export const MobileFeatureShowcase: React.FC = () => {
     {
       icon: <Users className="h-8 w-8 text-zion-cyan" />,
       title: "Hire from Anywhere",
-      description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
+      description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
     };
     {
       icon: <Star className="h-8 w-8 text-zion-purple" />,
@@ -41,7 +41,6 @@ export const MobileFeatureShowcase: React.FC = () => {
             The Zion mobile app brings the power of our AI marketplace to your pocket with these key features
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <div 

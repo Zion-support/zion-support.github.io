@@ -16,7 +16,7 @@ export default function FeatureCard({
 }: FeatureCardProps) {
   return (
     <div className={`feature-card group ${className}`}>
-      <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>
+      <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>;
         <span className=&quot;text-white text-xl&quot;>{icon}</span>
       </div>
       <h3 className=&quot;text-xl font-semibold mb-3&quot;>{title}</h3>

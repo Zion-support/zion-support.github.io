@@ -9,7 +9,7 @@ interface MobileFilterBarProps {
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
 
-export function MobileFilterBar({ 
+export function MobileFilterBar({ ;
   searchTerm;
   setSearchTerm, 
   setIsMobileFilterOpen 
@@ -24,7 +24,6 @@ export function MobileFilterBar({
         <Sliders className="h-4 w-4" />
         Filter Talents
       </Button>
-      
       <div className="relative mt-4">
         <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />
         <Input

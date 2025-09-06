@@ -91,7 +91,7 @@ const mockReplies: ForumReply[] = [
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
-  // Cast the result instead to provide the expected shape.
+  // Cast the result instead to provide the expected shape.;
   const { postId } = useParams() as { postId?: string };
   const { user } = useAuth();
   const { toast } = useToast();
@@ -244,7 +244,6 @@ export default function ForumPostPage() {
         description={post.content.substring(0, 160)}
         keywords={`community, forum, discussion, ${post.tags.join()}`}
       />
-      
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
@@ -257,7 +256,6 @@ export default function ForumPostPage() {
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium truncate max-w-[200px]">{post.title}</span>
         </div>
-        
         <Card>
           <CardContent className="p-6">
             <div className="flex justify-between items-start mb-6">
@@ -275,7 +273,6 @@ export default function ForumPostPage() {
                   )}
                 </div>
               </div>
-              
               <div className="flex items-center text-sm text-muted-foreground">
                 <Calendar className="h-4 w-4 mr-1" />
                 <time dateTime={post.createdAt} title={formattedDate}>
@@ -283,9 +280,7 @@ export default function ForumPostPage() {
                 </time>
               </div>
             </div>
-            
             <h1 className="text-2xl font-bold mb-2">{post.title}</h1>
-            
             <div className="flex flex-wrap gap-2 mb-6">
               {post.tags.map(tag => (
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
@@ -293,13 +288,11 @@ export default function ForumPostPage() {
                 </Badge>
               ))}
             </div>
-            
             <div className="prose dark:prose-invert max-w-none mb-6">
               {post.content.split('\n\n').map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
-            
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
               <div className="flex items-center gap-4">
                 <Button
@@ -321,7 +314,6 @@ export default function ForumPostPage() {
                   <span>{post.downvotes}</span>
                 </Button>
               </div>
-              
               <div className="flex items-center gap-2">
                 {(isAuthor || isAdminOrMod) && (
                   <Button variant="ghost" size="sm" asChild>
@@ -365,10 +357,8 @@ export default function ForumPostPage() {
             </div>
           </CardContent>
         </Card>
-        
         <div className="mt-8">
           <h2 className="text-xl font-bold mb-6">Responses ({post.replyCount})</h2>
-          
           {post.isAnswered && (
             <div className="mb-6">
               <h3 className="flex items-center text-green-600 font-medium mb-2">

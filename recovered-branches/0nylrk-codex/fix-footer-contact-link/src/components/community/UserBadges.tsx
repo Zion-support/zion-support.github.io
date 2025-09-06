@@ -14,7 +14,7 @@ const iconMap = {
   MessageSquare
 };
 
-export const UserBadges = ({ badges }: UserBadgesProps) => {
+export const UserBadges = ({ badges }: UserBadgesProps) => {;
   if (!badges?.length) return null;
 
   return (

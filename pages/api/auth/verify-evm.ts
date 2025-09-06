@@ -6,7 +6,7 @@ const JWT_SECRET = process.env.JWT_SECRET || "dev-secret-change-me";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
   if (req.method !== "POST") return res.status(405).end();
   const { message, signature, address, chainId } = req.body || {};
   if (!message || !signature || !address)

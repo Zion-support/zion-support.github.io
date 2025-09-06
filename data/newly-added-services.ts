@@ -6,7 +6,7 @@ const contact = {
   website: 'https://ziontechgroup.com',};
 
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {const contact = {
+  {const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -40,7 +40,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     trialDays: 14,
     setupTime: '1-3 days',
     category: 'AI & Data',    features: [
-      'Online/offline consistency checksSchema/version governanceBackfills and point-in-time joinsDrift alerts and quality testsRBAC and audit logs'
+      'Online/offline consistency checksSchema/version governanceBackfills and point-in-time joinsDrift alerts and quality testsRBAC and audit logs';
     ];
     popular: true;
     icon: '🧬';
@@ -2451,7 +2451,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/finops-cost-anomaly-guard',
-    marketPosition:
+    marketPosition:;
       'Alternative to building internal FinOps bots and dashboards; quick ROI.',
     targetAudience: 'FinOps, platform and SRE teams',
     trialDays: 14,
@@ -2591,7 +2591,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
     link: 'https://ziontechgroup.com/services/ai-sales-prospecting-studio',
-    marketPosition:
+    marketPosition:;
       'Faster personalization than generic sequencers; built-in compliance.',
     targetAudience: 'Growth and sales teams',
     trialDays: 14,
@@ -3102,7 +3102,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Sequencing, personalization, and meeting notes—done for you',
     price: '$149',
     period: '/month',
-    description:
+    description:;
       'AI sequences with intent signals, channel selection, and auto-logged CRM notes; improves reply rates and pipeline velocity.',
     features: [
       'Adaptive sequencing and send windows',
@@ -3491,7 +3491,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Test and optimize product copy for activation and conversion',
     price: '$59',
     period: '/month',
-    description:
+    description:;
       'Suggests alternative copy with rationale and runs lightweight experiments; integrates with feature flags.',
     features: [
       'Copy suggestions with tone controls',

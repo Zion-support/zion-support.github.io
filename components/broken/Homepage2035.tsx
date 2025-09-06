@@ -25,9 +25,9 @@ import {
   Cpu,
   Atom,
   Satellite,
-  Gamepad2,
+  Gamepad2,;
   Palette,;} from 'lucide-react';import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
@@ -273,7 +273,6 @@ const Homepage2035: React.FC = () => {
                 </motion.button>
               </div>
             </motion.div>
-
             {/* Stats */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -327,7 +326,6 @@ const Homepage2035: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -352,7 +350,6 @@ const Homepage2035: React.FC = () => {
                 Discover our comprehensive portfolio of cutting-edge services designed to transform your business
               </p>
             </motion.div>
-
             {/* Category Filter */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -380,7 +377,6 @@ const Homepage2035: React.FC = () => {
                 </motion.button>
               ))}
             </motion.div>
-
             {/* Services Grid */}
             <motion.div
               variants={staggerContainer}
@@ -401,7 +397,6 @@ const Homepage2035: React.FC = () => {
                 </motion.div>
               ))}
             </motion.div>
-
             {/* View All Services Button */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -430,7 +425,6 @@ const Homepage2035: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
@@ -450,7 +444,6 @@ const Homepage2035: React.FC = () => {
                 deliver exceptional results
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {[
                 {
@@ -496,7 +489,6 @@ const Homepage2035: React.FC = () => {
                 We combine innovation, expertise, and cutting-edge technology to deliver exceptional results
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -555,7 +547,6 @@ const Homepage2035: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">

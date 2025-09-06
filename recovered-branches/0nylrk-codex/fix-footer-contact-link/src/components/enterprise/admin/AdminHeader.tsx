@@ -5,7 +5,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Download, Settings} from "lucide-react";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
-export function AdminHeader() {
+export function AdminHeader() {;
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
 
@@ -29,7 +29,6 @@ export function AdminHeader() {
           </Button>
         </div>
       </div>
-      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
@@ -44,7 +43,6 @@ export function AdminHeader() {
           <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>
         </div>
       </div>
-      
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">

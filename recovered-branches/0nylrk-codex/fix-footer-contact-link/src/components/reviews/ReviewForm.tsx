@@ -27,7 +27,7 @@ interface ReviewFormProps {
   isSubmitting: boolean
 }
 
-export function ReviewForm({
+export function ReviewForm({;
   projectId;
   revieweeId;
   revieweeName;
@@ -138,7 +138,6 @@ export function ReviewForm({
         {watchRating > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
-            
             {/* Communication */}
             <FormField
               control={form.control}

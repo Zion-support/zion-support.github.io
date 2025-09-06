@@ -13,7 +13,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form'; import { WorkExperience } from '@/types/resume'
 import { Loader2, Edit, Trash2 } from 'lucide-react'
 import { useResume } from '@/hooks/useResume'
@@ -100,8 +100,8 @@ export function WorkExperienceForm({
     } catch (err: any) {
       setError(err.message || 'An error occurred')
     }
-  }
-  const handleEdit = (work: WorkExperience) => {
+  };
+  const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!);    form.reset({
       ...work,
 
@@ -131,7 +131,6 @@ export function WorkExperienceForm({
           Add your work history to showcase your professional experience.
         </p>
       </div>
-
       {workExperiences.length > 0 && (
         <div className='space-y-4'>
           <h3 className='text-md font-medium'>Added Experience</h3>
@@ -194,7 +193,6 @@ export function WorkExperienceForm({
         <h3 className='text-md font-medium mb-4'>
           {editingId ? 'Update Experience' : 'Add Experience'}
         </h3>
-
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(handleAddOrUpdate)}
@@ -230,7 +228,6 @@ export function WorkExperienceForm({
                 )}
               />
             </div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
               <FormField
                 control={form.control}
@@ -283,7 +280,6 @@ export function WorkExperienceForm({
                 )}
               </div>
             </div>
-
             <FormField
               control={form.control}
               name='location'
@@ -354,7 +350,6 @@ export function WorkExperienceForm({
               >
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
-
               <div className='flex gap-2'>
                 <Button type='submit' disabled={isLoading}>
                   {isLoading && (
@@ -362,7 +357,6 @@ export function WorkExperienceForm({
                   )}
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
-
                 {!editingId && workExperiences.length > 0 && (
                   <Button type='button' onClick={onComplete}>
                     Next

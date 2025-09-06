@@ -14,7 +14,7 @@ import {ServiceDetailsSection} from "@/components/services/PageSections/ServiceD
 import {ServiceProcessSteps} from "@/components/services/PageSections/ServiceProcessSteps";
 import {ServiceIncludes} from "@/components/services/PageSections/ServiceIncludes";
 import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
-export default function ITOnsiteServicesPage() {
+export default function ITOnsiteServicesPage() {;
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -66,7 +66,6 @@ export default function ITOnsiteServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section with Features */}
           <PageHero />
-          
           {/* Country Selection Tabs */}
           <div className="mb-12">
             <CountryTabs 
@@ -77,19 +76,15 @@ export default function ITOnsiteServicesPage() {
               setSearchQuery={setSearchQuery}
             />
           </div>
-          
           {/* Service Details Section */}
           <ServiceDetailsSection 
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
           />
-          
           {/* How It Works Section */}
           <ServiceProcessSteps />
-          
           {/* What's Included Section */}
           <ServiceIncludes />
-          
           {/* Complete Pricing Table */}
           <div id="pricing-table" className="my-16">
             <div className="text-center mb-8">
@@ -99,14 +94,11 @@ export default function ITOnsiteServicesPage() {
                 Additional hours are billed separately at standard rates.
               </p>
             </div>
-            
             <ITServicePricingTable />
           </div>
-          
           <EnterpriseCallToAction />
         </div>
       </section>
-      
       <GlobalServiceSection />
       <TrustedBySection />
       <QuoteFormSection />

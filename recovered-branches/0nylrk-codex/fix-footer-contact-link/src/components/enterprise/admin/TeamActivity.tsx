@@ -5,7 +5,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-TableRow,
+TableRow,;
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
@@ -61,7 +61,7 @@ export function TeamActivity() {
       target: "Monthly spending cap",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
       category: "billing",
-    },
+    },;
   ];
 
   // Function to format the date in a readable way
@@ -115,7 +115,6 @@ export function TeamActivity() {
           </Button>
         </div>
       </div>
-
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -144,7 +143,6 @@ export function TeamActivity() {
           </TableBody>
         </Table>
       </div>
-
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous

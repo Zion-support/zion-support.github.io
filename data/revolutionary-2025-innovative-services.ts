@@ -1,4 +1,4 @@
-export interface Revolutionary2025Service {
+export interface Revolutionary2025Service {;
   id: string;
   name: string;
   tagline: string;
@@ -99,7 +99,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     roi: 'Revolutionary breakthrough with unlimited potential. Research institutions see 2000%+ ROI through groundbreaking discoveries.',
     competitors: ['None - First to market'],
     marketSize: 'Emerging market with unlimited potential',    features: [
-      'Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration'
+      'Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration';
     ];
     popular: true;
     icon: '🧠';

@@ -100,7 +100,6 @@ const NotificationCard: React.FC<{
                 )}
               </div>
             </div>
-            
             <div className="flex items-center gap-2">
               {!notification.read && (
                 <Button
@@ -124,9 +123,7 @@ const NotificationCard: React.FC<{
               </Button>
             </div>
           </div>
-          
           <p className="text-zion-slate-light mb-3">{notification.message}</p>
-          
           {notification.action_url && notification.action_text && (
             <Button
               variant="outline"
@@ -145,7 +142,7 @@ const NotificationCard: React.FC<{
 };
 
 export default function NotificationsPage() {
-  const {
+  const {;
     filteredNotifications;
     unreadCount;
     markAsRead;
@@ -174,7 +171,6 @@ export default function NotificationsPage() {
             </h1>
             <p className="text-muted-foreground">Stay updated with the latest activities and reminders</p>
           </div>
-          
           {unreadCount > 0 && (
             <Button
               variant="outline"
@@ -185,7 +181,6 @@ export default function NotificationsPage() {
             </Button>
           )}
         </div>
-        
         <div className="mb-8">
           <Tabs defaultValue={filter} onValueChange={(value) => setFilter(value as any)}>
             <TabsList className="grid w-full max-w-md grid-cols-5">

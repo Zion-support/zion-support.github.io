@@ -25,7 +25,7 @@ interface OnboardingWizardProps {
   className?: string
 }
 
-export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
+export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
   const [currentStep, setCurrentStep] = useState(0);
   const navigate = useNavigate();
   const { user } = useAuth();
@@ -157,7 +157,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             ))}
           </div>
         </div>
-
         <div className="flex flex-col items-center text-center p-4">
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
             {steps[currentStep].icon}
@@ -173,7 +172,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         >
           {steps[currentStep].action.text}
         </Button>
-        
         {steps[currentStep].skipText && (
           <Button
             variant="ghost"

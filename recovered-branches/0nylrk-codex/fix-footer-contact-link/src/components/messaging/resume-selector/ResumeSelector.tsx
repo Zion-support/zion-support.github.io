@@ -12,7 +12,7 @@ import { SelectResumeSection } from "./SelectResumeSection";
 import { ResumeOption, ResumeSelectorProps } from "./types";
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [selectedOption, setSelectedOption] = useState<
-    "recent" | "select" | "upload"
+    "recent" | "select" | "upload";
   >("recent");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(
     null,
@@ -162,7 +162,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   return (
     <div className="space-y-4">
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>
-
       <RadioGroup
         value={selectedOption}
         onValueChange={(value) =>
@@ -176,14 +175,12 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
             Use most recent AI Resume
           </Label>
         </div>
-
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="select" id="select" />
           <Label htmlFor="select" className="text-white">
             Select from saved versions
           </Label>
         </div>
-
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
           <Label htmlFor="upload" className="text-white">
@@ -191,7 +188,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
           </Label>
         </div>
       </RadioGroup>
-
       {/* Resume selection options based on radio selection */}
       {selectedOption === "recent" && resume && (
         <ResumePreviewCard

@@ -80,8 +80,8 @@ export function BundleAnalyzer() {
         gzippedSize,
         chunkCount: chunkData.length,
         loadTime: totalLoadTime / chunkData.length,
-        cacheHitRate: cacheHitRate * 100,
-      })
+        cacheHitRate: cacheHitRate * 100,;
+      });
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
     } finally {
@@ -182,7 +182,6 @@ export function BundleAnalyzer() {
                   </Badge>
                 </div>
               </div>
-
               <div>
                 <div className='flex justify-between items-center text-xs mb-1'>
                   <span>Cache Hit Rate</span>
@@ -190,7 +189,6 @@ export function BundleAnalyzer() {
                 </div>
                 <Progress value={bundleInfo.cacheHitRate} className='h-2' />
               </div>
-
               <div>
                 <div className='text-xs font-medium mb-2'>Largest Chunks:</div>
                 <div className='space-y-1'>
@@ -224,7 +222,6 @@ export function BundleAnalyzer() {
                   ))}
                 </div>
               </div>
-
               {bundleInfo.totalSize > 1000000 && (
                 <div className='flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs'>
                   <AlertTriangle className='w-3 h-3 text-yellow-600' />
@@ -244,3 +241,6 @@ export function BundleAnalyzer() {
     </div>
   )
 } 
+
+}
+}

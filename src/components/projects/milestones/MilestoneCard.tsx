@@ -21,7 +21,7 @@ interface MilestoneCardProps {
   amount: number
   status: string
   dueDate?: string
-  onApprove?: (id: string) => Promise<void>
+  onApprove?: (id: string) => Promise<void>;
   onReject?: (id: string) => Promise<void>; import React from 'react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -100,20 +100,17 @@ export function MilestoneCard({
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
               {status.replace('_ ')}
             </Badge>
-            
               <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
         </div>
       </CardHeader>
-
       <CardContent className='pb-2'>
         {description && <p className='text-muted-foreground'>{description}</p>}
         <div className='mt-4'>
           <p className='text-xl font-bold'>${amount.toFixed(2)}</p>
         </div>
       </CardContent>
-
       <CardFooter className='pt-2 flex justify-between'>
         <div>
           {status !== 'completed' && status !== 'rejected' && (
@@ -129,7 +126,6 @@ export function MilestoneCard({
             />
           )}
         </div>
-
         <div className='flex gap-2'>
           {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant='outline' size='sm' onClick={() => onReject(id)}>
@@ -150,4 +146,5 @@ export function MilestoneCard({
       </CardFooter>
     </Card>
   )
-}
+};
+;

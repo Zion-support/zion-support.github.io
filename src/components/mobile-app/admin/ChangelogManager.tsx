@@ -20,7 +20,7 @@ type ChangelogEntry = {
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id)),
   }
-  )
+  );
 };  const handleRemoveEntry = (id: string,) => {
     setEntries(entries.filter(entry => entry.id !== id))
   },
@@ -60,7 +60,6 @@ type ChangelogEntry = {
               Add
             </Button>
           </div>
-          
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
@@ -68,7 +67,6 @@ type ChangelogEntry = {
             onChange = {handleInputChange,}
             rows = {3,}
           />
-          
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry,) => (
               <div 

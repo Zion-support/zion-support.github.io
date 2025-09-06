@@ -10,7 +10,7 @@ interface TranslationResponse {
   error?: string
 }
 
-export function useTranslationService() {
+export function useTranslationService() {;
   const [isTranslating, setIsTranslating] = useState(false);
   const { currentLanguage } = useLanguage();
   

@@ -12,7 +12,7 @@ interface KanbanColumnProps {
   count: number
 }
 
-export function KanbanColumn({
+export function KanbanColumn({;
   id;
   title;
   description;

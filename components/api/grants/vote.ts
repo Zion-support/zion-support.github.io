@@ -33,7 +33,7 @@ function writeGrant(record: GrantApplication) {
   );
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
     res.status(405).end('Method Not Allowed');
     return;  }
@@ -47,7 +47,7 @@ function writeGrant(record: GrantApplication) {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     res.setHeader('AllowPOST');
     res.status(405).end('Method Not Allowed');
     return
@@ -76,4 +76,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   g.updatedAt = new Date().toISOString();
   writeGrant(g);
   res.status(200).json({ record: g })
+}
+
+}
+}
+}
+}
 }

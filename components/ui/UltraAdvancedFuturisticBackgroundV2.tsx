@@ -222,7 +222,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
             'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)',
         }}
       />
-
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-10'>
         <motion.div
@@ -235,7 +234,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
             duration: 8,
             repeat: Infinity,
             ease: 'easeInOut',      />
-      
       {/* Floating Geometric Shapes */}
       <div className="fixed inset-0 pointer-events-none z-10">
         <motion.div
@@ -251,7 +249,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
             ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20'
           animate={{
@@ -263,7 +260,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-        
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20"
           animate={{
@@ -277,7 +273,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
             ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20'
           animate={{
@@ -289,7 +284,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-        
         <motion.div
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20"
           animate={{
@@ -303,7 +297,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
             ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20'
           animate={{
@@ -315,7 +308,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
             repeat: Infinity,
             ease: 'easeInOut',          }}          }}
         />
-        
         <motion.div
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
           animate={{
@@ -330,7 +322,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
           }}
         />
       </div>
-
       {/* Quantum Energy Particles */}
       <div className='fixed inset-0 pointer-events-none z-20'>
         {[...Array(20)].map((_, i) => (
@@ -366,7 +357,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
           />
         ))}
       </div>
-
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>
         <svg className='w-full h-full'>
@@ -414,7 +404,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
           ))}
         </svg>
       </div>
-
       {/* Content */}
       <div className='relative z-40'>{children}</div>
     </div>

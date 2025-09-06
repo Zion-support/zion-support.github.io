@@ -13,7 +13,7 @@ export default function UltraAdvancedFuturisticBackground({
   particleCount = 200,
   animationSpeed = 1.0,
   enableHolographic = true,
-  enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({ 
+  enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({ ;
   children;
   intensity = 'medium';
   theme = 'quantum';
@@ -456,7 +456,6 @@ export default function UltraAdvancedFuturisticBackground({
         className='fixed inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
       />
-
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (
         <div
@@ -491,7 +490,6 @@ export default function UltraAdvancedFuturisticBackground({
         className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
       />
-      
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (
         <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>

@@ -11,7 +11,7 @@ import {
   TrendingUp,
   Clock,
   Star,
-  Filter,
+  Filter,;
   ChevronDown,;
 } from 'lucide-react';
 
@@ -285,7 +285,6 @@ const EnhancedServicesShowcase: React.FC = () => {
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]' />
       </div>
-
       <div className='max-w-7xl mx-auto relative z-10'>
         {/* Header */}
         <div className='text-center mb-16'>
@@ -298,7 +297,6 @@ const EnhancedServicesShowcase: React.FC = () => {
             Cutting-edge technology solutions designed to transform your
             business and accelerate innovation          </p>
         </div>
-
         {/* Filters */}
         <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>    };
     return iconMap[category] || Brain
@@ -311,7 +309,6 @@ const EnhancedServicesShowcase: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]" />
       </div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
@@ -324,7 +321,6 @@ const EnhancedServicesShowcase: React.FC = () => {
             Cutting-edge technology solutions designed to transform your business and accelerate innovation
           </p>
         </div>
-
         {/* Filters */}
         <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>
           {/* Category Filter */}
@@ -358,7 +354,6 @@ const EnhancedServicesShowcase: React.FC = () => {
             </select>
             <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />
           </div>
-
           {/* Search */}
           <div className='relative'>
             <input
@@ -370,10 +365,8 @@ const EnhancedServicesShowcase: React.FC = () => {
             />
             <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' />          </div>
         </div>
-
         {/* Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          </div>
-
           {/* Search */}
           <div className="relative">
             <input
@@ -386,7 +379,6 @@ const EnhancedServicesShowcase: React.FC = () => {
             <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
           </div>
         </div>
-
         {/* Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {filteredServices.map((service, index) => (
@@ -432,7 +424,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                       {service.category}
                     </div>                  </div>
                 </div>
-
                 {/* Service Info */}                {/* Icon and Category */}
                 <div className="flex items-center justify-between mb-4">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
@@ -443,7 +434,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                     <div className="text-xs text-white/40">{service.category}</div>
                   </div>
                 </div>
-
                 {/* Service Info */}
                 <h3 className='text-xl font-bold mb-3 text-white'>
                   {service.name}
@@ -471,7 +461,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                     </span>
                   </div>
                 </div>
-
                 {/* Key Features */}
                 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-white mb-3'>
@@ -493,7 +482,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Benefits */}
                 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-white mb-3'>
@@ -515,7 +503,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-white/5 rounded-lg'>
                   <div className='text-xs text-white/60 mb-2'>
@@ -530,7 +517,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                   <div className="mt-2 text-xs text-white/60">
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className='flex gap-3'>
                   <button
@@ -565,7 +551,6 @@ const EnhancedServicesShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
@@ -615,3 +600,6 @@ export default EnhancedServicesShowcase;  )
 };
 
 export default EnhancedServicesShowcase;
+
+}
+}

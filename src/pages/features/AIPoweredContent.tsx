@@ -4,7 +4,7 @@ import { SEO } from '@/components/SEO'
 import { GradientHeading } from '@/components/GradientHeading'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { useFeatureUsage } from '@/hooks/useFeatureUsage'
+import { useFeatureUsage } from '@/hooks/useFeatureUsage';
 import { useAdvancedOnboardingStatus } from '@/hooks/useAdvancedOnboardingStatus'; import Link from 'next/link'
 import { useFeatureUsage } from "@/hooks/useFeatureUsage"
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus"
@@ -60,8 +60,8 @@ export default function AIPoweredContent() {
               src='https://placehold.co/800x400'
               alt='Screenshot of ZionGPT content tool'
               className='object-cover'
-            />
-          </div>
+            />;
+          </div>;
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
           <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
             <li>
@@ -105,3 +105,4 @@ export default function AIPoweredContent() {
   )
 }
 ;
+}

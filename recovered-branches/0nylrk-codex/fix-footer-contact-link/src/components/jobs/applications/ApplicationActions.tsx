@@ -12,7 +12,7 @@ interface ApplicationActionsProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
-export function ApplicationActions({
+export function ApplicationActions({;
   application;
   processingId;
   onViewApplication;
@@ -28,7 +28,6 @@ export function ApplicationActions({
       >
         <Eye className="h-4 w-4" />
       </Button>
-      
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button 
@@ -67,7 +66,6 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-      
       <Button 
         variant="default" 
         size="sm"

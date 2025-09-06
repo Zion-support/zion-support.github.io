@@ -141,8 +141,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           </CardFooter>
         </Card>
       ))}
-    </div>
-  )
+    </div>;
+  );
 };"
 return (<div className="grid gap-6 md:grid-cols-2" > {
   jobs.map ( (job) => (<Card key= {

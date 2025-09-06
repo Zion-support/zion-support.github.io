@@ -5,7 +5,7 @@ import {
   Mail,
   Search,
   Settings,
-  Users,
+  Users,;
 } from "lucide-react";
 import {
   Sidebar,
@@ -15,7 +15,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarGroupLabel,
-  SidebarGroupContent,
+  SidebarGroupContent,;
 } from "@/components/ui/sidebar";
 
 export function AppSidebar() {
@@ -53,7 +53,6 @@ export function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -77,7 +76,6 @@ export function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -102,6 +100,6 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-    </Sidebar>
+    </Sidebar>;
   );
 }

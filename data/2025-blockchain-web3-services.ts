@@ -1,4 +1,4 @@
-export interface BlockchainWeb3Service {
+export interface BlockchainWeb3Service {;
   id: string;
   name: string;
   tagline: string;
@@ -417,7 +417,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     customers: 25000,
     rating: 4.6,
     reviews: 18000,
-  },
+  },;
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
     ];
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'];

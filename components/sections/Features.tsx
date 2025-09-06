@@ -44,7 +44,6 @@ const Features: React.FC<FeaturesProps> = ({
             {subtitle}
           </p>
         </div>
-
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>
           {features.map((feature, index) => (

@@ -9,14 +9,14 @@ import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
-import Button from '../components/ui/Button',
+import Button from '../components/ui/Button',;
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
 export default function AboutPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com'
+		website: 'https://ziontechgroup.com';
 	};
 
 	const pillars = [
@@ -42,7 +42,6 @@ export default function AboutPage() {
 							From micro SaaS accelerators to enterprise AI services, we focus on measurable outcomes: faster delivery, higher reliability, and lower cost.
 						</p>
 					</div>
-
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
 						<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">
 							<div className="flex items-center gap-3 mb-4">
@@ -66,7 +65,6 @@ export default function AboutPage() {
 							</ul>
 						</Card>
 					</div>
-
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
 						{pillars.map((p) => (
 							<Card key={p.title} className="bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6">
@@ -75,7 +73,6 @@ export default function AboutPage() {
 							</Card>
 						))}
 					</div>
-
 					<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 							<div className="flex items-center gap-3 text-cyan-400">
@@ -146,7 +143,7 @@ export default function AboutPage() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com';
   };
 
   return (
@@ -160,7 +157,6 @@ export default function AboutPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://ziontechgroup.com/about" />
       </Head>
-
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
@@ -178,7 +174,6 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
-
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
@@ -203,7 +198,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -227,7 +221,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       <section className="section-padding bg-gradient-cursor-blue">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -255,7 +248,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -268,7 +260,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-dots opacity-10" />
         <div className="container-cursor text-center relative z-10">
@@ -281,7 +272,6 @@ export default function AboutPage() {
             <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg:white hover:text-cursor-blue shadow-2xl">Explore Services</Button>
           </div>
         </div>
-
         {/* Contact Section */}
         <section className="section-padding bg-gradient-cursor-accent">
           <div className="container-cursor">
@@ -291,7 +281,6 @@ export default function AboutPage() {
                 Get in touch with our experts today for a free consultation and discover how our 500+ revolutionary micro SaaS services can drive unprecedented growth
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <Card className="text-center p-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30">
                 <div className="text-4xl mb-4">📞</div>
@@ -299,14 +288,12 @@ export default function AboutPage() {
                 <p className="text-blue-400 font-semibold text-lg">{contactInfo.mobile}</p>
                 <p className="text-gray-400 text-sm mt-2">Available 24/7 for urgent inquiries</p>
               </Card>
-              
               <Card className="text-center p-8 bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30">
                 <div className="text-4xl mb-4">✉️</div>
                 <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>
                 <p className="text-green-400 font-semibold text-lg">{contactInfo.email}</p>
                 <p className="text-gray-400 text-sm mt-2">Response within 2 hours guaranteed</p>
               </Card>
-              
               <Card className="text-center p-8 bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30">
                 <div className="text-4xl mb-4">📍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">Visit Us</h3>
@@ -314,7 +301,6 @@ export default function AboutPage() {
                 <p className="text-gray-400 text-sm mt-2">Global headquarters and innovation center</p>
               </Card>
             </div>
-
             <div className="text-center">
               <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold text-lg mb-6">
                 🌐 Visit our website: {contactInfo.website}

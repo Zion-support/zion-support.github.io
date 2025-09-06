@@ -22,12 +22,10 @@
           unreadCount = {unreadCount,}
           onMarkAllAsRead = {handleMarkAllAsRead,}
         />
-        
         <NotificationFilter 
           filter = {filter as FilterType,}
           onFilterChange = {handleFilterChange,}
         />
-        
         <NotificationList 
           loading = {loading,}
           error = {error,}
@@ -36,7 +34,6 @@
           onDismiss = {dismissNotification,}
           onRetry = {fetchNotifications,}
         />
-        
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
     </Popover>

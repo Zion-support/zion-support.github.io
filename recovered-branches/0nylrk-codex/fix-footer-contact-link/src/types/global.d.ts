@@ -2,7 +2,7 @@
 import {ReactNode} from 'react';
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
-  export interface FeatureCardProps {
+  export interface FeatureCardProps {;
     title: string;
     description: string;
     icon: ReactNode;
@@ -13,7 +13,7 @@ declare module '@/components/FeatureCard' {
 
 // Extend ListingScoreCardProps to include key for mapping
 declare module '@/components/ListingScoreCard' {
-  export interface ListingScoreCardProps {
+  export interface ListingScoreCardProps {;
     title: string;
     description: string;
     category: string;
@@ -31,7 +31,7 @@ declare module '@/components/ListingScoreCard' {
 
 // Extend ChatMessageProps to include key for mapping
 declare module '@/components/ChatAssistant/ChatMessage' {
-  export interface ChatMessageProps {
+  export interface ChatMessageProps {;
     role: 'user' | 'assistant';
     message: string;
     timestamp?: Date,
@@ -41,7 +41,7 @@ declare module '@/components/ChatAssistant/ChatMessage' {
 
 // Extend ProductListingCardProps to include key for mapping
 declare module '@/components/ProductListingCard' {
-  export interface ProductListingCardProps {
+  export interface ProductListingCardProps {;
     listing: any;
     view: any;
     onRequestQuote: (listingId: string) => void,

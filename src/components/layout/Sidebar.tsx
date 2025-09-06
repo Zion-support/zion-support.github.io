@@ -27,7 +27,6 @@ const Sidebar = () => {
           </div>
           <span className="text-lg font-semibold text-gray-900">Zion Tech</span>
         </div>
-        
         <nav className="space-y-2">
           {navigation.map((item) => (
             <Link
@@ -45,4 +44,5 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default Sidebar;
+;

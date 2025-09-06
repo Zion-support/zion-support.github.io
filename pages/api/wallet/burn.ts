@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next",;
-import { burnTokens, burnForFeature } from "../../../utils/token/service",
+import { burnTokens, burnForFeature } from "../../../utils/token/service",;
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
@@ -12,5 +12,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ tx })
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
-  }
+  };
 };

@@ -156,7 +156,6 @@ export function FeaturesGuideSection() {
             navigate the world of AI and tech services
           </p>
         </div>
-
         <Tabs defaultValue='ai-matcher' className='w-full max-w-5xl mx-auto'>
           <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8'>
             {features.slice(0, 4).map(feature => (
@@ -283,7 +282,6 @@ export function FeaturesGuideSection() {
             the world of AI and tech services
           </p>
         </div>
-
         <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">
             {features.slice(0, 4).map(feature => (
@@ -312,7 +310,6 @@ export function FeaturesGuideSection() {
               </TabsTrigger>
             ))}
           </TabsList>
-
           {features.map(feature => (
             <TabsContent key={feature.id} value={feature.id} className='mt-8'>
               <div className='bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8'>
@@ -342,7 +339,6 @@ export function FeaturesGuideSection() {
                     </Link>
                   </Button>
                 </div>
-
                 <div className='md:w-2/3 bg-zion-blue-dark p-6 rounded-lg'>
                   <h4 className='text-xl font-semibold text-white mb-4'>
                     How to Use
@@ -365,7 +361,6 @@ export function FeaturesGuideSection() {
             </TabsContent>
           ))}
         </Tabs>
-
         <div className='mt-12 text-center'>
           <Button
             variant='outline'
@@ -386,5 +381,8 @@ export function FeaturesGuideSection() {
     </section>
   )
 }
-  )
+  );
+};
+}
+}
 }

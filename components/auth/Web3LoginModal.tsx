@@ -200,7 +200,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     </div>
   );
 
-export default function Web3LoginModal(props: Web3LoginModalProps) {
+export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
   return <ModalInner {...props} />;        </div>
         {error && (
@@ -222,7 +222,7 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {
   )
 }
 
-export default function Web3LoginModal(props: Web3LoginModalProps) {
+export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
   return <ModalInner {...props} />
 }

@@ -11,7 +11,6 @@ const PerformanceOptimizationChat: NextPage = () => {
           content="PerformanceOptimizationChat service"
         />{" "}
       </Head>
-
       <main>
         <h1>PerformanceOptimizationChat</h1>
         <p>Service details coming soon...</p>

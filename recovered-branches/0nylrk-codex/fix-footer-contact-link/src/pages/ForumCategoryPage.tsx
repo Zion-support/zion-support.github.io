@@ -226,7 +226,7 @@ const iconMap = {
 
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
+  // definitions, so avoid passing a type argument to prevent TS2347.;
   const { categoryId } = useParams();
   const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState("");
@@ -267,7 +267,6 @@ export default function ForumCategoryPage() {
         description={category.description}
         keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`}
       />
-      
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
@@ -276,7 +275,6 @@ export default function ForumCategoryPage() {
           <span className="text-muted-foreground">/</span>
           <span className="font-medium">{category.name}</span>
         </div>
-        
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
           <div className="flex items-center gap-4">
             <div className="p-3 bg-zion-purple/10 rounded-full">
@@ -287,7 +285,6 @@ export default function ForumCategoryPage() {
               <p className="text-muted-foreground mt-1">{category.description}</p>
             </div>
           </div>
-          
           {canCreatePost && (
             <Button asChild>
               <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>
@@ -296,7 +293,6 @@ export default function ForumCategoryPage() {
             </Button>
           )}
         </div>
-        
         <div className="mb-6">
           <div className="relative">
             <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
@@ -308,7 +304,6 @@ export default function ForumCategoryPage() {
             />
           </div>
         </div>
-        
         {posts.length > 0 ? (
           <div className="space-y-4">
             {filteredPosts.map((post) => (
@@ -319,7 +314,6 @@ export default function ForumCategoryPage() {
           <div className="text-center py-16">
             <h2 className="text-xl font-medium mb-2">No posts yet</h2>
             <p className="text-muted-foreground mb-6">Be the first to start a discussion in this category!</p>
-            
             {canCreatePost && (
               <Button asChild>
                 <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>

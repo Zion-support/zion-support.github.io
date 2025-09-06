@@ -14,7 +14,7 @@ import {
   Download,
   ExternalLink,
   ChevronDown,
-  Cloud,
+  Cloud,;
 } from "lucide-react";
 
 const helpArticles = [
@@ -85,7 +85,7 @@ const helpCategories = [
   },
 ];
 
-export default function HelpPage() {
+export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
 
@@ -117,7 +117,6 @@ export default function HelpPage() {
           content="help, support, documentation, FAQ, tutorials, guides"
         />
       </Head>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4">

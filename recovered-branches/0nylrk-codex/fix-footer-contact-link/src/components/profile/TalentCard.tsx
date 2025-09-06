@@ -13,7 +13,7 @@ export interface TalentCardProps {
   isAuthenticated: boolean
 }
 
-export function TalentCard({
+export function TalentCard({;
   talent;
   onViewProfile;
   onRequestHire;
@@ -71,7 +71,6 @@ export function TalentCard({
               </div>
             )}
           </div>
-          
           {/* Main Info */}
           <div className="flex-1">
             <div className="flex justify-between items-start">
@@ -87,7 +86,6 @@ export function TalentCard({
               </Button>
             </div>
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
-            
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
@@ -105,7 +103,6 @@ export function TalentCard({
             </div>
           </div>
         </div>
-        
         {/* Skills */}
         {skills.length > 0 && (
           <div className="mt-4">
@@ -139,7 +136,6 @@ export function TalentCard({
               <div className="text-zion-slate-light">Rate not specified</div>
             )}
           </div>
-          
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button

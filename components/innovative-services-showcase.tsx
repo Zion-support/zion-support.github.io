@@ -15,9 +15,9 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin,
+  MapPin,;
   ExternalLink,;} from 'lucide-react';import {
-  Star, TrendingUp, Zap, Brain, Rocket, Shield, 
+  Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -29,7 +29,7 @@ export default function InnovativeServicesShowcase() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
   };
 
   const containerVariants = {
@@ -204,7 +204,6 @@ export default function InnovativeServicesShowcase() {
             href='https://ziontechgroup.com/innovative-services-showcase'
           />
         </Head>
-
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
@@ -220,13 +219,11 @@ export default function InnovativeServicesShowcase() {
                 <br />
                 <span className='text-white'>Services Showcase</span>
               </h1>
-
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
                 Experience the future of technology with our most revolutionary
                 and cutting-edge services. These are the innovations that will
                 transform industries and reshape the world.
               </p>
-
               {/* Contact Info */}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12'>
                 <div className='text-center'>
@@ -250,7 +247,6 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
           </div>
         </section>
-
         {/* Featured Innovative Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -274,7 +270,6 @@ export default function InnovativeServicesShowcase() {
                 of what's possible
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>              {featuredServices.map((service, index) => (                  Featured
                 </span> Innovative Services
               </h2>
@@ -282,7 +277,6 @@ export default function InnovativeServicesShowcase() {
                 Our most revolutionary services that are pushing the boundaries of what's possible
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
@@ -300,7 +294,6 @@ export default function InnovativeServicesShowcase() {
                     <p className='text-gray-300 mb-6 leading-relaxed'>
                       {service.description}
                     </p>
-
                     <div className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-4 rounded-lg border border-cyan-500/20 mb-6'>
                       <div className='text-2xl font-bold text-cyan-400 mb-2'>
                         {service.price}
@@ -312,7 +305,6 @@ export default function InnovativeServicesShowcase() {
                         {service.savings}
                       </div>
                     </div>
-
                     <div className='mb-6'>
                       <h4 className='text-lg font-semibold text-white mb-3'>
                         Key Features:
@@ -327,13 +319,11 @@ export default function InnovativeServicesShowcase() {
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                    
                     <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-4 rounded-lg border border-cyan-500/20 mb-6">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                       <div className="text-sm text-gray-400">{service.marketData}</div>
                       <div className="text-sm text-green-400 mt-1">{service.savings}</div>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                       <ul className="space-y-2">
@@ -345,7 +335,6 @@ export default function InnovativeServicesShowcase() {
                         ))}
                       </ul>
                     </div>
-
                     <div className='flex flex-col sm:flex-row gap-3'>
                       <a
                         href={service.link}
@@ -376,7 +365,6 @@ export default function InnovativeServicesShowcase() {
             </div>
           </div>
         </section>
-
         {/* Emerging Tech Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -400,7 +388,6 @@ export default function InnovativeServicesShowcase() {
                 transforming industries
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {emergingTechServicesEnhanced2025
                 .slice(0, 6)
@@ -443,7 +430,6 @@ export default function InnovativeServicesShowcase() {
                   </motion.div>
                 ))}
             </div>
-
             <motion.div
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}                  Emerging
                 </span> Tech Services
@@ -452,7 +438,6 @@ export default function InnovativeServicesShowcase() {
                 Discover the latest technologies that are emerging and transforming industries
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                               {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
                 <motion.div
@@ -482,7 +467,6 @@ export default function InnovativeServicesShowcase() {
                 </motion.div>
               ))}
             </div>
-
             <motion.div
               className="text-center mt-16"
               initial={{ opacity: 0, y: 30 }}
@@ -507,7 +491,6 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
           </div>
         </section>
-
         {/* ArrowRight-Gen AI Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -531,7 +514,6 @@ export default function InnovativeServicesShowcase() {
                 advanced services
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {nextGenAIServices.slice(0, 6).map((service, index) => (                  ArrowRight-Generation
                 </span> AI Services
               </h2>
@@ -539,7 +521,6 @@ export default function InnovativeServicesShowcase() {
                 Experience the future of artificial intelligence with our most advanced services
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {nextGenAIServices.slice(0, 6).map((service, index) => (
                 <motion.div
@@ -589,7 +570,6 @@ export default function InnovativeServicesShowcase() {
                 </motion.div>
               ))}
             </div>
-
             <motion.div
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}              className="text-center mt-16"
               initial={{ opacity: 0, y: 30 }}
@@ -614,7 +594,6 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
           </div>
         </section>
-
         {/* Call to Action */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -632,7 +611,6 @@ export default function InnovativeServicesShowcase() {
                 Join the revolution and transform your business with our
                 cutting-edge services
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
                   href='/contact'
@@ -646,7 +624,6 @@ export default function InnovativeServicesShowcase() {
               <p className="text-xl text-gray-300 mb-8">
                 Join the revolution and transform your business with our cutting-edge services
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
@@ -662,7 +639,6 @@ export default function InnovativeServicesShowcase() {
                   Explore All Services
                 </a>
               </div>
-
               <div className='mt-12 text-center'>
                 <p className='text-gray-400 mb-4'>Contact us directly:</p>
                 <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>

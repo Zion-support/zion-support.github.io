@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
+} from '@/components/ui/card';
 import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
   Dialog,
   DialogContent,
@@ -18,7 +18,7 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
 type RewardOption = {
   id: string
 title: string
-description: string
+description: string;
 cost: number;'
 type: 'credit' | 'feature' | 'course' 
 }
@@ -124,5 +124,5 @@ export function RedeemTokensCard() {
       </CardContent>
     </Card>
   )
-}
+};
 ;

@@ -4,7 +4,7 @@ import {OnboardingNotificationParams} from './types';
 /**
  * Creates an onboarding notification for a user
  */
-export async function createOnboardingNotification({
+export async function createOnboardingNotification({;
   userId;
   missingMilestone;
   userRole

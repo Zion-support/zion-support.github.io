@@ -47,7 +47,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
           {/* Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Services</h3>
@@ -59,7 +58,6 @@ const Footer = () => {
               <li><Link to="/cybersecurity" className="text-gray-400 hover:text-white transition-colors">Cybersecurity</Link></li>
             </ul>
           </div>
-
           {/* Solutions */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Solutions</h3>
@@ -71,7 +69,6 @@ const Footer = () => {
               <li><Link to="/solutions/retail" className="text-gray-400 hover:text-white transition-colors">Retail</Link></li>
             </ul>
           </div>
-
           {/* Company */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Company</h3>
@@ -84,7 +81,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm">
@@ -96,7 +92,6 @@ const Footer = () => {
             <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</Link>
           </div>
         </div>
-
         {/* Back to Top Button */}
         <button
           onClick={scrollToTop}
@@ -109,4 +104,5 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;
+;

@@ -28,7 +28,7 @@ import {
   Grid,
   List,
   Phone,
-  Mail,
+  Mail,;
   MapPin,;
 } from 'lucide-react';
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
@@ -76,7 +76,7 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
   'Autonomous Systems': <Rocket className='w-5 h-5' />,
   'Climate Technology': <Globe className='w-5 h-5' />,};
 
-export default function InnovativeServicesShowcase2036() {
+export default function InnovativeServicesShowcase2036() {;
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -143,7 +143,6 @@ export default function InnovativeServicesShowcase2036() {
         description='Discover our cutting-edge 2036 innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with next-generation technology.'
         keywords='2036 services, innovative micro SAAS, AI platforms, quantum technology, space technology, IT solutions, Zion Tech Group'
       />
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center px-4 overflow-hidden'>
         {/* Animated Background */}
@@ -151,7 +150,6 @@ export default function InnovativeServicesShowcase2036() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]' />
         </div>
-
         {/* Floating Elements */}
         <div className='absolute inset-0 overflow-hidden'>
           {[...Array(20)].map((_, i) => (
@@ -173,7 +171,6 @@ export default function InnovativeServicesShowcase2036() {
               }}            />
           ))}
         </div>
-
         <div className='relative z-10 text-center max-w-6xl mx-auto'>
           <motion.h1
             className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'            initial={{ opacity: 0, y: 30 }}
@@ -204,7 +201,6 @@ export default function InnovativeServicesShowcase2036() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className='py-12 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>
         <div className='max-w-6xl mx-auto'>
@@ -231,7 +227,6 @@ export default function InnovativeServicesShowcase2036() {
           </motion.div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className='py-20 px-4'>
         <div className='max-w-7xl mx-auto'>
@@ -250,7 +245,6 @@ export default function InnovativeServicesShowcase2036() {
               services, AI platforms, and cutting-edge technology solutions
               designed for the future.            </p>
           </motion.div>
-
           {/* Filters and Controls */}
           <motion.div
             className='mb-12 space-y-6'            initial={{ opacity: 0, y: 20 }}
@@ -270,7 +264,6 @@ export default function InnovativeServicesShowcase2036() {
                   className='w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300'
                 />
               </div>
-
               <div className='flex gap-4 items-center'>
                 <select
                   value={sortBy}
@@ -282,7 +275,6 @@ export default function InnovativeServicesShowcase2036() {
                   <option value='rating'>Sort by Rating</option>
                   <option value='marketSize'>Sort by Market Size</option>
                 </select>
-
                 <div className='flex bg-gray-800/50 border border-gray-700 rounded-lg p-1'>                  <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`}
@@ -296,7 +288,6 @@ export default function InnovativeServicesShowcase2036() {
                 </div>
               </div>
             </div>
-
             {/* Category Filters */}
             <div className='flex flex-wrap gap-3 justify-center'>
               {categories.map(category => (                <button
@@ -313,7 +304,6 @@ export default function InnovativeServicesShowcase2036() {
               ))}
             </div>
           </motion.div>
-
           {/* Services Grid */}
           <motion.div
             variants={containerVariants}
@@ -368,7 +358,6 @@ export default function InnovativeServicesShowcase2036() {
                       {service.description}
                     </p>
                   </div>
-
                   {/* Service Details */}
                   <div className='space-y-4'>
                     {/* Category and Rating */}
@@ -384,7 +373,6 @@ export default function InnovativeServicesShowcase2036() {
                           </span>                        </div>
                       )}
                     </div>
-
                     {/* Market Size */}
                     {service.marketSize && (
                       <div className='text-sm text-gray-400'>
@@ -414,7 +402,6 @@ export default function InnovativeServicesShowcase2036() {
                         )}
                       </div>
                     </div>
-
                     {/* Target Audience */}
                     {service.targetAudience && (
                       <div>
@@ -451,7 +438,6 @@ export default function InnovativeServicesShowcase2036() {
               </motion.div>
             ))}
           </motion.div>
-
           {/* Results Summary */}
           <motion.div
             className='mt-12 text-center text-gray-400'            initial={{ opacity: 0 }}
@@ -463,7 +449,6 @@ export default function InnovativeServicesShowcase2036() {
           </motion.div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className='py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div

@@ -13,7 +13,7 @@ export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarP
       .split(' ')
       .map(part => part[0])
       .join('')
-      .toUpperCase()
+      .toUpperCase();
   };
 
   return (

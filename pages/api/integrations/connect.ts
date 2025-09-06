@@ -3,7 +3,7 @@ import { writeState } from "../../../lib/integrations/fileStore";
 import { getProviderById } from "../../../lib/integrations/registry";
 import { ProviderConnection, SyncRules } from "../../../lib/integrations/types";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST")
+  if (req.method !== "POST");
     return res.status(405).json({ error: "Method not allowed" });
   const { providerId, syncRules } = req.body as {
     providerId?: string;

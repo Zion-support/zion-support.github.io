@@ -1,6 +1,6 @@
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-export type PaginationProps = {
+export type PaginationProps = {;
   page: number;
   pageSize: number;
   total: number;
@@ -11,15 +11,15 @@ export default function Pagination({
   page,
   pageSize,
   total,
-  onChange,
+  onChange,;
 }: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
   page: number,
   pageSize: number,
   total: number,
-  onChange: (nextPage: number) => void
+  onChange: (nextPage: number) => void;
 };
 
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;

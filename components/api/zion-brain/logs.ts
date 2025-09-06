@@ -6,14 +6,14 @@ function isAuthorized(req: NextApiRequest): boolean {
   return !superToken || token === superToken;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req))
+  if (!isAuthorized(req));
     return res.status(401).json({ error: 'Unauthorized' });function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken || token === superToken
 }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
 
   const { entries } = readLogs();
@@ -44,4 +44,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length });
+}
+
 }

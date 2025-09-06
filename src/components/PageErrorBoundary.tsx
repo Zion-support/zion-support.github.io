@@ -44,7 +44,6 @@ function PageErrorFallback({
                 : 'An unexpected error occurred while loading this page'}
             </p>
           </div>
-
           {isAuthConfigError && (
             <div className='bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6'>
               <div className='flex'>
@@ -82,7 +81,6 @@ function PageErrorFallback({
               <RefreshCw className='w-4 h-4 mr-2' />
               Try Again
             </button>
-
             <Link
               href='/'
               className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
@@ -91,7 +89,6 @@ function PageErrorFallback({
               Go Home
             </Link>
           </div>
-
           {/* Navigation Options */}
           <div className='border-t pt-6'>
             <h3 className='font-semibold text-gray-900 mb-3'>
@@ -116,7 +113,6 @@ function PageErrorFallback({
             </div>
           </div>
         </div>
-
         {/* Support Information */}
         <div className='bg-gray-800 text-white rounded-lg p-6 text-center'>
           <p className='mb-3'>Need help? Contact our support team</p>
@@ -174,4 +170,6 @@ export default function PageErrorBoundary({
   )
 } 
 } 
+};
+;
 }

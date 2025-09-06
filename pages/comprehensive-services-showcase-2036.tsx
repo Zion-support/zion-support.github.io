@@ -20,7 +20,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
         description='Explore our revolutionary 2036 services portfolio featuring AI, Quantum Computing, Space Technology, and cutting-edge IT solutions. Transform your business with next-generation technology.'
         keywords='AI services, quantum computing, space technology, IT solutions, 2036, Zion Tech Group, innovative technology'
       />
-
       <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white'>
         {/* Hero Section */}
         <section className='relative py-20 px-4 overflow-hidden'>
@@ -58,7 +57,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Services Overview */}
         <section className='py-16 px-4'>
           <div className='max-w-7xl mx-auto'>
@@ -76,7 +74,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                 innovative technology domains, designed to transform businesses
                 and drive the future forward.              </p>
             </motion.div>
-
             {/* Category Cards */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {categories.map((category, index) => (
                 <motion.div
@@ -110,7 +107,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
             {/* Featured Services */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -125,7 +121,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                 Discover our most innovative and game-changing services that are
                 reshaping industries and defining the future of technology.              </p>
             </motion.div>
-
             {/* Featured Services Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
               {allServices
@@ -184,7 +179,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                   </motion.div>
                 ))}
             </div>
-
             {/* All Services Section */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -199,7 +193,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                 Explore our entire collection of {allServices.length} innovative
                 services across all technology domains.              </p>
             </motion.div>
-
             {/* Services by Category */}
             {categories.map((category, categoryIndex) => (
               <motion.div

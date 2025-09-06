@@ -75,7 +75,6 @@ const QuantumNeuralNetworkPlatform = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/quantum-neural-network-platform" />
       </Head>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -113,7 +112,6 @@ const QuantumNeuralNetworkPlatform = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -131,7 +129,6 @@ const QuantumNeuralNetworkPlatform = () => {
                 Experience the future of AI with our cutting-edge quantum neural network platform
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -152,7 +149,6 @@ const QuantumNeuralNetworkPlatform = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="max-w-7xl mx-auto">
@@ -170,7 +166,6 @@ const QuantumNeuralNetworkPlatform = () => {
                 Transform your operations with quantum-powered AI capabilities
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -188,7 +183,6 @@ const QuantumNeuralNetworkPlatform = () => {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -206,7 +200,6 @@ const QuantumNeuralNetworkPlatform = () => {
                 Discover how our quantum neural network platform transforms industries
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
                 <motion.div
@@ -224,7 +217,6 @@ const QuantumNeuralNetworkPlatform = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -257,5 +249,5 @@ const QuantumNeuralNetworkPlatform = () => {
   )
 },
 
-export default QuantumNeuralNetworkPlatform,
+export default QuantumNeuralNetworkPlatform,;
 ;

@@ -30,8 +30,8 @@ export function ModeToggle() {
   useEffect(() => {
     setIsClient(true)
   }, [])
-  // Determine the actual resolved theme for display purposes
-  const resolvedTheme = (() => {
+  // Determine the actual resolved theme for display purposes;
+  const resolvedTheme = (() => {;
     if (!isClient) return 'light'; // Default for SSR
     if (theme === 'system') {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -126,7 +126,6 @@ export function ModeToggle() {
                   : 'bg-slate-600 dark:bg-slate-400'
               } opacity-70 group-hover:opacity-100`}
             />
-
             <span className='sr-only'>
               Toggle theme. Current: {resolvedTheme}. Click to switch to{' '}
               {isDarkMode ? 'light' : 'dark'}.

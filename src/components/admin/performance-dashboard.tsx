@@ -23,7 +23,7 @@ interface PerformanceMetrics {
   loadTime: number
   performanceScore: number
   chunkCount: number
-  cacheHitRate: number
+  cacheHitRate: number;
   fcp: number; // First Contentful Paint
   lcp: number; // Largest Contentful Paint
   cls: number; // Cumulative Layout Shift
@@ -179,7 +179,7 @@ export function PerformanceDashboard() {
     return <AlertTriangle className='w-4 h-4 text-red-600' />
   }
   useEffect(() => {
-    collectMetrics()
+    collectMetrics();
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
     return () => clearInterval(interval)
   }, [])
@@ -201,7 +201,6 @@ export function PerformanceDashboard() {
           {isLoading ? 'Collecting...' : 'Refresh'}
         </Button>
       </div>
-
       {/* Performance Score */}
       <Card>
         <CardHeader>
@@ -235,7 +234,6 @@ export function PerformanceDashboard() {
                   <Progress value={metrics.performanceScore} className='h-2' />
                 </div>
               </div>
-
               {lastUpdated && (
                 <p className='text-sm text-muted-foreground'>
                   Last updated: {lastUpdated.toLocaleString()}
@@ -252,7 +250,6 @@ export function PerformanceDashboard() {
           )}
         </CardContent>
       </Card>
-
       {/* Metrics Grid */}
       {metrics && (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
@@ -270,7 +267,6 @@ export function PerformanceDashboard() {
               </p>
             </CardContent>
           </Card>
-
           <Card>
             <CardContent className='p-4'>
               <div className='flex items-center gap-2'>
@@ -285,7 +281,6 @@ export function PerformanceDashboard() {
               </p>
             </CardContent>
           </Card>
-
           <Card>
             <CardContent className='p-4'>
               <div className='flex items-center gap-2'>
@@ -302,7 +297,6 @@ export function PerformanceDashboard() {
               </p>
             </CardContent>
           </Card>
-
           <Card>
             <CardContent className='p-4'>
               <div className='flex items-center gap-2'>
@@ -377,7 +371,6 @@ export function PerformanceDashboard() {
           )}
         </CardContent>
       </Card>
-
       {/* Recommendations */}
       <Card>
         <CardHeader>
@@ -400,7 +393,6 @@ export function PerformanceDashboard() {
                 </p>
               </div>
             </div>
-
             <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
               <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
               <div>
@@ -413,7 +405,6 @@ export function PerformanceDashboard() {
                 </p>
               </div>
             </div>
-
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />

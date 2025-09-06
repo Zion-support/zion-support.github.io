@@ -27,7 +27,7 @@ interface AIListingGeneratorProps {
   }
 }
 
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
@@ -105,7 +105,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           />
         </CardContent>
       </Card>
-
       {isLoading && <LoadingContentSkeleton />}
 
       {generatedContent && !isLoading && (

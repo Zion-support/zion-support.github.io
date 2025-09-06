@@ -37,7 +37,6 @@ export function ApplicationActions({
       >
         <Eye className='h-4 w-4' />
       </Button>
-
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
@@ -91,8 +90,7 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
-      <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>      
+      <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>
       <Button 
         variant="default" 
         size="sm"
@@ -103,4 +101,6 @@ export function ApplicationActions({
       </Button>
     </div>
   )
+};
+;
 }

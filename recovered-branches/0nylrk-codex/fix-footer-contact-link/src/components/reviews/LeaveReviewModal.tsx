@@ -13,7 +13,7 @@ interface LeaveReviewModalProps {
   onClose: () => void
 }
 
-export function LeaveReviewModal({
+export function LeaveReviewModal({;
   projectId;
   revieweeId;
   revieweeName;
@@ -63,7 +63,6 @@ export function LeaveReviewModal({
             Your feedback helps build a trustworthy community. It will be visible after moderation.
           </DialogDescription>
         </DialogHeader>
-        
         <ReviewForm
           projectId={projectId}
           revieweeId={revieweeId}

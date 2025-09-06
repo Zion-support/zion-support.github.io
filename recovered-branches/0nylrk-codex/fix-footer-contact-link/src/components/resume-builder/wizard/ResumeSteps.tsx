@@ -16,5 +16,5 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
         </TabsTrigger>
       ))}
     </TabsList>
-  )
+  );
 };

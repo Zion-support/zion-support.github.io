@@ -106,7 +106,7 @@ const trustedCompanies = [
 ];
 
 export function TrustedBySection() {
-  // Use state to track logos that failed to load
+  // Use state to track logos that failed to load;
   const [failedLogos, setFailedLogos] = useState<Record<string, boolean>>({});
 
   const handleImageError = (companyName: string) => {
@@ -123,7 +123,6 @@ export function TrustedBySection() {
           <GradientHeading className="mb-2">Trusted By Industry Leaders</GradientHeading>
           <p className="text-zion-slate-light">Join the growing network of companies relying on Zion's marketplace</p>
         </div>
-        
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center max-w-7xl mx-auto">
           {trustedCompanies.map((company, index) => (
             <div 
@@ -146,7 +145,6 @@ export function TrustedBySection() {
             </div>
           ))}
         </div>
-        
         <div className="text-center mt-10">
           <p className="text-zion-slate-light text-sm">And many more enterprises worldwide...</p>
         </div>

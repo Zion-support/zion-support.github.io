@@ -24,7 +24,7 @@ interface TemplateSaveFormProps {
   currentValues?: ContractFormValues
 }
 
-export function TemplateSaveForm({
+export function TemplateSaveForm({;
   onCancel;
   onComplete;
   editTemplate;

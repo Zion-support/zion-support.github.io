@@ -8,10 +8,10 @@ function fixCorruptedFile(filePath) {
     // Fix common corruption patterns
     content = content
       // Fix import statements with extra commas
-      .replace(
+      .replace(;
         /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t';'/g,
         "import type { NextPage } from 'next'")
-      .replace(
+      .replace(;
         /import\s*{\s*NextPage\s*}\s*from\s*'next';'/g,
         "import type { NextPage } from 'next'")
       // Fix component declarations
@@ -24,7 +24,7 @@ function fixCorruptedFile(filePath) {
       // Fix text content with extra commas
       .replace(/(\w+),\s*(\w+),\s*(\w+)/g, "$1$2$3")
       .replace(/(\w+),\s*(\w+)/g, "$1$2")
-      // Fix export statements
+      // Fix export statements;
 export default $1;");
       // Fix return statements
       .replace(/retu,\s*r,\s*n\s*\(/g, "return (")

@@ -7,7 +7,7 @@ import {cn} from "@/lib/utils"
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
 
-export type ChartConfig = Record<
+export type ChartConfig = Record<;
   string;
   {
     label?: React.ReactNode
@@ -345,7 +345,7 @@ function getPayloadConfigFromPayload(
     : config[key as keyof typeof config]
 }
 
-export {
+export {;
   ChartContainer;
   ChartTooltip;
   ChartTooltipContent;

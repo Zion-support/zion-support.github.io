@@ -9,7 +9,7 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "";
  * @returns Array of normalized skills
  */
 export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]> {
-  try {
+  try {;
     const skillsString = skills.join(", ");
     
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -66,7 +66,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
       Description: ${jobDetails.description}
       Category: ${jobDetails.category}
       Required Skills: ${jobDetails.skills.join(", ")}
-      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
+      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max};
     `;
     
     // Create talent profiles text for AI evaluation
@@ -150,7 +150,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
  * @param talents Array of talent profiles
  * @returns Array of matches with scores
  */
-export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {
+export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {;
   const requiredSkills = jobDetails.skills.map((skill: string) => skill.toLowerCase());
   
   return talents.map(talent => {

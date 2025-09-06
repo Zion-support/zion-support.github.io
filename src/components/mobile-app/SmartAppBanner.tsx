@@ -7,7 +7,7 @@ interface SmartAppBannerProps {
   appName?: string
   appIconSrc?: string
   appStoreUrl?: string
-  googlePlayUrl?: string
+  googlePlayUrl?: string;
   delay?: number; // Delay in milliseconds before showing the banner
 }
 
@@ -60,12 +60,10 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             <div className="text-zion-cyan font-bold text-lg">Z</div>
           )}
         </div>
-        
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
-        
         <div className="flex items-center gap-3">
           <Link 
             href="/open-app" 
@@ -74,7 +72,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             View
             <ArrowRight className="w-3 h-3 ml-1" />
           </Link>
-          
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
             <X className="h-5 w-5" />
           </button>
@@ -84,3 +81,4 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   )
 }
 '"
+;

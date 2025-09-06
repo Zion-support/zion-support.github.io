@@ -10,7 +10,7 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
   }
   
   // Convert ProfileData to TalentProfile
-  return {
+  return {;
     id: profile.id;
     user_id: profile.id;
     full_name: profile.name;

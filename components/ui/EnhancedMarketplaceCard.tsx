@@ -60,10 +60,8 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
             )}
           </div>
         </div>
-
         {/* Description */}
         <p className="text-sm text-gray-600 mb-4 flex-1">{description}</p>
-
         {/* Rating */}
         {rating && reviews && (
           <div className="flex items-center space-x-1 mb-4">
@@ -130,11 +128,9 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           <Heart className="w-4 h-4 text-gray-600" />
         </button>
       </div>
-      
       <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
         <p className="text-gray-600 text-sm mb-3">{description}</p>
-        
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -142,7 +138,6 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           </div>
           <span className="text-lg font-bold text-blue-600">$ + {price}</span>
         </div>
-        
         <button
           onClick={onAddToCart}
           className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 flex items-center justify-center"

@@ -16,9 +16,9 @@ import {
   ArrowRight,
   ExternalLink,
   Phone,
-  Mail,
+  Mail,;
   MapPin,;} from 'lucide-react';import { 
-  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
+  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
@@ -151,7 +151,7 @@ const stats = [
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
 
-export default function CuttingEdgePricing2025() {
+export default function CuttingEdgePricing2025() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const allServices = [
@@ -215,7 +215,6 @@ export default function CuttingEdgePricing2025() {
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />      </Head>
-
       <Layout>
         {/* Hero Section */}
         <section className='relative overflow-hidden'>
@@ -232,7 +231,6 @@ export default function CuttingEdgePricing2025() {
         <meta name="keywords" content="cutting-edge pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SAAS pricing" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-
       <Layout>
         {/* Hero Section */}
         <section className='relative overflow-hidden'>
@@ -259,7 +257,6 @@ export default function CuttingEdgePricing2025() {
                   Pricing 2025
                 </span>
               </motion.h1>
-
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -268,7 +265,6 @@ export default function CuttingEdgePricing2025() {
                   Pricing 2025
                 </span>
               </motion.h1>
-              
               <motion.p 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
                 animate={{ opacity: 1, y: 0 }}
@@ -278,13 +274,11 @@ export default function CuttingEdgePricing2025() {
                 cutting-edge services are designed to give you a competitive
                 advantage while maintaining affordability and value.
               </motion.p>
-
               {/* Hero Stats */}
               <motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
                 a competitive advantage while maintaining affordability and value.
               </motion.p>
-
               {/* Hero Stats */}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
@@ -314,7 +308,6 @@ export default function CuttingEdgePricing2025() {
             </motion.div>
           </div>
         </section>
-
         {/* Pricing Tiers Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
@@ -343,13 +336,11 @@ export default function CuttingEdgePricing2025() {
                 ensure your success.
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>              {pricingTiers.map((tier, index) => (              <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
                 Choose the perfect plan for your business needs. All plans include our cutting-edge technology 
                 and world-class support to ensure your success.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <motion.div
                   key={index}
@@ -397,7 +388,6 @@ export default function CuttingEdgePricing2025() {
                         </span>
                       </div>
                     </div>
-
                     <ul className='space-y-4 mb-8'>
                       {tier.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className='flex items-start'>
@@ -411,7 +401,6 @@ export default function CuttingEdgePricing2025() {
                         <span className="text-lg font-normal text-white/60">/{tier.period}</span>
                       </div>
                     </div>
-
                     <ul className="space-y-4 mb-8">
                       {tier.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start">
@@ -420,7 +409,6 @@ export default function CuttingEdgePricing2025() {
                         </li>
                       ))}
                     </ul>
-
                     <a
                       href={tier.ctaLink}
                       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
@@ -438,7 +426,6 @@ export default function CuttingEdgePricing2025() {
             </div>
           </div>
         </section>
-
         {/* Service Categories Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
@@ -460,7 +447,6 @@ export default function CuttingEdgePricing2025() {
                 multiple technology domains. Each category offers specialized
                 solutions for different business needs.              </p>
             </motion.div>
-
             {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-4 mb-12'>              <button              className="text-center mb-16"
             >
@@ -477,7 +463,6 @@ export default function CuttingEdgePricing2025() {
                 Each category offers specialized solutions for different business needs.
               </p>
             </motion.div>
-
             {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
@@ -504,7 +489,6 @@ export default function CuttingEdgePricing2025() {
                 </button>
               ))}
             </div>
-
             {/* Services Grid */}
             <motion.div
               variants={containerVariants}
@@ -550,7 +534,6 @@ export default function CuttingEdgePricing2025() {
                         </div>
                       </div>
                     </div>
-
                     {/* Tags */}
                     <div className='flex flex-wrap gap-2 mb-4'>
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
@@ -565,13 +548,11 @@ export default function CuttingEdgePricing2025() {
                         </span>
                       ))}
                     </div>
-
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>
                     </div>
-
                     {/* Pricing */}
                     <div className='mb-6'>
                       <h4 className='text-sm font-semibold text-cyan-400 mb-2 uppercase tracking-wider'>
@@ -583,12 +564,10 @@ export default function CuttingEdgePricing2025() {
                           /{service.pricing.starter.period}
                         </span>                      </div>
                     </div>
-
                     {/* CTA */}
                     <div className='flex items-center justify-between'>                      <span>Market: {service.marketSize}</span>
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
-
                     {/* Pricing */}
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2 uppercase tracking-wider">
@@ -599,7 +578,6 @@ export default function CuttingEdgePricing2025() {
                         <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>
                       </div>
                     </div>
-
                     {/* CTA */}
                     <div className='flex items-center justify-between'>
                       <a
@@ -630,7 +608,6 @@ export default function CuttingEdgePricing2025() {
                       </a>
                     </div>
                   </div>
-
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
@@ -638,7 +615,6 @@ export default function CuttingEdgePricing2025() {
             </motion.div>
           </div>
         </section>
-
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
@@ -657,7 +633,6 @@ export default function CuttingEdgePricing2025() {
                 and get you started with our cutting-edge technology solutions.
                 Contact us today for a personalized consultation.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
                 <a
                   href='/contact'
@@ -676,7 +651,6 @@ export default function CuttingEdgePricing2025() {
                 Our team of experts is ready to help you choose the perfect plan and get you started with our 
                 cutting-edge technology solutions. Contact us today for a personalized consultation.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a
                   href="/contact"
@@ -693,7 +667,6 @@ export default function CuttingEdgePricing2025() {
                   Call Now
                 </a>
               </div>
-
               {/* Contact Info */}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
                 <div className='flex flex-col items-center'>

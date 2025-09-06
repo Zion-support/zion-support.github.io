@@ -18,7 +18,7 @@ import { LanguageSelector } from '@/components/header/LanguageSelector'
   HoverCardTrigger,
   HoverCardContent,
 } from '@/components/ui/hover-card'
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview'
+import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
 import { LoginModal } from '@/components/auth/LoginModal'; import { LanguageSelector } from '@/components/header/LanguageSelector'
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card'
 import { LoginModal } from '@/components/auth/LoginModal'
@@ -35,8 +35,8 @@ interface MainNavigationProps {
 export function MainNavigation({
   isAdmin = false,
   unreadCount = 0,
-  className,
-}: MainNavigationProps) {
+  className,;
+}: MainNavigationProps) {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state
   const { user } = useAuth()
   const isAuthenticated = !!user
@@ -389,8 +389,8 @@ export default function Page() { [])
                               : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
 }`}
 
-                          {link.name}'`
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>
+                          {link.name}'`;
+                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
                         {activeDropdown === link.key && (;"
                           <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child: unknown (
@@ -437,3 +437,4 @@ export default function Page() { [])
   );  )
 }
 ;
+}

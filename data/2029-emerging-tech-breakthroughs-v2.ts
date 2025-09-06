@@ -428,7 +428,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       customers: 3,
       rating: 5.0,
       reviews: 2,
-    },
+    },;
   ];    features: [
       'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';
       'Advanced consciousness analyticsExpert consultation and support'

@@ -10,8 +10,8 @@ export const Navigate = ({ to }: { to: string }) => null
 export const MemoryRouter = BrowserRouter
 export const Outlet = () => null
 export const useNavigate = () => (url: string) => {}
-export const useLocation = () => ({ pathname: '/' })
-export const useParams = () => ({})
+export const useLocation = () => ({ pathname: '/' });
+export const useParams = () => ({});
 export const useSearchParams = () => [new URLSearchParams(), () => {}] as any; export default {
   BrowserRouter,
   Routes,
@@ -38,3 +38,4 @@ export const useSearchParams = () => [new URLSearchParams(), () => {}] as any; e
   useLocation
   useParams
   useSearchParams}
+;

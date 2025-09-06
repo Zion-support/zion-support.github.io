@@ -14,7 +14,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== 'DELETE')
+  if (req.method !== 'DELETE');
     return res.status(405).json({ error: 'Method not allowed' });  try {function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie || '';
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
@@ -22,7 +22,7 @@ export default async function handler(
   return 'demo-user-1'
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'DELETE') return res.status(405).json({ error: 'Method not allowed' });
   try {
     const userId = getUserId(req);
@@ -41,4 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' })
 };
+}
+
+}
 }

@@ -2,7 +2,7 @@ import React, {
   createContext,
   useContext,
   useEffect,
-  useMemo,
+  useMemo,;
   useState,;
 } from 'react';
 export type UserRole = 'client' | 'talent';
@@ -14,7 +14,7 @@ type RoleContextValue = {
 const RoleContext = createContext<RoleContextValue | undefined>(undefined);
 
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
+  children,;
 }) => {  const [role, setRole] = useState<UserRole>('client');
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const RoleContext = createContext<RoleContextValue | undefined>(undefined);
 
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
-}) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+}) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
   const [role, setRole] = useState<UserRole>('client');
 
   useEffect(() => {
@@ -62,8 +62,11 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
   return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;};  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>
 };
 
-export function useRole(): RoleContextValue {
+export function useRole(): RoleContextValue {;
 const ctx = useContext(RoleContext);
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
   return ctx;  return ctx
+}
+
+}
 }

@@ -4,7 +4,7 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-  CardContent,
+  CardContent,;
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
@@ -15,7 +15,7 @@ interface JobMatchesProps {
 }
 
 export function JobMatches({ jobId }: JobMatchesProps) {
-  const { matches, isLoading, isProcessing, triggerAIMatching } =
+  const { matches, isLoading, isProcessing, triggerAIMatching } =;
     useJobMatches(jobId);
 
   if (isLoading) {

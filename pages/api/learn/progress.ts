@@ -7,7 +7,7 @@ function writeUsers(data: any) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = readUsers(),
-    if (req.method === 'GET') {
+    if (req.method === 'GET') {;
       const { userId = 'demo-user' } = req.query;
       const user = users[userId as string];
       return res.status(200).json({ progress: user?.progress ?? {} });
@@ -55,3 +55,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .json({ error: e?.message ?? 'Failed to handle progress' });
   }
 
+
+}
+}

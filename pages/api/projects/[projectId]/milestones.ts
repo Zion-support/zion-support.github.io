@@ -4,10 +4,10 @@ import {
   addMilestone,
   getProject,
   assertParticipantOrAdmin,
-  isClient,
+  isClient,;
 } from "../../../../utils/api/projects";
 import { Milestone } from "../../../../utils/types/milestones";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const user = requireUser(req, res);
   if (!user) return;
   const { projectId } = req.query as { projectId: string };

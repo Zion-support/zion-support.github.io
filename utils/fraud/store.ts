@@ -1,4 +1,4 @@
-export interface FraudRecord {
+export interface FraudRecord {;
   id: string;
   type: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -10,7 +10,7 @@ export interface FraudRecord {
   resolution?: string;
 }
 
-export interface MonthlyReport {
+export interface MonthlyReport {;
   month: string;
   totalCases: number;
   resolvedCases: number;

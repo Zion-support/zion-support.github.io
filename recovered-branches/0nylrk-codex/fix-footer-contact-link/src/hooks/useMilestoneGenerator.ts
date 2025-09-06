@@ -2,14 +2,14 @@
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from 'sonner';
-export interface MilestoneInput {
+export interface MilestoneInput {;
   scope: string;
   startDate: string;
   endDate: string | null,
   projectType: string
 }
 
-export interface GeneratedMilestone {
+export interface GeneratedMilestone {;
   title: string;
   description: string;
   dueDate: string;
@@ -17,7 +17,7 @@ export interface GeneratedMilestone {
   isAiGenerated: boolean
 }
 
-export function useMilestoneGenerator() {
+export function useMilestoneGenerator() {;
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
 

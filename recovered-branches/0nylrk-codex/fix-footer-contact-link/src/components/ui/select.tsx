@@ -124,7 +124,6 @@ className={cn(
         <Check className=&quot;h-4 w-4&quot; />
       </SelectPrimitive.ItemIndicator>
     </span>
-
     <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
   </SelectPrimitive.Item>
 ))

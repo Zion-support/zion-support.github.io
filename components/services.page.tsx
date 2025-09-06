@@ -38,7 +38,7 @@ export default function ServicesPage() {
             product.
           </p>        </section>
       </div>
-    </EnhancedLayout>
+    </EnhancedLayout>;
   );
 }        <section id="ai" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <BadgeCheck className="h-6 w-6 text-indigo-500" />

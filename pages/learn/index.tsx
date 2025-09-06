@@ -5,7 +5,7 @@ export default function LearnMarketplace() {
   const [filters, setFilters] = useState({
     category: '',
     level: '',
-    isFree: '',
+    isFree: '',;
   });  const [courses, setCourses] = useState<Course[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -33,9 +33,7 @@ export default function LearnMarketplace() {
             Courses • Certifications • Career Boost
           </div>        </div>
       </div>
-
       <FilterBar {...filters} onChange={setFilters} />
-
       {loading ? (
         <div>Loading...</div>
       ) : (
@@ -46,3 +44,5 @@ export default function LearnMarketplace() {
       )}
     </div>
 );
+
+}

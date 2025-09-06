@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
 import Link from 'next/link'
-import { TalentProfile } from '@/types/talent'
+import { TalentProfile } from '@/types/talent';
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import React and useState
 
@@ -97,7 +97,6 @@ export function TalentCard({
               </div>
             )}
           </div>
-
           <div className='flex-1'>
             <div className='flex justify-between items-start'>
               <h3 className='text-lg font-bold text-white'>
@@ -121,7 +120,6 @@ export function TalentCard({
             <p className='text-zion-cyan font-medium'>
               {talent.professional_title}
             </p>
-
             <div className='mt-2 flex flex-wrap gap-3 text-sm'>
               {talent.location && (
                 <div className='flex items-center text-zion-slate-light'>
@@ -145,7 +143,6 @@ export function TalentCard({
             </div>
           </div>
         </div>
-
         {skills.length > 0 && (
           <div className='mt-4'>
             <div className='flex flex-wrap gap-2'>
@@ -181,7 +178,6 @@ export function TalentCard({
               <div className='text-zion-slate-light'>Rate not specified</div>
             )}
           </div>
-
           <div className='flex items-center gap-2'>
             {isAuthenticated && (
               <Button
@@ -199,7 +195,6 @@ export function TalentCard({
               <div className="text-zion-slate-light">Rate not specified</div>
             )}
           </div>
-          
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
@@ -228,5 +223,8 @@ export function TalentCard({
       </div>
     </Card>
   )
-}
+};
 ;
+}
+}
+}

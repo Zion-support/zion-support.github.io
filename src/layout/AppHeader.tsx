@@ -40,7 +40,6 @@
               <ResponsiveNavigation openLoginModal={openLoginModal} />
             </nav>
           </div>
-          
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
@@ -57,7 +56,6 @@
               )}
             </button>
           </div>
-
           <PointsBadge />
           {!isLoggedIn && (
             <div className="ml-4 relative z-10 flex items-center">
@@ -95,7 +93,6 @@
           )}
         </div>
       </header>
-      
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-60 pt-16">
@@ -710,3 +707,6 @@
     </header>  )
 }
 ;
+}
+}
+}

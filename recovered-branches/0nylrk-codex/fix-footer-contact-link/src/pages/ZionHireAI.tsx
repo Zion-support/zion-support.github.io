@@ -9,7 +9,7 @@ import {Button} from "@/components/ui/button";
 import {ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe} from "lucide-react";
 import {useAuth} from "@/hooks/useAuth";
 import {Link} from "react-router-dom";
-export default function ZionHireAI() {
+export default function ZionHireAI() {;
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
   const { isAuthenticated } = useAuth();
   
@@ -69,7 +69,6 @@ export default function ZionHireAI() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md: px-6">
@@ -80,7 +79,6 @@ export default function ZionHireAI() {
                 find better candidates, and make data-driven decisions.
               </p>
             </div>
-            
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card className="bg-card border border-border">
                 <CardHeader>
@@ -107,7 +105,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <PenTool className="h-10 w-10 text-zion-purple mb-2" />
@@ -133,7 +130,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
@@ -159,7 +155,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <Globe className="h-10 w-10 text-zion-purple mb-2" />
@@ -185,7 +180,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <BarChart3 className="h-10 w-10 text-zion-purple mb-2" />
@@ -211,7 +205,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />
@@ -240,7 +233,6 @@ export default function ZionHireAI() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 md:px-6 text-center">

@@ -111,6 +111,6 @@ export function SocialShareSection() {
 })
 }
 }</div> </div> </div> </section>) 
-}'"
-}
+}'";
+};
 ;

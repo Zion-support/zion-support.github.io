@@ -17,12 +17,12 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
+  DialogTitle,;
 } from '@/components/ui/dialog';
 import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
+  // type argument and cast the result instead to prevent TS2347 errors.;
   const router = useRouter();
   const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
@@ -108,7 +108,6 @@ export default function ListingDetail() {
                     </div>
                   )}
                 </div>
-
                 {listing.images && listing.images.length > 1 && (
                   <div className='flex p-4 gap-2 overflow-x-auto'>
                     {listing.images.map((image, index) => (
@@ -144,7 +143,6 @@ export default function ListingDetail() {
                   </div>
                 )}
               </div>
-
               {/* Description Section */}
               <div className='mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light'>
                 <h2 className='text-2xl font-bold text-white mb-4'>
@@ -153,7 +151,6 @@ export default function ListingDetail() {
                 <p className='text-zion-slate-light whitespace-pre-line'>
                   {listing.description}
                 </p>
-
                 {/* Features */}
                 <div className='mt-8'>
                   <h3 className='text-xl font-bold text-white mb-4'>
@@ -209,7 +206,6 @@ export default function ListingDetail() {
                     </div>
                   </div>
                 </div>
-
                 {/* Tags */}
                 <div className='mt-8'>
                   <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>
@@ -233,7 +229,6 @@ export default function ListingDetail() {
                 </div>
               </div>
             </div>
-
             {/* Right Column - Details */}
             <div className='lg:col-span-1'>
               <div className='bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6'>
@@ -261,11 +256,9 @@ export default function ListingDetail() {
                     </Badge>
                   )}
                 </div>
-
                 <h1 className='text-2xl font-bold text-white mb-4'>
                   {listing.title}
                 </h1>
-
                   <div className='flex items-center gap-2 mb-6'>
                     <div className='flex items-center'>
                       {[...Array(5)].map((_, i) => (
@@ -314,7 +307,6 @@ export default function ListingDetail() {
                     </div>
                   )}
                 </div>
-
                 {/* Action Buttons */}
                 <div className='space-y-3 mb-8'>                  {listing.price !== null ? (                    </span>
                   </div>
@@ -332,9 +324,8 @@ export default function ListingDetail() {
                     </div>
                   )}
                 </div>
-
                 {/* Action Buttons */}
-                <div className='space-y-3 mb-8'>                
+                <div className='space-y-3 mb-8'>
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
                   {listing.price !== null ? (
@@ -374,7 +365,6 @@ export default function ListingDetail() {
                     Contact Publisher
                   </Button>
                 </div>
-
                 {/* Publisher Info */}
                 <div className='border-t border-zion-blue-light pt-6'>
                   <h3 className='text-lg font-bold text-white mb-3'>
@@ -416,7 +406,6 @@ export default function ListingDetail() {
                     </div>
                   </div>
                 </div>
-
                 {/* Additional Info */}
                 <div className='border-t border-zion-blue-light mt-6 pt-6'>
                   <div className='flex justify-between mb-2'>
@@ -435,7 +424,6 @@ export default function ListingDetail() {
                     </div>
                   </div>
                 </div>
-                
                 {/* Additional Info */}
                 <div className="border-t border-zion-blue-light mt-6 pt-6">
                   <div className="flex justify-between mb-2">
@@ -452,7 +440,6 @@ export default function ListingDetail() {
           </div>
         </div>
       </div>
-
       <ChatWidget
         roomId = {listing.id,}
         recipientId = {listing.author.id,}

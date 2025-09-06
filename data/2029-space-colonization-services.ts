@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface SpaceColonization2029Service {
+export interface SpaceColonization2029Service {;
   id: string;
   name: string;
   tagline: string;
@@ -444,7 +444,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     customers: 18,
     rating: 4.8,
     reviews: 52,
-  },
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',

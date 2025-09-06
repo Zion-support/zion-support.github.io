@@ -118,7 +118,6 @@ export default function ContractBuilderPage() {
   return (
     <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>
-
       <form onSubmit={submitForm} className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 dark:bg-neutral-900 p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
         <div className="col-span-1 md:col-span-2">
           <label className="block text-sm font-medium mb-1">Talent name</label>
@@ -144,7 +143,6 @@ export default function ContractBuilderPage() {
           <label className="block text-sm font-medium mb-1">End date</label>
           <DatePicker className="w-full input input-bordered" selected={endDate} onChange={(d) => setEndDate(d)} dateFormat="MMMM d, yyyy" />
         </div>
-
         <div className="md:col-span-2">
           <label className="block text-sm font-medium mb-2">Payment terms</label>
           <div className="flex items-center gap-4 mb-4">
@@ -155,7 +153,6 @@ export default function ContractBuilderPage() {
               <input type="radio" name="pay" checked={paymentType === 'fixed'} onChange={() => setPaymentType('fixed')} /> Fixed
             </label>
           </div>
-
           {paymentType === 'hourly' ? (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
@@ -188,7 +185,6 @@ export default function ContractBuilderPage() {
             </div>
           )}
         </div>
-
         <div>
           <label className="block text-sm font-medium mb-2">Optional clauses</label>
           <div className="space-y-2">
@@ -200,7 +196,6 @@ export default function ContractBuilderPage() {
             </label>
           </div>
         </div>
-
         <div>
           <label className="block text-sm font-medium mb-1">Governing law</label>
           <input className="w-full input input-bordered" value={governingLaw} onChange={(e) => setGoverningLaw(e.target.value)} />
@@ -209,7 +204,6 @@ export default function ContractBuilderPage() {
           <label className="block text-sm font-medium mb-1">Included revision rounds</label>
           <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />
         </div>
-
         <div className="md:col-span-2 flex items-center gap-3">
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
             {loading ? 'Generating…' : 'Generate contract'}
@@ -217,7 +211,6 @@ export default function ContractBuilderPage() {
           {error && <span className="text-red-600 text-sm">{error}</span>}
         </div>
       </form>
-
       {contract && (
         <div className="mt-8">
           <div className="flex items-center justify-between mb-3">
@@ -233,5 +226,5 @@ export default function ContractBuilderPage() {
         </div>
       )}
     </div>
-  )
+  );
 };

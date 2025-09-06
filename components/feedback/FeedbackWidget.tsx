@@ -1,20 +1,20 @@
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-export type FeedbackWidgetProps = {
+export type FeedbackWidgetProps = {;
   responseId?: string;
   aiModel?: string;
 };
 
 export default function FeedbackWidget({
   responseId,
-  aiModel,
-}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
+  aiModel,;
+}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {;
   responseId?: string;
   aiModel?: string
 };
 
-export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
+export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {;
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
   const [comment, setComment] = useState('');
   const [submitting, setSubmitting] = useState(false);

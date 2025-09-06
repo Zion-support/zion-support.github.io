@@ -20,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       projectId: string, fromRole: 'client' | 'talent',
       fromId: string, rating: number,
       text: string, categories?: Review['categories'],
-      anonymous?: boolean
+      anonymous?: boolean;
     };
 
     if (!projectId || !fromRole || !fromId) {

@@ -7,7 +7,7 @@ export default function SecretsRotationAutomationPage() {
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
     "CI/CD integration (GitHub Actions, CircleCI)",
-    "Cloud KMS and Vault support",
+    "Cloud KMS and Vault support",;
   ];
 
 return (

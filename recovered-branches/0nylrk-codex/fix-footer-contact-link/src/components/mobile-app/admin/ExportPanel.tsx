@@ -16,7 +16,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       let content: string,
       let fileName: string,
       
-      if (format === 'json') {
+      if (format === 'json') {;
         content = JSON.stringify(metadata, null, 2);
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
@@ -53,7 +53,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
     } catch (error) {
       console.error("Export failed:", error);
       toast.error(`Failed to export ${format.toUpperCase()} file`)
-    }
+    };
   };
   
   const trackAnalytics = () => {
@@ -84,7 +84,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
               </Button>
             </div>
           </div>
-          
           <div className="border-t border-zion-purple/20 pt-4">
             <h4 className="font-medium mb-2">Installation Analytics</h4>
             <p className="text-sm text-gray-400 mb-3">

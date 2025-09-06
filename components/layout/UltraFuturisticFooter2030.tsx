@@ -24,9 +24,9 @@ import {
   ArrowRight,
   Heart,
   Star,
-  Award,
+  Award,;
   CheckCircle,;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle
@@ -214,7 +214,7 @@ const certifications = [
   'FedRAMP Authorized',];
 
 export default function UltraFuturisticFooter2030() {
-  return (
+  return (;
     <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>];
 
 const socialLinks = [
@@ -243,7 +243,6 @@ export default function UltraFuturisticFooter2030() {
           <div className='absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse'></div>
         </div>
       </div>
-
       <div className='relative z-10'>
         {/* Main Footer Content */}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
@@ -263,13 +262,11 @@ export default function UltraFuturisticFooter2030() {
                   </p>
                 </div>
               </div>
-
               <p className='text-gray-300 text-sm leading-relaxed'>
                 Pioneering the future with cutting-edge AI, quantum computing,
                 and emerging technologies. Transforming businesses through
                 innovative solutions and intelligent automation.
               </p>
-
               {/* Contact Info */}
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3 text-sm text-gray-300'>
@@ -309,7 +306,6 @@ export default function UltraFuturisticFooter2030() {
           <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
         </div>
       </div>
-
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -327,12 +323,10 @@ export default function UltraFuturisticFooter2030() {
                   <p className="text-sm text-gray-400">2030 Future Technology</p>
                 </div>
               </div>
-              
               <p className="text-gray-300 text-sm leading-relaxed">
                 Pioneering the future with cutting-edge AI, quantum computing, and emerging technologies. 
                 Transforming businesses through innovative solutions and intelligent automation.
               </p>
-
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-sm text-gray-300">
@@ -359,7 +353,6 @@ export default function UltraFuturisticFooter2030() {
                 </div>
               </div>
             </div>
-
             {/* Service Categories */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -397,7 +390,6 @@ export default function UltraFuturisticFooter2030() {
                 ))}
               </div>
             </div>
-
             {/* Quick Links */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -428,7 +420,6 @@ export default function UltraFuturisticFooter2030() {
                   </Link>
                 ))}
               </div>
-
               <div className='space-y-2'>
                 <h5 className='text-sm font-medium text-cyan-300'>Company</h5>                {companyInfo.map((link, index) => (
                   <Link
@@ -447,14 +438,12 @@ export default function UltraFuturisticFooter2030() {
                 ))}
               </div>
             </div>
-
             {/* Social & Certifications */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Users className='w-5 h-5 text-green-400' />
                 <span>Connect & Trust</span>
               </h4>
-
               {/* Social Links */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300'>
@@ -465,7 +454,6 @@ export default function UltraFuturisticFooter2030() {
                       key={index}
                       href={social.href}                <span>Connect & Trust</span>
               </h4>
-              
               {/* Social Links */}
               <div className="space-y-3">
                 <h5 className="text-sm font-medium text-green-300">Follow Us</h5>
@@ -486,7 +474,6 @@ export default function UltraFuturisticFooter2030() {
                   ))}
                 </div>
               </div>
-
               {/* Certifications */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
@@ -513,12 +500,11 @@ export default function UltraFuturisticFooter2030() {
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className='border-t border-purple-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
-              <div className='flex items-center space-x-6 text-sm text-gray-400'>
+              <div className='flex items-center space-x-6 text-sm text-gray-400'>;
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
                 <Link
                   href='/privacy'
@@ -533,9 +519,7 @@ export default function UltraFuturisticFooter2030() {
                   Terms of Service
                 </Link>
               </div>
-
               <div className='flex items-center space-x-4 text-sm text-gray-400'>              </div>
-              
               <div className="flex items-center space-x-4 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Heart className="w-4 h-4 text-red-400" />
@@ -559,3 +543,5 @@ export default function UltraFuturisticFooter2030() {
   );
 }
 ;
+}
+}

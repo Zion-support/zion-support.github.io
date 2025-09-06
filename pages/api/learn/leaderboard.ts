@@ -17,5 +17,5 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ leaderboard: top })
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' })
-  }
+  };
 };

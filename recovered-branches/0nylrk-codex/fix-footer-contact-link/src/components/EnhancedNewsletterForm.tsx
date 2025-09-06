@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Mail } from "lucide-react";
-export function EnhancedNewsletterForm() {
+export function EnhancedNewsletterForm() {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -32,7 +32,6 @@ export function EnhancedNewsletterForm() {
           </p>
         </div>
       </div>
-
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>

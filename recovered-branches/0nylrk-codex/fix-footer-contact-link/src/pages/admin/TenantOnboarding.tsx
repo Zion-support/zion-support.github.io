@@ -14,7 +14,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {toast} from "sonner";
 import {supabase} from "@/integrations/supabase/client";
 import {Switch} from "@/components/ui/switch";
-export default function TenantOnboarding() {
+export default function TenantOnboarding() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -128,7 +128,6 @@ export default function TenantOnboarding() {
               Create a new white-label instance of Zion Hire AI for a company.
             </p>
           </div>
-
           <Card>
             <CardHeader>
               <CardTitle>New Tenant Setup</CardTitle>
@@ -144,7 +143,6 @@ export default function TenantOnboarding() {
                     <TabsTrigger value="branding">Branding</TabsTrigger>
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>
                   </TabsList>
-                  
                   <TabsContent value="company" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="brand_name">Company Name</Label>
@@ -157,7 +155,6 @@ export default function TenantOnboarding() {
                         required
                       />
                     </div>
-                    
                     <div className="space-y-2">
                       <Label htmlFor="industry">Industry</Label>
                       <Select 
@@ -180,7 +177,6 @@ export default function TenantOnboarding() {
                         </SelectContent>
                       </Select>
                     </div>
-                    
                     <div className="space-y-2">
                       <Label htmlFor="company_size">Company Size</Label>
                       <Select 
@@ -202,7 +198,6 @@ export default function TenantOnboarding() {
                       </Select>
                     </div>
                   </TabsContent>
-                  
                   <TabsContent value="branding" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="logo_url">Logo URL</Label>
@@ -217,7 +212,6 @@ export default function TenantOnboarding() {
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended)
                       </p>
                     </div>
-                    
                     <div className="space-y-2">
                       <Label htmlFor="primary_color">Primary Brand Color</Label>
                       <div className="flex items-center gap-2">
@@ -237,7 +231,6 @@ export default function TenantOnboarding() {
                         />
                       </div>
                     </div>
-                    
                     <div className="space-y-2">
                       <Label htmlFor="theme_preset">Theme Preset</Label>
                       <Select 
@@ -257,7 +250,6 @@ export default function TenantOnboarding() {
                         </SelectContent>
                       </Select>
                     </div>
-                    
                     <div className="flex items-center justify-between">
                       <div className="space-y-0.5">
                         <Label htmlFor="is_co_branded">Co-branding</Label>
@@ -272,7 +264,6 @@ export default function TenantOnboarding() {
                       />
                     </div>
                   </TabsContent>
-                  
                   <TabsContent value="domain" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="subdomain">Subdomain</Label>
@@ -293,7 +284,6 @@ export default function TenantOnboarding() {
                         Leave blank to auto-generate from company name
                       </p>
                     </div>
-                    
                     <div className="space-y-2">
                       <Label htmlFor="custom_domain">Custom Domain (Optional)</Label>
                       <Input
@@ -309,7 +299,6 @@ export default function TenantOnboarding() {
                     </div>
                   </TabsContent>
                 </Tabs>
-                
                 <div className="flex justify-end space-x-2">
                   <Button type="button" variant="outline" onClick={() => window.history.back()}>
                     Cancel

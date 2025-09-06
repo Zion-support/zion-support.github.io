@@ -1,7 +1,7 @@
 
 import {useState, useEffect} from "react";
 import {Company} from "@/components/enterprise/workspace/CompanyDashboard";
-export function useCompanyWorkspace(companySlug?: string) {
+export function useCompanyWorkspace(companySlug?: string) {;
   const [company, setCompany] = useState<Company | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

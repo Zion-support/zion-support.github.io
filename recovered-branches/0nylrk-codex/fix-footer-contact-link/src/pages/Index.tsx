@@ -20,7 +20,7 @@ import {useTranslation} from "react-i18next";
 import {useLanguage} from "@/context/LanguageContext";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone} from "lucide-react";
 
-export default function Index() {
+export default function Index() {;
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
   
@@ -74,7 +74,6 @@ export default function Index() {
       />
       <Header />
       <HeroSection />
-      
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -86,7 +85,6 @@ export default function Index() {
               {t("home.tools_description")}
             </p>
           </div>
-          
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index) => (
               <Link 
@@ -108,22 +106,17 @@ export default function Index() {
           </div>
         </div>
       </section>
-      
       <CategoriesSection />
       <BenefitsSection />
-      
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
-      
       <HowItWorksSection />
       <FeaturedListingsSection />
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
-      
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
-      
       <WaitlistSection />
       <FloatingCTA />
       <Footer />

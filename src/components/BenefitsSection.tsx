@@ -39,7 +39,6 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
             {t('home.benefits_subtitle')}
           </p>
         </div>
-
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
@@ -86,5 +85,5 @@ export default function Page() {
     features: ["
       "Direct provider connections","
       "Competitive pricing","
-      "Bulk discount options","
-      "Transparent cost structure" ]
+      "Bulk discount options",";
+      "Transparent cost structure" ];

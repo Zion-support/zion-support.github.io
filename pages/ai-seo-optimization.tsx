@@ -49,5 +49,5 @@ export default function AISEOOptimizationPage() {
         </div>
       </div>
     </Layout>
-  )
+  );
 };

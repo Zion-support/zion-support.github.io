@@ -31,7 +31,7 @@ const serviceProfileSchema = z.object({
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
 
-export function ServiceProviderRegistrationForm() {
+export function ServiceProviderRegistrationForm() {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [serviceTags, setServiceTags] = useState<string[]>([]);
@@ -295,7 +295,6 @@ export function ServiceProviderRegistrationForm() {
             Showcase your services and expertise to potential clients.
           </CardDescription>
         </CardHeader>
-
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <CardContent className="space-y-8">
@@ -325,7 +324,6 @@ export function ServiceProviderRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -348,7 +346,6 @@ export function ServiceProviderRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -371,7 +368,6 @@ export function ServiceProviderRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -395,7 +391,6 @@ export function ServiceProviderRegistrationForm() {
                     />
                   </div>
                 </div>
-                
                 {/* Upload Avatar */}
                 <div className="space-y-2">
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>
@@ -415,7 +410,6 @@ export function ServiceProviderRegistrationForm() {
                         </div>
                       )}
                     </div>
-
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4" />
                       <span>Upload Photo</span>
@@ -432,9 +426,7 @@ export function ServiceProviderRegistrationForm() {
                   </p>
                 </div>
               </div>
-
               <Separator className="bg-zion-blue-light/50" />
-
               {/* Bio Section */}
               <div className="space-y-4">
                 <h3 className="text-lg font-medium text-white">Service Description</h3>
@@ -517,13 +509,11 @@ export function ServiceProviderRegistrationForm() {
                         <Check className="mr-1 h-3 w-3" /> Apply
                       </Button>
                     </div>
-                    
                     <div className="space-y-4">
                       <div>
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>
                         <p className="text-zion-slate italic">{generatedContent.summary}</p>
                       </div>
-                      
                       {generatedContent.services && generatedContent.services.length > 0 && (
                         <div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>
@@ -543,9 +533,7 @@ export function ServiceProviderRegistrationForm() {
                   </div>
                 )}
               </div>
-
               <Separator className="bg-zion-blue-light/50" />
-
               {/* Services and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Services Section */}
@@ -604,7 +592,6 @@ export function ServiceProviderRegistrationForm() {
                     )}
                   </div>
                 </div>
-
                 {/* Pricing and Availability Section */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>
@@ -654,7 +641,6 @@ export function ServiceProviderRegistrationForm() {
                                 Available for Work
                               </label>
                             </div>
-
                             <div className="flex items-center space-x-2">
                               <input
                                 type="radio"
@@ -669,7 +655,6 @@ export function ServiceProviderRegistrationForm() {
                                 Limited Availability
                               </label>
                             </div>
-
                             <div className="flex items-center space-x-2">
                               <input
                                 type="radio"
@@ -693,7 +678,6 @@ export function ServiceProviderRegistrationForm() {
                 </div>
               </div>
             </CardContent>
-
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
                 <Button

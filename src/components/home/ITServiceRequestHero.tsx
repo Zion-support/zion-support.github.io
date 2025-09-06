@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { useToast } from '@/hooks/use-toast'
 import axios from 'axios'
 import { Loader2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
 import { logErrorToProduction } from '@/utils/productionLogger'; export function ITServiceRequestHero() { export function ITServiceRequestHero(...args[]):  {
   const [location, setLocation] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -45,8 +45,8 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
-  ]
-import { motion  } from 'framer-motion'
+  ];
+import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';"
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },"
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },"
@@ -221,7 +221,7 @@ export function ITServiceRequestHero() {
   logErrorToProduction (err)
 toast ({
 }finally {
-  setIsSubmitting (false) 
+  setIsSubmitting (false) ;
 };"
 py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image <Input type="email" value= {
   email 
@@ -248,8 +248,8 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]" /> <Button type="submit" disabled= {
   isSubmitting "
 }className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105" > {"
-  isSubmitting && (<Loader2 className="mr-2 h-4 w-4 animate-spin" /> 
-}Request Service </Button> </form> </div> 
+  isSubmitting && (<Loader2 className="mr-2 h-4 w-4 animate-spin" />
+}Request Service </Button> </form> </div>
 }'"
 }
 }

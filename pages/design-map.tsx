@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
-import { getZionDesignMap } from '../utils/design-map'
+import { getZionDesignMap } from '../utils/design-map';
 ;
 export default function DesignMapPage() {
   const designMap = useMemo(() => getZionDesignMap(), [])
@@ -42,7 +42,6 @@ export default function DesignMapPage() {
             <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</a>
           </div>
         </div>
-
         <div className="grid md:grid-cols-2 gap-6">
           <MapColumn title="Foundations" sections={designMap.products.foundations} />
           <MapColumn title="Talent UI" sections={designMap.products.talent} />
@@ -52,7 +51,6 @@ export default function DesignMapPage() {
           <MapColumn title="Admin Console" sections={designMap.products.admin} />
           <MapColumn title="Mobile Layouts" sections={designMap.products.mobile} />
         </div>
-
         <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
           <h2 className="font-medium mb-3">Create New Screen</h2>
           <div className="flex flex-col md:flex-row gap-3 items-start md:items-end">
@@ -104,4 +102,4 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
       </div>
     </div>
   )
-}
+};

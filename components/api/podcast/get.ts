@@ -22,7 +22,7 @@ function ensureStorage() {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  ensureStorage(),
+  ensureStorage(),;
   const { id } = req.query as { id?: string };
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const episode = episodes.find(e => e.id === id);
@@ -30,4 +30,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json({ episode });  const episode = episodes.find((e) => e.id === id);
   if (!episode) return res.status(404).json({ error: 'Not found' });
   return res.status(200).json({ episode })
+}
+
 }

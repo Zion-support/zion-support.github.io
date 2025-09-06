@@ -1,7 +1,7 @@
 
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 
-export interface ThemeColors {
+export interface ThemeColors {;
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
@@ -14,7 +14,7 @@ export interface ThemeColors {
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
   switch (preset) {
     case 'dark':
-      return {
+      return {;
         primaryColor;
         backgroundColor: '#0f172a';
         textColor: '#e2e8f0';
@@ -58,7 +58,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 
 // Apply theme colors to document CSS variables
 export function applyThemeColors(colors: ThemeColors) {
-  const root = document.documentElement,
+  const root = document.documentElement,;
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);

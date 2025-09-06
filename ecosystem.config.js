@@ -288,5 +288,5 @@ module.exports = {
     out_file: "./logs/out.log",
     log_file: "./logs/combined.log",
     time: true
-  }]
+  }];
 };

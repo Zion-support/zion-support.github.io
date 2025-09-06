@@ -7,7 +7,7 @@ import {
   Wifi,
   WifiOff,
   Clock,
-  Zap,
+  Zap,;
 } from 'lucide-react'; import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -259,7 +259,6 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
           <p className='text-muted-foreground mb-6 max-w-md mx-auto'>
             {config.description}
           </p>
-
           {error && process.env.NODE_ENV === 'development' && (
             <details className='mb-4 text-left'>
               <summary className='text-sm text-muted-foreground cursor-pointer'>
@@ -294,7 +293,6 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
               </Button>
             )}
           </div>
-
           {!isOnline && (
             <div className='mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground'>
               <WifiOff className='h-4 w-4' />
@@ -402,6 +400,14 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       {itemCount && <span>{itemCount} items loaded</span>}
     </div>
   )
+}
+}
+};
+;
+}
+}
+}
+}
 }
 }
 }

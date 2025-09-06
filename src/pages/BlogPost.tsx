@@ -72,8 +72,8 @@ export default function BlogPost() {
         return } catch (err) {
         logErrorToProduction('Failed to fetch blog post', { data: err })
         setError('Failed to load article')
-      }
-
+      };
+;
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost)
         const related = BLOG_POSTS.filter(
@@ -171,7 +171,6 @@ export default function BlogPost() {
               </Link>
             </Button>
           </div>
-
           {/* Article header */}
           <div className='mb-8 max-w-4xl mx-auto'>
             <span className='text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4'>
@@ -181,7 +180,6 @@ export default function BlogPost() {
               {post.title}
             </h1>
             <p className='text-xl text-zion-slate-light mb-8'>{post.excerpt}</p>
-
             {/* Author and metadata */}
             <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-8'>
               <div className='flex items-center mb-4 sm:mb-0'>
@@ -197,7 +195,6 @@ export default function BlogPost() {
                   </p>
                 </div>
               </div>
-
               <div className='flex items-center space-x-4'>
                 <div className='flex items-center text-zion-slate-light'>
                   <Calendar className='h-4 w-4 mr-1' />
@@ -216,7 +213,6 @@ export default function BlogPost() {
                     <Share2 className='h-4 w-4 mr-1' />
                     <span className='text-sm'>Share</span>
                   </Button>
-
                   {showShareMenu && (
                     <div className='absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10'>
                       <a
@@ -255,7 +251,6 @@ export default function BlogPost() {
               </div>
             </div>
           </div>
-
           {/* Featured image */}
           <div className='mb-12 max-w-5xl mx-auto'>
             <div className='aspect-[21/9] rounded-lg overflow-hidden'>
@@ -266,13 +261,11 @@ export default function BlogPost() {
                 fallbackSrc='/images/blog-placeholder.svg'              />
             </div>
           </div>
-
           {/* Article content */}
           <div className='max-w-4xl mx-auto'>
             <div className='prose prose-lg prose-invert max-w-none'>
               <ReactMarkdown>{post.content}</ReactMarkdown>
             </div>
-
             {/* Tags */}
             <div className='flex flex-wrap gap-2 mt-12'>
               {post.tags.map(tag => (
@@ -283,9 +276,7 @@ export default function BlogPost() {
                 </span>
               ))}
             </div>
-
             <Separator className='my-12 bg-zion-blue-light' />
-
             {/* Related articles */}
             {relatedPosts.length > 0 && (
               <div className='mt-12'>
@@ -334,7 +325,6 @@ export default function BlogPost() {
                 to accelerate your projects.
               </p>
             </div>
-
             {/* Navigation */}
             <div className='flex justify-between items-center mt-12'>
               <Button
@@ -653,6 +643,6 @@ export default function BlogPost() {return ("
       </div>
   )
 }
-}
-}
+};
+};
 ;

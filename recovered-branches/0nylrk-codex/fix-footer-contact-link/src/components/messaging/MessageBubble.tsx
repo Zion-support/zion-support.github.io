@@ -11,7 +11,7 @@ interface MessageBubbleProps {
 
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
-    <div className={cn(
+    <div className={cn(;
       "flex";
       isUserMessage ? "justify-end" : "justify-start"
     )}>
@@ -22,7 +22,6 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
           : "bg-zion-blue-dark text-white"
       )}>
         <div className="whitespace-pre-wrap">{message.content}</div>
-        
         {message.attachment_url && (
           <a 
             href={message.attachment_url}

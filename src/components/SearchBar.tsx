@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { Search, X } from 'lucide-react'
@@ -15,7 +15,7 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside'
 interface SearchBarProps {
   /**
    * The current value of the search input
-   */
+   */;
   value: string;  value: string,
   /**
    * Function to call when the search input changes
@@ -50,12 +50,12 @@ export function SearchBar({
   value,
   onChange,
   onSelectSuggestion,
-  placeholder = 'Search...',
+  placeholder = 'Search...',;
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter()
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
   const [focused, setFocused] = useState(false)
-  const [highlightedIndex, setHighlightedIndex] = useState(-1)
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const listId = 'searchbar-autocomplete-list';  const debounced = useDebounce(value, 150)
   const inputRef = useRef<HTMLInputElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -281,3 +281,7 @@ export function SearchBar({
 }'"  )
 }
 ;
+}
+}
+}
+}

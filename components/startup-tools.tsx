@@ -18,8 +18,8 @@ import {
   TrendingUp,
   Zap,
   Target,
-  Lightbulb,
-  BookOpen,;} from 'lucide-react';import { 
+  Lightbulb,;
+  BookOpen,;} from 'lucide-react';import { ;
   Rocket;
   DollarSign, 
   Users, 
@@ -295,7 +295,7 @@ export default function StartupToolsPage() {
       users: '26K+',
       icon: <BarChart3 className='w-8 h-8 text-purple-400' />,      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Live chatCustomer messagingHelp deskUser onboardingAnalytics & reportingIntegration ecosystem'
+        'Live chatCustomer messagingHelp deskUser onboardingAnalytics & reportingIntegration ecosystem';
       ];
       website: 'https://intercom.com',
       useCase: 'Perfect for SaaS startups and online businesses that want to provide excellent customer support and user engagement.',
@@ -400,7 +400,6 @@ export default function StartupToolsPage() {
           content='Essential tools and resources for startups and entrepreneurs to accelerate growth.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         <div className='absolute inset-0'>
@@ -408,9 +407,7 @@ export default function StartupToolsPage() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]' />
         </div>
-
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <div className='mb-20 animate-fade-in'>
             <div className='mb-8'>
@@ -419,7 +416,6 @@ export default function StartupToolsPage() {
                 Startup Growth Tools
               </div>
             </div>
-
             <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
               Startup Tools & Resources
             </h1>
@@ -428,7 +424,6 @@ export default function StartupToolsPage() {
               Expert-curated selection of SaaS services for entrepreneurs and
               growing businesses.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               <Button
                 href='#tools'
@@ -452,7 +447,6 @@ export default function StartupToolsPage() {
               </Button>
             </div>
           </div>
-
           {/* Stats */}
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
@@ -505,7 +499,6 @@ export default function StartupToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -528,7 +521,6 @@ export default function StartupToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Tools Grid */}
       <section id='tools' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -543,7 +535,6 @@ export default function StartupToolsPage() {
                 : `Explore the best ${selectedCategory.toLowerCase()} tools to accelerate your startup's growth.`}
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
               <Card
@@ -571,7 +562,6 @@ export default function StartupToolsPage() {
                         </span>
                       </div>
                     </div>
-
                     <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>
                       <span className='px-2 py-1 bg-gray-800 rounded-full'>
                         {tool.category}
@@ -579,11 +569,9 @@ export default function StartupToolsPage() {
                       <span>{tool.users} users</span>
                       <span className='text-green-400'>{tool.pricing}</span>
                     </div>
-
                     <p className='text-gray-400 leading-relaxed mb-4'>
                       {tool.description}
                     </p>
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -602,14 +590,12 @@ export default function StartupToolsPage() {
                           ))}
                       </div>
                     </div>
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Best For:
                       </h4>
                       <p className='text-sm text-gray-400'>{tool.bestFor}</p>
                     </div>
-
                     <div className='flex items-center justify-between'>
                       <Button
                         href={tool.website}
@@ -620,14 +606,13 @@ export default function StartupToolsPage() {
                         Visit Website
                         <ExternalLink className='w-4 h-4 ml-2' />
                       </Button>
-
                       <div className='text-right'>
                         <div className='text-xs text-gray-500 mb-1'>
                           Use Case:
                         </div>
                         <div className='text-sm text-gray-300 max-w-xs'>
                           {tool.useCase}
-                        </div>                      </div>                      
+                        </div>                      </div>
                       <div className="text-right">
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>
                         <div className="text-sm text-gray-300 max-w-xs">{tool.useCase}</div>
@@ -639,7 +624,6 @@ export default function StartupToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Startup Resources Section */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -652,7 +636,6 @@ export default function StartupToolsPage() {
               succeed.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card className='text-center'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600'>
@@ -672,7 +655,6 @@ export default function StartupToolsPage() {
               >                Explore Communities
               </Button>
             </Card>
-
             <Card className='text-center'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600'>
                 <BookOpen className='w-8 h-8 text-white' />              Additional Startup Resources
@@ -681,7 +663,6 @@ export default function StartupToolsPage() {
               Beyond tools, here are additional resources to help your startup succeed.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">
@@ -695,7 +676,6 @@ export default function StartupToolsPage() {
                 Explore Communities
               </Button>
             </Card>
-
             <Card className='text-center'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600'>
                 <BookOpen className='w-8 h-8 text-white' />
@@ -714,7 +694,6 @@ export default function StartupToolsPage() {
               >                Start Learning
               </Button>
             </Card>
-
             <Card className='text-center'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>
                 <TrendingUp className='w-8 h-8 text-white' />              </div>
@@ -726,7 +705,6 @@ export default function StartupToolsPage() {
                 Start Learning
               </Button>
             </Card>
-
             <Card className='text-center'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>
                 <TrendingUp className='w-8 h-8 text-white' />
@@ -750,7 +728,6 @@ export default function StartupToolsPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-orange-600 to-orange-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -786,4 +763,7 @@ export default function StartupToolsPage() {
       </section>
     </>
 );
+}
+
+}
 }

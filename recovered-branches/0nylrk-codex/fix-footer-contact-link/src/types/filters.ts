@@ -1,5 +1,5 @@
 
-export interface FilterSidebarProps {
+export interface FilterSidebarProps {;
   searchTerm: string;
   setSearchTerm: (term: string) => void;
   selectedSkills: string[];
@@ -26,7 +26,7 @@ export interface FilterSidebarProps {
   isMobileFilterOpen?: boolean
 }
 
-export interface FilterComponentProps {
+export interface FilterComponentProps {;
   expanded: boolean;
   toggleSection: () => void,
   isMobileFilterOpen?: boolean
@@ -47,12 +47,12 @@ export interface RegionFilterProps extends FilterComponentProps {
   toggleRegion: (region: string) => void
 }
 
-export interface ExperienceFilterProps extends FilterComponentProps {
+export interface ExperienceFilterProps extends FilterComponentProps {;
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void
 }
 
-export interface PriceFilterProps extends FilterComponentProps {
+export interface PriceFilterProps extends FilterComponentProps {;
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void
 }
@@ -66,3 +66,4 @@ export interface SortFilterProps {
   sortOption: string,
   setSortOption: (option: string) => void
 }
+;

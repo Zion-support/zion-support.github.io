@@ -17,7 +17,7 @@ import {
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Popover
-  PopoverContent
+  PopoverContent;
   PopoverTrigger} from '@/components/ui/popover'; import { AIMilestoneGenerator } from './AIMilestoneGenerator'
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator'
 const formSchema = z.object({
@@ -50,8 +50,8 @@ export function AddMilestoneForm({
     defaultValues: {
       title: '',
       description: '',
-      amount: 0}}),
-  const handleSubmit = (values: MilestoneFormValues) => {
+      amount: 0}}),;
+  const handleSubmit = (values: MilestoneFormValues) => {;
     onSubmit(values);    form.reset()
   }
   const handleAddMilestones = (milestones: GeneratedMilestone[],) => {
@@ -195,7 +195,6 @@ export function AddMilestoneForm({
               )}
             />
           </div>
-
           <div className="flex justify-end space-x-2 pt-4">
             {onCancel && (
               <Button

@@ -1,4 +1,4 @@
-export type CuttingEdgeAIService = {
+export type CuttingEdgeAIService = {;
   id: string;
   name: string;
   description: string;
@@ -75,7 +75,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
     realService: true,
-  },
+  },;
 ];	id: string;
 	name: string;
 	description: string;
@@ -99,7 +99,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 };
 
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
-	{
+	{;
 		id: 'ai-emotional-support-agent';
 		name: 'AI Emotional Support Agent';
 		description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.';

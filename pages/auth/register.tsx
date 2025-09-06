@@ -30,7 +30,6 @@ const RegisterPage = () => {
         <title>Create Account - Zion Tech Marketplace</title>
         <meta name="description" content="Create your Zion Tech Marketplace account" />
       </Head>
-
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
@@ -58,9 +57,7 @@ const RegisterPage = () => {
               </Link>
             </p>
           </div>
-
           <SignupForm onSuccess={handleSuccess} />
-
           {/* Social signup options */}
           <div className="mt-6">
             <div className="relative">
@@ -73,7 +70,6 @@ const RegisterPage = () => {
             </div>
             <AuthButtons providers={["google", "github"]} />
           </div>
-
           <div className="text-center mt-4">
             <p className="text-xs text-gray-500">
               By creating an account, you agree to our{' '}
@@ -92,5 +88,5 @@ const RegisterPage = () => {
   )
 },
 
-export default RegisterPage,
+export default RegisterPage,;
 ;

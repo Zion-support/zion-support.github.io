@@ -12,7 +12,7 @@ export const ensureProfilesTableExists = async () => {
         SELECT FROM information_schema.tables 
         WHERE table_schema = 'public' 
         AND table_name = 'profiles'
-      ),`
+      ),`;
     });
     
     // If there's an error, log it and proceed with table creation
@@ -106,5 +106,5 @@ export const ensureProfilesTableExists = async () => {
 
 // Call this when the app starts to ensure the table exists
 export const initializeDatabase = async () => {
-  await ensureProfilesTableExists()
+  await ensureProfilesTableExists();
 };

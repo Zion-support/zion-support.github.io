@@ -33,5 +33,7 @@ export default function AIPoweredDevOpsPlatformPage() {
         industries={['SaaS', 'E-commerce', 'Fintech', 'Media', 'Enterprise IT']}
         canonical='https: //ziontechgroup.com/ai-powered-devops-platform'
       />
-    </>
+    </>;
   );
+
+}

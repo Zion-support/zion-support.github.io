@@ -116,4 +116,10 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
       ))}
     </div>
   )
+};
+;
+}
+}
+}
+}
 }

@@ -184,21 +184,18 @@ export default function Services2026ShowcaseEnhancedPage() {
           <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology." />
           <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" />
           <link rel="icon" href="/favicon.svg" />
-          
           {/* Open Graph */}
           <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-          
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
         </Head>
-
         {/* Enhanced Header Section */}
         <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
@@ -214,7 +211,6 @@ export default function Services2026ShowcaseEnhancedPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Discover our comprehensive collection of innovative micro SAAS services, AI solutions, quantum computing, and enterprise IT services that will transform your business in 2026 and beyond.
               </p>
-              
               {/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
                 {Object.entries(serviceStats).map(([key, value]) => (
@@ -230,7 +226,6 @@ export default function Services2026ShowcaseEnhancedPage() {
                   </motion.div>
                 ))}
               </div>
-
               {/* Contact Information */}
               <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Ready to Transform Your Business?</h3>
@@ -252,7 +247,6 @@ export default function Services2026ShowcaseEnhancedPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced Search and Filters */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -268,7 +262,6 @@ export default function Services2026ShowcaseEnhancedPage() {
                   className="w-full bg-gray-800/50 border border-gray-600/30 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
-
               {/* Filters and Controls */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                 {/* Category Filter */}
@@ -286,7 +279,6 @@ export default function Services2026ShowcaseEnhancedPage() {
                     ))}
                   </select>
                 </div>
-
                 {/* Price Range Filter */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
@@ -302,7 +294,6 @@ export default function Services2026ShowcaseEnhancedPage() {
                     ))}
                   </select>
                 </div>
-
                 {/* Sort Options */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
@@ -318,7 +309,6 @@ export default function Services2026ShowcaseEnhancedPage() {
                     ))}
                   </select>
                 </div>
-
                 {/* View Mode Toggle */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
@@ -342,7 +332,6 @@ export default function Services2026ShowcaseEnhancedPage() {
                   </div>
                 </div>
               </div>
-
               {/* Results Count */}
               <div className="text-center">
                 <p className="text-gray-400">
@@ -353,7 +342,6 @@ export default function Services2026ShowcaseEnhancedPage() {
             </div>
           </div>
         </section>
-
         {/* Enhanced Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -394,20 +382,16 @@ export default function Services2026ShowcaseEnhancedPage() {
                               </div>
                             )}
                           </div>
-
                           {/* Service Title and Tagline */}
                           <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
-
                           {/* Price */}
                           <div className="mb-4">
                             <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
                           </div>
-
                           {/* Description */}
                           <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
-
                           {/* Key Features */}
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Features:</h4>
@@ -423,7 +407,6 @@ export default function Services2026ShowcaseEnhancedPage() {
                               <p className="text-xs text-gray-500 mt-1">+{service.features.length - 3} more features</p>
                             )}
                           </div>
-
                           {/* Service Stats */}
                           <div className="grid grid-cols-3 gap-2 mb-4 text-xs">
                             <div className="text-center">
@@ -439,19 +422,16 @@ export default function Services2026ShowcaseEnhancedPage() {
                               <div className="text-gray-400">trial</div>
                             </div>
                           </div>
-
                           {/* Market Position */}
                           <div className="mb-4 p-3 bg-gray-800/30 rounded-lg">
                             <h4 className="text-xs font-semibold text-gray-200 mb-1">Market Position:</h4>
                             <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
                           </div>
-
                           {/* ROI */}
                           <div className="mb-4 p-3 bg-green-900/20 border border-green-500/30 rounded-lg">
                             <h4 className="text-xs font-semibold text-green-400 mb-1">ROI Promise:</h4>
                             <p className="text-xs text-green-300">{service.roi}</p>
                           </div>
-
                           {/* Action Buttons */}
                           <div className="flex space-x-2">
                             <Button
@@ -480,7 +460,6 @@ export default function Services2026ShowcaseEnhancedPage() {
             </AnimatePresence>
           </div>
         </section>
-
         {/* Enhanced Footer CTA */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -524,5 +503,5 @@ export default function Services2026ShowcaseEnhancedPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
-  )
+  );
 };

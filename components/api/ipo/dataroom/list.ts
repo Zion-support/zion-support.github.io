@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const section = String(req.query.section || "General");
   const dir = resolveDataPath(path.join("dataroom", section));
   if (!fs.existsSync(dir)) return res.status(200).json([]);

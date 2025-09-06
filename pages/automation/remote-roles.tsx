@@ -20,5 +20,5 @@ export default function RemoteRolesPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  )
+  );
 };

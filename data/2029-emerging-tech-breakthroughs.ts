@@ -1,4 +1,4 @@
-export interface EmergingTechBreakthrough2029 {
+export interface EmergingTechBreakthrough2029 {;
   id: string;
   name: string;
   tagline: string;
@@ -38,7 +38,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
       },
-    },
+    },;
   ];    features: [
       "Emerging tech breakthroughs";
       "Innovation platform";

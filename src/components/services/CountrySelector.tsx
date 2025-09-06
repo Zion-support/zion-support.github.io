@@ -15,8 +15,8 @@ interface CountrySelectorProps {
   selectedCountry: CountryPricing | null
 export function CountrySelector({
   onCountryChange,
-  selectedCountry,
-}: CountrySelectorProps) {
+  selectedCountry,;
+}: CountrySelectorProps) {;
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null,) => void,
   selectedCountry: CountryPricing | null
@@ -52,7 +52,6 @@ export function CountrySelector({
           ? `IT Onsite Service in ${selectedCountry.country}`
           : 'Select Country for IT Onsite Service'}
       </h3>
-
       <Select
         onValueChange={handleCountryChange}
         value={selectedCountry?.country}      >

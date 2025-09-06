@@ -73,7 +73,6 @@ export default function ProjectPage() {
               {project.status}
             </span>
           </div>
-
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Project Summary</h2>
             <div className="text-sm">
@@ -83,7 +82,6 @@ export default function ProjectPage() {
               <div className="mt-2">{project.summary}</div>
             </div>
           </section>
-
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Timeline</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
@@ -101,7 +99,6 @@ export default function ProjectPage() {
               )}
             </ul>
           </section>
-
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Documents</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
@@ -121,7 +118,6 @@ export default function ProjectPage() {
               )}
             </ul>
           </section>
-
           <section className="rounded border p-4 space-y-3">
             <h2 className="font-medium">Shared notes/messages</h2>
             <div className="space-y-2">
@@ -141,7 +137,6 @@ export default function ProjectPage() {
               <button onClick={addNote} className="px-3 py-2 rounded bg-gray-900 text-white">Add</button>
             </div>
           </section>
-
           <div className="flex justify-end">
             {project.status !== "COMPLETED" && (
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
@@ -156,5 +151,5 @@ export default function ProjectPage() {
         userHeaders={headers}
       />
     </div>
-  )
+  );
 };

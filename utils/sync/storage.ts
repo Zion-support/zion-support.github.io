@@ -14,18 +14,18 @@ const defaultState: SyncState = {
 
 let state: SyncState = { ...defaultState };
 
-export function readState(): SyncState {
+export function readState(): SyncState {;
   return { ...state };
 }
 
-export function updateState(updates: Partial<SyncState>): void {
+export function updateState(updates: Partial<SyncState>): void {;
   state = { ...state, ...updates };
 }
 
 export function upsertEvent(
   state: MultiverseState,
   event: SyncEvent
-): MultiverseState {
+): MultiverseState {;
   if (state.seenEventIds[event.eventId]) return state;
 
   const entityId = getEntityId(event);
@@ -47,7 +47,7 @@ export function upsertEvent(
 
 export function getEntityId(event: SyncEvent): string {
   switch (event.type) {
-    case 'proposal':
+    case 'proposal':;
       return (event.payload as any).proposalId;
     case 'token_transfer':
       return (event.payload as any).txId;
@@ -68,7 +68,7 @@ export function getEntityId(event: SyncEvent): string {
 export function filterEventsByScope(
   events: SyncEvent[],
   scope: InstanceConfig['scope']
-): SyncEvent[] {
+): SyncEvent[] {;
   if (scope === 'full') return events;
   if (scope === 'dao') {
     return events.filter(
@@ -83,6 +83,10 @@ export function filterEventsByScope(
         e.type === 'leaderboard_entry'
     );
   }
-  return events;export function resetState(): void {
+  return events;export function resetState(): void {;
   state = { ...defaultState };
+}
+
+}
+}
 }

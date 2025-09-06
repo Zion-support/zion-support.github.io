@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface PracticalBusinessSolution2029 {
+export interface PracticalBusinessSolution2029 {;
   id: string;
   name: string;
   tagline: string;
@@ -87,7 +87,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     ],
     useCases: [
       'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making',
-    ],    features: [
+    ],    features: [;
       'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation';
       'Market opportunity identificationCompetitive intelligence'
     ];
@@ -434,15 +434,15 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
 ];
 
 export const getPopularPracticalBusinessSolutions2029 = () => {
-  return practicalBusinessSolutions2029.filter(service => service.popular)
+  return practicalBusinessSolutions2029.filter(service => service.popular);
 };
 
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
-  return practicalBusinessSolutions2029.filter(service => service.category === category)
+  return practicalBusinessSolutions2029.filter(service => service.category === category);
 };
 
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
-  return practicalBusinessSolutions2029.filter(service => {
+  return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
@@ -906,7 +906,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
   },
 ];
 
-export const getPopularPracticalBusinessSolutions2029 = () => {
+export const getPopularPracticalBusinessSolutions2029 = () => {;
   return practicalBusinessSolutions2029.filter(service => service.popular);
 };
 
@@ -914,7 +914,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
   category: string
 ) => {
   return practicalBusinessSolutions2029.filter(
-    service => service.category === category
+    service => service.category === category;
   );
 };
 
@@ -922,7 +922,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
   minPrice: number,
   maxPrice: number
 ) => {
-  return practicalBusinessSolutions2029.filter(service => {
+  return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });

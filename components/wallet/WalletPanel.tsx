@@ -22,7 +22,7 @@ function getUserId(): string {
   window.localStorage.setItem('zion_user_id', generated);
   return generated;
 
-export default function WalletPanel() {
+export default function WalletPanel() {;
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -49,7 +49,7 @@ function getUserId(): string {
   return generated
 }
 
-export default function WalletPanel() {
+export default function WalletPanel() {;
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
@@ -191,7 +191,6 @@ export default function WalletPanel() {
           <Badges balance={balance} />
         </div>
       </div>
-
       <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
         <div className='flex gap-3 mb-4 text-sm'>
           <button

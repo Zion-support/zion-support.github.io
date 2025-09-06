@@ -4,7 +4,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
@@ -19,7 +19,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
-export default function Partners() {
+export default function Partners() {;
   logInfo('PartnersPage rendering');
   const [activeTab, setActiveTab] = useState('overview');
   const { t } = useTranslation();
@@ -53,7 +53,7 @@ export default function Partners() {
 
   useEffect((,) => {
     async function checkHealth() {
-      try {
+      try {;
         const res = await fetch('/api/auth/health');
         setAuthServiceAvailable(res.ok);
         logErrorToProduction('Partner login auth health check failed', {
@@ -78,7 +78,6 @@ export default function Partners() {
             {t('partner.subtitle')}
           </p>
         </div>
-
         <div className='grid md:grid-cols-2 gap-8 mb-12'>
           <Card className='bg-zion-blue-dark border-zion-blue-light'>
             <CardHeader>
@@ -119,7 +118,6 @@ export default function Partners() {
                   <p className='text-sm text-zion-slate-light'>
                     {t('partner.influencers.points.resources_desc')}
                   </p>                </div>        </div>
-
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card className="bg-zion-blue-dark border-zion-blue-light">
             <CardHeader>
@@ -150,7 +148,6 @@ export default function Partners() {
               </div>
             </CardContent>
           </Card>
-
           <Card className='bg-zion-blue-dark border-zion-blue-light'>
             <CardHeader>
               <CardTitle className='text-white'>
@@ -220,7 +217,6 @@ export default function Partners() {
             </CardContent>
           </Card>
         </div>
-
         <div className='text-center mb-12'>
           <h2 className='text-2xl font-bold text-white mb-4'>
             {t('partner.how_it_works')}
@@ -238,7 +234,6 @@ export default function Partners() {
               <CardContent className='text-center text-sm text-zion-slate-light'>                <p>{t('partner.steps.join_desc')}</p>
               </CardContent>
             </Card>
-
             <Card className='bg-zion-blue-dark border-zion-blue-light'>
               <CardHeader className='text-center pb-2'>
                 <div className='mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4'>
@@ -252,7 +247,6 @@ export default function Partners() {
                 <p>{t('partner.steps.share_desc')}</p>
               </CardContent>
             </Card>
-
             <Card className='bg-zion-blue-dark border-zion-blue-light'>
               <CardHeader className='text-center pb-2'>
                 <div className='mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4'>
@@ -268,7 +262,6 @@ export default function Partners() {
             </Card>
           </div>
         </div>
-
         <div className='flex justify-center gap-4'>
           <Button
             size='lg'
@@ -341,7 +334,6 @@ export default function Partners() {
           </Button>
         </div>
       </div>
-
       <Tabs
         value={activeTab}
         onValueChange={setActiveTab}
@@ -364,24 +356,19 @@ export default function Partners() {
             {t('partner.tabs.resources')}
           </TabsTrigger>
         </TabsList>        </TabsList>
-        
         <TabsContent value="overview" className="space-y-4">
           <PartnerDashboard />
         </TabsContent>
-        
         <TabsContent value="referrals" className="space-y-4">
           <PartnerReferralLinks />
         </TabsContent>
-
         <TabsContent value='overview' className='space-y-4'>
           <PartnerDashboard />
         </TabsContent>
-
         <TabsContent value='referrals' className='space-y-4'>
           <PartnerReferralLinks />
         </TabsContent>
-
-        <TabsContent value='earnings' className='space-y-4'>          <Card>        
+        <TabsContent value='earnings' className='space-y-4'>          <Card>
         <TabsContent value="earnings" className="space-y-4">
           <Card>
             <CardHeader>
@@ -398,16 +385,13 @@ export default function Partners() {
         </TabsContent>            </CardContent>
           </Card>
         </TabsContent>
-        
         <TabsContent value="leaderboard" className="space-y-4">
           <PartnerLeaderboard />
         </TabsContent>
-
         <TabsContent value='leaderboard' className='space-y-4'>
           <PartnerLeaderboard />
         </TabsContent>
-
-        <TabsContent value='resources' className='space-y-4'>          <PartnerResources />        
+        <TabsContent value='resources' className='space-y-4'>          <PartnerResources />
         <TabsContent value="resources" className="space-y-4">
           <PartnerResources />
         </TabsContent>

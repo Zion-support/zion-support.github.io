@@ -9,7 +9,7 @@ export default function UNBridge() {
     supportingMultiverses: 'Digital Labor, AI Ethics',
     promptAssist:
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
-    language: 'en',
+    language: 'en',;
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
@@ -267,3 +267,5 @@ export default function UNBridge() {
       </div>
     </div>
 );
+
+}

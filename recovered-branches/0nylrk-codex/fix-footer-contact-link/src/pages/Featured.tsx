@@ -18,7 +18,6 @@ export default function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.
             </p>
           </div>
-          
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />
         </div>
@@ -27,3 +26,4 @@ export default function Featured() {
     </>
   )
 }
+;

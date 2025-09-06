@@ -4,7 +4,7 @@ import crypto from "crypto";
 import {
   getProposal,
   updateProposalMeta,
-  updateArtifacts,
+  updateArtifacts,;
 } from "../../../utils/data/proposals";
 async function submitByEmail(
   to: string,
@@ -30,7 +30,7 @@ async function submitByEmail(
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
     const { id, channels = ["email"], emailTo, delegateNote } = req.body || {};

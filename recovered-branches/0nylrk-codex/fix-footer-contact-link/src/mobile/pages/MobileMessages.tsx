@@ -73,7 +73,7 @@ const mockMessages: Message[] = [
     isMe: false,
     status: "read"}],
 
-export function MobileMessages() {
+export function MobileMessages() {;
   const [activeConversation, setActiveConversation] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>(mockMessages);
   
@@ -115,14 +115,12 @@ export function MobileMessages() {
           <MobileHeader
             title="Messages"
           />
-          
           <main className="flex-1 overflow-y-auto">
             <MobileConversationList
               conversations={mockConversations}
               onSelectConversation={handleSelectConversation}
             />
           </main>
-          
           <BottomNavigation />
         </>
       )}

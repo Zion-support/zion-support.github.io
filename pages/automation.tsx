@@ -6,7 +6,7 @@ import {
   Bot,
   Workflow,
   ArrowRight,
-  Check,
+  Check,;
   BarChart3,;
 } from 'lucide-react';
 export default function AutomationPage() {
@@ -30,7 +30,7 @@ export default function AutomationPage() {
       icon: <Zap className='w-8 h-8 text-white' />,
       title: 'Smart Triggers',
       description: 'Automated responses based on events and conditions',
-    },
+    },;
   ];
 
   const benefits = [
@@ -50,7 +50,6 @@ export default function AutomationPage() {
           content='AI-powered workflow automation platform that streamlines your business processes and increases efficiency.'
         />
       </Head>
-
       <div className='min-h-screen bg-black'>
         {/* Hero Section */}
         <section className='pt-32 pb-20 relative overflow-hidden'>
@@ -58,7 +57,6 @@ export default function AutomationPage() {
             <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />
             <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]' />
           </div>
-
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
             <div className='mb-8'>
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>
@@ -66,7 +64,6 @@ export default function AutomationPage() {
                 Intelligent Automation
               </div>
             </div>
-
             <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
               Automation Hub
             </h1>
@@ -74,7 +71,6 @@ export default function AutomationPage() {
               AI-powered workflow automation platform that streamlines your
               business processes and increases efficiency.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-6 justify-center'>
               <a href='/contact' className='shadow-2xl shadow-blue-500/25'>
                 Start Automating
@@ -88,7 +84,6 @@ export default function AutomationPage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className='py-24'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -99,7 +94,6 @@ export default function AutomationPage() {
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>                Powerful tools to automate any business process
               </p>
             </div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               {features.map((feature, index) => (
                 <div
@@ -119,7 +113,6 @@ export default function AutomationPage() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -138,7 +131,6 @@ export default function AutomationPage() {
                   ))}
                 </div>
               </div>
-
               <div className='relative'>
                 <div className='bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20'>
                   <div className='text-center'>
@@ -159,7 +151,6 @@ export default function AutomationPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700'>
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
@@ -187,3 +178,5 @@ export default function AutomationPage() {
       </div>
     </>
 );
+
+}

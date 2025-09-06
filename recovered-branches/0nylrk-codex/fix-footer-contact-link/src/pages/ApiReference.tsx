@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-export function ApiReference() {
+export function ApiReference() {;
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
 
   // Sample endpoint data
@@ -197,7 +197,6 @@ export function ApiReference() {
             </ul>
           </div>
         </div>
-
         {/* Endpoint details */}
         <div className="md:col-span-4">
           {activeEndpointData ? (
@@ -212,9 +211,7 @@ export function ApiReference() {
                 </span>
                 <span className="font-mono text-lg text-white">{activeEndpointData.path}</span>
               </div>
-
               <p className="text-zinc-400 mb-8">{activeEndpointData.description}</p>
-
               <Tabs defaultValue="docs">
                 <TabsList className="mb-6">
                   <TabsTrigger value="docs">Documentation</TabsTrigger>
@@ -224,7 +221,6 @@ export function ApiReference() {
                   {/* Request section */}
                   <div className="mb-8">
                     <h3 className="text-xl font-semibold text-white mb-4">Request</h3>
-                    
                     {activeEndpointData.parameters && activeEndpointData.parameters.length > 0 && (
                       <>
                         <h4 className="text-lg font-medium text-white mb-3">Parameters</h4>
@@ -260,11 +256,9 @@ export function ApiReference() {
                       showLineNumbers={true}
                     />
                   </div>
-
                   {/* Response section */}
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4">Responses</h3>
-                    
                     {Object.entries(activeEndpointData.responses).map(([status, response]) => (
                       <div key={status} className="mb-6">
                         <div className="flex items-center mb-3">
@@ -277,7 +271,6 @@ export function ApiReference() {
                           </span>
                           <span className="text-white">{response.description}</span>
                         </div>
-                        
                         <CodeBlock 
                           code={response.example} 
                           language="json"

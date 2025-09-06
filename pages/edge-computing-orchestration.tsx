@@ -47,7 +47,7 @@ export default function EdgeComputingPage() {
       description:
         'Worldwide edge network deployment with intelligent traffic routing and load balancing.',
       color: 'from-yellow-500 to-orange-500',
-    },
+    },;
   ];
 
   const benefits = [
@@ -161,9 +161,7 @@ export default function EdgeComputingPage() {
           property='og:url'
           content='https://ziontechgroup.com/edge-computing-orchestration'
         />      </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -199,7 +197,6 @@ export default function EdgeComputingPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Features */}
       <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -216,7 +213,6 @@ export default function EdgeComputingPage() {
               infrastructure.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -240,7 +236,6 @@ export default function EdgeComputingPage() {
           </div>
         </div>
       </section>
-
       {/* Benefits */}
       <section className='py-20 bg-slate-50'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -270,7 +265,6 @@ export default function EdgeComputingPage() {
                 ))}
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -303,7 +297,6 @@ export default function EdgeComputingPage() {
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
       <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -320,7 +313,6 @@ export default function EdgeComputingPage() {
               computing to transform their operations.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
@@ -344,7 +336,6 @@ export default function EdgeComputingPage() {
           </div>
         </div>
       </section>
-
       {/* Architecture */}
       <section className='py-20 bg-slate-900'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -361,7 +352,6 @@ export default function EdgeComputingPage() {
               reliability, and scalability.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -376,7 +366,6 @@ export default function EdgeComputingPage() {
                 Distributed computing nodes deployed at strategic locations for
                 optimal performance
               </p>            </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -393,7 +382,6 @@ export default function EdgeComputingPage() {
                 Intelligent workload distribution and management across the edge
                 network
               </p>            </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -413,7 +401,6 @@ export default function EdgeComputingPage() {
           </div>
         </div>
       </section>
-
       {/* Pricing */}
       <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -430,7 +417,6 @@ export default function EdgeComputingPage() {
               include our core orchestration features.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (
               <motion.div
                 key={plan.plan}
@@ -458,7 +444,6 @@ export default function EdgeComputingPage() {
                   </div>
                   <p className='text-slate-600'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map(feature => (
                     <li key={feature} className='flex items-center space-x-3'>
@@ -466,7 +451,6 @@ export default function EdgeComputingPage() {
                       <span className='text-slate-700'>{feature}</span>                    </li>
                   ))}
                 </ul>
-
                 <a
                   href='/contact'
                   className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'                >
@@ -477,7 +461,6 @@ export default function EdgeComputingPage() {
           </div>
         </div>
       </section>
-
       {/* CTA */}
       <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
         <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div
@@ -507,7 +490,8 @@ export default function EdgeComputingPage() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </>
 );
+
+}

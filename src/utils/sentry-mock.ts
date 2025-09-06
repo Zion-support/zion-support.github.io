@@ -180,4 +180,5 @@ export const SDK_VERSION = mockSentry.SDK_VERSION
 export const Severity = mockSentry.Severity
 // Additional exports for compatibility
 export { mockSentry as Sentry }
-// All exports are already defined above
+// All exports are already defined above;
+;

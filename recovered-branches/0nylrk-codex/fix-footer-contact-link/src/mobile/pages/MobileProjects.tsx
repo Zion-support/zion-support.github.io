@@ -53,16 +53,14 @@ export function MobileProjects() {
         title="Project Details"
         showBack
       />
-      
       <main className="py-4">
         <MobileProjectView 
           project={projectData} 
           milestones={milestonesData}
         />
       </main>
-      
       <BottomNavigation />
     </div>
   )
-}
+};
 ;

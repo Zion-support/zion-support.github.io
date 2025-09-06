@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface AdvancedFintechSolution2025 {
+export interface AdvancedFintechSolution2025 {;
   id: string;
   name: string;
   tagline: string;
@@ -348,7 +348,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     customers: 89,
     rating: 4.5,
     reviews: 52,
-  },
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',

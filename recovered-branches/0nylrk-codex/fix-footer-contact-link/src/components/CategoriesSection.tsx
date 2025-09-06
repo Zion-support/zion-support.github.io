@@ -71,7 +71,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </Link>
           ))}
         </div>
-        
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
           <div className="flex flex-wrap justify-center gap-4">
@@ -86,7 +85,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             ))}
           </div>
         </div>
-        
         <div className="mt-12 flex justify-center">
           <Link 
             to="/categories" 
@@ -98,5 +96,5 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       </div>
     </section>
   )
-}
+};
 ;

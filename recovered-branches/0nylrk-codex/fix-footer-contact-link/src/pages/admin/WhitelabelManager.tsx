@@ -8,7 +8,7 @@ import {TenantsList} from "@/components/admin/whitelabel/TenantsList";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
-export default function WhitelabelManager() {
+export default function WhitelabelManager() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
   
@@ -34,22 +34,18 @@ export default function WhitelabelManager() {
               Create and manage branded versions of the platform for agencies, startups, and enterprise clients.
             </p>
           </div>
-
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="mb-8">
               <TabsTrigger value="tenants">Tenants</TabsTrigger>
               <TabsTrigger value="create">Create New</TabsTrigger>
               <TabsTrigger value="docs">Documentation</TabsTrigger>
             </TabsList>
-            
             <TabsContent value="tenants" className="space-y-6">
               <TenantsList />
             </TabsContent>
-            
             <TabsContent value="create" className="flex justify-center">
               <WhitelabelRequestForm />
             </TabsContent>
-            
             <TabsContent value="docs" className="space-y-6">
               <div className="prose dark:prose-invert max-w-none">
                 <h2>White-Label Documentation</h2>
@@ -76,7 +72,6 @@ export default function WhitelabelManager() {
                     </tr>
                   </tbody>
                 </table>
-                
                 <h3>Email Templates</h3>
                 <p>
                   White-label instances can use customized email templates. You can upload HTML templates 
@@ -89,7 +84,6 @@ export default function WhitelabelManager() {
                   <li>Invoice</li>
                   <li>Receipt</li>
                 </ul>
-                
                 <h3>Admin Access</h3>
                 <p>
                   You can assign tenant administrators who will have access to manage their white-label instance, 

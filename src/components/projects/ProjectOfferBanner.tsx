@@ -16,8 +16,8 @@ export function ProjectOfferBanner() {
       const offers = projects.filter(p => p.status === 'offer_sent')
       setPendingOffers(offers)
     }
-  }, [projects, isLoading])
-  const handleDismiss = (projectId: string, e: React.MouseEvent) => {
+  }, [projects, isLoading]);
+  const handleDismiss = (projectId: string, e: React.MouseEvent) => {;
     e.stopPropagation();    setDismissed(prev => {
       const updated = new Set(prev)
       updated.add(projectId),
@@ -53,7 +53,6 @@ export function ProjectOfferBanner() {
                   </p>
                 </div>
               </div>
-              
               <div className="flex items-center gap-2">
                 <Button size="sm" className="whitespace-nowrap">
                   View Offer

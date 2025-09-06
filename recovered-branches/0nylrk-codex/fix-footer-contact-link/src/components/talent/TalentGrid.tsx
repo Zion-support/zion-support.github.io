@@ -8,7 +8,7 @@ export interface TalentGridProps {
   savedTalentIds: string[],
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean,
-  viewProfile?: (id: string) => void,
+  viewProfile?: (id: string) => void,;
   clearFilters?: () => void;
   handleRequestHire?: (talent: TalentProfile) => void
 }
@@ -18,7 +18,7 @@ export function TalentGrid({
   isLoading, 
   onTalentClick, 
   savedTalentIds, 
-  onToggleSave, 
+  onToggleSave, ;
   isAuthenticated;
   viewProfile;
   clearFilters;

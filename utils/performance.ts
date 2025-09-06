@@ -1,7 +1,7 @@
 import { PerformanceMetrics } from '../types';
 
 export const measurePerformance = (): PerformanceMetrics | null => {
-  if (typeof window === 'undefined' || !('performance' in window)) {
+  if (typeof window === 'undefined' || !('performance' in window)) {;
     return null;
   }
 
@@ -28,7 +28,7 @@ export const measurePerformance = (): PerformanceMetrics | null => {
   }
 };
 
-export const getPerformanceScore = (metrics: PerformanceMetrics): {
+export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   overall: 'good' | 'needs-improvement' | 'poor';
   scores: {
     fcp: 'good' | 'needs-improvement' | 'poor';
@@ -78,7 +78,7 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
   return { overall, scores };
 };
 
-export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
   console.group(`🚀 ${label}`);
   if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
   if (metrics.lcp !== undefined) console.log('Largest Contentful Paint:', `${metrics.lcp.toFixed(2)}ms`);

@@ -20,5 +20,5 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 };

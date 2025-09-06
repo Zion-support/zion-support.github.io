@@ -6,11 +6,11 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
-export function DisputeDashboard() {
+export function DisputeDashboard() {;
   const { disputes, isLoading, refetch } = useDisputes();
 
   useEffect(() => {
@@ -32,12 +32,10 @@ export function DisputeDashboard() {
             Manage and resolve disputes between clients and talents
           </p>
         </div>
-
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
       </div>
-
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -60,7 +58,6 @@ export function DisputeDashboard() {
             </div>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -84,7 +81,6 @@ export function DisputeDashboard() {
             </div>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -109,7 +105,6 @@ export function DisputeDashboard() {
           </CardContent>
         </Card>
       </div>
-
       <DisputesList disputes={disputes} isLoading={isLoading} />
     </div>
   );

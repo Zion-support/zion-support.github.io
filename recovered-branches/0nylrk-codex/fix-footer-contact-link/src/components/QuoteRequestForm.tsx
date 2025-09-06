@@ -15,7 +15,7 @@ import {QuoteFormData} from "@/types/quotes";
 import {Sparkles} from "lucide-react";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
 
-export function QuoteRequestForm() {
+export function QuoteRequestForm() {;
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
@@ -140,15 +140,12 @@ export function QuoteRequestForm() {
             <span className="text-sm text-white">AI-powered matching</span>
           </div>
         </div>
-        
         <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">
           <CardContent className="px-6 py-8">
             <StepProgress currentStep={currentStep} />
-            
             <div className="mt-8">
               {renderStepContent()}
             </div>
-            
             <div className="flex justify-between mt-8">
               {currentStep !== "service" && (
                 <Button

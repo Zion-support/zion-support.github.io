@@ -32,7 +32,7 @@ const signupSchema = z
 
 type SignupFormValues = z.infer<typeof signupSchema>;
 
-export default function Signup() {
+export default function Signup() {;
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -87,7 +87,6 @@ export default function Signup() {
                 </Link>
               </p>
             </div>
-
             <div className="bg-zion-blue-dark rounded-lg p-6">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" noValidate>
@@ -254,7 +253,6 @@ export default function Signup() {
                   </Button>
                 </form>
               </Form>
-
               <div className="mt-6">
                 <div className="relative">
                   <div className="absolute inset-0 flex items-center">
@@ -264,7 +262,6 @@ export default function Signup() {
                     <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>
                   </div>
                 </div>
-
                 <div className="mt-6 grid grid-cols-3 gap-3">
                   <Button
                     type="button"

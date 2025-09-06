@@ -29,7 +29,6 @@ export function UploadSection({
           />
         </Button>
       </div>
-
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
@@ -43,6 +42,6 @@ export function UploadSection({
           </div>
         </div>
       )}
-    </div>
+    </div>;
   );
 }

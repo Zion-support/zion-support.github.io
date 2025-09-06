@@ -68,7 +68,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
         </p>
       </div>
-      
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
@@ -91,7 +90,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
             Provide a brief introduction and highlight your relevant skills and experience.
           </p>
         </div>
-        
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
@@ -138,7 +136,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
             </div>
           )}
         </div>
-
         <div>
           <Label htmlFor="cvUpload">Or Upload CV (PDF)</Label>
           <input
@@ -150,7 +147,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           />
         </div>
       </div>
-      
       <div className="flex justify-end gap-2">
         <Button
           type="button"
@@ -195,4 +191,5 @@ handleSubmit
 }</SelectContent> </Select> > Create Resume </Button> </div>) "
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") 
 }</Button> </div> </form>) 
-}"}
+}"};
+;

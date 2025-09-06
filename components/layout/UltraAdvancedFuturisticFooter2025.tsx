@@ -16,7 +16,7 @@ import {
   Shield,
   Users,
   BookOpen,
-  Briefcase,
+  Briefcase,;
   Atom,;
 } from 'lucide-react';
 import Link from 'next/link';
@@ -425,7 +425,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         <div className='absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent'></div>
         <div className='absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900'></div>
       </div>
-
       <div className='relative z-10'>
         {/* Main Footer Content */}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
@@ -454,19 +453,16 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <p className='text-gray-300 mb-6 leading-relaxed'>
                 Pioneering the future with revolutionary AI consciousness,
                 quantum computing, and autonomous systems. Transforming
                 businesses through next-generation technology.
               </p>
-
               <p className='text-gray-300 leading-relaxed mb-6 max-w-md'>
                 Leading provider of innovative technology solutions,
                 specializing in AI, automation, and future-ready services. We
                 help businesses transform and thrive in the digital age.
               </p>
-
               {/* Contact Info */}
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3 text-gray-300'>
@@ -498,7 +494,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900"></div>
       </div>
-
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -525,16 +520,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   <p className="text-sm text-gray-400">Future Technology Solutions</p>
                 </div>
               </div>
-              
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous systems. Transforming businesses through next-generation technology.
               </p>
-              
               <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
                 Leading provider of innovative technology solutions, specializing in AI, automation, and future-ready services. 
                 We help businesses transform and thrive in the digital age.
               </p>
-
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -557,7 +549,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <motion.div key={section.title} variants={itemVariants}>
@@ -598,7 +589,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
-
           {/* Social Links & Newsletter */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -640,7 +630,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   </motion.a>
                 ))}
               </div>
-
               {/* Newsletter Signup */}
               <div className='flex-1 max-w-md'>
                 <h5 className='text-lg font-semibold text-white mb-3'>
@@ -676,7 +665,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
             </div>
           </motion.div>
         </div>
-
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -703,7 +691,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   Terms of Service
                 </Link>
               </div>
-
               <div className='flex items-center space-x-4 text-gray-400 text-sm'>
                 <span>Powered by</span>
                 <div className='flex items-center space-x-2'>
@@ -725,7 +712,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
           </div>
         </motion.div>
       </div>
-
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}

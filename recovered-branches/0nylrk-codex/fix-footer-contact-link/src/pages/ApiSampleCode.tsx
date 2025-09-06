@@ -6,7 +6,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 
 export function ApiSampleCode() {
   // JavaScript example with Axios
-  const jsAxiosExample = `// Using Axios with JavaScript
+  const jsAxiosExample = `// Using Axios with JavaScript;
 import axios from 'axios';
 // Configure Axios with the base URL and headers
 const api = axios.create({
@@ -123,7 +123,7 @@ if __name__ == "__main__":
         
         # Create a new job
         new_job = create_job({
-            'title': 'Data Scientistdescription': 'Looking for an experienced data scientist...category': 'databudget': {
+            'title': 'Data Scientistdescription': 'Looking for an experienced data scientist...category': 'databudget': {;
                 'min': 6000;
                 'max': 9000;
                 'currency': 'USD'
@@ -239,25 +239,21 @@ main(),`;
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
         <h1>Sample Code</h1>
-        
         <p>
           The following code examples demonstrate how to integrate with the Zion AI Marketplace API
           using different programming languages and libraries.
         </p>
-
         <h2>Authentication</h2>
         <p>
           All API requests require authentication using API keys. Make sure to include your API key
           in the Authorization header as shown in the examples below.
         </p>
-        
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
           <h3 className="text-yellow-500 text-sm font-medium mt-0">Security Warning</h3>
           <p className="text-sm text-yellow-300/90 mb-0">
             Never include your API key directly in client-side code. These examples are intended for server-side usage only.
           </p>
         </div>
-
         <h2>Code Examples</h2>
         <Tabs defaultValue="javascript">
           <TabsList>
@@ -278,13 +274,11 @@ main(),`;
             <CodeBlock code={nodeFetchExample} language="javascript" showLineNumbers={true} />
           </TabsContent>
         </Tabs>
-
         <h2>Using the Examples</h2>
         <p>
           To use these examples, you'll need to replace 'YOUR_API_KEY' with your actual API key;
           which you can generate in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a>.
         </p>
-        
         <h2>Additional Resources</h2>
         <ul>
           <li>Download our <a href="#" className="text-zion-cyan">Postman Collection</a> for easy API testing</li>

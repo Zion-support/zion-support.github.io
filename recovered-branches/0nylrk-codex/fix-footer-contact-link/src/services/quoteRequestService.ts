@@ -6,7 +6,7 @@ export const quoteRequestService = {
   getAll: async () => {
     const { data, error } = await supabase
       .from('quote_requests')
-      .select(`
+      .select(`;
         *;
         talent:talent_id (
           display_name

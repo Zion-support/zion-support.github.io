@@ -11,7 +11,6 @@ const TechnicalDocumentationChat: NextPage = () => {
           content="TechnicalDocumentationChat service"
         />{" "}
       </Head>
-
       <main>
         <h1>TechnicalDocumentationChat</h1>
         <p>Service details coming soon...</p>

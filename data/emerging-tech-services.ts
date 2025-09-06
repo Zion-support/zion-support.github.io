@@ -1,4 +1,4 @@
-export interface EmergingTechService {
+export interface EmergingTechService {;
   id: string;
   name: string;
   tagline: string;
@@ -990,7 +990,7 @@ export const emergingTechServices: EmergingTechService[] = [
     customers: 35,
     rating: 4.8,
     reviews: 28,
-  },
+  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',

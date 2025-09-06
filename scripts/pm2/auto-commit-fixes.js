@@ -8,3 +8,6 @@ class AutoCommitFixes {; constructor() {; this.projectRoot = process.cwd(); this
 ; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log file: ', error.message)};
 ;
 
+
+}
+}

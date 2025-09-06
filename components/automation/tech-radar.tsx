@@ -3,7 +3,7 @@
 };
 type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
+  try {;
     const file = path.join(process.cwd(), 'publicautomationtech-radar.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   }
 };
 
-export default function TechRadar({ pypi, crates, github }: Props) {
+export default function TechRadar({ pypi, crates, github }: Props) {;
   const langs = Object.keys(github);
   return (
     <div className="space-y-8">
@@ -26,7 +26,6 @@ export default function TechRadar({ pypi, crates, github }: Props) {
         <h1 className="text-3xl font-bold">Tech Radar</h1>
         <p className="text-gray-600 dark:text-gray-300">Trending packages and projects across ecosystems.</p>
       </header>
-
       <section>
         <h2 className="font-semibold text-lg mb-3">PyPI (30 days)</h2>
         <ul className="grid md:grid-cols-2 gap-3">
@@ -40,7 +39,6 @@ export default function TechRadar({ pypi, crates, github }: Props) {
           ))}
         </ul>
       </section>
-
       <section>
         <h2 className="font-semibold text-lg mb-3">crates.io</h2>
         <ul className="grid md:grid-cols-2 gap-3">
@@ -52,7 +50,6 @@ export default function TechRadar({ pypi, crates, github }: Props) {
           ))}
         </ul>
       </section>
-
       {langs.map((lang) => (
         <section key={lang}>
           <h2 className="font-semibold text-lg mb-3">GitHub Trending: {lang}</h2>

@@ -13,7 +13,7 @@ export default function Careers() {
         location: "Remote",
         type: "Full-time",
         department: "Engineering",
-        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
+        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace.";
       };
       {
         title: "AI Research Engineer",
@@ -136,7 +136,6 @@ export default function Careers() {
               Help us build the future of AI and technology
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
@@ -162,7 +161,6 @@ export default function Careers() {
               />
             </div>
           </div>
-          
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -177,10 +175,8 @@ export default function Careers() {
               ))}
             </div>
           </div>
-          
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
-            
             <Tabs defaultValue="engineering" className="w-full">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center">
                 <TabsTrigger value="engineering" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Engineering</TabsTrigger>
@@ -188,7 +184,6 @@ export default function Careers() {
                 <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>
                 <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>
               </TabsList>
-              
               {Object.entries(jobs).map(([department, jobList]) => (
                 <TabsContent key={department} value={department} className="space-y-6">
                   {jobList.map((job, index) => (
@@ -215,7 +210,6 @@ export default function Careers() {
               ))}
             </Tabs>
           </div>
-          
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md: p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">

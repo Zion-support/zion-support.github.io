@@ -22,7 +22,7 @@ interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void
 }
 
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
+export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {;
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   

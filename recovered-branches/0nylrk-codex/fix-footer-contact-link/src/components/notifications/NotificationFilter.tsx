@@ -28,5 +28,5 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
         </TabsList>
       </Tabs>
     </div>
-  )
+  );
 };

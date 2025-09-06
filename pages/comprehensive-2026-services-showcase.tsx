@@ -8,7 +8,7 @@ import {
   Sparkles, Atom, Microscope, Satellite, CheckCircle, 
   ArrowRight, Phone, Mail, MapPin, Rocket, Users, 
   BarChart3, Award, Clock, DollarSign
-} from 'lucide-react',
+} from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
 import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026',;
@@ -107,9 +107,7 @@ export default function Comprehensive2026ServicesShowcase() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2026-services-showcase" />
       </Head>
-
       <UltraAdvancedNavigation />
-
       <div className="min-h-screen relative z-10">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -128,7 +126,6 @@ export default function Comprehensive2026ServicesShowcase() {
                 Discover our revolutionary collection of AI, IT infrastructure, and micro SaaS services 
                 designed to transform your business in 2026 and beyond.
               </p>
-              
               {/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
@@ -148,7 +145,6 @@ export default function Comprehensive2026ServicesShowcase() {
                   <div className="text-gray-300">Happy Customers</div>
                 </div>
               </div>
-
               {/* Contact Information */}
               <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-600/30 max-w-4xl mx-auto">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center justify-center gap-3">
@@ -173,7 +169,6 @@ export default function Comprehensive2026ServicesShowcase() {
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filter Section */}
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -189,7 +184,6 @@ export default function Comprehensive2026ServicesShowcase() {
                   className="w-full bg-gray-800/50 border border-gray-600/30 rounded-2xl pl-14 pr-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
-
               {/* Filters and Controls */}
               <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
                 {/* Category Filter */}
@@ -212,7 +206,6 @@ export default function Comprehensive2026ServicesShowcase() {
                     </button>
                   ))}
                 </div>
-
                 {/* Sort and View Controls */}
                 <div className="flex items-center gap-4">
                   <select
@@ -226,7 +219,6 @@ export default function Comprehensive2026ServicesShowcase() {
                     <option value="rating">Highest Rated</option>
                     <option value="customers">Most Customers</option>
                   </select>
-
                   <div className="flex bg-gray-800/50 rounded-xl p-1 border border-gray-600/30">
                     <button
                       onClick={() => setViewMode('grid')}
@@ -254,7 +246,6 @@ export default function Comprehensive2026ServicesShowcase() {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -285,15 +276,12 @@ export default function Comprehensive2026ServicesShowcase() {
                           </div>
                         )}
                       </div>
-                      
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                         {service.name}
                       </h3>
-                      
                       <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                         {service.tagline}
                       </p>
-
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-2xl font-bold text-cyan-400">
                           {service.price}
@@ -305,7 +293,6 @@ export default function Comprehensive2026ServicesShowcase() {
                           <span className="text-gray-400 text-sm">({service.reviews})</span>
                         </div>
                       </div>
-
                       <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                         <div className="flex items-center gap-1">
                           <Users className="w-4 h-4" />
@@ -317,13 +304,11 @@ export default function Comprehensive2026ServicesShowcase() {
                         </div>
                       </div>
                     </div>
-
                     {/* Service Details */}
                     <div className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         {service.description}
                       </p>
-
                       {/* Key Features */}
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wider">
@@ -343,7 +328,6 @@ export default function Comprehensive2026ServicesShowcase() {
                           )}
                         </div>
                       </div>
-
                       {/* Market Info */}
                       <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                         <div>
@@ -355,13 +339,11 @@ export default function Comprehensive2026ServicesShowcase() {
                           <div className="text-white font-semibold">{service.growthRate}</div>
                         </div>
                       </div>
-
                       {/* ROI */}
                       <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-xl p-4 mb-6 border border-green-500/20">
                         <div className="text-sm text-gray-400 mb-1">Expected ROI</div>
                         <div className="text-green-400 font-semibold">{service.roi}</div>
                       </div>
-
                       {/* Action Buttons */}
                       <div className="flex flex-col sm:flex-row gap-3">
                         <Link
@@ -381,7 +363,6 @@ export default function Comprehensive2026ServicesShowcase() {
                 ))}
               </AnimatePresence>
             </motion.div>
-
             {/* No Results */}
             {filteredServices.length === 0 && (
               <div className="text-center py-20">
@@ -401,7 +382,6 @@ export default function Comprehensive2026ServicesShowcase() {
             )}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -418,7 +398,6 @@ export default function Comprehensive2026ServicesShowcase() {
                 Our team of experts is ready to help you implement the perfect solution 
                 for your business needs. Get started today with a free consultation.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href={`tel:${contactInfo.mobile}`}
@@ -435,7 +414,6 @@ export default function Comprehensive2026ServicesShowcase() {
                   Email Us
                 </Link>
               </div>
-
               <div className="mt-8 text-gray-400">
                 <p>📍 {contactInfo.address}</p>
                 <p>🌐 <a href={contactInfo.website} className="text-cyan-400 hover:text-cyan-300 transition-colors">{contactInfo.website}</a></p>
@@ -445,5 +423,5 @@ export default function Comprehensive2026ServicesShowcase() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 };

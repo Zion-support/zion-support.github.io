@@ -376,14 +376,12 @@ const UltraFuturisticBackground2046: React.FC = () => {
           ease: 'easeInOut',
         }}
       />
-
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
         style={{ filter: 'blur(0.5px)' }}
       />
-
       {/* Floating geometric shapes */}
       <div className='absolute inset-0 overflow-hidden'>
         {[...Array(8)].map((_, i) => (
@@ -430,7 +428,6 @@ const UltraFuturisticBackground2046: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Energy waves */}
       <div className='absolute bottom-0 left-0 right-0 h-32'>
         <motion.div
@@ -457,7 +454,6 @@ const UltraFuturisticBackground2046: React.FC = () => {
           }}
         />
       </div>
-
       {/* Quantum interference patterns */}
       <div className='absolute inset-0'>
         {[...Array(5)].map((_, i) => (

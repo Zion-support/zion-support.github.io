@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { useUser } from '../../providers/UserProvider';
 import { useToast } from '../ui/ToastProvider';
 import Link from 'next/link';
-export default function OnboardingWizard() {
+export default function OnboardingWizard() {;
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
   const [step, setStep] = useState(0);
@@ -44,8 +44,8 @@ export default function OnboardingWizard() {
           ),
         },
         {
-          title: 'Invite or message talent',
-          content: <p>Send invites or start a conversation to move fast.</p>,
+          title: 'Invite or message talent',;
+          content: <p>Send invites or start a conversation to move fast.</p>,;
         },;
       ];
     }

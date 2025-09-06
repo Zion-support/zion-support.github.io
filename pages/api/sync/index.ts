@@ -21,5 +21,5 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length,
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
   }
 
-  return res.status(405).json({ error: "Method not allowed" })
+  return res.status(405).json({ error: "Method not allowed" });
 };

@@ -1,5 +1,5 @@
 import { format } from 'date-fns'
-import { JobApplication } from '@/types/jobs'
+import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
 import { ClickableBadge } from '@/components/ui/clickable-badge'
 import {  Table,
@@ -12,9 +12,9 @@ import {  Table,
 import { ApplicationActions } from './ApplicationActions'
 import { StatusBadge } from './StatusBadge'
 import { Briefcase, User } from 'lucide-react'
-import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal'
+import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal';
 import React, { useState } from 'react'; // Import React and useState
-import { toast } from '@/hooks/use-toast'
+import { toast } from '@/hooks/use-toast';
 import Image from 'next/image'; // Import next/image
 
 interface ApplicationsTableProps {
@@ -157,7 +157,6 @@ export function ApplicationsTable({
           </TableBody>
         </Table>
       </div>
-
       <HireConfirmationModal
         isOpen = {hireModalOpen,}
         onClose = {() => setHireModalOpen(false),}
@@ -181,7 +180,7 @@ export function ApplicationsTable({
 }priority= {
   false "
 }h-4 w-4"/>) 
-}</AvatarPrimitive>) 
+}</AvatarPrimitive>) ;
 };"
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {

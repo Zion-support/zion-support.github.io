@@ -56,11 +56,11 @@ import {
   BarChart3,
   Eye,
   Infinity,
-  Hexagon,
+  Hexagon,;
   Network,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -349,7 +349,7 @@ const quickLinks = [
   { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-500 to-slate-500' },
   { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target, color: 'from-orange-500 to-red-500' }
 
-export default function UltraFuturisticNavigation2030() {
+export default function UltraFuturisticNavigation2030() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -413,7 +413,6 @@ export default function UltraFuturisticNavigation2030() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -456,7 +455,6 @@ export default function UltraFuturisticNavigation2030() {
                 </div>
               </Link>
             </div>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {mainNavigation.map(item => (
@@ -477,7 +475,6 @@ export default function UltraFuturisticNavigation2030() {
                   <span>Services</span>
                   <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform duration-200' />
                 </button>
-
                 {/* Mega Menu */}
                 <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4'>
                   <div className='p-8'>
@@ -520,7 +517,6 @@ export default function UltraFuturisticNavigation2030() {
                   <span>Services</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-200" />
                 </button>
-                
                 {/* Mega Menu */}
                 <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4">
                   <div className="p-8">
@@ -574,7 +570,6 @@ export default function UltraFuturisticNavigation2030() {
                 </div>
               </div>
             </div>
-
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>
               <Link
@@ -599,7 +594,6 @@ export default function UltraFuturisticNavigation2030() {
                 View Pricing
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>
               <button
@@ -619,7 +613,6 @@ export default function UltraFuturisticNavigation2030() {
             </div>
           </div>
         </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -656,7 +649,6 @@ export default function UltraFuturisticNavigation2030() {
                     </Link>
                   ))}
                 </div>
-
                 {/* Mobile Services */}
                 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white px-3'>
@@ -687,7 +679,6 @@ export default function UltraFuturisticNavigation2030() {
                     ))}
                   </div>
                 </div>
-
                 {/* Mobile CTA */}
                 <div className='space-y-3 pt-4 border-t border-purple-500/20'>
                   <Link
@@ -717,7 +708,6 @@ export default function UltraFuturisticNavigation2030() {
           )}
         </AnimatePresence>
       </nav>
-
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>

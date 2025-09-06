@@ -3,7 +3,7 @@ import React, {
   useRef,
   useEffect,
   FormEvent,
-  KeyboardEvent,
+  KeyboardEvent,;
 } from "react";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
@@ -12,7 +12,7 @@ interface ChatInputProps {
   disabled?: boolean;
 }
 
-export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
 

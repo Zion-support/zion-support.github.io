@@ -1,4 +1,4 @@
-export type InnovativeMicroSaas = {
+export type InnovativeMicroSaas = {;
   id: string;
   name: string;
   description: string;
@@ -93,7 +93,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     useCases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
     realService: true,
-  },
+  },;
 ];	id: string;
 	name: string;
 	description: string;
@@ -119,7 +119,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 };
 
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
-	{
+	{;
 		id: 'podcast-transcription-seo-suite';
 		name: 'Podcast Transcription & SEO Suite';
 		tagline: 'Turn episodes into SEO-optimized blogs in minutes',

@@ -25,7 +25,7 @@ export function ContractBuilder({
     setFormValues(templateData)
   }
   const handleContractGenerated = (contract: string) => {
-    setGeneratedContract(contract)
+    setGeneratedContract(contract);
     setActiveTab("preview");    if (onContractGenerated) {
       onContractGenerated(contract)
     }
@@ -56,7 +56,6 @@ export function ContractBuilder({
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
-            
             <div className="flex gap-2">
               <Button 
                 variant="outline" 
@@ -67,7 +66,6 @@ export function ContractBuilder({
                 <Save className="h-4 w-4" />
                 Templates
               </Button>
-              
               <Button
                 variant="secondary"
                 size="sm"
@@ -77,7 +75,6 @@ export function ContractBuilder({
               </Button>
             </div>
           </div>
-          
           <TabsContent value="form" className="pt-4">
             <ContractForm 
               talent = {talent,}
@@ -87,7 +84,6 @@ export function ContractBuilder({
               onContractGenerated = {handleContractGenerated,}
             />
           </TabsContent>
-          
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <ContractPreview 
@@ -99,7 +95,6 @@ export function ContractBuilder({
             )}
           </TabsContent>
         </Tabs>
-        
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}

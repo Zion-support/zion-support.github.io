@@ -52,7 +52,6 @@ export function ApiDocumentation() {
           Reference documentation for integrating with the Zion Marketplace API.
         </CardDescription>
       </CardHeader>
-
       <CardContent>
         <Alert className='bg-blue-900/30 border-blue-800 mb-6'>
           <Terminal className='h-4 w-4' />
@@ -61,7 +60,6 @@ export function ApiDocumentation() {
             in the Authorization header.
           </AlertDescription>
         </Alert>
-
         <Tabs defaultValue='jobs' className='space-y-4'>
           <TabsList className='bg-zinc-800 border-zinc-700'>
             <TabsTrigger value='jobs'>Jobs</TabsTrigger>
@@ -70,7 +68,6 @@ export function ApiDocumentation() {
             <TabsTrigger value='webhooks'>Webhooks</TabsTrigger>
             <TabsTrigger value='errors'>Errors</TabsTrigger>
           </TabsList>
-
           <TabsContent value='jobs' className='space-y-6'>
             <EndpointSection
               method='GET'
@@ -128,8 +125,8 @@ headers=headers) data = response.json () print (data) `
   success: ` {
 }` 
 }'
-}/> <EndpointSection deadline: '2025-06-30T23:59:59Z' 
-}) 
+}/> <EndpointSection deadline: '2025-06-30T23:59:59Z' ;
+}) ;
 });'
 'deadline': '2025-06-30T23:59:59Z' '
 }response = requests.post ('https: //api.ziontechgroup.com/v1/jobs'
@@ -189,7 +186,6 @@ print(data)`,
 }`,
               }}
             />
-
             <EndpointSection
               method='GET'
               endpoint='/api/jobs/:id'
@@ -252,7 +248,6 @@ print(data)`,
 }`,
               }}
             />
-
             <EndpointSection
               method='POST'
               endpoint='/api/jobs'
@@ -339,7 +334,7 @@ print(data)`,
     deadline: '2025-06-30T23:59:59Z'
   })
 })
-const data = await response.json()
+const data = await response.json();
 logInfo(data);`,
                 python: `import requests
 import json
@@ -384,7 +379,6 @@ print(data)`,
               }}
             />
           </TabsContent>
-
           <TabsContent value='talent' className='space-y-6'>
             <EndpointSection
               method='GET'
@@ -425,7 +419,7 @@ print(data)`,
     'Content-Type': 'application/json'
   }
 })
-const data = await response.json()
+const data = await response.json();
 logInfo(data);`,
                 python: `import requests
 
@@ -463,7 +457,6 @@ print(data)`,
 }`,
               }}
             />
-
             <EndpointSection
               method='GET'
               endpoint='/api/talent/:id'
@@ -488,7 +481,7 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
     'Content-Type': 'application/json'
   }
 })
-const data = await response.json()
+const data = await response.json();
 logInfo(data);`,
                 python: `import requests
 
@@ -536,7 +529,6 @@ print(data)`,
               }}
             />
           </TabsContent>
-
           <TabsContent value='quotes' className='space-y-6'>
             <EndpointSection
               method='POST'
@@ -629,7 +621,7 @@ print(data)`,
     requester_email: 'john@example.com'
   })
 })
-const data = await response.json()
+const data = await response.json();
 logInfo(data);`,
                 python: `import requests
 
@@ -675,7 +667,6 @@ print(data)`,
   }
 }`,              }}
             />
-
             <EndpointSection
               method='GET'
               endpoint='/api/quotes'
@@ -711,7 +702,7 @@ print(data)`,
     'Content-Type': 'application/json'
   }
 })
-const data = await response.json()
+const data = await response.json();
 logInfo(data);`,
                 python: `import requests
 
@@ -751,7 +742,6 @@ print(data)`,
               }}
             />
           </TabsContent>
-
           <TabsContent value='webhooks' className='space-y-6'>
             <div className='prose prose-invert max-w-none'>
               <h3 className='text-lg font-semibold mb-2'>Webhook Events</h3>
@@ -760,7 +750,6 @@ print(data)`,
                 occur in your account. You can configure webhooks in the
                 Webhooks tab of the Developer Dashboard.
               </p>
-
               <h4 className='text-md font-semibold mt-6 mb-2'>
                 Authentication
               </h4>
@@ -774,7 +763,6 @@ print(data)`,
                 header. This signature is an HMAC SHA-256 hash of the request
                 body using your webhook secret as the key.
               </p>
-
               <CodeBlock
                 code={`import crypto from 'crypto'
 // Function to verify webhook signature
@@ -798,7 +786,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const event = JSON.parse(payload)
   logInfo('Received valid webhook:', { data: event })
   // Respond to acknowledge receipt
-  res.status(200).send('Webhook received')
+  res.status(200).send('Webhook received');
 });`}
                 language='javascript'
                 showLineNumbers={true}              />
@@ -846,7 +834,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                   </tr>
                 </tbody>
               </table>
-
               <h4 className='text-md font-semibold mt-6 mb-2'>
                 Sample Payloads
               </h4>
@@ -857,7 +844,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                 </code>{' '}
                 webhook payload:
               </p>
-
               <CodeBlock
                 code = {`{
   "event_type": "new_application",
@@ -876,7 +862,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                 showLineNumbers={true}              />
             </div>
           </TabsContent>
-
           <TabsContent value='errors' className='space-y-6'>
             <div className='prose prose-invert max-w-none'>
               <h3 className='text-lg font-semibold mb-2'>Error Responses</h3>
@@ -887,7 +872,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                 error with the provided information, and codes in the 5xx range
                 indicate an error with our servers.
               </p>
-
               <table className='w-full border-collapse mt-4'>
                 <thead>
                   <tr className='border-b border-zinc-800'>
@@ -988,7 +972,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                   </tr>
                 </tbody>
               </table>
-
               <h4 className='text-md font-semibold mt-6 mb-2'>
                 Error Response Format
               </h4>
@@ -996,7 +979,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                 Error responses include a consistent JSON object with the
                 following format:
               </p>
-
               <CodeBlock
                 code = {`{
   "error": {
@@ -1012,7 +994,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 }`}
                 language='json'
               />
-
               <h4 className='text-md font-semibold mt-6 mb-2'>Rate Limiting</h4>
               <p className='text-zinc-400 mb-4'>
                 The Zion API implements rate limiting to protect our
@@ -1024,11 +1005,9 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                 </code>{' '}
                 response.
               </p>
-
               <p className='text-zinc-400 mb-2'>
                 Rate limit information is included in the response headers:
               </p>
-
               <ul className='list-disc pl-6 space-y-1 text-zinc-400'>
                 <li>
                   <code className='bg-zinc-800 px-1 py-0.5 rounded'>
@@ -1090,10 +1069,8 @@ function EndpointSection({
             </Badge>
           )}
         </div>
-
         <p className='mt-2 text-zinc-400'>{description}</p>
       </div>
-
       {params.length > 0 && (
         <div className='border-t border-zinc-800 p-4'>
           <h4 className='font-medium mb-2'>Parameters</h4>
@@ -1166,3 +1143,9 @@ function EndpointSection({
 }
 
 ;
+}
+}
+}
+}
+}
+}

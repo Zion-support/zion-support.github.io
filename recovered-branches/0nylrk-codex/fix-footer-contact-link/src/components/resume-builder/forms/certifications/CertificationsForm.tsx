@@ -19,7 +19,7 @@ interface CertificationsFormProps {
   onBack: () => void
 }
 
-export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
+export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
   const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -97,7 +97,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           Add any professional certifications, licenses, or credentials you have earned.
         </p>
       </div>
-
       {certifications.length > 0 && (
         <CertificationsList 
           certifications={certifications} 
@@ -110,11 +109,9 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>
-
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <CertificationFormFields form={form} />
-
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
             <div className="flex justify-between pt-2">
@@ -138,13 +135,11 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
               >
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
-
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   {editingId ? 'Update' : 'Add'} Certification
                 </Button>
-
                 <Button type="button" onClick={onComplete}>
                   Next
                 </Button>

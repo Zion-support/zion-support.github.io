@@ -29,7 +29,7 @@ interface PartnerProfile {
   commission_rate?: number
 }
 
-export default function PartnerManager() {
+export default function PartnerManager() {;
   const [partners, setPartners] = useState<PartnerProfile[]>([]);
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -307,7 +307,6 @@ export default function PartnerManager() {
           <p className="text-zion-slate-light">Approve and manage affiliate partners</p>
         </div>
       </div>
-
       <Card className="bg-zion-blue-dark border-zion-blue-light mb-8">
         <CardHeader className="pb-3">
           <CardTitle>Overview</CardTitle>
@@ -329,7 +328,6 @@ export default function PartnerManager() {
                 </p>
               </CardContent>
             </Card>
-            
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium text-zion-slate-light">
@@ -345,7 +343,6 @@ export default function PartnerManager() {
                 </p>
               </CardContent>
             </Card>
-            
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium text-zion-slate-light">
@@ -364,7 +361,6 @@ export default function PartnerManager() {
           </div>
         </CardContent>
       </Card>
-
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="pb-3 flex flex-col md:flex-row justify-between md:items-center gap-4">
           <div>
@@ -391,7 +387,6 @@ export default function PartnerManager() {
               <TabsTrigger value="rejected">Rejected</TabsTrigger>
               <TabsTrigger value="all">All</TabsTrigger>
             </TabsList>
-            
             <TabsContent value="pending" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
@@ -403,7 +398,6 @@ export default function PartnerManager() {
                 getFraudFlagBadge={getFraudFlagBadge}
               />
             </TabsContent>
-            
             <TabsContent value="approved" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
@@ -415,7 +409,6 @@ export default function PartnerManager() {
                 getFraudFlagBadge={getFraudFlagBadge}
               />
             </TabsContent>
-            
             <TabsContent value="rejected" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
@@ -427,7 +420,6 @@ export default function PartnerManager() {
                 getFraudFlagBadge={getFraudFlagBadge}
               />
             </TabsContent>
-            
             <TabsContent value="all" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
@@ -442,7 +434,6 @@ export default function PartnerManager() {
           </Tabs>
         </CardContent>
       </Card>
-      
       {/* Partner Details Dialog */}
       <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}>
         <DialogContent className="sm:max-w-lg bg-zion-blue border-zion-blue-light">
@@ -452,7 +443,6 @@ export default function PartnerManager() {
               Review the details of the partner application
             </DialogDescription>
           </DialogHeader>
-          
           {selectedPartner && (
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-2">
@@ -465,12 +455,10 @@ export default function PartnerManager() {
                   <div>{getStatusBadge(selectedPartner.status)}</div>
                 </div>
               </div>
-              
               <div>
                 <p className="text-xs text-zion-slate-light">Bio</p>
                 <p className="text-white">{selectedPartner.bio || "No bio provided"}</p>
               </div>
-              
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Niche</p>
@@ -481,7 +469,6 @@ export default function PartnerManager() {
                   <p className="text-white">{getAudienceSizeLabel(selectedPartner.audience_size)}</p>
                 </div>
               </div>
-              
               {selectedPartner.website && (
                 <div>
                   <p className="text-xs text-zion-slate-light">Website</p>
@@ -513,7 +500,6 @@ export default function PartnerManager() {
                   <p className="text-white">{selectedPartner.commission_rate || 25}%</p>
                 </div>
               </div>
-              
               {selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && (
                 <Alert className="bg-red-900/20 border-red-900/50 text-red-500">
                   <AlertTitle className="flex items-center gap-2">
@@ -548,7 +534,6 @@ export default function PartnerManager() {
           )}
         </DialogContent>
       </Dialog>
-      
       {/* Partner Settings Dialog */}
       <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>
         <DialogContent className="bg-zion-blue border-zion-blue-light">
@@ -558,14 +543,12 @@ export default function PartnerManager() {
               Configure commission rates and other settings
             </DialogDescription>
           </DialogHeader>
-          
           {selectedPartner && (
             <div className="space-y-4">
               <div>
                 <label className="text-sm font-medium text-white">Partner Name</label>
                 <p className="text-zion-slate-light">{selectedPartner.name}</p>
               </div>
-              
               <div>
                 <label className="text-sm font-medium text-white" htmlFor="commission-rate">
                   Commission Rate (%)
@@ -582,7 +565,6 @@ export default function PartnerManager() {
                   Percentage of reward granted to this partner for successful referrals
                 </p>
               </div>
-              
               <DialogFooter>
                 <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>
                   Cancel
@@ -697,7 +679,6 @@ function PartnerTable({
                   <Settings className="h-4 w-4" />
                   <span className="sr-only">Settings</span>
                 </Button>
-                
                 <Button 
                   variant="outline" 
                   size="sm"

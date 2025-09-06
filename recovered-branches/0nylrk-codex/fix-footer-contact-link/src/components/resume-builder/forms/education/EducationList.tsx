@@ -26,3 +26,4 @@ export function EducationList({ educationEntries, onEdit, onDelete }: EducationL
     </div>
   )
 }
+;

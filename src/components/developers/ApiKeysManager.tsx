@@ -73,8 +73,8 @@ export function ApiKeysManager() {
     setShowCreateDialog(false)
     setKeyName('')
     setSelectedScopes([]) }
-  const handleRegenerateKey = async (keyId: string) => {
-    await regenerateApiKey(keyId)
+  const handleRegenerateKey = async (keyId: string) => {;
+    await regenerateApiKey(keyId);
     setShowRegenerateConfirm(null);  useState(() => {
     fetchApiKeys()
   })
@@ -162,13 +162,11 @@ export function ApiKeysManager() {
           Create and manage API keys for accessing the Zion APIs.
         </CardDescription>
       </CardHeader>
-
       <CardContent>
         <div className='flex justify-between items-center mb-6'>
           <p className='text-sm text-zinc-400'>
             You have {keys.length} API {keys.length === 1 ? 'key' : 'keys'}
           </p>
-
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
               <Button variant='default'>Create New API Key</Button>
@@ -180,7 +178,6 @@ export function ApiKeysManager() {
                   Generate a new API key for accessing the Zion APIs.
                 </DialogDescription>
               </DialogHeader>
-
               <div className='space-y-4 py-4'>
                 <div className='space-y-2'>
                   <Label htmlFor='key-name'>Key Name</Label>
@@ -191,7 +188,6 @@ export function ApiKeysManager() {
                     placeholder='e.g. Production API Key'
                     className='bg-zinc-800 border-zinc-700'                  />
                 </div>
-
                 <div className='space-y-2'>
                   <Label>Scopes</Label>
                   <div className='grid gap-2 pt-2'>
@@ -224,7 +220,6 @@ export function ApiKeysManager() {
                   </div>
                 </div>
               </div>
-
               <DialogFooter>
                 <Button variant='outline' onClick={handleDialogClose}>
                   Cancel
@@ -243,7 +238,6 @@ export function ApiKeysManager() {
             </DialogContent>
           </Dialog>
         </div>
-
         {/* New API Key Alert */}
         {newApiKey && (
           <div className='mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md'>
@@ -324,7 +318,6 @@ export function ApiKeysManager() {
                       </div>
                     </div>
                   </div>
-
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
               This key will only be displayed once. Please save it securely.
             </p>
@@ -363,7 +356,6 @@ export function ApiKeysManager() {
                       </div>
                     </div>
                   </div>
-
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button
@@ -400,13 +392,12 @@ export function ApiKeysManager() {
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
-
                 <div className='mt-3 flex flex-wrap gap-2'>
                   {key.scopes.map(scope => (
                     <Badge
                       key={scope}
                       variant='secondary'
-                      className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'                    >                
+                      className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'                    >
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope,) => (
                     <Badge 
@@ -417,7 +408,6 @@ export function ApiKeysManager() {
                     </Badge>
                   ))}
                 </div>
-
                 <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>
                   <span>
                     Created: {format(new Date(key.created_at), 'MMM d, yyyy')}
@@ -455,7 +445,6 @@ export function ApiKeysManager() {
           )}
         </div>
       </CardContent>
-
       <CardFooter className='justify-between border-t border-zinc-800 py-4'>
         <div className='text-xs text-zinc-500'>
           Keep your API keys secure. They have the same permissions as your
@@ -469,7 +458,6 @@ export function ApiKeysManager() {
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>
         </Button>
       </CardFooter>
-
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog
         open={showRegenerateConfirm !== null}
@@ -517,7 +505,6 @@ export function ApiKeysManager() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-
       {/* Delete Key Confirmation Dialog */}
       <AlertDialog
         open={showDeleteConfirm !== null}
@@ -568,3 +555,4 @@ export function ApiKeysManager() {
   )
 }
 ;
+}

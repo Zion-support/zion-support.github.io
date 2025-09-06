@@ -15,3 +15,6 @@ class SEOAccessibility {; constructor() {; this.projectRoot = process.cwd(); thi
 ; if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {; files.push(fullPath)}})};
 ;
 
+
+}
+}

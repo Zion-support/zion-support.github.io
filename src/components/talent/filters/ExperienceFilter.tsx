@@ -23,7 +23,6 @@ export function ExperienceFilter({
           <ChevronDown className='h-4 w-4 text-zion-slate-light' />
         )}
       </button>
-
       {expanded && (
         <div className='mt-6'>
           <div className='flex justify-between text-sm text-zion-slate-light mb-2'>            <span>{experienceRange[0]} years</span>
@@ -33,7 +32,6 @@ export function ExperienceFilter({
             aria-label='Experience range'            value={[experienceRange[0], experienceRange[1]]}
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
-
 import { Slider } from "@/components/ui/slider"
 import { ExperienceFilterProps } from "@/types/filters"
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
@@ -53,7 +51,6 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-      
       {expanded && (
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
@@ -73,6 +70,8 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 ;
+}
+}

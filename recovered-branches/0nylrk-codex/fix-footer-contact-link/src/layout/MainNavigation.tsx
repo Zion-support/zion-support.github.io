@@ -9,7 +9,7 @@ interface MainNavigationProps {
   className?: string
 }
 
-export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
+export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();

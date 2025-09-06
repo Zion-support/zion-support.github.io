@@ -80,5 +80,7 @@ export default function ITAssetDiscoveryAgentPage() {
           </a>
         </div>
       </div>
-    </UltraFuturisticBackground>
+    </UltraFuturisticBackground>;
   );
+
+}

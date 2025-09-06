@@ -15,7 +15,7 @@ import {
   Globe,
   Lock,
   Code,
-  Database,
+  Database,;
   Cloud,;
 import Button from '../ui/Button';
 interface Service {
@@ -275,7 +275,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           >
             {subtitle}
           </motion.p>
-
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -303,7 +302,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             ))}
           </motion.div>
         </div>
-
         {/* Filters */}
         {showFilters && (
           <motion.div
@@ -342,7 +340,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     ))}
                   </select>
                 </div>
-
                 {/* Price Range Filter */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -365,7 +362,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     ))}
                   </select>
                 </div>
-
                 {/* Sort Options */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -447,7 +443,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       {service.tagline}
                     </p>
                   </div>
-
                   {/* Features */}
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
@@ -471,7 +466,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       ))}
                     </ul>
                   </div>
-
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
                     <div>
@@ -492,7 +486,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       </div>
                       <div className='text-xs text-gray-400'>Trial Days</div>                    </div>
                   </div>
-
                   {/* ROI Highlight */}                    <div>
                       <div className="text-lg font-bold text-white">{service.rating}</div>
                       <div className="text-xs text-gray-400">Rating</div>
@@ -506,7 +499,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <div className="text-xs text-gray-400">Trial Days</div>
                     </div>
                   </div>
-
                   {/* ROI Highlight */}
                   <div className='mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20'>
                     <div className='text-sm text-green-400 font-semibold mb-1'>
@@ -518,7 +510,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       {service.roi}
                     </div>
                   </div>
-
                   {/* Market Position */}
                   <div className='mb-6 p-4 bg-gray-800/30 rounded-lg'>
                     <div className='text-sm text-cyan-400 font-semibold mb-2'>
@@ -530,7 +521,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       {service.marketPosition}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className='mt-auto'>
                     <Button
@@ -541,7 +531,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       Get Started
                       <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />                    </Button>
                   </div>
-
                   {/* Contact Info */}                    <Button
                       href={service.link}
                       variant="primary"
@@ -551,7 +540,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </div>
-
                   {/* Contact Info */}
                   <div className='mt-4 text-center'>
                     <div className='text-xs text-gray-500'>
@@ -576,7 +564,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             ))}
           </AnimatePresence>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -637,3 +624,10 @@ export default EnhancedServiceShowcase;  )
 };
 
 export default EnhancedServiceShowcase;
+
+}
+}
+}
+}
+}
+}

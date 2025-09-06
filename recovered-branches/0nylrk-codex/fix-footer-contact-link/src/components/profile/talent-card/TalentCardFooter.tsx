@@ -14,7 +14,7 @@ interface TalentCardFooterProps {
   onRequestHire?: (profile: TalentProfile) => void
 }
 
-export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
+export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
   const navigate = useNavigate();
@@ -72,7 +72,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             </div>
           )}
         </div>
-        
         {/* Action Buttons */}
         <div className="flex gap-2">
           <Button 
@@ -83,7 +82,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           >
             Hire
           </Button>
-          
           <Button 
             variant="outline" 
             size="sm" 
@@ -95,7 +93,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           </Button>
         </div>
       </div>
-      
       {/* Hire Request Modal */}
       <HireRequestModal
         talent={profile}

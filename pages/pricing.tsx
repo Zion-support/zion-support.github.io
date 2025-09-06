@@ -15,7 +15,6 @@ const PricingPage: React.FC = () => {
           <p className="text-gray-600 mb-10 max-w-3xl">
             We tailor solutions to your needs. Below are typical starting ranges observed in the market. Get a custom quote at any time.
           </p>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="border rounded-xl p-6 shadow-sm">
               <h3 className="text-xl font-semibold mb-2">AI Development</h3>
@@ -26,7 +25,6 @@ const PricingPage: React.FC = () => {
                 <li>Enterprise: $75,000+</li>
               </ul>
             </div>
-
             <div className="border rounded-xl p-6 shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Micro SaaS</h3>
               <p className="text-gray-600 mb-4">Idea validation, build, payments, analytics, hosting.</p>
@@ -36,7 +34,6 @@ const PricingPage: React.FC = () => {
                 <li>Scale: $100,000+</li>
               </ul>
             </div>
-
             <div className="border rounded-xl p-6 shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Cloud & DevOps</h3>
               <p className="text-gray-600 mb-4">AWS/GCP/Azure architecture, IaC, observability.</p>
@@ -46,7 +43,6 @@ const PricingPage: React.FC = () => {
                 <li>Managed: from $2,000/mo</li>
               </ul>
             </div>
-
             <div className="border rounded-xl p-6 shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Cybersecurity</h3>
               <p className="text-gray-600 mb-4">Pen-testing, hardening, SOC, compliance.</p>
@@ -56,7 +52,6 @@ const PricingPage: React.FC = () => {
                 <li>Managed SOC: from $3,000/mo</li>
               </ul>
             </div>
-
             <div className="border rounded-xl p-6 shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Data & Analytics</h3>
               <p className="text-gray-600 mb-4">Warehouses, pipelines, BI, ML ops.</p>
@@ -66,7 +61,6 @@ const PricingPage: React.FC = () => {
                 <li>ML Ops: $25,000+</li>
               </ul>
             </div>
-
             <div className="border rounded-xl p-6 shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Web & Mobile</h3>
               <p className="text-gray-600 mb-4">React/Next.js, React Native, APIs.</p>
@@ -190,7 +184,7 @@ import {
   Brain as BrainIcon,
   Atom as AtomIcon,
   Globe2 as Globe2Icon,
-  Bot as BotIcon,
+  Bot as BotIcon,;
   ChevronRight as ChevronRightIcon,;
 } from 'lucide-react';import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -198,7 +192,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
   enhancedRealMicroSaasServices,
-  getServicesByCategory,
+  getServicesByCategory,;
   getPopularServices,;
 } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
@@ -206,7 +200,7 @@ import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
-    'monthly'
+    'monthly';
   );  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
   const contactInfo = {
@@ -470,7 +464,6 @@ export default function PricingPage() {
         />
         <meta name='author' content='Zion Tech Group' />
         <meta name='robots' content='index, follow' />
-
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -486,7 +479,6 @@ export default function PricingPage() {
           property='og:image'
           content='https://ziontechgroup.com/og-image.jpg'
         />
-
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -502,7 +494,6 @@ export default function PricingPage() {
           content='https://ziontechgroup.com/og-image.jpg'
         />
       </Head>
-
       <div className='container mx-auto px-4 py-12'>
         {/* Hero Section */}
         <div className='text-center mb-16'>
@@ -514,7 +505,6 @@ export default function PricingPage() {
             generous free trials and access to our revolutionary AI & quantum
             computing services.
           </p>
-
           {/* New 2026 Pricing Link */}
           <div className='mb-8 p-6 bg-gradient-to-r from-purple-800/60 to-pink-800/60 border border-purple-700/50 rounded-2xl max-w-4xl mx-auto'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -536,7 +526,6 @@ export default function PricingPage() {
               </span>
             </Button>
           </div>
-
           {/* Billing Toggle */}
           <div className='flex items-center justify-center gap-4 mb-8'>
             <span
@@ -564,7 +553,6 @@ export default function PricingPage() {
               <span className='ml-2 text-sm text-green-400'>Save 20%</span>            </span>
           </div>
         </div>
-
         {/* Pricing Tiers */}
         <div className='mb-20'>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>            {pricingTiers.map((tier, index) => (
@@ -587,12 +575,10 @@ export default function PricingPage() {
                   <div className='inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6'>
                     {tier.icon}
                   </div>
-
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {tier.name}
                   </h3>
                   <p className='text-gray-300 mb-6'>{tier.description}</p>
-
                   <div className='mb-6'>
                     <div className='flex items-baseline justify-center'>
                       <span className='text-5xl font-bold text-cyan-400'>
@@ -608,7 +594,6 @@ export default function PricingPage() {
                       </div>
                     )}
                   </div>
-
                   <ul className='text-left space-y-3 mb-8'>
                     {tier.features.map((feature, idx) => (
                       <li key={idx} className='flex items-start'>
@@ -617,7 +602,6 @@ export default function PricingPage() {
                       </li>
                     ))}
                   </ul>
-
                   <Button
                     href={tier.name === 'Enterprise' ? '/contact' : '/services'}
                     variant={tier.ctaVariant}
@@ -631,7 +615,6 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
-
         {/* Value Propositions */}
         <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
@@ -662,7 +645,6 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
-
         {/* Service Category Pricing Examples */}
         <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
@@ -695,7 +677,6 @@ export default function PricingPage() {
                     </div>
                   </div>
                 </div>
-
                 <ul className='space-y-2 mb-4'>
                   {category.services.map((service, idx) => (
                     <li
@@ -706,7 +687,6 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-
                 <Button
                   href='/services'
                   variant='secondary'
@@ -719,7 +699,6 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
-
         {/* Popular Services Pricing */}
         <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
@@ -744,7 +723,6 @@ export default function PricingPage() {
                     {service.category}
                   </div>
                 </div>
-
                 <div className='mb-4'>
                   <div className='text-xs text-gray-400 mb-2'>
                     Key Features:
@@ -757,7 +735,6 @@ export default function PricingPage() {
                     ))}
                   </ul>
                 </div>
-
                 <Button
                   href={service.link}
                   variant='primary'
@@ -770,7 +747,6 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
-
         {/* FAQ Section */}
         <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
@@ -787,7 +763,6 @@ export default function PricingPage() {
                 trial.
               </p>
             </UltraFuturisticCard>
-
             <UltraFuturisticCard variant='holographic' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
                 Can I change my plan later?
@@ -798,7 +773,6 @@ export default function PricingPage() {
                 adjustments.
               </p>
             </UltraFuturisticCard>
-
             <UltraFuturisticCard variant='neural' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
                 What support is included?
@@ -808,7 +782,6 @@ export default function PricingPage() {
                 plans include priority support with dedicated account managers.
               </p>
             </UltraFuturisticCard>
-
             <UltraFuturisticCard variant='quantum' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
                 Is there a setup fee?
@@ -819,7 +792,6 @@ export default function PricingPage() {
               </p>            </UltraFuturisticCard>
           </div>
         </div>
-
         {/* Contact Information */}
         <div className='mb-16'>
           <h2 className='text-3xl font-bold text-white mb-8 text-center'>
@@ -834,7 +806,6 @@ export default function PricingPage() {
               </p>
               <p className='text-gray-400 text-sm mt-2'>Available 24/7</p>
             </UltraFuturisticCard>
-
             <UltraFuturisticCard
               variant='holographic'
               className='text-center p-6'
@@ -848,7 +819,6 @@ export default function PricingPage() {
                 Quick response guaranteed
               </p>
             </UltraFuturisticCard>
-
             <UltraFuturisticCard variant='neural' className='text-center p-6'>
               <MapPin className='w-12 h-12 text-green-400 mx-auto mb-4' />
               <h3 className='text-xl font-bold text-white mb-3'>Address</h3>
@@ -858,7 +828,6 @@ export default function PricingPage() {
               <p className='text-gray-400 text-sm mt-2'>Global operations</p>            </UltraFuturisticCard>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className='text-center'>
           <UltraFuturisticCard
@@ -873,7 +842,6 @@ export default function PricingPage() {
               revolutionary AI & quantum computing services. No credit card
               required, instant setup, and full support included.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Button
                 href='/services'
@@ -894,7 +862,6 @@ export default function PricingPage() {
                 <MessageSquare className='ml-2 w-5 h-5' />
               </Button>
             </div>
-
             <div className='text-sm text-gray-400'>
               <p>
                 ✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant

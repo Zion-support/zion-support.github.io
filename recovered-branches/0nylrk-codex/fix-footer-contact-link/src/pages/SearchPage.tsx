@@ -6,7 +6,7 @@ import {generateSearchSuggestions} from "@/data/marketplaceData";
 import {SearchSuggestion} from "@/types/search";
 import {useAISearch} from "@/hooks/useAISearch";
 import {AppLayout} from "@/layout/AppLayout";
-export default function SearchPage() {
+export default function SearchPage() {;
   const [params] = useSearchParams();
   const navigate = useNavigate();
   const initial = params.get("q") || "";
@@ -37,7 +37,6 @@ export default function SearchPage() {
             placeholder="Search talent, jobs, and projects..."
           />
         </form>
-
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results.length === 0 && (
           <p className="text-zion-slate-light">No results found.</p>

@@ -52,11 +52,11 @@ import {
   Wrench,
   Smartphone,
   BarChart3,
-  Eye,
+  Eye,;
   Timer,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Briefcase, 
+  Microscope, DollarSign, Home, Briefcase, ;
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -382,7 +382,7 @@ const mainNavItems = [
   { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
 ];
 
-export default function UltraFuturisticNavigation2029() {
+export default function UltraFuturisticNavigation2029() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -446,7 +446,6 @@ export default function UltraFuturisticNavigation2029() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -477,7 +476,6 @@ export default function UltraFuturisticNavigation2029() {
                   2029 Innovation Hub
                 </span>              </div>
             </motion.div>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {mainNavItems.map(item => (            {/* Logo */}
@@ -499,7 +497,6 @@ export default function UltraFuturisticNavigation2029() {
                 <span className="text-xs text-gray-400">2029 Innovation Hub</span>
               </div>
             </motion.div>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {mainNavItems.map(item => (
@@ -543,7 +540,6 @@ export default function UltraFuturisticNavigation2029() {
                     className='group-hover:rotate-180 transition-transform duration-200'
                   />
                 </button>
-
                 {/* Mega Menu */}
                 <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
                   <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>                    {serviceCategories.map((category, index) => (                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
@@ -622,7 +618,6 @@ export default function UltraFuturisticNavigation2029() {
                   </div>
                 </div>
               </div>
-
               {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -632,7 +627,6 @@ export default function UltraFuturisticNavigation2029() {
                 Get Started
               </motion.button>
             </div>
-
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>
               <button
@@ -647,7 +641,6 @@ export default function UltraFuturisticNavigation2029() {
           </div>
         </div>
       </nav>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -690,7 +683,6 @@ export default function UltraFuturisticNavigation2029() {
                     <X size={24} />
                   </button>
                 </div>
-
                 {/* Mobile Navigation Items */}
                 <div className='space-y-4'>
                   {mainNavItems.map(item => (                    <Link
@@ -714,7 +706,6 @@ export default function UltraFuturisticNavigation2029() {
                     </Link>
                   ))}
                 </div>
-
                 {/* Mobile Services */}
                 <div className='mt-8'>
                   <h3 className='text-lg font-semibold text-white mb-4'>
@@ -768,7 +759,6 @@ export default function UltraFuturisticNavigation2029() {
                     ))}
                   </div>
                 </div>
-
                 {/* Mobile CTA */}
                 <div className='mt-8'>
                   <motion.button
@@ -787,7 +777,6 @@ export default function UltraFuturisticNavigation2029() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>

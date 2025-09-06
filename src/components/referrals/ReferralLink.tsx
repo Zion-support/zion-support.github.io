@@ -55,11 +55,9 @@ export function ReferralLink({
               <span className='sr-only'>Copy</span>
             </Button>
           </div>
-
           {copied && (
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
             <p className="text-sm text-green-600 dark:text-green-500">
-  
   const handleCopy = () => {
     onCopy()
     setCopied(true)
@@ -89,7 +87,6 @@ export function ReferralLink({
               <span className="sr-only">Copy</span>
             </Button>
           </div>
-          
           {copied && (
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!
@@ -141,6 +138,8 @@ export function ReferralLink({
         </div>
       </CardFooter>
     </Card>
-  )
-}
+  );
+};
 ;
+}
+}

@@ -2,7 +2,7 @@ import {useEffect, useMemo, useState} from 'react';
 export default function Dashboard() {
   const params =
     typeof window !== 'undefined'
-      ? new URLSearchParams(window.location.search)
+      ? new URLSearchParams(window.location.search);
       : new URLSearchParams();
   const tenantId = params.get('tenantId') || '';
 
@@ -94,7 +94,6 @@ export default function Dashboard() {
             </button>
           </form>
         </section>
-
         <section className='col-span-1 md:col-span-3 bg-white border rounded p-4'>
           <h2 className='font-semibold mb-3'>Candidate Flow</h2>
           <div className='grid grid-cols-1 md:grid-cols-4 gap-4 text-sm'>

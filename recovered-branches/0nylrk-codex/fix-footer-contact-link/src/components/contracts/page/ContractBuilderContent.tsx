@@ -17,7 +17,7 @@ const mockTalent: TalentProfile = {
   profile_picture_url: '',
   skills: ['ReactNode.jsSmart Contracts']},
 
-export function ContractBuilderContent() {
+export function ContractBuilderContent() {;
   const { user } = useAuth();
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
   const [recentContracts, setRecentContracts] = useState([
@@ -61,7 +61,6 @@ export function ContractBuilderContent() {
         contracts={recentContracts}
         onViewContract={handleViewContract}
       />
-      
       {showBuilderType === 'standard' && (
         <ContractBuilder
           isOpen={true}

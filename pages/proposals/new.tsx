@@ -20,7 +20,6 @@ const NewProposal: NextPage = () => {
         <title>New Proposal - Zion AI Marketplace</title>
       </Head>
       <h1 className="text-2xl font-semibold mb-4">Create Proposal</h1>
-
       <div className="grid gap-4">
         <label className="text-sm">Job Description / Brief
           <textarea value={jobBrief} onChange={e => setJobBrief(e.target.value)} rows={6} className="mt-1 w-full rounded-md border p-3" />
@@ -32,7 +31,6 @@ const NewProposal: NextPage = () => {
           <textarea value={relevantExperience} onChange={e => setRelevantExperience(e.target.value)} rows={6} className="mt-1 w-full rounded-md border p-3" />
         </label>
       </div>
-
       <div className="mt-6 flex items-center justify-between">
         <h2 className="text-lg font-semibold">Proposal / Cover Letter</h2>
         <AIAssistant

@@ -41,7 +41,6 @@ export function UserTypeSelection({
           This helps us personalize your experience
         </p>
       </div>
-
       <div className='grid gap-4 md:grid-cols-3'>
         {userTypes.map(type => {
           const Icon = type.icon
@@ -71,6 +70,8 @@ export function UserTypeSelection({
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 ;
+}
+}

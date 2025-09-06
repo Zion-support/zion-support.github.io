@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface EnterpriseITBreakthroughService2029 {
+export interface EnterpriseITBreakthroughService2029 {;
   id: string;
   name: string;
   tagline: string;
@@ -293,7 +293,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       customers: 180,
       rating: 4.9,
       reviews: 95,
-    },
+    },;
   ];    features: [
       'Autonomous infrastructure managementAI-powered deployment automationSelf-healing systemsPredictive scalingAutomated monitoringIntelligent incident responsePerformance optimizationSecurity automation';
       'Compliance monitoringAnalytics dashboard'

@@ -27,11 +27,11 @@ import {
   Cloud,
   Stethoscope,
   GraduationCap,
-  Leaf,
+  Leaf,;
   Truck,;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
-  Search, Filter, Star, CheckCircle, ArrowRight, 
+  Search, Filter, Star, CheckCircle, ArrowRight, ;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Phone, Mail, MapPin, TrendingUp, Users, Award;
   Zap, Globe, Cpu, Database, Lock, Cloud;
@@ -166,7 +166,7 @@ const serviceCategories = [
   }
 ];
 
-export default function InnovativeServicesShowcase2025() {
+export default function InnovativeServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
@@ -227,35 +227,29 @@ export default function InnovativeServicesShowcase2025() {
           content='https://ziontechgroup.com/innovative-services-showcase-2025'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'></div>
-
         {/* Background Elements */}
         <div className='absolute inset-0 overflow-hidden pointer-events-none'>
           <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
           <div className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
           <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>
         </div>
-
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'      </Head>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black"></div>
-        
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
-
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -293,7 +287,6 @@ export default function InnovativeServicesShowcase2025() {
               Discover our comprehensive collection of revolutionary micro SAAS, AI, healthcare, fintech, and emerging technology services that are transforming industries worldwide.
             </p>
           </motion.div>
-
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -355,7 +348,6 @@ export default function InnovativeServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className='py-16 bg-gradient-to-b from-black to-slate-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -380,7 +372,6 @@ export default function InnovativeServicesShowcase2025() {
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50"
                 />
               </div>
-
               {/* Category Filter */}
               <div>
                 <select
@@ -398,7 +389,6 @@ export default function InnovativeServicesShowcase2025() {
                   ))}
                 </select>
               </div>
-
               {/* Sort By */}
               <div>
                 <select
@@ -419,7 +409,6 @@ export default function InnovativeServicesShowcase2025() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-20 bg-slate-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -474,7 +463,6 @@ export default function InnovativeServicesShowcase2025() {
                     {service.description}
                   </p>
                 </div>
-
                 {/* Features */}
                 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide'>
@@ -508,7 +496,6 @@ export default function InnovativeServicesShowcase2025() {
                     )}
                   </ul>
                 </div>
-
                 {/* Market Info */}
                 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
                   <div>
@@ -523,7 +510,6 @@ export default function InnovativeServicesShowcase2025() {
                       {service.targetAudience}
                     </div>                  </div>
                 </div>
-
                 {/* CTA */}
                 <div className='flex gap-3'>
                   <a
@@ -537,7 +523,6 @@ export default function InnovativeServicesShowcase2025() {
                     <div className="text-white font-semibold truncate">{service.targetAudience}</div>
                   </div>
                 </div>
-
                 {/* CTA */}
                 <div className='flex gap-3'>
                   <a
@@ -560,7 +545,6 @@ export default function InnovativeServicesShowcase2025() {
               </motion.div>
             ))}
           </div>
-
           {sortedServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -579,7 +563,6 @@ export default function InnovativeServicesShowcase2025() {
           )}
         </div>
       </section>
-
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-slate-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
@@ -599,7 +582,6 @@ export default function InnovativeServicesShowcase2025() {
               can revolutionize your operations and drive growth.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -608,7 +590,6 @@ export default function InnovativeServicesShowcase2025() {
               Contact our team to learn more about how our innovative services can revolutionize your operations and drive growth.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -628,7 +609,6 @@ export default function InnovativeServicesShowcase2025() {
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -647,7 +627,6 @@ export default function InnovativeServicesShowcase2025() {
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

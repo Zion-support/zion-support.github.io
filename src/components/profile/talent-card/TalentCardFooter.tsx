@@ -67,7 +67,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             </div>
           )}
         </div>
-        
         {/* Action Buttons */}
         <div className="flex gap-2">
           <Button 
@@ -78,7 +77,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           >
             Hire
           </Button>
-          
           <Button 
             variant="outline" 
             size="sm" 
@@ -90,7 +88,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           </Button>
         </div>
       </div>
-      
       {/* Hire Request Modal */}
       <HireRequestModal
         talent = {profile,}
@@ -100,4 +97,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       />
     </>
   )
+};
+;
 }

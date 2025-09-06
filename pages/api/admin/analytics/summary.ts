@@ -78,6 +78,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 })),
-
+;
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 };

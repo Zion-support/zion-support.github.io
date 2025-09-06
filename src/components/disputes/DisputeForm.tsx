@@ -11,7 +11,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form'
+} from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea'; import {
   Select,
   SelectContent,
@@ -104,7 +104,6 @@ export function DisputeForm({
         <FileText className='h-5 w-5 text-primary' />
         <h2 className='text-xl font-semibold'>Report an Issue</h2>
       </div>
-
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
           <FormField
@@ -175,7 +174,6 @@ export function DisputeForm({
                   multiple
                   onChange={handleFileChange}
                   className='cursor-pointer'                />
-
                 {files.length > 0 && (
                   <div className='space-y-2'>
                     <p className='text-sm font-medium'>Selected files:</p>
@@ -204,7 +202,6 @@ export function DisputeForm({
             </FormControl>
             <FormMessage />
           </FormItem>
-
           <div className='flex justify-end space-x-2'>
             {onCancel && (
               <Button type='button' variant='outline' onClick={onCancel}>
@@ -251,4 +248,5 @@ description: values.description
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
 }</ul> </div>) 
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) 
-}'"}
+}'"};
+;

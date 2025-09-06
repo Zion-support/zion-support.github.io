@@ -15,7 +15,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       description: "State-of-the-art natural language processing with 98% accuracy",
       price: 4999,
       currency: "$",
-      category: "AI Models",
+      category: "AI Models",;
       tags: ["AI", "NLP", "Machine Learning"];
       images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-11-15T14:48:00.000Z",
@@ -103,7 +103,6 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
             />
           ))}
         </div>
-        
         <div className="mt-10 text-center">
           <Button 
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"

@@ -17,7 +17,7 @@ interface InterviewCardProps {
   onRefresh: () => Promise<void>
 }
 
-export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
+export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
   const { user } = useAuth();
   const { respondToInterview, cancelInterview } = useInterviews();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
@@ -133,7 +133,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
           with {getOtherPartyName()}
         </p>
       </CardHeader>
-      
       <CardContent className="pt-2">
         <div className="space-y-3">
           <div className="flex items-start gap-3">
@@ -148,7 +147,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
               </p>
             </div>
           </div>
-
           {interview.meeting_platform && (
             <div className="flex items-center gap-3">
               <Video className="h-4 w-4 text-muted-foreground" />
@@ -166,7 +164,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
           )}
         </div>
       </CardContent>
-      
       <CardFooter className="pt-2">
         <div className="grid grid-cols-1 gap-2 w-full">
           {/* For clients with pending requests */}
@@ -216,14 +213,14 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
               {interview.meeting_link ? (
                 <Button className="w-full" asChild disabled={!isInterviewLive}>
                   <a href={interview.meeting_link} target="_blank" rel="noopener noreferrer">
-                    <Video className="h-4 w-4 mr-2" /> 
+                    <Video className="h-4 w-4 mr-2" />
                     {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                     <ExternalLink className="h-3 w-3 ml-2" />
                   </a>
                 </Button>
               ) : (
                 <Button className="w-full" disabled={!isInterviewLive}>
-                  <Video className="h-4 w-4 mr-2" /> 
+                  <Video className="h-4 w-4 mr-2" />
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>
               )}
@@ -257,7 +254,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
           )}
         </div>
       </CardFooter>
-      
       {/* Response dialog for talents */}
       <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>
         <DialogContent className="sm:max-w-[500px] bg-zion-blue-dark border-zion-blue-light text-white">

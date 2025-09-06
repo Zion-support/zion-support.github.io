@@ -10,7 +10,7 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
-  listing, 
+  listing, ;
   view = 'grid';
   onRequestQuote
 }: ProductListingCardProps) {
@@ -69,7 +69,6 @@ export function ProductListingCard({
           )}
         </div>
       </div>
-      
       {/* Content */}
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
         <div>
@@ -88,7 +87,6 @@ export function ProductListingCard({
               </div>
             )}
           </div>
-          
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
@@ -98,7 +96,6 @@ export function ProductListingCard({
           <p className="text-sm text-zion-slate line-clamp-2 mb-4">
             {listing.description}
           </p>
-          
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
@@ -113,7 +110,6 @@ export function ProductListingCard({
             </div>
           )}
         </div>
-        
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">
           <div className="text-sm font-medium">
@@ -128,7 +124,6 @@ export function ProductListingCard({
               </span>
             )}
           </div>
-          
           <div className="flex gap-2">
             <Button 
               size="sm" 
@@ -140,7 +135,6 @@ export function ProductListingCard({
             >
               Buy Now
             </Button>
-            
             {onRequestQuote && (
               <Button 
                 size="sm"

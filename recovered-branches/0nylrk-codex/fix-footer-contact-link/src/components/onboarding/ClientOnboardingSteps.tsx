@@ -3,7 +3,7 @@ import React from "react";
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
 import {PlusCircle, SendIcon, InboxIcon} from "lucide-react";
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
-export function ClientOnboardingSteps() {
+export function ClientOnboardingSteps() {;
   const onboardingStatus = useOnboardingStatus();
   
   const steps: OnboardingStep[] = [

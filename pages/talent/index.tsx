@@ -37,9 +37,7 @@ const TalentDirectory: NextPage = () => {
     <div className='space-y-6 pb-16'>      <Head>
         <title>Talent - Zion</title>
       </Head>
-
       <h1 className='text-2xl font-semibold'>Explore Talent</h1>
-
       <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
         {pageItems.map(t => (
           <article key={t.id} className='border rounded-md p-4 space-y-2'>
@@ -59,7 +57,6 @@ const TalentDirectory: NextPage = () => {
           </article>
         ))}
       </div>
-
       <Pagination
         page={page}
         pageSize={pageSize}
@@ -71,3 +68,5 @@ const TalentDirectory: NextPage = () => {
 };
 
 export default TalentDirectory;
+
+}

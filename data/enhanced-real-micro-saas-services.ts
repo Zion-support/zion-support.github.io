@@ -7,7 +7,7 @@ features: string[];
 popular: boolean;
 icon: string;
 category: string;
-}export const microSaasServices: MicroSaasService[] = [ {
+}export const microSaasServices: MicroSaasService[] = [ {;
   id: 'ai-content-generator';
 name: 'AI Content Generator';
 tagline: 'Generate high-quality content with AI';

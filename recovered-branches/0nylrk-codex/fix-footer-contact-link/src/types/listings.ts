@@ -1,12 +1,12 @@
 
-export interface ListingCategory {
+export interface ListingCategory {;
   id: string;
   name: string;
   description: string,
   icon: string
 }
 
-export interface ProductListing {
+export interface ProductListing {;
   id: string;
   title: string;
   description: string;
@@ -31,7 +31,7 @@ export interface ProductListing {
   availability?: string, // Adding availability property to fix TypeScript errors
 }
 
-export interface ListingItem {
+export interface ListingItem {;
   id: string;
   title: string;
   category: string;

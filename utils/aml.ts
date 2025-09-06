@@ -1,4 +1,4 @@
-export type WatchlistMatch = {
+export type WatchlistMatch = {;
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
   score: number; // 0-1 match confidence
@@ -6,13 +6,13 @@ export type WatchlistMatch = {
   detailsUrl?: string;
 };
 
-export type AmlCheckResult = {
+export type AmlCheckResult = {;
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checkedAt: string; // ISO
   provider: 'mock' | 'remote';
 };
-export interface AmlProvider {
+export interface AmlProvider {;
   checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
 }
@@ -37,6 +37,6 @@ class MockAmlProvider implements AmlProvider {
   }
 }
 
-export function getAmlProvider(): AmlProvider {
+export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
 }

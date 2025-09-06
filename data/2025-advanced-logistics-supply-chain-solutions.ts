@@ -353,7 +353,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       customers: 178,
       rating: 4.8,
       reviews: 112,
-    },
+    },;
   ];    features: [
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'

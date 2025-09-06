@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-export interface TreeNode {
+export interface TreeNode {;
   name: string;
   path: string;
   type: 'folder' | 'file';
@@ -29,7 +29,7 @@ function NodeItem({
 export interface TreeNode {
   name: string,
   path: string,
-  type: "folder" | "file",
+  type: "folder" | "file",;
   exists?: boolean;
   children?: TreeNode[]
 }
@@ -149,7 +149,7 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
     <div className='w-full'>
       {nodes.map(n => (        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
       ))}
-    </div>
+    </div>;
   );  )
 }
 
@@ -158,7 +158,7 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
     <div className="w-full">
       {nodes.map((n) => (
       ))}
-    </div>
+    </div>;
   );
 
 export default Tree;
@@ -188,7 +188,7 @@ export default Tree;
 }onDeploy= {
   onDeploy 
 }/>) ) 
-}</div>) 
+}</div>) ;
 }export default Tree;}
 
 export default Tree;

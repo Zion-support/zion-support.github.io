@@ -17,7 +17,6 @@ export function TalentDashboard() {
             </Button>
           </Link>
         </div>
-        
         <div className="space-y-3">
           <Card>
             <CardContent className="p-4">
@@ -43,7 +42,6 @@ export function TalentDashboard() {
               </div>
             </CardContent>
           </Card>
-          
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -70,7 +68,6 @@ export function TalentDashboard() {
           </Card>
         </div>
       </section>
-      
       <section>
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
         <Card>
@@ -99,7 +96,6 @@ export function TalentDashboard() {
           </CardContent>
         </Card>
       </section>
-      
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
@@ -121,7 +117,6 @@ export function TalentDashboard() {
           </Button>
         </div>
       </section>
-      
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>
@@ -146,3 +141,4 @@ export function TalentDashboard() {
     </div>
   )
 }
+;

@@ -6,7 +6,7 @@ import {
   ChevronRight, Star, TrendingUp, Zap, Shield,
   ArrowRight, Search, Filter, Grid, List,
   Phone, Mail, MapPin, ExternalLink, Sparkles
-} from 'lucide-react',
+} from 'lucide-react',;
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029',;
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2',;
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2',;
@@ -28,24 +28,20 @@ export default function InnovationsPage() {
           <meta name="keywords" content="AI innovations, quantum computing, space technology, enterprise solutions, Zion Tech Group, 2029 technology" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
-          
           {/* Open Graph */}
           <meta property="og:title" content="2029 Innovations - Zion Tech Group" />
           <meta property="og:description" content="Discover our groundbreaking 2029 innovations in AI consciousness, quantum computing, space technology, and enterprise solutions." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/innovations" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-          
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="2029 Innovations - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our groundbreaking 2029 innovations in AI consciousness, quantum computing, space technology, and enterprise solutions." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         </Head>
-
         {/* Enhanced Navigation */}
         <UltraFuturisticNavigation2029V2 />
-
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,7 +56,6 @@ export default function InnovationsPage() {
                   <Sparkles className="w-12 h-12 text-white" />
                 </div>
               </motion.div>
-              
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -75,7 +70,6 @@ export default function InnovationsPage() {
                   Breakthrough
                 </span>
               </motion.h1>
-              
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -86,7 +80,6 @@ export default function InnovationsPage() {
                 quantum computing, space technology, and enterprise solutions that are reshaping 
                 industries and unlocking unprecedented possibilities.
               </motion.p>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -100,7 +93,6 @@ export default function InnovationsPage() {
                   <Eye className="w-5 h-5 mr-2" />
                   Explore Innovations
                 </a>
-                
                 <a
                   href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`}
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105 text-lg"
@@ -112,7 +104,6 @@ export default function InnovationsPage() {
             </div>
           </div>
         </section>
-
         {/* Innovation Categories Overview */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -131,7 +122,6 @@ export default function InnovationsPage() {
                 of what's possible in technology and business transformation.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
@@ -183,7 +173,6 @@ export default function InnovationsPage() {
                         {category.description}
                       </p>
                     </div>
-                    
                     <div className="space-y-3">
                       {category.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-3 text-sm text-gray-300">
@@ -198,12 +187,10 @@ export default function InnovationsPage() {
             </div>
           </div>
         </section>
-
         {/* Comprehensive Services Showcase */}
         <section id="innovations" className="py-20">
           <ComprehensiveServicesShowcase2029 />
         </section>
-
         {/* Innovation Impact Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -222,7 +209,6 @@ export default function InnovationsPage() {
                 for businesses worldwide.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
@@ -269,7 +255,6 @@ export default function InnovationsPage() {
             </div>
           </div>
         </section>
-
         {/* Call to Action */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -288,7 +273,6 @@ export default function InnovationsPage() {
                   Partner with Zion Tech Group to access the most advanced innovations of 2029. 
                   Transform your business and lead your industry into the future.
                 </p>
-                
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                   <a
                     href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`}
@@ -297,7 +281,6 @@ export default function InnovationsPage() {
                     <Mail className="w-5 h-5 mr-2" />
                     Start Innovation Partnership
                   </a>
-                  
                   <div className="flex items-center space-x-6 text-gray-300">
                     <div className="flex items-center space-x-2">
                       <Phone className="w-5 h-5 text-cyan-400" />
@@ -313,10 +296,9 @@ export default function InnovationsPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced Footer */}
         <UltraFuturisticFooter2029V2 />
       </div>
     </UltraFuturisticBackground2029>
-  )
+  );
 };

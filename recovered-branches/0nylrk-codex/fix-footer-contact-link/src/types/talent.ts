@@ -1,5 +1,5 @@
 
-export interface TalentProfile {
+export interface TalentProfile {;
   id: string;
   user_id: string;
   full_name: string;
@@ -22,7 +22,7 @@ export interface TalentProfile {
   }[]
 }
 
-export interface TalentProfileFilters {
+export interface TalentProfileFilters {;
   search?: string;
   skills?: string[];
   availabilities?: string[];
@@ -31,7 +31,7 @@ export interface TalentProfileFilters {
   experienceRange?: [number, number]
 }
 
-export interface HireRequest {
+export interface HireRequest {;
   id: string;
   clientId: string;
   talentId: string;

@@ -1,11 +1,11 @@
 import {GetServerSideProps} from 'next';
 import React, { useRef, useState } from 'react';
 import PdfExportButton from '../../../components/ui/PdfExportButton';
-import ResumePreview, {
+import ResumePreview, {;
   ResumeData,;
 } from '../../../components/ui/ResumePreview';
 import { createServerClient } from '../../../utils/supabase/server';
-export default function TalentPortfolio() {
+export default function TalentPortfolio() {;
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const ref = useRef<HTMLDivElement>(null);
 
@@ -53,7 +53,6 @@ export default function TalentPortfolio() {
           <option value='dark'>Dark</option>
         </select>
       </div>
-
       <PdfExportButton
         targetRef={ref}
         fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
@@ -61,7 +60,7 @@ export default function TalentPortfolio() {
       <ResumePreview ref={ref} data={data} theme={theme} />
     </div>
   );
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {;
   const supabase = createServerClient();
   const user = await (supabase as any).auth.getUser?.(),
   if (!user) {
@@ -69,3 +68,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
 return { props: {} };
 };
+
+}

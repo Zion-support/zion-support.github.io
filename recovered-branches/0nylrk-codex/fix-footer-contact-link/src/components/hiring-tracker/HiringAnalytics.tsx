@@ -7,7 +7,7 @@ interface HiringAnalyticsProps {
   jobId?: string
 }
 
-export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
+export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
   const { applications, isLoading } = useJobApplications(jobId);
   const [analyticsData, setAnalyticsData] = useState<{
     statusDistribution: any[],
@@ -115,7 +115,6 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
           </ResponsiveContainer>
         </CardContent>
       </Card>
-      
       {/* Time to Hire */}
       <Card>
         <CardHeader>
@@ -130,7 +129,6 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
           </div>
         </CardContent>
       </Card>
-      
       {/* Conversion Rate */}
       <Card>
         <CardHeader>
@@ -145,7 +143,6 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
           </div>
         </CardContent>
       </Card>
-      
       {/* Hiring Funnel */}
       <Card className="lg:col-span-3">
         <CardHeader>

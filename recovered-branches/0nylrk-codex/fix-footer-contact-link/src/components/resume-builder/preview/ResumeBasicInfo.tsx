@@ -14,3 +14,4 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
     </div>
   )
 }
+;

@@ -13,7 +13,7 @@ interface SeverityIndicatorProps {
 export function SeverityIndicator({ 
   severity, 
   showIcon = true, 
-  showText = true, 
+  showText = true, ;
   size = "md";
   className 
 }: SeverityIndicatorProps) {

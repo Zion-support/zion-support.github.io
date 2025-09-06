@@ -5,7 +5,7 @@ import Button from '../components/ui/Button';
 import {innovativeAIServices} from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage() {
   const service = innovativeAIServices.find(s =>
-    (s.link || '').endsWith('/ai-financial-risk')
+    (s.link || '').endsWith('/ai-financial-risk');
   );
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -110,3 +110,6 @@ const AIFinancialRisk: React.FC = () => {
       </div>
     </UltraAdvancedFuturisticBackground>
 );
+
+}
+}

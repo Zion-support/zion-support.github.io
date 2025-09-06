@@ -23,7 +23,7 @@ interface SidebarProviderProps {
 export function SidebarProvider({ 
   children, 
   defaultOpen = true 
-}: SidebarProviderProps) {
+}: SidebarProviderProps) {;
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   const toggle = () => setIsOpen(!isOpen);

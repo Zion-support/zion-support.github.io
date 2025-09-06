@@ -50,7 +50,6 @@ const AIAssistant: React.FC = () => {
             </Button>
           </div>
         </div>
-
         <div className="bg-blue-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -68,3 +67,5 @@ const AIAssistant: React.FC = () => {
       </main>
     </Layout>
   );
+
+}

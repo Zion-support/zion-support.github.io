@@ -14,7 +14,7 @@ animate ();
 }<motion.div 
 
 export default function UltraFuturisticBackground2028({
-  children,
+  children,;
 }: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2028Props {
@@ -23,7 +23,7 @@ interface UltraFuturisticBackground2028Props {
 
 export default function UltraFuturisticBackground2028({ children }: UltraFuturisticBackground2028Props) {
 
-  useEffect(() => {
+  useEffect(() => {;
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -141,7 +141,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none'        style={{ zIndex: 0 }}
       />
-
       {/* Gradient Overlays */}  }, []);
 
   return (
@@ -152,7 +151,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: 0 }}
       />
-
       {/* Gradient Overlays */}
       <div
         className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20'
@@ -170,7 +168,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]'
         style={{ zIndex: 1 }}
       />
-
       {/* Floating Geometric Shapes */}
       <div
         className='absolute inset-0 pointer-events-none'
@@ -202,7 +199,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-        
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-blue-500/30 rotate-45"
           animate={{
@@ -218,7 +214,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
-
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-blue-500/30 rotate-45'
           animate={{
@@ -230,7 +225,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         <motion.div
           className='absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotate-45'
           animate={{
@@ -251,7 +245,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
-
         {/* Floating Circles */}
         <motion.div
           className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full'
@@ -263,7 +256,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         <motion.div
           className='absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounded-full'
           animate={{
@@ -274,7 +266,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         <motion.div
           className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rounded-full'
           animate={{
@@ -294,7 +285,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
-
         <motion.div
           className='absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounded-full'
           animate={{
@@ -309,7 +299,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
-
         <motion.div
           className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rounded-full'
           animate={{
@@ -325,7 +314,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
           }}
         />
       </div>
-
       {/* Energy Waves */}
       <div
         className='absolute inset-0 pointer-events-none'
@@ -350,7 +338,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             repeat: Infinity,
             ease: 'linear',          }}
         />
-        
         <motion.div
           className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"
           animate={{
@@ -366,7 +353,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             delay: 2
           }}
         />
-
         <motion.div
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent'
           animate={{
@@ -378,7 +364,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             ease: 'linear',
             delay: 2,          }}
         />
-
         <motion.div
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent'
           animate={{
@@ -401,7 +386,6 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
           }}
         />
       </div>
-
       {/* Quantum Particles */}
       <div
         className='absolute inset-0 pointer-events-none'
@@ -438,15 +422,12 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
           />
         ))}
       </div>
-
       {/* Content */}
       <div className='relative' style={{ zIndex: 10 }}>        {children}
       </div>
-
       {/* Bottom Glow */}      <div className="relative" style={{ zIndex: 10 }}>
         {children}
       </div>
-
       {/* Bottom Glow */}
       <div
         className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none'
@@ -456,4 +437,15 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
   );      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none" style={{ zIndex: 5 }} />
     </div>
   )
+}
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
 }

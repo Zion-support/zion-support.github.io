@@ -30,7 +30,7 @@ export function EducationFormFields({
   isEditing, 
   onSubmit, 
   onCancel 
-}: EducationFormFieldsProps) {
+}: EducationFormFieldsProps) {;
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -89,7 +89,6 @@ export function EducationFormFields({
             )}
           />
         </div>
-
         <FormField
           control={form.control}
           name="field_of_study"
@@ -163,7 +162,6 @@ export function EducationFormFields({
             )}
           </div>
         </div>
-
         <FormField
           control={form.control}
           name="location"
@@ -206,7 +204,6 @@ export function EducationFormFields({
           >
             {isEditing ? 'Cancel' : 'Back'}
           </Button>
-
           <Button type="submit" disabled={isLoading}>
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {isEditing ? 'Update' : 'Add'} Education

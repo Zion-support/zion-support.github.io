@@ -3,7 +3,7 @@ import fs from 'fs-extra';
 import path from 'path';
 import {
   authenticateRequest,
-  enforceRateLimit,
+  enforceRateLimit,;
   recordRequest,;
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
@@ -18,7 +18,7 @@ const TALENTS_FILE = path.join(
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {
+) {;
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: 'Unauthorized' });

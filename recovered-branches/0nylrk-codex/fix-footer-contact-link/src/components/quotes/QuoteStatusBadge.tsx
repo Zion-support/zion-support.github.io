@@ -13,7 +13,7 @@ interface QuoteStatusBadgeProps {
   status: QuoteStatus
 }
 
-export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   const config = statusConfig[status];
   
   return (

@@ -8,7 +8,7 @@ type Props = {
   onLeave: () => void,
   accent?: 'blue' | 'cyan'
 
-export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
+export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);

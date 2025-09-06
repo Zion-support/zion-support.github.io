@@ -6,7 +6,7 @@ export function FeatureHighlights() {
   const highlightsData = [
     {
       title: "For Talent Seekers",
-      features: [
+      features: [;
         "AI-powered talent matching based on your specific project requirements";
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
@@ -48,7 +48,6 @@ export function FeatureHighlights() {
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {highlightsData.map((category, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">

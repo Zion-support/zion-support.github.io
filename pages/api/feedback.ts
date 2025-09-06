@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import {
   saveFeedbackFallback,
-  FeedbackRecord,
+  FeedbackRecord,;
 } from "../../utils/feedback/store";
 
 function ok(res: NextApiResponse, data: any) {
@@ -40,7 +40,7 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
   if (req.method !== "POST") return bad(res, "Method not allowed", 405);
   const { rating, comment, kind, context } = req.body || {};
   const r = Number(rating);

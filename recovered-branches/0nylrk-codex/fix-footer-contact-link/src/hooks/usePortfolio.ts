@@ -4,7 +4,7 @@ import {PortfolioProject} from '@/types/resume';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {toast} from '@/hooks/use-toast';
-export function usePortfolio() {
+export function usePortfolio() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);

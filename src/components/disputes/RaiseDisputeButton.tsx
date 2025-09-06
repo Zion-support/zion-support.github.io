@@ -46,7 +46,6 @@ export function RaiseDisputeButton({
         <ShieldAlert className='h-4 w-4 mr-2' />
         Raise Dispute
       </Button>
-
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
           <DialogHeader>
@@ -56,7 +55,6 @@ export function RaiseDisputeButton({
               this project.
             </DialogDescription>
           </DialogHeader>
-
           <DisputeForm
             projectId={projectId}
             milestoneId={milestoneId}
@@ -65,6 +63,6 @@ export function RaiseDisputeButton({
         </DialogContent>
       </Dialog>
     </>
-  )
-}
+  );
+};
 ;

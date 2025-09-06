@@ -9,8 +9,8 @@ export default function Internationalization() {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Internationalization',
-    description:
-      'Use Zion in multiple languages and attract clients worldwide with localized listings.',
+    description:;
+      'Use Zion in multiple languages and attract clients worldwide with localized listings.',;
     url: 'https://app.ziontechgroup.com/features/internationalization',  };    "@context": "https://schema.org"
     "@type": "WebPage"
     "name": "Internationalization"

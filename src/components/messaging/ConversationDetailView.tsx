@@ -42,7 +42,6 @@ export function ConversationDetailView() {
           </div>
         </div>
       </div>
-      
       {/* Context information (if available) */}
       {hasContextData && (
         <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/10">
@@ -100,7 +99,6 @@ export function ConversationDetailView() {
         )}
         <div ref={messagesEndRef} />
       </div>
-      
       {/* Input */}
       <div className="p-3 border-t border-zion-purple/20">
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
@@ -121,6 +119,6 @@ export function ConversationDetailView() {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 ;

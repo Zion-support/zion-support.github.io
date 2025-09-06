@@ -51,7 +51,7 @@ export const ForumCategories = () => {
   )
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
-      {visibleCategories.map((category) => {
+      {visibleCategories.map((category) => {;
         const Icon = iconMap[category.icon as keyof typeof iconMap]; return (
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer">
@@ -75,3 +75,4 @@ export default ForumCategories
 "
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
 export default ForumCategories
+;

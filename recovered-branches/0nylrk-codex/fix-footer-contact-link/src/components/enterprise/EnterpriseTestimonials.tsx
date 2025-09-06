@@ -5,7 +5,7 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
+  CarouselPrevious,;
 } from "@/components/ui/carousel";
 
 const testimonials = [
@@ -47,7 +47,6 @@ export function EnterpriseTestimonials() {
             See how enterprise teams are transforming their hiring process
           </p>
         </div>
-
         <Carousel className="w-full">
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
@@ -82,6 +81,6 @@ export function EnterpriseTestimonials() {
           </div>
         </Carousel>
       </div>
-    </section>
+    </section>;
   );
 }

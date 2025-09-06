@@ -13,7 +13,7 @@ export default function ClientDashboard() {
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
     job: false,
     invite: false,
-    response: false,
+    response: false,;
   });
 
   useEffect(() => {
@@ -55,7 +55,6 @@ export default function ClientDashboard() {
             style={{ width: `${progress}%` }}
           />        </div>
       </EnhancedCard>
-
       <EnhancedCard>
         <h2 className='font-semibold mb-2'>Checklist</h2>
         <ul className='space-y-2'>
@@ -90,3 +89,5 @@ export default function ClientDashboard() {
       </EnhancedCard>
     </div>
 );
+
+}

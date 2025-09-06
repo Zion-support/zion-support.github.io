@@ -11,7 +11,7 @@ export function FeaturesGuideSection() {
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
-      instructions: [
+      instructions: [;
         "Navigate to the AI Matcher page from the homepage or marketplace";
         "Fill in your project requirements and specifications";
         "Review the AI-recommended matches tailored to your needs";
@@ -131,7 +131,6 @@ export function FeaturesGuideSection() {
             the world of AI and tech services
           </p>
         </div>
-
         <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">
             {features.slice(0, 4).map(feature => (
@@ -155,7 +154,6 @@ export function FeaturesGuideSection() {
               </TabsTrigger>
             ))}
           </TabsList>
-
           {features.map(feature => (
             <TabsContent key={feature.id} value={feature.id} className="mt-8">
               <div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">
@@ -175,7 +173,6 @@ export function FeaturesGuideSection() {
                     </Link>
                   </Button>
                 </div>
-                
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4">
@@ -191,7 +188,6 @@ export function FeaturesGuideSection() {
             </TabsContent>
           ))}
         </Tabs>
-        
         <div className="mt-12 text-center">
           <Button 
             variant="outline" 

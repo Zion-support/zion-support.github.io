@@ -7,7 +7,7 @@ import {
   Activity,
   Gauge,
   Cpu,
-  Database,
+  Database,;
   Network,;
 } from 'lucide-react';
 interface PerformanceMetrics {
@@ -383,7 +383,6 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
           {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
-
       {/* Performance Score */}
       <div className='mb-6'>
         <div className='flex items-center justify-between mb-2'>
@@ -414,7 +413,6 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
           <span className="text-sm text-white/60">{performanceScore}/100</span>
         </div>
       </div>
-
       {/* Metrics Display */}
       {showMetrics && (
         <motion.div
@@ -429,7 +427,6 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
             </div>
             <div className='text-xs text-white/60'>Load Time</div>
           </div>
-
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Activity className='w-6 h-6 text-green-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -437,7 +434,6 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
             </div>
             <div className='text-xs text-white/60'>FCP</div>
           </div>
-
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <TrendingUp className='w-6 h-6 text-purple-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -445,7 +441,6 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
             </div>
             <div className='text-xs text-white/60'>LCP</div>
           </div>
-
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Cpu className='w-6 h-6 text-yellow-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -453,7 +448,6 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
             </div>
             <div className='text-xs text-white/60'>TTI</div>
           </div>
-
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Database className='w-6 h-6 text-orange-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -461,13 +455,12 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
             </div>
             <div className='text-xs text-white/60'>CLS</div>
           </div>
-
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Network className='w-6 h-6 text-red-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
               {Math.round(metrics.firstInputDelay)}ms
             </div>
-            <div className='text-xs text-white/60'>FID</div>          </div>          
+            <div className='text-xs text-white/60'>FID</div>          </div>
           <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
             <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />
             <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>
@@ -502,7 +495,6 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
             </>
           )}
         </button>
-
         {optimizationStatus !== 'idle' && (
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <div className='text-sm text-white/80'>{optimizationStatus}</div>          </div>          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
@@ -510,7 +502,6 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
           </div>
         )}
       </div>
-
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>

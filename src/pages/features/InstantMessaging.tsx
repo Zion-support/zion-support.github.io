@@ -9,8 +9,8 @@ export default function InstantMessaging() {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Instant Messaging',
-    description:
-      'Chat in real time with clients and freelancers using Socket.IO based messaging.',
+    description:;
+      'Chat in real time with clients and freelancers using Socket.IO based messaging.',;
     url: 'https://app.ziontechgroup.com/features/instant-messaging',  };    "@context": "https://schema.org"
     "@type": "WebPage"
     "name": "Instant Messaging"

@@ -7,7 +7,7 @@ import { X } from 'lucide-react'
   // TODO: Add dependencies if needed
   return () => {
     // Cleanup function
-}
+};
 }, []); [])
     // Show CTA after 5 seconds
       setIsVisible(true) }, 5000) 
@@ -39,8 +39,8 @@ export function FloatingCTA() {
   const [ isClosed, setIsClosed ] = useState(false),
 
   useEffect((,) => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY
+    const handleScroll = () => {;
+      const scrollPosition = window.scrollY;
       const threshold = 600; // Show CTA after scrolling 600px
 
       if (scrollPosition > threshold && !isClosed) {

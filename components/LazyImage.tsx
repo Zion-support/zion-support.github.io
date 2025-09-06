@@ -34,7 +34,7 @@ export default function LazyImage({
   style,
   onLoad,
   onError,
-}: LazyImageProps) {
+}: LazyImageProps) {;
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);

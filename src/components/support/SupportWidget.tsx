@@ -63,10 +63,10 @@ export function SupportWidget() {
               </Button>
             </div>
           </div>
-
           <ChatBotPanel />
         </div>
       )}
     </>
   )
-}
+};
+;

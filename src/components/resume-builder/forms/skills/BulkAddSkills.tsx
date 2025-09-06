@@ -67,7 +67,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
             onChange = {(e,) => setBulkSkills(e.target.value),}
           />
         </div>
-
         <Button 
           onClick = {handleCategorizeSkills,}
           disabled = {isEnhancing || !bulkSkills.trim(),}
@@ -80,14 +79,13 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           )}
           Categorize with AI
         </Button>
-        
         <p className="text-xs text-muted-foreground mt-1">
           AI will identify skills and categorize them automatically. This may take a moment to process.
         </p>
-        
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>
   )
 }
-'"
+'";
+;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { X } from 'lucide-react';
 
-export type SmartNudgeBannerProps = {
+export type SmartNudgeBannerProps = {;
   role: 'talent' | 'client';
   userId?: string | null;
   message: string;
@@ -14,7 +14,7 @@ export default function SmartNudgeBanner({
 }: SmartNudgeBannerProps) {
   const storageKey = React.useMemo(
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
-    [role, userId]
+    [role, userId];
   );  const [hidden, setHidden] = React.useState<boolean>(false);
 
   React.useEffect(() => {
@@ -22,12 +22,12 @@ export default function SmartNudgeBanner({
       const v =
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {
-  role: 'talent' | 'client',
+  role: 'talent' | 'client',;
   userId?: string | null;
   message: string
 };
 
-export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
+export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {;
   const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
   const [hidden, setHidden] = React.useState<boolean>(false);
 
@@ -68,4 +68,6 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
       </div>
     </div>
 );
+}
+
 }

@@ -8,7 +8,7 @@ import {AIMatchmaker} from "@/components/AIMatchmaker";
 import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
 import {toast} from "@/hooks/use-toast";
 import {MatchResult} from "@/lib/ai-matchmaking";
-export default function AIMatcherPage() {
+export default function AIMatcherPage() {;
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   
@@ -48,7 +48,6 @@ export default function AIMatcherPage() {
               Describe your needs and our AI will match you with the perfect services, talents, or equipment.
             </p>
           </div>
-          
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
@@ -66,7 +65,6 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
-            
             <AIMatchmaker 
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}

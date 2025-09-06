@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import Head from 'next/head';
-export default function OffworldDeploy() {
+export default function OffworldDeploy() {;
   const [cid, setCid] = useState<string | null>(null);
   const [status, setStatus] = useState<string>('');
   const [error, setError] = useState<string>('');

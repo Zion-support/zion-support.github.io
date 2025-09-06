@@ -1,4 +1,4 @@
-export interface Message {
+export interface Message {;
   id: string;
   role: "user" | "assistant";
   message: string;
@@ -6,7 +6,7 @@ export interface Message {
   read?: boolean;
 }
 
-export interface Recipient {
+export interface Recipient {;
   id: string;
   name: string;
   avatarUrl?: string;

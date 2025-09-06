@@ -75,7 +75,6 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-600 text-center mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="text-left bg-white/5 rounded-xl p-6 mb-8 border border-white/10">
                 <summary className="text-white/80 font-medium cursor-pointer mb-4">
@@ -252,3 +251,5 @@ class ErrorBoundary extends Component<Props, State> {;
 }
 
 export default ErrorBoundary;
+}
+}

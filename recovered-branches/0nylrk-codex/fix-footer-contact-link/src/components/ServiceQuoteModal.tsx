@@ -39,7 +39,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     description: '',
     email: '',
     budget: BUDGET_RANGES[0].value,
-    timeframe: TIMELINE_OPTIONS[0].value}),
+    timeframe: TIMELINE_OPTIONS[0].value}),;
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
@@ -115,7 +115,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             Request Service Quote
           </DialogTitle>
         </DialogHeader>
-
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Step 1: Service Details */}
           {currentStep === 'details' && (
@@ -125,7 +124,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <p className="text-white text-lg">{service?.title || "Custom Service"}</p>
                 <p className="text-zion-slate-light text-sm mt-1">{service?.category}</p>
               </div>
-
               <div className="space-y-2">
                 <Label htmlFor="description" className="text-white">Project Description</Label>
                 <Textarea
@@ -138,7 +136,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   required
                 />
               </div>
-
               <div className="space-y-2">
                 <Label htmlFor="budget" className="text-white">Estimated Budget</Label>
                 <Select 
@@ -181,7 +178,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   </SelectContent>
                 </Select>
               </div>
-
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label className="text-white">Expected Start Date</Label>
@@ -209,7 +205,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                     </PopoverContent>
                   </Popover>
                 </div>
-
                 <div className="space-y-2">
                   <Label className="text-white">Expected End Date</Label>
                   <Popover>
@@ -257,7 +252,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   required
                 />
               </div>
-
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">
                 <h3 className="font-medium text-zion-cyan mb-2">Quote Summary</h3>
                 <div className="space-y-2 text-sm">
@@ -311,7 +305,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               >
                 Cancel
               </Button>
-              
               {currentStep !== 'contact' ? (
                 <Button 
                   type="button" 

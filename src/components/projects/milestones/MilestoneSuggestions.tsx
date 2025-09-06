@@ -5,12 +5,12 @@ import {
   MilestoneInput,
   useMilestoneGenerator,
 } from '@/hooks/useMilestoneGenerator'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Sparkles, Check } from 'lucide-react'; import { Badge } from '@/components/ui/badge'
 import { format, parseISO } from 'date-fns'
 interface MilestoneSuggestionsProps {
   projectName: string
-  scopeSummary: string
+  scopeSummary: string;
   startDate: Date; import React, { useState } from 'react'
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator'
 import { Loader2, Sparkles, Check } from 'lucide-react'
@@ -20,7 +20,7 @@ interface MilestoneSuggestionsProps {
   scopeSummary: string
   startDate: Date
   endDate?: Date
-  projectType: string
+  projectType: string;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string,
   onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
 }
@@ -189,3 +189,4 @@ export function MilestoneSuggestions({
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
 }</div>) 
 }"}
+;

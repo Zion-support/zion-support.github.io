@@ -18,7 +18,6 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         )}
       >
         <div className='whitespace-pre-wrap'>{message.content}</div>
-
         {message.attachment_url && (
           <a
             href={message.attachment_url}
@@ -54,7 +53,6 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
           : "bg-zion-blue-dark text-white"
       )}>
         <div className="whitespace-pre-wrap">{message.content}</div>
-        
         {message.attachment_url && (
           <a 
             href={message.attachment_url}
@@ -70,7 +68,10 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
   );  )
+}
+
+}
 }

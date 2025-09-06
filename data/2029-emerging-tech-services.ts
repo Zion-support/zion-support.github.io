@@ -1,4 +1,4 @@
-export interface EmergingTechService2029 {
+export interface EmergingTechService2029 {;
   id: string;
   name: string;
   tagline: string;
@@ -37,7 +37,7 @@ export const emergingTechServices2029: EmergingTechService2029[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
-  },
+  },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"

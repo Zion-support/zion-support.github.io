@@ -4,7 +4,7 @@ import { BlogPost } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
 import { requireAdmin } from '@/utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
+  if (req.method === 'GET') {;
     const { status, topic, tag, author, limit, offset } = req.query;
     let posts = readPosts();
     if (status && typeof status === 'string')
@@ -65,4 +65,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 return res.status(405).end();
+}
+
+}
 }

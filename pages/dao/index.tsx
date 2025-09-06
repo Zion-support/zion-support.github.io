@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react',
+import { useEffect, useState } from 'react',;
 ;
 type Holder = { address: string, amount: string },
 
@@ -37,7 +37,6 @@ export default function DaoMetrics() {
           <div className="text-xs text-gray-500">Updated {new Date(data.updatedAt).toLocaleString()} {data.cached ? '(cached)' : ''}</div>
         </div>
       </div>
-
       <section className="grid lg:grid-cols-2 gap-6">
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Token Distribution (top ~sample)</div>
@@ -55,7 +54,6 @@ export default function DaoMetrics() {
             ))}
           </div>
         </div>
-
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
@@ -76,7 +74,6 @@ export default function DaoMetrics() {
           </table>
         </div>
       </section>
-
       <section className="grid lg:grid-cols-2 gap-6">
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Active Proposals</div>
@@ -90,7 +87,6 @@ export default function DaoMetrics() {
             <div className="text-sm text-gray-600">No active proposals.</div>
           )}
         </div>
-
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
           <div className="text-3xl font-semibold">{data.governanceParticipationRate}%</div>
@@ -101,5 +97,5 @@ export default function DaoMetrics() {
         </div>
       </section>
     </div>
-  )
+  );
 };

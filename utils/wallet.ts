@@ -1,5 +1,5 @@
 export async function connectMetaMask(): Promise<string[]> {
-  if (typeof window === 'undefined' || !window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
     throw new Error('MetaMask is not installed');
   }
 
@@ -14,7 +14,7 @@ export async function connectMetaMask(): Promise<string[]> {
 }
 
 export async function getAccounts(): Promise<string[]> {
-  if (typeof window === 'undefined' || !window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
     return [];
   }
 
@@ -29,7 +29,7 @@ export async function getAccounts(): Promise<string[]> {
 }
 
 export async function getBalance(address: string): Promise<string> {
-  if (typeof window === 'undefined' || !window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
     throw new Error('MetaMask is not installed');
   }
 
@@ -45,7 +45,7 @@ export async function getBalance(address: string): Promise<string> {
 }
 
 export async function signMessage(message: string, address: string): Promise<string> {
-  if (typeof window === 'undefined' || !window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
     throw new Error('MetaMask is not installed');
   }
 

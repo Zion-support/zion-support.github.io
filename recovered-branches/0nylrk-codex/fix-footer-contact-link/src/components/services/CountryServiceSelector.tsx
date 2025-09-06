@@ -19,8 +19,8 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
         
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
-      
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
     </div>
   )
 }
+;

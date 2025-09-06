@@ -7,7 +7,7 @@ export default function ApiMockContractTestingPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com',  };
 
   const adItems = [
@@ -23,7 +23,7 @@ export default function ApiMockContractTestingPage() {
         'Snapshot diffs and changelog with approvals',
       ],
       link: 'https://ziontechgroup.com/api-mock-contract-testing',
-      contactInfo,
+      contactInfo,;
     },;
   ];
 
@@ -57,14 +57,12 @@ export default function ApiMockContractTestingPage() {
           href='https://ziontechgroup.com/api-mock-contract-testing'
         />
       </Head>
-
       <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
         <ServiceAds
           heading='API Quality Fast-Track'
           subheading='Mock, validate, and ship with confidence.'
           items={adItems}
         />
-
         <div className='max-w-5xl mx-auto mt-8'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {tiers.map(t => (
@@ -91,7 +89,6 @@ export default function ApiMockContractTestingPage() {
               </div>
             ))}
           </div>
-
           <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4'>
               <div className='flex items-center justify-center gap-2 text-cyan-400 w-4 h-4'>
@@ -119,3 +116,5 @@ export default function ApiMockContractTestingPage() {
       </div>
     </Layout>
 );
+
+}

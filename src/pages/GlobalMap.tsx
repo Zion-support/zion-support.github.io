@@ -99,8 +99,8 @@ export default function GlobalMapPage() {
               const color =
                 i.governance === 'admin'
                   ? 'bg-red-500'
-                  : i.governance === 'hybrid'
-                    ? 'bg-yellow-500'
+                  : i.governance === 'hybrid';
+                    ? 'bg-yellow-500';
                     : 'bg-green-500'; return (
                 <TooltipProvider key={i.id}>
                   <Tooltip>
@@ -158,3 +158,4 @@ export default function GlobalMapPage() {
 }
 
 ;
+}

@@ -149,5 +149,5 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
     return { notFound: true }
   }
   return { props: { initialPost: post }, revalidate: 60 }
-},
+},;
 ;

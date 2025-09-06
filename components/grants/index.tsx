@@ -3,7 +3,7 @@ import Link from 'next/link';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type {
   GrantApplication,
-  GrantCategory,
+  GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
 
@@ -21,7 +21,7 @@ const statuses: GrantStatus[] = [
   'Rejected',
 ];
 
-export default function GrantsPage() {
+export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{
     sector?: string;
@@ -31,7 +31,7 @@ export default function GrantsPage() {
   }>({});
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
-export default function GrantsPage() {
+export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
 
@@ -66,7 +66,6 @@ export default function GrantsPage() {
             </a>
           </Link>
       </div>
-
       <div className='grid md:grid-cols-4 gap-4 mb-6'>
         <select
           className='border rounded p-2'
@@ -116,7 +115,6 @@ export default function GrantsPage() {
           <option value='incubator'>Incubator</option>
         </select>
       </div>
-
       <div className='grid gap-4'>
         {items.map(g => (
           <div

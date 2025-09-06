@@ -3,9 +3,9 @@ import { requireUser } from "../../../utils/auth";
 import {
   getConversationById,
   getMessages,
-  sendMessage,
+  sendMessage,;
 } from "../../../utils/messaging/storage";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const user = requireUser(req, res);
   if (!user) return;
   if (req.method === "GET") {

@@ -6,7 +6,7 @@ import type { UserDetails } from "@/types/auth";
  * This helps prevent auth state inconsistencies and "limbo" states
  */
 export const cleanupAuthState = () => {
-  // Remove standard auth tokens
+  // Remove standard auth tokens;
   localStorage.removeItem('supabase.auth.token');
   
   // Remove all Supabase auth keys from localStorage
@@ -34,7 +34,7 @@ export const checkNewRegistration = async (user: UserDetails) => {
       .from("email_campaigns")
       .select("id")
       .eq("user_id", user.id)
-      .eq("campaign_type", "welcome_series")
+      .eq("campaign_type", "welcome_series");
       .maybeSingle();
       
     // If no welcome email sent yet, schedule one

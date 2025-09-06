@@ -54,11 +54,9 @@ export const ReplyCard = ({
           </div>
         </div>
       </CardHeader>
-      
       <CardContent>
         <div>{reply.content}</div>
       </CardContent>
-      
       <CardFooter className="flex justify-between">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" className="px-2">
@@ -70,7 +68,6 @@ export const ReplyCard = ({
             <span>{reply.downvotes}</span>
           </Button>
         </div>
-        
         {canMarkAnswer && !reply.isAnswer && (
           <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">
             <CheckCircle className="h-4 w-4 mr-1" />
@@ -80,5 +77,5 @@ export const ReplyCard = ({
       </CardFooter>
     </Card>
   )
-}
-export default ReplyCard
+};
+export default ReplyCard;

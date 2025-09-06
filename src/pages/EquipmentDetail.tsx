@@ -16,7 +16,7 @@ import {
   ArrowLeft,
 } from 'lucide-react'
 import { toast } from '@/hooks/use-toast'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/hooks/useAuth';
 import { getStripe } from '@/utils/getStripe'; import { useRouter } from 'next/router'
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -57,7 +57,7 @@ returnPolicy?: string
 }return {
   id: item.id, name: item.title, description: item.description, brand: item.brand || 'Unknown', category: item.category, subcategory: item.subcategory, images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item.price || 0, currency: item.currency || '$', rating: item.rating, reviewCount: item.reviewCount, inStock: item.availability === 'In Stock' || !item.availability, expectedShipping: item.availability || 'In Stock',  specifications: (item.specifications || []) .map ( (spec) => ({'
   name: spec, value: '' 
-}) )
+}) );
 features: item.tags || [];'
 warranty: '1 Year Manufacturer Warranty';'
 returnPolicy: '30-day return policy' 
@@ -302,7 +302,6 @@ export default function EquipmentDetail() {
             <span className='mx-2 text-zion-slate-light'>/</span>
             <span className='text-zion-slate-light'>{equipment.name}</span>
           </motion.nav>
-
           <div className='grid lg:grid-cols-2 gap-12'>
             {/* Images */}
             <motion.div
@@ -324,7 +323,6 @@ export default function EquipmentDetail() {
                   alt={equipment.name}
                   className='object-cover'                />
               </AspectRatio>
-
               {equipment.images.length > 1 && (
                 <div className='grid grid-cols-4 gap-2'>
                   {equipment.images.map((image, index) => (                    <button
@@ -346,7 +344,6 @@ export default function EquipmentDetail() {
                 </div>
               )}
             </motion.div>
-
             {/* Product Details */}
             <motion.div
               className='space-y-6'
@@ -370,11 +367,9 @@ export default function EquipmentDetail() {
                     {equipment.brand}
                   </Badge>
                 </div>
-
                 <h1 className='text-3xl font-bold text-white'>
                   {equipment.name}
                 </h1>
-
                 {equipment.rating && (
                   <div className='flex items-center gap-2'>
                     <div className='flex items-center'>
@@ -395,7 +390,6 @@ export default function EquipmentDetail() {
                   </div>
                 )}
               </div>
-
               {/* Price */}
               <div className='bg-zion-blue-light rounded-lg p-4'>
                 <div className='text-3xl font-bold text-zion-cyan mb-2'>
@@ -412,7 +406,6 @@ export default function EquipmentDetail() {
                   </span>
                 </div>
               </div>
-
               {/* Description */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white'>
@@ -422,7 +415,6 @@ export default function EquipmentDetail() {
                   {equipment.description}
                 </p>
               </div>
-
               {/* Specifications */}
               {equipment.specifications.length > 0 && (
                 <div className='space-y-4'>
@@ -470,7 +462,6 @@ export default function EquipmentDetail() {
                     </Button>
                   </div>
                 </div>
-
                 <Button
                   onClick={handleAddToCart}
                   disabled={isAdding || !equipment.inStock}
@@ -482,7 +473,6 @@ export default function EquipmentDetail() {
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
                 </Button>
               </div>
-
               {/* Additional Info */}
               <div className='space-y-4 border-t border-zion-blue-light pt-4'>
                 {/* Shipping */}
@@ -497,7 +487,6 @@ export default function EquipmentDetail() {
                     </p>
                   </div>
                 </div>
-
                 {/* Warranty */}
                 {equipment.warranty && (
                   <div className='flex gap-3 text-zion-slate-light'>
@@ -575,5 +564,5 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }</p> </div> </div>) 
 }</div> </motion.div> </div> </div> </div> </>) 
 }'"}
-
+;
 ;

@@ -47,7 +47,7 @@ interface KanbanBoardProps {
   jobId?: string
 }
 
-export function KanbanBoard({ jobId }: KanbanBoardProps) {
+export function KanbanBoard({ jobId }: KanbanBoardProps) {;
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();

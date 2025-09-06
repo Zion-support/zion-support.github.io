@@ -20,8 +20,8 @@ import {
   Sparkles,
   Target,
   Users,
-  Award,
-  Clock,;} from 'lucide-react';import { 
+  Award,;
+  Clock,;} from 'lucide-react';import { ;
   ArrowRight;
   Star, 
   Search;
@@ -119,7 +119,6 @@ const Homepage2041: React.FC = () => {
             <div className='absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
             <div className='absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
             <div className='absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>
-
             {/* Enhanced particle system */}
             <div className='absolute inset-0'>
               {[...Array(12)].map((_, i) => (
@@ -154,7 +153,6 @@ const Homepage2041: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Hero Content */}
           <div className='text-center max-w-7xl mx-auto relative z-10'>            <motion.div          <div className="text-center max-w-7xl mx-auto relative z-10">
             <motion.div
@@ -172,13 +170,11 @@ const Homepage2041: React.FC = () => {
                 <br />
                 <span className='text-white'>Future is Now</span>
               </h1>
-
               <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed'>
                 Experience the revolution of technology with our cutting-edge
                 2041 services. From AI consciousness evolution to quantum space
                 mining, we're redefining what's possible.
               </p>
-
               {/* Search Bar */}
               <motion.div
                 className='max-w-3xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}
@@ -194,12 +190,10 @@ const Homepage2041: React.FC = () => {
                   Future is Now
                 </span>
               </h1>
-              
               <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
                 Experience the revolution of technology with our cutting-edge 2041 services. 
                 From AI consciousness evolution to quantum space mining, we're redefining what's possible.
               </p>
-
               {/* Search Bar */}
               <motion.div 
                 className="max-w-3xl mx-auto mb-12"
@@ -232,7 +226,6 @@ const Homepage2041: React.FC = () => {
                   </button>
                 </form>
               </motion.div>
-
               {/* CTA Buttons */}
               <motion.div
                 className='flex flex-col sm:flex-row gap-6 justify-center items-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
@@ -249,7 +242,6 @@ const Homepage2041: React.FC = () => {
                   Explore 2041 Services
                   <ArrowRight className='w-5 h-5' />
                 </Link>
-
                 <Link
                   href='/contact'
                   className='px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3'
@@ -259,7 +251,6 @@ const Homepage2041: React.FC = () => {
                   Explore 2041 Services
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                
                 <Link
                   href="/contact"
                   className="px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3"
@@ -271,7 +262,6 @@ const Homepage2041: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className='py-20 px-4'>
           <div className='max-w-7xl mx-auto'>
@@ -308,7 +298,6 @@ const Homepage2041: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Featured Services Section */}
         <section className='py-20 px-4 bg-gradient-to-b from-black to-gray-900/50'>
           <div className='max-w-7xl mx-auto'>
@@ -330,7 +319,6 @@ const Homepage2041: React.FC = () => {
                 boundaries of what's possible.
               </p>
             </motion.div>
-
             <motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Revolutionary 2041 Services
               </h2>
@@ -338,7 +326,6 @@ const Homepage2041: React.FC = () => {
                 Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible.
               </p>
             </motion.div>
-
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               initial={{ opacity: 0, y: 30 }}
@@ -358,7 +345,6 @@ const Homepage2041: React.FC = () => {
                 </motion.div>
               ))}
             </motion.div>
-
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div 
               className="text-center mt-12"
@@ -381,7 +367,6 @@ const Homepage2041: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className='py-20 px-4'>
           <div className='max-w-7xl mx-auto'>
@@ -402,7 +387,6 @@ const Homepage2041: React.FC = () => {
                 our revolutionary 2041 services.
               </p>
             </motion.div>
-
             <motion.div
               className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Leading the Future
               </h2>
@@ -410,7 +394,6 @@ const Homepage2041: React.FC = () => {
                 See how industry leaders are transforming their businesses with our revolutionary 2041 services.
               </p>
             </motion.div>
-
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
               initial={{ opacity: 0, y: 30 }}
@@ -457,7 +440,6 @@ const Homepage2041: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className='py-20 px-4'>
           <div className='max-w-4xl mx-auto text-center'>

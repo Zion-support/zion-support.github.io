@@ -29,11 +29,9 @@ export function HowItWorksSection() {
             A simple four-step process to connect technology providers with clients
           </p>
         </div>
-
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
-          
           <div className="space-y-12 md:space-y-0">
             {steps.map((step, index) => (
               <div 
@@ -50,11 +48,9 @@ export function HowItWorksSection() {
                     </div>
                   ) : null}
                 </div>
-                
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">
                   <step.icon className="w-6 h-6 text-zion-cyan" />
                 </div>
-
                 <div className="md:w-1/2 md:px-12 text-center md:text-left">
                   {index % 2 !== 0 ? (
                     <div>
@@ -70,5 +66,5 @@ export function HowItWorksSection() {
       </div>
     </section>
   )
-}
+};
 ;

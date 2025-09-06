@@ -104,8 +104,8 @@ const reasonsToChoose = [
     description: '24/7 support and maintenance services across multiple time zones.',
     icon: GlobeAltIcon}]
 
-export default function ServicesPage() {
-  return (
+export default function ServicesPage() {;
+  return (;
     <div className=&quot;bg-black&quot;>
       {/* Hero section */}
       <div className=&quot;relative isolate px-6 pt-14 lg:px-8&quot;>
@@ -124,7 +124,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Professional Services */}
       <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>

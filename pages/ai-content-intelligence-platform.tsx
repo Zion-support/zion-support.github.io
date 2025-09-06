@@ -187,7 +187,6 @@ export default function AIContentIntelligencePlatform() {
             Create, optimize, and manage content intelligently with our AI-powered content platform.
           </p>
         </div>
-
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20'></div>
@@ -254,7 +253,6 @@ export default function AIContentIntelligencePlatform() {
             </motion.div>
           </div>
         </div>
-
       {/* Features Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -296,7 +294,6 @@ export default function AIContentIntelligencePlatform() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -338,7 +335,6 @@ export default function AIContentIntelligencePlatform() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -406,7 +402,6 @@ export default function AIContentIntelligencePlatform() {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -438,7 +433,6 @@ export default function AIContentIntelligencePlatform() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
@@ -501,5 +495,7 @@ export default function AIContentIntelligencePlatform() {
           </motion.div>
         </div>
       </section>
-    </Layout>
+    </Layout>;
 );
+
+}

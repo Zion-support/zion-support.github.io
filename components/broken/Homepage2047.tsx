@@ -53,8 +53,8 @@ import {
   Eye as EyeIcon,
   ArrowUpRight,
   Star as StarIcon,
-  Sparkles,
-  Target as TargetIcon,;} from 'lucide-react';import { 
+  Sparkles,;
+  Target as TargetIcon,;} from 'lucide-react';import { ;
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon;
@@ -281,10 +281,8 @@ const Homepage2047: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">
       {/* Futuristic Background */}
       <UltraFuturisticBackground2047 />
-      
       {/* Navigation */}
       <UltraFuturisticNavigation2047 />
-
       {/* Hero Section */}
       <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>
         <div className='max-w-7xl mx-auto w-full'>
@@ -314,7 +312,6 @@ const Homepage2047: React.FC = () => {
                   <Sparkles className='w-4 h-4' />
                   <span>Innovating the Future Since 2025</span>
                 </motion.div>
-
                 <h1 className='text-5xl md:text-7xl font-bold leading-tight'>
                   <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                     Revolutionary
@@ -329,7 +326,6 @@ const Homepage2047: React.FC = () => {
                   <Sparkles className="w-4 h-4" />
                   <span>Innovating the Future Since 2025</span>
                 </motion.div>
-
                 <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                     Revolutionary
@@ -341,7 +337,6 @@ const Homepage2047: React.FC = () => {
                     for 2047 & Beyond
                   </span>
                 </h1>
-
                 <p className='text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl'>
                   Discover our cutting-edge micro SAAS services, AI autonomous
                   ecosystems, quantum computing breakthroughs, and
@@ -350,7 +345,6 @@ const Homepage2047: React.FC = () => {
                   Discover our cutting-edge micro SAAS services, AI autonomous ecosystems, quantum computing breakthroughs, and next-generation IT infrastructure that are shaping the future of technology.
                 </p>
               </div>
-
               {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -365,7 +359,6 @@ const Homepage2047: React.FC = () => {
                   <span>Explore Services</span>
                   <ArrowUpRight className='w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200' />
                 </Link>
-
                 <Link
                   href='/contact'
                   className='group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2'
@@ -379,7 +372,6 @@ const Homepage2047: React.FC = () => {
                   <span>Explore Services</span>
                   <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
                 </Link>
-                
                 <Link
                   href="/contact"
                   className="group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2"
@@ -388,7 +380,6 @@ const Homepage2047: React.FC = () => {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </Link>
               </motion.div>
-
               {/* Stats */}
               <motion.div
                 variants={staggerContainer}
@@ -414,7 +405,6 @@ const Homepage2047: React.FC = () => {
                 ))}
               </motion.div>
             </motion.div>
-
             {/* Right Content - Featured Service */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -447,14 +437,12 @@ const Homepage2047: React.FC = () => {
                         </div>
                       </div>
                     </div>
-
                     <h3 className='text-2xl font-bold text-white mb-3'>
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>
                     <p className='text-gray-300 mb-6 leading-relaxed'>
                       {featuredServices[currentServiceIndex]?.description}
                     </p>
-
                     <div className='space-y-3 mb-6'>
                       <div className='flex items-center justify-between text-sm'>
                         <span className='text-gray-400'>Starting at:</span>
@@ -471,7 +459,6 @@ const Homepage2047: React.FC = () => {
                         </span>
                       </div>
                     </div>
-
                     <Link
                       href={featuredServices[currentServiceIndex]?.slug || '#'}
                       className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'                    >                >
@@ -485,14 +472,12 @@ const Homepage2047: React.FC = () => {
                         <div className="text-xs text-gray-400">Auto-rotating</div>
                       </div>
                     </div>
-                    
                     <h3 className="text-2xl font-bold text-white mb-3">
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {featuredServices[currentServiceIndex]?.description}
                     </p>
-                    
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-gray-400">Starting at:</span>
@@ -507,7 +492,6 @@ const Homepage2047: React.FC = () => {
                         </span>
                       </div>
                     </div>
-
                     <Link
                       href={featuredServices[currentServiceIndex]?.slug || '#'}
                       className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'                    
@@ -523,7 +507,6 @@ const Homepage2047: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Overview */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -548,7 +531,6 @@ const Homepage2047: React.FC = () => {
               Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies
             </p>
           </motion.div>
-
           {/* Category Cards */}
           <motion.div
             variants={staggerContainer}
@@ -586,16 +568,14 @@ const Homepage2047: React.FC = () => {
                         <div className='text-xs text-gray-400'>Services</div>
                       </div>
                     </div>
-
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200'>
                       {category.name}
                     </h3>
-
                     <div className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200'>
                       <span className='text-sm font-medium'>
                         Explore Services
                       </span>
-                      <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200' />                    </div>                    
+                      <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200' />                    </div>
                     <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">
                       <span className="text-sm font-medium">Explore Services</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -606,7 +586,6 @@ const Homepage2047: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -631,7 +610,6 @@ const Homepage2047: React.FC = () => {
               Discover our most revolutionary and cutting-edge technology solutions
             </p>
           </motion.div>
-
           {/* Services Grid */}
           <motion.div
             variants={staggerContainer}
@@ -654,17 +632,15 @@ const Homepage2047: React.FC = () => {
                     >
                       <feature.icon className='w-8 h-8 text-white' />
                     </div>
-
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200'>
                       {feature.title}
                     </h3>
                     <p className='text-gray-300 mb-6 leading-relaxed'>
                       {feature.description}
                     </p>
-
                     <div className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200'>
                       <span className='text-sm font-medium'>Learn More</span>
-                      <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200' />                    </div>                    
+                      <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200' />                    </div>
                     <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">
                       <span className="text-sm font-medium">Learn More</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -673,7 +649,6 @@ const Homepage2047: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
-
           {/* View All Services CTA */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -698,7 +673,6 @@ const Homepage2047: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -747,7 +721,6 @@ const Homepage2047: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>

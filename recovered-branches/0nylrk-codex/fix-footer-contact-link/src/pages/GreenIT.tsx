@@ -8,7 +8,7 @@ import {AppLayout} from "@/layout/AppLayout";
 export default function GreenIT() {
   const greenITSolutions = [
     {
-      title: "Energy-Efficient Hardware",
+      title: "Energy-Efficient Hardware",;
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
       icon: Server},
     {
@@ -37,7 +37,6 @@ export default function GreenIT() {
               Sustainable technology solutions that reduce environmental impact without compromising performance
             </p>
           </div>
-          
           <div className="mb-16">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -67,10 +66,8 @@ export default function GreenIT() {
                 </div>
               </div>
             </div>
-            
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {greenITSolutions.map((solution, index) => (
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
@@ -83,10 +80,8 @@ export default function GreenIT() {
                 ))}
               </div>
             </div>
-            
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>
-              
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                   <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>
@@ -97,7 +92,6 @@ export default function GreenIT() {
                     <li>• Support for renewable energy initiatives</li>
                   </ul>
                 </div>
-                
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                   <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
                   <ul className="text-zion-slate-light space-y-2">
@@ -110,7 +104,6 @@ export default function GreenIT() {
               </div>
             </div>
           </div>
-          
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">

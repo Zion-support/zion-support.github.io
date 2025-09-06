@@ -16,7 +16,7 @@ import {
   Brain,
   Globe,
   Shield,
-  Phone,
+  Phone,;
   Mail,;
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
@@ -172,7 +172,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
           href='https://ziontechgroup.com/2026-innovative-services-showcase'
         />
       </Head>
-
       <UltraAdvancedFuturisticBackground2026
         intensity='extreme'
         colorScheme='neural-network'        particleCount={800}
@@ -182,9 +181,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
         enableNeuralNetworks={true}
         enableMultidimensional={true}
       />
-
       <UltraAdvancedNavigation2026 />
-
       <div className='min-h-screen relative z-10'>
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
@@ -203,7 +200,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                 emerging technologies, transform your business with
                 next-generation innovation.              </p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -230,7 +226,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                   Future-Proof
                 </span>              </div>
             </motion.div>
-
             {/* Search and Filters */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -248,7 +243,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                   className='w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent'
                 />
               </div>
-
               <div className='flex flex-wrap gap-4 justify-center mb-8'>
                 {categories.map(category => (                  <button
                     key={category.id}
@@ -263,7 +257,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                   </button>
                 ))}
               </div>
-
               <div className='flex flex-wrap gap-4 justify-center'>
                 {priceRanges.map(range => (                  <button
                     key={range.id}
@@ -281,7 +274,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className='py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -314,13 +306,11 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                       </h3>
                       <p className='text-gray-300 text-sm'>{service.tagline}</p>
                     </div>
-
                     {/* Service Content */}
                     <div className='p-6'>
                       <p className='text-gray-300 text-sm mb-4 line-clamp-3'>
                         {service.description}
                       </p>
-
                       <div className='flex items-center justify-between mb-4'>
                         <div className='flex items-center space-x-2'>
                           <Star className='w-4 h-4 text-yellow-500 fill-current' />
@@ -338,7 +328,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                           </span>
                         </div>
                       </div>
-
                       <div className='flex items-center justify-between mb-4'>
                         <div className='text-2xl font-bold text-white'>
                           {service.price}
@@ -347,7 +336,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                           {service.period}
                         </div>
                       </div>
-
                       <div className='flex items-center justify-between mb-4'>
                         <div className='flex items-center space-x-2'>
                           <Clock className='w-4 h-4 text-green-400' />
@@ -361,7 +349,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                             {service.trialDays} days trial
                           </span>                        </div>
                       </div>
-
                       {/* Features Preview */}
                       <div className='mb-4'>
                         <h4 className='text-white font-semibold mb-2'>
@@ -387,7 +374,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                             </span>                          )}
                         </div>
                       </div>
-
                       {/* Category Badge */}
                       <div className='mb-4'>
                         <span
@@ -395,7 +381,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                         >                          {service.category}
                         </span>
                       </div>
-
                       {/* CTA Button */}
                       <Link href={service.link}>
                         <button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
@@ -405,13 +390,11 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                         </button>
                       </Link>
                     </div>
-
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />                  </div>
                 </motion.div>
               ))}
             </motion.div>
-
             {filteredServices.length === 0 && (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -433,7 +416,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
             )}
           </div>
         </section>
-
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
@@ -449,7 +431,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                 Contact our team to learn more about our innovative 2026
                 services and how they can revolutionize your operations.
               </p>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6'>
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-4' />
@@ -467,7 +448,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                   <p className='text-green-300'>ziontechgroup.com</p>
                 </div>
               </div>
-
               <Link href='/contact'>
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started Today
                 </button>

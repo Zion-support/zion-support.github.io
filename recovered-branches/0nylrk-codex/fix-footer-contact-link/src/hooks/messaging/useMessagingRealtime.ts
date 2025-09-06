@@ -7,7 +7,7 @@ import {toast} from '@/hooks/use-toast';
 // Allow either UserProfile or UserDetails
 type UserWithProfile = UserProfile | UserDetails | null;
 
-export function useMessagingRealtime(
+export function useMessagingRealtime(;
   user: UserWithProfile;
   activeConversation: Conversation | null;
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;

@@ -6,7 +6,7 @@ import {
   MapPin,
   Globe,
   Github,
-  Linkedin,
+  Linkedin,;
   ExternalLink,;
 } from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 const contactInfo = {
@@ -16,7 +16,7 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',};
 
 export default function NeoFuturisticFooter() {
-  return (  website: 'https://ziontechgroup.com'
+  return (  website: 'https://ziontechgroup.com';
 };
 
 export default function NeoFuturisticFooter() {
@@ -25,7 +25,6 @@ export default function NeoFuturisticFooter() {
       <div className='absolute inset-0 pointer-events-none'>
         <div className='absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl' />
         <div className='absolute inset-0 bg-neural-dots opacity-20 animate-shimmer' />
-
       <div className='relative container mx-auto px-4 py-12 text-slate-200'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
           <div>
@@ -43,7 +42,6 @@ export default function NeoFuturisticFooter() {
               reliability.
             </p>
           </div>
-
           <div className='space-y-2 text-sm'>
             <div className='font-semibold text-slate-100 mb-2'>Contact</div>
             <div className='flex items-center gap-2 text-cyan-300'>
@@ -82,7 +80,6 @@ export default function NeoFuturisticFooter() {
               </a>
             </div>
           </div>
-
           <div className='space-y-2 text-sm'>
             <div className='font-semibold text-slate-100 mb-2'>Resources</div>
             <a
@@ -130,7 +127,6 @@ export default function NeoFuturisticFooter() {
               <a aria-label="LinkedIn" href="https://www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
           </div>
         </div>
-
         <div className='mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6'>
           <div className='text-xs text-slate-500'>
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
@@ -148,7 +144,7 @@ export default function NeoFuturisticFooter() {
             <a href="/terms" className="hover:text-slate-300">Terms</a>
         </div>
       </div>
-    </footer>
+    </footer>;
   );
 }
 

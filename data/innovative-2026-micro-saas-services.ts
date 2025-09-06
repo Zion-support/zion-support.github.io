@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface Innovative2026MicroSaasService {
+export interface Innovative2026MicroSaasService {;
   id: string;
   name: string;
   tagline: string;
@@ -912,7 +912,7 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
       customers: 800,
       rating: 4.8,
       reviews: 500,
-    },
+    },;
   ];    features: [
       'Quantum-secured blockchainPost-quantum cryptographyUltra-fast transactionsSmart contract automationDeFi protocol integrationCross-chain interoperabilityQuantum-resistant walletsAdvanced security features';
       'Performance analyticsDeveloper tools and APIs'

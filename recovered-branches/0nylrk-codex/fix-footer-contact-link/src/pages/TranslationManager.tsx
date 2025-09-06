@@ -14,7 +14,7 @@ import {AlertTriangle, Check, Globe, Search, Loader2} from "lucide-react";
 import {useIsMobile} from "@/hooks/use-mobile";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {useTranslationService} from "@/hooks/useTranslationService";
-export default function TranslationManager() {
+export default function TranslationManager() {;
   const { t, i18n } = useTranslation();
   const isMobile = useIsMobile();
   const { supportedLanguages } = useLanguage();
@@ -246,7 +246,6 @@ export default function TranslationManager() {
                   </TabsList>
                 </Tabs>
               </div>
-              
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
@@ -254,7 +253,6 @@ export default function TranslationManager() {
                   <div className="p-3 font-medium">{t('translation.translations')}</div>
                   <div className="hidden sm:block p-3 font-medium">{t('translation.actions')}</div>
                 </div>
-                
                 {filteredKeys.length === 0 ? (
                   <div className="p-6 text-center text-muted-foreground">
                     {t('translation.no_results')}

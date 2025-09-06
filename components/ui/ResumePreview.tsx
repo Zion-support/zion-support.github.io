@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-export type ResumeData = {
+export type ResumeData = {;
   name: string;
   contact?: {
     email?: string;
@@ -44,7 +44,7 @@ export type ResumeData = {
   }>;
 };
 
-export type ResumePreviewProps = {
+export type ResumePreviewProps = {;
   data: ResumeData;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number;
@@ -70,7 +70,7 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
 };
 
 export type ResumePreviewProps = {
-  data: ResumeData,
+  data: ResumeData,;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number
 };
@@ -85,7 +85,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
   ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
     const portfolioItems = (data.portfolio || []).slice(
       0,
-      Math.max(0, maxPortfolioItems)
+      Math.max(0, maxPortfolioItems);
     );
 
       >
@@ -150,7 +150,6 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               )}
             </div>
           </header>
-
           {/* Summary */}
           {data.summary && (
             <section className='mb-5'>
@@ -345,3 +344,13 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
 ResumePreview.displayName = 'ResumePreview';
 
 export default ResumePreview;
+
+}
+}
+}
+}
+}
+}
+}
+}
+}

@@ -1,5 +1,5 @@
 
-export const TalentCard = React.memo(TalentCardComponent)
+export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard'; import React from 'react'
 import { useRouter } from 'next/router'
 import { Badge } from "@/components/ui/badge"
@@ -77,7 +77,6 @@ const TalentCardComponent = ({
               </div>
             )}
           </div>
-          
           {/* Main Info */}
           <div className="flex-1">
             <div className="flex justify-between items-start">
@@ -85,7 +84,6 @@ const TalentCardComponent = ({
               <FavoriteButton itemId={talent.id} className="-mt-1" />
             </div>
             <p className="text-white font-medium">{talent.professional_title}</p>
-            
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
@@ -103,7 +101,6 @@ const TalentCardComponent = ({
             </div>
           </div>
         </div>
-        
         {/* Skills */}
         {skills.length > 0 && (
           <div className="mt-4">
@@ -137,7 +134,6 @@ const TalentCardComponent = ({
               <div className="text-zion-slate-light">Rate not specified</div>
             )}
           </div>
-          
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
@@ -171,4 +167,5 @@ export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
 
 export const TalentCard = React.memo(TalentCardComponent)
-TalentCard.displayName = 'TalentCard'
+TalentCard.displayName = 'TalentCard';
+;

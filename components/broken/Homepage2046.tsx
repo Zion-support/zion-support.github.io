@@ -41,11 +41,11 @@ import {
   Eye,
   Clock,
   DollarSign,
-  CheckCircle,
+  CheckCircle,;
   ArrowUpRight,;
 } from 'lucide-react';
 import Link from 'next/link';import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3, 
   Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
@@ -81,7 +81,6 @@ const QuantumLoadingFallback = () => (
         />
       ))}
     </div>
-    
     {/* Quantum loading animation */}
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -152,7 +151,6 @@ const QuantumLoadingFallback = () => (
       <p className='text-lg text-gray-400'>
         Preparing your revolutionary digital transformation journey
       </p>
-
       {/* Quantum progress bar */}
       <div className='mt-8 w-64 mx-auto bg-gray-700 rounded-full h-2'>
         <motion.div
@@ -271,7 +269,6 @@ const Homepage2046: React.FC = () => {
         <div className="absolute inset-0">
           {/* Quantum grid effect */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-          
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (
             <motion.div
@@ -305,7 +302,6 @@ const Homepage2046: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Hero Section */}
         <section
           id='hero'
@@ -332,7 +328,6 @@ const Homepage2046: React.FC = () => {
                   Zion Tech Group
                 </span>
               </motion.h1>
-
               <motion.p
                 className='text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto'                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -341,7 +336,6 @@ const Homepage2046: React.FC = () => {
                   Zion Tech Group
                 </span>
               </motion.h1>
-              
               <motion.p 
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
                 animate={{ opacity: 1, y: 0 }}
@@ -382,7 +376,6 @@ const Homepage2046: React.FC = () => {
                     Explore Services <ArrowRight className='w-5 h-5' />
                   </motion.button>
                 </Link>
-
                 <Link href='/contact'>
                   <motion.button
                     whileHover={{
@@ -400,7 +393,6 @@ const Homepage2046: React.FC = () => {
                     Explore Services <ArrowRight className="w-5 h-5" />
                   </motion.button>
                 </Link>
-                
                 <Link href="/contact">
                   <motion.button
                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0.5)" }}
@@ -412,7 +404,6 @@ const Homepage2046: React.FC = () => {
                 </Link>
               </motion.div>
             </motion.div>
-
             {/* Contact Information */}
             <motion.div
               className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border border-cyan-400/30'              initial={{ opacity: 0, y: 30 }}
@@ -451,7 +442,6 @@ const Homepage2046: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Services Showcase Section */}
         <section id='services' className='relative z-10 py-20 px-4'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section id="services" className="relative z-10 py-20 px-4">
@@ -481,7 +471,6 @@ const Homepage2046: React.FC = () => {
                 Discover our cutting-edge quantum AI, neural interface, and space technology solutions that are transforming industries worldwide.
               </p>
             </motion.div>
-
             {/* Search and Filter */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -501,7 +490,6 @@ const Homepage2046: React.FC = () => {
                     className='w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 backdrop-blur-lg'
                   />
                 </div>
-
                 <div className='flex gap-2'>
                   {categories.map(category => (                    <button            >
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
@@ -515,7 +503,6 @@ const Homepage2046: React.FC = () => {
                     className="w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 backdrop-blur-lg"
                   />
                 </div>
-                
                 <div className="flex gap-2">
                   {categories.map((category) => (
                     <button
@@ -533,7 +520,6 @@ const Homepage2046: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-
             {/* Services Grid */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -587,20 +573,16 @@ const Homepage2046: React.FC = () => {
                           </span>                        </div>
                       </div>
                     </div>
-
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>                          <span className="text-gray-400 text-sm ml-1">({service.reviews})</span>
                         </div>
                       </div>
                     </div>
-
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
                       {service.name}
                     </h3>
-
                     <p className='text-gray-300 text-sm mb-4 line-clamp-3'>
                       {service.description}
                     </p>
-
                     <div className='mb-4'>
                       <div className='flex items-center gap-2 text-cyan-400 font-semibold'>
                         <DollarSign className='w-4 h-4' />                        <span>{service.price}</span>
@@ -608,18 +590,15 @@ const Homepage2046: React.FC = () => {
                     </div>
                       {service.name}
                     </h3>
-                    
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                       {service.description}
                     </p>
-
                     <div className="mb-4">
                       <div className="flex items-center gap-2 text-cyan-400 font-semibold">
                         <DollarSign className="w-4 h-4" />
                         <span>{service.price}</span>
                       </div>
                     </div>
-
                     <div className='space-y-2 mb-6'>
                       <h4 className='text-sm font-semibold text-white'>
                         Key Features:
@@ -640,7 +619,6 @@ const Homepage2046: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-
                     <div className='flex items-center justify-between'>                      <Link href={service.link}>
                         <motion.button
                           whileHover={{ scale: 1.05 }}
@@ -655,7 +633,6 @@ const Homepage2046: React.FC = () => {
                           Learn More <ArrowUpRight className='w-4 h-4' />
                         </motion.button>
                       </Link>
-
                       <div className='text-right text-xs text-gray-400'>
                         <div className='flex items-center gap-1'>
                           <Users className='w-3 h-3' />
@@ -666,7 +643,6 @@ const Homepage2046: React.FC = () => {
                           Learn More <ArrowUpRight className="w-4 h-4" />
                         </motion.button>
                       </Link>
-                      
                       <div className="text-right text-xs text-gray-400">
                         <div className="flex items-center gap-1">
                           <Users className="w-3 h-3" />
@@ -682,7 +658,6 @@ const Homepage2046: React.FC = () => {
                 </motion.div>
               ))}
             </motion.div>
-
             {/* Call to Action */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}

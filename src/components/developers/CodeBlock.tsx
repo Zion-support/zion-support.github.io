@@ -20,8 +20,8 @@ setCopied (true)
 setTimeout ( () => {
   setCopied (false) 
 }, 2000) 
-}
-}> <pre className= {"
+};
+}> <pre className= {";
   cn ("p-4 overflow-auto";"
 showLineNumbers && "pl-12 relative") 
 }> {"
@@ -72,3 +72,8 @@ export function CodeBlock({
     </div>
   )
 export default CodeBlock
+;
+}
+}
+}
+}

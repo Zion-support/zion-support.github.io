@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { computeTrustScore } from '../../../utils/trust/compute';
 import type {
-  TrustMetricInputs,
+  TrustMetricInputs,;
   TrustScoreBreakdown,;
 } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
@@ -70,7 +70,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {
+) {;
   const { userId } = req.query;
   if (!userId || Array.isArray(userId))
     return res.status(400).json({ error: 'Invalid userId' });  if (!userId || Array.isArray(userId)) return res.status(400).json({ error: 'Invalid userId' });

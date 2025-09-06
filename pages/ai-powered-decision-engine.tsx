@@ -23,4 +23,4 @@ export default function AiPoweredDecisionEngine() {
 			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
 		/>
 	)
-}
+};

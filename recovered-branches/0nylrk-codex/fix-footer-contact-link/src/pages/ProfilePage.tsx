@@ -14,7 +14,7 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
+  // type argument and cast the result instead to prevent TS2347 errors.;
   const { profileId } = useParams() as { profileId?: string };
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -98,7 +98,6 @@ export default function ProfilePage() {
                     </div>
                   )}
                 </div>
-                
                 {/* Main Info */}
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
@@ -108,7 +107,6 @@ export default function ProfilePage() {
                     </div>
                     {/* Add Save/Unsave Button Here */}
                   </div>
-                  
                   {/* Location & Availability */}
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">
                     {profileData.location && (
@@ -126,7 +124,6 @@ export default function ProfilePage() {
                   </div>
                 </div>
               </div>
-              
               {/* Skills */}
               {profileData.skills && profileData.skills.length > 0 && (
                 <div className="mt-4">
@@ -139,13 +136,11 @@ export default function ProfilePage() {
                 </div>
               )}
             </div>
-            
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
             </div>
-            
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
@@ -168,13 +163,11 @@ export default function ProfilePage() {
                 )}
               </div>
             </div>
-            
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
             </div>
-            
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>
@@ -212,7 +205,6 @@ export default function ProfilePage() {
               </div>
             </div>
           </div>
-        
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA

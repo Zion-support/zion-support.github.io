@@ -9,7 +9,7 @@ import {RateOptimizationSection} from "../RateOptimizationSection";
 import {basicInfoSchema, BasicInfoFormData} from "./schema";
 import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
-export interface BasicInfoFormProps {
+export interface BasicInfoFormProps {;
   resumeId?: string;
   initialData?: Partial<BasicInfoFormData>;
   onSave: (data: BasicInfoFormData) => void,
@@ -18,7 +18,7 @@ export interface BasicInfoFormProps {
   onComplete?: () => void
 }
 
-export function BasicInfoForm({
+export function BasicInfoForm({;
   resumeId;
   initialData = {};
   onSave;
@@ -63,7 +63,6 @@ export function BasicInfoForm({
         <Card className="p-6 space-y-6">
           <PersonalInfoFields control={form.control} />
           <ContactFields control={form.control} />
-
           <div className="pt-4 border-t border-gray-200">
             <h3 className="text-lg font-medium mb-4">Rate Information</h3>
             <RateOptimizationSection
@@ -76,7 +75,6 @@ export function BasicInfoForm({
             />
           </div>
         </Card>
-
         <div className="flex justify-end">
           <Button type="submit">Save Basic Information</Button>
         </div>

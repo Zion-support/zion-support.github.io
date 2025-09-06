@@ -28,7 +28,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/ai-email-triage-copilot',
-    marketPosition:
+    marketPosition:;
       'Alternative to basic autoresponders; focuses on triage quality and CRM integration.',
     targetAudience: 'Support teams, sales ops, founders',
     trialDays: 14,
@@ -74,7 +74,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/mobile-survey-studio',
-    marketPosition:
+    marketPosition:;
       'Lightweight alternative to enterprise survey suites; optimized for mobile.',
     targetAudience: 'Growth teams, product managers, agencies',
     trialDays: 7,
@@ -509,7 +509,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     customers: 36,
     rating: 4.4,
     reviews: 16,
-  },
+  },;
 ];	{
 		id: 'ai-email-triage-copilot';
 		name: 'AI Email Triage Copilot',
@@ -666,7 +666,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
 		features: [
-			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)'
+			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)';
 		];
 		popular: true;
 		icon: '🔎';

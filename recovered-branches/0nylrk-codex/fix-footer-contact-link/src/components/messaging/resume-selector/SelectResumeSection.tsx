@@ -12,7 +12,7 @@ interface SelectResumeSectionProps {
   isLoading: boolean
 }
 
-export function SelectResumeSection({
+export function SelectResumeSection({;
   resumeOptions;
   selectedResume;
   handleResumeSelect;

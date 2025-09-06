@@ -6,7 +6,7 @@ export default function Partners() {
     entityType: '',
     pocName: '',
     pocEmail: '',
-    useCaseType: 'Education Partnership',
+    useCaseType: 'Education Partnership',;
   });  const [result, setResult] = useState<any>(null);    name: "",
     entityType: "",
     pocName: "",
@@ -131,12 +131,10 @@ export default function Partners() {
               {loading ? 'Submitting...' : 'Register'}
             </button>
           </form>
-
           <div className='bg-white p-6 rounded-lg shadow'>
             <h2 className='text-xl font-medium mb-4'>Available Endpoints</h2>
             <ul className='list-disc ml-6 space-y-1 text-sm'>              <li>POST /talents</li>            <button disabled={loading} className="bg-black text-white px-4 py-2 rounded disabled:opacity-50">{loading ? "Submitting..." : "Register"}</button>
           </form>
-
           <div className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-xl font-medium mb-4">Available Endpoints</h2>
             <ul className="list-disc ml-6 space-y-1 text-sm">
@@ -177,7 +175,6 @@ export default function Partners() {
             </div>
           </div>
         </div>
-
         {result && (
           <div className='mt-8 bg-white p-6 rounded-lg shadow'>
             <h3 className='text-lg font-medium mb-2'>

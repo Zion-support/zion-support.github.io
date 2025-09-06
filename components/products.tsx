@@ -16,7 +16,7 @@ export default function Placeholder() {
           <a className='text-blue-600 hover:underline'>Back to Home</a>
         </Link>
       </div>
-    </main>
+    </main>;
   );export default function Placeholder() {
   return (
     <main className="min-h-screen p-8">
@@ -29,6 +29,8 @@ export default function Placeholder() {
         <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/products</code>.</p>
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></Link>
       </div>
-    </main>
+    </main>;
   );
+}
+
 }

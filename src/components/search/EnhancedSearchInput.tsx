@@ -7,7 +7,7 @@ interface EnhancedSearchInputProps {
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
    */
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
   placeholder?: string;  /**
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
@@ -21,7 +21,7 @@ export function EnhancedSearchInput({
   onSelectSuggestion
   placeholder = "Search..."
   searchSuggestions
-}: EnhancedSearchInputProps) {
+}: EnhancedSearchInputProps) {;
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
 import { Search, X  } from 'lucide-react'
 import { Input } from '@/components/ui/input'
@@ -173,8 +173,8 @@ export function EnhancedSearchInput({
   useEffect(() => {
   // TODO: Add dependencies if needed
   return () => {
-    // Cleanup function
-}
+    // Cleanup function;
+};
 }, []); [])
     debouncedFilterSuggestions(value, searchSuggestions)
     setHighlightedIndex(-1)
@@ -323,7 +323,6 @@ export function EnhancedSearchInput({
           </button>
         )}
       </div>
-      
       <AutocompleteSuggestions
         suggestions = {filteredSuggestions,}
         searchTerm = {value,}

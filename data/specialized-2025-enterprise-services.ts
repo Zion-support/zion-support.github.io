@@ -566,7 +566,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     ],
     marketAdvantage:
       'Advanced predictive analytics platform with custom ML model development',
-  },
+  },;
 ];
 
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';

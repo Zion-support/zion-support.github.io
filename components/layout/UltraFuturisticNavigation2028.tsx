@@ -52,11 +52,11 @@ import {
   Mountain,
   Code,
   Wrench,
-  Smartphone,
+  Smartphone,;
   BarChart3,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -470,7 +470,7 @@ const resourceLinks = [
   { name: '📊 Analytics', href: '/analytics', icon: BarChart3 },];  { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
 ];
 
-export default function UltraFuturisticNavigation2028() {
+export default function UltraFuturisticNavigation2028() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -557,7 +557,6 @@ export default function UltraFuturisticNavigation2028() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>
@@ -593,7 +592,6 @@ export default function UltraFuturisticNavigation2028() {
               </div>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
             {/* Service Categories */}
@@ -603,7 +601,6 @@ export default function UltraFuturisticNavigation2028() {
                 <span>Services</span>
                 <ChevronDown className='w-4 h-4' />
               </button>
-
               {/* Mega Menu */}
               <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
                 <div className='p-6'>
@@ -646,7 +643,6 @@ export default function UltraFuturisticNavigation2028() {
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
-              
               {/* Mega Menu */}
               <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <div className="p-6">
@@ -700,7 +696,6 @@ export default function UltraFuturisticNavigation2028() {
                 </div>
               </div>
             </div>
-
             {/* Company Links */}
             {companyLinks.slice(1, 5).map(link => (
               <Link
@@ -721,7 +716,6 @@ export default function UltraFuturisticNavigation2028() {
               </Link>
             ))}
           </div>
-
           {/* Search and Actions */}
           <div className='hidden lg:flex items-center space-x-4'>
             {/* Search */}
@@ -743,7 +737,6 @@ export default function UltraFuturisticNavigation2028() {
                 className="w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
-
             {/* CTA Button */}
             <Link
               href='/contact'
@@ -753,7 +746,6 @@ export default function UltraFuturisticNavigation2028() {
               Get Started
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>
             <button
@@ -773,7 +765,6 @@ export default function UltraFuturisticNavigation2028() {
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -794,7 +785,6 @@ export default function UltraFuturisticNavigation2028() {
                   onChange={e => setSearchQuery(e.target.value)}
                   className='w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'                />
               </div>
-
               {/* Mobile Service Categories */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>          >
@@ -810,7 +800,6 @@ export default function UltraFuturisticNavigation2028() {
                   className="w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
               </div>
-
               {/* Mobile Service Categories */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>
@@ -860,7 +849,6 @@ export default function UltraFuturisticNavigation2028() {
                   </div>
                 ))}
               </div>
-
               {/* Mobile Company Links */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>
@@ -891,7 +879,6 @@ export default function UltraFuturisticNavigation2028() {
                   ))}
                 </div>
               </div>
-
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>
                 <Link
@@ -909,7 +896,6 @@ export default function UltraFuturisticNavigation2028() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
         <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>

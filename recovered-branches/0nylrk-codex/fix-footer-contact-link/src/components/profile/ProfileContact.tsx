@@ -11,7 +11,7 @@ interface ProfileContactProps {
   profileType: 'service' | 'talent'
 }
 
-export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {;
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [isSending, setIsSending] = useState(false);
@@ -37,7 +37,6 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
         Contact
       </h3>
-      
       {email && (
         <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>

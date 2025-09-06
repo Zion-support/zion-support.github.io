@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
-export type GenerateServiceDescriptionRequest = {
+export type GenerateServiceDescriptionRequest = {;
   title: string;
   keyFeatures: string[];
   targetAudience: string;
   additionalNotes?: string;
   tone?: "professional" | "friendly" | "persuasive" | "technical";
 };
-export type GenerateServiceDescriptionResponse = {
+export type GenerateServiceDescriptionResponse = {;
   description: string;
 };
 
@@ -16,7 +16,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>,
 ) {
-  if (req.method !== "POST") {
+  if (req.method !== "POST") {;
     return res.status(405).json({ error: "Method not allowed" });
   }
 

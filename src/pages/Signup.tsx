@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
@@ -30,7 +30,7 @@ const SignupSchema = Yup.object({
     'You must accept the terms and conditions'
   ),
 })
-export default function Signup() {
+export default function Signup() {;
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -343,7 +343,6 @@ export default function Signup() {
                 <div className='text-red-500 text-sm'>{formik.errors.name}</div>
               )}
             </div>
-
             <div>
               <label htmlFor='email' className='block text-sm font-medium'>
                 Email address
@@ -363,7 +362,6 @@ export default function Signup() {
                 </div>
               )}
             </div>
-
             <div>
               <label htmlFor='password' className='block text-sm font-medium'>
                 Password
@@ -384,7 +382,6 @@ export default function Signup() {
                 </div>
               )}
             </div>
-
             <div>
               <label htmlFor='confirm' className='block text-sm font-medium'>
                 Confirm Password
@@ -404,7 +401,6 @@ export default function Signup() {
                 </div>
               )}
             </div>
-
             <div className='flex items-center space-x-2'>
               <input
                 id='terms'
@@ -616,8 +612,8 @@ export default function Signup() {
       termsAccepted: false,,
 },,
 }) as UseFormReturn<SignupFormValues>
-  // Form submission handler
-  const onSubmit = async (data: SignupFormValues) => {
+  // Form submission handler;
+  const onSubmit = async (data: SignupFormValues) => {;
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -753,5 +749,5 @@ const Signup = () => {
     </>  )
 }
 }}
-}
+};
 ;

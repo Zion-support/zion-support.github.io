@@ -17,7 +17,7 @@ interface ActiveFiltersProps {
   clearFilters: () => void
 }
 
-export function ActiveFilters({
+export function ActiveFilters({;
   selectedSkills;
   toggleSkill;
   selectedAvailability;
@@ -45,7 +45,6 @@ export function ActiveFilters({
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
       <span className="text-zion-slate-light text-sm">Active filters:</span>
-      
       {selectedSkills.map(skill => (
         <ClickableBadge 
           key={skill}

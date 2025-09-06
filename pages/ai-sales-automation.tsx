@@ -49,5 +49,5 @@ export default function AISalesAutomationPage() {
         </div>
       </div>
     </Layout>
-  )
+  );
 };

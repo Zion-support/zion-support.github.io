@@ -5,7 +5,7 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle,
+  DialogTitle,;
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -32,7 +32,7 @@ export function IntegrationConnectionModal({
   isOpen,
   onClose,
   integration,
-}: IntegrationConnectionModalProps) {
+}: IntegrationConnectionModalProps) {;
   const [isConnecting, setIsConnecting] = useState(false);
   const [syncSettings, setSyncSettings] = useState({
     autoCreateContacts: true,
@@ -89,14 +89,12 @@ export function IntegrationConnectionModal({
             </DialogDescription>
           </div>
         </DialogHeader>
-
         {integration.status === "connected" ||
         integration.status === "warning" ? (
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">Sync Settings</h3>
-
                 <div className="flex items-center space-x-2">
                   <Checkbox
                     id="autoCreateContacts"
@@ -112,7 +110,6 @@ export function IntegrationConnectionModal({
                     Auto-create contacts in {integration.name}
                   </Label>
                 </div>
-
                 <div className="flex items-center space-x-2">
                   <Checkbox
                     id="pushNotes"
@@ -126,7 +123,6 @@ export function IntegrationConnectionModal({
                   />
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
                 </div>
-
                 <div className="flex items-center space-x-2">
                   <Checkbox
                     id="syncJobDetails"
@@ -140,7 +136,6 @@ export function IntegrationConnectionModal({
                   />
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
-
                 <div className="flex items-center space-x-2">
                   <Checkbox
                     id="syncApplicantData"
@@ -155,7 +150,6 @@ export function IntegrationConnectionModal({
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
               </div>
-
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">API Details</h3>
                 <p className="text-xs text-muted-foreground">
@@ -166,7 +160,6 @@ export function IntegrationConnectionModal({
                 </p>
               </div>
             </div>
-
             <DialogFooter className="flex items-center justify-between">
               <Button
                 variant="outline"
@@ -188,7 +181,6 @@ export function IntegrationConnectionModal({
                 applicants, and more. You'll be redirected to {integration.name}{" "}
                 to authorize this connection.
               </p>
-
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">What will be synced:</h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">
@@ -199,7 +191,6 @@ export function IntegrationConnectionModal({
                 </ul>
               </div>
             </div>
-
             <DialogFooter>
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>
                 {isConnecting

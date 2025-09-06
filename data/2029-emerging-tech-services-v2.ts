@@ -1,4 +1,4 @@
-export interface EmergingTechService2029V2 {
+export interface EmergingTechService2029V2 {;
   id: string;
   name: string;
   description: string;
@@ -330,7 +330,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
-  },
+  },;
 ];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
     ];
     marketSize: '$18.9B by 2029';

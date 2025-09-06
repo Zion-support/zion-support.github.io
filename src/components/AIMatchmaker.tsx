@@ -24,7 +24,7 @@ serviceType
 })
 toast ({
   //Set empty matches to show no results found UI setMatches ([]) 
-}finally {
+}finally {;
   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 interface AIMatchmakerProps {
   serviceType?: string,
@@ -92,8 +92,8 @@ export function AIMatchmaker({
         <CardTitle className='flex items-center text-white'>
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />
           AI Matchmaker
-        </CardTitle>
-        <p className='text-sm text-zion-slate-light'>
+        </CardTitle>;
+        <p className='text-sm text-zion-slate-light'>;
           Describe what you&apos;re looking for and our AI will find the best
           matches
         </p>
@@ -123,7 +123,6 @@ export function AIMatchmaker({
               )}
             </Button>
           </div>
-
           {hasSearched && (
             <AIMatchingResults
               matches={matchItems}
@@ -136,4 +135,7 @@ export function AIMatchmaker({
       </CardContent>
     </Card>
   )
+}
+
+}
 }

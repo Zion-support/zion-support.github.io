@@ -121,7 +121,6 @@ export function WorkExperienceItemForm({
               )}
             />
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <FormField
               control={form.control}
@@ -162,7 +161,6 @@ export function WorkExperienceItemForm({
               )}
             />
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <FormField
               control={form.control}
@@ -251,7 +249,6 @@ export function WorkExperienceItemForm({
               />
             )}
           </div>
-
           <FormField
             control={form.control}
             name='description'
@@ -311,7 +308,6 @@ export function WorkExperienceItemForm({
           </div>
         </form>
       </Form>
-
       <AIEnhancementDialog
         title='Enhance Work Experience Description'
         isOpen={isEnhancementDialogOpen}
@@ -352,6 +348,6 @@ setIsEnhancementDialogOpen (false)
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) 
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) 
 }"
-}
-}
+};
+};
 ;

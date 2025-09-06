@@ -51,8 +51,8 @@ export default function ITSupportPage() {
       benefits = {benefits,}
       testimonials = {testimonials,}
       ctaText="Get IT Support"
-      ctaLink="/request-quote"
-    />
+      ctaLink="/request-quote";
+    />;
   );      benefits={benefits}
       testimonials={testimonials}
       ctaText="Get IT Support"
@@ -61,3 +61,5 @@ export default function ITSupportPage() {
   )
 }
 ;
+}
+}

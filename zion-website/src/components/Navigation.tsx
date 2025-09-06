@@ -14,8 +14,8 @@ const navigation = [
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  return (
+;
+  return (;
     <header className=&quot;fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10&quot;>
       <nav className=&quot;flex items-center justify-between p-6 lg:px-8&quot; aria-label=&quot;Global&quot;>
         <div className=&quot;flex lg:flex-1&quot;>

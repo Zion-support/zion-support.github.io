@@ -8,10 +8,10 @@ import {
   Twitter,
   Linkedin,
   Instagram,
-  ArrowRight,
+  ArrowRight,;
 } from "lucide-react";
 
-export default function Footer() {
+export default function Footer() {;
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
@@ -64,7 +64,6 @@ export default function Footer() {
               cybersecurity, cloud infrastructure, quantum computing,
               blockchain, IoT, and digital transformation services.
             </p>
-
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
@@ -85,7 +84,6 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
@@ -102,7 +100,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
           {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
@@ -119,7 +116,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
           {/* Company & Resources */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
@@ -135,7 +131,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
@@ -152,7 +147,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
       {/* Newsletter Signup */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
@@ -176,7 +170,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
@@ -184,7 +177,6 @@ export default function Footer() {
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-
             {/* Social Links */}
             <div className="flex space-x-4 mb-4 md:mb-0">
               <a
@@ -220,7 +212,6 @@ export default function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
-
             {/* Legal Links */}
             <div className="flex space-x-6 text-sm">
               <Link

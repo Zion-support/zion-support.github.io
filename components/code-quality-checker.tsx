@@ -11,10 +11,10 @@ import {
   ArrowRight,
   Play,
   Shield,
-  Clock,
+  Clock,;
   TrendingUp,;
 } from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
-export default function CodeQualityCheckerPage() {
+export default function CodeQualityCheckerPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [codeInput, setCodeInput] = useState('');
@@ -220,13 +220,11 @@ export default function CodeQualityCheckerPage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(20,184,166,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(20,184,166,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-medium mb-6'>
             <Code className='w-4 h-4 mr-2' />
@@ -241,7 +239,6 @@ export default function CodeQualityCheckerPage() {
             scanning, and detailed improvement recommendations. Write better,
             safer, and more maintainable code.
           </p>
-
           {/* Code Input Form */}
           <div className='max-w-4xl mx-auto mb-8'>
             <textarea
@@ -262,13 +259,11 @@ export default function CodeQualityCheckerPage() {
               ) : (
                 <>
                   <Play className='w-5 h-5 mr-2' />                  Analyze Code Quality      </Head>
-
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(20,184,166,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(20,184,166,0.06),transparent_50%)]" />
         <div className="absolute inset-0 bg-grid opacity-10" />
-        
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-medium mb-6">
             <Code className="w-4 h-4 mr-2" />
@@ -280,7 +275,6 @@ export default function CodeQualityCheckerPage() {
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
           </p>
-          
           {/* Code Input Form */}
           <div className="max-w-4xl mx-auto mb-8">
             <textarea
@@ -308,7 +302,6 @@ export default function CodeQualityCheckerPage() {
               )}
             </Button>
           </div>
-
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
             <Button
               href='#pricing'
@@ -340,7 +333,6 @@ export default function CodeQualityCheckerPage() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -353,7 +345,6 @@ export default function CodeQualityCheckerPage() {
               improvement suggestions for better code.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -382,7 +373,6 @@ export default function CodeQualityCheckerPage() {
               Our code quality checker provides comprehensive analysis and improvement suggestions for better code.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <Card
@@ -411,7 +401,6 @@ export default function CodeQualityCheckerPage() {
           </div>
         </div>
       </section>
-
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -424,7 +413,6 @@ export default function CodeQualityCheckerPage() {
               language-specific analysis rules and best practices.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {supportedLanguages.map((language, index) => (
               <Card
@@ -450,7 +438,6 @@ export default function CodeQualityCheckerPage() {
               We support a wide range of programming languages with language-specific analysis rules and best practices.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {supportedLanguages.map((language, index) => (
               <Card
@@ -475,7 +462,6 @@ export default function CodeQualityCheckerPage() {
           </div>
         </div>
       </section>
-
       {/* Demo Analysis Results */}
       {analysisResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -489,7 +475,6 @@ export default function CodeQualityCheckerPage() {
                 insights for your own code.
               </p>
             </div>
-
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8'>
               {/* Quality Score */}
               <Card className='border-gradient-teal text-center'>
@@ -518,7 +503,6 @@ export default function CodeQualityCheckerPage() {
                   Good code quality with room for improvement
                 </p>
               </Card>
-
               {/* Issues Found */}
               <Card className='border-gradient-teal'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -544,7 +528,6 @@ export default function CodeQualityCheckerPage() {
                 Here's a sample code quality analysis. Get comprehensive insights for your own code.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
               {/* Quality Score */}
               <Card className="border-gradient-teal text-center">
@@ -564,7 +547,6 @@ export default function CodeQualityCheckerPage() {
                 </div>
                 <p className="text-gray-400">Good code quality with room for improvement</p>
               </Card>
-
               {/* Issues Found */}
               <Card className="border-gradient-teal">
                 <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>
@@ -588,7 +570,6 @@ export default function CodeQualityCheckerPage() {
                   ))}
                 </div>
               </Card>
-
               {/* Quality Metrics */}
               <Card className='border-gradient-teal'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -633,7 +614,6 @@ export default function CodeQualityCheckerPage() {
                 </div>
               </Card>
             </div>
-
             {/* Recommendations */}
             <Card className='border-gradient-teal'>
               <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -669,14 +649,12 @@ export default function CodeQualityCheckerPage() {
               development needs.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the code quality analysis plan that best fits your development needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <Card
@@ -708,7 +686,6 @@ export default function CodeQualityCheckerPage() {
                   </div>
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -718,7 +695,6 @@ export default function CodeQualityCheckerPage() {
                       <CheckCircle className='w-5 h-5 text-teal-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -727,7 +703,6 @@ export default function CodeQualityCheckerPage() {
                     </li>
                   ))}
                 </ul>
-
                 <Button
                   href='/contact'
                   size='lg'
@@ -745,7 +720,6 @@ export default function CodeQualityCheckerPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -780,4 +754,7 @@ export default function CodeQualityCheckerPage() {
       </section>
     </>
 );
+}
+
+}
 }

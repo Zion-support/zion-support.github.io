@@ -26,7 +26,7 @@ function useCounter(target: number, durationMs: number) {
   return value
 }
 
-export default function InteractiveStats() {
+export default function InteractiveStats() {;
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);

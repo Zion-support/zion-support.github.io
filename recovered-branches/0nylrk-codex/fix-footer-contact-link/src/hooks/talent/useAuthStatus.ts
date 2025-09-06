@@ -1,7 +1,7 @@
 
 import {useState} from 'react';
 export function useAuthStatus() {
-  // Mock authenticated status
+  // Mock authenticated status;
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   
   // Mock user details

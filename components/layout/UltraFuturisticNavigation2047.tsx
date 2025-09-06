@@ -58,13 +58,13 @@ import {
   Linkedin,
   Twitter,
   Github,
-  Youtube,
+  Youtube,;
   MapPin,;
 } from 'lucide-react';
 
 interface NavigationItem {
   name: string;
-  href: string;  icon?: React.ReactNode;import { 
+  href: string;  icon?: React.ReactNode;import { ;
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
   Brain, Rocket, Target, Atom, Shield;
   DollarSign, BarChart3, Globe, Grid, Heart, Database;
@@ -537,7 +537,6 @@ const UltraFuturisticNavigation2047 = () => {
               </span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex lg:items-center lg:space-x-8'>
             {navigationItems.map(item => (
@@ -556,7 +555,6 @@ const UltraFuturisticNavigation2047 = () => {
                   <span>{item.name}</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
-
                 <AnimatePresence>
                   {activeDropdown === item.name && (
                     <motion.div
@@ -625,7 +623,6 @@ const UltraFuturisticNavigation2047 = () => {
               </div>
             ))}
           </div>
-
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>
             <div className='flex items-center space-x-4 text-sm text-gray-400'>
@@ -649,7 +646,6 @@ const UltraFuturisticNavigation2047 = () => {
               Get Started
               <ArrowRight className='ml-2 w-4 h-4' />            </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className='lg:hidden'>              href="/contact"
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
@@ -657,7 +653,6 @@ const UltraFuturisticNavigation2047 = () => {
               Get Started
               <ArrowRight className="ml-2 w-4 h-4" />
           </div>
-
           {/* Mobile menu button */}
           <div className='lg:hidden'>
             <button
@@ -682,7 +677,6 @@ const UltraFuturisticNavigation2047 = () => {
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -721,7 +715,6 @@ const UltraFuturisticNavigation2047 = () => {
                     </div>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
                   </button>
-                  
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
@@ -778,7 +771,6 @@ const UltraFuturisticNavigation2047 = () => {
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
-
                 <div className='px-3 pt-2'>
                   <Link
                     href='/contact'
@@ -806,7 +798,6 @@ const UltraFuturisticNavigation2047 = () => {
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
-                
                 <div className="px-3 pt-2">
                   <Link
                     href="/contact"

@@ -4,10 +4,10 @@ import EnhancedLayout from '../layout/EnhancedLayout';
 export type ProposalType =
   | 'Workforce Dev'
   | 'AI Ethics'
-  | 'Digital ID'
+  | 'Digital ID';
   | 'Education';
 
-export type ProposalForm = {
+export type ProposalForm = {;
   targetInstitution: string;
   type: ProposalType;
   regionalScope: string;
@@ -19,7 +19,7 @@ export type ProposalForm = {
   type: ProposalType,
   regionalScope: string,
   budgetOrGoals: string,
-  supportingMultiverses: string,
+  supportingMultiverses: string,;
   language?: string;
   customPrompt?: string
 };
@@ -33,7 +33,7 @@ export default function ProposalGenerator() {
     supportingMultiverses: '',
     language: 'English',
     customPrompt:
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');

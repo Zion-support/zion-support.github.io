@@ -15,7 +15,7 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const now = new Date(),
-  const labels = Array.from({ length: 14 }, (_, i) => {
+  const labels = Array.from({ length: 14 }, (_, i) => {;
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
     return `${d.getMonth() + 1}/${d.getDate()}`;

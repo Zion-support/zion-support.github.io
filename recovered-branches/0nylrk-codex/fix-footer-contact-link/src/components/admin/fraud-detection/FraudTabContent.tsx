@@ -15,7 +15,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           <p className="text-muted-foreground">
             This tab will show fraud flags that are still pending admin review.
           </p>
-        </div>
+        </div>;
       );
     
     case 'dangerous':

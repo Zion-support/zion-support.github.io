@@ -36,7 +36,6 @@ export function GeneratedContentDisplay({
           </h3>
           <p className='text-white'>{content.description}</p>
         </div>
-
         <div>
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Tags
@@ -56,7 +55,6 @@ export function GeneratedContentDisplay({
             ))}
           </div>
         </div>
-
         <div>
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Suggested Price Range
@@ -66,7 +64,6 @@ export function GeneratedContentDisplay({
             {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-
         <div>
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Key Selling Points
@@ -77,7 +74,6 @@ export function GeneratedContentDisplay({
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-        
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
@@ -105,4 +101,8 @@ export function GeneratedContentDisplay({
       </CardFooter>
     </Card>
   )
+};
+;
+}
+}
 }

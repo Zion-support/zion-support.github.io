@@ -276,7 +276,6 @@ const ContentCategorizer: React.FC = () => {;
             className=&quot;w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
           />
         </div>
-
         {/* Advanced Filter Controls */}
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
           {/* Category Filter */}
@@ -374,7 +373,6 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
           </button>
         </div>
       </div>
-
       {/* Category Pills */}
       <div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
@@ -440,7 +438,6 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
                   {item.relevance} priority
                 </span>
               </div>
-
               {/* Source and Action */}
               <div className=&quot;flex items-center justify-between&quot;>
                 <span className=&quot;text-xs text-white/40&quot;>

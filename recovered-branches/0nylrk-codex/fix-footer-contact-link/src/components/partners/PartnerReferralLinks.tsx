@@ -8,7 +8,7 @@ import {useReferrals} from "@/hooks/useReferrals";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Label} from "@/components/ui/label";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-export function PartnerReferralLinks() {
+export function PartnerReferralLinks() {;
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
@@ -106,7 +106,6 @@ export function PartnerReferralLinks() {
           </div>
         </CardContent>
       </Card>
-
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
@@ -172,7 +171,6 @@ export function PartnerReferralLinks() {
           </DialogContent>
         </Dialog>
       </div>
-
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
           generatedLinks.map((item, index) => (

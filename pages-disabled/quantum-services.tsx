@@ -109,7 +109,6 @@ export default function QuantumServices() {
         description="Revolutionary quantum computing solutions for the future. From neural networks to financial trading, unlock quantum advantage."
         keywords="quantum computing, quantum services, quantum neural networks, quantum financial trading, quantum materials discovery"
       />
-      
       <main className="relative z-10">
         {/* Hero Section */}
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
@@ -142,7 +141,6 @@ export default function QuantumServices() {
             </motion.div>
           </div>
         </section>
-
         {/* Quantum Capabilities */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-6xl mx-auto">
@@ -160,7 +158,6 @@ export default function QuantumServices() {
                 Harness the power of quantum mechanics for revolutionary computing solutions
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {quantumCapabilities.map((capability, index) => (
                 <motion.div
@@ -183,7 +180,6 @@ export default function QuantumServices() {
             </div>
           </div>
         </section>
-
         {/* Quantum Services */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -201,7 +197,6 @@ export default function QuantumServices() {
                 Choose from our comprehensive suite of quantum-powered solutions
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {quantumServices.map((service, index) => (
                 <motion.div
@@ -235,7 +230,6 @@ export default function QuantumServices() {
                       <span className="text-lg text-gray-400">/{service.period}</span>
                     </div>
                   </div>
-                  
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -244,7 +238,6 @@ export default function QuantumServices() {
                       </li>
                     ))}
                   </ul>
-                  
                   <a 
                     href="/contact" 
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
@@ -256,7 +249,6 @@ export default function QuantumServices() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -291,7 +283,9 @@ export default function QuantumServices() {
         </section>
       </main>
     </Layout>
-  )
+  );
 };
 
 export default QuantumServicesPage;
+
+}

@@ -147,12 +147,10 @@ const UltraFuturisticBackground: React.FC = () => {
             'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
         }}
       />
-
       {/* Quantum Grid */}
       <div className='absolute inset-0'>
         <div className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
       </div>
-
       {/* Floating Geometric Shapes */}
       <div className='absolute inset-0'>
         {/* Hexagon */}
@@ -179,12 +177,10 @@ const UltraFuturisticBackground: React.FC = () => {
         className="absolute inset-0 w-full h-full"
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
       />
-
       {/* Quantum Grid */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
       </div>
-
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0">
         {/* Hexagon */}
@@ -204,7 +200,6 @@ const UltraFuturisticBackground: React.FC = () => {
             ease: 'linear',            ease: "linear"
           }}
         />
-
         {/* Triangle */}
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
@@ -232,7 +227,6 @@ const UltraFuturisticBackground: React.FC = () => {
             ease: 'linear',            ease: "linear"
           }}
         />
-
         {/* Circle */}
         <motion.div
           className='absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full'
@@ -252,7 +246,6 @@ const UltraFuturisticBackground: React.FC = () => {
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
-
         {/* Square */}
         <motion.div
           className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/30'
@@ -275,7 +268,6 @@ const UltraFuturisticBackground: React.FC = () => {
           }}
         />
       </div>
-
       {/* Energy Orbs */}
       <div className='absolute inset-0'>
         {[...Array(8)].map((_, i) => (
@@ -317,7 +309,6 @@ const UltraFuturisticBackground: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Quantum Wave Effects */}
       <div className='absolute inset-0'>
         {[...Array(5)].map((_, i) => (
@@ -355,14 +346,12 @@ const UltraFuturisticBackground: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Neon Glow Effects */}
       <div className='absolute inset-0'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse' />
         <div className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000' />
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500' />
       </div>
-
       {/* Data Stream Effect */}
       <div className='absolute inset-0'>
         {[...Array(20)].map((_, i) => (
@@ -381,7 +370,6 @@ const UltraFuturisticBackground: React.FC = () => {
               repeat: Infinity,
               ease: 'linear',
               delay: Math.random() * 5,            }}      </div>
-
       {/* Data Stream Effect */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
@@ -406,7 +394,6 @@ const UltraFuturisticBackground: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Quantum Entanglement Lines */}
       <div className='absolute inset-0'>
         <svg className='w-full h-full'>

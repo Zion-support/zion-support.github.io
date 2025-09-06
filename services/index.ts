@@ -6,33 +6,33 @@ export { fileConverterService } from './fileConverterService';
 export { textAnalysisService } from './textAnalysisService';
 
 // Export service types and interfaces
-export type {
+export type {;
   ShortUrl;
   UrlAnalytics;
   ClickEvent;
   CreateShortUrlRequest
 } from './urlShortenerService';
 
-export type {
+export type {;
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword
 } from './passwordGeneratorService';
 
-export type {
+export type {;
   QRCodeOptions;
   QRCodeResult;
   QRCodeTemplate
 } from './qrCodeService';
 
-export type {
+export type {;
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
   FileInfo
 } from './fileConverterService';
 
-export type {
+export type {;
   TextAnalysisResult;
   BasicTextStats;
   ReadabilityMetrics;
@@ -45,7 +45,7 @@ export type {
 
 // Service categories for easy discovery
 export const SERVICE_CATEGORIES = {
-  UTILITIES: {
+  UTILITIES: {;
     name: 'Utility Tools';
     description: 'Essential tools for everyday tasks',
     services: ['urlShortenerpasswordGeneratorqrCodeGenerator']
@@ -65,7 +65,7 @@ export const SERVICE_CATEGORIES = {
 // Service metadata for the application
 export const SERVICES_METADATA = {
   urlShortener: {
-    name: 'URL Shortener',
+    name: 'URL Shortener',;
     description: 'Create short, trackable URLs with analytics';
     icon: '🔗';
     category: 'UTILITIES';
@@ -123,7 +123,7 @@ export const SERVICES_METADATA = {
 
 // Service availability and status
 export const getServiceStatus = () => {
-  return {
+  return {;
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
@@ -134,7 +134,7 @@ export const getServiceStatus = () => {
 
 // Service usage statistics
 export const getServiceStats = () => {
-  return {
+  return {;
     totalUsers: 15420;
     totalRequests: 2847500;
     averageResponseTime: 125,

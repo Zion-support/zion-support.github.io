@@ -31,7 +31,6 @@ export const AppFeatures: React.FC = () => {
             Everything you love about Zion, now in your pocket. Our mobile app brings all the powerful features you need to succeed.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover: border-zion-cyan transition-colors duration-300">              <CardHeader>
@@ -48,7 +47,7 @@ export const AppFeatures: React.FC = () => {
     </section>
   )
 }
-{"
+{";
   icon: <Clock className="h-10 w-10 text-zion-cyan" />;"
 title: "1-Click Hiring";"
 description: "Streamlined hiring process that lets you connect with talent instantly with just one click." 
@@ -73,7 +72,8 @@ export const AppFeatures: React.FC = () => {"
   feature.title "
 }</CardTitle> </CardHeader> <CardContent> <CardDescription className="text-gray-300" > {
   feature.description 
-}</CardDescription> 
+}</CardDescription>
 }</div> </div> </section>) 
 }
 "
+;

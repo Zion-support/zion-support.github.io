@@ -18,10 +18,10 @@ import {
   GraduationCap,
   Factory,
   Truck,
-  CreditCard,
+  CreditCard,;
 } from "lucide-react";
 
-export default function Header() {
+export default function Header() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -147,7 +147,6 @@ title: "Educational Platforms",
               Zion Tech Group
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
             {navigation.map((item) => (
@@ -160,7 +159,6 @@ title: "Educational Platforms",
               </Link>
             ))}
           </nav>
-
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -170,7 +168,6 @@ title: "Educational Platforms",
               Get Started
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -183,7 +180,6 @@ title: "Educational Platforms",
             )}
           </button>
         </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (

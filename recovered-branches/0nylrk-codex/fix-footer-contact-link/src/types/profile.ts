@@ -5,7 +5,7 @@ export interface ProfileSkill {
   endorsements?: number
 }
 
-export interface ProfileProject {
+export interface ProfileProject {;
   id: string;
   title: string;
   description: string;
@@ -15,7 +15,7 @@ export interface ProfileProject {
   date: string
 }
 
-export interface ProfileExperience {
+export interface ProfileExperience {;
   id: string;
   role: string;
   company: string;
@@ -25,14 +25,14 @@ export interface ProfileExperience {
   current?: boolean
 }
 
-export interface Availability {
+export interface Availability {;
   status: 'available' | 'limited' | 'unavailable';
   nextAvailable?: string;
   message?: string,
   availableHours?: { day: string, hours: string }[]
 }
 
-export interface ProfileData {
+export interface ProfileData {;
   id: string;
   name: string;
   title: string;

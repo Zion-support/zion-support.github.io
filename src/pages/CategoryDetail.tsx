@@ -71,7 +71,7 @@ function generateInnovationListing(index: number): ProductListing {
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",
-      icon: <Code className="w-6 h-6" />
+      icon: <Code className="w-6 h-6" />;
     };          icon: <Bot className="w-6 h-6" />},
 
         setCategory(currentCategory)
@@ -91,7 +91,6 @@ function generateInnovationListing(index: number): ProductListing {
               ← Back to Categories
             </Link>
           </div>
-          
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
@@ -105,7 +104,6 @@ function generateInnovationListing(index: number): ProductListing {
               {category.description}
             </p>
           </div>
-          
           {isLoading ? (
             <ListingGridSkeleton />
           ) : (

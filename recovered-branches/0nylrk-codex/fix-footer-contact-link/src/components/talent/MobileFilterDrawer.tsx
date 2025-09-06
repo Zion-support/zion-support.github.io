@@ -8,7 +8,7 @@ interface MobileFilterDrawerProps {
   filterProps: any, // We'll pass all filter-related props through this object
 }
 
-export function MobileFilterDrawer({ 
+export function MobileFilterDrawer({ ;
   isMobileFilterOpen;
   setIsMobileFilterOpen, 
   filterProps

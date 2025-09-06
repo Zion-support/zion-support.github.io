@@ -78,7 +78,6 @@ const PerformancePage: React.FC = () => {
         <meta name="description" content="Comprehensive performance metrics and system analytics" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
@@ -92,7 +91,6 @@ const PerformancePage: React.FC = () => {
             Real-time system performance metrics and analytics dashboard
           </p>
         </div>
-
         {/* Performance Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -111,7 +109,6 @@ const PerformancePage: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Real-time monitoring</p>
           </div>
         </div>
-
         {/* Performance Metrics */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
@@ -138,7 +135,6 @@ const PerformancePage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Recent Reports */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Reports</h2>
@@ -165,7 +161,6 @@ const PerformancePage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Performance Trends */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Trends</h2>
@@ -198,7 +193,6 @@ const PerformancePage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Navigation */}
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 

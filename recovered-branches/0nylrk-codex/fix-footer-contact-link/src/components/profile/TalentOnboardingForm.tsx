@@ -51,7 +51,7 @@ const talentSchema = z.object({
 
 type TalentFormValues = z.infer<typeof talentSchema>;
 
-export function TalentOnboardingForm() {
+export function TalentOnboardingForm() {;
   const { user } = useAuth();
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);

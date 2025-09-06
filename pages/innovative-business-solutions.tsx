@@ -183,7 +183,6 @@ export default function InnovativeBusinessSolutions() {
           href='https://ziontechgroup.com/innovative-business-solutions'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20'></div>
@@ -233,7 +232,6 @@ export default function InnovativeBusinessSolutions() {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -251,7 +249,6 @@ export default function InnovativeBusinessSolutions() {
               proven business processes to deliver unprecedented results
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
               <motion.div
                 key={index}
@@ -280,7 +277,6 @@ export default function InnovativeBusinessSolutions() {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -298,7 +294,6 @@ export default function InnovativeBusinessSolutions() {
               business operations
             </p>
           </motion.div>
-
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
@@ -321,7 +316,6 @@ export default function InnovativeBusinessSolutions() {
                     {category.description}
                   </p>
                 </div>
-
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
@@ -394,7 +388,6 @@ export default function InnovativeBusinessSolutions() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -412,7 +405,6 @@ export default function InnovativeBusinessSolutions() {
               operations with our innovative solutions
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -446,7 +438,6 @@ export default function InnovativeBusinessSolutions() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-teal-900/20 via-green-900/20 to-emerald-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
@@ -483,7 +474,7 @@ export default function InnovativeBusinessSolutions() {
           </motion.div>
         </div>
       </section>
-    </Layout>
+    </Layout>;
 );
 
   return (<Layout> <Head> <title>Innovative Business Solutions - Zion Tech Group</title> </Head> {

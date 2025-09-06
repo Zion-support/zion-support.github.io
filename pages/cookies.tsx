@@ -9,7 +9,7 @@ import {
   ArrowRight,
   CheckCircle,
   XCircle,
-  AlertTriangle
+  AlertTriangle;
 } from 'lucide-react';
 
 export default function CookiePolicyPage() {
@@ -17,7 +17,7 @@ export default function CookiePolicyPage() {
     necessary: true,
     analytics: false,
     marketing: false,
-    functional: false
+    functional: false;
   });
 
   const cookieTypes = [
@@ -78,7 +78,6 @@ export default function CookiePolicyPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -99,7 +98,6 @@ export default function CookiePolicyPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Cookie Management */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -118,7 +116,6 @@ export default function CookiePolicyPage() {
                 Some cookies are necessary for the website to function properly.
               </p>
             </motion.div>
-
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="space-y-6">
@@ -168,7 +165,6 @@ export default function CookiePolicyPage() {
                           )}
                         </div>
                       </div>
-                      
                       <div className="ml-9">
                         <h4 className="text-sm font-medium text-gray-900 mb-2">Examples:</h4>
                         <ul className="text-sm text-gray-600 space-y-1">
@@ -183,7 +179,6 @@ export default function CookiePolicyPage() {
                     </motion.div>
                   ))}
                 </div>
-
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">
                   <button
                     onClick={() => setCookiePreferences({
@@ -218,7 +213,6 @@ export default function CookiePolicyPage() {
             </div>
           </div>
         </section>
-
         {/* Cookie Information */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -237,7 +231,6 @@ export default function CookiePolicyPage() {
                 They help us provide you with a better experience and understand how you use our site.
               </p>
             </motion.div>
-
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <motion.div
@@ -270,7 +263,6 @@ export default function CookiePolicyPage() {
                     </li>
                   </ul>
                 </motion.div>
-
                 <motion.div
                   className="bg-gray-50 p-6 rounded-lg"
                   initial={{ opacity: 0, y: 30 }}
@@ -305,7 +297,6 @@ export default function CookiePolicyPage() {
             </div>
           </div>
         </section>
-
         {/* Contact Information */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -324,7 +315,6 @@ export default function CookiePolicyPage() {
                 please don't hesitate to contact us.
               </p>
             </motion.div>
-
             <div className="max-w-2xl mx-auto text-center">
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="space-y-4">
@@ -388,10 +378,10 @@ export default function CookiesPage() {
           </p>
         </div>
       </Layout>
-    </>
+    </>;
   );
 
- <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground> 
+ <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
       </div>
     </UltraAdvancedFuturisticBackground>
   )

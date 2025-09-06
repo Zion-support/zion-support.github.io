@@ -173,8 +173,8 @@ export function TalentOnboardingForm() {
     // Store the file in the form data
     form.setValue('basicInfo.profilePicture', file)
   }
-  // Handle CV upload
-  const handleCvUpload = async (file: File) => {
+  // Handle CV upload;
+  const handleCvUpload = async (file: File) => {;
     const fileName = `cv-${user?.id}-${Date.now()}`;    const { error: cvError } = await supabase.storage
       .from('resumes')
       .upload(fileName, file)

@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
-import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",
+import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
@@ -32,5 +32,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ config: state.config })
   }
 
-  return res.status(405).json({ error: "Method not allowed" })
+  return res.status(405).json({ error: "Method not allowed" });
 };

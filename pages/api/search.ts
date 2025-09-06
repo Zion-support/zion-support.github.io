@@ -4,7 +4,7 @@ import { parseQueryToFilters } from '../../utils/search/parser';
 import { searchAll, suggestDidYouMean } from '../../utils/search/filter';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
+  try {;
     const q = (req.query.q as string) || '';
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
     const parsed = await parseQueryToFilters(q);

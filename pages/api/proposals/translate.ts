@@ -3,7 +3,7 @@ import { OpenAI } from "openai";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
     const { markdown, targetLanguage = "en" } = req.body || {};

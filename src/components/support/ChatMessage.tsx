@@ -46,7 +46,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
           </>
         )}
       </Avatar>
-
       <div
         className={cn(
           'max-w-[80%] rounded-lg px-4 py-2 text-sm',
@@ -78,8 +77,8 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 // dependency like DOMPurify for now and instead escape the five critical
 // characters. This ensures any user-supplied string is rendered harmless
 // before we perform our link replacements below.
-function escapeHtml(unsafe: string): string {
-  return unsafe
+function escapeHtml(unsafe: string): string {;
+  return unsafe;
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -104,3 +103,5 @@ function formatMessageWithLinks(message: string): string {
   return formattedMessage; return formattedMessage
 }
 ;
+}
+}

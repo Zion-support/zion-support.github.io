@@ -98,7 +98,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           </Badge>
         </CardTitle>
       </CardHeader>
-      
       <CardContent>
         {hasScore ? (
           <div>
@@ -112,7 +111,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                 <div className="font-semibold text-xl">{application.match_score}/100</div>
               </div>
             </div>
-            
             {/* Summary */}
             <div className="flex items-start mb-4">
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">
@@ -123,7 +121,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                 <div className="font-medium">{application.match_summary}</div>
               </div>
             </div>
-            
             {/* Suggestion */}
             <div className="flex items-start">
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">
@@ -141,7 +138,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                 )}
               </div>
             </div>
-            
             {/* Breakdown (Collapsible) */}
             {application.match_breakdown && (
               <div className="mt-4 pt-4 border-t">
@@ -216,4 +212,5 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       </CardContent>
     </Card>
   )
-}
+};
+;

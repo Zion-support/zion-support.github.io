@@ -1,6 +1,6 @@
 
 import {ReactNode} from "react";
-export interface HelpArticle {
+export interface HelpArticle {;
   id: string;
   title: string;
   content: string;
@@ -8,7 +8,7 @@ export interface HelpArticle {
   tags: string[]
 }
 
-export interface HelpCategory {
+export interface HelpCategory {;
   id: string;
   name: string;
   description: string;
@@ -16,7 +16,7 @@ export interface HelpCategory {
   articles: HelpArticle[]
 }
 
-export interface SupportTicket {
+export interface SupportTicket {;
   id: string;
   userId: string;
   subject: string;

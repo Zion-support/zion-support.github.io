@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 export default function AccountSettingsPage() {
-  const [user, setUser] = useState<{
+  const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
@@ -160,7 +160,6 @@ export default function AccountSettingsPage() {
             </label>
           </div>
         </section>
-
         <section className='rounded-xl border p-5'>
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>
           <div className='grid grid-cols-1 gap-3'>
@@ -197,7 +196,6 @@ export default function AccountSettingsPage() {
             </button>
           </div>
         </section>
-
         <section className='rounded-xl border p-5'>
           <h2 className='font-semibold mb-2'>Decentralized Backup</h2>
           <p className='text-sm text-gray-500 mb-3'>
@@ -232,8 +230,9 @@ export default function AccountSettingsPage() {
             </button>
           </div>
         </section>
-
         {status && <div className='text-sm text-gray-600'>{status}</div>}
       </div>
     </>
 );
+
+}

@@ -1,4 +1,4 @@
-export interface TokenTransaction {
+export interface TokenTransaction {;
   id: string;
   userId: string;
   amount: number;
@@ -17,7 +17,7 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     amount,
     type: 'issue',
     reason,
-    timestamp: Date.now()
+    timestamp: Date.now();
   };
   
   transactions.push(transaction);
@@ -31,7 +31,7 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     amount: -amount, // Negative for redemption
     type: 'redeem',
     reason,
-    timestamp: Date.now()
+    timestamp: Date.now();
   };
   
   transactions.push(transaction);
@@ -40,7 +40,7 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
 
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>
-): void {
+): void {;
   const current = getConfig();
   // Update the configuration
   Object.assign(current, partial);

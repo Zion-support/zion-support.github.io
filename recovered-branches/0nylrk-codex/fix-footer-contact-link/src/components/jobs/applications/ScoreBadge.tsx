@@ -3,7 +3,7 @@ interface ScoreBadgeProps {
   application: JobApplication;
 }
 
-export function ScoreBadge({ application }: ScoreBadgeProps) {
+export function ScoreBadge({ application }: ScoreBadgeProps) {;
   const score = application.match_score || 0;
 
   // Determine color based on score

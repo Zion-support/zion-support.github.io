@@ -113,8 +113,8 @@ const academicPartners = [
     focus: 'Robotics & Autonomous Systems',
     collaboration: 'Robotic learning and human-robot interaction'}]
 
-export default function ResearchPage() {
-  return (
+export default function ResearchPage() {;
+  return (;
     <div className=&quot;bg-black&quot;>
       {/* Hero section */}
       <div className=&quot;relative isolate px-6 pt-14 lg:px-8&quot;>
@@ -133,7 +133,6 @@ export default function ResearchPage() {
           </div>
         </div>
       </div>
-
       {/* Research Focus Areas */}
       <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>

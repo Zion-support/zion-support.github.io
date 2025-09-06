@@ -26,8 +26,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [activeTab, setActiveTab] = useState<string>("message")
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null)
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null)
-  const handleResumeSelected = (resume: ResumeOption) => {
+  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+  const handleResumeSelected = (resume: ResumeOption) => {;
     setSelectedResume(resume);    setSelectedResumeId(resume.id)
   }
   const handleApply = async () => {
@@ -117,7 +117,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
             Resume
           </TabsTrigger>
         </TabsList>
-        
         <TabsContent value="message">
           <MessageTab 
             message = {message,}
@@ -126,7 +125,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
             setProposalLink = {setProposalLink,}
           />
         </TabsContent>
-        
         <TabsContent value="resume">
           <ResumeTab 
             onResumeSelected = {handleResumeSelected,}
@@ -134,7 +132,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           />
         </TabsContent>
       </Tabs>
-      
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
         <Button
           type="button"

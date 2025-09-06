@@ -1,6 +1,6 @@
 export interface PasswordStrengthResult {
   password: string,
-  score: number, // 0-100
+  score: number, // 0-100;
   strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
   feedback: string[];
   suggestions: string[];
@@ -19,7 +19,7 @@ export interface PasswordStrengthResult {
   warnings: string[]
 }
 
-export interface CommonPasswordData {
+export interface CommonPasswordData {;
   commonPasswords: Set<string>;
   commonWords: Set<string>,
   patterns: RegExp[]

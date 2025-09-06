@@ -6,7 +6,7 @@ import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
 import {
   Tooltip
   TooltipContent
-  TooltipProvider
+  TooltipProvider;
   TooltipTrigger} from "@/components/ui/tooltip"; import { useToast } from "@/hooks/use-toast"
 import { useAuth } from "@/hooks/useAuth"
 export function OnChainExport() {
@@ -32,6 +32,7 @@ export function OnChainExport() {
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0]
 }
-  )
-}
+  );
+};
 ;
+}

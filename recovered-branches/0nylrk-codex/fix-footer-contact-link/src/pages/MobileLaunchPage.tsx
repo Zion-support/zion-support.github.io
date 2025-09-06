@@ -18,19 +18,12 @@ const MobileLaunchPage: React.FC = () => {
         keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app"
         canonical="/mobile-launch"
       />
-      
       <MobileLaunchHero />
-      
       <MobileFeatureShowcase />
-      
       <QrCodeDownload />
-      
       <CommunityTrust />
-      
       <AppTestimonials />
-      
       <MobileEmailCapture />
-      
       <AppStoreBanner />
     </AppLayout>
   )

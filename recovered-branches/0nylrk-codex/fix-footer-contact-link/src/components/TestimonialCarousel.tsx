@@ -39,7 +39,6 @@ export function TestimonialCarousel() {
             Discover how Zion is transforming the tech and AI marketplace ecosystem
           </p>
         </div>
-        
         <div className="max-w-5xl mx-auto px-8">
           <Carousel
             opts={{
@@ -79,5 +78,5 @@ export function TestimonialCarousel() {
       </div>
     </section>
   )
-}
+};
 ;

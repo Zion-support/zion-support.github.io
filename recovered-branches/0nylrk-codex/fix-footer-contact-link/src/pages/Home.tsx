@@ -22,15 +22,10 @@ export default function Home() {
         canonical="https: //app.ziontechgroup.com/"
       />
       <Header />
-      
       <HeroSection />
-      
       <QuickAccess />
-      
       <FeatureCTAs />
-      
       <FeatureHighlights />
-      
       <CategoriesSection />
       <BenefitsSection />
       <HowItWorksSection />
@@ -40,3 +35,4 @@ export default function Home() {
     </div>
   )
 }
+;

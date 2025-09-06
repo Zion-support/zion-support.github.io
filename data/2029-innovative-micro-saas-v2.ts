@@ -1,4 +1,4 @@
-export interface InnovativeMicroSaasService2029V2 {
+export interface InnovativeMicroSaasService2029V2 {;
   id: string;
   name: string;
   tagline: string;
@@ -314,7 +314,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
         'Performance management',
         'Workforce planning',
       ],
-    },
+    },;
   ];    price: "$2,499/month";
     description: "Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.";
     features: [

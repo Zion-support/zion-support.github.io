@@ -59,7 +59,6 @@ export function Footer() {
               </a>
             </div>
           </div>
-
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">
               Marketplace
@@ -115,7 +114,6 @@ export function Footer() {
               </li>
             </ul>
           </div>
-
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
             <ul className="space-y-2">
@@ -169,7 +167,6 @@ export function Footer() {
               </li>
             </ul>
           </div>
-
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">
               Subscribe to our newsletter
@@ -181,7 +178,6 @@ export function Footer() {
             <NewsletterForm />
           </div>
         </div>
-
         <div className="mt-12 pt-8 border-t border-zion-blue-light">
           <div className="flex flex-col md: flex-row justify-between items-center">
             <p className="text-zion-slate text-sm">
@@ -205,6 +201,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </footer>;
   );
 }

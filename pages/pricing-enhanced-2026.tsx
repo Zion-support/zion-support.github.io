@@ -201,14 +201,12 @@ export default function PricingEnhanced2026Page() {
           <meta name="description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions." />
           <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />
           <link rel="icon" href="/favicon.svg" />
-          
           {/* Open Graph */}
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-          
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
@@ -230,7 +228,6 @@ export default function PricingEnhanced2026Page() {
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
-
             {/* Billing Cycle Toggle */}
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
@@ -250,7 +247,6 @@ export default function PricingEnhanced2026Page() {
                 Yearly <span className="text-cyan-400 text-sm">(Save 20%)</span>
               </span>
             </div>
-
             {/* Contact Information */}
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
@@ -271,7 +267,6 @@ export default function PricingEnhanced2026Page() {
             </div>
           </motion.div>
         </div>
-
         {/* Enhanced Pricing Tiers */}
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
@@ -302,10 +297,8 @@ export default function PricingEnhanced2026Page() {
                           {tier.icon}
                         </div>
                       </div>
-                      
                       <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                       <p className="text-gray-400 mb-6">{tier.description}</p>
-                      
                       <div className="mb-6">
                         <span className="text-4xl font-bold text-cyan-400">${tier.price}</span>
                         <span className="text-gray-400">{tier.period}</span>
@@ -313,7 +306,6 @@ export default function PricingEnhanced2026Page() {
                           <div className="text-sm text-green-400 mt-1">{tier.savings}</div>
                         )}
                       </div>
-                      
                       <ul className="text-left space-y-3 mb-8">
                         {tier.features.map((feature, idx) => (
                           <li key={idx} className="flex items-start">
@@ -322,7 +314,6 @@ export default function PricingEnhanced2026Page() {
                           </li>
                         ))}
                       </ul>
-                      
                                              <Button
                                                    variant="primary"
                          size="lg"
@@ -344,7 +335,6 @@ export default function PricingEnhanced2026Page() {
             </div>
           </div>
         </div>
-
         {/* Enhanced Service Categories */}
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
@@ -362,7 +352,6 @@ export default function PricingEnhanced2026Page() {
                 Explore our comprehensive service categories with transparent pricing and competitive advantages
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCategories.map((category, index) => (
                 <motion.div
@@ -380,14 +369,11 @@ export default function PricingEnhanced2026Page() {
                         </div>
                         <h3 className="text-xl font-bold text-white">{category.name}</h3>
                       </div>
-                      
                       <p className="text-gray-400 mb-4">{category.description}</p>
-                      
                       <div className="mb-4">
                         <span className="text-2xl font-bold text-cyan-400">{category.avgPrice}</span>
                         <div className="text-sm text-green-400">{category.savings}</div>
                       </div>
-                      
                       <ul className="space-y-2 mb-4">
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-300">
@@ -396,7 +382,6 @@ export default function PricingEnhanced2026Page() {
                           </li>
                         ))}
                       </ul>
-                      
                       <Button
                         variant="primary"
                         size="sm"
@@ -413,7 +398,6 @@ export default function PricingEnhanced2026Page() {
             </div>
           </div>
         </div>
-
         {/* Featured Services Showcase */}
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
@@ -431,7 +415,6 @@ export default function PricingEnhanced2026Page() {
                 Discover our most popular and innovative services that are transforming businesses worldwide
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {featuredServices.map((service, index) => (
                 <motion.div
@@ -450,10 +433,8 @@ export default function PricingEnhanced2026Page() {
                           <div className="text-sm text-gray-400">Starting price</div>
                         </div>
                       </div>
-                      
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-gray-400 mb-4">{service.description}</p>
-                      
                       <ul className="space-y-2 mb-4">
                         {service.features.map((feature, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-300">
@@ -462,7 +443,6 @@ export default function PricingEnhanced2026Page() {
                           </li>
                         ))}
                       </ul>
-                      
                       <div className="flex space-x-2">
                         <Button
                           variant="primary"
@@ -488,7 +468,6 @@ export default function PricingEnhanced2026Page() {
             </div>
           </div>
         </div>
-
         {/* Enhanced Footer CTA */}
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
           <div className="max-w-4xl mx-auto">
@@ -532,5 +511,5 @@ export default function PricingEnhanced2026Page() {
         </div>
       </div>
     </UltraFuturisticBackground>
-  )
+  );
 };

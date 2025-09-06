@@ -4,7 +4,7 @@ import { getFraudStore } from "../../../../utils/fraud/store";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+) {;
   const store = getFraudStore();
 
   if (req.method === "GET") {

@@ -20,14 +20,12 @@ export const MobileAppHero: React.FC = () => {
             <p className="text-lg md:text-xl opacity-90 mb-8">
               Find top AI talent or global IT jobs on the go. The power of Zion's AI matching, now available on your mobile device.
             </p>
-            
             <div className="mb-8">
               <AppStoreButtons 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
             </div>
-            
             <Link to="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
                 Open App
@@ -35,7 +33,6 @@ export const MobileAppHero: React.FC = () => {
               </Button>
             </Link>
           </div>
-          
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
@@ -46,5 +43,5 @@ export const MobileAppHero: React.FC = () => {
         </div>
       </div>
     </section>
-  )
+  );
 };

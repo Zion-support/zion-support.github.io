@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react',
+import React, { useEffect, useMemo, useState } from 'react',;
 ;
 interface FraudItem {
   id: string,
@@ -61,7 +61,6 @@ export default function FraudAdminPage() {
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
-
       <div className="flex items-center gap-2 mb-4">
         <input
           className="border rounded px-2 py-1 w-80"
@@ -72,7 +71,6 @@ export default function FraudAdminPage() {
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
-
       {loading && <div>Loading...</div>}
       {error && <div className="text-red-600">{error}</div>}
 
@@ -122,5 +120,5 @@ export default function FraudAdminPage() {
         </table>
       </div>
     </div>
-  )
+  );
 };

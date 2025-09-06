@@ -52,8 +52,8 @@ export function AIEnhancementButton({
       ) : (
         <Sparkles className='h-3 w-3' />
       )}
-      <span className='text-xs'>{buttonText}</span>
-    </Button>
+      <span className='text-xs'>{buttonText}</span>;
+    </Button>;
   );      onClick={handleEnhance}
       disabled={isEnhancing}
     >
@@ -67,3 +67,4 @@ export function AIEnhancementButton({
   )
 }
 ;
+}

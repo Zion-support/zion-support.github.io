@@ -49,10 +49,10 @@ import {
   Bot,
   ChevronRight as ChevronRightIcon,
   Eye,
-  FlaskConical,
+  FlaskConical,;
   Link as LinkIcon,;
 import Button from '../ui/Button';
-export default function NeoFuturisticNavigation() {
+export default function NeoFuturisticNavigation() {;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -445,7 +445,6 @@ export default function NeoFuturisticNavigation() {
               </div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
             {/* Services Dropdown */}
@@ -521,7 +520,6 @@ export default function NeoFuturisticNavigation() {
                 </div>
               )}
             </div>
-
             {/* Direct Links */}
             <Link
               href='/it-services'
@@ -607,7 +605,6 @@ export default function NeoFuturisticNavigation() {
             >
               Resources
             </Link>
-
             {/* Popular Dropdown */}
             <div className='relative group'>
               <button
@@ -636,7 +633,6 @@ export default function NeoFuturisticNavigation() {
                 </div>
               )}
             </div>
-
             {/* New Dropdown */}
             <div className='relative group'>
               <button
@@ -671,7 +667,6 @@ export default function NeoFuturisticNavigation() {
               )}
             </div>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors'
@@ -681,7 +676,6 @@ export default function NeoFuturisticNavigation() {
           </button>
         </div>
       </div>
-
       {/* Mobile Menu */}
       {isOpen && (
         <div className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50'>
@@ -698,7 +692,6 @@ export default function NeoFuturisticNavigation() {
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
                   />
                 </button>
-
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -740,7 +733,6 @@ export default function NeoFuturisticNavigation() {
                   </div>
                 )}
               </div>
-
               {/* Company Section */}
               <div>
                 <button
@@ -752,7 +744,6 @@ export default function NeoFuturisticNavigation() {
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-company' ? 'rotate-90' : ''}`}
                   />
                 </button>
-
                 {activeDropdown === 'mobile-company' && (
                   <div className='ml-4 space-y-3'>
                     {companyInfo.map((item, index) => (
@@ -768,7 +759,6 @@ export default function NeoFuturisticNavigation() {
                   </div>
                 )}
               </div>
-
               {/* Resources Section */}
               <div>
                 <button
@@ -780,7 +770,6 @@ export default function NeoFuturisticNavigation() {
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}
                   />
                 </button>
-
                 {activeDropdown === 'mobile-resources' && (
                   <div className='ml-4 space-y-3'>
                     {resources.map((item, index) => (
@@ -796,7 +785,6 @@ export default function NeoFuturisticNavigation() {
                   </div>
                 )}
               </div>
-
               {/* Contact Info */}
               <div className='pt-6 border-t border-gray-700/50'>
                 <div className='text-white font-semibold mb-4'>
@@ -822,7 +810,6 @@ export default function NeoFuturisticNavigation() {
                     <span className='text-gray-300'>{contactInfo.website}</span>
                   </div>
                 </div>
-
                 <div className='mt-6 space-y-3'>
                   <Button
                     href='/services'

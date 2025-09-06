@@ -15,8 +15,8 @@ import {
   Cloud,
   ArrowRight,
   Star,
-  Check,
-  ExternalLink,;} from 'lucide-react';import { 
+  Check,;
+  ExternalLink,;} from 'lucide-react';import { ;
   Zap;
   Shield, 
   BarChart3, 
@@ -272,7 +272,7 @@ export default function SaaSMarketplacePage() {
         'Git integration',
       ],
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
-    },
+    },;
   ];
 
   const categories = [
@@ -314,7 +314,6 @@ export default function SaaSMarketplacePage() {
           content='Curated selection of the best micro SaaS services for modern businesses.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         <div className='absolute inset-0'>
@@ -322,9 +321,7 @@ export default function SaaSMarketplacePage() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.06),transparent_50%)]' />
         </div>
-
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <div className='mb-20 animate-fade-in'>
             <div className='mb-8'>
@@ -333,7 +330,6 @@ export default function SaaSMarketplacePage() {
                 Curated SaaS Solutions
               </div>
             </div>
-
             <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
               SaaS Marketplace
             </h1>
@@ -342,7 +338,6 @@ export default function SaaSMarketplacePage() {
               businesses. Hand-picked tools for automation, productivity, and
               growth.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               <Button
                 href='#services'
@@ -366,7 +361,6 @@ export default function SaaSMarketplacePage() {
               </Button>
             </div>
           </div>
-
           {/* Stats */}
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
@@ -419,7 +413,6 @@ export default function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -442,7 +435,6 @@ export default function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section id='services' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -457,7 +449,6 @@ export default function SaaSMarketplacePage() {
                 : `Discover the best ${selectedCategory.toLowerCase()} tools to streamline your business operations.`}
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => (
               <Card
@@ -485,7 +476,6 @@ export default function SaaSMarketplacePage() {
                         </span>
                       </div>
                     </div>
-
                     <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>
                       <span className='px-2 py-1 bg-gray-800 rounded-full'>
                         {service.category}
@@ -493,11 +483,9 @@ export default function SaaSMarketplacePage() {
                       <span>{service.users} users</span>
                       <span className='text-green-400'>{service.pricing}</span>
                     </div>
-
                     <p className='text-gray-400 leading-relaxed mb-4'>
                       {service.description}
                     </p>
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -516,7 +504,6 @@ export default function SaaSMarketplacePage() {
                           ))}
                       </div>
                     </div>
-
                     <div className='flex items-center justify-between'>
                       <Button
                         href={service.website}
@@ -527,14 +514,13 @@ export default function SaaSMarketplacePage() {
                         Visit Website
                         <ExternalLink className='w-4 h-4 ml-2' />
                       </Button>
-
                       <div className='text-right'>
                         <div className='text-xs text-gray-500 mb-1'>
                           Use Case:
                         </div>
                         <div className='text-sm text-gray-300 max-w-xs'>
                           {service.useCase}
-                        </div>                      </div>                      
+                        </div>                      </div>
                       <div className="text-right">
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>
                         <div className="text-sm text-gray-300 max-w-xs">{service.useCase}</div>
@@ -546,7 +532,6 @@ export default function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -583,4 +568,7 @@ export default function SaaSMarketplacePage() {
       </section>
     </>
 );
+}
+
+}
 }

@@ -4,7 +4,7 @@ import {
   RoomEvent,
   RemoteParticipant,
   LocalParticipant,
-  createLocalTracks,
+  createLocalTracks,;
   VideoPresets,;
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
@@ -32,7 +32,7 @@ export default function CallRoom({
   token,
   startMode,
   onLeave,
-}: Props) {
+}: Props) {;
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<
     Array<RemoteParticipant | LocalParticipant>
@@ -51,7 +51,7 @@ type Props = {
   onLeave?: (durationSec: number) => void
 };
 
-export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
+export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
@@ -155,11 +155,9 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
           <p className='text-xs text-gray-400'>Room {roomName}</p>
         </div>
         <Controls room={room} onLeave={handleLeave} accent='cyan' />      </div>
-
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (        <Controls room={room} onLeave={handleLeave} accent="cyan" />
       </div>
-
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (
           <ParticipantTile

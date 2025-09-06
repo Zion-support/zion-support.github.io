@@ -37,7 +37,7 @@ const ReviewSubmitPage: NextPage<Props> = ({
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const { projectId } = ctx.query as { projectId: string };
   const { role, fromId } = ctx.query as {
     role?: "client" | "talent";

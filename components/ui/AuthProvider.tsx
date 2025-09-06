@@ -45,11 +45,11 @@ const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: ()
     </AuthContext.Provider>
   );
 
-export function useAuth() {
+export function useAuth() {;
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
   )
 }
 
-export function useAuth() {
+export function useAuth() {;
 return useContext(AuthContext);
 }

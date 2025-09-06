@@ -16,11 +16,11 @@ import {
   ArrowRight,
   Star,
   Phone,
-  Mail,
+  Mail,;
   MapPin,;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
-  TrendingUp, Brain, Shield, Zap, Target, 
+  TrendingUp, Brain, Shield, Zap, Target, ;
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
 } from 'lucide-react';
@@ -124,35 +124,29 @@ export default function QuantumTradingAlgorithm() {
           content='https://ziontechgroup.com/quantum-trading-algorithm'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'></div>
-
         {/* Background Elements */}
         <div className='absolute inset-0 overflow-hidden pointer-events-none'>
           <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse'></div>
           <div className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
           <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>
         </div>
-
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'      </Head>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black"></div>
-        
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
-
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -190,7 +184,6 @@ export default function QuantumTradingAlgorithm() {
               Advanced algorithmic trading platform leveraging quantum computing principles for ultra-fast market analysis and predictive trading strategies.
             </p>
           </motion.div>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -227,7 +220,6 @@ export default function QuantumTradingAlgorithm() {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-slate-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-slate-900">
@@ -247,7 +239,6 @@ export default function QuantumTradingAlgorithm() {
               computing integration and AI-powered market analysis.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {features.map((feature, index) => (          >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Revolutionary Trading Technology
@@ -256,7 +247,6 @@ export default function QuantumTradingAlgorithm() {
               Experience the future of algorithmic trading with quantum computing integration and AI-powered market analysis.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -282,7 +272,6 @@ export default function QuantumTradingAlgorithm() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section id="pricing" className="py-20 bg-black">
@@ -302,7 +291,6 @@ export default function QuantumTradingAlgorithm() {
               individual investors to institutional clients.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (          >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Choose Your Plan
@@ -311,7 +299,6 @@ export default function QuantumTradingAlgorithm() {
               Flexible pricing options designed for traders of all levels, from individual investors to institutional clients.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
@@ -355,7 +342,6 @@ export default function QuantumTradingAlgorithm() {
                     </span>
                   </div>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -366,7 +352,6 @@ export default function QuantumTradingAlgorithm() {
                     <span className="text-lg text-gray-400 font-normal">/{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -375,7 +360,6 @@ export default function QuantumTradingAlgorithm() {
                     </li>
                   ))}
                 </ul>
-
                 <button className='w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300'>                  Get Started                <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
                   Get Started
                 </button>
@@ -384,7 +368,6 @@ export default function QuantumTradingAlgorithm() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section
         id='contact'
@@ -407,7 +390,6 @@ export default function QuantumTradingAlgorithm() {
               Pro can revolutionize your trading strategy.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Trading?
@@ -416,7 +398,6 @@ export default function QuantumTradingAlgorithm() {
               Contact our team to learn more about how Quantum Trading Algorithm Pro can revolutionize your trading strategy.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -436,7 +417,6 @@ export default function QuantumTradingAlgorithm() {
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -455,7 +435,6 @@ export default function QuantumTradingAlgorithm() {
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -477,6 +456,6 @@ export default function QuantumTradingAlgorithm() {
           </div>
         </div>
       </section>
-    </Layout>
+    </Layout>;
 );
 }

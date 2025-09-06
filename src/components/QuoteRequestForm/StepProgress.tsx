@@ -3,7 +3,7 @@ import { CheckIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
-export function StepProgress({ currentStep }: StepProgressProps) {
+export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps; label: string }[] = [
     { id: 'service', label: 'Service' },
     { id: 'details', label: 'Details' },
@@ -41,7 +41,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           }}
         />
       </div>
-
       <div className='flex justify-between relative'>
         {steps.map(step => {
           const status = getStepStatus(step.id)
@@ -94,7 +93,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
   )
   (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 
 }%` 
-}/> </div> 
+}/> </div>
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps.findIndex (s => s.id === step.id) + 1 
 }</span>) 

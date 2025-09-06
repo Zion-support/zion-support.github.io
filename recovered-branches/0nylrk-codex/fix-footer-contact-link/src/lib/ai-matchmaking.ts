@@ -1,7 +1,7 @@
 
 // AI Matchmaking utility functions
 
-export interface MatchResultItem {
+export interface MatchResultItem {;
   id: string;
   title: string;
   description: string;
@@ -11,7 +11,7 @@ export interface MatchResultItem {
   image?: string
 }
 
-export interface MatchResult {
+export interface MatchResult {;
   item: MatchResultItem;
   score: number;
   matchedSkills: string[],
@@ -47,7 +47,7 @@ const sampleData: MatchResultItem[] = [
 ];
 
 // Function to find matches based on query and type
-export async function findMatches(
+export async function findMatches(;
   query: string;
   type: string = "",
   limit: number = 5

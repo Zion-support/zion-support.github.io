@@ -132,7 +132,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
     customers: 18,
     rating: 4.5,
     reviews: 9,
-  },
+  },;
 ];	{
 		id: 'ai-redteam-evaluator';
 		name: 'AI Red‑Team Evaluator';

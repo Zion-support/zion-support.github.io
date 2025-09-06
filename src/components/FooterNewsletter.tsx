@@ -16,8 +16,8 @@ export function FooterNewsletter(): React.ReactElement {
       // console.error('Newsletter subscription failed:', error)} finally {
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   const lastSubmit = useRef(0)
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault();
     if (honeypot) return; // ignore bots
     const now = Date.now()
     if (now - lastSubmit.current < 1000) return

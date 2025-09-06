@@ -27,7 +27,7 @@ export default function TalentGrid({ region, service }: Props) {
       TALENT_PROFILES.filter(
         (p) => matchesRegion(p, region) && matchesService(p, service),
       ),
-    [region, service],
+    [region, service],;
   );
 
   if (items.length === 0) {

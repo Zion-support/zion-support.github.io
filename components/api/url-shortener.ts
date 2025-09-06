@@ -54,7 +54,7 @@ export default async function handler(
 ) {
   if (req.method === 'POST') {
     // Create short URL
-    try {
+    try {;
       const { originalUrl, customCode }: UrlShortenerRequest = req.body;
 
       if (!originalUrl) {
@@ -155,9 +155,9 @@ export default async function handler(
 // Handle redirects for short URLs
 export async function getServerSideProps({
   params,
-}: {
+}: {;
   params: { shortCode: string };
-}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
 

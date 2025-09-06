@@ -1,4 +1,4 @@
-export interface EmergingTechService {
+export interface EmergingTechService {;
   id: string;
   name: string;
   tagline: string;
@@ -441,7 +441,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     reviews: 65,
     marketSize: '$35B autonomous vehicle market',
     growthRate: '75% annually',
-  },
+  },;
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
     ];
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];

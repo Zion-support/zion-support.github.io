@@ -766,7 +766,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       customers: 75,
       rating: 4.8,
       reviews: 45,
-    },
+    },;
   ];    features: [
       'AI project planningResource optimizationRisk assessmentPerformance trackingAutomated reportingTeam collaborationTimeline optimizationBudget management';
       'Integration capabilitiesCustom dashboards'

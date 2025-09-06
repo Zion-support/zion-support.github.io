@@ -13,7 +13,7 @@ export default function SitemapPage() {
     { name: "Services Advertising", href: "/services-advertising" },
     { name: "Resources", href: "/resources" },
     { name: "Support", href: "/support" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/contact" },;
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">

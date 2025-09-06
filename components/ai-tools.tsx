@@ -13,8 +13,8 @@ import {
   Star,
   ExternalLink,
   CheckCircle,
-  TrendingUp,
-  Shield,;} from 'lucide-react';import { 
+  TrendingUp,;
+  Shield,;} from 'lucide-react';import { ;
   Brain;
   MessageSquare, 
   Image, 
@@ -40,7 +40,7 @@ export default function AiToolsPage() {
         'Plugin ecosystem access',
         'Code generation & debugging',
         'Professional writing assistance',
-      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
+      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
       ];
       pricing: '$20/month',
       marketPrice: '$20/month',
@@ -305,13 +305,11 @@ export default function AiToolsPage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>
             <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />
@@ -324,13 +322,11 @@ export default function AiToolsPage() {
             Curated AI tools and services that actually work. Each tool has been
             tested and verified to provide real value for professionals and
             businesses. No hype - just results.          </p>      </Head>
-
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
         <div className="absolute inset-0 bg-grid opacity-10" />
-        
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
             <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
@@ -345,7 +341,6 @@ export default function AiToolsPage() {
           </p>
         </div>
       </section>
-
       {/* AI Market Statistics */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -357,7 +352,6 @@ export default function AiToolsPage() {
               about which tools to invest in.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>
             {aiMarketStats.map((stat, index) => (
               <Card
@@ -385,7 +379,6 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
-
       {/* AI Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -398,14 +391,12 @@ export default function AiToolsPage() {
               reliability, and real-world value.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {aiTools.map((tool, index) => (              Curated AI Tools & Services
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each tool has been carefully selected based on performance, reliability, and real-world value.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {aiTools.map((tool, index) => (
               <Card
@@ -437,7 +428,6 @@ export default function AiToolsPage() {
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
                     />
                   </div>
-
                   <div className='flex-1'>
                     <div className='flex items-center justify-between mb-2'>
                       <h3 className={`text-2xl font-bold ${tool.textColor}`}>
@@ -447,11 +437,9 @@ export default function AiToolsPage() {
                         {tool.category}
                       </span>
                     </div>
-
                     <p className='text-gray-400 leading-relaxed mb-6'>
                       {tool.description}
                     </p>
-
                     <div className='mb-6'>
                       <div className='flex items-center justify-between mb-3'>
                         <span className='text-sm text-gray-500'>
@@ -470,7 +458,6 @@ export default function AiToolsPage() {
                         </span>
                       </div>
                     </div>
-
                     <ul className='space-y-2 mb-6'>
                       {tool.features.map((feature, featureIndex) => (
                         <li
@@ -481,7 +468,6 @@ export default function AiToolsPage() {
                     </div>
                     <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
                   </div>
-                  
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className={`text-2xl font-bold ${tool.textColor}`}>
@@ -491,11 +477,9 @@ export default function AiToolsPage() {
                         {tool.category}
                       </span>
                     </div>
-                    
                     <p className="text-gray-400 leading-relaxed mb-6">
                       {tool.description}
                     </p>
-                    
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-sm text-gray-500">Service Price:</span>
@@ -506,7 +490,6 @@ export default function AiToolsPage() {
                         <span className="text-sm text-gray-400">{tool.marketPrice}</span>
                       </div>
                     </div>
-
                     <ul className="space-y-2 mb-6">
                       {tool.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
@@ -515,7 +498,6 @@ export default function AiToolsPage() {
                         </li>
                       ))}
                     </ul>
-
                     <div className='flex items-center justify-between'>
                       <Button
                         href={tool.website}
@@ -551,7 +533,6 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
-
       {/* AI Categories Overview */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -563,7 +544,6 @@ export default function AiToolsPage() {
               comprehensive toolkit for your needs.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {aiCategories.map((category, index) => (
               <Card
@@ -595,7 +575,6 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
-
       {/* AI Implementation Guide */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -608,7 +587,6 @@ export default function AiToolsPage() {
               maximizing their value.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             <Card className='card-hover border-gradient-blue'>
               <div className='p-6'>
@@ -628,7 +606,6 @@ export default function AiToolsPage() {
               Practical advice for implementing AI tools in your workflow and maximizing their value.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="card-hover border-gradient-blue">
               <div className="p-6">
@@ -646,7 +623,6 @@ export default function AiToolsPage() {
                 </ul>
               </div>
             </Card>
-
             <Card className='card-hover border-gradient-blue'>
               <div className='p-6'>
                 <div className='w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -674,7 +650,6 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>

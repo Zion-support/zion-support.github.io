@@ -280,7 +280,7 @@ export const verifyPolyfills = () => {
   return Object.values(checks).every(Boolean)
 }
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {'
-  //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {
+  //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
 export default {}; // Ensure this can be imported as a module
   
 }, // Ensure this can be imported as a module'"
@@ -290,3 +290,10 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 export default {}, // Ensure this can be imported as a module
+;
+}
+}
+}
+}
+}
+}

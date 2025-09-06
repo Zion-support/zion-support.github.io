@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { PerformanceMetrics } from "../types";
 
-export function usePerformanceMetrics() {
+export function usePerformanceMetrics() {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
 

@@ -6,7 +6,7 @@ import {
   Server,
   Lock,
   Brain,
-  Cloud
+  Cloud;
 } from 'lucide-react';
 
 const apiEndpoints = [
@@ -48,14 +48,12 @@ export default function APIDocsPage() {
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />
         <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />
       </Head>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
           <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
         </div>
-        
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -73,7 +71,6 @@ export default function APIDocsPage() {
           </motion.div>
         </div>
       </section>
-
       {/* API Endpoints Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -89,9 +86,8 @@ export default function APIDocsPage() {
               Explore our comprehensive API endpoints for seamless integration with our services.
             </p>
           </motion.div>
-          
           <div className="grid md:grid-cols-2 gap-8">
-            {apiEndpoints.map((endpoint, index) => {
+            {apiEndpoints.map((endpoint, index) => {;
               const IconComponent = endpoint.icon;
               return (
                 <motion.div
@@ -111,9 +107,7 @@ export default function APIDocsPage() {
                       <code className="text-sm text-blue-600">{endpoint.endpoint}</code>
                     </div>
                   </div>
-
                   <p className="text-gray-600 mb-4">{endpoint.description}</p>
-
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Supported Methods:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -124,7 +118,6 @@ export default function APIDocsPage() {
                       ))}
                     </div>
                   </div>
-
                   <Link
                     href={`/api-docs/${endpoint.endpoint.replace('/api/', '')}`}
                     className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors"
@@ -138,7 +131,6 @@ export default function APIDocsPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -176,8 +168,10 @@ export default function ApiDocsPage() {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
       </div>
-    </Layout>
+    </Layout>;
 );
     </>
   )
+}
+
 }

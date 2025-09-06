@@ -22,4 +22,4 @@ export default function AIAutonomousBusinessOperations() {
 			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
 		/>
 	)
-}
+};

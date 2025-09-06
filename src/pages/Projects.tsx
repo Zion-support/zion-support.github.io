@@ -86,6 +86,8 @@ export default function Projects() {
   return <ProjectsContent /> }
 
 export default function Projects() {
-  return <ProjectsContent />
-}
+  return <ProjectsContent />;
+};
 ;
+}
+}

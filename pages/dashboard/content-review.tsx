@@ -5,7 +5,7 @@ import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
   const cookies = (req.headers.cookie || '').split(';').reduce(
     (acc: any, part: string) => {
       const [k, v] = part.trim().split('=');
@@ -24,7 +24,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
 };
 
 export default function ContentReviewPage() {
-  const [filters, setFilters] = useState<{
+  const [filters, setFilters] = useState<{;
     status?: string;
     reason?: string;
     userEmail?: string;
@@ -176,7 +176,6 @@ export default function ContentReviewPage() {
           </table>
         </div>
       </div>
-
       {selected && (
         <ModerationModal
           flag={selected}
@@ -186,3 +185,5 @@ export default function ContentReviewPage() {
       )}
     </EnhancedLayout>
 );
+
+}

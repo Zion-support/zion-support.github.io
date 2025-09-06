@@ -45,7 +45,7 @@ interface EnhancedProfile {
 }
 
 export function TalentRegistrationForm() {
-  // Remove the useToast() hook since we're importing the toast function directly
+  // Remove the useToast() hook since we're importing the toast function directly;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [skillTags, setSkillTags] = useState<string[]>([]);
@@ -333,7 +333,6 @@ export function TalentRegistrationForm() {
             Showcase your skills and experience to potential clients and employers.
           </CardDescription>
         </CardHeader>
-
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <CardContent className="space-y-8">
@@ -363,7 +362,6 @@ export function TalentRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -386,7 +384,6 @@ export function TalentRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -409,7 +406,6 @@ export function TalentRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -433,7 +429,6 @@ export function TalentRegistrationForm() {
                     />
                   </div>
                 </div>
-                
                 {/* Upload Avatar */}
                 <div className="space-y-2">
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>
@@ -453,7 +448,6 @@ export function TalentRegistrationForm() {
                         </div>
                       )}
                     </div>
-
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4" />
                       <span>Upload Photo</span>
@@ -470,9 +464,7 @@ export function TalentRegistrationForm() {
                   </p>
                 </div>
               </div>
-
               <Separator className="bg-zion-blue-light/50" />
-
               {/* Bio Section */}
               <div className="space-y-4">
                 <h3 className="text-lg font-medium text-white">Professional Bio</h3>
@@ -555,13 +547,11 @@ export function TalentRegistrationForm() {
                         <Check className="mr-1 h-3 w-3" /> Apply
                       </Button>
                     </div>
-                    
                     <div className="space-y-4">
                       <div>
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>
                         <p className="text-zion-slate italic">{generatedContent.summary}</p>
                       </div>
-                      
                       {generatedContent.categorizedSkills && (
                         <div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>
@@ -592,9 +582,7 @@ export function TalentRegistrationForm() {
                   </div>
                 )}
               </div>
-
               <Separator className="bg-zion-blue-light/50" />
-
               {/* Skills and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Skills Section */}
@@ -653,7 +641,6 @@ export function TalentRegistrationForm() {
                     )}
                   </div>
                 </div>
-
                 {/* Availability Section */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Availability</h3>
@@ -679,7 +666,6 @@ export function TalentRegistrationForm() {
                                 Available Now
                               </label>
                             </div>
-
                             <div className="flex items-center space-x-2">
                               <input
                                 type="radio"
@@ -694,7 +680,6 @@ export function TalentRegistrationForm() {
                                 Limited Availability
                               </label>
                             </div>
-
                             <div className="flex items-center space-x-2">
                               <input
                                 type="radio"
@@ -729,7 +714,6 @@ export function TalentRegistrationForm() {
                 </div>
               </div>
             </CardContent>
-
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
                 <Button

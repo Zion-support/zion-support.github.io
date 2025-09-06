@@ -378,7 +378,6 @@ const UltraFuturisticBackground2035: React.FC<
             ease: 'easeInOut',
           }}
         />
-
         {/* Holographic scan lines */}
         <div className='absolute inset-0 opacity-20'>
           {[...Array(20)].map((_, i) => (
@@ -393,7 +392,6 @@ const UltraFuturisticBackground2035: React.FC<
                 opacity: [0, 1, 0],
                 scaleX: [0, 1, 0],              }}          }}
         />
-        
         {/* Holographic scan lines */}
         <div className="absolute inset-0 opacity-20">
           {[...Array(20)].map((_, i) => (

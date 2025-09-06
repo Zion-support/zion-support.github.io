@@ -18,7 +18,6 @@ export default function Revolutionary2026ServicesPage() {
           content='AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -37,7 +36,6 @@ export default function Revolutionary2026ServicesPage() {
           property='og:image'
           content='https://ziontechgroup.com/og-image-revolutionary-2026.jpg'
         />
-
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -52,7 +50,6 @@ export default function Revolutionary2026ServicesPage() {
           name='twitter:image'
           content='https://ziontechgroup.com/og-image-revolutionary-2026.jpg'
         />
-
         {/* Additional Meta */}
         <meta name='robots' content='index, follow' />
         <meta name='author' content='Zion Tech Group' />
@@ -62,7 +59,6 @@ export default function Revolutionary2026ServicesPage() {
           name='address'
           content='364 E Main St STE 1008 Middletown DE 19709'
         />
-
         {/* Structured Data */}
         <script
           type='application/ld+json'
@@ -93,21 +89,16 @@ export default function Revolutionary2026ServicesPage() {
             }),          }}
         />
       </Head>
-
       <main className='min-h-screen bg-gray-900'>
         {/* Navigation */}
         <Revolutionary2026UltimateNavigation />
-
         {/* Hero Section */}
         <Revolutionary2026UltimateHero />
-
         {/* Services Showcase */}
         <Revolutionary2026UltimateServicesShowcase />
-
         {/* Additional Content Sections */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>
-
           <div className='max-w-7xl mx-auto relative z-10'>
             {/* Why Choose Zion Tech Group */}
             <div className='text-center mb-16'>
@@ -121,7 +112,6 @@ export default function Revolutionary2026ServicesPage() {
                 future of AI, quantum computing, and emerging technologies,
                 delivering revolutionary solutions that transform industries.              </p>
             </div>
-
             {/* Features Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {[
                 {
@@ -183,7 +173,6 @@ export default function Revolutionary2026ServicesPage() {
                 </div>
               ))}
             </div>
-
             {/* Call to Action */}
             <div className='text-center'>
               <div className='bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20'>
@@ -215,5 +204,7 @@ export default function Revolutionary2026ServicesPage() {
           </div>
         </section>
       </main>
-    </>
+    </>;
   );
+
+}

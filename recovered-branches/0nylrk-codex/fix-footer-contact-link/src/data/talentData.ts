@@ -456,6 +456,6 @@ title: 'Cancer Treatment Response Prediction',
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
       },
     ],
-  },
+  },;
 ];
 }];

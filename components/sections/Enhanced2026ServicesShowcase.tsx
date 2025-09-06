@@ -11,7 +11,7 @@ import {
   TrendingUp,
   Globe,
   Cpu,
-  Lock,
+  Lock,;
   Cloud,;
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
@@ -180,7 +180,6 @@ const Enhanced2026ServicesShowcase = () => {
     <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
       {/* Background Effects */}
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>
-
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}  ];
 
   const categories = [
@@ -194,7 +193,6 @@ const Enhanced2026ServicesShowcase = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>
-      
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
@@ -221,7 +219,6 @@ const Enhanced2026ServicesShowcase = () => {
             Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business
           </p>
         </motion.div>
-
         {/* Category Overview */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -259,7 +256,6 @@ const Enhanced2026ServicesShowcase = () => {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Featured Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredServices.map((service, index) => (
@@ -289,11 +285,9 @@ const Enhanced2026ServicesShowcase = () => {
                     </h3>
                     <p className='text-gray-400 text-sm'>{service.category}</p>                  </div>
                 </div>
-
                 {/* Description */}
                 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                  {service.description}
                 </p>
-
                 {/* Features */}            >
               <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
@@ -307,12 +301,10 @@ const Enhanced2026ServicesShowcase = () => {
                     <p className="text-gray-400 text-sm">{service.category}</p>
                   </div>
                 </div>
-
                 {/* Description */}
                 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                   {service.description}
                 </p>
-
                 {/* Features */}
                 <div className='mb-4'>
                   <ul className='space-y-1'>
@@ -330,7 +322,6 @@ const Enhanced2026ServicesShowcase = () => {
                     ))}
                   </ul>
                 </div>
-
                 {/* Price and CTA */}
                 <div className='flex items-center justify-between'>
                   <div>
@@ -360,7 +351,6 @@ const Enhanced2026ServicesShowcase = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -428,3 +418,6 @@ export default Enhanced2026ServicesShowcase;  )
 };
 
 export default Enhanced2026ServicesShowcase;
+
+}
+}

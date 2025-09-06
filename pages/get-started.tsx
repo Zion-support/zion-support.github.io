@@ -15,10 +15,10 @@ import {
   FileText,
   Video,
   Code,
-  Globe,
+  Globe,;
   Building,;} from 'lucide-react';
 
-export default function GetStarted() {
+export default function GetStarted() {;
   const [selectedPath, setSelectedPath] = useState<string>('');
   const [currentStep, setCurrentStep] = useState(1);
 
@@ -206,7 +206,6 @@ export default function GetStarted() {
           </motion.div>
         </div>
       </section>
-
       {/* Onboarding Steps */}
       <section className='py-20'>
         <div className='container mx-auto px-4'>          <motion.div
@@ -222,7 +221,6 @@ export default function GetStarted() {
               From initial consultation to full implementation
             </p>
           </motion.div>
-
           <div className='grid md:grid-cols-4 gap-8'>            {onboardingSteps.map((step, index) => (
               <motion.div
                 key={step.step}
@@ -249,7 +247,6 @@ export default function GetStarted() {
           </div>
         </div>
       </section>
-
       {/* Technology Paths */}
       {currentStep === 1 && (
         <section className='py-20 bg-gradient-to-r from-gray-900/50 to-black'>
@@ -266,7 +263,6 @@ export default function GetStarted() {
                 Select the area that best aligns with your business goals
               </p>
             </motion.div>
-
             <div className='grid lg:grid-cols-2 gap-8'>              {technologyPaths.map((path, index) => (
                 <motion.div
                   key={path.id}
@@ -288,7 +284,6 @@ export default function GetStarted() {
                         </p>
                       </div>
                     </div>
-
                     <div className='grid md:grid-cols-2 gap-6 mb-6'>
                       <div>
                         <h4 className='text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3'>
@@ -305,7 +300,6 @@ export default function GetStarted() {
                           ))}
                         </ul>
                       </div>
-
                       <div>
                         <h4 className='text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3'>
                           Use Cases
@@ -321,7 +315,6 @@ export default function GetStarted() {
                         </div>
                       </div>
                     </div>
-
                     <div className='flex items-center justify-between pt-6 border-t border-gray-800/50'>
                       <div className='flex gap-4 text-sm text-gray-400'>
                         <span className='flex items-center gap-1'>
@@ -361,7 +354,6 @@ export default function GetStarted() {
                 Help us understand your project goals and constraints
               </p>
             </motion.div>
-
             <div className='max-w-4xl mx-auto'>
               <div className='bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl p-8 border border-gray-800/50'>
                 <div className='text-center mb-8'>
@@ -373,7 +365,6 @@ export default function GetStarted() {
                     Now let's gather more details about your specific needs
                   </p>
                 </div>
-
                 <div className='space-y-6'>
                   <div className='grid md:grid-cols-2 gap-6'>
                     <div>
@@ -386,7 +377,6 @@ export default function GetStarted() {
                         <option>6+ months</option>
                       </select>
                     </div>
-
                     <div>
                       <label className='block text-sm font-medium text-gray-300 mb-2'>
                         Budget Range
@@ -398,7 +388,6 @@ export default function GetStarted() {
                       </select>
                     </div>
                   </div>
-
                   <div>
                     <label className='block text-sm font-medium text-gray-300 mb-2'>
                       Project Description
@@ -409,7 +398,6 @@ export default function GetStarted() {
                       placeholder='Describe your project goals, challenges, and specific requirements...'
                     />
                   </div>
-
                   <div className='flex justify-between pt-6'>
                     <button
                       onClick={handlePreviousStep}
@@ -444,7 +432,6 @@ export default function GetStarted() {
               Get started immediately with these quick options
             </p>
           </motion.div>
-
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>            {quickStartOptions.map((option, index) => (
               <motion.div
                 key={option.title}
@@ -457,21 +444,18 @@ export default function GetStarted() {
                   <div className='flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
                     {option.icon}
                   </div>
-
                   <h3 className='text-xl font-bold text-white mb-3 text-center'>
                     {option.title}
                   </h3>
                   <p className='text-gray-300 mb-4 text-center leading-relaxed'>
                     {option.description}
                   </p>
-
                   <div className='text-center mb-4'>
                     <span className='inline-flex items-center gap-1 px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm'>
                       <Clock className='w-4 h-4' />
                       {option.duration}
                     </span>
                   </div>
-
                   <button
                     className={`w-full py-3 px-4 bg-gradient-to-r ${option.color} text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`}
                   >                    {option.action}
@@ -482,7 +466,6 @@ export default function GetStarted() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>
         <div className='container mx-auto px-4 text-center'>          <motion.div

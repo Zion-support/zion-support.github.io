@@ -1,6 +1,6 @@
 
 // Define the shape of a message
-export interface Message {
+export interface Message {;
   id: string;
   sender_id: string;
   recipient_id: string;
@@ -14,7 +14,7 @@ export interface Message {
 }
 
 // Define the shape of a conversation
-export interface Conversation {
+export interface Conversation {;
   id: string;
   user_id: string;
   other_user: {
@@ -37,14 +37,14 @@ export interface Conversation {
 }
 
 // Context data for creating a conversation
-export interface ConversationContextData {
+export interface ConversationContextData {;
   title?: string;
   description?: string;
   image_url?: string
 }
 
 // Define the shape of the messaging context
-export interface MessagingContextType {
+export interface MessagingContextType {;
   messages: Message[];
   conversations: Conversation[];
   unreadCount: number;

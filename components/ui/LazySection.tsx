@@ -8,7 +8,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
   threshold = 0.1,
   delay = 0,
   direction = 'up',
-}) => {
+}) => {;
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
 

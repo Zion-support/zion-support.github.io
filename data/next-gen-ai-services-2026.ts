@@ -464,7 +464,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     customers: 203,
     rating: 4.7,
     reviews: 445,
-  },
+  },;
 ];    implementationDetails: 'Production-ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',
     launchDate: '2025-01-25',
     customers: 203,

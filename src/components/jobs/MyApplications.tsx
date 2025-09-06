@@ -83,7 +83,6 @@ export function MyApplications() {
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
-                
                 <Button 
                   variant="default" 
                   size="sm"
@@ -101,4 +100,5 @@ export function MyApplications() {
       ))}
     </div>
   )
-}
+};
+;

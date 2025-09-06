@@ -27,7 +27,6 @@ const Header = () => {
               <p className="text-sm text-gray-600">AI & Technology Solutions</p>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
@@ -40,7 +39,6 @@ const Header = () => {
               </Link>
             ))}
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -49,7 +47,6 @@ const Header = () => {
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden mt-4 border-t border-gray-200 pt-4">
@@ -70,4 +67,5 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;
+;

@@ -31,7 +31,7 @@ interface AddMilestoneFormProps {
   projectType?: string
 }
 
-export function AddMilestoneForm({
+export function AddMilestoneForm({;
   onSubmit;
   isSubmitting;
   onCancel;
@@ -193,7 +193,6 @@ export function AddMilestoneForm({
               )}
             />
           </div>
-
           <div className="flex justify-end space-x-2 pt-4">
             {onCancel && (
               <Button

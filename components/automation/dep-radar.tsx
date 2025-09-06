@@ -4,7 +4,7 @@
 }</div>) import fs from 'fs';
 import path from 'path';
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
-export async function getServerSideProps() {
+export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datadep-radar.json');
   let outdated: Outdated[] = [];  let generatedAt = '';
   try {
@@ -47,6 +47,6 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
           </table>
         </div>
       )}
-    </div>
+    </div>;
 );
 }

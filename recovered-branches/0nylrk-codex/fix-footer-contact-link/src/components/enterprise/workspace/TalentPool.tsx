@@ -9,7 +9,7 @@ export function TalentPool() {
     {
       id: "talent-1",
       name: "Jessica Lee",
-      role: "UI/UX Designer",
+      role: "UI/UX Designer",;
       skills: ["Figma", "Sketch", "User Testing"];
       status: "available",
       match: 95

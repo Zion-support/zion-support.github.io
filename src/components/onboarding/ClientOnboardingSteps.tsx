@@ -25,8 +25,8 @@ export function ClientOnboardingSteps() {
       completed: onboardingStatus.responseReceived,
       link: '/client-dashboard',
       action: 'Check Dashboard',
-    },
-  ]
+    },;
+  ];
   return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client-dashboard",
       action: "Check Dashboard"}],
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />

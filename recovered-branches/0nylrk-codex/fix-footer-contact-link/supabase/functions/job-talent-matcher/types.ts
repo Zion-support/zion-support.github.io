@@ -1,5 +1,5 @@
 
-export interface JobData {
+export interface JobData {;
   id: string;
   title: string;
   description: string;
@@ -12,7 +12,7 @@ export interface JobData {
   deadline: string
 }
 
-export interface TalentProfile {
+export interface TalentProfile {;
   id: string;
   full_name: string;
   professional_title: string;
@@ -23,7 +23,7 @@ export interface TalentProfile {
   availability_type?: string
 }
 
-export interface TalentMatch {
+export interface TalentMatch {;
   talent_id: string;
   job_id: string;
   match_score: number;
@@ -31,7 +31,7 @@ export interface TalentMatch {
   created_at: string
 }
 
-export interface MatchResult {
+export interface MatchResult {;
   talentId: string;
   score: number;
   matchedSkills: string[],

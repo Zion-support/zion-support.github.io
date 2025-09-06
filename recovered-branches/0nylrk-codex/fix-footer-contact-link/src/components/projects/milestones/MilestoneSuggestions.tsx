@@ -15,7 +15,7 @@ interface MilestoneSuggestionsProps {
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 
-export function MilestoneSuggestions({
+export function MilestoneSuggestions({;
   projectName;
   scopeSummary;
   startDate;

@@ -27,6 +27,8 @@ export default function CapabilitiesPage() {
           </div>
         ))}
       </div>
-    </EnhancedLayout>
+    </EnhancedLayout>;
 );
+}
+
 }

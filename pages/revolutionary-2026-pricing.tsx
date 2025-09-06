@@ -7,7 +7,7 @@ import {
   ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles, 
   Target, Satellite, Globe, Cpu, Lock, Palette, Layers,
   Phone, Mail, MapPin, ExternalLink, Filter, Grid, List
-} from 'lucide-react',
+} from 'lucide-react',;
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',;
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-v2',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
@@ -141,10 +141,8 @@ export default function Revolutionary2026Pricing() {
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2026-pricing" />
         </Head>
-
         {/* Enhanced Navigation */}
         <EnhancedNavigation2026 />
-
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
@@ -165,7 +163,6 @@ export default function Revolutionary2026Pricing() {
                 Transparent, competitive pricing for our cutting-edge AI, quantum computing, and emerging technology solutions. 
                 Get maximum ROI with our revolutionary services.
               </p>
-              
               {/* Pricing Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
@@ -186,7 +183,6 @@ export default function Revolutionary2026Pricing() {
                 </div>
               </div>
             </motion.div>
-
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -213,7 +209,6 @@ export default function Revolutionary2026Pricing() {
             </motion.div>
           </div>
         </section>
-
         {/* Filters */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -235,7 +230,6 @@ export default function Revolutionary2026Pricing() {
                     </button>
                   ))}
                 </div>
-
                 {/* Price Range Filter */}
                 <div className="flex flex-wrap gap-2">
                   {priceRanges.map((range) => (
@@ -252,7 +246,6 @@ export default function Revolutionary2026Pricing() {
                     </button>
                   ))}
                 </div>
-
                 {/* Sort Options */}
                 <div className="flex items-center space-x-4">
                   <select
@@ -271,7 +264,6 @@ export default function Revolutionary2026Pricing() {
             </div>
           </div>
         </section>
-
         {/* Services Pricing Grid */}
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -283,7 +275,6 @@ export default function Revolutionary2026Pricing() {
                 Compare pricing and features to find the perfect solution for your business
               </p>
             </div>
-
             <AnimatePresence mode="wait">
               {filteredServices.length === 0 ? (
                 <motion.div
@@ -324,7 +315,6 @@ export default function Revolutionary2026Pricing() {
                             {service.name}
                           </h3>
                           <p className="text-purple-300 text-sm mb-4">{service.tagline}</p>
-                          
                           {/* Pricing */}
                           <div className="mb-6">
                             <div className="text-4xl font-bold text-white mb-2">
@@ -336,7 +326,6 @@ export default function Revolutionary2026Pricing() {
                             </div>
                           </div>
                         </div>
-
                         {/* Features */}
                         <div className="mb-6">
                           <h4 className="text-white font-semibold mb-3 flex items-center">
@@ -352,7 +341,6 @@ export default function Revolutionary2026Pricing() {
                             ))}
                           </ul>
                         </div>
-
                         {/* Service Info */}
                         <div className="grid grid-cols-2 gap-4 text-sm mb-6">
                           <div>
@@ -375,7 +363,6 @@ export default function Revolutionary2026Pricing() {
                             <div className="text-white">{service.setupTime}</div>
                           </div>
                         </div>
-
                         {/* ROI and Market Info */}
                         <div className="mb-6 p-3 bg-purple-900/20 rounded-lg">
                           <div className="text-sm text-purple-300 mb-2">
@@ -385,7 +372,6 @@ export default function Revolutionary2026Pricing() {
                             <strong>Market:</strong> {service.marketSize} | <strong>Growth:</strong> {service.growthRate}
                           </div>
                         </div>
-
                         {/* Action Buttons */}
                         <div className="flex flex-col gap-3">
                           <Link
@@ -403,7 +389,6 @@ export default function Revolutionary2026Pricing() {
                             Contact Sales
                           </a>
                         </div>
-
                         {/* Badges */}
                         <div className="absolute top-4 right-4 flex flex-col gap-2">
                           {service.popular && (
@@ -425,7 +410,6 @@ export default function Revolutionary2026Pricing() {
             </AnimatePresence>
           </div>
         </section>
-
         {/* Pricing Comparison */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
@@ -443,7 +427,6 @@ export default function Revolutionary2026Pricing() {
                 Our revolutionary 2026 services offer unmatched value, cutting-edge technology, and proven ROI
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Value Proposition */}
               <motion.div
@@ -462,7 +445,6 @@ export default function Revolutionary2026Pricing() {
                   making them the smartest investment for your business.
                 </p>
               </motion.div>
-
               {/* Technology */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -480,7 +462,6 @@ export default function Revolutionary2026Pricing() {
                   Stay ahead of the competition with our innovative solutions.
                 </p>
               </motion.div>
-
               {/* Support */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -501,7 +482,6 @@ export default function Revolutionary2026Pricing() {
             </div>
           </div>
         </section>
-
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -544,5 +524,5 @@ export default function Revolutionary2026Pricing() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 };

@@ -73,7 +73,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/affiliate-analytics-hub',
-    marketPosition:
+    marketPosition:;
       'Easier than enterprise suites; purpose-built for small teams.',
     targetAudience: 'E-commerce, SaaS, Media',
     trialDays: 14,

@@ -4,9 +4,10 @@ const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), {
   ssr: false,
 });
 
-export default function GlobalEventRoute() {
+export default function GlobalEventRoute() {;
   return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false }),
-export default function GlobalEventRoute() {
+export default function GlobalEventRoute() {;
   return <ExpoPage />;
 }
 ;
+}

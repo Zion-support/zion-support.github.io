@@ -7,7 +7,7 @@ import {
   FormControl,
   FormField,
   FormItem,
-FormMessage,
+FormMessage,;
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 interface ReplyFormProps {
@@ -19,7 +19,7 @@ interface ReplyFormValues {
   content: string;
 }
 
-export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<ReplyFormValues>({

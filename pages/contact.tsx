@@ -22,6 +22,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </Layout>
+    </Layout>;
   );
 }

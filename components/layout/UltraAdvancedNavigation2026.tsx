@@ -21,7 +21,7 @@ import {
   Home,
   Users,
   Briefcase,
-  BookOpen,
+  BookOpen,;
   MessageCircle,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
@@ -31,7 +31,7 @@ import {
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 };
 
@@ -480,7 +480,6 @@ const UltraAdvancedNavigation2026 = () => {
                   Revolutionary Technology Solutions
                 </div>              </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
@@ -499,7 +498,6 @@ const UltraAdvancedNavigation2026 = () => {
                 <div className="text-xs text-gray-400">Revolutionary Technology Solutions</div>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
@@ -522,7 +520,6 @@ const UltraAdvancedNavigation2026 = () => {
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
-
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -549,7 +546,6 @@ const UltraAdvancedNavigation2026 = () => {
                               </p>
                             </div>
                           </div>
-
                           <div className='space-y-2'>
                             {item.subItems.map(subItem => (
                               <Link
@@ -572,7 +568,6 @@ const UltraAdvancedNavigation2026 = () => {
                               <p className="text-gray-400 text-sm">{item.description}</p>
                             </div>
                           </div>
-                          
                           <div className="space-y-2">
                             {item.subItems.map((subItem) => (
                               <Link
@@ -590,7 +585,6 @@ const UltraAdvancedNavigation2026 = () => {
                               </Link>
                             ))}
                           </div>
-
                           <Link
                             href={item.href}
                             className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                            onClick={() => setActiveDropdown(null)}                          
@@ -634,7 +628,6 @@ const UltraAdvancedNavigation2026 = () => {
                 </Link>
               </div>
             </div>
-
             {/* Contact Info - Desktop */}
             <div className='hidden lg:flex items-center space-x-4'>
               <div className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>
@@ -654,7 +647,6 @@ const UltraAdvancedNavigation2026 = () => {
                 Get Started
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -671,7 +663,6 @@ const UltraAdvancedNavigation2026 = () => {
           </div>
         </div>
       </nav>
-
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -705,7 +696,6 @@ const UltraAdvancedNavigation2026 = () => {
                 >
                   <X className='w-6 h-6' />                </button>
               </div>
-
               {/* Mobile Navigation Items */}            >
               {/* Mobile Menu Header */}
               <div className="flex items-center justify-between mb-8">
@@ -722,7 +712,6 @@ const UltraAdvancedNavigation2026 = () => {
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               {/* Mobile Navigation Items */}
               <div className='space-y-4'>
                 {navigationItems.map(item => (
@@ -741,7 +730,6 @@ const UltraAdvancedNavigation2026 = () => {
                       </div>
                       <span className='font-medium'>{item.name}</span>
                     </Link>
-
                     {/* Mobile Sub-items */}
                     <div className='mt-3 ml-11 space-y-2'>
                       {item.subItems.slice(0, 3).map(subItem => (
@@ -786,7 +774,6 @@ const UltraAdvancedNavigation2026 = () => {
                     Contact
                   </Link>
                 </div>
-
                 {/* Contact Info - Mobile */}
                 <div className='pt-6 border-t border-gray-700/50 space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300'>
@@ -801,7 +788,6 @@ const UltraAdvancedNavigation2026 = () => {
                     <MapPin className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.address}</span>                  </div>
                 </div>
-
                 {/* Get Started Button - Mobile */}
                 <div className='pt-4'>
                   <Link
@@ -816,7 +802,6 @@ const UltraAdvancedNavigation2026 = () => {
                     <span className="text-sm">{contactInfo.address}</span>
                   </div>
                 </div>
-
                 {/* Get Started Button - Mobile */}
                 <div className='pt-4'>
                   <Link
@@ -834,7 +819,6 @@ const UltraAdvancedNavigation2026 = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>

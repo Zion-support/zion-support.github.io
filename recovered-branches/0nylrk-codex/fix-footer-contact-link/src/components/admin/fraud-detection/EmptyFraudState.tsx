@@ -24,6 +24,6 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
           Clear Filters
         </Button>
       )}
-    </div>
+    </div>;
 );
 };

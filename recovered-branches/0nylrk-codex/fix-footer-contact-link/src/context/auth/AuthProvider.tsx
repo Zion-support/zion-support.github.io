@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { 
     user, setUser, 
     isLoading, setIsLoading, 
-    onboardingStep, setOnboardingStep 
+    onboardingStep, setOnboardingStep ;
   } = useAuthState();
   
   const navigate = useNavigate();

@@ -35,7 +35,7 @@ import {
   Heart,
   Building,
   Database,
-  Sprout
+  Sprout;
 } from 'lucide-react';
 
 const microSaasProducts = [
@@ -120,7 +120,7 @@ export default function MicroSaasPage() {
                 </Link>
                 <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Demo
-</Link>
+</Link>;
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -167,11 +167,11 @@ import {
   AlertTriangle,
   Link as LinkIcon,
   Award as AwardIcon,
-  Star as StarIcon,
+  Star as StarIcon,;
   Home;
 } from 'lucide-react';
 import Layout from '../components/Layout';
-export default function MicroSaaS() {
+export default function MicroSaaS() {;
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -399,7 +399,6 @@ export default function MicroSaas() {
         <meta name='robots' content='index, follow' />
         <link rel='canonical' href={`${contact.site}/micro-saas`} />
       </Head>
-
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
           {/* Hero Section */}
@@ -422,7 +421,6 @@ export default function MicroSaas() {
                 efficient, and cost-effective solutions.              </p>
             </div>
           </section>
-
           {/* Category Filter */}
           <section className='py-8 px-4'>
             <div className='max-w-6xl mx-auto'>
@@ -442,7 +440,6 @@ export default function MicroSaas() {
               </div>
             </div>
           </section>
-
           {/* Products Grid */}
           <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
@@ -462,7 +459,6 @@ export default function MicroSaas() {
                     <p className='text-slate-300 mb-4 text-sm'>
                       {product.description}
                     </p>
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-blue-400 mb-2'>
                         Key Features:
@@ -475,7 +471,6 @@ export default function MicroSaas() {
                         ))}
                       </ul>
                     </div>
-
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-2xl font-bold text-green-400'>
                         {product.price}
@@ -484,7 +479,6 @@ export default function MicroSaas() {
                         {product.category}
                       </span>
                     </div>
-
                     <button className='w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
                   </div>
@@ -492,14 +486,12 @@ export default function MicroSaas() {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
               <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
                 Why Choose Our Micro SaaS Products?
               </h2>
-
               <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -522,7 +514,6 @@ export default function MicroSaas() {
                     Quick setup and deployment in minutes, not months
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -545,7 +536,6 @@ export default function MicroSaas() {
                     contracts
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -567,7 +557,6 @@ export default function MicroSaas() {
                     Specialized tools that solve specific business problems
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -591,7 +580,6 @@ export default function MicroSaas() {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className='py-16 px-4'>
             <div className='max-w-4xl mx-auto text-center'>
@@ -602,7 +590,6 @@ export default function MicroSaas() {
                 Contact our experts to discuss which micro SaaS products are
                 right for your business and get started with a free trial.
               </p>
-
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
                 <Link
                   href='/contact'
@@ -626,7 +613,6 @@ export default function MicroSaas() {
             </motion.div>
           </div>
         </section>
-
         {/* Products Grid */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -644,7 +630,6 @@ export default function MicroSaas() {
                 Each product is designed to solve a specific business challenge with powerful, easy-to-use tools
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasProducts.map((product, index) => (
                 <motion.div
@@ -691,7 +676,6 @@ export default function MicroSaas() {
             </div>
           </div>
         </section>
-
         {/* Categories */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -709,7 +693,6 @@ export default function MicroSaas() {
                 We cover a wide range of business domains with specialized micro SaaS solutions
               </p>
             </motion.div>
-
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {categories.map((category, index) => (
                 <motion.div
@@ -728,7 +711,6 @@ export default function MicroSaas() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -756,7 +738,7 @@ Ready to Transform Your Business?
           </div>
         </section>
       </div>
-    </Layout>
+    </Layout>;
   );
 }
           </section>

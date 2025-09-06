@@ -16,7 +16,7 @@ import {  Dialog,  Dialog,
 import { Textarea } from '@/components/ui/textarea'
 interface ReviewCardProps {
   review: Review
-onReport: (reviewId: string, reason: string) => Promise<boolean> 
+onReport: (reviewId: string, reason: string) => Promise<boolean>
 }export function ReviewCard ({
   review, onReport 
 }: ReviewCardProps) {
@@ -135,14 +135,11 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
             </div>
           </div>
         </div>
-
         <div className='flex'>{renderStars(review.rating)}</div>
       </div>
-
       <div className='mb-4'>
         <p className='text-sm whitespace-pre-wrap'>{review.review_text}</p>
       </div>
-
       {(review.communication_rating ||
         review.quality_rating ||
         review.timeliness_rating ||
@@ -193,16 +190,13 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
             </div>
           </div>
         </div>
-        
         <div className="flex">
           {renderStars(review.rating)}
         </div>
       </div>
-      
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-      
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
@@ -259,7 +253,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
-
             <Textarea
               placeholder='Why are you reporting this review?'              value={reportReason}
               onChange={e => setReportReason(e.target.value)}
@@ -287,8 +280,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         </Dialog>
       </div>
     </div>
-  )
-}</div>) 
+  );
+}</div>) ;
 };"
 return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {"
   review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {

@@ -11,7 +11,7 @@ export function RecentActivity() {
       action: "posted a new job",
       target: "Senior React Developer",
       timestamp: "1h ago",
-      type: "job"
+      type: "job";
     };
     {
       id: "act-2",
@@ -82,7 +82,6 @@ export function RecentActivity() {
             </div>
           ))}
         </div>
-        
         <div className="p-3 text-center border-t border-border">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View All Activity

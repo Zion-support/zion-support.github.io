@@ -18,5 +18,5 @@ export default function AgenticNewsPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  )
+  );
 };

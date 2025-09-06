@@ -13,7 +13,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 
       // Update user metadata
       const { error: authError } = await supabase.auth.updateUser({
-        data: {
+        data: {;
           display_name: data.displayName;
           user_type: data.userType,
           headline: data.headline}});

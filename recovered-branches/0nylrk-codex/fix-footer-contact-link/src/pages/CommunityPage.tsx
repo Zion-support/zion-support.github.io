@@ -95,7 +95,7 @@ const recentPosts: ForumPost[] = [
   }
 ];
 
-export default function CommunityPage() {
+export default function CommunityPage() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
   
@@ -106,7 +106,6 @@ export default function CommunityPage() {
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
         keywords="community, forum, discussion, AI marketplace, questions, answers"
       />
-      
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
           <div>
@@ -115,25 +114,21 @@ export default function CommunityPage() {
               Join the conversation, ask questions, and share your knowledge
             </p>
           </div>
-          
           <Button asChild>
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>
               Create New Post
             </Link>
           </Button>
         </div>
-        
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
           <TabsList className="mb-6">
             <TabsTrigger value="categories">Categories</TabsTrigger>
             <TabsTrigger value="featured">Featured</TabsTrigger>
             <TabsTrigger value="recent">Recent</TabsTrigger>
           </TabsList>
-          
           <TabsContent value="categories">
             <ForumCategories />
           </TabsContent>
-          
           <TabsContent value="featured">
             <div className="space-y-4">
               {featuredPosts.map((post) => (
@@ -141,7 +136,6 @@ export default function CommunityPage() {
               ))}
             </div>
           </TabsContent>
-          
           <TabsContent value="recent">
             <div className="space-y-4">
               {recentPosts.map((post) => (

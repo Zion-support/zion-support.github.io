@@ -12,7 +12,7 @@ import {
   Sparkles,
   CheckCircle,
   Phone,
-  Mail,
+  Mail,;
   MapPin,;
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
@@ -21,7 +21,7 @@ import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-d
 export default function UltraAdvancedHero2026() {
   const totalServices =
     aiAutonomousServices2026.length +
-    quantumSpaceTechServices2026.length +
+    quantumSpaceTechServices2026.length +;
     metaverseDigitalRealityServices2026.length;
 
   const contactInfo = {
@@ -30,7 +30,7 @@ export default function UltraAdvancedHero2026() {
     address: '364 E Main St STE 1008 Middletown DE 19709',  };import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-export default function UltraAdvancedHero2026() {
+export default function UltraAdvancedHero2026() {;
   const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
   
   const contactInfo = {
@@ -70,13 +70,11 @@ export default function UltraAdvancedHero2026() {
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/30 via-transparent to-blue-900/30'></div>
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.15),transparent_50%)]'></div>
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(120,119,198,0.15),transparent_50%)]'></div>
-
         {/* Animated Background Elements */}
         <div className='absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>
         <div className='absolute bottom-20 right-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-500'></div>
       </div>
-
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <motion.div
           variants={containerVariants}
@@ -94,7 +92,6 @@ export default function UltraAdvancedHero2026() {
               2026 Revolutionary Technology Solutions
             </span>
           </motion.div>
-
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
@@ -106,7 +103,6 @@ export default function UltraAdvancedHero2026() {
             <br />
             <span className='text-white'>is Now</span>
           </motion.h1>
-
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
@@ -120,7 +116,6 @@ export default function UltraAdvancedHero2026() {
             </span>{' '}
             with our revolutionary solutions.
           </motion.p>
-
           {/* Service Statistics */}
           <motion.div
             variants={itemVariants}
@@ -150,7 +145,6 @@ export default function UltraAdvancedHero2026() {
               <div className='text-3xl font-bold text-green-400'>∞</div>
               <div className='text-gray-300 text-sm'>Possibilities</div>            </div>
           </motion.div>
-
           {/* Key Benefits */}
           <motion.div  };
 
@@ -162,13 +156,11 @@ export default function UltraAdvancedHero2026() {
         <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/30 via-transparent to-blue-900/30"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.15),transparent_50%)]"></div>
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(120,119,198,0.15),transparent_50%)]"></div>
-        
         {/* Animated Background Elements */}
         <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           variants={containerVariants}
@@ -181,7 +173,6 @@ export default function UltraAdvancedHero2026() {
             <Sparkles className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Technology Solutions</span>
           </motion.div>
-
           {/* Main Heading */}
           <motion.h1 
             variants={itemVariants}
@@ -195,7 +186,6 @@ export default function UltraAdvancedHero2026() {
               is Now
             </span>
           </motion.h1>
-
           {/* Subheading */}
           <motion.p 
             variants={itemVariants}
@@ -204,7 +194,6 @@ export default function UltraAdvancedHero2026() {
             Experience the most advanced AI, quantum computing, and metaverse technologies ever created. 
             <span className="text-purple-400 font-semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.
           </motion.p>
-
           {/* Service Statistics */}
           <motion.div 
             variants={itemVariants}
@@ -227,7 +216,6 @@ export default function UltraAdvancedHero2026() {
               <div className="text-gray-300 text-sm">Possibilities</div>
             </div>
           </motion.div>
-
           {/* Key Benefits */}
           <motion.div
             variants={itemVariants}
@@ -251,7 +239,6 @@ export default function UltraAdvancedHero2026() {
                 24/7 Autonomous Operation
               </span>            </div>
           </motion.div>
-
           {/* Call to Action Buttons */}
           <motion.div            variants={itemVariants}
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
@@ -269,7 +256,6 @@ export default function UltraAdvancedHero2026() {
               <span className="text-gray-200 font-medium">24/7 Autonomous Operation</span>
             </div>
           </motion.div>
-
           {/* Call to Action Buttons */}
           <motion.div
             variants={itemVariants}
@@ -283,7 +269,6 @@ export default function UltraAdvancedHero2026() {
               Explore All Services
               <ArrowRight className='w-6 h-6 ml-3' />
             </Link>
-
             <Link
               href='/contact'
               className='inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
@@ -299,7 +284,6 @@ export default function UltraAdvancedHero2026() {
               Explore All Services
               <ArrowRight className="w-6 h-6 ml-3" />
             </Link>
-            
             <Link 
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
@@ -308,7 +292,6 @@ export default function UltraAdvancedHero2026() {
               Get Started Today
             </Link>
           </motion.div>
-
           {/* Contact Information */}
           <motion.div
             variants={itemVariants}
@@ -327,7 +310,6 @@ export default function UltraAdvancedHero2026() {
                   <div className='text-purple-300'>{contactInfo.phone}</div>
                 </div>
               </div>
-
               <div className='flex items-center space-x-3'>
                 <div className='w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center'>
                   <Mail className='w-6 h-6 text-white' />
@@ -337,7 +319,6 @@ export default function UltraAdvancedHero2026() {
                   <div className='text-cyan-300'>{contactInfo.email}</div>
                 </div>
               </div>
-
               <div className='flex items-center space-x-3'>
                 <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center'>
                   <MapPin className='w-6 h-6 text-white' />
@@ -360,7 +341,6 @@ export default function UltraAdvancedHero2026() {
                   <div className="text-purple-300">{contactInfo.phone}</div>
                 </div>
               </div>
-              
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">
                   <Mail className="w-6 h-6 text-white" />
@@ -370,7 +350,6 @@ export default function UltraAdvancedHero2026() {
                   <div className="text-cyan-300">{contactInfo.email}</div>
                 </div>
               </div>
-              
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-white" />
@@ -382,7 +361,6 @@ export default function UltraAdvancedHero2026() {
               </div>
             </div>
           </motion.div>
-
           {/* Trust Indicators */}
           <motion.div
             variants={itemVariants}
@@ -403,7 +381,6 @@ export default function UltraAdvancedHero2026() {
           </motion.div>
         </motion.div>
       </div>
-
       {/* Floating Elements */}
       <div className='absolute inset-0 pointer-events-none'>
         <motion.div
@@ -420,7 +397,6 @@ export default function UltraAdvancedHero2026() {
         >
           🚀
         </motion.div>
-
         <motion.div
           animate={{
             y: [0, 20, 0],
@@ -435,7 +411,6 @@ export default function UltraAdvancedHero2026() {
         >
           ⚛️
         </motion.div>
-
         <motion.div
           animate={{
             y: [0, -15, 0],
@@ -450,7 +425,6 @@ export default function UltraAdvancedHero2026() {
         >
           🧠
         </motion.div>
-
         <motion.div
           animate={{
             y: [0, 15, 0],
@@ -475,7 +449,6 @@ export default function UltraAdvancedHero2026() {
         >
           🚀
         </motion.div>
-        
         <motion.div
           animate={{ 
             y: [0, 20, 0];
@@ -490,7 +463,6 @@ export default function UltraAdvancedHero2026() {
         >
           ⚛️
         </motion.div>
-        
         <motion.div
           animate={{ 
             y: [0, -15, 0];
@@ -505,7 +477,6 @@ export default function UltraAdvancedHero2026() {
         >
           🧠
         </motion.div>
-        
         <motion.div
           animate={{ 
             y: [0, 15, 0];

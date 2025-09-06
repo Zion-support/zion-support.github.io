@@ -5,7 +5,7 @@ import {CodeBlock} from "@/components/developers/CodeBlock";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 export function ApiWebhooks() {
   // Sample webhook event payload
-  const newApplicationPayload = `{
+  const newApplicationPayload = `{;
   "event_type": "new_application";
   "created_at": "2023-06-10T15: 42:31Z";
   "data": {
@@ -137,15 +137,12 @@ app.listen(3000, () => {
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
         <h1>Webhooks</h1>
-        
         <p>
           Webhooks allow your application to receive real-time notifications when events occur in the Zion AI Marketplace.
           Instead of constantly polling our API for updates, webhooks push data to your server whenever relevant events happen.
         </p>
-
         <h2>Supported Events</h2>
         <p>You can subscribe to the following webhook events:</p>
-        
         <div className="overflow-x-auto mb-6">
           <table className="w-full border-collapse">
             <thead>
@@ -174,26 +171,21 @@ app.listen(3000, () => {
             </tbody>
           </table>
         </div>
-
         <h2>Setting Up Webhooks</h2>
         <p>
           You can configure webhooks in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a> under the Webhooks tab.
           For each webhook, you'll need to provide:
         </p>
-        
         <ul>
           <li>A name for the webhook (for your reference)</li>
           <li>The URL where you want to receive webhook events</li>
           <li>The event types you want to subscribe to</li>
         </ul>
-        
         <p>
           After creating a webhook, you'll be given a webhook secret that you should use to verify that incoming requests are genuinely from Zion.
         </p>
-
         <h2>Webhook Payload Format</h2>
         <p>All webhook payloads follow a common format:</p>
-        
         <Tabs defaultValue="new_application">
           <TabsList>
             <TabsTrigger value="new_application">New Application</TabsTrigger>
@@ -214,28 +206,22 @@ app.listen(3000, () => {
             <CodeBlock code={messageReceivedPayload} language="json" showLineNumbers={true} />
           </TabsContent>
         </Tabs>
-
         <h2>Verifying Webhook Signatures</h2>
         <p>
           To ensure webhook requests are genuinely from Zion, you should verify the signature included in each request.
           We include two HTTP headers with each webhook request:
         </p>
-        
         <ul>
           <li><code>X-Zion-Signature</code>: HMAC-SHA256 signature</li>
           <li><code>X-Zion-Timestamp</code>: Unix timestamp when the webhook was sent</li>
         </ul>
-        
         <p>Here's an example of verifying a webhook in Node.js:</p>
-        
         <CodeBlock code={webhookHandlerJs} language="javascript" showLineNumbers={true} />
-
         <h2>Testing Webhooks</h2>
         <p>
           You can test your webhook implementation using the Developer Portal. From the Webhooks tab;
           select "Test Webhook" next to any configured webhook to send a test payload to your endpoint.
         </p>
-        
         <h2>Best Practices</h2>
         <ul>
           <li><strong>Respond quickly</strong>: Return a 200 response as soon as you receive the webhook, then process it asynchronously</li>

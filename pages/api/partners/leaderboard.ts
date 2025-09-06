@@ -6,7 +6,7 @@ export default async function handler(
 ) {
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
       "placeholder-key";
   try {
     if (usingPlaceholder) {

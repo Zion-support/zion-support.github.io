@@ -13,7 +13,7 @@ interface RaiseDisputeButtonProps {
   className?: string
 }
 
-export function RaiseDisputeButton({ 
+export function RaiseDisputeButton({ ;
   projectId;
   milestoneId, 
   variant = "outline", 
@@ -39,7 +39,6 @@ export function RaiseDisputeButton({
         <ShieldAlert className="h-4 w-4 mr-2" />
         Raise Dispute
       </Button>
-      
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="sm:max-w-[550px]">
           <DialogHeader>
@@ -48,7 +47,6 @@ export function RaiseDisputeButton({
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
-          
           <DisputeForm 
             projectId={projectId}
             milestoneId={milestoneId}

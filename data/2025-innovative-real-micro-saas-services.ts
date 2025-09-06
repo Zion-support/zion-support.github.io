@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface InnovativeMicroSaasService {
+export interface InnovativeMicroSaasService {;
   id: string;
   name: string;
   tagline: string;
@@ -648,7 +648,7 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       customers: 42,
       rating: 4.7,
       reviews: 20,
-    },
+    },;
   ];    features: [
       'AI-powered contract analysis and reviewLegal risk identification and assessmentDocument comparison and analysisLegal research and case law analysisCompliance checking and monitoringLegal document generationIntegration with legal systemsMobile legal app';
       'Multi-language legal supportPredictive legal analytics'

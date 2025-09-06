@@ -50,7 +50,7 @@ const iconMap = {
   Megaphone
 };
 
-export const ForumCategories = () => {
+export const ForumCategories = () => {;
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
 

@@ -5,7 +5,7 @@ import { Draggable } from '@/lib/dnd-stub'
 import { formatDistanceToNow } from 'date-fns'
 import Link from 'next/link'
 import { JobApplication } from '@/types/jobs'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
@@ -16,7 +16,7 @@ import {
   MoreVertical,
   Calendar,
   AlertTriangle,
-  BriefcaseIcon,
+  BriefcaseIcon,;
 } from 'lucide-react';// Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
 import { Draggable } from "@/lib/dnd-stub"
@@ -35,7 +35,7 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
 } from '@/components/ui/dropdown-menu'
 import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge'
 import { toast } from '@/hooks/use-toast'
-import { HireConfirmationModal } from './HireConfirmationModal'
+import { HireConfirmationModal } from './HireConfirmationModal';
 import Image from 'next/image'; // Import next/image
 interface CandidateCardProps {
   application: JobApplication
@@ -105,7 +105,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                     </p>
                   </div>
                 </div>
-
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant='ghost' className='h-8 w-8 p-0'>
@@ -144,7 +143,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div>
-
               {/* Application Info */}
               <div className='flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2'>
                 <div className='flex items-center'>
@@ -153,7 +151,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                     addSuffix: true,
                   })}
                 </div>
-
                 {isStalled && (
                   <div className='flex items-center text-amber-500'>
                     <AlertTriangle className='h-3 w-3 mr-1' />
@@ -161,7 +158,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   </div>
                 )}
               </div>
-
               {/* Match Score */}
               {application.match_score !== null &&
                 application.match_score !== undefined && (
@@ -193,7 +189,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                     <MessageSquare className='h-3 w-3 mr-1' /> Message
                   </Link>
                 </Button>
-
                 <Button variant='outline' size='sm' className='flex-1' asChild>
                   {application.resume?.file_url ? (
                     <a
@@ -209,7 +204,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                     </span>
                   )}
                 </Button>
-
                 <Button
                   variant='default'
                   size='sm'
@@ -222,7 +216,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
           </Card>
         )}
       </Draggable>
-
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
         isOpen = {showHireModal,}
@@ -309,3 +302,4 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   handleHireConfirmed 
 }/> </>) 
 }'"}
+;

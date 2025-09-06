@@ -12,7 +12,7 @@ interface ProjectActionsProps {
   onAddMilestone: () => void
 }
 
-export function ProjectActions({
+export function ProjectActions({;
   projectId;
   isUnderDispute;
   disputeId;

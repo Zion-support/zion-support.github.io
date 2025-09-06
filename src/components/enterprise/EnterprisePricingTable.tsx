@@ -81,7 +81,6 @@ export function EnterprisePricingTable() {
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>            Choose the perfect plan for your team size and requirements
           </p>
         </div>
-
         <div className='overflow-x-auto'>
           <Table className='border rounded-lg'>    <section id="pricing" className="py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-7xl">
@@ -90,7 +89,6 @@ export function EnterprisePricingTable() {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           </p>
         </div>
-
         <div className='overflow-x-auto'>
           <Table className='border rounded-lg'>
             <TableHeader>
@@ -162,7 +160,6 @@ export function EnterprisePricingTable() {
             </TableBody>
           </Table>
         </div>
-
         <div className='mt-8 text-center text-sm text-muted-foreground'>
           All plans include SSL security, 99.9% uptime SLA, and dedicated
           support        </div>
@@ -174,6 +171,6 @@ export function EnterprisePricingTable() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 ;

@@ -18,7 +18,7 @@ import Image from 'next/image'
 import { PortfolioProject } from '@/types/resume'
 interface ProjectCardProps {
   project: PortfolioProject
-  onEdit: (project: PortfolioProject) => void
+  onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void; import Image from 'next/image'
 interface ProjectCardProps {
   project: PortfolioProject,
@@ -55,11 +55,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </div>
         )}
       </div>
-
       <CardContent className='flex-grow pt-6'>
         <div className='space-y-2'>
           <h3 className='font-semibold text-lg'>{project.title}</h3>
-
           {project.description && (
             <p className='text-sm text-muted-foreground line-clamp-3'>
               {project.description}
@@ -77,11 +75,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </div>
         )}
       </div>
-      
       <CardContent className="flex-grow pt-6">
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{project.title}</h3>
-          
           {project.description && (
             <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
           )}
@@ -97,7 +93,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           )}
         </div>
       </CardContent>
-
       <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
         <div className='flex gap-2'>
           {project.github_url && (
@@ -136,7 +131,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             </a>
           )}
         </div>
-
         <div className='flex gap-2'>
           <Button
             variant='ghost'
@@ -155,7 +149,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </Button>
         </div>
       </CardFooter>
-      
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -184,6 +177,8 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-  )
-}
+  );
+};
 ;
+}
+}

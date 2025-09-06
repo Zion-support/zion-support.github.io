@@ -6,7 +6,7 @@ const p = path.join(process.cwd(), 'data', 'reports', 'seo', 'weekly-seo.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
-    try {
+    try {;
       const data = fs.readFileSync(p, 'utf8');
       const seo = JSON.parse(data);
       return res.status(200).json(seo);

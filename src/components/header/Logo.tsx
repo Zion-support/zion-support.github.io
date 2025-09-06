@@ -45,6 +45,7 @@ export function Logo({ customLogo }: LogoProps) {
         height={32}
       />
     </Link>
-  )
-}
+  );
+};
 ;
+}

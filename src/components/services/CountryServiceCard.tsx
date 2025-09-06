@@ -12,7 +12,7 @@ import { CountryPricing } from '@/data/onsiteServicePricing'
 interface CountryServiceCardProps {
   country: CountryPricing
   onSelect: (country: CountryPricing) => void
-  onQuote?: (country: CountryPricing) => void
+  onQuote?: (country: CountryPricing) => void;
   isPopular?: boolean; import Link from 'next/link'
 import { Badge } from "@/components/ui/badge"
 import { CountryPricing } from "@/data/onsiteServicePricing"
@@ -103,7 +103,6 @@ export function CountryServiceCard({
         <p className='text-3xl font-bold text-zion-cyan mb-4'>
           ${country.pricePerIncident.toFixed(2)}
         </p>
-
         <div className='space-y-2 text-zion-slate-light'>
           <div className='flex items-start'>
             <Clock className='h-4 w-4 mr-2 text-zion-purple mt-1' />
@@ -151,6 +150,7 @@ export function CountryServiceCard({
         </Button>
       </CardFooter>
     </Card>
-  )
-}
+  );
+};
 ;
+}

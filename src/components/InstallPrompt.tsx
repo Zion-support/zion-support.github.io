@@ -121,6 +121,6 @@ export const InstallPrompt: React.FC = () => {
     </>
   )
 },
-
-export default InstallPrompt,
+;
+export default InstallPrompt,;
 ;

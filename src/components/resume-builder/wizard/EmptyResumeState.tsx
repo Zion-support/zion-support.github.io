@@ -29,5 +29,5 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {  retu
 }
 "},
 
-  )
-}
+  );
+};

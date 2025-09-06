@@ -4,7 +4,7 @@ import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 export default function UseTokensButton({
   serviceId,
   defaultType,
-}: {
+}: {;
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {

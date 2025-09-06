@@ -9,14 +9,14 @@ type EnhancementType =
   | 'proposal' 
   | 'general';
 
-export interface AIEnhancementOptions {
+export interface AIEnhancementOptions {;
   enhancementType: EnhancementType;
   content?: string;
   context?: string,
   instructions?: string
 }
 
-export function useAIContentEnhancer() {
+export function useAIContentEnhancer() {;
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   

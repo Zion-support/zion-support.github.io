@@ -36,8 +36,8 @@ export function PartnerReferralLinks() {
   } = useReferrals()
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [selectedCampaign, setSelectedCampaign] = useState<string>('default')
-  const [customParam, setCustomParam] = useState<string>('')
-  const [generatedLinks, setGeneratedLinks] = useState<
+  const [customParam, setCustomParam] = useState<string>('');
+  const [generatedLinks, setGeneratedLinks] = useState<;
     { name: string; link: string }[]
   >([])
   // Get the base referral link
@@ -115,7 +115,6 @@ export function PartnerReferralLinks() {
           </div>
         </CardContent>
       </Card>
-
       <div className='flex justify-between items-center'>
         <h3 className='text-lg font-semibold text-white'>
           Custom Campaign Links
@@ -184,7 +183,6 @@ export function PartnerReferralLinks() {
           </DialogContent>
         </Dialog>
       </div>
-
       <div className='grid gap-4'>
         {generatedLinks.length > 0 ? (
           generatedLinks.map((item, index) => (

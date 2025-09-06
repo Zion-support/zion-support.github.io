@@ -26,7 +26,7 @@ interface Particle {
   color: string,
   type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk'
 }
-export default function UltraFuturisticBackground2029() {
+export default function UltraFuturisticBackground2029() {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
@@ -419,14 +419,12 @@ export default function UltraFuturisticBackground2029() {
           ease: 'easeInOut',
         }}
       />
-
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
         style={{ filter: 'blur(0.5px)' }}
       />
-
       {/* Additional visual layers */}
       <div className='absolute inset-0'>
         {/* Quantum field ripples */}
@@ -444,7 +442,6 @@ export default function UltraFuturisticBackground2029() {
         className="absolute inset-0 w-full h-full"
         style={{ filter: 'blur(0.5px)' }}
       />
-      
       {/* Additional visual layers */}
       <div className="absolute inset-0">
         {/* Quantum field ripples */}
@@ -460,7 +457,6 @@ export default function UltraFuturisticBackground2029() {
             ease: 'easeInOut',
           }}
         />
-
         {/* Holographic matrix */}
         <motion.div
           className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20'
@@ -472,7 +468,6 @@ export default function UltraFuturisticBackground2029() {
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-        
         {/* Holographic matrix */}
         <motion.div
           className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
@@ -486,7 +481,6 @@ export default function UltraFuturisticBackground2029() {
             ease: 'easeInOut',
           }}
         />
-
         {/* Neural network nodes */}
         <motion.div
           className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20'
@@ -498,7 +492,6 @@ export default function UltraFuturisticBackground2029() {
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-        
         {/* Neural network nodes */}
         <motion.div
           className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
@@ -513,7 +506,6 @@ export default function UltraFuturisticBackground2029() {
           }}
         />
       </div>
-
       {/* Floating orbs with glow effects */}
       <div className='absolute inset-0 pointer-events-none'>
         {[...Array(8)].map((_, i) => (
@@ -532,7 +524,6 @@ export default function UltraFuturisticBackground2029() {
               scale: [1, 1.2, 1],            }}          }}
         />
       </div>
-      
       {/* Floating orbs with glow effects */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(8)].map((_, i) => (

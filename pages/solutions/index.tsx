@@ -11,7 +11,7 @@ import {
   Users,
   Building,
   Globe,
-  Target
+  Target;
 } from 'lucide-react';
 import Layout from '../../components/Layout';
 
@@ -100,7 +100,6 @@ export default function SolutionsPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -129,7 +128,6 @@ export default function SolutionsPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Solutions Grid */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -147,9 +145,8 @@ export default function SolutionsPage() {
                 We offer comprehensive technology solutions tailored to different business needs and stages.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions.map((solution, index) => {
+              {solutions.map((solution, index) => {;
                 const IconComponent = solution.icon;
                 return (
                   <motion.div
@@ -164,15 +161,12 @@ export default function SolutionsPage() {
                     <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                    
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
                       {solution.title}
                     </h3>
-                    
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {solution.description}
                     </p>
-
                     <ul className="space-y-2 mb-6">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -181,7 +175,6 @@ export default function SolutionsPage() {
                         </li>
                       ))}
                     </ul>
-
                     <Link
                       href={solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
@@ -195,7 +188,6 @@ export default function SolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Industries Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -213,7 +205,6 @@ export default function SolutionsPage() {
                 Our solutions are designed to meet the unique challenges and requirements of various industries.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {industries.map((industry, index) => (
                 <motion.div
@@ -236,7 +227,6 @@ export default function SolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="container mx-auto px-4">
@@ -259,7 +249,6 @@ export default function SolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">

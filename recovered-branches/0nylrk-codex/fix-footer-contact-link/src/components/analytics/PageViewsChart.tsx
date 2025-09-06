@@ -4,7 +4,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface PageViewsChartProps {
@@ -35,6 +35,6 @@ export function PageViewsChart({
           onTimeRangeChange={onTimeRangeChange}
         />
       </CardContent>
-    </Card>
+    </Card>;
   );
 }

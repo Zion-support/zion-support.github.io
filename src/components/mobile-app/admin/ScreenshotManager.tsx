@@ -25,8 +25,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   const addScreenshots = (files: File[],) => {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/'))
-    const maxScreenshots = platform === "ios" ? 10 : 8
-    const availableSlots = maxScreenshots - screenshots.length
+    const maxScreenshots = platform === "ios" ? 10 : 8;
+    const availableSlots = maxScreenshots - screenshots.length;
 };    // Limit the number of screenshots
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
@@ -118,14 +118,12 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
             Select Files
           </Button>
         </div>
-        
         <div className="text-xs text-gray-300 mb-4">
           {platform === "ios" 
             ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
           }
         </div>
-        
         <div className="grid grid-cols-2 gap-3">
           {screenshots.map((screenshot,) => (
             <div key={screenshot.id} className="relative group">

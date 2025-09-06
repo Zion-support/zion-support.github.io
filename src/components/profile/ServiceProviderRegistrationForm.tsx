@@ -105,8 +105,8 @@ export function ServiceProviderRegistrationForm() {
       e.preventDefault()
       handleAddService() }
   }
-  // Handle avatar upload
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // Handle avatar upload;
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
     const file = e.target.files?.[0];    if (file) {
       const reader = new FileReader()
       reader.onloadend = () => {
@@ -350,7 +350,6 @@ export function ServiceProviderRegistrationForm() {
             Showcase your services and expertise to potential clients.
           </CardDescription>
         </CardHeader>
-
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <CardContent className='space-y-8'>
@@ -383,7 +382,6 @@ export function ServiceProviderRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className='col-span-1'>
                     <FormField
                       control={form.control}
@@ -407,7 +405,6 @@ export function ServiceProviderRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className='col-span-1'>
                     <FormField
                       control={form.control}
@@ -431,7 +428,6 @@ export function ServiceProviderRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className='col-span-1'>
                     <FormField
                       control={form.control}
@@ -456,7 +452,6 @@ export function ServiceProviderRegistrationForm() {
                     />
                   </div>
                 </div>
-
                 {/* Upload Avatar */}
                 <div className='space-y-2'>
                   <FormLabel className='text-zion-slate-light'>
@@ -478,7 +473,6 @@ export function ServiceProviderRegistrationForm() {
                         </div>
                       )}
                     </div>
-
                     <label className='flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors'>
                       <Upload className='mr-2 h-4 w-4' />
                       <span>Upload Photo</span>
@@ -495,9 +489,7 @@ export function ServiceProviderRegistrationForm() {
                   </p>
                 </div>
               </div>
-
               <Separator className='bg-zion-blue-light/50' />
-
               {/* Bio Section */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-medium text-white'>
@@ -583,7 +575,6 @@ export function ServiceProviderRegistrationForm() {
                         <Check className='mr-1 h-3 w-3' /> Apply
                       </Button>
                     </div>
-
                     <div className='space-y-4'>
                       <div>
                         <h5 className='text-zion-slate-light text-sm mb-1'>
@@ -593,7 +584,6 @@ export function ServiceProviderRegistrationForm() {
                           {generatedContent.summary}
                         </p>
                       </div>
-
                       {generatedContent.services &&
                         generatedContent.services.length > 0 && (
                           <div>
@@ -617,9 +607,7 @@ export function ServiceProviderRegistrationForm() {
                   </div>
                 )}
               </div>
-
               <Separator className='bg-zion-blue-light/50' />
-
               {/* Services and Availability */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                 {/* Services Section */}
@@ -681,7 +669,6 @@ export function ServiceProviderRegistrationForm() {
                     )}
                   </div>
                 </div>
-
                 {/* Pricing and Availability Section */}
                 <div className='space-y-4'>
                   <h3 className='text-lg font-medium text-white'>
@@ -739,7 +726,6 @@ export function ServiceProviderRegistrationForm() {
                                 Available for Work
                               </label>
                             </div>
-
                             <div className='flex items-center space-x-2'>
                               <input
                                 type='radio'
@@ -756,7 +742,6 @@ export function ServiceProviderRegistrationForm() {
                                 Limited Availability
                               </label>
                             </div>
-
                             <div className='flex items-center space-x-2'>
                               <input
                                 type='radio'
@@ -782,7 +767,6 @@ export function ServiceProviderRegistrationForm() {
                 </div>
               </div>
             </CardContent>
-
             <CardFooter className='border-t border-zion-blue-light pt-6'>
               <div className='flex flex-col sm:flex-row gap-4 w-full sm:justify-between'>
                 <Button
@@ -876,7 +860,7 @@ if (error) throw error
   body: {'
   <p>Your service provider profile has been successfully created and published.</p> <p>We've enhanced your profile with AI to help you stand out to potential clients.</p> <p>You can now start receiving service requests and connecting with clients.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {
   new Date () .getFullYear () 
-}Zion Marketplace</p> 
+}Zion Marketplace</p>
 }//Continue with submission even if email fails 
 }//Redirect to service provider dashboard or profile page setTimeout ( () => {'
   router.push ('/service-dashboard') 

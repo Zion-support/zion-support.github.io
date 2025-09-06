@@ -7,7 +7,7 @@ import {useResume} from '@/hooks/useResume';
 import {BulkAddSkillsProps} from './types';
 import {Alert, AlertDescription} from '@/components/ui/alert';
 import {Textarea} from '@/components/ui/textarea';
-export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
+export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
   const [bulkSkills, setBulkSkills] = useState('');
   const [error, setError] = useState<string | null>(null);
   const { enhanceContent, isEnhancing } = useResumeEnhancer();
@@ -70,7 +70,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
             onChange={(e) => setBulkSkills(e.target.value)}
           />
         </div>
-
         <Button 
           onClick={handleCategorizeSkills}
           disabled={isEnhancing || !bulkSkills.trim()}
@@ -83,11 +82,9 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           )}
           Categorize with AI
         </Button>
-        
         <p className="text-xs text-muted-foreground mt-1">
           AI will identify skills and categorize them automatically. This may take a moment to process.
         </p>
-        
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>

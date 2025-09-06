@@ -1,4 +1,4 @@
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
 export default function AISalesIntelligencePlatform() {
 	return (
@@ -22,4 +22,4 @@ export default function AISalesIntelligencePlatform() {
 			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
 		/>
 	)
-}
+};

@@ -55,8 +55,9 @@ export function AuthorBio({ author }: AuthorBioProps) {
 }</p> {"
   author.title && <p className="text-sm text-muted-foreground mb-2" > {
   author.title 
-}</p> 
+}</p>
 }<p> {
   author.bio 
-}</p> 
-}'"}
+}</p>
+}'"};
+;

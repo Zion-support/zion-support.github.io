@@ -17,7 +17,7 @@ interface FilterSidebarProps {
   onClearFilters: () => void
 }
 
-export function FilterSidebar({
+export function FilterSidebar({;
   filters;
   filterOptions;
   onFilterChange;
@@ -39,7 +39,6 @@ export function FilterSidebar({
           Clear All
         </Button>
       </div>
-      
       {/* Product Type Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -64,7 +63,6 @@ export function FilterSidebar({
           ))}
         </div>
       </div>
-      
       {/* Location Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -89,7 +87,6 @@ export function FilterSidebar({
           ))}
         </div>
       </div>
-      
       {/* Availability Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -114,7 +111,6 @@ export function FilterSidebar({
           ))}
         </div>
       </div>
-      
       {/* Rating Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">

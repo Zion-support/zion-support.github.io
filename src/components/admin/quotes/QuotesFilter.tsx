@@ -51,7 +51,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}            />
           </div>
-
           <div>
             <p className='text-zion-slate-light text-sm mb-2'>Status</p>
             <Select
@@ -70,7 +69,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-
           <div>
             <p className='text-zion-slate-light text-sm mb-2'>Archive</p>
             <Select
@@ -86,7 +84,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-
           <div>
             <p className='text-zion-slate-light text-sm mb-2'>Date Range</p>
             <Popover>
@@ -132,7 +129,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             </Popover>
           </div>
         </div>
-
         <div className='mt-4 flex justify-end'>
           <Button
             variant='outline'
@@ -152,7 +148,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
           </Button>
         </div>
       </CardContent>
-    </Card>
-  )
+    </Card>;
+  );
 };  )
 }

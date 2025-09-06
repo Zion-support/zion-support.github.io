@@ -9,7 +9,6 @@ export default function CaseStudyPage() {
         <meta name="description" content="Discover how a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform. Read our detailed case study." />
         <meta name="keywords" content="data analytics, healthcare analytics, predictive modeling, big data, machine learning" />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <main className="container mx-auto px-6 py-12">
           {/* Breadcrumb */}
@@ -24,7 +23,6 @@ export default function CaseStudyPage() {
             <span className="text-white/60 mx-2">→</span>
             <span className="text-white">Data Analytics Transformation</span>
           </nav>
-
           {/* Header */}
           <header className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30 mb-6">
@@ -37,7 +35,6 @@ export default function CaseStudyPage() {
               How a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform
             </p>
           </header>
-
           {/* Case Study Content */}
           <div className="max-w-4xl mx-auto">
             {/* Company Overview */}
@@ -65,7 +62,6 @@ export default function CaseStudyPage() {
                 </div>
               </div>
             </section>
-
             {/* Challenge */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
@@ -91,7 +87,6 @@ export default function CaseStudyPage() {
                 </ul>
               </div>
             </section>
-
             {/* Solution */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
@@ -101,7 +96,6 @@ export default function CaseStudyPage() {
                   We built a comprehensive data analytics platform that provides real-time insights, 
                   predictive modeling, and automated reporting for improved patient care and operational efficiency.
                 </p>
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Big Data Processing</h4>
@@ -110,7 +104,6 @@ export default function CaseStudyPage() {
                       lab results, and operational data points in real-time.
                     </p>
                   </div>
-                  
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Machine Learning</h4>
                     <p className="text-white/80">
@@ -118,7 +111,6 @@ export default function CaseStudyPage() {
                       personalized treatment recommendations.
                     </p>
                   </div>
-                  
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Real-time Analytics</h4>
                     <p className="text-white/80">
@@ -126,7 +118,6 @@ export default function CaseStudyPage() {
                       resource utilization, and operational metrics.
                     </p>
                   </div>
-                  
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-purple-400 mb-3">Predictive Modeling</h4>
                     <p className="text-white/80">
@@ -137,7 +128,6 @@ export default function CaseStudyPage() {
                 </div>
               </div>
             </section>
-
             {/* Results */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
@@ -164,7 +154,6 @@ export default function CaseStudyPage() {
                       </div>
                     </div>
                   </div>
-                  
                   <div>
                     <h3 className="text-2xl font-semibold text-green-400 mb-6">Additional Benefits</h3>
                     <ul className="space-y-3 text-white/80">
@@ -189,7 +178,6 @@ export default function CaseStudyPage() {
                 </div>
               </div>
             </section>
-
             {/* Technologies */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
@@ -203,7 +191,6 @@ export default function CaseStudyPage() {
                 </div>
               </div>
             </section>
-
             {/* Implementation */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
@@ -216,7 +203,6 @@ export default function CaseStudyPage() {
                       <p className="text-white/70">Comprehensive data audit and system architecture design</p>
                     </div>
                   </div>
-                  
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold">2</div>
                     <div>
@@ -224,7 +210,6 @@ export default function CaseStudyPage() {
                       <p className="text-white/70">Building big data infrastructure and ML model development</p>
                     </div>
                   </div>
-                  
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold">3</div>
                     <div>
@@ -232,7 +217,6 @@ export default function CaseStudyPage() {
                       <p className="text-white/70">System integration and comprehensive testing with real data</p>
                     </div>
                   </div>
-                  
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold">4</div>
                     <div>
@@ -243,7 +227,6 @@ export default function CaseStudyPage() {
                 </div>
               </div>
             </section>
-
             {/* Call to Action */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
@@ -273,4 +256,4 @@ export default function CaseStudyPage() {
       </div>
     </>
   )
-}
+};

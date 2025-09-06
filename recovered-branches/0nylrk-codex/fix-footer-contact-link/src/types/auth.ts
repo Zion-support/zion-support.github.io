@@ -1,4 +1,4 @@
-export interface UserDetails {
+export interface UserDetails {;
   id?: string;
   name?: string;
   email?: string;
@@ -15,7 +15,7 @@ export interface UserDetails {
   updatedAt?: string
 }
 
-export interface UserProfile {
+export interface UserProfile {;
   id?: string;
   displayName?: string;
   email: string;
@@ -33,7 +33,7 @@ export interface UserProfile {
 }
 
 // Update AuthContextType definition to match implementation
-export interface AuthContextType {
+export interface AuthContextType {;
   user: UserDetails | null;
   isLoading: boolean;
   isAuthenticated: boolean,

@@ -35,8 +35,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   useEffect(() => {
     // Focus input when component mounts
     inputRef.current?.focus()
-  }, [])
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  }, []);
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
     e.preventDefault();    if (message.trim() && !disabled) {
       onSend(message)
       setMessage('') }      setMessage('')

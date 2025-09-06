@@ -12,7 +12,7 @@ import {TimelineField} from "./TimelineField";
 import {BudgetFields} from "./BudgetFields";
 export interface HireRequestFormProps {
   talent: TalentProfile,
-  onClose: () => void,
+  onClose: () => void,;
   initialJobTitle?: string;
   userDetails?: {
     name?: string;
@@ -25,7 +25,7 @@ export interface HireRequestFormProps {
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
     talent, 
-    onClose: onSubmitSuccess || onClose, 
+    onClose: onSubmitSuccess || onClose, ;
     initialJobTitle;
     userDetails 
   });
@@ -36,14 +36,11 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <PersonalInfoFields form={form} />
         </div>
-        
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <BudgetFields form={form} talent={talent} />
         </div>
-        
         <DialogFooter className="pt-4">
           <Button 
             type="button" 

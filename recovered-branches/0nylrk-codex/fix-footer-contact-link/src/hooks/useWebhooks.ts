@@ -5,7 +5,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
 
-export interface Webhook {
+export interface Webhook {;
   id: string;
   name: string;
   url: string;
@@ -15,13 +15,13 @@ export interface Webhook {
   last_triggered_at: string | null
 }
 
-export interface TestWebhookResult {
+export interface TestWebhookResult {;
   status: number;
   statusText: string,
   responseBody: string
 }
 
-export function useWebhooks() {
+export function useWebhooks() {;
   const { user } = useAuth();
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [loading, setLoading] = useState(false);

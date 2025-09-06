@@ -8,7 +8,7 @@ interface HelpArticleListProps {
   searchQuery: string
 }
 
-export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
   
   if (!category) {
@@ -30,7 +30,6 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
         <p className="text-zion-slate-light">{category.description}</p>
       </div>
-      
       {filteredArticles.length === 0 ? (
         <div className="text-center py-8">
           <h3 className="text-lg font-medium mb-2">No articles found</h3>

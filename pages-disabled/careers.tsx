@@ -7,7 +7,7 @@ export default function CareersPage() {
   const openPositions = [
     {
       title: "Senior AI Engineer",
-      department: "AI & Machine Learning",
+      department: "AI & Machine Learning",;
       location: "San Francisco, CA / Remote";
       type: "Full-time",
       experience: "5+ years",
@@ -149,9 +149,7 @@ export default function CareersPage() {
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
         </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -168,7 +166,6 @@ export default function CareersPage() {
               Build the future of technology with cutting-edge AI, quantum computing, and cybersecurity solutions
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -186,7 +183,6 @@ export default function CareersPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -202,7 +198,6 @@ export default function CareersPage() {
               We offer competitive benefits and a collaborative environment that fosters innovation and growth
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -223,7 +218,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
       {/* Open Positions */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -239,7 +233,6 @@ export default function CareersPage() {
               Join our team of innovators and help build the future of technology
             </p>
           </motion.div>
-
           <div className="space-y-6">
             {openPositions.map((position, index) => (
               <motion.div
@@ -261,9 +254,7 @@ export default function CareersPage() {
                         <p className="text-white/70">{position.department}</p>
                       </div>
                     </div>
-                    
                     <p className="text-white/80 mb-4">{position.description}</p>
-                    
                     <div className="flex flex-wrap gap-4 mb-4">
                       <div className="flex items-center gap-2 text-white/70">
                         <MapPin className="w-4 h-4" />
@@ -282,7 +273,6 @@ export default function CareersPage() {
                         <span>{position.salary}</span>
                       </div>
                     </div>
-                    
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Requirements</h4>
                       <ul className="space-y-1">
@@ -294,7 +284,6 @@ export default function CareersPage() {
                         ))}
                       </ul>
                     </div>
-                    
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>
                       <div className="flex flex-wrap gap-2">
@@ -306,7 +295,6 @@ export default function CareersPage() {
                       </div>
                     </div>
                   </div>
-                  
                   <div className="lg:flex-shrink-0">
                     <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       Apply Now
@@ -318,7 +306,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">

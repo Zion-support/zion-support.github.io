@@ -6,7 +6,7 @@ import {
   MapPin,
   Check,
   ArrowRight,
-  Star,
+  Star,;
   Cpu,;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -14,7 +14,7 @@ import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AIIoTPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/ai-iot-platform')
+    s.link.endsWith('/ai-iot-platform');
   );  if (!service) return null;
 
   return (
@@ -94,7 +94,6 @@ export default function AIIoTPlatformPage() {
             </div>
           </div>
         </div>
-
         <div className="bg-violet-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Connect Your World</h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -112,3 +111,5 @@ export default function AIIoTPlatformPage() {
       </main>
     </Layout>
 );
+
+}

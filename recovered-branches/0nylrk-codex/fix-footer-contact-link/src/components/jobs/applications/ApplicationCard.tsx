@@ -13,7 +13,7 @@ interface ApplicationCardProps {
   application: JobApplication
 }
 
-export function ApplicationCard({ application }: ApplicationCardProps) {
+export function ApplicationCard({ application }: ApplicationCardProps) {;
   const [expanded, setExpanded] = useState(false);
 
   const handleDownloadResume = () => {
@@ -64,10 +64,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           <StatusBadge status={application.status} />
         </div>
       </CardHeader>
-      
       <CardContent className="pb-3">
         <ApplicationProgress status={application.status} className="my-4" />
-        
         {expanded && (
           <div className="mt-4 space-y-3">
             {application.cover_letter && (
@@ -105,7 +103,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           </div>
         )}
       </CardContent>
-      
       <CardFooter className="flex flex-col gap-3 pt-0">
         <div className="flex justify-between items-center w-full">
           <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>
@@ -124,7 +121,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             </Button>
           </div>
         </div>
-        
         <Button 
           variant="secondary" 
           size="sm"

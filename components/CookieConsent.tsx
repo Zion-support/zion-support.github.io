@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { X, Cookie, Settings } from "lucide-react";
 
-export default function CookieConsent() {
+export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState({
@@ -81,7 +81,6 @@ export default function CookieConsent() {
                 </p>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-2 w-full md:w-auto">
               <button
                 onClick={() => setShowSettings(true)}
@@ -117,7 +116,6 @@ export default function CookieConsent() {
                 <X className="w-5 h-5" />
               </button>
             </div>
-
             <div className="space-y-4 mb-6">
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div>
@@ -135,7 +133,6 @@ export default function CookieConsent() {
                   className="w-4 h-4 text-blue-600 rounded"
                 />
               </div>
-
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div>
                   <h4 className="font-medium text-gray-900">
@@ -157,7 +154,6 @@ export default function CookieConsent() {
                   className="w-4 h-4 text-blue-600 rounded"
                 />
               </div>
-
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div>
                   <h4 className="font-medium text-gray-900">
@@ -180,7 +176,6 @@ export default function CookieConsent() {
                   className="w-4 h-4 text-blue-600 rounded"
                 />
               </div>
-
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                 <div>
                   <h4 className="font-medium text-gray-900">
@@ -203,7 +198,6 @@ export default function CookieConsent() {
                 />
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-2 justify-end">
               <button
                 onClick={rejectAll}

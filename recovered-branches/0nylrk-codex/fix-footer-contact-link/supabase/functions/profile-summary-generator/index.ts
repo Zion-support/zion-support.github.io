@@ -1,6 +1,6 @@
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 
@@ -85,7 +85,7 @@ serve(async (req) => {
       if (summaryMatch && skillsMatch) {
         const summary = summaryMatch[1];
         const skillsString = skillsMatch[1];
-        const suggestedSkills = skillsString.split().map(s => 
+        const suggestedSkills = skillsString.split().map(s =>
           s.trim().replace(/"/g, '')
         ).filter(Boolean);
         

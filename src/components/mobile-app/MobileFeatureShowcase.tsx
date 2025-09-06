@@ -38,7 +38,6 @@ export const MobileFeatureShowcase: React.FC = () => {
             The Zion mobile app brings the power of our AI marketplace to your pocket with these key features
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index,) => (
             <div 
@@ -58,4 +57,4 @@ export const MobileFeatureShowcase: React.FC = () => {
 }
 '"},
 
-}
+};

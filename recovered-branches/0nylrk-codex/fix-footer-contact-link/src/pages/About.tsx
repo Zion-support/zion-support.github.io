@@ -21,7 +21,6 @@ export default function About() {
               The world's first free marketplace dedicated to high-tech and artificial intelligence
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
@@ -46,7 +45,6 @@ export default function About() {
               />
             </div>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
@@ -72,7 +70,6 @@ export default function About() {
               />
             </div>
           </div>
-          
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -87,7 +84,6 @@ export default function About() {
                   We embrace cutting-edge technologies and creative thinking to push the boundaries of what's possible.
                 </p>
               </div>
-              
               <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                 <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                   <svg className="w-8 h-8 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +95,6 @@ export default function About() {
                   We believe in the power of collaboration and fostering an inclusive ecosystem where everyone can thrive.
                 </p>
               </div>
-              
               <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                 <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                   <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -119,3 +114,4 @@ export default function About() {
     </>
   )
 }
+;

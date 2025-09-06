@@ -6,7 +6,7 @@ import {flagContent} from './flagContent';
 /**
  * Create a monitoring system helper to easily monitor any content
  */
-export const monitorContent = async (
+export const monitorContent = async (;
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];

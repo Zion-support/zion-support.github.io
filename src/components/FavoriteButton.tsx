@@ -17,8 +17,8 @@ interface FavoriteButtonProps {
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   const { isWishlisted, toggle } = useWishlist()
   const { isAuthenticated } = useAuth()
-  const [loginOpen, setLoginOpen] = React.useState(false)
-  const handleClick = (e: React.MouseEvent) => {
+  const [loginOpen, setLoginOpen] = React.useState(false);
+  const handleClick = (e: React.MouseEvent) => {;
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
       return

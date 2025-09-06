@@ -3,7 +3,7 @@ import {
   Card,
   CardHeader,
   CardTitle,
-  CardDescription,
+  CardDescription,;
 } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
@@ -22,7 +22,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
-
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -36,7 +35,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           )}
         </CardHeader>
       </Card>
-
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -48,7 +46,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
-
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -60,7 +57,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
-
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
@@ -69,7 +65,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
-
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
@@ -78,6 +73,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <CardDescription>False Positives</CardDescription>
         </CardHeader>
       </Card>
-    </div>
+    </div>;
 );
 };

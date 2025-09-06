@@ -1,11 +1,11 @@
 {
   /* Robots Meta */ 
 }{
-  noindex && <meta name="robots" content="noindex" /> 
+  noindex && <meta name="robots" content="noindex" />
 }{
-  nofollow && <meta name="robots" content="nofollow" /> 
+  nofollow && <meta name="robots" content="nofollow" />
 }{
-  !noindex && !nofollow && <meta name="robots" content="index, follow" /> 
+  !noindex && !nofollow && <meta name="robots" content="index, follow" />
 }{
   /* Open Graph Meta Tags */ 
 }<meta property="og:title" content= {
@@ -32,25 +32,25 @@
   type === 'article' && (<> {
   publishedTime && <meta property="article:published time" content= {
   publishedTime 
-}/> 
+}/>
 }{
   modifiedTime && <meta property="article:modified time" content= {
   modifiedTime 
-}/> 
+}/>
 }{
   author && <meta property="article:author" content= {
   author 
-}/> 
+}/>
 }{
   section && <meta property="article:section" content= {
   section 
-}/> 
+}/>
 }{
   tags.map ( (tag, index) => (<meta key= {
   index 
 }property="article:tag" content= {
   tag 
-}/> 
+}/>
 }</>) 
 }{
   /* Structured Data */ 
@@ -121,7 +121,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta property='og:image' content={fullImage} />
       <meta property='og:site_name' content='Zion Tech Group' />
       <meta property='og:locale' content='en_US' />
-
       {/* Twitter Card Meta Tags */}
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:site' content='@ziontechgroup' />
@@ -129,7 +128,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name='twitter:title' content={fullTitle} />
       <meta name='twitter:description' content={description} />
       <meta name='twitter:image' content={fullImage} />
-
       {/* Article Specific Meta Tags */}
       {type === 'article' && (
         <>
@@ -160,7 +158,6 @@ const SEO: React.FC<SEOProps> = ({
         content='black-translucent'
       />
       <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
-
       {/* Structured Data */}
       <script
         type='application/ld+json'
@@ -218,10 +215,8 @@ const SEO: React.FC<SEOProps> = ({
           }),
         }}
       />
-
       {/* Canonical URL */}
       <link rel='canonical' href={fullUrl} />
-
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link
@@ -242,7 +237,6 @@ const SEO: React.FC<SEOProps> = ({
         href='/favicon-16x16.png'
       />
       <link rel='manifest' href='/site.webmanifest' />
-
       {/* Preconnect to external domains for performance */}
       <link rel='preconnect' href='https://fonts.googleapis.com' />
       <link
@@ -251,7 +245,6 @@ const SEO: React.FC<SEOProps> = ({
         crossOrigin='anonymous'
       />
       <link rel='preconnect' href='https://www.google-analytics.com' />
-
       {/* Additional Meta Tags for SEO */}
       <meta name='google-site-verification' content='your-verification-code' />
       <meta name='msvalidate.01' content='your-bing-verification-code' />
@@ -259,7 +252,6 @@ const SEO: React.FC<SEOProps> = ({
         name='yandex-verification'
         content='your-yandex-verification-code'
       />
-
       {/* Custom Meta Tags */}
       {structuredData && (
         <script

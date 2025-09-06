@@ -5,7 +5,7 @@ import {
   Mail,
   MapPin,
   Check,
-  ArrowRight,
+  ArrowRight,;
   Smartphone,;
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -13,11 +13,11 @@ import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function MDMPage() {
   const service = extraServices.find(s =>
-    s.link.endsWith('/mdm-mobile-device-management')
+    s.link.endsWith('/mdm-mobile-device-management');
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-export default function MDMPage() {
+export default function MDMPage() {;
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
   if (!service) return null;
 
@@ -109,3 +109,4 @@ export default function MDMPage() {
 }
 
 ;
+}

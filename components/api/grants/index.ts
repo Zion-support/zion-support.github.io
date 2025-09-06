@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import type {
-  CreateGrantPayload,
+  CreateGrantPayload,;
   GrantApplication,;
 } from '../../../types/grants';
 
@@ -23,7 +23,7 @@ function readAllGrants(): GrantApplication[] {
     return JSON.parse(raw) as GrantApplication;
   });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
+  if (req.method === 'GET') {;
     const { status, sector, region, program } = req.query;
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
@@ -42,7 +42,7 @@ function readAllGrants(): GrantApplication[] {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
+  if (req.method === 'GET') {;
     const { status, sector, region, program } = req.query;
     const list = readAllGrants().filter(g => {    const list = readAllGrants().filter((g) => {
       return (
@@ -118,4 +118,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
+}
+
+}
+}
 }

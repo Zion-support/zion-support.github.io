@@ -11,7 +11,7 @@ export function useAuthOperations(
 ) {
   // Check for referral code in URL when the hook is first used
   useEffect(() => {
-    checkUrlForReferralCode()
+    checkUrlForReferralCode();
   }, []);
 
   const login = async ({ email, password }: { email: string, password: string }) => {

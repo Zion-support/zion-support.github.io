@@ -11,12 +11,12 @@ import {
   ArrowRight,
   Play,
   AlertTriangle,
-  Clock,
+  Clock,;
   Database,;
 } from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap, Star } from 'lucide-react';
-export default function APITestingSuitePage() {
+export default function APITestingSuitePage() {;
   const [isTesting, setIsTesting] = useState(false);
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
@@ -245,13 +245,11 @@ export default function APITestingSuitePage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6'>
             <Code className='w-4 h-4 mr-2' />
@@ -266,7 +264,6 @@ export default function APITestingSuitePage() {
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
             secure.
           </p>
-
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
@@ -318,7 +315,6 @@ export default function APITestingSuitePage() {
               )}
             </Button>
           </div>
-
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
             <Button
               href='#pricing'
@@ -350,7 +346,6 @@ export default function APITestingSuitePage() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -363,7 +358,6 @@ export default function APITestingSuitePage() {
               APIs are reliable, performant, and secure.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -392,7 +386,6 @@ export default function APITestingSuitePage() {
               Our API testing suite provides everything you need to ensure your APIs are reliable, performant, and secure.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <Card
@@ -421,7 +414,6 @@ export default function APITestingSuitePage() {
           </div>
         </div>
       </section>
-
       {/* Test Types Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -434,7 +426,6 @@ export default function APITestingSuitePage() {
               highest standards of quality and reliability.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {testTypes.map((type, index) => (
               <Card
@@ -458,7 +449,6 @@ export default function APITestingSuitePage() {
               We cover all aspects of API testing to ensure your APIs meet the highest standards of quality and reliability.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testTypes.map((type, index) => (
               <Card
@@ -481,7 +471,6 @@ export default function APITestingSuitePage() {
           </div>
         </div>
       </section>
-
       {/* Demo Test Results */}
       {testResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -495,7 +484,6 @@ export default function APITestingSuitePage() {
                 your own API endpoints.
               </p>
             </div>
-
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8'>
               {/* Summary Card */}
               <Card className='border-gradient-indigo text-center'>
@@ -523,7 +511,6 @@ export default function APITestingSuitePage() {
                 Here's a sample API test result. Get comprehensive insights for your own API endpoints.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
               {/* Summary Card */}
               <Card className="border-gradient-indigo text-center">
@@ -543,7 +530,6 @@ export default function APITestingSuitePage() {
                   </div>
                 </div>
               </Card>
-
               {/* Test Results */}
               <Card className='border-gradient-indigo'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -583,7 +569,6 @@ export default function APITestingSuitePage() {
                   ))}
                 </div>
               </Card>
-
               {/* Performance Metrics */}
               <Card className='border-gradient-indigo'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -622,7 +607,6 @@ export default function APITestingSuitePage() {
                 </div>
               </Card>
             </div>
-
             {/* Recommendations */}
             <Card className='border-gradient-indigo'>
               <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -658,14 +642,12 @@ export default function APITestingSuitePage() {
               testing needs.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the API testing plan that best fits your development and testing needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <Card
@@ -697,7 +679,6 @@ export default function APITestingSuitePage() {
                   </div>
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -707,7 +688,6 @@ export default function APITestingSuitePage() {
                       <CheckCircle className='w-5 h-5 text-indigo-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -716,7 +696,6 @@ export default function APITestingSuitePage() {
                     </li>
                   ))}
                 </ul>
-
                 <Button
                   href='/contact'
                   size='lg'
@@ -734,7 +713,6 @@ export default function APITestingSuitePage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -769,4 +747,6 @@ export default function APITestingSuitePage() {
       </section>
     </>
 );
+}
+
 }

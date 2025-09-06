@@ -16,8 +16,8 @@ import {
   Check,
   ExternalLink,
   TrendingUp,
-  Shield,
-  Globe,;} from 'lucide-react';import { 
+  Shield,;
+  Globe,;} from 'lucide-react';import { ;
   Brain;
   MessageSquare, 
   Image, 
@@ -277,7 +277,7 @@ export default function AIBusinessToolsPage() {
       ],
       cons: ['Expensive', 'Complex interface', 'Steep learning curve'],
       bestFor: 'SEO specialists, content marketers, businesses',
-    },
+    },;
   ];
 
   const categories = [
@@ -315,7 +315,6 @@ export default function AIBusinessToolsPage() {
           content='Expert-curated selection of AI-powered business tools and SaaS services.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         <div className='absolute inset-0'>
@@ -323,9 +322,7 @@ export default function AIBusinessToolsPage() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]' />
         </div>
-
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <div className='mb-20 animate-fade-in'>
             <div className='mb-8'>
@@ -334,7 +331,6 @@ export default function AIBusinessToolsPage() {
                 AI-Powered Business Solutions
               </div>
             </div>
-
             <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
               AI Business Tools
             </h1>
@@ -343,7 +339,6 @@ export default function AIBusinessToolsPage() {
               selection of the best AI-powered SaaS services for modern
               enterprises.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               <Button
                 href='#tools'
@@ -367,7 +362,6 @@ export default function AIBusinessToolsPage() {
               </Button>
             </div>
           </div>
-
           {/* Stats */}
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
@@ -420,7 +414,6 @@ export default function AIBusinessToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -443,7 +436,6 @@ export default function AIBusinessToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Tools Grid */}
       <section id='tools' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -458,7 +450,6 @@ export default function AIBusinessToolsPage() {
                 : `Explore the best ${selectedCategory.toLowerCase()} tools to enhance your business capabilities.`}
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
               <Card
@@ -486,7 +477,6 @@ export default function AIBusinessToolsPage() {
                         </span>
                       </div>
                     </div>
-
                     <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>
                       <span className='px-2 py-1 bg-gray-800 rounded-full'>
                         {tool.category}
@@ -494,11 +484,9 @@ export default function AIBusinessToolsPage() {
                       <span>{tool.users} users</span>
                       <span className='text-green-400'>{tool.pricing}</span>
                     </div>
-
                     <p className='text-gray-400 leading-relaxed mb-4'>
                       {tool.description}
                     </p>
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -517,14 +505,12 @@ export default function AIBusinessToolsPage() {
                           ))}
                       </div>
                     </div>
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Best For:
                       </h4>
                       <p className='text-sm text-gray-400'>{tool.bestFor}</p>
                     </div>
-
                     <div className='flex items-center justify-between'>
                       <Button
                         href={tool.website}
@@ -535,14 +521,13 @@ export default function AIBusinessToolsPage() {
                         Visit Website
                         <ExternalLink className='w-4 h-4 ml-2' />
                       </Button>
-
                       <div className='text-right'>
                         <div className='text-xs text-gray-500 mb-1'>
                           Use Case:
                         </div>
                         <div className='text-sm text-gray-300 max-w-xs'>
                           {tool.useCase}
-                        </div>                      </div>                      
+                        </div>                      </div>
                       <div className="text-right">
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>
                         <div className="text-sm text-gray-300 max-w-xs">{tool.useCase}</div>
@@ -554,7 +539,6 @@ export default function AIBusinessToolsPage() {
           </div>
         </div>
       </section>
-
       {/* AI Benefits Section */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -567,7 +551,6 @@ export default function AIBusinessToolsPage() {
               create content, and serve customers.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card className='text-center'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600'>
@@ -582,7 +565,6 @@ export default function AIBusinessToolsPage() {
                 complete.
               </p>
             </Card>
-
             <Card className='text-center'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600'>
                 <TrendingUp className='w-8 h-8 text-white' />
@@ -596,7 +578,6 @@ export default function AIBusinessToolsPage() {
                 decision-making.
               </p>
             </Card>
-
             <Card className='text-center'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>
                 <Users className='w-8 h-8 text-white' />
@@ -612,7 +593,6 @@ export default function AIBusinessToolsPage() {
               AI-powered tools are revolutionizing how businesses operate, create content, and serve customers.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">
@@ -623,7 +603,6 @@ export default function AIBusinessToolsPage() {
                 AI tools can automate repetitive tasks, generate content, and provide insights that would take humans hours or days to complete.
               </p>
             </Card>
-
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600">
                 <TrendingUp className="w-8 h-8 text-white" />
@@ -633,7 +612,6 @@ export default function AIBusinessToolsPage() {
                 AI analytics provide deep insights into customer behavior, market trends, and business performance for better decision-making.
               </p>
             </Card>
-
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600">
                 <Users className="w-8 h-8 text-white" />
@@ -646,7 +624,6 @@ export default function AIBusinessToolsPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -682,4 +659,7 @@ export default function AIBusinessToolsPage() {
       </section>
     </>
 );
+}
+
+}
 }

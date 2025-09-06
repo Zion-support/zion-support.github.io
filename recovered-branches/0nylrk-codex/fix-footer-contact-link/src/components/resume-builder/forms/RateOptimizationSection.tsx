@@ -14,7 +14,7 @@ interface RateOptimizationSectionProps {
   rateType: "hourly" | "fixed"
 }
 
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
   control;
   setValue;
   skills;

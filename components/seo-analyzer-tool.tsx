@@ -11,10 +11,10 @@ import {
   Target,
   BarChart3,
   Globe,
-  Smartphone,
+  Smartphone,;
   Zap,;
 } from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
-export default function SEOAnalyzerToolPage() {
+export default function SEOAnalyzerToolPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
@@ -279,13 +279,11 @@ export default function SEOAnalyzerToolPage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6'>
             <Search className='w-4 h-4 mr-2' />
@@ -300,7 +298,6 @@ export default function SEOAnalyzerToolPage() {
             recommendations to improve your search rankings and drive more
             organic traffic.
           </p>
-
           {/* URL Input */}
           <div className='max-w-2xl mx-auto mb-8'>
             <div className='flex flex-col sm:flex-row gap-4'>
@@ -323,13 +320,11 @@ export default function SEOAnalyzerToolPage() {
                 ) : (
                   <>
                     <Search className='w-5 h-5 mr-2' />                    Analyze SEO      </Head>
-
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.06),transparent_50%)]" />
         <div className="absolute inset-0 bg-grid opacity-10" />
-        
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
             <Search className="w-4 h-4 mr-2" />
@@ -341,7 +336,6 @@ export default function SEOAnalyzerToolPage() {
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
           </p>
-          
           {/* URL Input */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="flex flex-col sm:flex-row gap-4">
@@ -372,7 +366,6 @@ export default function SEOAnalyzerToolPage() {
               </Button>
             </div>
           </div>
-
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
             <Button
               href='#pricing'
@@ -404,7 +397,6 @@ export default function SEOAnalyzerToolPage() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -417,7 +409,6 @@ export default function SEOAnalyzerToolPage() {
               you dominate search rankings.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -446,7 +437,6 @@ export default function SEOAnalyzerToolPage() {
               Our SEO analyzer provides comprehensive insights and tools to help you dominate search rankings.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <Card
@@ -475,7 +465,6 @@ export default function SEOAnalyzerToolPage() {
           </div>
         </div>
       </section>
-
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -488,7 +477,6 @@ export default function SEOAnalyzerToolPage() {
               actionable insights and recommendations.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoFactors.map((category, index) => (
               <Card
@@ -514,7 +502,6 @@ export default function SEOAnalyzerToolPage() {
               We analyze every aspect of your website's SEO to provide actionable insights and recommendations.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {seoFactors.map((category, index) => (
               <Card
@@ -539,7 +526,6 @@ export default function SEOAnalyzerToolPage() {
           </div>
         </div>
       </section>
-
       {/* Demo Analysis Results */}
       {analysisResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -553,7 +539,6 @@ export default function SEOAnalyzerToolPage() {
                 insights for your own website.
               </p>
             </div>
-
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8'>
               {/* Overall Score */}
               <Card className='border-gradient-green text-center'>
@@ -582,7 +567,6 @@ export default function SEOAnalyzerToolPage() {
                   Good SEO foundation with room for improvement
                 </p>
               </Card>
-
               {/* Detailed Scores */}
               <Card className='border-gradient-green'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -617,7 +601,6 @@ export default function SEOAnalyzerToolPage() {
                 Here's a sample analysis of a website. Get comprehensive insights for your own website.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
               {/* Overall Score */}
               <Card className="border-gradient-green text-center">
@@ -637,7 +620,6 @@ export default function SEOAnalyzerToolPage() {
                 </div>
                 <p className="text-gray-400">Good SEO foundation with room for improvement</p>
               </Card>
-
               {/* Detailed Scores */}
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Detailed Scores</h3>
@@ -660,7 +642,6 @@ export default function SEOAnalyzerToolPage() {
                   </div>
                 </div>
               </Card>
-
               {/* Issues */}
               <Card className='border-gradient-green'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -698,7 +679,6 @@ export default function SEOAnalyzerToolPage() {
                 </div>
               </Card>
             </div>
-
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               <Card className='border-gradient-green'>
@@ -720,7 +700,6 @@ export default function SEOAnalyzerToolPage() {
                   ))}
                 </div>
               </Card>
-
               <Card className='border-gradient-green'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
                   Keyword Opportunities
@@ -780,14 +759,12 @@ export default function SEOAnalyzerToolPage() {
               and goals.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the SEO analysis plan that best fits your business needs and goals.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <Card
@@ -819,7 +796,6 @@ export default function SEOAnalyzerToolPage() {
                   </div>
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -829,7 +805,6 @@ export default function SEOAnalyzerToolPage() {
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -838,7 +813,6 @@ export default function SEOAnalyzerToolPage() {
                     </li>
                   ))}
                 </ul>
-
                 <Button
                   href='/contact'
                   size='lg'
@@ -856,7 +830,6 @@ export default function SEOAnalyzerToolPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />

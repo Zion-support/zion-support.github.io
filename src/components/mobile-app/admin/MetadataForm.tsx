@@ -19,8 +19,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
         e.currentTarget.value = ""
       }
     }
-  }
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000
+  };
+  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
 };  const removeKeyword = (keyword: string,) => {
     setValue(
       "keywords",
@@ -108,7 +108,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                 onKeyDown = {addKeyword,}
                 className="mb-2"
               />
-              
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index,) => (
                   <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
@@ -128,7 +127,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                 Add keywords to improve discoverability (max 100 characters total)
               </FormDescription>
             </div>
-            
             <FormField
               control = {control,}
               name="version"

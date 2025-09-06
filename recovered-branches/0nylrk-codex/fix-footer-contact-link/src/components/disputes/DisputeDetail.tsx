@@ -17,7 +17,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {toast} from "sonner";
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
+  // type argument and cast the result instead to prevent TS2347 errors.;
   const { disputeId } = useParams() as { disputeId?: string };
   const navigate = useNavigate();
   const { user } = useAuth();
@@ -155,7 +155,6 @@ export function DisputeDetail() {
             Reported {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
           </p>
         </div>
-        
         <div className="flex gap-2">
           <Button variant="outline" onClick={() => navigate("/dashboard/disputes")}>
             Back to List
@@ -167,7 +166,6 @@ export function DisputeDetail() {
           )}
         </div>
       </div>
-
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
@@ -187,7 +185,6 @@ export function DisputeDetail() {
               <TabsTrigger value="attachments">Attachments</TabsTrigger>
               {isAdmin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
             </TabsList>
-            
             <TabsContent value="overview" className="space-y-6">
               <Card>
                 <CardHeader>
@@ -199,18 +196,15 @@ export function DisputeDetail() {
                     <h3 className="font-medium">Reason</h3>
                     <p>{disputeReasonLabels[dispute.reason_code as any] || dispute.reason_code}</p>
                   </div>
-                  
                   <div>
                     <h3 className="font-medium">Description</h3>
                     <p className="whitespace-pre-wrap">{dispute.description}</p>
                   </div>
-                  
                   <div>
                     <h3 className="font-medium">Project</h3>
                     <p>{dispute.project?.title || "Unknown Project"}</p>
                     <p className="text-sm text-muted-foreground">{dispute.project?.scope_summary}</p>
                   </div>
-                  
                   {dispute.milestone_id && (
                     <div>
                       <h3 className="font-medium">Related Milestone</h3>
@@ -225,7 +219,6 @@ export function DisputeDetail() {
                         <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">1</Badge>
                         <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>
                       </li>
-                      
                       {dispute.status !== "open" && (
                         <li className="flex gap-2 items-center">
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>
@@ -245,7 +238,6 @@ export function DisputeDetail() {
                   </div>
                 </CardContent>
               </Card>
-              
               {dispute.status === "resolved" && (
                 <Card>
                   <CardHeader>
@@ -253,7 +245,6 @@ export function DisputeDetail() {
                   </CardHeader>
                   <CardContent>
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
-                    
                     {dispute.resolution_type && (
                       <div className="mt-4">
                         <Badge>
@@ -265,7 +256,6 @@ export function DisputeDetail() {
                 </Card>
               )}
             </TabsContent>
-            
             <TabsContent value="messages" className="space-y-6">
               <Card>
                 <CardHeader>
@@ -336,7 +326,6 @@ export function DisputeDetail() {
                 </CardFooter>
               </Card>
             </TabsContent>
-            
             <TabsContent value="attachments">
               <Card>
                 <CardHeader>
@@ -351,7 +340,6 @@ export function DisputeDetail() {
                 </CardContent>
               </Card>
             </TabsContent>
-            
             {isAdmin && (
               <TabsContent value="admin" className="space-y-6">
                 <Card>
@@ -386,7 +374,6 @@ export function DisputeDetail() {
                         </Button>
                       </div>
                     </div>
-                    
                     {dispute.status !== "resolved" && (
                       <div>
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>
@@ -413,7 +400,6 @@ export function DisputeDetail() {
                               </select>
                             </div>
                           </div>
-                          
                           <Button onClick={handleResolveDispute}>Resolve Dispute</Button>
                         </div>
                       </div>
@@ -450,7 +436,6 @@ export function DisputeDetail() {
                           <p className="text-sm text-muted-foreground italic">No admin notes yet</p>
                         )}
                       </div>
-                      
                       <div className="mt-4 space-y-4">
                         <Textarea
                           placeholder="Add an admin note (only visible to administrators)..."
@@ -478,7 +463,6 @@ export function DisputeDetail() {
             )}
           </Tabs>
         </div>
-        
         <div className="space-y-6">
           <Card>
             <CardHeader>
@@ -497,11 +481,9 @@ export function DisputeDetail() {
                   </p>
                 </div>
               </div>
-              
               <div className="flex justify-center">
                 <ArrowDown className="h-6 w-6 text-muted-foreground" />
               </div>
-              
               <div className="flex items-start gap-4">
                 <Avatar className="h-10 w-10">
                   <AvatarImage src={dispute.talent_profile?.avatar_url} />
@@ -516,7 +498,6 @@ export function DisputeDetail() {
               </div>
             </CardContent>
           </Card>
-          
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>

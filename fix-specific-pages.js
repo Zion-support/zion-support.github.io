@@ -99,6 +99,6 @@ if (require.main === module) {
 module.exports = {
   restorePage,
   fixSpecificPages,
-  findBestBackup
+  findBestBackup;
 },;
 

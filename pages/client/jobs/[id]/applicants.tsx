@@ -6,7 +6,7 @@ import Link from 'next/link';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 
 export default function JobApplicantsPage() {
-  const router = useRouter(),
+  const router = useRouter(),;
   const { id } = router.query;
   const { data: appsData } = useSWR(
     id ? `/api/applications?jobId=${id}` : null,
@@ -51,3 +51,5 @@ export default function JobApplicantsPage() {
       </div>
     </div>
 );
+
+}

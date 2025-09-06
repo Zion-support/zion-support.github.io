@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -29,5 +29,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Coach error' })
-  }
+  };
 };

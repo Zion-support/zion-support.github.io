@@ -9,7 +9,7 @@ interface AIEnhancementButtonProps {
   onEnhanced: (enhancedContent: string) => void,
   buttonText?: string
   className?: string
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
 }
 
@@ -117,7 +117,7 @@ export function AIEnhancementButton({
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>
-  )
+  );
 };"
 <Button type="button" variant="ghost" size="sm" onClick={
   handleAccept "

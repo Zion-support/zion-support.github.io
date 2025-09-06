@@ -12,7 +12,7 @@ interface ResumeVersionSelectorProps {
   onResumeChange: (resumeId: string) => void
 }
 
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState('');
@@ -63,7 +63,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-      
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>

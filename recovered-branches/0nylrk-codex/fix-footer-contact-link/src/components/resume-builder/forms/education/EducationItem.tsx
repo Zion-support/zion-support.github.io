@@ -53,3 +53,4 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
     </Card>
   )
 }
+;

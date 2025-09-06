@@ -1554,3 +1554,5 @@ export default function News() {;
   );
 }
 ;
+}
+}

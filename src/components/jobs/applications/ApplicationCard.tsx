@@ -24,7 +24,7 @@ import { useState } from "react"
 import { formatDistanceToNow } from "date-fns"
 import { JobApplication } from "@/types/jobs"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react'; import Link from "next/link"
 import { StatusBadge } from "./StatusBadge"
 import { ApplicationProgress } from "./ApplicationProgress"
@@ -96,10 +96,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           <StatusBadge status={application.status} />
         </div>
       </CardHeader>
-
       <CardContent className='pb-3'>
         <ApplicationProgress status={application.status} className='my-4' />
-
         {expanded && (
           <div className='mt-4 space-y-3'>
             {application.cover_letter && (
@@ -175,7 +173,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           </div>
         )}
       </CardContent>
-
       <CardFooter className='flex flex-col gap-3 pt-0'>
         <div className='flex justify-between items-center w-full'>
           <Button
@@ -193,7 +190,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             </Button>
           </div>
         </div>
-
         <Button variant='secondary' size='sm' className='w-full' asChild>
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client          </Link>          </Button>
@@ -210,7 +206,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             </Button>
           </div>
         </div>
-
         <Button variant='secondary' size='sm' className='w-full' asChild>
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client        
@@ -239,6 +234,8 @@ default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3
 }% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>) 
 }</div>) "
 }</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) 
-}"
-}
+}";
+};
 ;
+}
+}

@@ -41,7 +41,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     process.cwd(),
     "public",
     "automations",
-    "top-talents.json",
+    "top-talents.json",;
   );
   let items: TalentItem[] = [];
   try {

@@ -5,12 +5,12 @@ import {Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle} from
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
-export interface MobileMenuProps {
+export interface MobileMenuProps {;
   unreadCount?: number;
   onClose: () => void
 }
 
-export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
+export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
@@ -71,7 +71,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
           <X className="h-5 w-5" />
         </Button>
       </div>
-      
       <nav className="space-y-1">
         {visibleItems.map(item => (
           <Link

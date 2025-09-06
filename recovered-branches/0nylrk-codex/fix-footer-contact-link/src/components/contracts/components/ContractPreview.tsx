@@ -16,7 +16,7 @@ interface ContractPreviewProps {
   deploymentInfo?: SmartContractInfo | null
 }
 
-export function ContractPreview({ 
+export function ContractPreview({ ;
   contractContent;
   generatedContract, 
   status = 'ready', 
@@ -52,7 +52,6 @@ export function ContractPreview({
           <Badge variant="outline">Draft</Badge>
         )}
       </div>
-      
       {/* Contract content */}
       <div className="border rounded-lg p-6 bg-muted/50">
         {/* Render the contract content as markdown or formatted text */}
@@ -60,7 +59,6 @@ export function ContractPreview({
           {displayContent}
         </div>
       </div>
-
       {/* Deployment info if available */}
       {deploymentInfo && (
         <div className="mt-4 p-4 bg-primary/10 rounded-lg">

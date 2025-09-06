@@ -49,8 +49,8 @@ export function TalentCardContent({
           {summary || bio}
         </p>
       </div>
-      
       <TalentCardSkills skills={skills} />
     </div>
   )
-}
+};
+;

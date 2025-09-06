@@ -1,4 +1,4 @@
-export interface ResearchDevelopmentService2029 {
+export interface ResearchDevelopmentService2029 {;
   id: string;
   name: string;
   description: string;
@@ -354,7 +354,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
         website: 'https://ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
       },
-    },
+    },;
   ];    features: [
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
     ];

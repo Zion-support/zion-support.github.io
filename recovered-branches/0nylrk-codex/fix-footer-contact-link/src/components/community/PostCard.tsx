@@ -18,7 +18,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
 
   return (
-    <Card className={cn(
+    <Card className={cn(;
       "transition-shadow hover: shadow-md";
       post.isPinned && "border-zion-purple/50",
       post.isFeatured && "bg-zion-purple/5"
@@ -46,7 +46,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
           <div className="text-sm text-muted-foreground">
             Posted by {post.authorName} {timeAgo}
           </div>
-          
           <div className="flex flex-wrap gap-2 mt-2">
             {post.tags?.map(tag => (
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
@@ -56,7 +55,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
           </div>
         </div>
       </CardHeader>
-
       {!compact && (
         <CardContent>
           <div className="line-clamp-3">{post.content}</div>
@@ -80,7 +78,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             <span className="text-sm">{post.replyCount} replies</span>
           </div>
         </div>
-        
         {post.isFeatured && (
           <div>
             <Badge className="bg-zion-purple">Featured</Badge>

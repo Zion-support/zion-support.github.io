@@ -10,7 +10,6 @@ export default function ServicesAdvertisingPage() {
 			<SEO title="Services Advertising | Zion Tech Group" description="Features, benefits, and market references for Zion Tech Group services" url="https://ziontechgroup.com/services-advertising/" />
 			<div className="max-w-6xl mx-auto space-y-10">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
-
   const benefits = [
     '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling',
     'Flexible deployment: SaaS or self-hosted options'
@@ -26,7 +25,6 @@ export default function ServicesAdvertisingPage() {
 						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</a></li>
 					</ul>
 				</section>
-
   const pricingRefs = [
     {
       title: 'AI Platforms',
@@ -125,7 +123,6 @@ export default function ServicesAdvertisingPage() {
 						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</a></li>
 					</ul>
 				</section>
-
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-12">
           <header className="text-center">
@@ -142,7 +139,6 @@ export default function ServicesAdvertisingPage() {
               </Button>
             </div>
           </header>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Real Micro SaaS</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,7 +160,6 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -178,7 +173,6 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
           </section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Browser Automation Cloud</h2>
 					<p className="text-slate-300">Scale Playwright/Puppeteer jobs with proxy pools, recorder-to-code and webhooks.</p>
@@ -188,7 +182,6 @@ export default function ServicesAdvertisingPage() {
 						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</a></li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">API Performance Testing</h2>
 					<p className="text-slate-300">Load, latency and regression testing with CI gates and dashboards.</p>
@@ -198,7 +191,6 @@ export default function ServicesAdvertisingPage() {
 						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</a></li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Email Deliverability Monitor</h2>
 					<p className="text-slate-300">DMARC/SPF/DKIM health, blocklists, and inbox placement with alerts.</p>
@@ -208,7 +200,6 @@ export default function ServicesAdvertisingPage() {
 						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</a></li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Podcast Transcription & Insights</h2>
 					<p className="text-slate-300">Transcripts, chapters, show notes, and SEO-ready blog pages.</p>
@@ -218,7 +209,6 @@ export default function ServicesAdvertisingPage() {
 						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</a></li>
 					</ul>
 				</section>
-
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Evaluation Orchestrator</h2>
 					<p className="text-slate-300">Automate LLM evals, regression tests, red-teaming, and leaderboards across OpenAI, Anthropic, Groq, and more.</p>
@@ -227,7 +217,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://openai.com/pricing')}, {ext('https://www.anthropic.com/pricing')}, {ext('https://openrouter.ai/models')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Vector Search Starter</h2>
 					<p className="text-slate-300">Production RAG starter with Pinecone/Weaviate/Elastic, eval harness, and observability.</p>
@@ -236,7 +225,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.pinecone.io/pricing/')}, {ext('https://console.weaviate.cloud/pricing')}, {ext('https://www.elastic.co/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="managed-postgres-ha" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Managed Postgres HA</h2>
 					<p className="text-slate-300">SRE-backed high availability Postgres with PITR backups, failover, and tuning.</p>
@@ -245,7 +233,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://cloud.google.com/sql/pricing')}, {ext('https://aws.amazon.com/rds/postgresql/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Guardrails & Safety</h2>
 					<p className="text-slate-300">Policy engine, PII detection, jailbreak protection, and audit logs for LLM apps.</p>
@@ -254,7 +241,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://platform.openai.com/docs/guides/safety-best-practices')}, {ext('https://github.com/guardrails-ai/guardrails')}</li>
 					</ul>
 				</section>
-				
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Identity & SSO/SCIM</h2>
 					<p className="text-slate-300">Enterprise SSO and user lifecycle with Okta/Auth0/WorkOS.</p>
@@ -263,7 +249,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://auth0.com/pricing')}, {ext('https://workos.com/pricing')}, {ext('https://www.okta.com/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">API Observability Starter</h2>
 					<p className="text-slate-300">Distributed tracing, golden signals dashboards, opinionated SLOs and alerting. Go live in under 60 minutes.</p>
@@ -272,7 +257,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.honeycomb.io/pricing/')}, {ext('https://www.datadoghq.com/pricing/')}, {ext('https://newrelic.com/pricing')}</li>
 					</ul>
 				</section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Micro SaaS & IT Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -307,7 +291,6 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Average Market Price Ranges</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -360,7 +343,6 @@ export default function ServicesAdvertisingPage() {
               <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Explore by Category</h2>
             <div className="flex flex-wrap items-center justify-center gap-3">
@@ -371,7 +353,6 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Contact Us</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -389,7 +370,6 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">More Featured Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -413,5 +393,5 @@ export default function ServicesAdvertisingPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}
+};
 ;

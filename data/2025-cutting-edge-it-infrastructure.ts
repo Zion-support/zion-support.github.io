@@ -355,7 +355,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       customers: 6,
       rating: 4.9,
       reviews: 4,
-    },
+    },;
   ];    features: [
       'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration';
       'Performance analytics24/7 network monitoring'

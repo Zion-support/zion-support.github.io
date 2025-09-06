@@ -18,7 +18,7 @@ interface JobPostingFormProps {
   onSuccess?: () => void
 }
 
-export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
+export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
@@ -124,16 +124,13 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
             Fill in the details below to create a job posting.
           </p>
         </div>
-
         <BasicInfoFields control={form.control} />
-        
         <DateFields 
           startDate={startDate} 
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
         />
-
         <div>
           <Label htmlFor="isRemote">
             <Input
@@ -146,13 +143,11 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
             Remote
           </Label>
         </div>
-
         <DescriptionFields 
           control={form.control} 
           handleEditorChange={handleEditorChange}
           editorContent={editorContent}
         />
-
         <Button type="submit" disabled={isSubmitting || isFormLoading}>
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
         </Button>

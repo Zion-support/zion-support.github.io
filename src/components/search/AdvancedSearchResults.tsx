@@ -136,11 +136,9 @@ const SearchResultCard: React.FC<{
             </div>
           )}
         </div>
-
         <p className='text-muted-foreground mb-3 line-clamp-2'>
           <HighlightText text={result.description} searchTerm={searchTerm} />
         </p>
-
         <div className='flex items-center justify-between'>
           <div className='flex gap-2 flex-wrap'>
             {result.category && (
@@ -153,7 +151,6 @@ const SearchResultCard: React.FC<{
               </Badge>
             ))}
           </div>
-
           {result.rating && (
             <div className='flex items-center gap-1'>
               <span className='text-yellow-500'>★</span>
@@ -208,9 +205,7 @@ const FilterSidebar: React.FC<{
           ))}
         </div>
       </div>
-
       <Separator />
-
       <div>
         <h3 className='font-semibold mb-3'>Category</h3>
         <Select
@@ -234,9 +229,7 @@ const FilterSidebar: React.FC<{
           </SelectContent>
         </Select>
       </div>
-
       <Separator />
-
       <div>
         <h3 className='font-semibold mb-3'>Price Range</h3>
         <div className='px-2'>
@@ -253,9 +246,7 @@ const FilterSidebar: React.FC<{
           </div>
         </div>
       </div>
-
       <Separator />
-
       <div>
         <h3 className='font-semibold mb-3'>Minimum Rating</h3>
         <Select
@@ -301,7 +292,6 @@ const NoResultsState: React.FC<{
           search or filters.
         </p>
       </div>
-
       <div className='max-w-md mx-auto space-y-4'>
         <div>
           <h3 className='font-semibold mb-3'>Search Suggestions:</h3>
@@ -317,7 +307,6 @@ const NoResultsState: React.FC<{
             ))}
           </div>
         </div>
-
         <div className='text-sm text-muted-foreground'>
           <p>Tips for better results:</p>
           <ul className='mt-2 space-y-1'>
@@ -351,8 +340,8 @@ export const AdvancedSearchResults: React.FC = () => {
     sort: 'relevance',
   })
   const suggestions = generateSearchSuggestions()
-  // Extract available categories from results for filter
-  const availableCategories = useMemo(() => {
+  // Extract available categories from results for filter;
+  const availableCategories = useMemo(() => {;
     const categories = new Set<string>();    results.forEach(result => {
       if (result.category) categories.add(result.category)
     })
@@ -477,7 +466,6 @@ export const AdvancedSearchResults: React.FC = () => {
             <Search className='h-4 w-4' />
           </Button>
         </div>
-
         {searchTerm && (
           <div className='flex items-center justify-between'>
             <div>
@@ -488,7 +476,6 @@ export const AdvancedSearchResults: React.FC = () => {
                   : `${totalCount} results for "${searchTerm}"`}
               </p>
             </div>
-
             <div className='flex items-center gap-2'>
               {/* Sort Options */}
               <Select
@@ -504,7 +491,6 @@ export const AdvancedSearchResults: React.FC = () => {
                   <SelectItem value='rating'>Highest Rated</SelectItem>
                 </SelectContent>
               </Select>
-
               {/* View Mode Toggle */}
               <div className='flex border rounded-md'>
                 <Button
@@ -520,7 +506,6 @@ export const AdvancedSearchResults: React.FC = () => {
                   <List className='h-4 w-4' />
                 </Button>
               </div>
-
               {/* Mobile Filter Toggle */}
               <Sheet open={showFilters} onOpenChange={setShowFilters}>
                 <SheetTrigger asChild>
@@ -547,7 +532,6 @@ export const AdvancedSearchResults: React.FC = () => {
           </div>
         )}
       </div>
-
       {searchTerm && (
         <div className='flex gap-6'>
           {/* Desktop Filters Sidebar */}
@@ -580,7 +564,6 @@ export const AdvancedSearchResults: React.FC = () => {
               />
             </div>
           </div>
-
           {/* Main Content */}
           <div className='flex-1'>
             {loading && results.length === 0 ? (
@@ -609,7 +592,6 @@ export const AdvancedSearchResults: React.FC = () => {
                     />
                   ))}
                 </div>
-
                 {/* Load More Button */}
                 {hasMore && (
                   <div className='text-center'>
@@ -643,7 +625,7 @@ export default AdvancedSearchResults
 }
 //Main Search Results Page Component setTotalCount (data.totalCount)
 setCurrentPage (data.page)
-setHasMore (data.hasMore)
+setHasMore (data.hasMore);
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
 }> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
   /* Mobile Filter Toggle */ 
@@ -697,3 +679,4 @@ export default AdvancedSearchResults
 '"
 export default AdvancedSearchResults, 
 export default AdvancedSearchResults,
+;

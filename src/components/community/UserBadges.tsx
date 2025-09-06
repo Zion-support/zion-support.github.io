@@ -18,4 +18,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
       {badges.map((badge,) => {
         // Get the correct icon component based on the badge's icon name
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy
-export default UserBadges
+export default UserBadges;
+}
+}
+}

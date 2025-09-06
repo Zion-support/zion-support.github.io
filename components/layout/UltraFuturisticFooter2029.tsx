@@ -23,9 +23,9 @@ import {
   Zap,
   Sparkles,
   Shield,
-  Cpu,
+  Cpu,;
   Database,;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight, Star, 
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, ;
   Rocket, Brain, Atom, Building, Briefcase, Microscope;
   Twitter, Facebook, Linkedin, Instagram, Youtube;
   Github, Zap, Sparkles, Shield, Cpu, Database
@@ -217,13 +217,11 @@ const UltraFuturisticFooter2029 = () => {
                 <p className='text-sm text-gray-400'>Innovating the Future</p>
               </div>
             </div>
-
             <p className='text-gray-400 mb-6 leading-relaxed'>
               Leading the revolution in AI, quantum computing, and autonomous
               technology solutions. Transforming businesses with cutting-edge
               innovation.
             </p>
-
             {/* Contact Information */}
             <div className='space-y-3 mb-6'>
               <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>
@@ -241,7 +239,6 @@ const UltraFuturisticFooter2029 = () => {
               <div className='flex items-center space-x-3 text-gray-400'>
                 <MapPin className='w-4 h-4' />
                 <span className='text-sm'>{contactInfo.address}</span>              </div>            </div>
-
             {/* Social Links */}
             <div className='flex space-x-4'>
               {socialLinks.map(social => (            {/* Contact Information */}
@@ -263,7 +260,6 @@ const UltraFuturisticFooter2029 = () => {
                 <span className="text-sm">{contactInfo.address}</span>
               </div>
             </div>
-
             {/* Social Links */}
             <div className='flex space-x-4'>
               {socialLinks.map(social => (
@@ -286,7 +282,6 @@ const UltraFuturisticFooter2029 = () => {
               ))}
             </div>
           </div>
-
           {/* Service Categories */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
@@ -325,7 +320,6 @@ const UltraFuturisticFooter2029 = () => {
               ))}
             </div>
           </div>
-
           {/* Quick Links */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
@@ -349,7 +343,6 @@ const UltraFuturisticFooter2029 = () => {
               ))}
             </div>
           </div>
-
           {/* Footer Sections */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>
@@ -384,7 +377,6 @@ const UltraFuturisticFooter2029 = () => {
           </div>
         </div>
       </div>
-
       {/* Bottom Footer */}
       <div className='border-t border-slate-700/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
@@ -392,7 +384,6 @@ const UltraFuturisticFooter2029 = () => {
             <div className='text-sm text-gray-400'>
               © 2025 Zion Tech Group. All rights reserved.
             </div>
-
             <div className='flex items-center space-x-6 text-sm text-gray-400'>
               <Link
                 href='/privacy'
@@ -411,7 +402,6 @@ const UltraFuturisticFooter2029 = () => {
                 className='hover:text-white transition-colors'
               >                Cookie Policy              © 2025 Zion Tech Group. All rights reserved.
             </div>
-            
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <Link href="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
@@ -426,7 +416,6 @@ const UltraFuturisticFooter2029 = () => {
           </div>
         </div>
       </div>
-
       {/* Newsletter Signup */}
       <div className='bg-gradient-to-r from-purple-600/10 to-blue-600/10 border-t border-slate-700/50'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
@@ -439,7 +428,6 @@ const UltraFuturisticFooter2029 = () => {
               technology. Join our newsletter for exclusive updates and industry
               insights.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto'>
               <input
                 type='email'
@@ -452,7 +440,6 @@ const UltraFuturisticFooter2029 = () => {
               Get the latest insights on AI, quantum computing, and autonomous technology. 
               Join our newsletter for exclusive updates and industry insights.
             </p>
-            
             <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
@@ -474,3 +461,5 @@ export default UltraFuturisticFooter2029;  )
 };
 
 export default UltraFuturisticFooter2029;
+
+}

@@ -25,7 +25,7 @@ export default function FeaturesPage() {
             Track deliverables and approvals anywhere.
           </p>        </div>
       </div>
-    </EnhancedLayout>
+    </EnhancedLayout>;
   );
 }        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <MonitorSmartphone className="h-6 w-6 text-indigo-500" />

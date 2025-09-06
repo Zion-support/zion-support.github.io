@@ -56,7 +56,6 @@ export function FeatureHighlights({
             features to help you succeed
           </p>
         </div>
-
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           {highlightsData.map((category, index) => (
             <Card
@@ -235,4 +234,5 @@ export function FeatureHighlights() {
   )}
 
 '"`
-)
+);
+;

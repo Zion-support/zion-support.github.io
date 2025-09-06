@@ -11,7 +11,7 @@ interface EnhancedSearchInputProps {
   searchSuggestions: SearchSuggestion[]
 }
 
-export function EnhancedSearchInput({ 
+export function EnhancedSearchInput({ ;
   value;
   onChange, 
   placeholder = "Search...", 
@@ -86,7 +86,6 @@ export function EnhancedSearchInput({
           </button>
         )}
       </div>
-      
       <AutocompleteSuggestions
         suggestions={filteredSuggestions}
         searchTerm={value}

@@ -28,7 +28,7 @@ import { cn } from '@/lib/utils'
 interface FeatureCTAsProps {
   className?: string
   style?: React.CSSProperties
-export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
+export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
   const { t } = useTranslation();  const features = [    {
       key: 'ai_talent_matching',
       descriptionKey: 'ai_talent_matching_desc',
@@ -198,7 +198,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
             {t('home.features_subheading')}
           </p>
         </div>
-
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {features.map((feature, index) => (
             <Card
@@ -233,7 +232,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
             {t('home.features_subheading')}
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">
@@ -296,3 +294,5 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
   );  )
 }
 ;
+}
+}

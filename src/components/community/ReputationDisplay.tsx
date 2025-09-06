@@ -81,4 +81,6 @@ export default ReputationDisplay
   )
 }
 export default ReputationDisplay
-'
+';
+;
+}

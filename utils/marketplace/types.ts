@@ -1,5 +1,5 @@
 // Marketplace types
-export interface Offer {
+export interface Offer {;
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -13,7 +13,7 @@ export interface Offer {
   projectId?: string;
 }
 
-export interface PaymentTerms {
+export interface PaymentTerms {;
   type: 'hourly' | 'fixed' | 'milestone';
   amount?: number;
   currency?: string;
@@ -24,7 +24,7 @@ export interface PaymentTerms {
   }>;
 }
 
-export interface Project {
+export interface Project {;
   id: string;
   title: string;
   summary: string;
@@ -37,14 +37,14 @@ export interface Project {
   notes: ProjectNote[];
 }
 
-export interface ProjectDocument {
+export interface ProjectDocument {;
   id: string;
   name: string;
   url?: string;
   uploadedAtIso: string;
 }
 
-export interface ProjectNote {
+export interface ProjectNote {;
   id: string;
   authorId: string;
   authorRole: string;

@@ -44,7 +44,6 @@ export function EnterpriseTestimonials() {
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>            See how enterprise teams are transforming their hiring process
           </p>
         </div>
-
         <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
     author: "Elena Rodriguez",
     title: "CTO",
@@ -62,7 +61,6 @@ export function EnterpriseTestimonials() {
             See how enterprise teams are transforming their hiring process
           </p>
         </div>
-
         <Carousel className='w-full'>
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
@@ -104,6 +102,7 @@ export function EnterpriseTestimonials() {
         </Carousel>
       </div>
     </section>
-  )
-}
+  );
+};
 ;
+}

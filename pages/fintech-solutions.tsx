@@ -22,4 +22,4 @@ export default function FintechSolutions() {
 			canonical="https: //ziontechgroup.com/fintech-solutions"
 		/>
 	)
-}
+};

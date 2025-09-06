@@ -13,7 +13,7 @@ interface PricingSuggestionBoxProps {
   rateType: "hourly" | "fixed"
 }
 
-export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
+export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   suggestion;
   isLoading;
   onApplySuggestion,
@@ -51,7 +51,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             {suggestion.confidence} confidence
           </Badge>
         </div>
-
         <div className="bg-muted/50 rounded-md p-3 text-center">
           <span className="text-2xl font-bold">
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
@@ -60,12 +59,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             {rateType === "hourly" ? "/hour" : " total"}
           </span>
         </div>
-
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
           <p>{suggestion.explanation}</p>
         </div>
-
         <div className="flex items-center justify-between">
           <TooltipProvider>
             <Tooltip>
@@ -84,7 +81,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             </Tooltip>
           </TooltipProvider>
         </div>
-        
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
         </p>

@@ -12,7 +12,7 @@ interface AIMatchmakerProps {
   className?: string
 }
 
-export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
+export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
   const [matches, setMatches] = useState([] as MatchResult[]);
@@ -107,7 +107,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
               )}
             </Button>
           </div>
-          
           {hasSearched && (
             <AIMatchingResults 
               matches={matchItems}

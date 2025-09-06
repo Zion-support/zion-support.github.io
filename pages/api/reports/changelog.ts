@@ -11,7 +11,7 @@ const p = path.join(
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
-    try {
+    try {;
       const data = fs.readFileSync(p, 'utf8');
       const changelog = JSON.parse(data);
       return res.status(200).json(changelog);

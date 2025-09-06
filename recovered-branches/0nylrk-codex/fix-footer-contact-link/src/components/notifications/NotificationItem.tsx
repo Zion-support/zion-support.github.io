@@ -11,7 +11,7 @@ import {useNavigate} from 'react-router-dom';
 import {Notification, NotificationType} from '@/context/notifications';
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
-    case 'message':
+    case 'message':;
       return <span className="text-blue-500">💬</span>;
     case 'quote_request':
       return <span className="text-purple-500">📝</span>;
@@ -38,7 +38,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification, 
   onMarkAsRead, 
   onDismiss 
-}) => {
+}) => {;
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -72,7 +72,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
             <p className="text-xs text-zion-slate">
               {notification.created_at ? formatDistanceToNow(new Date(notification.created_at), { addSuffix: true }) : "Just now"}
             </p>
-            
             {notification.action_url && notification.action_text && (
               <Button
                 variant="link"
@@ -87,7 +86,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
           </div>
         </div>
       </div>
-      
       {/* Action buttons that appear on hover */}
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">
         <TooltipProvider>
@@ -110,7 +108,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-        
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>

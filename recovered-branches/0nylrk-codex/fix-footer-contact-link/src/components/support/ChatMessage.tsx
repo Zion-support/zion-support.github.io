@@ -10,7 +10,7 @@ interface ChatMessageProps {
   timestamp: Date
 }
 
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
+export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
   const { theme } = useTheme();
   
   return (
@@ -31,7 +31,6 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
           </>
         )}
       </Avatar>
-      
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm";
         isUser 

@@ -30,7 +30,6 @@ export function OnboardingTracker({
         <h3 className="text-lg font-medium text-white">{title}</h3>
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>
       </div>
-      
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
         <div 
@@ -38,7 +37,6 @@ export function OnboardingTracker({
           style={{ width: `${progress}%` }}
         ></div>
       </div>
-      
       {/* Steps list */}
       <div className="space-y-3">
         {steps.map((step,) => (
@@ -83,4 +81,5 @@ export function OnboardingTracker({
 }> </Link> </Button>) 
 }</div>) ) 
 }</div> </div>) 
-}"}
+}"};
+;

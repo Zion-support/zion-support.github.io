@@ -18,5 +18,5 @@ export default function HfModelsPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  )
+  );
 };

@@ -6,7 +6,7 @@ import {
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
   Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2
-} from 'lucide-react',
+} from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
 import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3',;
@@ -82,11 +82,8 @@ export default function Comprehensive2025ServicesShowcase() {
         <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
-      
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Comprehensive 2025 Innovative Services Showcase — Zion Tech Group","url":"https://ziontechgroup.com/comprehensive-2025-services-showcase","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -116,7 +113,6 @@ export default function Comprehensive2025ServicesShowcase() {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-8 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
@@ -132,7 +128,6 @@ export default function Comprehensive2025ServicesShowcase() {
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
               />
             </div>
-
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -149,7 +144,6 @@ export default function Comprehensive2025ServicesShowcase() {
                 </button>
               ))}
             </div>
-
             {/* View Mode and Sort */}
             <div className="flex items-center gap-4">
               <div className="flex items-center bg-white/10 rounded-lg p-1">
@@ -170,7 +164,6 @@ export default function Comprehensive2025ServicesShowcase() {
                   <List className="w-5 h-5" />
                 </button>
               </div>
-
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
@@ -185,7 +178,6 @@ export default function Comprehensive2025ServicesShowcase() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
@@ -222,7 +214,6 @@ export default function Comprehensive2025ServicesShowcase() {
                     <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
                   </div>
                 </div>
-
                 {/* Price and Rating */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
@@ -235,10 +226,8 @@ export default function Comprehensive2025ServicesShowcase() {
                     <span className="text-white/60 text-sm">({service.reviews})</span>
                   </div>
                 </div>
-
                 {/* Description */}
                 <p className="text-white/80 leading-relaxed mb-6">{service.description}</p>
-
                 {/* Key Features */}
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
@@ -256,7 +245,6 @@ export default function Comprehensive2025ServicesShowcase() {
                     )}
                   </div>
                 </div>
-
                 {/* Market Info */}
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                   <div>
@@ -268,7 +256,6 @@ export default function Comprehensive2025ServicesShowcase() {
                     <div className="text-white font-medium">{service.growthRate}</div>
                   </div>
                 </div>
-
                 {/* ROI and Setup */}
                 <div className="mb-6 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">
                   <div className="text-cyan-400 font-semibold mb-2">🚀 Expected ROI:</div>
@@ -277,7 +264,6 @@ export default function Comprehensive2025ServicesShowcase() {
                     Setup Time: {service.setupTime} | Trial: {service.trialDays} days
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
@@ -293,7 +279,6 @@ export default function Comprehensive2025ServicesShowcase() {
                     Contact Sales
                   </button>
                 </div>
-
                 {/* Contact Info */}
                 <div className="mt-6 pt-4 border-t border-white/10 text-center">
                   <div className="text-white/60 text-sm mb-2">Ready to get started?</div>
@@ -309,7 +294,6 @@ export default function Comprehensive2025ServicesShowcase() {
               </motion.div>
             ))}
           </motion.div>
-
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
@@ -329,7 +313,6 @@ export default function Comprehensive2025ServicesShowcase() {
           )}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-4xl mx-auto text-center">
@@ -364,8 +347,7 @@ export default function Comprehensive2025ServicesShowcase() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
-  )
+  );
 };

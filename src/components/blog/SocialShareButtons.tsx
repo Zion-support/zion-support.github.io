@@ -72,6 +72,6 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
       ))}
     </div>
   )
-}
-}
+};
+};
 ;

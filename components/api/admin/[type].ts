@@ -49,7 +49,7 @@ function toCsv(rows: any[]): string {
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {
+) {;
   const type = (req.query.type as AdminType) || '';
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  };
@@ -57,7 +57,7 @@ export default async function handler(
   return lines.join('\n')
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const type = (req.query.type as AdminType) || '';
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
 

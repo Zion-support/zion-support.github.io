@@ -5,7 +5,7 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
-export async function createNotification({
+export async function createNotification({;
   userId;
   title;
   message;
@@ -56,7 +56,7 @@ export async function createNotification({
 /**
  * Creates a hire request notification for admin and talent
  */
-export async function createHireRequestNotifications({
+export async function createHireRequestNotifications({;
   talentId;
   adminId;
   requesterName;
@@ -122,7 +122,7 @@ export async function createHireRequestNotifications({
 /**
  * Creates an onboarding notification for a user
  */
-export async function createOnboardingNotification({
+export async function createOnboardingNotification({;
   userId;
   missingMilestone;
   userRole
@@ -194,7 +194,7 @@ export async function createOnboardingNotification({
 /**
  * Creates a system notification for a user
  */
-export async function createSystemNotification({
+export async function createSystemNotification({;
   userId;
   title;
   message;
@@ -223,7 +223,7 @@ export async function createSystemNotification({
 /**
  * Demo function to create test notifications for the current user
  */
-export async function createTestNotification(userId: string) {
+export async function createTestNotification(userId: string) {;
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
   const randomType = types[Math.floor(Math.random() * types.length)],
   

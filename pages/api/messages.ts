@@ -4,7 +4,7 @@ import { readJsonFile, writeJsonFile } from "../../utils/db";
 import type { Conversation, Message } from "../../utils/types";
 import { rateLimit } from "../../utils/rateLimit";
 const FILE = "conversations.json";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!rateLimit(req, res)) return;
   if (req.method === "POST") {
     const { conversationId, sender, text, attachments } = req.body || {};

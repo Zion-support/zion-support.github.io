@@ -30,7 +30,7 @@ function SlidePreview({
     </button>
   );
 
-export const getServerSideProps: GetServerSideProps = async ctx => {
+export const getServerSideProps: GetServerSideProps = async ctx => {;
   const result = await requireAdminRole(ctx);
   // @ts-ignore
   if ('redirect' in result) return result;
@@ -44,7 +44,7 @@ export default function PitchGenerator() {
     vision: '',
     roundType: '',
     targetRaise: '',
-    assets: [],
+    assets: [],;
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -282,7 +282,6 @@ export default function PitchGenerator() {
             </button>
           </div>
         </div>
-
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           <div className='lg:col-span-1 space-y-4'>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
@@ -349,7 +348,6 @@ export default function PitchGenerator() {
                 </div>
               </div>
             </div>
-
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>Auto Data</div>
               <button
@@ -366,7 +364,6 @@ export default function PitchGenerator() {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
-
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>History</div>
               <div className='text-xs text-gray-500 dark:text-gray-400'>
@@ -386,7 +383,6 @@ export default function PitchGenerator() {
               </ul>
             </div>
           </div>
-
           <div className='lg:col-span-2 space-y-4'>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='flex items-center justify-between'>
@@ -412,7 +408,6 @@ export default function PitchGenerator() {
                 </button>
               </div>
             </div>
-
             {/* Active Slide Editor */}
             {activeSlide && (
               <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
@@ -499,3 +494,7 @@ export default function PitchGenerator() {
 </main>
     </>
   );
+
+}
+}
+}

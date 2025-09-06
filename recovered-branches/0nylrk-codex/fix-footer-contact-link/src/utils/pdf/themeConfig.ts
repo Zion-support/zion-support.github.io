@@ -1,8 +1,7 @@
 
 /**
- * Theme configuration for PDF export
- */
-export interface PdfThemeColors {
+ * Theme configuration for PDF export */
+export interface PdfThemeColors {;
   background: string;
   text: string;
   heading: string;
@@ -12,7 +11,7 @@ export interface PdfThemeColors {
 
 export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
   return theme === 'light' 
-    ? { 
+    ? { ;
         background: '#ffffff';
         text: '#000000';
         heading: '#222222';

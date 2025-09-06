@@ -1,7 +1,7 @@
 import * as React from &quot;react&quot;
 import * as SelectPrimitive from &quot;@radix-ui/react-select&quot;
 import { Check, ChevronDown, ChevronUp } from 'lucide-react'
-
+;
 import { cn } from &quot;@/lib/utils&quot;
 
 const Select = SelectPrimitive.Root
@@ -124,7 +124,6 @@ className={cn(
         <Check className=&quot;h-4 w-4&quot; />
       </SelectPrimitive.ItemIndicator>
     </span>
-
     <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
   </SelectPrimitive.Item>
 ))

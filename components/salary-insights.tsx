@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import {
   LineChart,
-  BarChart,
+  BarChart,;
   DonutChart,;
 } from '../components/salary/InsightCharts';
 type InsightResponse = {
@@ -25,7 +25,7 @@ type InsightResponse = {
   tags: string[],
   gptRecommendation?: string
 
-export default function SalaryInsightsPage() {
+export default function SalaryInsightsPage() {;
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -179,7 +179,6 @@ export default function SalaryInsightsPage() {
         </div>
         <div className='absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl' />
       </div>
-
       <div className='mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6'>
         <div className='lg:col-span-1 space-y-4'>
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
@@ -218,7 +217,6 @@ export default function SalaryInsightsPage() {
                 >                  <option>Junior</option>        </div>
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
       </div>
-
       <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-1 space-y-4">
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
@@ -261,7 +259,6 @@ export default function SalaryInsightsPage() {
                   <option value="full-time">Full-time</option>
               </div>
             </div>
-
             <div className='flex items-center gap-2 mt-3'>
               <input
                 id='remote'
@@ -273,7 +270,6 @@ export default function SalaryInsightsPage() {
                 Remote role
               </label>
             </div>
-
             {!isLoggedIn && (
               <div className='mt-3 text-xs text-gray-500'>                Advanced filters are available when you sign in.
               </div>
@@ -282,7 +278,6 @@ export default function SalaryInsightsPage() {
               <input id="remote" type="checkbox" checked={remote} onChange={(e) => setRemote(e.target.checked)} />
               <label htmlFor="remote" className="text-sm" htmlFor="input-Remote role">Remote role</label>
             </div>
-
             {!isLoggedIn && (
               <div className="mt-3 text-xs text-gray-500">
                 Advanced filters are available when you sign in.
@@ -300,7 +295,6 @@ export default function SalaryInsightsPage() {
               {loading ? 'Calculating…' : 'Update Insights'}
             </button>
           </div>
-
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
             <h3 className='font-medium mb-2'>Actions</h3>
             <div className='flex flex-col gap-2'>
@@ -326,7 +320,6 @@ export default function SalaryInsightsPage() {
               </button>            </div>
           </div>
         </div>
-
         <div className='lg:col-span-2 space-y-6'>          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h3 className="font-medium mb-2">Actions</h3>
             <div className="flex flex-col gap-2">
@@ -335,7 +328,6 @@ export default function SalaryInsightsPage() {
               <button onClick={() => alert('This would suggest a resume rate optimization.')} className="rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700">Optimize Resume Rate</button>
           </div>
         </div>
-
         <div className='lg:col-span-2 space-y-6'>
             <div className='rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm'>
               {error}
@@ -368,7 +360,6 @@ export default function SalaryInsightsPage() {
               </div>
             </div>
           </div>
-
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
             <h3 className='font-medium mb-3'>Trend: Last 12 months</h3>
             {data ? (
@@ -377,7 +368,6 @@ export default function SalaryInsightsPage() {
               <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />
             )}
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <h3 className='font-medium mb-3'>Regional comparison</h3>
@@ -415,7 +405,6 @@ export default function SalaryInsightsPage() {
                 </table>
               )}
             </div>
-
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <h3 className='font-medium mb-3'>Distribution</h3>
               {data ? (
@@ -451,7 +440,6 @@ export default function SalaryInsightsPage() {
               )}
             </div>
           </div>
-
           {data?.gptRecommendation && (
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <h3 className='font-medium mb-2'>GPT Recommendation</h3>

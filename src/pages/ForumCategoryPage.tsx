@@ -94,5 +94,5 @@ function CategoryContent({
   const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null
 }
   )
-}
+};
 ;

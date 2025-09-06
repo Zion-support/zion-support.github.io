@@ -1,6 +1,6 @@
 
 import {jsPDF} from 'jspdf';
-export interface FontConfig {
+export interface FontConfig {;
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
   italic?: ArrayBuffer,
@@ -20,7 +20,7 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
     // For demonstration purposes, we'll just set up the font using standard fonts
     
     switch (fontFamily) {
-      case 'montserrat':
+      case 'montserrat':;
         doc.setFont('helvetica');
         break;
       case 'open-sans':

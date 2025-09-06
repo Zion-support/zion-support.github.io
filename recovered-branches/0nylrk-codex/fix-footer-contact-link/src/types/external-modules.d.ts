@@ -12,7 +12,7 @@ declare module "@radix-ui/react-toggle";
 
 declare module '@tanstack/react-query';
 declare module 'react-day-picker' {
-  export interface DateRange {
+  export interface DateRange {;
     from?: Date;
     to?: Date
   }
@@ -23,7 +23,7 @@ declare module 'react-day-picker' {
   // type definitions.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   export const DayPicker: any
-}
+};
 declare module 'sonner';
 declare module 'lucide-react' {
 import {FC, SVGProps} from 'react';
@@ -220,16 +220,16 @@ import {FC, SVGProps} from 'react';
   export const Webhook: LucideIcon;
   export const X: LucideIcon;
   export const XCircle: LucideIcon;
-  export const Zap: LucideIcon,
+  export const Zap: LucideIcon,;
   const icons: { [key: string]: LucideIcon };
   export default icons
-}
+};
 declare module 'child_process';
 declare module 'date-fns';
 declare module 'jspdf' {
   export const jsPDF: any,
   export default jsPDF
-}
+};
 declare module '@hookform/resolvers/zod';
 declare module '@radix-ui/react-accordion';
 declare module '@radix-ui/react-alert-dialog';
@@ -257,10 +257,10 @@ declare module 'class-variance-authority' {
   export function cva(...inputs: any[]): any
   export type VariantProps<T extends (...args: any) => any> = any
 }
-declare module 'clsx' {
+declare module 'clsx' {;
   export type ClassValue = any;
   export default function clsx(...classes: ClassValue[]): string
-}
+};
 declare module 'embla-carousel-react';
 declare module 'framer-motion';
 declare module 'i18next';
@@ -276,7 +276,7 @@ declare module 'react-hook-form' {
 
   export type Control<TFieldValues extends FieldValues = FieldValues> = any
 
-  export interface UseFormReturn<
+  export interface UseFormReturn<;
     TFieldValues extends FieldValues = FieldValues;
   > {
     control: Control<TFieldValues>
@@ -286,15 +286,14 @@ declare module 'react-hook-form' {
     [key: string]: any
   }
 
-  export function useForm<
+  export function useForm<;
     TFieldValues extends FieldValues = FieldValues;
   >(options?: any): UseFormReturn<TFieldValues>
-
-  export function useFieldArray<
+  export function useFieldArray<;
     TFieldValues extends FieldValues = FieldValues;
   >(options: any): any
 
-  export interface ControllerProps<
+  export interface ControllerProps<;
     TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
   > {
@@ -307,7 +306,7 @@ declare module 'react-hook-form' {
 
   export const Controller: ComponentType<ControllerProps<any, any>>
 
-  export interface FormProviderProps<
+  export interface FormProviderProps<;
     TFieldValues extends FieldValues = FieldValues;
   > {
     children?: ReactNode
@@ -318,7 +317,7 @@ declare module 'react-hook-form' {
   export function useFormContext<
     TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn<TFieldValues>
-}
+};
 declare module 'react-i18next';
 declare module 'react-dom/client';
 declare module 'react-dom';

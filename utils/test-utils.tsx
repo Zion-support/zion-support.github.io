@@ -34,9 +34,9 @@ export const mockNextRouter = () => ({
   isReady: true,
   defaultLocale: 'en',
   domainLocales: [],
-  isPreview: false
+  isPreview: false;
 });
 
 export const createMockProps = (overrides = {}) => ({
-  ...overrides
+  ...overrides;
 });

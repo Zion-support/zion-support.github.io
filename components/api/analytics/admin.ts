@@ -5,7 +5,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
+  try {;
     const supabase = createServerClient();
 
     // Replace with your actual tables/queries
@@ -167,3 +167,5 @@ res.status(200).json({
       ],
     });
   }}
+
+}

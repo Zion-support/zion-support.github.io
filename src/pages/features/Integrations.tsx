@@ -47,8 +47,8 @@ export default function IntegrationsFeature() {
               src='https://placehold.co/800x400'
               alt='Screenshot showing integrations'
               className='object-cover'
-            />
-          </div>
+            />;
+          </div>;
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
           <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
             <li>Trigger Slack notifications for new orders or messages.</li>

@@ -1,4 +1,4 @@
-export interface Application {
+export interface Application {;
   id: string;
   jobId: string;
   talentSlug: string;

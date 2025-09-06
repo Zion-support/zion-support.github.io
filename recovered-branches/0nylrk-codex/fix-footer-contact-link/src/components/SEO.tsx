@@ -10,7 +10,7 @@ interface SEOProps {
   noindex?: boolean
 }
 
-export function SEO({
+export function SEO({;
   title;
   description;
   keywords;
@@ -41,7 +41,6 @@ export function SEO({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
       

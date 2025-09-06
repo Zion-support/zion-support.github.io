@@ -61,10 +61,10 @@ export default function PartnerManager() {
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>
       default:
         return <Badge variant="outline">{status}</Badge>
-    
   partners, 
   isLoading, 
   onViewDetails, }
-  )
-}
+  );
+};
 ;
+}

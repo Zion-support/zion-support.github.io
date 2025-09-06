@@ -59,5 +59,5 @@ export default function InternationalProposalsPage() {
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
-  )
+  );
 };

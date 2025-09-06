@@ -13,7 +13,7 @@ import {MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircl
 import {HireNowCTA} from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
+  // definitions, so avoid passing a type argument to prevent TS2347.;
   const { profileId } = useParams();
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -139,7 +139,6 @@ export default function ProfileDetail() {
                 </div>
               </CardContent>
             </Card>
-
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -149,7 +148,6 @@ export default function ProfileDetail() {
                 <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
               </CardContent>
             </Card>
-
             {/* Skills Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -163,7 +161,6 @@ export default function ProfileDetail() {
                 </div>
               </CardContent>
             </Card>
-
             {/* Experience Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -184,7 +181,6 @@ export default function ProfileDetail() {
                 )}
               </CardContent>
             </Card>
-
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -212,7 +208,6 @@ export default function ProfileDetail() {
               </CardContent>
             </Card>
           </div>
-
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
@@ -249,7 +244,6 @@ export default function ProfileDetail() {
                 )}
               </div>
             </div>
-
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>

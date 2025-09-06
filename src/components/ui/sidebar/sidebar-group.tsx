@@ -48,4 +48,6 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   }
 )
 SidebarGroup.displayName = 'SidebarGroup'
-export { SidebarGroup }
+export { SidebarGroup };
+;
+}

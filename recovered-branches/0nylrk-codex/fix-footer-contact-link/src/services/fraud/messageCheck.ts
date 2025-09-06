@@ -6,7 +6,7 @@ import {MessageAnalysisResult} from './types';
 /**
  * Check message for suspicious content
  */
-export const checkMessage = (messageContent: string): MessageAnalysisResult => {
+export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
   const analysis = analyzeContent(messageContent);
   
   // Determine severity based on number and type of issues

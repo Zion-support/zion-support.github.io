@@ -6,7 +6,7 @@ import MilestoneCard from '../../../components/monetization/MilestoneCard';
 import { Milestone } from '../../../utils/types/milestones';
 import {
   createMilestone,
-  fetchMilestones,
+  fetchMilestones,;
   updateMilestoneStatus,;
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
@@ -15,7 +15,7 @@ function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   const r = url.searchParams.get('role');
   if (r === 'talent' || r === 'admin') return r;
   return 'client';
-export default function ProjectMilestonesPage() {
+export default function ProjectMilestonesPage() {;
   const router = useRouter();
   const { 'project-id': projectId } = router.query as any;
 
@@ -100,7 +100,6 @@ export default function ProjectMilestonesPage() {
           content='Track project deliverables and milestone payments'
         />
       </Head>
-
       <div className='max-w-5xl mx-auto px-4 py-8'>
         <div className='mb-6'>
           <h1 className='text-2xl font-bold'>Milestones</h1>
@@ -108,7 +107,6 @@ export default function ProjectMilestonesPage() {
             Project: {projectId as string}
           </p>
         </div>
-
         {role !== 'talent' && (
           <div className='mb-8 p-4 rounded bg-gray-50 border'>
             <div className='flex items-center justify-between mb-3'>
@@ -147,3 +145,6 @@ export default function ProjectMilestonesPage() {
       </div>
     </div>
 );
+
+}
+}

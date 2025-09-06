@@ -74,4 +74,6 @@ export const badgeList: BadgeMeta[] = [
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find(b => b.key === key)
 export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList.find((b) => b.key === key)
+  badgeList.find((b) => b.key === key);
+;
+}

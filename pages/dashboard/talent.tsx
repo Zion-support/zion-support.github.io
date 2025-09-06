@@ -15,7 +15,7 @@ export default function TalentDashboard() {
     profile: false,
     skills: false,
     availability: false,
-    match: false,
+    match: false,;
   });
 
   useEffect(() => {
@@ -58,7 +58,6 @@ export default function TalentDashboard() {
             style={{ width: `${progress}%` }}
           />        </div>
       </EnhancedCard>
-
       <EnhancedCard>
         <h2 className='font-semibold mb-2'>Checklist</h2>
         <ul className='space-y-2'>
@@ -93,3 +92,5 @@ export default function TalentDashboard() {
       </EnhancedCard>
     </div>
 );
+
+}

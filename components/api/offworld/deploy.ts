@@ -8,11 +8,11 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  try {
     // Ensure export
     const outDir = path.resolve(process.cwd(), 'out');
-    try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   try {
     // Ensure export
@@ -20,8 +20,7 @@ export default async function handler(
     try {
       execSync('npm run export', { stdio: 'inherit' });
     } catch (e) {
-      // attempt minimal static export
-      try {
+      // attempt minimal static export try {;
         execSync('next build && next export', { stdio: 'inherit' });      } catch (e2) {}
     }
 
@@ -30,14 +29,13 @@ export default async function handler(
         .status(500)
         .json({ error: 'Export failed, no out/ directory found' });    }      execSync('npm run export', { stdio: 'inherit' })
     } catch (e) {
-      // attempt minimal static export
-      try {
+      // attempt minimal static export try {
         execSync('next build && next export', { stdio: 'inherit' })
     }
 
     if (!fs.existsSync(outDir)) {
       return res
-        .status(500)
+        .status(500);
         .json({ error: 'Export failed, no out/ directory found' });      return res.status(500).json({ error: 'Export failed, no out/ directory found' });
     }
 
@@ -51,4 +49,7 @@ export default async function handler(
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Unknown error' })
 };
+}
+
+}
 }

@@ -38,14 +38,11 @@ export function HireRequestForm({
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <PersonalInfoFields form={form} />
         </div>
-
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
-
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <BudgetFields form={form} talent={talent} />
         </div>
-
         <DialogFooter className='pt-4'>
           <Button
             type='button'
@@ -77,14 +74,11 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <PersonalInfoFields form={form} />
         </div>
-        
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <BudgetFields form={form} talent={talent} />
         </div>
-        
         <DialogFooter className="pt-4">
           <Button 
             type="button" 
@@ -123,6 +117,8 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         </DialogFooter>
       </form>
     </Form>
-  )
-}
+  );
+};
 ;
+}
+}

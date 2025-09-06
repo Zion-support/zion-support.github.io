@@ -1,8 +1,8 @@
-export const generateId = (prefix: string = 'id'): string => {
+export const generateId = (prefix: string = 'id'): string => {;
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
-export const announceToScreenReader = (message: string): void => {
+export const announceToScreenReader = (message: string): void => {;
   if (typeof window === 'undefined') return;
   
   const announcement = document.createElement('div');
@@ -20,7 +20,7 @@ export const announceToScreenReader = (message: string): void => {
 
 export const trapFocus = (element: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
   const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -52,7 +52,7 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
 };
 
 export const getContrastRatio = (color1: string, color2: string): number => {
-  const getLuminance = (color: string): number => {
+  const getLuminance = (color: string): number => {;
     const rgb = color.match(/\d+/g);
     if (!rgb) return 0;
     
@@ -72,11 +72,11 @@ export const getContrastRatio = (color1: string, color2: string): number => {
   return (brightest + 0.05) / (darkest + 0.05);
 };
 
-export const isHighContrast = (color1: string, color2: string): boolean => {
+export const isHighContrast = (color1: string, color2: string): boolean => {;
   return getContrastRatio(color1, color2) >= 4.5;
 };
 
-export const validateAriaLabel = (element: HTMLElement): boolean => {
+export const validateAriaLabel = (element: HTMLElement): boolean => {;
   const hasAriaLabel = element.hasAttribute('aria-label');
   const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
   const hasVisibleText = element.textContent?.trim().length > 0;
@@ -91,13 +91,13 @@ export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
     'select:not([disabled])',
     'textarea:not([disabled])',
     'a[href]',
-    '[tabindex]:not([tabindex="-1"])'
+    '[tabindex]:not([tabindex="-1"])';
   ].join(', ');
   
   return Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[];
 };
 
-export const isElementInViewport = (element: HTMLElement): boolean => {
+export const isElementInViewport = (element: HTMLElement): boolean => {;
   const rect = element.getBoundingClientRect();
   return (
     rect.top >= 0 &&
@@ -107,11 +107,11 @@ export const isElementInViewport = (element: HTMLElement): boolean => {
   );
 };
 
-export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {
+export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {;
   element.scrollIntoView({ behavior, block: 'start' });
 };
 
-export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;

@@ -25,7 +25,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
       version: "1.0.0",
       date: "2025-05-15",
       changes: "Initial release of the Zion AI Marketplace app.",
-    },
+    },;
   ]);
 
   const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, "id">>({
@@ -91,7 +91,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
               Add
             </Button>
           </div>
-
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
@@ -99,7 +98,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
             onChange={handleInputChange}
             rows={3}
           />
-
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
               <div

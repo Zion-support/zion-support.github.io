@@ -177,12 +177,10 @@ const NeuralFinanceAI: React.FC = () => {
           href='https://ziontechgroup.com/neural-finance-ai'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]'></div>
-
         <div className='relative z-10 max-w-7xl mx-auto'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>            <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -193,7 +191,6 @@ const NeuralFinanceAI: React.FC = () => {
                 <Brain className='w-4 h-4' />
                 <span>AI-Powered Financial Intelligence</span>
               </div>
-
               <h1 className='text-4xl md:text-6xl font-bold text-white mb-6 leading-tight'>
                 <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Neural Finance AI
@@ -203,14 +200,12 @@ const NeuralFinanceAI: React.FC = () => {
                   Revolutionary Trading Intelligence
                 </span>
               </h1>
-
               <p className='text-xl text-gray-300 mb-8 leading-relaxed'>
                 Advanced AI-powered financial analysis and trading platform
                 using neural networks for real-time market prediction, risk
                 assessment, and automated portfolio optimization with 94%
                 accuracy.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 mb-8'>
                 <Link
                   href='#pricing'
@@ -224,7 +219,6 @@ const NeuralFinanceAI: React.FC = () => {
                   <span>Watch Demo</span>
                 </button>
               </div>
-
               <div className='flex flex-wrap gap-6 text-sm text-gray-400'>
                 <div className='flex items-center space-x-2'>
                   <CheckCircle className='w-4 h-4 text-green-400' />
@@ -264,7 +258,6 @@ const NeuralFinanceAI: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className='space-y-4'>
                     <div className='flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50'>
                       <span className='text-gray-300'>AI Models</span>
@@ -290,7 +283,6 @@ const NeuralFinanceAI: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -310,7 +302,6 @@ const NeuralFinanceAI: React.FC = () => {
               unprecedented insights into financial markets.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -335,7 +326,6 @@ const NeuralFinanceAI: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -355,7 +345,6 @@ const NeuralFinanceAI: React.FC = () => {
               financial trading and investment management.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
@@ -393,7 +382,6 @@ const NeuralFinanceAI: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section id='pricing' className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -413,7 +401,6 @@ const NeuralFinanceAI: React.FC = () => {
               our core AI-powered features.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
@@ -447,7 +434,6 @@ const NeuralFinanceAI: React.FC = () => {
                     </span>
                   </div>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -459,7 +445,6 @@ const NeuralFinanceAI: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-
                 <Link
                   href='/contact'                  className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-200 transform hover:scale-105 ${
                     plan.popular
@@ -474,7 +459,6 @@ const NeuralFinanceAI: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -494,7 +478,6 @@ const NeuralFinanceAI: React.FC = () => {
               unified trading experience.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>            {integrations.map((integration, index) => (
               <motion.div
                 key={index}
@@ -513,7 +496,6 @@ const NeuralFinanceAI: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
@@ -525,7 +507,6 @@ const NeuralFinanceAI: React.FC = () => {
               Join leading investment firms using Neural Finance AI to gain
               competitive advantages in today's dynamic financial markets.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
                 href='/contact'
@@ -538,7 +519,6 @@ const NeuralFinanceAI: React.FC = () => {
                 Schedule Demo
               </Link>
             </div>
-
             <div className='text-sm text-gray-400'>
               <p>
                 ✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant

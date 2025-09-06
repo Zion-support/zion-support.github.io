@@ -13,7 +13,7 @@ interface TalentRateRecommenderProps {
   rateType: "hourly" | "fixed"
 }
 
-export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
+export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   skills;
   yearsExperience;
   location;

@@ -30,7 +30,7 @@ export function DisputeForm({
   milestoneId, 
   onDisputeCreated, 
   onCancel 
-}: DisputeFormProps) {
+}: DisputeFormProps) {;
   const { createDispute } = useDisputes();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [files, setFiles] = useState<File[]>([]);
@@ -94,7 +94,6 @@ export function DisputeForm({
         <FileText className="h-5 w-5 text-primary" />
         <h2 className="text-xl font-semibold">Report an Issue</h2>
       </div>
-      
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
@@ -148,7 +147,6 @@ export function DisputeForm({
                   onChange={handleFileChange}
                   className="cursor-pointer"
                 />
-                
                 {files.length > 0 && (
                   <div className="space-y-2">
                     <p className="text-sm font-medium">Selected files:</p>
@@ -173,7 +171,6 @@ export function DisputeForm({
             </FormControl>
             <FormMessage />
           </FormItem>
-          
           <div className="flex justify-end space-x-2">
             {onCancel && (
               <Button type="button" variant="outline" onClick={onCancel}>

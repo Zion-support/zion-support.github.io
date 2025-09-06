@@ -17,7 +17,6 @@ export function ApiDocumentation() {
           Reference documentation for integrating with the Zion Marketplace API.
         </CardDescription>
       </CardHeader>
-      
       <CardContent>
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">
           <Terminal className="h-4 w-4" />
@@ -25,7 +24,6 @@ export function ApiDocumentation() {
             Make sure to include your API key in all requests as a Bearer token in the Authorization header.
           </AlertDescription>
         </Alert>
-
         <Tabs defaultValue="jobs" className="space-y-4">
           <TabsList className="bg-zinc-800 border-zinc-700">
             <TabsTrigger value="jobs">Jobs</TabsTrigger>
@@ -34,7 +32,6 @@ export function ApiDocumentation() {
             <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
             <TabsTrigger value="errors">Errors</TabsTrigger>
           </TabsList>
-          
           <TabsContent value="jobs" className="space-y-6">
             <EndpointSection
               method="GET"
@@ -56,7 +53,7 @@ export function ApiDocumentation() {
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
+  };
 });
 
 const data = await response.json();
@@ -68,7 +65,7 @@ headers = {
 }
 
 response = requests.get(
-    'https: //api.ziontechgroup.com/v1/jobs',
+    'https: //api.ziontechgroup.com/v1/jobs',;
     params={'limit': 10, 'category': 'development'};
     headers=headers
 )
@@ -104,7 +101,6 @@ print(data)`
 }`
               }}
             />
-            
             <EndpointSection
               method="GET"
               endpoint="/api/jobs/:id"
@@ -134,7 +130,7 @@ headers = {
 }
 
 job_id = 'job_abc123'
-response = requests.get(
+response = requests.get(;
     f'https://api.ziontechgroup.com/v1/jobs/{job_id}';
     headers=headers
 )
@@ -164,7 +160,6 @@ print(data)`
 }`
               }}
             />
-            
             <EndpointSection
               method="POST"
               endpoint="/api/jobs"
@@ -224,7 +219,7 @@ headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 
-payload = {
+payload = {;
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
     'budget': {
         'min': 5000;
@@ -265,7 +260,6 @@ print(data)`
               }}
             />
           </TabsContent>
-          
           <TabsContent value="talent" className="space-y-6">
             <EndpointSection
               method="GET"
@@ -298,7 +292,7 @@ headers = {
 }
 
 response = requests.get(
-    'https: //api.ziontechgroup.com/v1/talent',
+    'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
     headers=headers
 )
@@ -328,7 +322,6 @@ print(data)`
 }`
               }}
             />
-            
             <EndpointSection
               method="GET"
               endpoint="/api/talent/:id"
@@ -358,7 +351,7 @@ headers = {
 }
 
 talent_id = 'talent_abc123'
-response = requests.get(
+response = requests.get(;
     f'https://api.ziontechgroup.com/v1/talent/{talent_id}';
     headers=headers
 )
@@ -398,7 +391,6 @@ print(data)`
               }}
             />
           </TabsContent>
-          
           <TabsContent value="quotes" className="space-y-6">
             <EndpointSection
               method="POST"
@@ -458,7 +450,7 @@ headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 
-payload = {
+payload = {;
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
@@ -494,7 +486,6 @@ print(data)`
 }`
               }}
             />
-            
             <EndpointSection
               method="GET"
               endpoint="/api/quotes"
@@ -535,7 +526,7 @@ print(data)`
               responseExamples={{
                 success: `{
   "data": [
-    {
+    {;
       "id": "quote_def456";
       "talent_id": "talent_abc123";
       "project_name": "E-commerce Website Redesign";
@@ -557,7 +548,6 @@ print(data)`
               }}
             />
           </TabsContent>
-          
           <TabsContent value="webhooks" className="space-y-6">
             <div className="prose prose-invert max-w-none">
               <h3 className="text-lg font-semibold mb-2">Webhook Events</h3>
@@ -565,7 +555,6 @@ print(data)`
                 The Zion API can send webhook notifications when certain events occur in your account.
                 You can configure webhooks in the Webhooks tab of the Developer Dashboard.
               </p>
-              
               <h4 className="text-md font-semibold mt-6 mb-2">Authentication</h4>
               <p className="text-zinc-400 mb-4">
                 When you create a webhook, you can optionally provide a secret key.
@@ -573,7 +562,6 @@ print(data)`
                 <code className="bg-zinc-800 px-1 py-0.5 rounded">X-Zion-Signature</code> header.
                 This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.
               </p>
-              
 <CodeBlock
                 code={`import crypto from 'crypto';
 // Function to verify webhook signature
@@ -634,11 +622,9 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                   </tr>
                 </tbody>
               </table>
-              
               <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>
               <p className="text-zinc-400 mb-2">
                 Here's an example of a <code className="bg-zinc-800 px-1 py-0.5 rounded">new_application</code> webhook payload: </p>
-              
               <CodeBlock
                 code={`{
   "event_type": "new_application";
@@ -658,7 +644,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               />
             </div>
           </TabsContent>
-          
           <TabsContent value="errors" className="space-y-6">
             <div className="prose prose-invert max-w-none">
               <h3 className="text-lg font-semibold mb-2">Error Responses</h3>
@@ -667,7 +652,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                 In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error with the
                 provided information, and codes in the 5xx range indicate an error with our servers.
               </p>
-              
               <table className="w-full border-collapse mt-4">
                 <thead>
                   <tr className="border-b border-zinc-800">
@@ -714,11 +698,9 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                   </tr>
                 </tbody>
               </table>
-              
               <h4 className="text-md font-semibold mt-6 mb-2">Error Response Format</h4>
               <p className="text-zinc-400 mb-2">
                 Error responses include a consistent JSON object with the following format: </p>
-              
               <CodeBlock
                 code={`{
   "error": {
@@ -734,17 +716,14 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 }`}
                 language="json"
               />
-              
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>
               <p className="text-zinc-400 mb-4">
                 The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.
                 Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive 
                 a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code> response.
               </p>
-              
               <p className="text-zinc-400 mb-2">
                 Rate limit information is included in the response headers: </p>
-              
               <ul className="list-disc pl-6 space-y-1 text-zinc-400">
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Limit</code>: Number of requests allowed in the time window</li>
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>
@@ -795,10 +774,8 @@ function EndpointSection({
             </Badge>
           )}
         </div>
-        
         <p className="mt-2 text-zinc-400">{description}</p>
       </div>
-      
       {params.length > 0 && (
         <div className="border-t border-zinc-800 p-4">
           <h4 className="font-medium mb-2">Parameters</h4>

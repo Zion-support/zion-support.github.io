@@ -5,7 +5,7 @@ export default function ServicesIndexPage () {
   //Category const handleSubmit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api/quote-request', {
   method: 'POST', headers: {
-  'Content-Type': 'application/json' 
+  'Content-Type': 'application/json' ;
 };
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
@@ -42,7 +42,7 @@ const ServicesPage: NextPage = () => {
 
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
-    .concat(
+    .concat(;
       extraServices as any[];
       additionalEnhancedServices as any[];
       newlyAddedServices as any[];
@@ -136,7 +136,6 @@ export default function ServicesIndexPage() {
           </div>
         </div>
       </div>
-
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -148,3 +147,7 @@ export default function ServicesIndexPage() {
 };
 
 export default ServicesPage;
+
+}
+}
+}

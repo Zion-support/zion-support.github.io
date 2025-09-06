@@ -38,5 +38,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 export function getAllNotes(): Note[] {
-  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
+  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 };

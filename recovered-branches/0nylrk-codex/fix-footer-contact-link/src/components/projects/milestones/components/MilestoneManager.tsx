@@ -20,7 +20,7 @@ interface MilestoneManagerProps {
   refetch: () => Promise<void>
 }
 
-export function MilestoneManager({
+export function MilestoneManager({;
   projectId;
   milestones;
   activities;

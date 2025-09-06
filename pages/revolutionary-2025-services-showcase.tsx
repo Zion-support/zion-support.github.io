@@ -12,7 +12,7 @@ import {
   Award, Target, Zap as ZapIcon, Globe as GlobeIcon
 } from 'lucide-react',
 
-// Import the new revolutionary services
+// Import the new revolutionary services;
 import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services',;
 import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure',;
 const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices],
@@ -154,13 +154,11 @@ export default function Revolutionary2025ServicesShowcase() {
         <meta name="keywords" content="AI services, quantum computing, cybersecurity, cloud infrastructure, fintech, healthcare AI, space technology, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2025-services-showcase" />
       </Head>
-
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
-          
           <div className="container mx-auto relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -191,7 +189,6 @@ export default function Revolutionary2025ServicesShowcase() {
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filter Section */}
         <section className="py-8 px-4 border-b border-gray-800">
           <div className="container mx-auto">
@@ -207,7 +204,6 @@ export default function Revolutionary2025ServicesShowcase() {
                   className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
               </div>
-
               {/* Filters */}
               <div className="flex flex-wrap gap-4 items-center">
                 {/* Category Filter */}
@@ -226,7 +222,6 @@ export default function Revolutionary2025ServicesShowcase() {
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                 </div>
-
                 {/* Sort Filter */}
                 <div className="relative">
                   <select
@@ -242,7 +237,6 @@ export default function Revolutionary2025ServicesShowcase() {
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                 </div>
-
                 {/* View Mode */}
                 <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1">
                   <button
@@ -266,7 +260,6 @@ export default function Revolutionary2025ServicesShowcase() {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-16 px-4">
           <div className="container mx-auto">
@@ -279,7 +272,6 @@ export default function Revolutionary2025ServicesShowcase() {
                 )}
               </p>
             </div>
-
             {/* Services Grid */}
             <AnimatePresence mode="wait">
               {viewMode === 'grid' ? (
@@ -309,23 +301,19 @@ export default function Revolutionary2025ServicesShowcase() {
 
                         {/* Service Icon */}
                         <div className="text-4xl mb-4">{service.icon}</div>
-
                         {/* Service Title */}
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                           {service.name}
                         </h3>
-
                         {/* Tagline */}
                         <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                           {service.tagline}
                         </p>
-
                         {/* Price */}
                         <div className="text-3xl font-bold text-white mb-4">
                           {service.price}
                           <span className="text-lg text-gray-400 font-normal">{service.period}</span>
                         </div>
-
                         {/* Features */}
                         <div className="space-y-2 mb-6">
                           <h4 className="text-sm font-semibold text-purple-400">Key Features</h4>
@@ -338,7 +326,6 @@ export default function Revolutionary2025ServicesShowcase() {
                             ))}
                           </ul>
                         </div>
-
                         {/* Market Data */}
                         <div className="grid grid-cols-2 gap-3 mb-6">
                           <div className="bg-gray-800/50 rounded-lg p-3">
@@ -350,7 +337,6 @@ export default function Revolutionary2025ServicesShowcase() {
                             <div className="text-sm text-gray-200">{service.growthRate}</div>
                           </div>
                         </div>
-
                         {/* Action Buttons */}
                         <div className="flex space-x-3 mb-4">
                           <Link href={service.link} target="_blank" rel="noopener noreferrer">
@@ -365,7 +351,6 @@ export default function Revolutionary2025ServicesShowcase() {
                             </button>
                           </Link>
                         </div>
-
                         {/* Contact Info */}
                         <div className="grid grid-cols-1 gap-2 text-xs">
                           <div className="flex items-center gap-2 text-purple-400">
@@ -419,9 +404,7 @@ export default function Revolutionary2025ServicesShowcase() {
                               <p className="text-gray-300 text-sm">{service.tagline}</p>
                             </div>
                           </div>
-                          
                           <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
-                          
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
                               <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>
@@ -446,7 +429,6 @@ export default function Revolutionary2025ServicesShowcase() {
                             </div>
                           </div>
                         </div>
-
                         {/* Right Column */}
                         <div className="lg:w-80 space-y-4">
                           {/* Price */}
@@ -457,7 +439,6 @@ export default function Revolutionary2025ServicesShowcase() {
                             </div>
                             <div className="text-sm text-gray-400">30-day free trial</div>
                           </div>
-
                           {/* Market Data */}
                           <div className="grid grid-cols-2 gap-3">
                             <div className="bg-gray-800/50 rounded-lg p-3 text-center">
@@ -469,13 +450,11 @@ export default function Revolutionary2025ServicesShowcase() {
                               <div className="text-sm text-gray-200">{service.growthRate}</div>
                             </div>
                           </div>
-
                           {/* ROI */}
                           <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-3">
                             <div className="text-xs text-green-400 mb-1">Expected ROI</div>
                             <div className="text-sm text-green-300">{service.roi}</div>
                           </div>
-
                           {/* Action Buttons */}
                           <div className="space-y-3">
                             <Link href={service.link} target="_blank" rel="noopener noreferrer">
@@ -490,7 +469,6 @@ export default function Revolutionary2025ServicesShowcase() {
                               </button>
                             </Link>
                           </div>
-
                           {/* Contact Info */}
                           <div className="space-y-2 text-xs">
                             <div className="flex items-center gap-2 text-purple-400">
@@ -513,7 +491,6 @@ export default function Revolutionary2025ServicesShowcase() {
                 </motion.div>
               )}
             </AnimatePresence>
-
             {/* No Results */}
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
@@ -533,7 +510,6 @@ export default function Revolutionary2025ServicesShowcase() {
             )}
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20">
           <div className="container mx-auto text-center">
@@ -549,7 +525,6 @@ export default function Revolutionary2025ServicesShowcase() {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Join thousands of companies already leveraging our revolutionary services to achieve unprecedented growth and innovation.
               </p>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
                 <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-6">
                   <Phone className="w-8 h-8 text-purple-400 mx-auto mb-4" />
@@ -559,7 +534,6 @@ export default function Revolutionary2025ServicesShowcase() {
                     Call Now →
                   </a>
                 </div>
-                
                 <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-6">
                   <Mail className="w-8 h-8 text-blue-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
@@ -568,7 +542,6 @@ export default function Revolutionary2025ServicesShowcase() {
                     Send Email →
                   </a>
                 </div>
-                
                 <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-6">
                   <MapPin className="w-8 h-8 text-green-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
@@ -578,7 +551,6 @@ export default function Revolutionary2025ServicesShowcase() {
                   </a>
                 </div>
               </div>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
                   <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
@@ -596,5 +568,5 @@ export default function Revolutionary2025ServicesShowcase() {
         </section>
       </div>
     </>
-  )
+  );
 };

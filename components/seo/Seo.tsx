@@ -4,7 +4,9 @@ import { NextSeoProps } from 'next-seo';
 
 export type SeoProps = NextSeoProps;
 
-export default function Seo(props: SeoProps) {
-  return <NextSeo {...props} />;export type SeoProps = NextSeoProps, export default function Seo(props: SeoProps) {
+export default function Seo(props: SeoProps) {;
+  return <NextSeo {...props} />;export type SeoProps = NextSeoProps, export default function Seo(props: SeoProps) {;
   return <NextSeo {...props} />;
+}
+
 }

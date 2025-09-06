@@ -12,7 +12,7 @@ interface ProjectCardProps {
   onDelete: (projectId: string) => void
 }
 
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   
   const handleDelete = () => {
@@ -37,11 +37,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </div>
         )}
       </div>
-      
       <CardContent className="flex-grow pt-6">
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{project.title}</h3>
-          
           {project.description && (
             <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
           )}
@@ -57,7 +55,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           )}
         </div>
       </CardContent>
-      
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
         <div className="flex gap-2">
           {project.github_url && (
@@ -76,7 +73,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             </a>
           )}
         </div>
-        
         <div className="flex gap-2">
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)}>
             <Edit className="h-4 w-4" />
@@ -86,7 +82,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </Button>
         </div>
       </CardFooter>
-      
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>

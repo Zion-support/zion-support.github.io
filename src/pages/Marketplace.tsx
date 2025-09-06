@@ -11,7 +11,7 @@ import {
   SortAsc,
   Sparkles,
   TrendingUp,
-  Star,
+  Star,;
 } from 'lucide-react';
 import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
@@ -67,7 +67,7 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         </div>
       </div>
     </CardContent>
-  </Card>
+  </Card>;
 );
 
 // Filter and sort controls
@@ -131,7 +131,6 @@ const FilterControls: React.FC<{
         ))}
       </select>
     </div>
-
     <div className='flex items-center gap-2'>
       <SortAsc className='h-4 w-4 text-muted-foreground' />
       <select
@@ -146,7 +145,6 @@ const FilterControls: React.FC<{
         <option value='ai-score'>AI Score</option>
       </select>
     </div>
-
     <div className='flex items-center gap-2'>
       <span className='text-sm'>$</span>
       <input
@@ -166,7 +164,6 @@ const FilterControls: React.FC<{
         onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
         className='w-20 bg-background border border-border px-2 py-1 rounded'      />
     </div>
-
     <div className='flex items-center gap-2'>
       <span className='text-sm'>AI ≥</span>
       <input
@@ -177,7 +174,6 @@ const FilterControls: React.FC<{
         onChange={e => setMinAiScore(Number(e.target.value))}
         className='w-16 bg-background border border-border px-2 py-1 rounded'      />
     </div>
-
     <div className='flex items-center gap-2'>
       <span className='text-sm'>Rating ≥</span>
       <select
@@ -192,7 +188,6 @@ const FilterControls: React.FC<{
         <option value={1}>1</option>
       </select>
     </div>
-
     <div className='flex items-center gap-2'>
       <select
         value={filterAvailability}
@@ -206,7 +201,6 @@ const FilterControls: React.FC<{
         ))}
       </select>
     </div>
-
     <div className='flex items-center gap-2'>
       <select
         value={filterLocation}
@@ -220,7 +214,6 @@ const FilterControls: React.FC<{
         ))}
       </select>
     </div>
-
     <Button
       variant={showRecommended ? 'default' : 'outline'}
       size='sm'
@@ -237,7 +230,7 @@ const FilterControls: React.FC<{
  * Uses the auto-feed algorithm to continuously generate IT and AI products
  * Includes intelligent filtering, sorting, and recommendation features
  */
-export default function Marketplace() {
+export default function Marketplace() {;
   const router = useRouter();
   const { t } = useTranslation();
   const { toast } = useToast();
@@ -569,7 +562,6 @@ export default function Marketplace() {
             {t('marketplace.hero_subtitle')}
           </p>
         </motion.div>
-
         <ProductsEmptyState />
       </div>
     );
@@ -596,7 +588,6 @@ export default function Marketplace() {
           {t('marketplace.hero_subtitle')}
         </p>
       </motion.div>
-
       {/* Market Insights */}
       {marketStats && (
         <motion.div
@@ -637,7 +628,6 @@ export default function Marketplace() {
           loading = {isFetching,}
         />
       </motion.div>
-
       {/* Product Grid */}
       <motion.div
         className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
@@ -717,7 +707,6 @@ export default function Marketplace() {
           ))}
         </AnimatePresence>
       </motion.div>
-
       {/* Loading More Indicator */}
       {(isFetching || loading) && (
         <motion.div
@@ -1057,3 +1046,19 @@ const Marketplace = () => {;
   );
 }
 ;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

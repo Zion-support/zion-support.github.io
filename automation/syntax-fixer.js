@@ -134,7 +134,7 @@ export default SyntaxFixer;
 ,
         // Fix export statements,
         content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),
-,
+,;
         if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
           modified = true
         },
@@ -151,7 +151,7 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
   },
 ,
   getSourceFiles() {,
-    const files = [],
+    const files = [],;
     const srcDir = path.join(process.cwd(), &quot;src&quot;),
 ,
     if (fs.existsSync(srcDir)) {,
@@ -200,3 +200,4 @@ export default SyntaxFixer,
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 
+;

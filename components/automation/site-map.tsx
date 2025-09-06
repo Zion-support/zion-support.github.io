@@ -2,7 +2,7 @@
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string },
-export async function getServerSideProps() {
+export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datasite-map.json');
   let routes: RouteInfo[] = [];  let generatedAt = '';
   try {
@@ -37,6 +37,6 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
           </tbody>
         </table>
       </div>
-    </div>
+    </div>;
 );
 }

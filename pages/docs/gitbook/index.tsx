@@ -43,5 +43,5 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
         ))}
       </div>
     </div>
-  )
+  );
 };

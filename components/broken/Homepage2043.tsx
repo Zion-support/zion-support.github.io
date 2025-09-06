@@ -35,8 +35,8 @@ import {
   Award,
   CheckCircle,
   Zap as ZapIcon,
-  Brain as BrainIcon,
-  Atom as AtomIcon,;} from 'lucide-react';import { 
+  Brain as BrainIcon,;
+  Atom as AtomIcon,;} from 'lucide-react';import { ;
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
@@ -268,7 +268,6 @@ const Homepage2043: React.FC = () => {
             <div className='absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
             <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
             <div className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>
-
             {/* Enhanced animated particles */}
             <div className='absolute inset-0'>
               {[...Array(20)].map((_, i) => (
@@ -302,7 +301,6 @@ const Homepage2043: React.FC = () => {
                     top: `${Math.random() * 100}%`}}
               ))}
             </div>
-
             {/* Enhanced grid pattern */}
             <div className='absolute inset-0 opacity-20'>
               <div
@@ -313,7 +311,6 @@ const Homepage2043: React.FC = () => {
                 }}
               ></div>            </div>
           </div>
-
           {/* Hero Content */}
           <div className='text-center max-w-6xl mx-auto relative z-10'>            <motion.div            <div className="absolute inset-0 opacity-20">
               <div className="absolute inset-0" style={{
@@ -321,7 +318,6 @@ const Homepage2043: React.FC = () => {
                 backgroundSize: '50px 50px'
               }}></div>
           </div>
-
           {/* Hero Content */}
           <div className='text-center max-w-6xl mx-auto relative z-10'>          <div className="text-center max-w-6xl mx-auto relative z-10">
             <motion.div
@@ -333,12 +329,10 @@ const Homepage2043: React.FC = () => {
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm'>
                 <Sparkles className='w-4 h-4 mr-2' />                Revolutionary 2043 Technology
               </div>
-
               {/* Main Heading */}              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm">
                 <Sparkles className="w-4 h-4 mr-2" />
                 Revolutionary 2043 Technology
               </div>
-
               {/* Main Heading */}
               <h1
                 id='hero-heading'
@@ -354,14 +348,12 @@ const Homepage2043: React.FC = () => {
                 </span>
                 is Here
               </h1>
-
               {/* Enhanced Subtitle */}
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
                 Experience the world's most advanced AI consciousness platforms,
                 quantum computing solutions, and autonomous systems that
                 redefine what's possible in technology.
               </p>
-
               {/* Enhanced CTA Buttons */}
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'>                <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -370,7 +362,6 @@ const Homepage2043: React.FC = () => {
                   className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl'              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Experience the world's most advanced AI consciousness platforms, quantum computing solutions, and autonomous systems that redefine what's possible in technology.
               </p>
-
               {/* Enhanced CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                   whileHover={{ scale: 1.05 }}
@@ -384,7 +375,6 @@ const Homepage2043: React.FC = () => {
                   Get Started Today
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
-                
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -397,7 +387,6 @@ const Homepage2043: React.FC = () => {
                   Watch Demo
                 </motion.button>
               </div>
-
               {/* Enhanced Stats */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>                {stats.map((stat, index) => (
                   <motion.div
@@ -436,7 +425,6 @@ const Homepage2043: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced Features Section */}
         <section className='py-20 px-4 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-20 px-4 relative">
@@ -460,7 +448,6 @@ const Homepage2043: React.FC = () => {
                 reshaping the future.
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology
@@ -473,7 +460,6 @@ const Homepage2043: React.FC = () => {
                 that are transforming industries and reshaping the future.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -490,30 +476,24 @@ const Homepage2043: React.FC = () => {
                   >
                     <feature.icon className='w-8 h-8 text-white' />
                   </div>
-
                   <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300'>
                     {feature.title}
                   </h3>
-
                   <p className='text-gray-300 mb-6 leading-relaxed'>
                     {feature.description}
                   </p>
-
                   <a
                     href={feature.href}
                     className='inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300'
                   >
                     Learn More
                     <ChevronRight className='w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300' />                  </a>                  </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {feature.description}
                   </p>
-                  
                   <a 
                     href={feature.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300"
@@ -526,7 +506,6 @@ const Homepage2043: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Enhanced Featured Services Section */}
         <section className='py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">
@@ -549,7 +528,6 @@ const Homepage2043: React.FC = () => {
                 computing platforms that are setting new standards in
                 technology.              </p>
             </motion.div>
-
             {/* Enhanced Service Showcase */}
             <div className='relative'>
               <div className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm'>
@@ -565,7 +543,6 @@ const Homepage2043: React.FC = () => {
                 that are setting new standards in technology.
               </p>
             </motion.div>
-
             {/* Enhanced Service Showcase */}
             <div className='relative'>
               <div className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm'>
@@ -621,7 +598,6 @@ const Homepage2043: React.FC = () => {
                     </a>
                   </motion.div>
                 </AnimatePresence>
-
                 {/* Navigation Controls */}
                 <button
                   onClick={prevService}
@@ -629,26 +605,22 @@ const Homepage2043: React.FC = () => {
                 >
                   <ChevronLeft className='w-6 h-6' />
                 </button>
-
                 <button
                   onClick={nextService}
                   className='absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm'
                 >
                   <ChevronRight className='w-6 h-6' />
                 </button>
-
                 {/* Service Indicators */}
                 <div className='absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2'>                  {featuredServices.map((_, index) => (                >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
-                
                 <button
                   onClick={nextService}
                   className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
                 >
                   <ChevronRight className="w-6 h-6" />
                 </button>
-
                 {/* Service Indicators */}
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
                   {featuredServices.map((_, index) => (
@@ -668,7 +640,6 @@ const Homepage2043: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Enhanced Testimonials Section */}
         <section className='py-20 px-4 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-20 px-4 relative">
@@ -692,7 +663,6 @@ const Homepage2043: React.FC = () => {
                 innovation.
               </p>
             </motion.div>
-
             <div className='relative'>
               <AnimatePresence mode='wait'>                <motion.div            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -706,7 +676,6 @@ const Homepage2043: React.FC = () => {
                 are transforming industries and driving innovation.
               </p>
             </motion.div>
-
             <div className="relative">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -720,7 +689,6 @@ const Homepage2043: React.FC = () => {
                   <blockquote className='text-2xl text-white mb-8 leading-relaxed italic'>
                     "{testimonials[currentTestimonialIndex].content}"
                   </blockquote>
-
                   <div className='flex items-center justify-center gap-4 mb-6'>
                     <div className='text-4xl'>
                       {testimonials[currentTestimonialIndex].avatar}
@@ -735,7 +703,6 @@ const Homepage2043: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className='flex justify-center gap-1'>
                     {[
                       ...Array(testimonials[currentTestimonialIndex].rating),
@@ -750,7 +717,6 @@ const Homepage2043: React.FC = () => {
                   </div>
                 </motion.div>
               </AnimatePresence>
-
               {/* Testimonial Indicators */}
               <div className='flex justify-center gap-2 mt-8'>                {testimonials.map((_, index) => (              <div className="flex justify-center gap-2 mt-8">
                 {testimonials.map((_, index) => (
@@ -769,7 +735,6 @@ const Homepage2043: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Enhanced CTA Section */}
         <section className='py-20 px-4 relative'>
           <div className='max-w-6xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 relative">
@@ -786,13 +751,11 @@ const Homepage2043: React.FC = () => {
                   Future of AI?
                 </span>
               </h2>
-
               <p className='text-xl text-gray-300 mb-12 max-w-3xl mx-auto'>
                 Join thousands of organizations already transforming their
                 operations with our revolutionary AI consciousness and quantum
                 computing platforms.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>                <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -802,12 +765,10 @@ const Homepage2043: React.FC = () => {
                   Future of AI?
                 </span>
               </h2>
-              
               <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
                 Join thousands of organizations already transforming their operations 
                 with our revolutionary AI consciousness and quantum computing platforms.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -821,7 +782,6 @@ const Homepage2043: React.FC = () => {
                   Start Your Journey
                   <ArrowRight className="w-6 h-6" />
                 </motion.button>
-                
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -834,7 +794,6 @@ const Homepage2043: React.FC = () => {
                   Contact Us
                 </motion.button>
               </div>
-
               {/* Contact Information */}
               <div className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'>
                 <div className='text-center'>
@@ -846,7 +805,6 @@ const Homepage2043: React.FC = () => {
                   </h3>
                   <p className='text-cyan-400'>+1 302 464 0950</p>
                 </div>
-
                 <div className='text-center'>
                   <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4'>
                     <Mail className='w-8 h-8 text-white' />
@@ -856,7 +814,6 @@ const Homepage2043: React.FC = () => {
                   </h3>
                   <p className='text-cyan-400'>kleber@ziontechgroup.com</p>
                 </div>
-
                 <div className='text-center'>
                   <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4'>
                     <MapPin className='w-8 h-8 text-white' />
@@ -872,7 +829,6 @@ const Homepage2043: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
                   <p className="text-cyan-400">+1 302 464 0950</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4">
                     <Mail className="w-8 h-8 text-white" />
@@ -880,7 +836,6 @@ const Homepage2043: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
                   <p className="text-cyan-400">kleber@ziontechgroup.com</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4">
                     <MapPin className="w-8 h-8 text-white" />
@@ -990,3 +945,8 @@ export default Homepage2043;  )
 };
 
 export default Homepage2043;
+
+}
+}
+}
+}

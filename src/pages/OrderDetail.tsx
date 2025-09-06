@@ -67,7 +67,7 @@ const getStatusIcon = (status: string) => {
   }
 };
 
-export default function OrderDetail() {
+export default function OrderDetail() {;
   const router = useRouter();
   const { user } = useAuth();
   const [order, setOrder] = useState<Order | null>(null);
@@ -150,7 +150,6 @@ export default function OrderDetail() {
         </Link>
         <h1 className="text-3xl font-bold">Order Details</h1>
       </div>
-
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Order Summary */}
         <div className="lg:col-span-2 space-y-6">
@@ -186,7 +185,6 @@ export default function OrderDetail() {
               </div>
             </CardContent>
           </Card>
-
           {/* Shipping Address */}
           <Card>
             <CardHeader>
@@ -206,7 +204,6 @@ export default function OrderDetail() {
               </div>
             </CardContent>
           </Card>
-
           {/* Payment Information */}
           <Card>
             <CardHeader>
@@ -225,7 +222,6 @@ export default function OrderDetail() {
             </CardContent>
           </Card>
         </div>
-
         {/* Order Status & Tracking */}
         <div className="space-y-6">
           <Card>
@@ -261,7 +257,6 @@ export default function OrderDetail() {
               </div>
             </CardContent>
           </Card>
-
           {order.trackingNumber && (
             <Card>
               <CardHeader>
@@ -282,41 +277,6 @@ export default function OrderDetail() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
-};
-`Order #$ {;
-  order.orderId ;
-}`;
-`Date: $ {;
-  new Date (order.date) .toLocaleDateString () ;
-}`;';
-'';';
-'Items:';
-...order.items.map ( (i) => `$ {;
-  i.name ;
-}x$ {;
-  i.quantity ;
-}- $$ {;
-  i.price.toFixed (2) ;
-}`);';
-'';
-`Total: $$ {;
-  order.total.toFixed (2) ;
-}`;';
-'';';
-'Shipping Address: ';
-order.shippingAddress.name;
-order.shippingAddress.street;
-await navigator.clipboard.writeText (summary);';
-toast.success ('Order summary copied to clipboard') ;
-};
-</li>) ) ;
-}</ul> </div> <div> </div> <Link href="/orders" className="text-zion-purple underline" > Back to orders </Link> </div>) ;
-}'"
+
 }
-}
-;
-=======
-}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83

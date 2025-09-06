@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface ComprehensiveService {
+export interface ComprehensiveService {;
   id: string;
   name: string;
   tagline: string;
@@ -45,7 +45,7 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
-export const comprehensiveServicesExpansion: ComprehensiveService[] = [
+export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -78,7 +78,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-code-review-assistant',
-    marketPosition:
+    marketPosition:;
       'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',
     targetAudience: 'Development teams, DevOps engineers, CTOs',
     trialDays: 14,

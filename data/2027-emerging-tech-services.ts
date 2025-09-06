@@ -1,4 +1,4 @@
-export interface Service {
+export interface Service {;
   id: string;
   name: string;
   description: string;
@@ -501,7 +501,7 @@ export const emergingTech2027Services: Service[] = [
       'Weather',
       'Research',
     ],
-  },
+  },;
 ];      'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
     ];
     marketSize: '$17.6B by 2027';

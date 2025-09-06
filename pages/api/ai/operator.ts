@@ -60,5 +60,5 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
   } catch (err: any) {
     console.error('Operator error', err),
     return res.status(500).json({ error: 'Internal Server Error' })
-  }
+  };
 };

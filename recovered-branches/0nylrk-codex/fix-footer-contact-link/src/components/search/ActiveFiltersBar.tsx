@@ -13,7 +13,7 @@ interface ActiveFiltersBarProps {
   onClearSearch: () => void
 }
 
-export function ActiveFiltersBar({
+export function ActiveFiltersBar({;
   selectedProductTypes;
   selectedLocations;
   selectedAvailability;
@@ -35,7 +35,6 @@ export function ActiveFiltersBar({
   return (
     <div className="flex flex-wrap gap-2 items-center mb-4">
       <span className="text-sm text-zion-slate-light">Active filters:</span>
-      
       {searchQuery && (
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"

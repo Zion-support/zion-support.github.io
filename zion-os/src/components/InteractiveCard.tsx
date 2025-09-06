@@ -126,7 +126,6 @@ export function TestimonialCard({;
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
 <div className=&quot;text-4xl mb-4&quot;>💬</div>
-      
       {/* Rating */}
       <div className=&quot;flex mb-4&quot;>
         {Array.from({ length: rating }).map((_, i) => (
@@ -139,7 +138,6 @@ export function TestimonialCard({;
 <blockquote className=&quot;text-gray-300 text-lg leading-relaxed mb-6 italic&quot;>
         &quot;{quote}&quot;
       </blockquote>
-      
       {/* Author info */}
       <div className=&quot;border-t border-white/10 pt-4&quot;>
         <div className=&quot;font-semibold text-white&quot;>{author}</div>

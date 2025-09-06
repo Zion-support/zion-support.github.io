@@ -13,5 +13,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   await logSupportEventToOperator({ type: eventType, sessionId, payload }),
 
-  return res.status(200).json({ ok: true })
+  return res.status(200).json({ ok: true });
 };

@@ -12,7 +12,7 @@ interface OnboardingStatus {
   responseReceived: boolean
 }
 
-export function useOnboardingStatus() {
+export function useOnboardingStatus() {;
   const { user } = useAuth();
   const [status, setStatus] = useState<OnboardingStatus>({
     profileCompleted: false,

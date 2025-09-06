@@ -15,7 +15,7 @@ export interface MessageTalentModalProps {
   jobTitle?: string
 }
 
-export function MessageTalentModal({
+export function MessageTalentModal({;
   talent;
   isOpen;
   onClose;
@@ -99,7 +99,6 @@ export function MessageTalentModal({
             )}
           </DialogDescription>
         </DialogHeader>
-        
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-zion-slate mb-1">
@@ -114,7 +113,6 @@ export function MessageTalentModal({
             />
           </div>
         </div>
-        
         <DialogFooter className="gap-2 sm:gap-0">
           <Button
             type="button"

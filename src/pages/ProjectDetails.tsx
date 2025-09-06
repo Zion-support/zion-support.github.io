@@ -7,7 +7,7 @@ import { useProjects } from '@/hooks/useProjects'
 import { SEO } from '@/components/SEO'
 import { ProtectedRoute } from '@/components/ProtectedRoute'
 import { Project, ProjectStatus } from '@/types/projects'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger'; import Link from 'next/link'
 import { format } from "date-fns"
 import { useAuth } from "@/hooks/useAuth"
@@ -248,7 +248,6 @@ function ProjectDetailsContent() {
                 </span>
               </div>
             </div>
-
             {/* Action Buttons Based on Role and Status */}
             <div className='space-x-2'>
               {isTalent && isOfferPending && (
@@ -279,7 +278,6 @@ function ProjectDetailsContent() {
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
-
                   <Button
                     variant='outline'
                     onClick={() => handleStatusChange('changes_requested')}
@@ -352,7 +350,6 @@ function ProjectDetailsContent() {
                 )}            </div>
           </div>
         </div>
-
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
           <div className='order-2 lg:order-1 lg:col-span-2'>
             <Tabs
@@ -369,7 +366,6 @@ function ProjectDetailsContent() {
                   <TabsTrigger value='reviews'>Reviews</TabsTrigger>
                 )}
               </TabsList>
-
               <TabsContent value='details'>
                 <Card>
                   <CardHeader>
@@ -390,14 +386,12 @@ function ProjectDetailsContent() {
                           </p>
                         </div>
                       </div>
-
                       <div>
                         <h3 className='font-semibold mb-2'>Payment Terms</h3>
                         <Badge variant='outline' className='capitalize'>
                           {project.payment_terms} Payment
                         </Badge>
                       </div>
-
                       <div>
                         <h3 className='font-semibold mb-2'>Job Details</h3>
                         <div className='bg-muted/30 p-4 rounded-md'>
@@ -410,7 +404,6 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-
               <TabsContent value='timeline'>
                 <Card>
                   <CardHeader>
@@ -426,7 +419,6 @@ function ProjectDetailsContent() {
                           <p>{format(new Date(project.start_date), 'PPP')}</p>
                         </div>
                       </div>
-
                       <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>
                         <Clock className='h-5 w-5 text-primary mt-0.5' />
                         <div>
@@ -440,7 +432,6 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-
               <TabsContent value='documents'>
                 <Card>
                   <CardHeader>
@@ -483,7 +474,6 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-
               <TabsContent value='notes'>
                 <Card>
                   <CardHeader>
@@ -532,7 +522,6 @@ function ProjectDetailsContent() {
                           </div>
                         )}
                       </div>
-
                       {isOfferAccepted && (
                         <div>
                           <Textarea
@@ -552,13 +541,11 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-
               <TabsContent value='reviews'>
                 <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
           </div>
-
           <div className='order-1 lg:order-2 lg:col-span-1'>
             <Card>
               <CardHeader>
@@ -600,7 +587,6 @@ function ProjectDetailsContent() {
                       )}
                     </div>
                   </div>
-
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
                       {project.talent_profile?.profile_picture_url ? (
@@ -637,7 +623,6 @@ function ProjectDetailsContent() {
                 </div>
               </CardContent>
             </Card>
-
             {/* Project Status Card */}
             <Card className='mt-6'>
               <CardHeader>
@@ -649,14 +634,12 @@ function ProjectDetailsContent() {
                     <span className='text-sm font-medium'>Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
-
                   <div className='flex justify-between items-center'>
                     <span className='text-sm font-medium'>Creation Date:</span>
                     <span className='text-sm'>
                       {format(new Date(project.created_at), 'PPP')}
                     </span>
                   </div>
-
                   <div className='flex justify-between items-center'>
                     <span className='text-sm font-medium'>Start Date:</span>
                     <span className='text-sm'>
@@ -665,7 +648,6 @@ function ProjectDetailsContent() {
                   </div>
                 </div>
               </CardContent>
-
               {/* Conditional Footer Based on Status */}
               {project.status === 'changes_requested' && isClient && (
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
@@ -737,7 +719,7 @@ if (success) {
 status: newStatus 
 })
 //If offer was accepted, show a special toast if (newStatus === "offer accepted") {
-  toast ({
+  toast ({;
 };"
 case "offer accepted": return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;"
 case "changes requested": return <Badge variant="secondary">Changes Requested</Badge>;"
@@ -746,7 +728,7 @@ case "completed": return <Badge variant="default">Completed</Badge>;"
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;"
 default: return <Badge variant="outline"> {
   status 
-}</Badge> 
+}</Badge>
 };'"
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={"
   () => router.push ("/dashboard") 
@@ -852,6 +834,6 @@ const ProjectDetails = () => {
               </Link>
             </div>
     </>
-  )
-}
+  );
+};
 ;

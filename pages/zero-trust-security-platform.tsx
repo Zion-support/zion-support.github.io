@@ -20,7 +20,7 @@ export default function ZeroTrustSecurityPlatformPage() {
         description='Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services.'
         subtitle='Trust nothing, verify everything'
         pricePerMonthUSD={3499}
-        implementationWeeks='4-8 weeks'
+        implementationWeeks='4-8 weeks';
         roiNote='Reduce breach impact and lateral movement risk; meet compliance faster'
         features={[
           'Policy-as-code and enforcement',
@@ -41,3 +41,5 @@ export default function ZeroTrustSecurityPlatformPage() {
       />
     </>
   );
+
+}

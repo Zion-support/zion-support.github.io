@@ -33,8 +33,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onApprove,
   onReject
 }) => {
-  const [showAddForm, setShowAddForm] = useState(false)
-  const handleSubmit = async (data: any) => {
+  const [showAddForm, setShowAddForm] = useState(false);
+  const handleSubmit = async (data: any) => {;
     await onCreateMilestone(data);    setShowAddForm(false)
   }
   if (isLoading) {

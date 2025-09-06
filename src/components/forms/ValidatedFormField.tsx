@@ -12,7 +12,7 @@ import { Textarea } from '@/components/ui/textarea'
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
 import { cn } from '@/lib/utils'
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
@@ -38,7 +38,7 @@ interface ValidatedFormFieldProps {
     | 'checkbox'
   placeholder?: string
   description?: string
-  validation?: ValidationRule
+  validation?: ValidationRule;
   options?: { value: string; label: string }[]
   form: any; // React Hook Form control
   className?: string
@@ -330,3 +330,4 @@ export const commonValidations = {
   }},
     }
   }},
+;

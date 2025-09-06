@@ -13,7 +13,7 @@ interface ReviewCardProps {
   onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
 
-export function ReviewCard({ review, onReport }: ReviewCardProps) {
+export function ReviewCard({ review, onReport }: ReviewCardProps) {;
   const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
@@ -87,16 +87,13 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
             </div>
           </div>
         </div>
-        
         <div className="flex">
           {renderStars(review.rating)}
         </div>
       </div>
-      
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-      
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
@@ -148,7 +145,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
             </DialogHeader>
-            
             <Textarea
               placeholder="Why are you reporting this review?"
               value={reportReason}

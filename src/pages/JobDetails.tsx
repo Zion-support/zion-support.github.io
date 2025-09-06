@@ -9,7 +9,7 @@ import {
   Clock,
   DollarSign,
   Tag,
-  Users,
+  Users,;
   Briefcase,;
 } from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
@@ -31,7 +31,7 @@ interface Job {
   category: string;
   deadline?: string;
 
-export default function JobDetails() {
+export default function JobDetails() {;
   const router = useRouter(); // Init router
   const { jobId: rawJobId } = router.query; // Get jobId from query
   const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
@@ -111,7 +111,6 @@ export default function JobDetails() {
             ← Back to Jobs
           </Button>
         </div>
-
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           <div className='lg:col-span-2'>
             <Card>
@@ -139,7 +138,6 @@ export default function JobDetails() {
                   </h3>
                   <div className='whitespace-pre-wrap'>{job.description}</div>
                 </div>
-
                 <div>
                   <h3 className='font-semibold text-lg mb-3'>
                     Required Skills
@@ -154,7 +152,6 @@ export default function JobDetails() {
               </CardContent>
             </Card>
           </div>
-
           <div>
             <Card>
               <CardContent className='pt-6 space-y-4'>
@@ -165,7 +162,6 @@ export default function JobDetails() {
                     <p className='font-medium'>{formatBudget(job.budget)}</p>
                   </div>
                 </div>
-
                 <div className='flex items-start'>
                   <Clock className='mt-1 h-5 w-5 text-muted-foreground' />
                   <div className='ml-3'>
@@ -177,7 +173,6 @@ export default function JobDetails() {
                     </p>
                   </div>
                 </div>
-
                 <div className='flex items-start'>
                   <Briefcase className='mt-1 h-5 w-5 text-muted-foreground' />
                   <div className='ml-3'>
@@ -185,7 +180,6 @@ export default function JobDetails() {
                     <p className='font-medium'>Freelance / Remote</p>
                   </div>
                 </div>
-
                 {!isOwnJob && (
                   <Button
                     className='w-full mt-4'
@@ -207,7 +201,6 @@ export default function JobDetails() {
           </div>
         </div>
       </main>
-
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal

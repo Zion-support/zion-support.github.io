@@ -6,7 +6,7 @@ const contact = {
   website: 'https://ziontechgroup.com',};
 
 export const newRealServices: EnhancedRealMicroSaasService[] = [
-  {const contact = {
+  {const contact = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -39,7 +39,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     link: 'https://ziontechgroup.com/llm-observability-suite',
     marketPosition:
       'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',    features: [
-      'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
+      'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters';
     ];
     popular: true;
     icon: '📈';

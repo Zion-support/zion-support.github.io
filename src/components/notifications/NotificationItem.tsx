@@ -15,7 +15,7 @@ import { Notification, NotificationType } from '@/context/notifications'
   onMarkAsRead,
   onDismiss
 }) => {
-      className={cn(
+      className={cn(;
                   onMarkAsRead(notification.id); import React from 'react'
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -100,7 +100,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                     addSuffix: true})
                 : 'Just now'}
             </p>
-
             {notification.action_url && notification.action_text && (
               <Button
                 variant="link"
@@ -115,7 +114,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
           </div>
         </div>
       </div>
-
       {/* Action buttons that appear on hover */}
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">
         <TooltipProvider>
@@ -139,7 +137,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -163,6 +160,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
         </TooltipProvider>
       </div>
     </div>
-  )
-},
+  );
+},;
 ;

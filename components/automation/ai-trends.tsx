@@ -7,10 +7,10 @@ export type Trend = {
   title: string,
   highlights: string[],
   summary: string,
-  tags: string[]
+  tags: string[];
 };
 
-export async function getServerSideProps() {
+export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'dataai-trends.json');
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
@@ -42,6 +42,6 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
           </div>
         ))}
       </div>
-    </div>
+    </div>;
 );
 }

@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import {readJson} from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
-export async function getStaticProps() {
+export async function getStaticProps() {;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return { props: { articles } };
 
-export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
+export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {;
   const categories = Array.from(new Set(articles.map(a => a.category)));
   return (
     <div className='space-y-8'>
@@ -30,3 +30,6 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
       ))}
     </div>
 );
+
+}
+}

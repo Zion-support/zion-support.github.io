@@ -8,7 +8,7 @@ export default function QuantumServicesPage() {
     'Quantum-inspired optimization & annealing strategies',
     'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable',
     'Quantum-safe cryptography assessments and roadmaps',
-    'R&D ideation for quantum-ready workloads',
+    'R&D ideation for quantum-ready workloads',;
   ];
 
   const solutions = [
@@ -61,7 +61,6 @@ export default function QuantumServicesPage() {
                 See Market Pricing
               </Button>            </div>
           </header>
-
           <section>
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>
               Focus Areas
@@ -77,7 +76,6 @@ export default function QuantumServicesPage() {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>
               Highlighted Solutions
@@ -97,7 +95,6 @@ export default function QuantumServicesPage() {
               ))}
             </div>
           </section>
-
           <section className='text-center'>
             <div className='inline-flex items-center justify-center gap-3 text-gray-300'>
               <Shield className='w-5 h-5 text-purple-400' />
@@ -109,3 +106,5 @@ export default function QuantumServicesPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
 );
+
+}

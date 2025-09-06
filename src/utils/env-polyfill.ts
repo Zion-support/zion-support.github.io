@@ -80,4 +80,8 @@ export const processEnv =
 console.log('✅ Environment polyfill loaded successfully')
 export default safeEnv
 export default safeEnv
-export default safeEnv
+export default safeEnv;
+}
+}
+}
+}

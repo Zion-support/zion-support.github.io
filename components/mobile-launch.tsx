@@ -252,14 +252,14 @@ const testimonials = [
   },
 ];
 
-export default function MobileLaunchPage() {
+export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
     'idle' | 'loading' | 'success' | 'error'
   >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
-export default function MobileLaunchPage() {
+export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
 
@@ -326,13 +326,11 @@ export default function MobileLaunchPage() {
           property='og:description'
           content='Hire from anywhere. AI-match instantly. Track milestones on the go.'
         />
-
       <SmartBanner
         iosUrl={IOS_APP_URL}
         androidUrl={ANDROID_APP_URL}
         deepLink={DEEP_LINK_URL}
       />
-
       {/* Hero */}
       <section className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white p-6 md:p-10'>
         <div className='grid md:grid-cols-2 gap-10 items-center'>
@@ -405,7 +403,6 @@ export default function MobileLaunchPage() {
             <div className="opacity-80">Or tap a store badge above</div>
         </div>
       </section>
-
       {/* Key features */}
       <section className='mt-10 grid md:grid-cols-3 gap-6'>
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
@@ -428,7 +425,6 @@ export default function MobileLaunchPage() {
           </p>
           <div className='mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40' />        </div>
       </section>
-
       {/* Trust & Community */}
       <section className='mt-12'>
         <div className='flex items-center gap-2'>        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
@@ -436,7 +432,6 @@ export default function MobileLaunchPage() {
           <p className="mt-2 text-sm opacity-80">Manage deliverables, approvals, and progress on the go.</p>
           <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40" />
       </section>
-
       {/* Trust & Community */}
       <section className='mt-12'>
         <div className='flex items-center gap-2'>
@@ -474,7 +469,6 @@ export default function MobileLaunchPage() {
           </div>
         </div>
       </section>
-
       {/* Email opt-in */}
       <section className='mt-12 rounded-3xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
         <h3 className='text-lg font-semibold'>
@@ -528,7 +522,6 @@ export default function MobileLaunchPage() {
           </div>
         )}
       </section>
-
       {/* Helper links */}
       <section className='mt-10 text-sm opacity-80'>
         <div className='flex flex-wrap items-center gap-4'>
@@ -542,7 +535,6 @@ export default function MobileLaunchPage() {
       </section>
     </EnhancedLayout>
   );      </section>
-
       {/* Helper links */}
       <section className="mt-10 text-sm opacity-80">
         <div className="flex flex-wrap items-center gap-4">

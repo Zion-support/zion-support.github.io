@@ -3,7 +3,7 @@ import {useState} from "react";
 import {MessageSquare} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {ChatAssistant} from "@/components/ChatAssistant";
-export function ChatAssistantTrigger() {
+export function ChatAssistantTrigger() {;
   const [isOpen, setIsOpen] = useState(false);
 
   // Handle sending messages to the AI chat assistant
@@ -39,7 +39,6 @@ export function ChatAssistantTrigger() {
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
-      
       {isOpen && (
         <ChatAssistant
           isOpen={isOpen}

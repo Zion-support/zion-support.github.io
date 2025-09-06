@@ -6,7 +6,7 @@ interface TalentCardBadgesProps {
   featured: boolean | undefined
 }
 
-export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
+export function TalentCardBadges({ featured }: TalentCardBadgesProps) {;
   if (!featured) return null;
   
   return (

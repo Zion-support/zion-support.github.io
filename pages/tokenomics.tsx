@@ -4,7 +4,7 @@ import Head from 'next/head';
 type DistributionItem = { label: string; percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 
-export default function TokenomicsWhitepaperBuilder() {
+export default function TokenomicsWhitepaperBuilder() {;
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
@@ -202,7 +202,6 @@ export default function TokenomicsWhitepaperBuilder() {
             </button>
           </div>
         </div>
-
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
           <div className='space-y-6'>
             <div className='rounded-lg border p-4 space-y-4'>
@@ -278,7 +277,6 @@ export default function TokenomicsWhitepaperBuilder() {
                   </label>                </div>
               </div>
             </div>
-
             <div className='rounded-lg border p-4 space-y-3'>
               <h3 className='font-medium'>Distribution</h3>
               <div className='space-y-2'>
@@ -325,7 +323,6 @@ export default function TokenomicsWhitepaperBuilder() {
               <div className='mt-3'>                <DistributionDonut data={distribution} />
               </div>
             </div>
-
             <div className='rounded-lg border p-4 space-y-3'>
               <h3 className='font-medium'>Operator Prompt</h3>
               <textarea
@@ -350,7 +347,6 @@ export default function TokenomicsWhitepaperBuilder() {
                 </button>
               </div>
             </div>
-
             <div className='rounded-lg border p-4 space-y-2'>
               <h3 className='font-medium'>Output</h3>
               <div className='flex gap-3'>
@@ -368,7 +364,6 @@ export default function TokenomicsWhitepaperBuilder() {
                 </button>              </div>
             </div>
           </div>
-
           <div className='rounded-lg border p-4'>
             <div className='flex items-center justify-between mb-3'>
               <div className='flex gap-2 overflow-x-auto'>
@@ -468,3 +463,9 @@ function MarkdownPreview({
       {content || markdown}
     </pre>
   );
+
+}
+}
+}
+}
+}

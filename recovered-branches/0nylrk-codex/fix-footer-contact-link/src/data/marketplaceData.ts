@@ -2,7 +2,7 @@ import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
-  {
+  {;
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
 // Mock marketplace listings with more realistic data
@@ -348,7 +348,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     reviewCount: 18,
     featured: true,
     location: 'North America',
-    availability: '2-4 Weeks',
+    availability: '2-4 Weeks',;
   },];      name: "ServerPro Systems";
       id: "serverpro"};
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
@@ -381,7 +381,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Server rack',
     'GPU cluster',
     'Edge computing',
-    'High performance storage',
+    'High performance storage',;
   ];
 
   // Convert strings to SearchSuggestion objects
@@ -401,7 +401,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
   const productTypes = [
-    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
   ].sort();
   const locations = [
     ...new Set(
@@ -431,10 +431,10 @@ export const generateFilterOptions = (): FilterOptions => {
 };
 
 export const MAX_PRICE = Math.max(
-  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)
+  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
 );
 export const MIN_PRICE = Math.min(
-  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)
+  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
 );
   return {
   productTypes: productTypes.map (type => ({

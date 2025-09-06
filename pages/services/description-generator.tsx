@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-export default function ServiceDescriptionGeneratorPage() {
+export default function ServiceDescriptionGeneratorPage() {;
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
@@ -67,7 +67,6 @@ export default function ServiceDescriptionGeneratorPage() {
         Enter your service details. We will generate a polished description
         using GPT-4. You can edit it on the page and accept when ready.
       </p>
-
       <form
         onSubmit={handleSubmit}
         className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'
@@ -84,7 +83,6 @@ export default function ServiceDescriptionGeneratorPage() {
             onChange={e => setTitle(e.target.value)}            required
           />
         </div>
-
         <div>
           <label className='block text-sm font-medium mb-1'>
             Target Audience
@@ -97,7 +95,6 @@ export default function ServiceDescriptionGeneratorPage() {
             onChange={e => setTargetAudience(e.target.value)}            required
           />
         </div>
-
         <div>
           <label className='block text-sm font-medium mb-1'>
             Key Features (one per line)
@@ -111,7 +108,6 @@ export default function ServiceDescriptionGeneratorPage() {
             onChange={e => setFeaturesInput(e.target.value)}            required
           />
         </div>
-
         <div>
           <label className='block text-sm font-medium mb-1'>Tone</label>
           <select
@@ -124,7 +120,6 @@ export default function ServiceDescriptionGeneratorPage() {
             <option value='persuasive'>Persuasive</option>
             <option value='technical'>Technical</option>          </select>
         </div>
-
         <div>
           <label className='block text-sm font-medium mb-1'>
             Additional Notes (optional)
@@ -136,7 +131,6 @@ export default function ServiceDescriptionGeneratorPage() {
             onChange={e => setAdditionalNotes(e.target.value)}
           />
         </div>
-
         <div className='flex items-center gap-3'>
           <button
             type='submit'
@@ -147,7 +141,6 @@ export default function ServiceDescriptionGeneratorPage() {
           </button>
           {error && <span className='text-red-600 text-sm'>{error}</span>}        </div>
       </form>
-
       {generated && (
         <div className='mt-8 space-y-3'>
           <div className='flex items-center justify-between'>
@@ -165,7 +158,6 @@ export default function ServiceDescriptionGeneratorPage() {
               </button>
             </div>
           </div>
-
           <textarea
             className='w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             value={generated}
@@ -180,3 +172,5 @@ export default function ServiceDescriptionGeneratorPage() {
       )}
     </div>
 );
+
+}

@@ -21,8 +21,8 @@ export function ProfileContact({
     setIsSending(true)
     // Here would be the actual API call to send the message
     setTimeout(() => {
-      setIsSending(false)
-      setMessage('')
+      setIsSending(false);
+      setMessage('');
       setSubject('');      toast({
         title: 'Message Sent',
         description: `Your message has been sent to ${profileName}.`,
@@ -35,7 +35,6 @@ export function ProfileContact({
         <Mail className='mr-2 h-5 w-5 text-zion-cyan' />
         Contact
       </h3>
-
       {email && (
         <div className='mb-4 text-zion-slate-light'>
           <span className='block'>Email: </span>

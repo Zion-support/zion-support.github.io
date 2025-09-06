@@ -1,4 +1,4 @@
-export interface SpecializedITSolution2026 {
+export interface SpecializedITSolution2026 {;
   id: string;
   name: string;
   tagline: string;
@@ -604,16 +604,16 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     customers: 67,
     rating: 4.4,
     reviews: 33,
-  },
+  },;
 ];
 
 export const getSpecializedITSolutions2026ByCategory = (category: string) => {
   return specializedITSolutions2026.filter(
-    solution => solution.category === category
+    solution => solution.category === category;
   );
 };
 
-export const getPopularSpecializedITSolutions2026 = () => {
+export const getPopularSpecializedITSolutions2026 = () => {;
   return specializedITSolutions2026.filter(solution => solution.popular);
 };
 
@@ -621,7 +621,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number,
   maxPrice: number
 ) => {
-  return specializedITSolutions2026.filter(solution => {
+  return specializedITSolutions2026.filter(solution => {;
     const price = parseInt(solution.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });

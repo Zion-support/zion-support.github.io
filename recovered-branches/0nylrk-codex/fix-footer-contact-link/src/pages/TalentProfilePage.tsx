@@ -16,7 +16,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {UserProfile} from "@/types/auth";
 import {toast} from "@/hooks/use-toast";
 export default function TalentProfilePage() {
-  // Cast to specify the expected route param type since useParams may be untyped
+  // Cast to specify the expected route param type since useParams may be untyped;
   const { id } = useParams() as { id?: string };
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
@@ -96,7 +96,6 @@ export default function TalentProfilePage() {
         onMessageTalent={handleMessageTalent}
       />
       <BackToDirectoryButton />
-      
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>
         <div className="p-2 flex gap-2">
@@ -119,7 +118,6 @@ export default function TalentProfilePage() {
           </Button>
         </div>
       </StickyAction>
-      
       {/* Request to Hire Modal */}
       <HireRequestModal 
         talent={profile}

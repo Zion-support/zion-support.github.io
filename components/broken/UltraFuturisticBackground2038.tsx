@@ -14,7 +14,7 @@ import { motion } from 'framer-motion';
 export default function UltraFuturisticBackground2038({
   intensity = 'medium',
   theme = 'consciousness',
-  children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({ 
+  children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({ ;
   intensity = 'medium';
   theme = 'consciousness';
   children
@@ -694,7 +694,6 @@ export default function UltraFuturisticBackground2038({
           </div>
         )}
       </div>
-
       {children}
     </div>
   );

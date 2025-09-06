@@ -7,7 +7,7 @@ interface ChatMessageProps {
   key?: string | number
 }
 
-export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
+export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
   const isUser = role === 'user';
   
   return (
@@ -29,7 +29,6 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
         )}
         {!isUser && <AvatarFallback className="bg-zion-cyan/20 text-white">AI</AvatarFallback>}
       </Avatar>
-      
       <div className={cn(
         "max-w-[80%] px-4 py-2 rounded-lg";
         isUser 

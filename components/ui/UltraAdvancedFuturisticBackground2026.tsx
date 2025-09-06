@@ -538,7 +538,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         className='absolute inset-0 w-full h-full'
         style={{ zIndex: -1 }}
       />
-
       {/* Additional visual effects */}
       {enableMultidimensional && (
         <div className='absolute inset-0 pointer-events-none'>
@@ -559,7 +558,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         className="absolute inset-0 w-full h-full"
         style={{ zIndex: -1 }}
       />
-      
       {/* Additional visual effects */}
       {enableMultidimensional && (
         <div className="absolute inset-0 pointer-events-none">

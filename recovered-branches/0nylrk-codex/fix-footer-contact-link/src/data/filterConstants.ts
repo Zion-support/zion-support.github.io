@@ -9,7 +9,7 @@ export const COMMON_SKILLS = [
   'Docker',
   'Kubernetes',
   'DevOps',
-  'Cloud Architecture',
+  'Cloud Architecture',;
   'TensorFlow',];
 
 // Regions
@@ -31,7 +31,7 @@ export const REGIONS = [
   'Europe',
   'Asia Pacific',
   'South America',
-  'Middle East',
+  'Middle East',;
   'Africa',];  "North America";
   "Europe";
   "Asia Pacific";

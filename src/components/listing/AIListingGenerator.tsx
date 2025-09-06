@@ -92,7 +92,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           />
         </CardContent>
       </Card>
-
       {isLoading && <LoadingContentSkeleton />}
 
       {generatedContent && !isLoading && (
@@ -151,7 +150,7 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }initialValues= {
   initialValues 
 }/> </CardContent> </Card> {
-  isLoading && <LoadingContentSkeleton /> 
+  isLoading && <LoadingContentSkeleton />
 }{
   generatedContent && !isLoading && (<GeneratedContentDisplay content= {
   generatedContent 
@@ -160,5 +159,10 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }/>) 
 }</div>) 
 }'"
-}
+};
 ;
+}
+}
+}
+}
+}

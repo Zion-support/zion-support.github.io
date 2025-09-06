@@ -15,7 +15,7 @@ import {
   Brain,
   Atom,
   Zap
-} from 'lucide-react',
+} from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 const NewsPage: React.FC = () => {
   const newsArticles = [
@@ -207,7 +207,6 @@ export default function NewsPage() {
           <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>
           <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />
         </Head>
-
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -229,7 +228,6 @@ export default function NewsPage() {
                 from Zion Tech Group and the technology industry.
               </p>
             </motion.div>
-
         {/* Category Filter */}
         <section className="py-10 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -245,7 +243,7 @@ export default function NewsPage() {
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
-                      : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
+                      : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600";
 import React, { useState } from 'react',;
 import React from 'react',;
 import Head from 'next/head',;
@@ -253,7 +251,7 @@ import { motion } from 'framer-motion',;
 import { 
   Newspaper, Globe, Award, Users, Rocket, Brain, 
   ArrowRight, ExternalLink, Calendar, Tag, Star
-} from 'lucide-react',
+} from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
 export default function NewsPage() {
@@ -350,9 +348,7 @@ export default function NewsPage() {
         <meta property="og:description" content="Stay updated with our latest news, awards, and media coverage." />
         <link rel="canonical" href="https://ziontechgroup.com/news" />
       </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -369,7 +365,6 @@ export default function NewsPage() {
               Stay updated with our latest innovations, awards, and media coverage
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -383,7 +378,6 @@ export default function NewsPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Featured News */}
       {featuredNews.length > 0 && (
         <section className="py-16 px-6">
@@ -398,7 +392,6 @@ export default function NewsPage() {
               <h2 className="text-3xl font-bold text-white mb-4">Featured News</h2>
               <p className="text-white/70">Latest headlines and major announcements</p>
             </motion.div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredNews.map((item, index) => (
                 <motion.div
@@ -423,10 +416,8 @@ export default function NewsPage() {
                         </span>
                       </div>
                     </div>
-                    
                     <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
                     <p className="text-white/70 mb-6">{item.excerpt}</p>
-                    
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
@@ -437,7 +428,6 @@ export default function NewsPage() {
                         <span>{item.source}</span>
                       </div>
                     </div>
-                    
                     <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                       Read Full Article
                       <ExternalLink className="w-4 h-4" />
@@ -470,7 +460,6 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
-
       {/* News Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -486,7 +475,6 @@ export default function NewsPage() {
               Stay informed about our latest developments and industry recognition
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredNews.filter(item => !item.featured).map((item, index) => (
               <motion.div
@@ -506,10 +494,8 @@ export default function NewsPage() {
                       {item.category}
                     </span>
                   </div>
-                  
                   <h3 className="text-lg font-bold text-white mb-3 line-clamp-2">{item.title}</h3>
                   <p className="text-white/70 text-sm mb-4 line-clamp-3">{item.excerpt}</p>
-                  
                   <div className="flex items-center justify-between text-xs text-white/60 mb-4">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
@@ -520,7 +506,6 @@ export default function NewsPage() {
                       <span>{item.source}</span>
                     </div>
                   </div>
-                  
                   <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105">
                     Read More
                   </button>
@@ -530,7 +515,6 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
-
       {/* Press Kit CTA */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -546,14 +530,12 @@ export default function NewsPage() {
                 </motion.div>
               ))}
             </div>
-            
             <p className="text-sm text-gray-400 mt-4">
               No spam, unsubscribe at any time. We respect your privacy.
             </p>
           </motion.div>
         </div>
       </section>
-
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -566,7 +548,6 @@ export default function NewsPage() {
                 Stay updated with our most recent developments and announcements
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.filter(article => !article.featured).map((article, index) => (
                 <motion.article
@@ -602,7 +583,6 @@ export default function NewsPage() {
             </div>
           </div>
         </section>
-
         {/* Newsletter Signup */}
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Stay Updated
@@ -631,7 +611,6 @@ export default function NewsPage() {
                 </button>
               </div>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pressReleases.map((release, index) => (
                 <motion.article
@@ -663,7 +642,6 @@ export default function NewsPage() {
             </div>
           </div>
         </section>
-
         {/* News Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -681,7 +659,6 @@ export default function NewsPage() {
                 Explore news by category to find updates in your areas of interest.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {newsCategories.map((category, index) => (
                 <motion.div
@@ -706,7 +683,6 @@ export default function NewsPage() {
             </div>
           </div>
         </section>
-
         {/* Recent News */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -724,7 +700,6 @@ export default function NewsPage() {
                 Stay updated with our latest announcements and developments.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {recentNews.map((news, index) => (
                 <motion.article
@@ -762,7 +737,6 @@ export default function NewsPage() {
             </div>
           </div>
         </section>
-
         {/* Media Contact */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -898,7 +872,6 @@ export default function NewsPage() {
                 Recent updates and announcements
               </p>
             </motion.div>
-            
             <div className="grid lg:grid-cols-2 gap-8">
               {filteredNews.filter(news => !news.featured).map((news, index) => (
                 <motion.div
@@ -935,7 +908,6 @@ export default function NewsPage() {
                 </motion.div>
               ))}
             </div>
-
             {filteredNews.filter(news => !news.featured).length === 0 && (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -949,7 +921,6 @@ export default function NewsPage() {
             )}
           </div>
         </section>
-
         {/* Press Releases */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -967,7 +938,6 @@ export default function NewsPage() {
                 Official company announcements and media releases
               </p>
             </motion.div>
-            
             <div className="max-w-4xl mx-auto space-y-6">
               {pressReleases.map((release, index) => (
                 <motion.div
@@ -1000,7 +970,6 @@ export default function NewsPage() {
             </div>
           </div>
         </section>
-
         {/* Media Resources */}
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
@@ -1018,7 +987,6 @@ export default function NewsPage() {
                 Downloadable assets and resources for media and journalists
               </p>
             </motion.div>
-            
             <div className="grid lg:grid-cols-2 gap-8">
               {mediaResources.map((resource, index) => (
                 <motion.div
@@ -1054,7 +1022,6 @@ export default function NewsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="container mx-auto px-4 text-center">
@@ -1097,9 +1064,10 @@ export default function NewsPage() {
         <h1 className="text-4xl font-bold text-white mb-4">News & Press</h1>
         <p className="text-gray-300">Press releases and announcements will appear here.</p>
       </div>
-
       <EnhancedFooter />
     </div>
   )
-}
+};
 ;
+}
+}

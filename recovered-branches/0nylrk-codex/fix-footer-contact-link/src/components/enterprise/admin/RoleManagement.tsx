@@ -63,7 +63,7 @@ export function RoleManagement() {
     // In a real app, this would make an API call to update permissions
     toast({
       title: "Permission updated",
-      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
   };
 
   const roleDescriptions: Record<string, string> = {
@@ -87,7 +87,6 @@ export function RoleManagement() {
           ))}
         </div>
       </div>
-
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -194,7 +193,7 @@ export function RoleManagement() {
                 <TableCell className="text-center">
                   <Switch 
                     checked={member.permissions.viewCandidates} 
-                    onCheckedChange={(checked) => 
+                    onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewCandidates", checked)
                     }
                   />
@@ -202,7 +201,7 @@ export function RoleManagement() {
                 <TableCell className="text-center">
                   <Switch 
                     checked={member.permissions.editCandidates} 
-                    onCheckedChange={(checked) => 
+                    onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "editCandidates", checked)
                     }
                   />
@@ -210,7 +209,7 @@ export function RoleManagement() {
                 <TableCell className="text-center">
                   <Switch 
                     checked={member.permissions.createJobs} 
-                    onCheckedChange={(checked) => 
+                    onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "createJobs", checked)
                     }
                   />
@@ -218,7 +217,7 @@ export function RoleManagement() {
                 <TableCell className="text-center">
                   <Switch 
                     checked={member.permissions.manageTeam} 
-                    onCheckedChange={(checked) => 
+                    onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "manageTeam", checked)
                     }
                   />
@@ -226,7 +225,7 @@ export function RoleManagement() {
                 <TableCell className="text-center">
                   <Switch 
                     checked={member.permissions.viewBilling} 
-                    onCheckedChange={(checked) => 
+                    onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewBilling", checked)
                     }
                   />

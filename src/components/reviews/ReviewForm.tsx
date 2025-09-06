@@ -10,7 +10,7 @@ import {
   FormItem
   FormLabel
   FormMessage} from "@/components/ui/form"
-  RadioGroup
+  RadioGroup;
   RadioGroupItem} from "@/components/ui/radio-group"; import { Switch } from "@/components/ui/switch"
 import { Review } from "@/types/reviews"
 interface ReviewFormValues {
@@ -30,5 +30,5 @@ interface ReviewFormProps {
   onSubmit: (data: any) => Promise<boolean>, 
   }
   )
-}
+};
 ;

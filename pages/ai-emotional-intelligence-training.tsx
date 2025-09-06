@@ -22,4 +22,4 @@ export default function AIEmotionalIntelligenceTraining() {
 			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training"
 		/>
 	)
-}
+};

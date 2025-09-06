@@ -35,7 +35,6 @@ export const AppFeatures: React.FC = () => {
             Everything you love about Zion, now in your pocket. Our mobile app brings all the powerful features you need to succeed.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover:border-zion-cyan transition-colors duration-300">
@@ -51,5 +50,5 @@ export const AppFeatures: React.FC = () => {
         </div>
       </div>
     </section>
-  )
+  );
 };

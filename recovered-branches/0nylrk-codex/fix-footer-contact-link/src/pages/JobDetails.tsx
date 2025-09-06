@@ -15,7 +15,7 @@ import {ApplyToJobModal} from '@/components/messaging/job-application';
 import {SEO} from '@/components/SEO';
 import {useWhitelabel} from '@/context/WhitelabelContext';
 export default function JobDetails() {
-  // Cast to specify the expected route param type since useParams may be untyped
+  // Cast to specify the expected route param type since useParams may be untyped;
   const { jobId } = useParams() as { jobId?: string };
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
@@ -90,7 +90,6 @@ export default function JobDetails() {
             ← Back to Jobs
           </Button>
         </div>
-        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
             <Card>
@@ -113,7 +112,6 @@ export default function JobDetails() {
                     {job.description}
                   </div>
                 </div>
-                
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
                   <div className="flex flex-wrap gap-2">
@@ -127,7 +125,6 @@ export default function JobDetails() {
               </CardContent>
             </Card>
           </div>
-          
           <div>
             <Card>
               <CardContent className="pt-6 space-y-4">
@@ -138,7 +135,6 @@ export default function JobDetails() {
                     <p className="font-medium">{formatBudget(job.budget)}</p>
                   </div>
                 </div>
-                
                 <div className="flex items-start">
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
                   <div className="ml-3">
@@ -148,7 +144,6 @@ export default function JobDetails() {
                     </p>
                   </div>
                 </div>
-                
                 <div className="flex items-start">
                   <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />
                   <div className="ml-3">
@@ -156,7 +151,6 @@ export default function JobDetails() {
                     <p className="font-medium">Freelance / Remote</p>
                   </div>
                 </div>
-                
                 {!isOwnJob && (
                   <Button 
                     className="w-full mt-4" 
@@ -178,7 +172,6 @@ export default function JobDetails() {
         </div>
       </main>
       <Footer />
-      
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal

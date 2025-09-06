@@ -1,4 +1,4 @@
-export interface RealMicroSaasService {
+export interface RealMicroSaasService {;
   id: string;
   name: string;
   tagline: string;
@@ -1266,7 +1266,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ],
     benefits: ['Control spend', 'Reduce risk'],
     targetAudience: ['Platform teams', 'AI product'],
-    marketPosition:
+    marketPosition:;
       'Comparable to OpenRouter/EdenAI; adds governance and audit.',
     competitors: ['OpenRouter', 'EdenAI', 'Helicone'],
     techStack: ['Node.js', 'PostgreSQL', 'OpenAI', 'Anthropic'],
@@ -1370,7 +1370,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
   },];
 
 // Helper functions
-export const getServicesByCategory = (category: string) => {
+export const getServicesByCategory = (category: string) => {;
   return realMicroSaasServices.filter(service => service.category === category);    id: 'data-contracts-hub';
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
@@ -1402,7 +1402,7 @@ export const getServicesByCategory = (category: string) => {
 ];
 
 // Helper functions
-export const getServicesByCategory = (category: string) => {
+export const getServicesByCategory = (category: string) => {;
   return realMicroSaasServices.filter(service => service.category === category);
 marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
@@ -1468,7 +1468,7 @@ export const serviceCategories = [
   'Biotechnology & Healthcare',
   'Financial Technology',
   'Education Technology',
-  'Enterprise IT',
+  'Enterprise IT',;
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';

@@ -17,5 +17,7 @@ export default function APIDocumentationPage() {
         </h1>
         <p className='text-gray-300'>REST and SDK references. Coming soon.</p>
       </section>
-    </Layout>
+    </Layout>;
   );
+
+}

@@ -20,5 +20,5 @@ export default function StackExchangeInsightsPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  )
+  );
 };

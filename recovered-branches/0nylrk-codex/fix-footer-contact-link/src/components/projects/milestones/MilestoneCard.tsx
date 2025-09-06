@@ -20,7 +20,7 @@ interface MilestoneCardProps {
   onReject?: (id: string) => Promise<void>
 }
 
-export function MilestoneCard({ 
+export function MilestoneCard({ ;
   id;
   projectId;
   title, 
@@ -63,14 +63,12 @@ export function MilestoneCard({
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
               {status.replace('_ ')}
             </Badge>
-            
             {isUnderDispute && disputeStatus && (
               <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
         </div>
       </CardHeader>
-      
       <CardContent className="pb-2">
         {description && (
           <p className="text-muted-foreground">{description}</p>
@@ -79,7 +77,6 @@ export function MilestoneCard({
           <p className="text-xl font-bold">${amount.toFixed(2)}</p>
         </div>
       </CardContent>
-      
       <CardFooter className="pt-2 flex justify-between">
         <div>
           {status !== 'completed' && status !== 'rejected' && (
@@ -91,7 +88,6 @@ export function MilestoneCard({
             />
           )}
         </div>
-        
         <div className="flex gap-2">
           {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant="outline" size="sm" onClick={() => onReject(id)}>

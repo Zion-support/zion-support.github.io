@@ -38,7 +38,7 @@ setForm ({
 
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<
-    'youtube' | 'twitch' | 'twitter'
+    'youtube' | 'twitch' | 'twitter';
   >('youtube');
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =
@@ -126,7 +126,6 @@ export default function SummitPage() {
           content='Zion Global Summit: AI, Talent, Trust — Globalized'
         />
       </Head>
-
       <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
         <div className='max-w-4xl'>
           <p className='uppercase tracking-widest text-neon-blue'>
@@ -160,7 +159,6 @@ export default function SummitPage() {
             </a>          </div>
         </div>
       </section>
-
       <div className='grid md:grid-cols-3 gap-6 mt-8'>
         <section
           id='agenda'
@@ -193,7 +191,6 @@ export default function SummitPage() {
             </li>          </ul>
         </section>
       </div>
-
       <section
         id='speakers'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -242,7 +239,6 @@ export default function SummitPage() {
           ))}
         </div>
       </section>
-
       <section
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -270,7 +266,6 @@ export default function SummitPage() {
           ))}
         </div>
       </section>
-
       <section
         id='livestream'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -314,7 +309,6 @@ export default function SummitPage() {
         </div>
         <div className='mt-4'>{livestreamEmbed()}</div>
       </section>
-
       <section
         id='register'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -376,7 +370,6 @@ export default function SummitPage() {
             )}          </div>
         </form>
       </section>
-
       <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>
         <h2 className='text-xl font-semibold'>
           AI Session Summaries (Optional)
@@ -387,3 +380,7 @@ export default function SummitPage() {
       </section>
     </>
 );
+
+}
+}
+}

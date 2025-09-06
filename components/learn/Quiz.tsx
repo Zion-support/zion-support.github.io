@@ -18,7 +18,7 @@ type Props = {
   questions: Question[],
   onComplete: (score: number) => void
 
-export default function Quiz({ questions, onComplete }: Props) {
+export default function Quiz({ questions, onComplete }: Props) {;
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
 
@@ -97,4 +97,7 @@ export default function Quiz({ questions, onComplete }: Props) {
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
 );
+}
+
+}
 }

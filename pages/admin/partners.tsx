@@ -150,7 +150,6 @@ const AdminPartnersPage: React.FC = () => {
           </tbody>
         </table>
       </div>
-
       {selected && (
         <div className='p-4 rounded border'>
           <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>
@@ -185,7 +184,6 @@ const AdminPartnersPage: React.FC = () => {
             <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
           </div>
         </div>
-
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -214,13 +212,11 @@ const AdminPartnersPage: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Partners Table */}
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <div className="px-6 py-4 border-b">
             <h2 className="text-lg font-semibold">Partners ({filteredPartners.length})</h2>
           </div>
-          
           {loading ? (
             <div className="text-center py-8">Loading partners...</div>
           ) : filteredPartners.length === 0 ? (
@@ -330,3 +326,7 @@ const AdminPartnersPage: React.FC = () => {
       </main>
     </>
   );
+
+}
+}
+}

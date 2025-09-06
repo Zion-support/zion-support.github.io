@@ -73,7 +73,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               </div>
               <Badge>{project.status}</Badge>
             </div>
-
             <div className='space-y-1'>
               <div className='flex justify-between items-center text-sm'>
                 <span>Progress</span>
@@ -81,7 +80,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               </div>
               <Progress value={project.progress} className='h-2' />
             </div>
-
             <div className='grid grid-cols-2 gap-3 text-sm'>
               <div>
                 <p className='text-muted-foreground'>Start Date</p>
@@ -100,12 +98,10 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 <p className='font-medium capitalize'>{project.status}</p>
               </div>
             </div>
-
             <div>
               <p className='text-sm text-muted-foreground mb-1'>Description</p>
               <p className='text-sm'>{project.description}</p>
             </div>
-
             <div className='flex gap-2'>
               <Button size='sm' variant='outline' className='gap-1 flex-1'>
                 <FileText className='h-4 w-4' /> Contract
@@ -127,7 +123,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
           </div>
         </CardContent>
       </Card>
-
       <section>
         <h2 className='text-lg font-medium mb-4'>Milestones</h2>
         <div className='space-y-3'>
@@ -153,7 +148,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                     {milestone.paymentStatus}
                   </Badge>
                 </div>
-
                 <div className='pl-7'>
                   <div className='flex justify-between text-sm'>
                     <span className='text-muted-foreground'>Due Date:</span>
@@ -183,6 +177,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 ;
+}
+}

@@ -6,7 +6,7 @@ interface ReputationDisplayProps {
   size?: 'sm' | 'md' | 'lg'
 }
 
-export const ReputationDisplay = ({ 
+export const ReputationDisplay = ({ ;
   reputation;
   size = 'md' 
 }: ReputationDisplayProps) => {

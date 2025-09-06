@@ -11,7 +11,7 @@ import {
   Shield,
   Star,
   TrendingUp,
-  Eye,
+  Eye,;
   Timer,;
 } from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
@@ -25,7 +25,7 @@ export default function UltraFuturistic2029InnovationsPage() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
+    website: 'https://ziontechgroup.com',;
   };
 
   const all2029Services = [
@@ -64,7 +64,6 @@ export default function UltraFuturistic2029InnovationsPage() {
           rel='canonical'
           href='https://ziontechgroup.com/2029-ultra-futuristic-innovations'
         />      </Head>
-
       {/* Background */}
       <UltraFuturisticBackground2029 />        <meta name="description" content="Experience the future of technology with our revolutionary 2029 innovations including AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and space mining platforms." />
         <meta name="keywords" content="2029 innovations, AI consciousness, quantum computing, space colonization, Mars automation, space mining, futuristic technology, Zion Tech Group" />
@@ -73,13 +72,10 @@ export default function UltraFuturistic2029InnovationsPage() {
         <meta property="og:url" content="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
-
       {/* Background */}
       <UltraFuturisticBackground2029 />
-      
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -96,7 +92,6 @@ export default function UltraFuturistic2029InnovationsPage() {
               </span>
             </div>
           </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -107,7 +102,6 @@ export default function UltraFuturistic2029InnovationsPage() {
             <br />
             <span className='text-white'>Innovations</span>
           </motion.h1>
-
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -118,7 +112,6 @@ export default function UltraFuturistic2029InnovationsPage() {
             that push the boundaries of what's possible. From AI consciousness
             simulation to Mars colonization automation.
           </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -139,7 +132,6 @@ export default function UltraFuturistic2029InnovationsPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Innovation Categories Overview */}
       <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
         <div className='max-w-7xl mx-auto'>
@@ -157,7 +149,6 @@ export default function UltraFuturistic2029InnovationsPage() {
               domains
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {[
               {
@@ -270,7 +261,6 @@ export default function UltraFuturistic2029InnovationsPage() {
           </div>
         </div>
       </section>
-
       {/* Services Showcase */}
       <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>
         <UltraFuturistic2029ServiceShowcase
@@ -280,7 +270,6 @@ export default function UltraFuturistic2029InnovationsPage() {
           maxServices={20}
         />
       </section>
-
       {/* Innovation Stats */}
       <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
         <div className='max-w-7xl mx-auto'>
@@ -298,7 +287,6 @@ export default function UltraFuturistic2029InnovationsPage() {
               creating new possibilities
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {
@@ -354,7 +342,6 @@ export default function UltraFuturistic2029InnovationsPage() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
         <div className='max-w-4xl mx-auto text-center'>
@@ -389,7 +376,6 @@ export default function UltraFuturistic2029InnovationsPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Footer */}
       <UltraFuturisticFooter2029 />
     </>
@@ -584,3 +570,27 @@ export default function UltraFuturistic2029InnovationsPage() {
 }<UltraFuturisticFooter2029 /> </>)   )
 }
 ;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

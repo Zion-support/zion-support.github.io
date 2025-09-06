@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 const memoryStore: { q: string, ts: number }[] = [],
 
@@ -16,5 +16,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n })),
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
   }
-  return res.status(405).end()
+  return res.status(405).end();
 };

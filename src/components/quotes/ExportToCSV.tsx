@@ -53,8 +53,8 @@ export const ExportToCSV = ({
           )
           .join(',')
       ),
-    ].join('\n')
-    // Create download link
+    ].join('\n');
+    // Create download link;
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
     const url = URL.createObjectURL(blob)
     const link = document.createElement('a')
@@ -144,5 +144,5 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 }
 '"},
 
-  )
-}
+  );
+};

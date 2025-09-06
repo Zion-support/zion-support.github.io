@@ -1481,7 +1481,7 @@ const itServices: Service[] = [
     link: 'https://ziontechgroup.com/it-services'}
 ];
 
-export default function Services(): React.JSX.Element {
+export default function Services(): React.JSX.Element {;
   const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
     <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
       <div style={{ 
@@ -1592,11 +1592,9 @@ export default function Services(): React.JSX.Element {
           </div>
         </div>
       </section>
-
       <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
       <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
       <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
-      
       {/* CTA Section */}
       <section style={{ 
         maxWidth: 1400, margin: '0 auto', padding: '60px 20px',
@@ -1636,7 +1634,7 @@ export default function Services(): React.JSX.Element {
 }
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
-export default function Services() {
+export default function Services() {;
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -1653,7 +1651,6 @@ export default function Services() {
             </div>
           </div>
         </section>
-
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Our Services
               </h1>
@@ -1671,7 +1668,6 @@ export default function Services() {
             </motion.div>
           </div>
         </section>
-
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1686,7 +1682,6 @@ export default function Services() {
                 From micro SaaS development to enterprise IT solutions, we provide comprehensive technology services.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -1726,7 +1721,6 @@ export default function Services() {
             </div>
           </div>
         </section>
-
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -1742,7 +1736,6 @@ export default function Services() {
                 We deliver exceptional results through our proven expertise and commitment to excellence.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -1820,7 +1813,7 @@ export default function Services() {
         'Infrastructure as Code',
         'Disaster Recovery Solutions',
       ],
-      href: '/it-services',
+      href: '/it-services',;
     },  ];
 
   const getColorClasses = (color: string) => {
@@ -1864,7 +1857,6 @@ export default function Services() {
         <meta name='robots' content='index, follow' />
         <link rel='canonical' href={`${contact.site}/services`} />
       </Head>
-
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
           {/* Hero Section */}
@@ -1888,7 +1880,6 @@ export default function Services() {
                 business needs to thrive in the digital age.              </p>
             </div>
           </section>
-
           {/* Service Categories */}
           <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
@@ -1904,11 +1895,9 @@ export default function Services() {
                           {category.count}
                         </span>
                       </div>
-
                       <p className='text-slate-300 mb-6'>
                         {category.description}
                       </p>
-
                       <ul className='text-slate-400 space-y-2 mb-8'>
                         {category.services.map((service, serviceIndex) => (
                           <li key={serviceIndex} className='flex items-center'>
@@ -1916,7 +1905,6 @@ export default function Services() {
                           </li>
                         ))}
                       </ul>
-
                       <Link                        href={category.href}
                         className={`inline-flex items-center px-6 py-3 ${colors.bg} ${colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
                       >
@@ -1942,14 +1930,12 @@ export default function Services() {
             </div>
           </div>
         </section>
-
           {/* Why Choose Us */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
               <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
                 Why Choose Zion Tech Group?
               </h2>
-
               <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -1972,7 +1958,6 @@ export default function Services() {
                     Rapid deployment and implementation of solutions
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -1994,7 +1979,6 @@ export default function Services() {
                     Scalable solutions for businesses of all sizes
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -2016,7 +2000,6 @@ export default function Services() {
                     Bank-level security and 99.9% uptime guarantee
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -2040,7 +2023,6 @@ export default function Services() {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className='py-16 px-4'>
             <div className='max-w-4xl mx-auto text-center'>
@@ -2052,7 +2034,6 @@ export default function Services() {
                 and discover how our innovative solutions can transform your
                 business.
               </p>
-
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
                 <Link
                   href='/contact'
@@ -2103,4 +2084,6 @@ export default function Services() {
   );
 
   )
+}
+
 }

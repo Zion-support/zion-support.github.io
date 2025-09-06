@@ -18,6 +18,6 @@ export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
           </Button>
         )}
       </CardContent>
-    </Card>
+    </Card>;
   );
 }

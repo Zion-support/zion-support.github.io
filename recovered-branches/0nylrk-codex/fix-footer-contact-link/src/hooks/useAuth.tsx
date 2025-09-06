@@ -3,7 +3,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {AuthContext} from "@/context/auth/AuthContext";
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
 // Define types for our context
-export interface UserDetails {
+export interface UserDetails {;
   id?: string;
   name?: string;
   email?: string;
@@ -40,7 +40,7 @@ export interface AuthContextType {
 }
 
 // Create a provider component
-export function AuthProvider({ children }: { children: ReactNode }) {
+export function AuthProvider({ children }: { children: ReactNode }) {;
   const [user, setUser] = useState<UserDetails | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -192,7 +192,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 }
 
 // Custom hook to use the auth context
-export function useAuth(): AuthContextType {
+export function useAuth(): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")

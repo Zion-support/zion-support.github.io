@@ -35,7 +35,7 @@ interface WorkExperienceItemFormProps {
   onCancel: () => void
 }
 
-export function WorkExperienceItemForm({
+export function WorkExperienceItemForm({;
   initialData;
   onSubmit;
   onCancel}: WorkExperienceItemFormProps) {
@@ -112,7 +112,6 @@ export function WorkExperienceItemForm({
               )}
             />
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
@@ -149,7 +148,6 @@ export function WorkExperienceItemForm({
               )}
             />
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
@@ -238,7 +236,6 @@ export function WorkExperienceItemForm({
               />
             )}
           </div>
-
           <FormField
             control={form.control}
             name="description"
@@ -296,7 +293,6 @@ export function WorkExperienceItemForm({
           </div>
         </form>
       </Form>
-
       <AIEnhancementDialog
         title="Enhance Work Experience Description"
         isOpen={isEnhancementDialogOpen}

@@ -15,7 +15,7 @@ export default function AISolutionsPage() {
         'Recommendation Systems',
       ],      icon: '🧠',
       category: 'Core AI',
-      complexity: 'Advanced'
+      complexity: 'Advanced';
     };
     {
       id: 'natural-language-processing',
@@ -154,7 +154,6 @@ export default function AISolutionsPage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
           <section className='text-center mb-16'>
@@ -166,7 +165,6 @@ export default function AISolutionsPage() {
               businesses and drive innovation
             </p>
           </section>
-
           <section className='mx-auto max-w-7xl'>
             {/* AI Solutions Grid */}
             <div className='mb-16'>
@@ -203,7 +201,6 @@ export default function AISolutionsPage() {
                       ))}
                     </ul>
                     <Link      </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
@@ -214,7 +211,6 @@ export default function AISolutionsPage() {
               Cutting-edge artificial intelligence solutions that transform businesses and drive innovation
             </p>
           </section>
-
           <section className="mx-auto max-w-7xl">
             {/* AI Solutions Grid */}
             <div className="mb-16">
@@ -250,7 +246,6 @@ export default function AISolutionsPage() {
                 ))}
               </div>
             </div>
-
             {/* Industry Use Cases */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -286,7 +281,6 @@ export default function AISolutionsPage() {
                 ))}
               </div>
             </div>
-
             {/* Technologies */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -308,7 +302,6 @@ export default function AISolutionsPage() {
                 </div>
               </div>
             </div>
-
             {/* Success Stories */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -365,7 +358,6 @@ export default function AISolutionsPage() {
                 </div>
               </div>
             </div>
-
             {/* Call to Action */}
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -405,4 +397,7 @@ export default function AISolutionsPage() {
       </div>
     </>
 );
+}
+
+}
 }

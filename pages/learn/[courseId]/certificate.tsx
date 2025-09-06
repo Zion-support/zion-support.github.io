@@ -9,5 +9,5 @@ export default function CertificatePage() {
       <h1 className="text-2xl font-semibold">Certificate</h1>
       <CertificatePreview courseId={courseId} />
     </div>
-  )
+  );
 };

@@ -34,5 +34,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     drafted.push({ title: ch.title, content: text })
   }
 
-  res.status(200).json({ chapters: drafted })
+  res.status(200).json({ chapters: drafted });
 };

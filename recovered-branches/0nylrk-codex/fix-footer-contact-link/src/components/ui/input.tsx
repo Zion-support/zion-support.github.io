@@ -10,5 +10,5 @@ import { cn } from &quot;@/lib/utils&quot;
   }
 )
 Input.displayName = &quot;Input&quot;
-export { Input }
+export { Input };
 ;

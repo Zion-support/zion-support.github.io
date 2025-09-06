@@ -62,6 +62,7 @@ export function InvoiceHistory() {
       default:
         return <Badge variant="outline">{status}</Badge>
 }
-  )
-}
+  );
+};
 ;
+}

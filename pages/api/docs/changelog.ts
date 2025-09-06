@@ -3,7 +3,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
       const content = fs.existsSync(filePath)
-        ? JSON.parse(fs.readFileSync(filePath, "utf8"))
+        ? JSON.parse(fs.readFileSync(filePath, "utf8"));
         : { content: "" };
       res.status(200).json(content);
     } catch (e: any) {

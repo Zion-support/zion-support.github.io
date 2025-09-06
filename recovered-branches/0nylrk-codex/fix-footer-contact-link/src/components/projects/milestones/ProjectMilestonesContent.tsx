@@ -9,7 +9,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {useDisputeCheck} from '@/hooks/useDisputeCheck';
 import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
 
-export function ProjectMilestonesContent() {
+export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
   const { user } = useAuth();
   const { getProjectById } = useProjects();
@@ -94,7 +94,6 @@ export function ProjectMilestonesContent() {
   return (
     <div className="container mx-auto py-8 px-4">
       <ProjectHeader title={project.job?.title || "Untitled Project"} />
-      
       <div className="flex justify-between items-center my-6">
         <h2 className="text-2xl font-bold">Payment Milestones</h2>
         <ProjectActions 
@@ -105,7 +104,6 @@ export function ProjectMilestonesContent() {
           onAddMilestone={() => setActiveTab('create')}
         />
       </div>
-      
       <Tabs value={activeTab} onValueChange={setActiveTab}>
         <TabsList className="mb-6">
           <TabsTrigger value="milestones">Milestones</TabsTrigger>
@@ -114,7 +112,6 @@ export function ProjectMilestonesContent() {
             <TabsTrigger value="create">Create Milestone</TabsTrigger>
           )}
         </TabsList>
-        
         <TabsContent value="milestones">
           <MilestoneManager 
             projectId={projectId || ''}
@@ -132,11 +129,9 @@ export function ProjectMilestonesContent() {
             refetch={refetch}
           />
         </TabsContent>
-        
         <TabsContent value="activity">
           <MilestoneActivities projectId={projectId || ''} />
         </TabsContent>
-        
         <TabsContent value="create">
           {(isClient || isTalent) && (
             <MilestoneCreator 

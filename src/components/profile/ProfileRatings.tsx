@@ -74,7 +74,6 @@ export function ProfileRatings({
             totalReviews={ratingCount}
             ratingDistribution={ratingDistribution}          />
         </div>
-
         <div className='md:w-2/3'>
           <Tabs defaultValue='all'>
             <TabsList className='mb-4'>
@@ -84,7 +83,6 @@ export function ProfileRatings({
               <TabsTrigger value='positive'>Positive</TabsTrigger>
               <TabsTrigger value='critical'>Critical</TabsTrigger>
             </TabsList>
-
             <TabsContent value='all'>              <ReviewsList        
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
@@ -93,20 +91,17 @@ export function ProfileRatings({
               <TabsTrigger value="positive">Positive</TabsTrigger>
               <TabsTrigger value="critical">Critical</TabsTrigger>
             </TabsList>
-            
             <TabsContent value="all">
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}              />
             </TabsContent>
-
             <TabsContent value='positive'>
               <ReviewsList
                 reviews={reviews.filter(r => r.rating >= 4)}                isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
-
             <TabsContent value='critical'>
               <ReviewsList
                 reviews={reviews.filter(r => r.rating < 4)}                isLoading={isLoading}                reviews={reviews.filter((r) => r.rating >= 4)}
@@ -118,7 +113,6 @@ export function ProfileRatings({
                 onReportReview={reportReview}
               />
             </TabsContent>
-
             <TabsContent value='critical'>
               <ReviewsList
                 reviews={reviews.filter(r => r.rating < 4)}                reviews={reviews.filter((r) => r.rating < 4)}
@@ -161,4 +155,8 @@ export function ProfileRatings({
 }onReportReview= {
   reportReview 
 }/> </TabsContent> </Tabs> </div> </div> </div>) 
-}"}
+}"};
+;
+}
+}
+}

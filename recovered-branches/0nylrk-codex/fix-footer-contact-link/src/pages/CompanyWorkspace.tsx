@@ -9,7 +9,7 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
 import {useWhitelabel} from "@/context/WhitelabelContext";
-export default function CompanyWorkspace() {
+export default function CompanyWorkspace() {;
   const { companySlug } = useParams() as { companySlug?: string };
   const { user } = useAuth();
   const { company, isLoading, error } = useCompanyWorkspace(companySlug);

@@ -61,6 +61,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
           Ignore
         </Button>
       )}
-    </div>
+    </div>;
 );
 };

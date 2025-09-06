@@ -117,7 +117,6 @@ const SpaceTechnologyPage: React.FC = () => {
         description="Revolutionary space technology solutions for the future. From resource mining to autonomous systems, explore the final frontier."
         keywords="space technology, space mining, AI space systems, brain-computer interface, autonomous vehicles, quantum space communications"
       />
-      
       <main className="relative z-10">
         {/* Hero Section */}
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
@@ -151,7 +150,6 @@ const SpaceTechnologyPage: React.FC = () => {
           </div>
         </div>
       </section>
-
         {/* Space Capabilities */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-6xl mx-auto">
@@ -169,7 +167,6 @@ const SpaceTechnologyPage: React.FC = () => {
                 Comprehensive space technology solutions for the next generation of exploration
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {spaceCapabilities.map((capability, index) => (
                 <motion.div
@@ -192,7 +189,6 @@ const SpaceTechnologyPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Space Services */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -210,7 +206,6 @@ const SpaceTechnologyPage: React.FC = () => {
                 Choose from our comprehensive suite of space technology solutions
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {spaceServices.map((service, index) => (
                 <motion.div
@@ -244,7 +239,6 @@ const SpaceTechnologyPage: React.FC = () => {
                       <span className="text-lg text-gray-400">/{service.period}</span>
                     </div>
                   </div>
-                  
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -253,7 +247,6 @@ const SpaceTechnologyPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
                   <a 
                     href="/contact" 
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
@@ -265,7 +258,6 @@ const SpaceTechnologyPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -303,6 +295,6 @@ const SpaceTechnologyPage: React.FC = () => {
   )
 },
 
-export default SpaceTechnologyPage,
-
+export default SpaceTechnologyPage,;
+;
 ;

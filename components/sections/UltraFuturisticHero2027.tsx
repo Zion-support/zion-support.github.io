@@ -17,7 +17,7 @@ import {
   ArrowRight,
   Star,
   TrendingUp,
-  Users,
+  Users,;
   CheckCircle,;} from 'lucide-react';
 
 export default function UltraFuturisticHero2027() {
@@ -46,8 +46,8 @@ export default function UltraFuturisticHero2027() {
     {
       icon: Shield,
       text: 'Enterprise Security',
-      color: 'from-red-400 to-orange-400',
-    },
+      color: 'from-red-400 to-orange-400',;
+    },;
   ];
 
   const stats = [
@@ -112,7 +112,6 @@ export default function UltraFuturisticHero2027() {
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-        
         <motion.div
           className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"
           animate={{
@@ -128,7 +127,6 @@ export default function UltraFuturisticHero2027() {
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
-
         <motion.div
           className='absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl'
           animate={{
@@ -140,7 +138,6 @@ export default function UltraFuturisticHero2027() {
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         <motion.div
           className='absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl'
           animate={{
@@ -152,7 +149,6 @@ export default function UltraFuturisticHero2027() {
             repeat: Infinity,
             ease: 'easeInOut',          }}
         />
-
         {/* Grid Pattern */}          className="absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl"
           animate={{
             y: [0, -30, 0];
@@ -168,11 +164,9 @@ export default function UltraFuturisticHero2027() {
         {/* Grid Pattern */}
         <div className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]' />
       </div>
-
       <div className='max-w-7xl mx-auto relative z-10'>
         <div className='text-center'>          {/* Main Heading */}        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
       </div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center">
           <motion.div
@@ -201,7 +195,6 @@ export default function UltraFuturisticHero2027() {
               </span>
             </h2>
           </motion.div>
-
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -215,7 +208,6 @@ export default function UltraFuturisticHero2027() {
           >
             Experience revolutionary AI consciousness evolution, quantum computing breakthroughs, and practical micro SAAS solutions that will transform your business beyond imagination.
           </motion.p>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -231,7 +223,6 @@ export default function UltraFuturisticHero2027() {
               <span>Explore 2027 Services</span>
               <ArrowRight className='w-6 h-6 group-hover:translate-x-1 transition-transform duration-300' />
             </Link>
-
             <Link
               href='/contact'
               className='px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 font-bold text-xl rounded-2xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 flex items-center justify-center space-x-3'
@@ -245,7 +236,6 @@ export default function UltraFuturisticHero2027() {
               <span>Explore 2027 Services</span>
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
-            
             <Link
               href="/contact"
               className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 font-bold text-xl rounded-2xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 flex items-center justify-center space-x-3"
@@ -254,7 +244,6 @@ export default function UltraFuturisticHero2027() {
               <span>Start Your Journey</span>
             </Link>
           </motion.div>
-
           {/* Features Grid */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -288,7 +277,6 @@ export default function UltraFuturisticHero2027() {
               </motion.div>
             ))}
           </motion.div>
-
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -328,7 +316,6 @@ export default function UltraFuturisticHero2027() {
               </motion.div>
             ))}
           </motion.div>
-
           {/* Trust Indicators */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -372,11 +359,18 @@ export default function UltraFuturisticHero2027() {
           </motion.div>
         </div>
       </div>
-
       {/* Bottom Glow */}
       <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none' />
     </section>
   );      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none" />
     </section>
   )
+}
+
+}
+}
+}
+}
+}
+}
 }
