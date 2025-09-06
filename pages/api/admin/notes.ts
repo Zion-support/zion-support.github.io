@@ -12,6 +12,10 @@ type Note = {
 
 const notesStore: Note[] = [];
 
+export function getAllNotes(): Note[] {
+  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
+}
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true';
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' });
@@ -46,6 +50,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
-
-export function getAllNotes(): Note[] {
-  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
+}

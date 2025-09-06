@@ -18,6 +18,7 @@ function readAll(): any[] {
 
 function writeAll(rows: any[]) {
   fs.writeFileSync(FEEDBACK_FILE, JSON.stringify(rows, null, 2));
+}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).end();
@@ -38,3 +39,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   rows.push(entry);
   writeAll(rows);
   return res.status(200).json({ ok: true });
+}

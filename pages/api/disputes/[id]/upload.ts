@@ -3,11 +3,11 @@ import path from 'path';
 import {
   ensureDisputeUploadDir,
   getDisputeById,
-  upsertDispute,;
+  upsertDispute,
 } from '../../../../utils/fsdb';
 import {
   parseUserFromRequest,
-  ensureInvolvedOrAdmin,;
+  ensureInvolvedOrAdmin,
 } from '../../../../utils/auth';
 
 export const config = {
@@ -43,7 +43,13 @@ export default async function handler(
     const now = new Date().toISOString();
     const dir = await ensureDisputeUploadDir(dispute.id);
 
-    -${safeName}`,
+    for (const f of files) {
+      const safeName = f.fileName.replace(/[^a-zA-Z0-9.-]/g, '_');
+      const filePath = path.join(dir, safeName);
+      const buffer = Buffer.from(f.base64, 'base64');
+      await fsPromisesWrite(filePath, buffer);
+      dispute.attachments.push({
+        id: `${Date.now()}-${safeName}`,
         fileName: safeName,
         fileSize: buffer.length,
         mimeType: f.mimeType || 'application/octet-stream',
@@ -60,6 +66,7 @@ export default async function handler(
 
   res.setHeader('Allow', 'POST');
   return res.status(405).end('Method Not Allowed');
+}
 
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   const fs = await import('fs');
@@ -75,3 +82,4 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
       }
     );
   });
+}

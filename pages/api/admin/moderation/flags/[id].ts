@@ -25,3 +25,4 @@ export default async function handler(
 
   res.setHeader('Allow', 'GET');
   return res.status(405).end('Method Not Allowed');
+}

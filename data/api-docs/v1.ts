@@ -88,7 +88,7 @@ const v1: ApiDocsSpec = {
               code: `curl -X POST ${baseUrl}/v1/oauth/token -H 'Content-Type: application/json' -d '{"code":"AUTH_CODE","redirect_uri":"https://app.partner.com/callback"}'`,
             },
             {
-              language: 'javascript',;
+              language: 'javascript',
               code: `await fetch('${baseUrl}/v1/oauth/token', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code: 'AUTH_CODE', redirect_uri: 'https://app.partner.com/callback' }) }).then(r => r.json());`,
             },
             {
@@ -127,7 +127,7 @@ const v1: ApiDocsSpec = {
               code: `curl '${baseUrl}/v1/talent/123' -H 'Authorization: Bearer <token>'`,
             },
             {
-              language: 'javascript',;
+              language: 'javascript',
               code: `await fetch('${baseUrl}/v1/talent/123', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());`,
             },
             {
@@ -165,7 +165,7 @@ const v1: ApiDocsSpec = {
               code: `curl '${baseUrl}/v1/jobs?q=engineer&status=open' -H 'Authorization: Bearer <token>'`,
             },
             {
-              language: 'javascript',;
+              language: 'javascript',
               code: `await fetch('${baseUrl}/v1/jobs?q=engineer&status=open', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());`,
             },
             {
@@ -216,7 +216,7 @@ const v1: ApiDocsSpec = {
               code: `curl -X POST ${baseUrl}/v1/quotes -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"jobId":"JOB123","milestones":[{"title":"Design","amount":1000}]}'`,
             },
             {
-              language: 'javascript',;
+              language: 'javascript',
               code: `await fetch('${baseUrl}/v1/quotes', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId: 'JOB123', milestones: [{ title: 'Design', amount: 1000 }] }) }).then(r => r.json());`,
             },
             {
@@ -255,7 +255,7 @@ const v1: ApiDocsSpec = {
               code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'`,
             },
             {
-              language: 'javascript',;
+              language: 'javascript',
               code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r.json());`,
             },
             {
@@ -292,7 +292,7 @@ const v1: ApiDocsSpec = {
               code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'`,
             },
             {
-              language: 'javascript',;
+              language: 'javascript',
               code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());`,
             },
             {
@@ -326,7 +326,7 @@ const v1: ApiDocsSpec = {
               code: `curl '${baseUrl}/v1/dao/proposals' -H 'Authorization: Bearer <token>'`,
             },
             {
-              language: 'javascript',;
+              language: 'javascript',
               code: `await fetch('${baseUrl}/v1/dao/proposals', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());`,
             },
             {
@@ -360,7 +360,7 @@ const v1: ApiDocsSpec = {
               code: `curl '${baseUrl}/v1/treasury/logs' -H 'Authorization: Bearer <token>'`,
             },
             {
-              language: 'javascript',;
+              language: 'javascript',
               code: `await fetch('${baseUrl}/v1/treasury/logs', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());`,
             },
             {
@@ -397,7 +397,7 @@ const v1: ApiDocsSpec = {
               code: `curl '${baseUrl}/v1/nation/stats' -H 'Authorization: Bearer <token>'`,
             },
             {
-              language: 'javascript',;
+              language: 'javascript',
               code: `await fetch('${baseUrl}/v1/nation/stats', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json());`,
             },
             {

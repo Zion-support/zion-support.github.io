@@ -34,3 +34,4 @@ export default async function handler(
     `attachment; filename="invoice-${invoiceId}.pdf"`
   );
   res.status(200).send(pdfBuffer);
+}

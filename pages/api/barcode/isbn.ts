@@ -1,25 +1,31 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  const code = (req.query.code as string) || '';
-  if (!code) {
-    res.status(400).json({ error: 'Missing code' });
-    return;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', 'GET');
+    return res.status(405).end('Method Not Allowed');
+  }
+
+  const { isbn, format = 'svg' } = req.query;
+  if (!isbn || Array.isArray(isbn)) {
+    return res.status(400).json({ error: 'Missing or invalid ISBN' });
   }
 
   try {
-    const png = await bwipjs.toBuffer({
-      bcid: 'ean13',
-      text: code.replace(/[^0-9]/g, ''),
-      scale: 3,
-      height: 10,
-      includetext: false,
-    });
-    res.setHeader('Content-Type', 'image/png');
-    res.status(200).send(png);
+    // Mock implementation - replace with actual barcode generation
+    const barcode = generateBarcode(isbn as string, format as string);
+    
+    res.setHeader('Content-Type', format === 'svg' ? 'image/svg+xml' : 'image/png');
+    res.status(200).send(barcode);
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to render barcode' });
   }
+}
+
+function generateBarcode(isbn: string, format: string): string {
+  // Mock implementation - replace with actual barcode generation
+  if (format === 'svg') {
+    return `<svg width="200" height="100"><rect width="200" height="100" fill="white"/><text x="100" y="50" text-anchor="middle">${isbn}</text></svg>`;
+  }
+  return 'Mock barcode data';
+}

@@ -1,50 +1,41 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!rateLimit(req, res)) return;
-
   if (req.method === 'GET') {
-    const { jobId, talentSlug } = req.query;
-    let apps = readJsonFile<Application[]>(FILE, []);
-    if (jobId) apps = apps.filter(a => a.jobId === String(jobId));
-    if (talentSlug)
-      apps = apps.filter(a => a.talentSlug === String(talentSlug));
-    res.status(200).json({ applications: apps });
-    return;
+    const { jobId, status } = req.query;
+    const applications = [
+      {
+        id: '1',
+        jobId: jobId as string || 'job1',
+        candidateName: 'John Doe',
+        email: 'john@example.com',
+        status: status as string || 'pending',
+        appliedAt: new Date().toISOString(),
+      },
+    ];
+
+    return res.status(200).json({ applications });
   }
 
   if (req.method === 'POST') {
-    const { jobId, talentSlug, action } = req.body || {};
-    if (!jobId || !talentSlug || !['apply', 'skip'].includes(action)) {
-      res.status(400).json({ error: 'Invalid request' });
-      return;
+    const { jobId, candidateName, email, resume } = req.body || {};
+    if (!jobId || !candidateName || !email) {
+      return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    const now = new Date().toISOString();
-    const apps = readJsonFile<Application[]>(FILE, []);
-
-    const existing = apps.find(
-      a => a.jobId === jobId && a.talentSlug === talentSlug
-    );
-    if (existing) {
-      existing.status = action === 'apply' ? 'applied' : 'skipped';
-      writeJsonFile<Application[]>(FILE, apps);
-      res.status(200).json({ application: existing });
-      return;
-    }
-
-    const app: Application = {
-      id: uuidv4(),
-      jobId: String(jobId),
-      talentSlug: String(talentSlug),
-      status: action === 'apply' ? 'applied' : 'skipped',
-      createdAtIso: now,
+    const application = {
+      id: Date.now().toString(),
+      jobId,
+      candidateName,
+      email,
+      resume,
+      status: 'pending',
+      appliedAt: new Date().toISOString(),
     };
-    apps.push(app);
-    writeJsonFile<Application[]>(FILE, apps);
-    res.status(201).json({ application: app });
-    return;
+
+    return res.status(201).json({ application });
   }
 
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
+}

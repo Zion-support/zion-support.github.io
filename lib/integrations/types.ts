@@ -9,6 +9,7 @@ export interface SyncRules {
   // ATS rules
   autoSyncApplicants?: boolean;
   autoUploadResumes?: boolean;
+}
 
 export interface ProviderConnection {
   providerId: IntegrationProviderId;
@@ -20,6 +21,7 @@ export interface ProviderConnection {
   syncRules?: SyncRules;
   lastSyncAt?: number;
   lastError?: string | null;
+}
 
 export interface SyncLogEntry {
   id: string;
@@ -28,20 +30,24 @@ export interface SyncLogEntry {
   level: 'info' | 'warn' | 'error';
   action: string;
   details?: Record<string, any>;
+}
 
 export interface ManualOverride {
   jobId: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
+}
 
 export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
   payload: Record<string, any>;
+}
 
 export interface IntegrationsState {
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];
+}

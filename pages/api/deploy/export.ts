@@ -27,11 +27,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       error: 'Export failed' 
     });
   }
-  // In a real system, look up persisted deployment by id
-  const fake = {
-    id,
-    exportedAt: new Date().toISOString(),
-    note: 'This is a stub export. Connect to persistence to return real deployment state.',
-  };
-  res.setHeader('Content-Type', 'application/json');
-  return res.status(200).json(fake);
+}

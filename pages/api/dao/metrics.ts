@@ -1,4 +1,6 @@
  import { NextApiRequest, NextApiResponse } from 'next';
+import * as fs from 'fs';
+import * as path from 'path';
 
 const configPath = path.join(process.cwd(), 'data', 'dao', 'config.json');
 const cachePath = path.join(process.cwd(), 'data', 'dao', 'metrics.json');
@@ -7,12 +9,15 @@ async function fetchJson(url: string) {
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json();
+}
 
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
+}
 
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
+}
 
 export default async function handler(
   _req: NextApiRequest,
@@ -94,3 +99,4 @@ export default async function handler(
       .status(500)
       .json({ error: e?.message ?? 'Failed to load DAO metrics' });
   }
+}

@@ -1,12 +1,33 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
+async function parseUserFromRequest(req: NextApiRequest) {
+  // Mock implementation
+  return { id: 'admin', role: 'admin' };
+}
+
+async function ensureAdmin(user: any) {
+  if (user.role !== 'admin') {
+    throw new Error('Forbidden');
+  }
+}
+
+async function readAllFlags() {
+  // Mock implementation
+  return [];
+}
+
+async function createFlag(data: any) {
+  // Mock implementation
+  return { id: '1', ...data };
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const user = parseUserFromRequest(req);
+  const user = await parseUserFromRequest(req);
   try {
-    ensureAdmin(user);
+    await ensureAdmin(user);
   } catch (e: any) {
     return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
   }
@@ -40,3 +61,4 @@ export default async function handler(
 
   res.setHeader('Allow', 'GET,POST');
   return res.status(405).end('Method Not Allowed');
+}

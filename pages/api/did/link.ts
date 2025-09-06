@@ -12,3 +12,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const key = `${payload.address}`;
   store[key] = { payload, message, signature, updatedAt: Date.now() };
   return res.status(200).json({ ok: true });
+}

@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   getSourceMapWithExistence,
-  deployBasicTemplateForPath,;
+  deployBasicTemplateForPath,
 } from '../../../utils/sourceMap';
 import { getGitStatus, requireRoles } from '../../../utils/devAccess';
 
@@ -35,3 +35,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
+}

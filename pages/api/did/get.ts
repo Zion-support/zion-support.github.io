@@ -7,3 +7,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!address) return res.status(400).json({ error: 'Missing address' });
   const data = store[String(address).toLowerCase()] || null;
   return res.status(200).json({ data });
+}

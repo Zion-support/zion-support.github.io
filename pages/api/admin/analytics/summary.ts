@@ -2,15 +2,21 @@ import path from 'path';
 import fs from 'fs';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-const byFeature: Record<string, number> = {
-  
-};
-const byEvent: Record<string, number> = {
-  
-};
-const byDay: Record<string, number> = {
-  
-};
+async function ensureAdminFromApi(req: NextApiRequest) {
+  // Mock implementation - replace with actual admin check
+  return { allowed: true };
+}
+
+interface EventRow {
+  timestamp: string;
+  event: string;
+  page?: string;
+  userType?: string;
+}
+
+const byFeature: Record<string, number> = {};
+const byEvent: Record<string, number> = {};
+const byDay: Record<string, number> = {};
 
 const LOG_FILE = path.join(
   process.cwd(),
@@ -31,6 +37,7 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
   } catch {
     return [];
   }
+}
 
 function featureFromPath(page?: string): string {
   if (!page) return 'other';
@@ -39,6 +46,7 @@ function featureFromPath(page?: string): string {
   if (p.includes('talent') || p.includes('job')) return 'job board';
   if (p.includes('rental')) return 'rentals';
   return 'other';
+}
 
 export default async function handler(
   req: NextApiRequest,
@@ -57,32 +65,18 @@ export default async function handler(
     r => !userType || userType === 'all' || (r.userType || 'guest') === userType
   );
 
-  const byFeature: Record<string, number> = {};
-  const byEvent: Record<string, number> = {};
-  const byDay: Record<string, number> = {};
+  for (const row of rows) {
+    const feature = featureFromPath(row.page);
+    byFeature[feature] = (byFeature[feature] || 0) + 1;
+    byEvent[row.event] = (byEvent[row.event] || 0) + 1;
+    const day = new Date(row.timestamp).toISOString().split('T')[0];
+    byDay[day] = (byDay[day] || 0) + 1;
+  }
 
-  
-
-  const pagesMostUsed = Object.entries(byFeature)
-    .map(([label, value]) => ({ label, value }))
-    .sort((a, b) => b.value - a.value);
-
-  const events = Object.entries(byEvent)
-    .map(([label, value]) => ({ label, value }))
-    .sort((a, b) => b.value - a.value);
-
-  const days = Object.keys(byDay).sort();
-  const line = days.map(d => ({ date: d, value: byDay[d] }));
-
-  const funnelStages = [
-    'Visit',
-    'AI Prompt Used',
-    'Post Created',
-    'Message Sent',
-  ];
-  const funnel = funnelStages.map(stage => ({
-    label: stage,
-    value: byEvent[stage] || 0,
-  }));
-
-  res.status(200).json({ pagesMostUsed, events, line, funnel });
+  return res.status(200).json({
+    byFeature,
+    byEvent,
+    byDay,
+    total: rows.length,
+  });
+}

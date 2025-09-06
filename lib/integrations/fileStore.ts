@@ -18,6 +18,7 @@ function ensureDataDir(): void {
     };
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
   }
+}
 
 export function readState(): IntegrationsState {
   ensureDataDir();
@@ -37,3 +38,4 @@ export function writeState(
   mutator(current);
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
   return current;
+}

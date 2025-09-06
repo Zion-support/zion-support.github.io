@@ -13,6 +13,7 @@ function summarizeModules(
       .map(([k]) => `/${k}`),
   ];
   return active.length ? active.sort().join(', ') : 'None';
+}
 
 function missionParagraph(
   region: string,
@@ -24,6 +25,7 @@ function missionParagraph(
     Object.values(modules).filter(Boolean).length +
     Object.values(bonus).filter(Boolean).length;
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`;
+}
 
 export default async function handler(
   req: NextApiRequest,
@@ -127,3 +129,4 @@ export default async function handler(
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' });
   }
+}

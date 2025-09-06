@@ -1,20 +1,27 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import {
-  ensureDemoUsers,
   generateUser,
   setUserCookie,
-  upsertUser,;
+  upsertUser,
 } from '../../../utils/auth';
 import { UserRole } from '../../../utils/messaging/types';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
-  const { name, role } = req.body as { name: string; role: UserRole };
-  if (!name || !role)
-    return res.status(400).json({ error: 'Missing name or role' });
-  ensureDemoUsers();
-  const user = generateUser(name, role);
-  upsertUser(user);
-  setUserCookie(res, user);
-  res.status(200).json({ user });
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).end('Method Not Allowed');
+  }
+
+  const { email, password } = req.body || {};
+  if (!email || !password) {
+    return res.status(400).json({ error: 'Missing email or password' });
+  }
+
+  try {
+    const user = generateUser(email, UserRole.USER);
+    setUserCookie(res, user);
+    return res.status(200).json({ user });
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message || 'Login failed' });
+  }
+}

@@ -1,61 +1,43 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-const templates = {
-  lulu: {
-    sizes: [
-      {
-        name: 'US Letter',
-        widthIn: 8.5,
-        heightIn: 11,
-        bleedIn: 0.125,
-        marginIn: 0.75,
-      },
-      {
-        name: 'A4',
-        widthIn: 8.27,
-        heightIn: 11.69,
-        bleedIn: 0.125,
-        marginIn: 0.75,
-      },
-    ],
+const templates = [
+  {
+    id: 'fiction',
+    name: 'Fiction Novel',
+    description: 'Template for fiction novels',
+    structure: {
+      chapters: [
+        { title: 'Chapter 1', wordCount: 3000 },
+        { title: 'Chapter 2', wordCount: 3000 },
+      ],
+    },
   },
-  blurb: {
-    sizes: [
-      {
-        name: 'Standard Portrait',
-        widthIn: 8,
-        heightIn: 10,
-        bleedIn: 0.125,
-        marginIn: 0.75,
-      },
-      {
-        name: 'Large Square',
-        widthIn: 12,
-        heightIn: 12,
-        bleedIn: 0.125,
-        marginIn: 0.75,
-      },
-    ],
+  {
+    id: 'nonfiction',
+    name: 'Non-Fiction Book',
+    description: 'Template for non-fiction books',
+    structure: {
+      chapters: [
+        { title: 'Introduction', wordCount: 2000 },
+        { title: 'Chapter 1', wordCount: 4000 },
+        { title: 'Conclusion', wordCount: 1500 },
+      ],
+    },
   },
-  amazon: {
-    sizes: [
-      {
-        name: 'US Trade',
-        widthIn: 6,
-        heightIn: 9,
-        bleedIn: 0.125,
-        marginIn: 0.75,
-      },
-      {
-        name: 'Letter',
-        widthIn: 8.5,
-        heightIn: 11,
-        bleedIn: 0.125,
-        marginIn: 0.75,
-      },
-    ],
+  {
+    id: 'technical',
+    name: 'Technical Manual',
+    description: 'Template for technical documentation',
+    structure: {
+      chapters: [
+        { title: 'Overview', wordCount: 1000 },
+        { title: 'Getting Started', wordCount: 2000 },
+        { title: 'Advanced Topics', wordCount: 3000 },
+      ],
+    },
   },
-};
+];
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json(templates);
+}

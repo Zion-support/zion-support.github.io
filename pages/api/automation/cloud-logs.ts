@@ -1,26 +1,27 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (req.method !== 'GET') {
-      res.setHeader('Allow', ['GET']);
-      return res.status(405).end('Method Not Allowed');
-    }
-    
-    const files: string[] = [];
-    if (files.length > 0) {
-      const logs = files.slice(0, 50).map((f) => {
-        try {
-          return { file: f, content: 'log content' };
-        } catch {
-          return { file: f, error: 'Failed to read' };
-        }
-      });
-      res.status(200).json({ logs });
-    } else {
-      res.status(200).json({ logs: [] });
-    }
-  } catch {
-    // fall through to GitHub
-    res.status(200).json({ logs: [] });
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', 'GET');
+    return res.status(405).end('Method Not Allowed');
   }
+
+  const { level, service, startTime, endTime } = req.query;
+  
+  try {
+    // Mock implementation - replace with actual cloud logs retrieval
+    const logs = [
+      {
+        id: '1',
+        level: level as string || 'info',
+        service: service as string || 'web',
+        message: 'Sample log entry',
+        timestamp: new Date().toISOString(),
+      },
+    ];
+
+    res.status(200).json({ logs });
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Failed to fetch logs' });
+  }
+}
