@@ -1,8 +1,7 @@
-#!/usr/bin/env node;
-;
+#!/usr/bin/env node
+
 const { execSync } = require('child_process');
 const fs = require('fs');
-<<<<<<< HEAD
 
 
 /**
@@ -43,8 +42,7 @@ class ComprehensiveAutomationSuite {
       },
       deployment: { success: false, duration: 0, errors: [], warnings: [] },
     },
-=======
-const path = require('path');
+    const path = require('path');
 ;
 /**;
  * Comprehensive Automation Suite;
