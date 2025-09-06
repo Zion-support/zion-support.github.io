@@ -29,9 +29,15 @@ import Image from 'next / image';
 interface OptimizedImageProps {
   src: string
   alt: string
+=======
+
+interface OptimizedImageProps {;
+  src: string,;
+  alt: string,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   width?: number;
   height?: number;
-  className?: string;
+  class_name?: string;
   priority?: boolean;
   quality?: number;
 }
@@ -47,19 +53,19 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
 
   width = 800;
   height = 600;
-  className = '';
+  class_name = '';
   priority = false;
 
   quality = 75,;
 }) => {;
 
   return (
-    <Image
+    <Image;
       src={src}
       alt={alt}
       width={width}
       height={height}
-      className={className}
+      className={class_name}
       priority={priority}
       quality={quality}
 

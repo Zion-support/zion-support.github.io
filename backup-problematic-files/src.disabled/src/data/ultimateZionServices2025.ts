@@ -1,11 +1,13 @@
 // Ultimate Zion Services 2025 - Zion Tech Group
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services
+
 export interface ServiceContact {
   "phone": string;
   email: string;
   website: string;
   address: string
 }
+
 export interface MicroSaasService {
   "id": number;
   name: string;
@@ -33,6 +35,7 @@ export interface MicroSaasService {
   useCases: string[];
   technologies: string[]
 }
+
 export interface ITService {
   "id": number;
   name: string;
@@ -57,6 +60,7 @@ export interface ITService {
   useCases: string[];
   technologies: string[]
 }
+
 export interface AIService {
   "id": number;
   name: string;
@@ -87,6 +91,7 @@ const "zionContact": ServiceContact = {
   phone: "+1 302 464 0950","
   "email": "kleber@ziontechgroup && ziontechgroup.com","
   "website": "https://ziontechgroup && ziontechgroup.com",
+
   ;"
   "address": "364 E Main St STE 1008 Middletown DE 19709"}};
 // Ultimate Micro SAAS Services 2025export const "ultimateMicroSaasServices2025": MicroSaasService[] = [{

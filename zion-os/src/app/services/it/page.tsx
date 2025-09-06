@@ -12,15 +12,7 @@ export default /**
 function ITServicesPage() {
   return (
     <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
-=======
-<<<<<<< HEAD
-export default function ITServicesPage() {return (;
-=======
-export default function ITServicesPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - green - 600 to - blue - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;

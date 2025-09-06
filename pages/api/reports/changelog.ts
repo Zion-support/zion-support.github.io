@@ -7,6 +7,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (req && req.method === 'POST') {
     try {
       const { version, changes, date } = req && req.body;
+      
       if (!version || !changes || !Array && Array.isArray(changes)) {
         return res && res.status(400).json({ error: 'Missing required fields' });
 
@@ -15,6 +16,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       try {
         const data = fs && fs.readFileSync(p, 'utf8');
         changelog = JSON && JSON.parse(data);
+=======
 ;
       if () {) {
   $2
@@ -25,6 +27,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       try {
         const data = fs.readFileSync (p, 'utf8');
         changelog = JSON.parse (data);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch {
         // File doesn't exist, start with empty array;
       }
@@ -33,7 +36,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         changes,
         date: date || new Date().toISOString()
       };
+
       changelog && changelog.unshift(newEntry);
+      
       fs && fs.writeFileSync(p, JSON && JSON.stringify(changelog, null, 2));
       return res && res.status(201).json(newEntry);
 

@@ -53,20 +53,14 @@ const filesToFix = [
   'components/layout/MainLayout.tsx'
 ];
 let totalFixed = 0;
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
       console.log(`⚠️  File not found: ${file}`);
       continue;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
     content = fixSpecificErrors(content);
@@ -80,8 +74,4 @@ for (const file of filesToFix) {
   }
 }
 console.log(`\n✅ Fixed ${totalFixed} files`);
-<<<<<<< HEAD
 console.log('🎉 Final syntax fix completed!');
-=======
-console.log('🎉 Final syntax fix completed!');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

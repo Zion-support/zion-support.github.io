@@ -71,16 +71,6 @@ function handler() {
     return res;
       .status (500);
       .json ({ error: error?.message || "Translation failed" });
-
-=======
-    return res
-      .status(500)
-<<<<<<< HEAD
-      .json({ error: error?.message |"Translation failed" });
-=======
-=======
-      .json({ error: error?.message || "Translation failed" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
 

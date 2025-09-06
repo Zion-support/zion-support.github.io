@@ -12,7 +12,6 @@ const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
 export function getServerSupabase() {
   // Mock implementation - replace with actual Supabase client
   return {

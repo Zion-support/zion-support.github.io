@@ -59,22 +59,17 @@ export default function Support() {
       name: 'Technical Issues',
       icon: <Code className="w - 8 h - 8 text - orange - 400" />,
       description: 'Bug reports and technical troubleshooting',
-      articles: 42
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+      articles: 42;
+    }
   ],
-  const quickActions = [
+  const quick_actions = [;
     {
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       icon: <MessageCircle className="w - 8 h - 8 text - cyan - 400" />,
       action: 'Start Chat',
-      color: 'from-cyan-500 to-blue-600',
-      available: true
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      color: 'from - cyan - 500 to - blue - 600',
+      available: true;
     },
     {
       title: 'Phone Support',
@@ -83,12 +78,6 @@ export default function Support() {
       action: 'Call Now',
       color: 'from - green - 500 to - emerald - 600',
       available: true;
-=======
-      icon: <Phone className="w-8 h-8 text-green-400" />,
-      action: 'Call Now',
-      color: 'from-green-500 to-emerald-600',
-      available: true
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       title: 'Email Support',
@@ -97,12 +86,6 @@ export default function Support() {
       action: 'Send Email',
       color: 'from - purple - 500 to - pink - 600',
       available: true;
-=======
-      icon: <Mail className="w-8 h-8 text-purple-400" />,
-      action: 'Send Email',
-      color: 'from-purple-500 to-pink-600',
-      available: true
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       title: 'Video Call',
@@ -131,21 +114,21 @@ export default function Support() {
     {
       title: 'Troubleshooting Autonomous System Errors',
       category: 'Autonomous Systems',
-read_time: '6 min read',
+      read_time: '6 min read',
       views: '3.1k',
       helpful: '92%';
     },
     {
       title: 'API Integration Best Practices',
       category: 'Technical Issues',
-read_time: '7 min read',
+      read_time: '7 min read',
       views: '4.2k',
       helpful: '96%';
     },
     {
       title: 'Understanding Your Invoice and Billing',
       category: 'Billing & Account',
-read_time: '3 min read',
+      read_time: '3 min read',
       views: '1.5k',
       helpful: '89%';
     }
@@ -159,17 +142,18 @@ read_time: '3 min read',
     {
       day: 'Saturday',
       hours: '10:00 AM - 6:00 PM EST',
-status: 'Available';
+      status: 'Available';
     },
     {
       day: 'Sunday',
       hours: '12:00 PM - 6:00 PM EST',
-status: 'Limited';
+      status: 'Limited';
     }
   ],
   const filtered_categories = selected_category === 'all';
     ? support_categories;
     : support_categories.filter (cat => cat.id === selected_category),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
 
     <div className="min-h-screen bg-black text-white">
@@ -829,141 +813,6 @@ status: 'Limited';
                       selected_category === category.id;
                         ? 'bg - cyan - 500 / 20 border - cyan - 500 / 50 text - cyan - 400';
                         : 'bg - gray - 800 / 50 border - gray - 600 text - gray - 300 hover:bg - cyan - 500 / 20 hover:border - cyan - 500 / 50';
-=======
-                  className="text-center p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="flex justify-center mb-4">
-                    {channel.icon}
-=======
-                  key={channel.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="text-center p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="flex justify-center mb-4">
-                    {channel.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{channel.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{channel.description}</p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Availability:</span>
-                      <span className="text-cyan-400">{channel.availability}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Response:</span>
-                      <span className="text-green-400">{channel.responseTime}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Priority:</span>
-                      <span className="text-purple-400">{channel.priority}</span>
-                    </div>
-                  </div>
-                </motion.div>
-<<<<<<< HEAD
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Search and Filter */}
-        <section className="py-12 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-6 items-center">
-              {/* Search Bar */}
-=======
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </div>;
-        </section>;
-        {/* Search and Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-12 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-6 items-center">
-              {/* Search Bar */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              <div className="flex-1 w-full lg:w-auto">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search for help topics, questions, or solutions..."
-<<<<<<< HEAD
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-=======
-                    value={searchTerm  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
-                </div>
-              </div>
-<<<<<<< HEAD
-              {/* Category Filter */}
-              <div className="flex flex-wrap gap-2">
-                {supportCategories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${
-                      selectedCategory === category.id
-                        ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
-                        : 'bg-gray-800/50 border-gray-600 text-gray-300 hover:bg-cyan-500/20 hover:border-cyan-500/50'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     }`}
                   >;
                     {category.icon}
@@ -1140,6 +989,7 @@ status: 'Limited';
                 Quick answers to common questions and solutions;
               </p>;
             </motion.div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {filteredFAQs.length === 0 ? (
 
                         </span>))}

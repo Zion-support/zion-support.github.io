@@ -48,7 +48,8 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function SearchFeature() {
   const schema = {
-    "@context": "https://schema.org",
+
+    "@context": "https: //schema.org",
     "@type": "WebPage",
     "name": "Advanced Search",
     "description": "Quickly locate products, services and talent using intelligent search filters.",

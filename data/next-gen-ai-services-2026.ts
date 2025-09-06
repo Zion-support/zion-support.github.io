@@ -11,21 +11,21 @@ export interface NextGenAIService2026 {
   popular: boolean;
   icon: string;
   color: string;
-  textColor: string;
+  text_color: string;
   link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
   category: string;
-  realService: boolean;
+  real_service: boolean;
   technology: string[];
   integrations: string[];
-  useCases: string[];
+  use_cases: string[];
   roi: string;
   competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  market_size: string;
+  growth_rate: string;
   variant: ServiceVariant;
 
   real_implementation: boolean;
@@ -100,6 +100,7 @@ export interface NextGenAIService2026 {
   customers: number,
   rating: number,
   reviews: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
@@ -222,6 +223,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4 && 4.9,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 89
 
 
@@ -298,6 +300,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
 
 =======
     technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],
+=======
     competitors: ['Uptake', 'C3.ai', 'PTC', 'Siemens Mindsphere'],    market_size: '$12.3B predictive maintenance market',    technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.js_docker'],
 
     integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],
@@ -309,6 +312,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-03-15',
     customers: 78,
     rating: 4 && 4.7,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 156
 
 
@@ -434,6 +438,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-04-20',
     customers: 92,
     rating: 4 && 4.6,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 203
 
 
@@ -486,6 +491,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
 
 =======
     technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
+=======
     competitors: ['ElevenLabs', 'Play.ht', 'Resemble AI', 'Descript'],    market_size: '$2.1B voice cloning market',    technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
 
     integrations: ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],
@@ -496,6 +502,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-02-10',
     customers: 156,
     rating: 4 && 4.8,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 312
 
 
@@ -599,6 +606,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-01-25',
     customers: 203,
     rating: 4 && 4.7,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 445
   }
 
@@ -611,7 +619,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.7,
     reviews: 445;
   }
-<<<<<<< HEAD
 ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

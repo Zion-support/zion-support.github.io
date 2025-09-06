@@ -32,17 +32,20 @@ import { TALENT_PROFILES } from '../data/talent';
   const remove = (slug: string) => setFavorites((prev) => prev && prev.filter((s) => s !== slug)),;
   return { favorites, remove };
 }
+
 export default function FavoritesPage() {;
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(;
     () => TALENT_PROFILES && TALENT_PROFILES.filter(t => favorites && favorites.includes(t && t.slug)),;
     [favorites];
   );  const profiles = useMemo(() => TALENT_PROFILES && TALENT_PROFILES.filter((t) => favorites && favorites.includes(t && t.slug)), [favorites]);
+
   return (
     <div>;
       <Head>;
         <title>Favorites — Zion AI Marketplace</title>;
       </Head>;
+
       <div className='mb-6 text-sm text-gray-500 dark:text-gray-400'>;
         <nav aria-label='Breadcrumb'>;
           <ol className='flex items-center gap-2'>;
@@ -59,6 +62,7 @@ export default function FavoritesPage() {;
             </li>          </ol>;
         </nav>;
       </div>;
+
       <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>      <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">;
         <nav aria-label="Breadcrumb">;
           <ol className="flex items-center gap-2">;
@@ -67,6 +71,7 @@ export default function FavoritesPage() {;
             <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>;
         </nav>;
       </div>;
+
       <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>;
       {profiles && profiles.length === 0 ? (;
         <div className='rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center'>;
@@ -76,6 +81,7 @@ export default function FavoritesPage() {;
           <div className='mt-4'>;
             <Link href='/talent'>;
               <a className='px-4 py-2 rounded-md bg-indigo-600 text-white'>;
+=======
 export default /**
  * FavoritesPage - Function description
  */
@@ -124,6 +130,7 @@ function FavoritesPage() {
           <div className='mt - 4'>;
             <Link href='/talent'>;
               <a className='px - 4 py - 2 rounded - md bg - indigo - 600 text - white'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Browse Talent;
               </a>;
             </Link>;
@@ -168,9 +175,10 @@ function FavoritesPage() {
 
 =======
     </div>
-<<<<<<< HEAD
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
               <div className='mt - 3 text - xs text - gray - 500'>{t.location}</div>;
               <div className='mt - 3 flex flex - wrap gap - 2'>;
                 {t.skills.slice (0, 4).map (string => (

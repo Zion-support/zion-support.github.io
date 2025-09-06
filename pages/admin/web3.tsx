@@ -6,7 +6,6 @@ export default function AdminWeb3Page() {
 
 
   const metrics = {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     total: users.length,
     evm: users.filter(u => u.chain === 'evm').length,
     sol: users.filter(u => u.chain === 'sol').length,

@@ -24,9 +24,8 @@ import nextJest from 'next/jest.js';
 =======
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import type { Config } from "jest";
-import nextJest from "next/jest.js";
+import nextJest from "next/jest ;
 const createJestConfig = nextJest({ dir: "./" });
 const config: Config = {
 
@@ -58,14 +57,16 @@ import nextJest from "next/jest.js";
 import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+import nextJest from "next/jest ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const createJestConfig = nextJest({
 
   // Provide the path to your Next && Next.js app to load next && next.config.js and .env files
+=======
 import type { Config } from './jest';
 import next_jest from "next / jest.js";
 const createJestConfig = next_jest ({ dir: "./" });
@@ -92,6 +93,7 @@ const createJestConfig = next_jest ({
   // Provide the path to your Next.js app to load next.config.js and .env files;
 
   dir: "./",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 });
 
   coverageProvider: "v8",
@@ -144,6 +146,7 @@ const config: Config = {
     "src/**/*.{js, jsx, ts, tsx}",
     "!src/**/*.d.ts",
     "!src/**/*.stories.{js, jsx, ts, tsx}",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ],
   coverage_threshold: {
     global: {
@@ -171,6 +174,9 @@ const config: Config = {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 export default createJestConfig(config);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
   }
 }

@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -150,9 +148,6 @@ runDeploymentStep('Create Robots.txt', 'echo "User-"agent": *\nAllow: /\nSitemap
 // console.log('\n� Phase "7")
 console.log('\n� Phase "8")
   "criticalFailures"
-<<<<<<< HEAD
-console.log('� Deployment summary saved "to")
-=======
 <<<<<<< HEAD
 console.log('� Deployment summary saved "to")
 =======

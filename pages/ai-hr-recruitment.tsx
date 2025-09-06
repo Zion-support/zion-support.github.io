@@ -214,6 +214,7 @@ if (return null) {
                 <div className='flex items - center space - x-2 w - 4 h - 4 text - green - 400 text - xs'>;
                   <MapPin />;
                   <span>{service.contact_info.address}</span>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>              </div>;
             </div>;
           </div>;
@@ -245,7 +246,6 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 
 export default function AIHRRecruitmentPage() {
-<<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-hr-recruitment'));
   if (!service) return null;
 =======
@@ -273,11 +273,7 @@ export default function AIHRRecruitmentPage() {
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-<<<<<<< HEAD
-<meta name="description" content={service.description} />
-=======
         <meta name="description" content={service.description} />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <link rel="canonical" href="https://ziontechgroup.com/ai-hr-recruitment" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -293,7 +289,6 @@ export default function AIHRRecruitmentPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-teal-400 mt-0.5"><Check /><span>{feat}</span></li>
-<<<<<<< HEAD
                 ))}
               </ul>
             </div>

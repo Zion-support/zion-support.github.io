@@ -7,14 +7,14 @@ return (
         <Input
           id="category"
           value={category}
-          onChange={(e) => setCategory(e.target.value)}
-          placeholder="e.g. AI Tool, Digital Product, Service"
-          className="bg-zion-blue border border-zion-blue-light text-white"
+          onChange={(e) => setCategory(e && e.target.value)}
+          placeholder="e && e.g. AI Tool, Digital Product, Service";
+          className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
-        />
-      </div>
-      <div className="space-y-2">
-        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Key Features (Optional)">Key Features (Optional)</label>;
         <Textarea
 
 
@@ -303,9 +303,8 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 }: AIListingFormProps) {
   if (!title |!category) {
   toast ({
-  return;
+  return
 }/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
-<<<<<<< HEAD
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>)
 }</Button> </div>)
 }'"

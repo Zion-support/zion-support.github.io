@@ -103,24 +103,23 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                     </div>;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface BrowseItem {
   id: string,
   title: string,
   subtitle: string,
   description: string,
-  location?: string,
+  location?: string;
   badges: string[],
-  price?: string,
-  image?: string,
-  match?: number,
+  price?: string;
+  image?: string;
+  match?: number;
   timePosted?: string
 }
 
@@ -131,7 +130,9 @@ interface BrowseCardsProps {
 }
 
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
-  const [savedItems, setSavedItems] = useState<string[]>([]),
+
+  const [ savedItems, setSavedItems ] = useState<string[]>([]),
+
   
   const toggleSaved = (id: string) => {
     setSavedItems(prev => 
@@ -139,8 +140,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
         ? prev.filter(itemId => itemId !== id)
         : [...prev, id]
     )
-  },
-  
+  };
+
+
   return (
     <div className="space-y-4 pb-24">
       {items.map((item) => (
@@ -174,12 +176,12 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
                 <button
                   className="h-8 w-8 flex items-center justify-center"
-                  onClick={() => toggleSaved(item.id)}
-                >
-                  {savedItems.includes(item.id) ? (
-                    <BookmarkCheck className="h-5 w-5 text-primary" />
-                  ) : (
-                    <Bookmark className="h-5 w-5 text-muted-foreground" />
+                  onClick={() => toggleSaved(item && item.id)}
+                >;
+                  {savedItems && savedItems.includes(item && item.id) ? (;
+                    <BookmarkCheck className="h-5 w-5 text-primary" />;
+                  ) : (;
+                    <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
 
                 </button>;

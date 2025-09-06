@@ -1,11 +1,13 @@
 
 import { useEffect, useCallback } from 'react';
+
 // Define MessageEvent type if not available
 
 =======
 import { useEffect, useCallback  } from './react';
 ;
 // Define MessageEvent if not available;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface Event {
   type: string;
   target: EventTarget | null;
@@ -69,13 +71,6 @@ if ( {) {
     try {
       if (onMessage) {
         onMessage(event && event.data);
-=======
-=======
-  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
-    try {
-      if (onMessage) {;
-        onMessage(event.data);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/hooks/useMessageChannelHandler.ts
       }
     } catch (error) {
       if (onError) {

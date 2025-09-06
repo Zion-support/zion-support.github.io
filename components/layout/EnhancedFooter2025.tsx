@@ -44,6 +44,7 @@ import {
   Twitter, Linkedin, Github, Youtube, Instagram
 
 } from 'lucide-react';
+
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -64,16 +65,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -107,12 +112,14 @@ import {;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
   Twitter, Linkedin, Github, Youtube, Instagram;
+
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
 };
+
 const serviceCategories = [;
   {;
     title: 'AI & Consciousness',;
@@ -194,40 +201,6 @@ const serviceCategories = [;
       { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
     ]
 =======
-<<<<<<< HEAD
-import React from 'react',
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-
-import {
-<<<<<<< HEAD
-  Phone
-  Mail
-  MapPin
-  Star
-  ArrowRight
-  Brain
-  Atom
-  Shield
-  Rocket
-  Target
-  Microscope
-  Zap
-  Globe
-  Database
-  Lock
-  Cloud
-  BarChart3
-  Twitter
-  Linkedin
-  Github
-  Youtube
-  Instagram;} from 'lucide-react';import {
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Phone,
   Mail,
   MapPin,
@@ -248,7 +221,6 @@ import {
   Twitter,
   Linkedin,
   Github,
-<<<<<<< HEAD
   Youtube,
   Instagram,} from 'lucide-react';import {
   Phone, Mail, MapPin, Star, ArrowRight;
@@ -342,6 +314,7 @@ const service_categories = [;
     ],
   }, ];      { name: 'DevOps Automation Studio', href: '/devops - automation - studio' }
     ];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 ];
 ;
@@ -440,6 +413,7 @@ const legal_links = [;
                     {category && category.title}
                   </h3>;
                 </div>;
+
                 <div className='space-y-2'>;
                   {category && category.services.map(service => (;
                     <Link
@@ -584,6 +558,7 @@ const legal_links = [;
               <div className="space-y-2">
                 {companyLinks.map((link) => (
                   <Link
+=======
                     </Link>))}
                 </div>;
               </motion.div>))}
@@ -742,7 +717,7 @@ const legal_links = [;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
+                transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
 
 
@@ -752,6 +727,13 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
               </motion.p>              >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
+=======
+                className="text-gray-400 mb-6 max-w-2xl mx-auto"
+              >
+                Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
+              </motion.p>
+              
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -761,6 +743,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
               </motion && motion.p>              >;
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.;
               </motion && motion.p>;
+
               <motion&& motion.div
 
 
@@ -803,6 +786,8 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedFooter2025;
 
 

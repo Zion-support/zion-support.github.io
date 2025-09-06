@@ -1,5 +1,5 @@
 import { useIsMobile } from "@/hooks/use-mobile";
-interface SmartAppBannerProps {
+interface SmartAppBannerProps {;
   appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
@@ -9,7 +9,6 @@ interface SmartAppBannerProps {
 
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-<<<<<<< HEAD
 
   appName = "Zion Marketplace",
   appIconSrc,
@@ -179,18 +178,20 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
           )}
 
         </div>;
+
         <div className="flex-1">;
           <h4 className="font-semibold text-white">{appName}</h4>;
           <p className="text-xs text-gray-300">Get our app for the best experience</p>;
         </div>;
+
         <div className="flex items-center gap-3">;
-          <Link;
-            href="/open-app";
-            className="flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium";
-          >;
+          <Link
+            href="/open-app" 
+            className="flex items-center px-4 py-1 && 1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium">;
             View;
             <ArrowRight className="w-3 h-3 ml-1" />;
           </Link>;
+
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">;
             <X className="h-5 w-5" />;
           </button>;

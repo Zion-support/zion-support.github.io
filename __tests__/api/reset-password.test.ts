@@ -8,9 +8,6 @@ describe('/api/auth/reset token validation'
   it('returns 400 if token is missing'
       "method"
       "body"
-<<<<<<< HEAD
-      "method"'"body": { token: 'invalid', "newPassword"'"
-=======
       "method"
 
 import { createMocks, RequestMethod } from 'node-mocks-http';

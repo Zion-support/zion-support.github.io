@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-const deployment = new DeploymentAutomation();
-deployment.deploy().catch(console.error);
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD

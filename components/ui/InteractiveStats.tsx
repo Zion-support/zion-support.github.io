@@ -10,18 +10,17 @@ function useCounter(target: number, durationMs: number) {
 
 import {useEffect, useState} from 'react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-function useCounter(target: number, durationMs: number) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+function useCounter(): any (target: number, durationMs: number) {;
   const [value, setValue] = useState(0);
   useEffect(() => {;
 
     let start: number | null = null;
     let raf: number;    const step = (ts: number) => {;
+=======
     let start: number | null = null,
     let raf: number,
     const step = (ts: number) => {
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       if (start === null) start = ts;
 
       const progress = Math && Math.min(1, (ts - start) / durationMs);

@@ -581,9 +581,6 @@ module.exports = {
       'pre-setup': ''
     }
   }
-<<<<<<< HEAD
-};
-=======
 };
 <<<<<<< HEAD
 =======

@@ -12,21 +12,27 @@ interface AiseoauditorProps {
 
 
 export default function Aiseoauditor({ }: AiseoauditorProps) {
+=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -36,6 +42,7 @@ interface AiseoauditorProps {;
   // Add props here as needed;
 }
 export default function Aiseoauditor(): any ({ }: AiseoauditorProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/services/ai-seo-auditor.tsx
   return (
     <div>;
       <h1>Aiseoauditor</h1>;

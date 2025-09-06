@@ -1,7 +1,6 @@
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 function readJson(p: string) {
@@ -28,8 +27,10 @@ res.setHeader('AllowPOST')
     if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
     if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);
     if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
-// Mark progress complete
+
+    // Mark progress complete
     user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons || []).map((l: any) => l.id) };
+
     users[userId] = user;
     writeJson(usersPath, users);
 

@@ -84,6 +84,7 @@ import Link from 'next / link';
             ))}
 
           </div>;
+
           <div className='mt-12'>;
             <h2 className='text-2xl font-semibold'>Pricing</h2>;
             <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>;
@@ -95,6 +96,7 @@ import Link from 'next / link';
                 <p className='mt-4 text-3xl font-bold'>;
                   $149;
                   <span className='text-base font-normal text-gray-300'>;
+=======
                 title: 'Golden Datasets',
                 desc: 'Curate and run task - specific datasets for repeatable evaluation.',
               },

@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -201,9 +199,6 @@ console.log('')
     execSync('npx tsc --noEmit', { "stdio"})
     execSync('npm run build', { "stdio"})
     console.log('\n Final "Report")
-<<<<<<< HEAD
-    console.error(' Comprehensive Code Fixer "failed")
-=======
 <<<<<<< HEAD
     console.error(' Comprehensive Code Fixer "failed")
 =======

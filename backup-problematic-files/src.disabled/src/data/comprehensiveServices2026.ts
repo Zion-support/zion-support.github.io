@@ -5,6 +5,7 @@ export interface ServiceContact {}
   email: string;
   website: string;
   address: string}
+
 export interface MicroSaasService {}
   "id": number;
   name: string;
@@ -29,6 +30,7 @@ export interface MicroSaasService {}
   innovationLevel: string;
   marketSize: string;
   growthRate: string}
+
 export interface ITService {}
   "id": number;
   name: string;
@@ -50,6 +52,7 @@ export interface ITService {}
   innovationLevel: string;
   marketSize: string;
   compliance: string[]}
+
 export interface AIService {}
   "id": number;
   name: string;
@@ -73,6 +76,7 @@ export interface AIService {}
   innovationLevel: string;
   marketSize: string;
   ethicalAI: string[]}
+
 // Revolutionary Micro SAAS Services 2026;
 export const "revolutionaryMicroSaasServices2026": MicroSaasService[] = [{}
     "id": 1,

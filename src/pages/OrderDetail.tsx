@@ -21,17 +21,17 @@ interface OrderItem {
 }
 interface Order {
   id: string;
-  orderId: string;
+  order_id: string;
   date: string;
   status: 'pending' | 'processing' | 'shipped' | 'delivered' | 'cancelled';
   total: number;
   items: OrderItem[];
-  shippingAddress: {
+  shipping_address: {
     name: string;
     street: string;
     city: string;
     state: string;
-    zipCode: string;
+    zip_code: string;
     country: string;
   }
 
@@ -44,18 +44,18 @@ interface Order {
 const getStatusColor = (status: string) =>: any {
 
   switch (status) {
-    case 'pending':
-      return 'bg-yellow-100 text-yellow-800';
-    case 'processing':
-      return 'bg-blue-100 text-blue-800';
-    case 'shipped':
-      return 'bg-purple-100 text-purple-800';
-    case 'delivered':
-      return 'bg-green-100 text-green-800';
-    case 'cancelled':
-      return 'bg-red-100 text-red-800';
-    default:
-      return 'bg-gray-100 text-gray-800';
+    case 'pending':;
+      return 'bg - yellow - 100 text - yellow - 800';
+    case 'processing':;
+      return 'bg - blue - 100 text - blue - 800';
+    case 'shipped':;
+      return 'bg - purple - 100 text - purple - 800';
+    case 'delivered':;
+      return 'bg - green - 100 text - green - 800';
+    case 'cancelled':;
+      return 'bg - red - 100 text - red - 800';
+    default:;
+      return 'bg - gray - 100 text - gray - 800';
   }
 }
 
@@ -63,14 +63,14 @@ const getStatusColor = (status: string) =>: any {
 const getStatusIcon = (status: string) =>: any {
 
   switch (status) {
-    case 'delivered':
-      return <CheckCircle className="h-4 w-4" />;
-    case 'shipped':
-      return <Package className="h-4 w-4" />;
-    case 'processing':
-      return <Clock className="h-4 w-4" />;
-    default:
-      return <Clock className="h-4 w-4" />;
+    case 'delivered':;
+      return <CheckCircle className="h - 4 w - 4" />;
+    case 'shipped':;
+      return <Package className="h - 4 w - 4" />;
+    case 'processing':;
+      return <Clock className="h - 4 w - 4" />;
+    default:;
+      return <Clock className="h - 4 w - 4" />;
   }
 }
 
@@ -235,17 +235,15 @@ if ( {) {
   $2
 }
     return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="animate-pulse">
-          <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>
-          <div className="space-y-4">
-            {[1, 2, 3].map(i => (
-              <div key={i} className="h-32 bg-gray-200 rounded"></div>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
+      <div className="container mx - auto px - 4 py - 8">;
+        <div className="animate - pulse">;
+          <div className="h - 8 bg - gray - 200 rounded w - 1/4 mb - 4"></div>;
+          <div className="space - y-4">;
+            {[1, 2, 3].map (index => (
+              <div key={i} className="h - 32 bg - gray - 200 rounded"></div>))}
+          </div>;
+        </div>;
+      </div>);
   }
 
   if (isLoading || !order) {;
@@ -441,31 +439,30 @@ if ( {) {
           </Card>;
         </div>;
         {/* Order Status & Tracking */}
-        <div className="space-y-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Order Status</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm">Order placed</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm">Payment confirmed</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm">Processing</span>
-                </div>
+        <div className="space - y-6">;
+          <Card>;
+            <CardHeader>;
+              <CardTitle > Order Status</CardTitle>;
+            </CardHeader>;
+            <CardContent>;
+              <div className="space - y-4">;
+                <div className="flex items - center space - x-3">;
+                  <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                  <span className="text - sm">Order placed</span>;
+                </div>;
+                <div className="flex items - center space - x-3">;
+                  <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                  <span className="text - sm">Payment confirmed</span>;
+                </div>;
+                <div className="flex items - center space - x-3">;
+                  <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                  <span className="text - sm">Processing</span>;
+                </div>;
                 {order.status === 'shipped' && (
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-sm">Shipped</span>
-                  </div>
-                )}
+                  <div className="flex items - center space - x-3">;
+                    <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                    <span className="text - sm">Shipped</span>;
+                  </div>)}
                 {order.status === 'delivered' && (
 
     <div className='container max-w-3xl py-10 space-y-6'>;

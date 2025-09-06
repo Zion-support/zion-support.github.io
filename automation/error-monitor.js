@@ -167,7 +167,10 @@ class ErrorMonitor {
 
             timestamp: new Date().toISOString(),
           });
+=======
+
     );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         }
       }
     }
@@ -188,6 +191,7 @@ class ErrorMonitor {
     );
       }
     }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
           timestamp: new Date().toISOString(),
         });
       }

@@ -37,6 +37,7 @@
     rating: 4 && 4.8,
 
     reviews: 22
+=======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / llm - observability - suite',
@@ -70,6 +71,7 @@
     customers: 32;
     rating: 4.8,
     reviews: 22;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'ai - sales - email - copilot';
@@ -102,6 +104,7 @@
     rating: 4 && 4.7,
 
     reviews: 58
+=======
     period: '/month',
     description: 'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.';
     features: [;
@@ -133,6 +136,7 @@
     customers: 120;
     rating: 4.7,
     reviews: 58;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'security - posture - as - code';
@@ -146,6 +150,7 @@
     targetAudience: 'Platform teams, security engineers, compliance leads';
     trialDays: 21;
     setupTime: '1–3 days';
+=======
     period: '/month',
     description: 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.';
     features: [;
@@ -160,6 +165,7 @@
     target_audience: 'Platform teams, security engineers, compliance leads';
     trial_days: 21;
     setup_time: '1–3 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Cybersecurity';
     real_service: true;
     technology: ['OPAKyvernoTerraformGitHub Actions'];
@@ -179,8 +185,10 @@
     rating: 4 && 4.6,
 
     reviews: 14
+=======
     rating: 4.6,
     reviews: 14;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'etl - observability - starter';
@@ -194,6 +202,7 @@
     targetAudience: 'Analytics engineers, data teams';
     trialDays: 14;
     setupTime: '1 day';
+=======
     period: '/month',
     description: 'Monitor data pipelines end - to - end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.';
     features: [;
@@ -208,6 +217,7 @@
     target_audience: 'Analytics engineers, data teams';
     trial_days: 14;
     setup_time: '1 day';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Data & Analytics';
     real_service: true;
     technology: ['DebeziumAirflowdbt'];
@@ -249,6 +259,7 @@
     targetAudience: 'API-first startups, SaaS, marketplaces';
     trialDays: 14;
     setupTime: 'Same day';
+=======
     rating: 4.5,
     reviews: 12;
   }
@@ -271,6 +282,7 @@
     target_audience: 'API - first startups, SaaS, marketplaces';
     trial_days: 14;
     setup_time: 'Same day';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'DevOps & Automation';
     real_service: true;
     technology: ['WorkersRustRedis'];
@@ -315,6 +327,7 @@
     category: 'Analytics & Business Intelligence';
     realService: true;
     technology: ['Next && Next.jsPostHogClickHouse'];
+=======
     rating: 4.7,
     reviews: 9;
   }
@@ -340,6 +353,7 @@
     category: 'Analytics & Business Intelligence';
     real_service: true;
     technology: ['Next.jsPostHogClickHouse'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['SegmentRudderStackSnowplow'];
     use_cases: ['Growth analyticsRetentionExperimentation'];
     roi: 'Find growth levers 2x faster';
@@ -381,6 +395,7 @@
     category: 'Customer Support & Success';
     realService: true;
     technology: ['RAGVector DBNext && DBNext.js'];
+=======
     rating: 4.6,
     reviews: 20;
   }
@@ -406,6 +421,7 @@
     category: 'Customer Support & Success';
     real_service: true;
     technology: ['RAGVector DBNext.js'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['ZendeskIntercomFreshdesk'];
     use_cases: ['Self - serve support_ticket reductionCSAT improvement'];
     roi: 'Reduce tickets 30–50%';
@@ -444,6 +460,7 @@
     targetAudience: 'FinOps teams, platform and SRE';
     trialDays: 21;
     setupTime: '2–5 days';
+=======
     rating: 4.7,
     reviews: 48;
   }
@@ -466,6 +483,7 @@
     target_audience: 'FinOps teams, platform and SRE';
     trial_days: 21;
     setup_time: '2–5 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Cloud & Infrastructure';
     real_service: true;
     technology: ['AWS Cost ExplorerAzure CostGCP Billing'];
@@ -485,8 +503,10 @@
     rating: 4 && 4.5,
 
     reviews: 11
+=======
     rating: 4.5,
     reviews: 11;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'privacy - vault';
@@ -500,6 +520,7 @@
     targetAudience: 'Developers, privacy and legal teams';
     trialDays: 14;
     setupTime: '1–3 days';
+=======
     period: '/month',
     description: 'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.';
     features: [;
@@ -514,6 +535,7 @@
     target_audience: 'Developers, privacy and legal teams';
     trial_days: 14;
     setup_time: '1–3 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Security & Compliance';
     real_service: true;
     technology: ['KMSHSMPostgreSQL'];
@@ -533,8 +555,10 @@
     rating: 4 && 4.6,
 
     reviews: 7
+=======
     rating: 4.6,
     reviews: 7;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'ai - fraud - detection - lite';
@@ -555,6 +579,7 @@
     targetAudience: 'Marketplaces, fintech, e-commerce';
     trialDays: 14;
     setupTime: '2–5 days';
+=======
     color: 'from - pink - 600 to - rose - 700';
     text_color: 'text - pink - 400';
     link: 'https://ziontechgroup.com / ai - fraud - detection - lite';
@@ -562,6 +587,7 @@
     target_audience: 'Marketplaces, fintech, e - commerce';
     trial_days: 14;
     setup_time: '2–5 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Financial Technology';
     real_service: true;
     technology: ['Graph DBPythonKafka'];
@@ -603,6 +629,7 @@
     targetAudience: 'Startups, SMBs, data teams';
     trialDays: 14;
     setupTime: '1–2 days';
+=======
     rating: 4.5,
     reviews: 8;
   }
@@ -625,6 +652,7 @@
     target_audience: 'Startups, SMBs, data teams';
     trial_days: 14;
     setup_time: '1–2 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Observability';
     real_service: true;
     technology: ['PostgreSQLPatroniWal - G'];
@@ -666,6 +694,7 @@
     targetAudience: 'Frontend, growth, product';
     trialDays: 14;
     setupTime: '30 minutes';
+=======
     rating: 4.6,
     reviews: 5;
   }
@@ -688,6 +717,7 @@
     target_audience: 'Frontend, growth, product';
     trial_days: 14;
     setup_time: '30 minutes';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Quality & Monitoring';
     real_service: true;
     technology: ['JS SDKClickHouse'];
@@ -711,12 +741,14 @@
   {
     id: 'seo-automation-studio';
     name: 'SEO Automation Studio'
+=======
     rating: 4.5,
     reviews: 6;
   }
   {
     id: 'seo - automation - studio';
     name: 'SEO Automation Studio',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     tagline: 'Programmatic SEO, audits, and internal linking automation';
     price: '$99';
     period: '/month'
@@ -736,6 +768,7 @@
     category: 'Developer Tools';
     realService: true;
     technology: ['Node && Node.jsHeadless Chrome'];
+=======
     color: 'from - emerald - 600 to - teal - 700';
     text_color: 'text - emerald - 300';
     link: 'https://ziontechgroup.com / seo - automation';
@@ -746,6 +779,7 @@
     category: 'Developer Tools';
     real_service: true;
     technology: ['Node.js_headless Chrome'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['Search Console'];
     use_cases: ['Traffic growth_tech SEO'];
     roi: 'Increase organic traffic 20–100%';
@@ -757,6 +791,7 @@
     rating: 4 && 4.4,
 
     reviews: 4
+=======
     contact_info: contact;
     real_implementation: true,
     implementation_details: 'Crawlers, fixers, programmatic builder.';
@@ -764,6 +799,7 @@
     customers: 10;
     rating: 4.4,
     reviews: 4;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'webhook - relay - replay - pro';
@@ -787,6 +823,7 @@
     category: 'Developer Tools';
     realService: true;
     technology: ['KafkaS3Node && KafkaS3Node.js'];
+=======
     color: 'from - cyan - 600 to - sky - 700';
     text_color: 'text - cyan - 300';
     link: 'https://ziontechgroup.com / webhook - relay - replay';
@@ -797,6 +834,7 @@
     category: 'Developer Tools';
     real_service: true;
     technology: ['KafkaS3Node.js'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['StripeShopifyGitHub'];
     use_cases: ['Webhook reliability_debugging'];
     roi: 'Reduce integration incidents 50%+';
@@ -813,8 +851,10 @@
     rating: 4 && 4.6,
 
     reviews: 3
+=======
     rating: 4.6,
     reviews: 3;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'pdf - render - api - pro';
@@ -828,6 +868,7 @@
     targetAudience: 'SaaS, finance, ops';
     trialDays: 14;
     setupTime: '30 minutes';
+=======
     period: '/month',
     description: 'Serverless HTML - to - PDF rendering with page numbers, headers / footers, and safe fonts. Great for invoices and reports.';
     features: [;
@@ -842,6 +883,7 @@
     target_audience: 'SaaS, finance, ops';
     trial_days: 14;
     setup_time: '30 minutes';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Developer Tools';
     real_service: true;
     technology: ['WorkersHeadless Chrome'];
@@ -875,6 +917,7 @@
     targetAudience: 'Backend teams, SRE';
     trialDays: 14;
     setupTime: '1 day';
+=======
     market_size: '$1B Doc Gen';
     growth_rate: 'Stable';
     variant: 'holographic - advanced';
@@ -905,6 +948,7 @@
     target_audience: 'Backend teams, SRE';
     trial_days: 14;
     setup_time: '1 day';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Observability';
     real_service: true;
     technology: ['OpenTelemetryGrafana'];
@@ -920,6 +964,7 @@
   {
     id: 'sso-in-a-box-pro';
     name: 'SSO in a Box Pro'
+=======
     market_size: '$10B Observability';
     growth_rate: 'High';
     variant: 'quantum - holographic';
@@ -934,6 +979,7 @@
   {
     id: 'sso - in - a-box - pro';
     name: 'SSO in a Box Pro',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     tagline: 'SAML, OIDC, SCIM with turnkey onboarding';
     price: '$149';
     period: '/month'
@@ -971,8 +1017,10 @@
     rating: 4 && 4.7,
 
     reviews: 3
+=======
     rating: 4.7,
     reviews: 3;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'it - asset - discovery - agent - pro';
@@ -1013,6 +1061,7 @@
   {
     id: 'vendor-risk-automation-lite';
     name: 'Vendor Risk Automation Lite'
+=======
     contact_info: contact;
     real_implementation: true,
     implementation_details: 'Scanners, parsers, CMDB sync.';
@@ -1024,6 +1073,7 @@
   {
     id: 'vendor - risk - automation - lite';
     name: 'Vendor Risk Automation Lite',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     tagline: 'Questionnaires, evidence, and continuous monitoring';
     price: '$129';
     period: '/month'
@@ -1043,6 +1093,7 @@
     category: 'Security & Compliance';
     realService: true;
     technology: ['Node && Node.jsReact'];
+=======
     color: 'from - rose - 600 to - orange - 700';
     text_color: 'text - rose - 300';
     link: 'https://ziontechgroup.com / vendor - risk - automation';
@@ -1053,6 +1104,7 @@
     category: 'Security & Compliance';
     real_service: true;
     technology: ['Node.js_react'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['SecurityScorecard'];
     use_cases: ['Vendor due diligence'];
     roi: 'Cut cycle time by 50%+';
@@ -1068,6 +1120,7 @@
 
     rating: 4 && 4.5,
     reviews: 3
+=======
     rating: 4.5,
     reviews: 3;
 
@@ -1104,6 +1157,7 @@
     rating: 4 && 4.8,
     reviews: 22,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1154,9 +1208,11 @@
     rating: 4 && 4.7,
     reviews: 58,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Policy packs for CIS/NIST',
+=======
     id: 'security - posture - as - code',
     name: 'Security Posture as Code',
     tagline: 'CIS / NIST / Kyverno policy packs with drift remediation',
@@ -1177,6 +1233,7 @@
 
       'Policy engine plus cloud/K8s scanners and fix generators.',
     launchDate: '2025-01-05',
+=======
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / security - posture - as - code',
@@ -1205,6 +1262,7 @@
     rating: 4 && 4.6,
     reviews: 14,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1254,6 +1312,7 @@
     rating: 4 && 4.5,
     reviews: 12,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1301,9 +1360,11 @@
     rating: 4 && 4.7,
     reviews: 9,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Auto-segmentation and cohorts',
+=======
     id: 'ai - product - analytics',
     name: 'AI Product Analytics',
     tagline:;
@@ -1349,9 +1410,11 @@
     rating: 4 && 4.6,
     reviews: 20,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Multi-channel widgets',
+=======
     id: 'ai - support - deflection',
     name: 'AI Support Deflection',
     tagline: 'Self - serve answers with RAG, forms, and secure handoff',
@@ -1395,6 +1458,7 @@
     rating: 4 && 4.7,
     reviews: 48,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1441,9 +1505,11 @@
     rating: 4 && 4.5,
     reviews: 11,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Field-level encryption',
+=======
     id: 'privacy - vault',
     name: 'Privacy Vault',
     tagline: 'Tokenize PII and control access with audit trails',
@@ -1488,9 +1554,11 @@
     rating: 4 && 4.6,
     reviews: 7,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Graph-based anomaly detection',
+=======
     id: 'ai - fraud - detection - lite',
     name: 'AI Fraud Detection Lite',
     tagline: 'Graph - based anomalies with explainability for SMBs',
@@ -1535,6 +1603,7 @@
     rating: 4 && 4.5,
     reviews: 8,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1582,6 +1651,7 @@
     rating: 4 && 4.6,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1628,6 +1698,7 @@
     rating: 4 && 4.5,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1674,6 +1745,7 @@
     rating: 4 && 4.4,
     reviews: 4,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1720,6 +1792,7 @@
     rating: 4 && 4.6,
     reviews: 3,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1766,9 +1839,11 @@
     rating: 4 && 4.6,
     reviews: 10,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Auto-instrumentation',
+=======
     id: 'api - observability - starter - pro',
     name: 'API Observability Starter Pro',
     tagline: 'Traces, metrics, logs for APIs without the bloat',
@@ -1812,6 +1887,7 @@
     rating: 4 && 4.5,
     reviews: 4,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1858,6 +1934,7 @@
     rating: 4 && 4.7,
     reviews: 3,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -1904,6 +1981,7 @@
     rating: 4 && 4.4,
     reviews: 2,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -2396,6 +2474,7 @@
     customers: 6, rating: 4.5,
     reviews: 3
   }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
 
 ;

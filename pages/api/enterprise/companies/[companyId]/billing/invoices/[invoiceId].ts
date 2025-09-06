@@ -12,7 +12,7 @@ export const config = {
     !invoiceId |
     typeof invoiceId !== "string"
   ) {
-    return res.status(400).json({ error: "companyId and invoiceId required" });
+    return res && res.status(400).json({ error: "companyId and invoiceId required" });
   }
 
 
@@ -31,6 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!companyId || typeof companyId !== 'string' || !invoiceId || typeof invoiceId !== 'string') {
     return res.status(400).json({ error: 'companyId and invoiceId required' })
   }
+
   if (req.method !== 'GET') return res.status(405).json({ error: 'method_not_allowed' });
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -8,7 +8,7 @@ if (!id) return;
         }
       } catch (err) {
         // Fail silently and fall back to local data
-        logErrorToProduction('Error fetching product', { data: err })
+        logErrorToProduction('Error fetching product', { data: err });
       }
 
 
@@ -55,15 +55,16 @@ if (!id) return;
   if (!product && !id) { // If no id from router yet, it might still be loading;
     return <div className="p-6 text-white">Loading product details...</div>;
   }
-;
+
   if (!product) {;
     return <div className="p-6 text-white">Product not found</div>;
   }
-;
-  const inCart = items.some(i => i.id === product.id),;
+
+  const inCart = items && items.some(i => i && i.id === product && product.id);
+
   const handleAdd = () => {;
-    if (inCart) return,;
-    setAdding(true),;
+    if (inCart) return;
+    setAdding(true);
     dispatch({;
       type: 'ADD_ITEM',;
       payload: { id: product && product.id, name: product && product.title, price: product && product.price ?? 0, quantity: 1 }
@@ -95,6 +96,7 @@ if (!id) return;
               alt={product.title}
 
               className="object-cover rounded-md"
+              fill
             />
           </div>
         ) : null}
@@ -160,9 +162,7 @@ if ( {) {
 ;
         </Button>;
       </div>;
-    </>;
-  );
-}
+    </>);
 ;
 }
 //Only fetch if id is available (from router) ;

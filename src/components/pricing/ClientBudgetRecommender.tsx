@@ -79,7 +79,7 @@ interface ClientBudgetRecommenderProps {
           </Button>) : (
           <PricingSuggestionBox;
             suggestion={suggestion}
-            isLoading={isLoading}
+            is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
 
             rate_type='hourly'          />)}
@@ -99,9 +99,6 @@ if ( {) {
   $2
 
 }
-if (scope) params.scope = scope
-if (experienceLevel) params.experienceLevel = experienceLevel
-//Track this suggestion application if (user && user.id) {
   trackPricingSuggestion ({
 }
 

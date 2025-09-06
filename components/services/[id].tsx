@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -34,10 +38,10 @@ import {ArrowLeft, ExternalLink} from 'lucide-react';
   const { id } = router.query;
 
 import {ArrowLeft, ExternalLink} from 'lucide-react';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function ServiceDetailPage() {
+export default function ServiceDetailPage() {;
+  const router = useRouter();
+  const { id } = router && router.query;
 
   if (!id || typeof id !== 'string') {;
 
@@ -62,16 +66,8 @@ export default function ServiceDetailPage() {
       </div>;
 
 =======
-<<<<<<< HEAD
-export default function ServiceDetailPage() {;
-=======
-
-export default function ServiceDetailPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const router = useRouter();
-  const { id } = router.query;
-  if (!id |typeof id !== 'string') {
+  
+  if (!id || typeof id !== 'string') {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
@@ -88,6 +84,7 @@ export default function ServiceDetailPage() {
     );
   }
   const service = getServiceById(id);
+
   if (!service) {;
     return (
 
@@ -193,65 +190,17 @@ export default function ServiceDetailPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 href="/services"
-=======
-<<<<<<< HEAD
-        {/* Service Detail Content */}
-        <ServiceDetail service={service} />
-=======
-
-        {/* Service Detail Content */}
-        <ServiceDetail service={service} />
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        {/* Related Services CTA */}
-        <section className='py-16 bg-gray-900/50'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <h2 className='text-3xl font-bold text-white mb-6'>
-<<<<<<< HEAD
-=======
-
-              Looking for Something Else?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            </h2>
-            <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
-              Explore our complete portfolio of micro SaaS services to find the
-              perfect solution for your business needs.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Button
-                href='/services'
-                variant='primary'
-                size='lg'
-                className='shadow-2xl shadow-blue-500/25'              >
-                View All Services
-              </Button>
-              <Button
-                href='/contact'
-                variant='outline'
-                size='lg'
-                className='border-white/20 text-white hover:border-white/40'              >                href="/services"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 variant="primary"
                 size="lg"
                 className="shadow-2xl shadow-blue-500/25"
               >
                 View All Services
               </Button>
-<<<<<<< HEAD
               <Button
-href="/contact"
+                href="/contact"
                 variant="outline"
                 size="lg"
                 className="border-white/20 text-white hover:border-white/40"
-<<<<<<< HEAD
               >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -47,6 +47,7 @@ function JobApplicantsPage() {
                 <div>;
                   <p className='font - medium'>{talent?.name || a.talent_slug}</p>;
                   <p className='text - xs text - gray - 500'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Status: {a.status} • Applied:{' '}
                     {new Date (a.createdAtIso).toLocaleString ()}
                   </p>;
@@ -60,6 +61,7 @@ function JobApplicantsPage() {
 
         {applications && applications.map(a => {;
           const talent = TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug === a && a.talentSlug);
+
             >;
               <div className='flex items-center justify-between'>;
                 <div>;

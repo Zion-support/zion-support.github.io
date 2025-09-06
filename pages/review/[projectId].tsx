@@ -25,6 +25,7 @@ type Props = {
   valid: boolean,
   reason?: string
 };
+
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -48,9 +49,11 @@ const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid,
       },;
     } as any;
   }
+
   const expectedFromId =;
     role === "client" ? project && project.clientId : project && project.talentSlug;
   const valid = expectedFromId === fromId;
+
   return {;
     props: {;
       projectId,;
@@ -59,6 +62,7 @@ const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid,
       valid,;
       reason: valid ? null : "Invalid reviewer for this project",;
     },;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } as any;
 
 }

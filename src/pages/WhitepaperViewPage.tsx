@@ -77,7 +77,7 @@ if (.whitepaper_data) {) {
         set_error (e.message || 'An unexpected error occurred.');
 
       } finally {
-        setLoading(false)
+        set_loading (false);
       }
 
 
@@ -172,10 +172,11 @@ const WhitepaperViewPage: React.FC = () => {;
     },;
     fetchWhitepaper();
   }, [id]),;
+
   if (loading) {;
     return <div className="flex justify-center items-center h-screen"><p>Loading whitepaper...</p></div>;
   }
-;
+
   if (error) {;
     return (
       <div className="flex flex-col justify-center items-center h-screen text-red-600">;
@@ -227,7 +228,7 @@ const WhitepaperViewPage: React.FC = () => {;
                     <ArrowLeft className="mr-2 h-4 w-4" /> Back;
                  </Link>;
             </Button>;
-            {!sharedData.is_public && isAdmin && (;
+            {!sharedData && sharedData.is_public && isAdmin && (;
                 <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">;
                     Private (Admin View);
                 </span>;

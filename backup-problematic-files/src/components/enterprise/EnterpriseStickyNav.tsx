@@ -25,7 +25,6 @@ export function EnterpriseStickyNav() {;
           <button;
             className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
             onClick={() => setOpen(!open)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             aria-label="Toggle navigation";
             aria-expanded={open}
           >;

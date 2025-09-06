@@ -40,7 +40,7 @@ export default function VerifyPage() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, role, fullLegalName, businessName, businessRegistrationNumber: businessReg })}),
-const data = await res.json();
+    const data = await res.json();
     if (data.ok) {
       setProfile(data.profile);
       setRequiredDocs(data.requiredDocuments);
@@ -100,6 +100,7 @@ if (return 0) {
     const submitted = profile && profile.status === 'submitted' ? 90 : 0;
     const approved = profile && profile.status === 'approved' ? 100 : 0;
     return Math && Math.max(base, submitted, approved);  }, [profile, requiredDocs]);
+
   async function start() {;
     setBusy(true);
     setMessage('');
@@ -159,7 +160,7 @@ if (return 0) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId })}),
-const data = await res.json();
+    const data = await res.json();
     if (data.ok) {
       setProfile(data.profile);
       setMessage('Submitted. AML check performed.')
@@ -173,28 +174,6 @@ const data = await res.json();
 
   async function upload(): any (kind: KycDocumentMeta['kind']) {;
     const filename = prompt(`Enter filename for ${kind}`) || '';
-=======
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({
-        userId
-        role
-        fullLegalName
-        businessName
-        businessRegistrationNumber: businessReg
-      })
-    });    const data = await res.json();
-    if (data.ok) {
-      setProfile(data.profile);
-      setRequiredDocs(data.requiredDocuments);
-      setOptionalDocs(data.optionalDocuments);
-    } else {
-      setMessage(data.error |'Failed to start');
-    }
-    setBusy(false);  }
-  async function upload(kind: KycDocumentMeta['kind']) {
-    const filename = prompt(`Enter filename for ${kind}`) |'';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (!filename) return;
     setBusy(true);
     const res = await fetch('/api/kyc/upload', {;
@@ -202,7 +181,6 @@ const data = await res.json();
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ userId, kind, filename }),;
     });
-<<<<<<< HEAD
     const data = await res && res.json();
     if (data && data.ok) {;
       setProfile(data && data.profile);
@@ -234,10 +212,12 @@ const data = await res.json();
         <p className='text-sm text-gray-600 mb-6'>;
           Guided step-by-step KYC/AML verification with progress tracking.;
         </p>;
+
         {labels && labels.length > 0 && (;
           <div className='mb-4'>            <VerifiedBadge labels={labels} />;
           </div>;
         )}
+
         <div className='mb-6 grid grid-cols-1 md:grid-cols-2 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>User ID</label>;
@@ -254,6 +234,7 @@ const data = await res.json();
               className='mt-1 w-full border rounded px-3 py-2'
               value={role}
               onChange={e => setRole(e && e.target.value as KycRole)}
+=======
       set_message (data.error || 'Upload failed');
     }
     set_busy (false);  }
@@ -313,6 +294,7 @@ if ( {) {
               className='mt - 1 w - full border rounded px - 3 py - 2';
               value={role}
               on_change={e => set_role (e.target.value as KycRole)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             >;
               <option value='client'>Client</option>;
               <option value='talent'>Talent</option>;
@@ -369,18 +351,11 @@ if ( {) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
         </div>
-<div className="mb-6">
-=======
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </div>
+
         <div className="mb-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <button disabled={busy} onClick={start} className="rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50">Start/Update</button>
         </div>
+
         {profile && (
           <div className="space-y-6">
             <div>
@@ -395,10 +370,12 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
             <section>
 
         </div>;
+
         <div className='mb-6'>;
           <button
             disabled={busy}
@@ -407,6 +384,7 @@ if ( {) {
             Start/Update;
           </button>;
         </div>;
+
         {profile && (;
           <div className='space-y-6'>;
             <div>;
@@ -423,6 +401,7 @@ if ( {) {
                   style={{ width: `${progress}%` }}
                 />              </div>;
             </div>;
+
             <section>;
               <h2 className='font-semibold mb-2'>Required documents</h2>;
               <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>;
@@ -430,6 +409,7 @@ if ( {) {
                   const hasIt = (profile && profile.documents || []).some(;
                     d => d && d.kind === k;
                   );
+
                     >;
                       <div>;
                         <div className='text-sm font-medium'>{k}</div>;
@@ -464,21 +444,20 @@ if ( {) {
                         <div className="text-sm font-medium">{k}</div>
                         <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>
                       </div>
-<<<<<<< HEAD
                       <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled: opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
-
                     </div>
                   )
                 })}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </section>
-{optionalDocs.length > 0 && (
+            {optionalDocs.length > 0 && (
               <section>
 
 
               </div>;
             </section>;
+
             {optionalDocs && optionalDocs.length > 0 && (;
               <section>;
                 <h2 className='font-semibold mb-2'>Optional documents</h2>;
@@ -487,6 +466,7 @@ if ( {) {
                     const hasIt = (profile && profile.documents || []).some(;
                       d => d && d.kind === k;
                     );
+
                       >;
                         <div>;
                           <div className='text-sm font-medium'>{k}</div>;
@@ -611,52 +591,22 @@ if ( {) {
                     const hasIt = (profile.documents || []).some((d) => d.kind === k);
                     return (
                       <div key={k} className="flex items-center justify-between border rounded p-3">
-=======
-                      <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
-                    </div>
-                  )
-                })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>
-            </section>
-            {optionalDocs.length > 0 && (
-              <section>
-<<<<<<< HEAD
-                <h2 className='font-semibold mb-2'>Optional documents</h2>
-                <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
-                  {optionalDocs.map(k => {
-                    const hasIt = (profile.documents |[]).some(
-                      d => d.kind === k
-                    );
-                      >
-
-=======
-                <h2 className="font-semibold mb-2">Optional documents</h2>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
-                  {optionalDocs.map((k) => {
-                    const hasIt = (profile.documents || []).some((d) => d.kind === k),
-                    return (
-                      <div key={k} className="flex items-center justify-between border rounded p-3">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <div>
                           <div className="text-sm font-medium">{k}</div>
                           <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>
                         </div>
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
-<<<<<<< HEAD
                     )
                   })}
                 </div>
               </section>
             )}
-<div>
+
+            <div>
               <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
             </div>
+
             {message && <div className="text-sm text-blue-700">{message}</div>}
           </div>
         )}
@@ -664,6 +614,8 @@ if ( {) {
     </>
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
                 />              </div>;
             </div>;
             <section>;
@@ -717,22 +669,11 @@ if ( {) {
               </section>)}
             <div>;
               <button;
-=======
-<<<<<<< HEAD
-                    );                  })}
-                </div>
-              </section>
-            )}
-<<<<<<< HEAD
-            <div>
-              <button
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 disabled={
                   busy ||;
                   profile.status === 'submitted' ||;
                   profile.status === 'approved';
                 }
-<<<<<<< HEAD
                 on_click={submit}
                 className='rounded bg - green - 600 text - white px - 4 py - 2 disabled:opacity - 50';
               >;

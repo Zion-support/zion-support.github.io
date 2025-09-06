@@ -33,9 +33,9 @@ if ( {) {
         throw new Error (j.error || `HTTP ${resp.status}`);
 
       }
-      const data: ApiResponse = await resp.json();
-      setNodes(data.nodes);
-      setGit(data.status);
+      const data: ApiResponse = await resp.json ();
+      set_nodes (data.nodes);
+      set_git (data.status);
     } catch (e: any) {
 
 import React, { useEffect, useState } from "react";
@@ -248,7 +248,9 @@ export default function DevTreePage(req, res) {
           </button>;
         </div>;
       </div>;
+
       {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
+
       {nodes ? (;
         <div className='rounded border p-3 bg-white'>          <Tree nodes={nodes} onDeploy={onDeploy} />;
         </div>;
@@ -262,6 +264,8 @@ export default function DevTreePage(req, res) {
 =======
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
       set_error (e.message || 'Failed to load');    }
   }
 ;

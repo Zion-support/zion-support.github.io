@@ -5,6 +5,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { jobDescription, candidateProfiles } = req.body |{}
   if (!jobDescription |!Array.isArray(candidateProfiles))
+=======
   try {
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST')
@@ -88,8 +89,6 @@ function handler() {
 ;
   const text = await generate_text (prompt, 'You are a matching engine. Output strictly valid JSON.');
   return res.status (200).json ({ matches: text });
-
-<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

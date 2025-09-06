@@ -14,40 +14,6 @@ export default function EnterpriseITPage() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout>
-=======
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react',;
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default function EnterpriseITPage() {
-  const features = [
-    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
-  const solutions = [
-    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
-    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
-    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
-    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
-export default function EnterpriseITPage() {_const _features = [
-    'Cloud migration and landing zones with cost governance', _'DevOps automation, _CI/CD, _and platform engineering', _'Data platforms, _lineage, _and quality monitoring', _'Observability, _SLOs, _and incident automation'];
-  const _solutions = [
-    { name: 'Cloud Landing Zone', _href: '/cloud-landing-zone'},
-    {_name: 'Cloud Cost Optimizer', _href: '/cloud-cost-optimizer'},
-    {_name: 'Data Pipeline Observability', _href: '/data-pipeline-observability'},
-    {_name: 'Uptime & SLO Monitor', _href: '/uptime-slo-monitor'}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  return (_<Layout>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <Head>
         <title>Enterprise IT | Zion Tech Group</title>
         <meta name="description" content="Cloud, DevOps, data platforms, and SRE with cost, performance, and reliability in focus." />
@@ -79,16 +45,9 @@ export default function EnterpriseITPage() {_const _features = [
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
                 </div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              ))}
             </div>
           </section>
-<<<<<<< HEAD
-<section>
-=======
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -168,19 +127,6 @@ function EnterpriseITPage() {
                   <div className="text - gray - 200 font - semibold mb - 2">{s.name}</div>;
                   <p className="text - gray - 300 text - sm">Learn more</p>;
                 </a>))}
-=======
-=======
-  );
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-                </Link>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </section>;
         </div>;

@@ -3,7 +3,7 @@
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
-  if (u.role === 'client' && u.id === offer.clientId) return u;
+  if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u;
   if (
 
     u && u.role === 'talent' &&
@@ -32,10 +32,30 @@
 
 
 =======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
+// Marketplace authentication utilities
+export interface MarketplaceUser {
+  id: string;
+  role: 'client' | 'talent' | 'admin';
+  email: string;
+  name: string;
+  slug: string;
+  isVerified: boolean;
+  profile?: {
+    bio?: string;
+    skills?: string[];
+    experience?: string;
+    portfolio?: string[];
+    hourlyRate?: number;
+    availability?: 'available' | 'busy' | 'unavailable';
+  };
+  business?: {
+    name: string;
+    industry: string;
+    size: 'startup' | 'small' | 'medium' | 'large' | 'enterprise';
+    website?: string;
+  };
+  createdAt: string;
+  lastActiveAt: string;
 }
     return null;
   }

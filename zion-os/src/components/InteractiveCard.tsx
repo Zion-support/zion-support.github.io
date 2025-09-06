@@ -182,7 +182,6 @@ export function FeatureCard({;
       className={class_name}
 >;
       {stats && (
-<<<<<<< HEAD
         <div className=&quot;mt - 6 pt - 6 border - t border - white / 10 & quot;>;
           <div className=&quot;grid grid - cols - 2 gap - 4&quot;>;
             {stats.map ((stat, index) => (
@@ -190,16 +189,6 @@ export function FeatureCard({;
                 <div className=&quot;text - 2xl font - bold text - white & quot;>{stat.value}</div>;
                 <div className=&quot;text - sm text - gray - 400 & quot;>{stat.label}</div>;
               </div>))}
-=======
-        <div className="mt-6 pt-6 border-t border-white/10">
-          <div className="grid grid-cols-2 gap-4">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-2xl font-bold text-white">{stat.value}</div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
-              </div>
-            ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
         </div>)}
     </InteractiveCard>);

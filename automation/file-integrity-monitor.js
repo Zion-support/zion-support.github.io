@@ -243,12 +243,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -555,13 +549,10 @@ module.exports = FileIntegrityMonitor;
 
 =======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 module.exports = FileIntegrityMonitor;
 ;
 ;
 ;
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
@@ -649,9 +640,7 @@ class FileIntegrityMonitor {
       issues.push({
 
 =======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      issues.push({
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       const checksums = { /* empty */ }
       const sourceFiles = this.findSourceFiles();
       for: (const file of sourceFiles) {

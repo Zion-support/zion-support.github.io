@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -129,37 +133,7 @@ function QuantumCybersecurityPage() {
       title: "Quantum - Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
       color: "from - blue - 500 to - cyan - 500";
-=======
-<<<<<<< HEAD
-import React from 'react',
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;
-  Database, Globe, ArrowRight, CheckCircle, Star, Users
- } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-export default function QuantumCybersecurityPage() {
-
-  const features = [
-    {
-<<<<<<< HEAD
-      icon: Shield
-      title: "Quantum-Resistant Encryption"
-      description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
-      color: "from-blue-500 to-cyan-500"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
-=======
-      icon: Shield,
-      title: "Quantum-Resistant Encryption",
-      description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
-      color: "from-blue-500 to-cyan-500";
-    };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       icon: Lock,
       title: "Zero - Trust Architecture",
@@ -195,6 +169,7 @@ export default function QuantumCybersecurityPage() {
   const benefits = [;
     "Protect against quantum computing attacks with future - proof encryption";
     "Reduce security incidents by 90% with AI - powered threat detection";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     "Achieve compliance with SOC 2, GDPR, and industry standards";
     "24 / 7 monitoring and automated incident response";
     "Scalable security that grows with your business";
@@ -224,6 +199,7 @@ export default function QuantumCybersecurityPage() {
       solution: "Real-time detection, automated backup, and rapid recovery";
     }
   ];
+
   const pricing = [;
     {;
       plan: "Essential",;
@@ -233,6 +209,7 @@ export default function QuantumCybersecurityPage() {
       features: [;
 
         "Quantum-resistant encryption";
+=======
 ;
   const threats = [;
     {
@@ -265,6 +242,7 @@ export default function QuantumCybersecurityPage() {
       description: "Basic quantum cybersecurity for small businesses",
       features: [;
         "Quantum - resistant encryption";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Basic threat detection";
         "24 / 7 monitoring";
         "Email support";
@@ -292,6 +270,7 @@ export default function QuantumCybersecurityPage() {
       period: "/month",
       description: "Advanced security features for growing organizations",
       features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Everything in Essential";
         "AI - powered threat detection";
         "Zero - trust architecture";
@@ -322,6 +301,7 @@ export default function QuantumCybersecurityPage() {
       period: "",
       description: "Full - scale security solution for large organizations",
       features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Everything in Professional";
         "Custom security architecture";
         "Dedicated security team";
@@ -338,6 +318,7 @@ export default function QuantumCybersecurityPage() {
         "Executive reporting";
       ],
       popular: false;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 ;
@@ -439,12 +420,6 @@ export default function QuantumCybersecurityPage() {
           </div>;
         </div>;
       </section>;
-=======
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -480,22 +455,7 @@ export default function QuantumCybersecurityPage() {
               <div className="space-y-4">;
                 {benefits && benefits.map((benefit, index) => (;
                   <motion&& motion.div
-=======
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Quantum Cybersecurity?</h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
-<<<<<<< HEAD
-                Our advanced security platform provides comprehensive protection against both current and future threats.
-=======
-                Our advanced security platform provides comprehensive protection against both current and future threats. 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                Stay ahead of the curve with quantum-resistant technology.
-              </p>
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -604,12 +564,6 @@ export default function QuantumCybersecurityPage() {
           </div>;
         </div>;
       </section>;
-=======
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -833,42 +787,17 @@ export default function QuantumCybersecurityPage() {
                   </div>;
                   <p className="text-slate-600">{plan && plan.description}</p>;
                 </div>;
+
                 <ul className="space-y-4 mb-8">;
                   {plan && plan.features.map((feature) => (;
                     <li key={feature} className="flex items-center space-x-3">;
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />;
                       <span className="text-slate-700">{feature}</span>;
                     </li>;
-=======
-<<<<<<< HEAD
-=======
-                
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>
-                  <div className="text-4xl font-bold text-slate-900 mb-2">
-                    {plan.price}
-                    <span className="text-lg text-slate-600">{plan.period}</span>
-                  </div>
-                  <p className="text-slate-600">{plan.description}</p>
-                </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-slate-700">{feature}</span>
-                    </li>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   ))}
                 </ul>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <a
                   href="/contact"
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105">;
@@ -880,12 +809,6 @@ export default function QuantumCybersecurityPage() {
           </div>;
         </div>;
       </section>;
-=======
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -921,6 +844,7 @@ export default function QuantumCybersecurityPage() {
           </motion && motion.div>;
         </div>;
       </section>;
+
       <EnhancedFooter />;
     </>;
   );
@@ -944,7 +868,6 @@ export default function QuantumCybersecurityPage() {
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
             className="text - center";
           >;
             <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">;

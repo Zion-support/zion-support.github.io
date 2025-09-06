@@ -18,7 +18,7 @@ const [activeTab, setActiveTab] = useState<string>("documentation"),
 
           Developer Portal
         </h1>
-        <p className="text-zinc-400 mt-2">
+        <p className='text-zinc-400 mt-2'>
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
@@ -230,7 +230,7 @@ export function DeveloperPortal() {;
                 onClick={() => setActiveTab(tab && tab.id)}
               >;
                 <Icon size={16} className="mr-2" />;
-                {tab.label}
+                {tab && tab.label}
               </button>;
             );
           })}
@@ -273,7 +273,7 @@ export default function ProtectedDeveloperPortal() {
 ;
 
 export default function ProtectedDeveloperPortal() {;
-  return (;
+  return (
     <ProtectedRoute>;
       <DeveloperPortal />;
     </ProtectedRoute>;

@@ -2,7 +2,6 @@
 
 import React from 'react';
 
-<<<<<<< HEAD:temp_exclude/pages.__backup/privacy.tsx
 interface PrivacyProps {
   // Add props here as needed
 }

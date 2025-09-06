@@ -5,10 +5,13 @@ export const toast = ({ title, description, variant = "default" }) => {};
   console && console.log(""Toast [${variant}]: ${title} -, ${description}"")}
   // comment;
 return Date && Date.now()}
+
 export const useToast = () => {}};
   const [toasts, setToasts] = useState([])}
+
   const toast = useCallback(({ title, description, variant = "default' }) => {}}
     const newToast = {}
+
     setToasts(prev => [...prev, newToast])}
     // comment;
 setTimeout(() => {}}

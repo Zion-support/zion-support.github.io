@@ -1,5 +1,6 @@
 
   Sentry && Sentry.captureException(error, { "extra": { context } })}
+
     // Show user-friendly error message;
     this && this.showErrorMessage("Something went wrong. Please try again.")},
 
@@ -9,6 +10,7 @@
     errorDiv && errorDiv.className = "error-message";
     errorDiv && errorDiv.textContent = message;
     errorDiv && errorDiv.style.cssText = ";
+=======
   "handle_error": (error, context = "") => {
   console.error ("Error "occurred": ", error, ""Context": ", context);
     // Send error to monitoring service (e.g., Sentry);
@@ -25,6 +27,7 @@ if ( {) {
     error_div.class_name = "error - message";
     error_div.text_content = message;
     error_div.style.css_text = ";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       position: fixed;
       top: 20px;
       right: 20px;
@@ -37,8 +40,6 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 
 // Error-handling utility
@@ -69,10 +70,6 @@ const errorHandling = { handleError: (error,context = "") => { console.error("Er
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const errorHandling = { handleError: (error,context = "") => { console.error("Error occurred:",error,"Context:",context); if (typeof Sentry !== "undefined") { Sentry.captureException(error,{ extra: { context } })} ; this.showErrorMessage("Something went wrong. Please try again.")}; showErrorMessage: (message) => { const errorDiv = document.createElement("div"); errorDiv.className = "error-message"; errorDiv.textContent = message; errorDiv.style.cssText = `; position: fixed; top: 20px; right: 20px; background: #ff4444; color: white; padding: 15px; border-radius: 5px; z-index: 10000; `; document.body.appendChild(errorDiv); setTimeout(() => { if (errorDiv.parentNode) { errorDiv.parentNode.removeChild(errorDiv)} },5000)}; handleUnhandledRejection: (event) => { this.handleError(event.reason,"Unhandled Promise Rejection")}; init: () => { window.addEventListener("error",(event) => { this.handleError(event.error,"Global Error")}); window.addEventListener("unhandledrejection",this.handleUnhandledRejection)} }; errorHandling.init();
 const errorHandling = { handleError: (error,context = "") => { console.error("Error occurred:",error,"Context:",context); if (typeof Sentry !== "undefined") { Sentry.captureException(error,{ extra: { context } })} ; this.showErrorMessage("Something went wrong. Please try again.")},showErrorMessage: (message) => { const errorDiv = document.createElement("div"); errorDiv.className = "error-message"; errorDiv.textContent = message; errorDiv.style.cssText = `; position: fixed; top: 20px; right: 20px; background: #ff4444; color: white; padding: 15px; border-radius: 5px; z-index: 10000; `; document.body.appendChild(errorDiv); setTimeout(() => { if (errorDiv.parentNode) { errorDiv.parentNode.removeChild(errorDiv)} },5000)},handleUnhandledRejection: (event) => { this.handleError(event.reason,"Unhandled Promise Rejection")},init: () => { window.addEventListener("error",(event) => { this.handleError(event.error,"Global Error")}); window.addEventListener("unhandledrejection",this.handleUnhandledRejection)} }; errorHandling.init();
 const errorHandling = { handleError: (error,context = "") => { console.error("Error occurred:",error,"Context:",context); if (typeof Sentry !== "undefined") { Sentry.captureException(error,{ extra: { context } })} ; this.showErrorMessage("Something went wrong. Please try again.")},showErrorMessage: (message) => { const errorDiv = document.createElement("div"); errorDiv.className = "error-message"; errorDiv.textContent = message; errorDiv.style.cssText = `; position: fixed; top: 20px; right: 20px; background: #ff4444; color: white; padding: 15px; border-radius: 5px; z-index: 10000; `; document.body.appendChild(errorDiv); setTimeout(() => { if (errorDiv.parentNode) { errorDiv.parentNode.removeChild(errorDiv)} },5000)},handleUnhandledRejection: (event) => { this.handleError(event.reason,"Unhandled Promise Rejection")},init: () => { window.addEventListener("error",(event) => { this.handleError(event.error,"Global Error")}); window.addEventListener("unhandledrejection",this.handleUnhandledRejection)} }; errorHandling.init();

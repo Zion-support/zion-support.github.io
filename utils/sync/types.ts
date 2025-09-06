@@ -5,10 +5,6 @@ export interface Peer {
   base_url: string, // e.g., https: //zion - latam.example.org;
   scope?: SyncScope,
   paused?: boolean;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 export interface InstanceConfig {
   instance_id: string,
@@ -23,8 +19,6 @@ export interface InstanceConfig {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
@@ -71,12 +65,22 @@ export interface BaseEventPayload {
   }
 
 }
-;
-export interface DaoEndorsementPayload extends BaseEventPayload {;
-  fromDAO: string;
-  toDAO: string;
-  resolutionId: string;
-  decision: "endorse" | "reject",;
+export interface ProposalVoteEntry {
+  voter_id: string,
+  weight: number,
+  choice: string;
+}
+export interface ProposalPayload extends BaseEventPayload {
+  proposal_id: string,
+  title: string,
+  votes: ProposalVoteEntry[];
+}
+export interface TokenTransferPayload extends BaseEventPayload {
+  tx_id: string,
+  token: string,
+  amount: number,
+  from_subnet: string,
+  to_subnet: string,
   timestamp: number;
 
   } catch (error) {
@@ -92,8 +96,6 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 
 
 }
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
@@ -128,15 +130,6 @@ export interface MultiverseState {
   proposalMerkleById: Record < string string>;
 
   events: SyncEvent[];
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
 

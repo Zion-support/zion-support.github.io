@@ -293,11 +293,13 @@ const resource_links = [;
   const handleCategoryLeave = () => {;
     setActiveCategory(null);
   };
+
   const filteredServices = serviceCategories && serviceCategories.flatMap(category =>;
     category && category.services.filter(;
       service =>;
         service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
         service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())    );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   return (
 
@@ -319,9 +321,11 @@ const resource_links = [;
     )
 =======
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
+
   const handleCategoryLeave = () => {;
     setActiveCategory(null);
   };
+
   const filteredServices = serviceCategories && serviceCategories.flatMap(category =>;
     category && category.services.filter(service =>;
       service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
@@ -383,6 +387,7 @@ const resource_links = [;
             <div className="flex items-center space-x-4">;
               <a href={contactInfo && contactInfo.website} className="text-purple-300 hover:text-white transition-colors">;
                 {contactInfo && contactInfo.website}
+=======
   { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }, ];  { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
 ];
 ;
@@ -564,6 +569,7 @@ function UltraFuturisticNavigation2028() {
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
+=======
             <div className="relative group">;
               <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">;
                 <Sparkles className="w-5 h-5" />;
@@ -594,8 +600,8 @@ function UltraFuturisticNavigation2028() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           ))}
-                        </div>
-                      </div>
+                        </div>;
+                      </div>;
                     ))}
 
 
@@ -673,14 +679,6 @@ function UltraFuturisticNavigation2028() {
             <div className="relative">;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
 
-=======
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-<<<<<<< HEAD
 =======
 
             {/* Company Links */}
@@ -770,9 +768,7 @@ function UltraFuturisticNavigation2028() {
             <div className="px-4 py-6 space-y-6">;
 
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30"
           >
             <div className="px-4 py-6 space-y-6">
 
@@ -974,6 +970,7 @@ function UltraFuturisticNavigation2028() {
                   on_click={close_menu}
                   className="block w - full text - center px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300";
                 >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Get Started;
                 </Link>;
               </div>;
@@ -981,25 +978,6 @@ function UltraFuturisticNavigation2028() {
 
 =======
               <div className="pt-4 border-t border-purple-500/30">
-=======
-              <div className='pt-4 border-t border-purple-500/30'>
-=======
-
-                    </Link>
-
-                  ))}
-                </div>
-              </div>
-
-              {/* Mobile CTA */}
-              <div className='pt-4 border-t border-purple-500/30'>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Link
                   href="/contact"
                   onClick={closeMenu}
@@ -1041,10 +1019,13 @@ function UltraFuturisticNavigation2028() {
     </nav>;
   );
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
     </nav>
-<<<<<<< HEAD
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
           </motion.div>)}
       </AnimatePresence>;
       {/* Search Results Dropdown */}

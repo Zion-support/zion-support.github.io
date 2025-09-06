@@ -82,6 +82,7 @@ export default function SummitPage() {;
       twitter: 'https://twitter && twitter.com',;
     },;
   ];
+
   const partners: Partner[] = [;
     { name: 'Gov Partner' },;
     { name: 'Venture Partner' },;
@@ -99,33 +100,40 @@ type Speaker = {
   title: string,
   avatarUrl: string,
   bio: string,
-twitter?: string;
+  twitter?: string;
   linkedin?: string;
   highlight?: boolean
 };
+
 type Partner = {
   name: string,
   logoUrl?: string
 };
+
 const EVENT_START_ISO = '2025-11-12T16: 00:00Z',
+
 function useCountdown(targetIso: string) {
   const [remainingMs, setRemainingMs] = React.useState<number>(() => {
     return new Date(targetIso).getTime() - Date.now()
   });
+
   React.useEffect(() => {
     const id = setInterval(() => {
       setRemainingMs(new Date(targetIso).getTime() - Date.now())
     }, 1000);
     return () => clearInterval(id)
   }, [targetIso]);
+
   const isPast = remainingMs <= 0;
   const totalSec = Math.max(0, Math.floor(remainingMs / 1000));
   const days = Math.floor(totalSec / 86400);
   const hours = Math.floor((totalSec % 86400) / 3600);
   const minutes = Math.floor((totalSec % 3600) / 60);
   const seconds = totalSec % 60;
+
   return { isPast, days, hours, minutes, seconds }
 }
+
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<'youtube' | 'twitch' | 'twitter'>('youtube');
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
@@ -133,12 +141,14 @@ export default function SummitPage() {
   const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
   const [submitting, setSubmitting] = React.useState(false);
   const [result, setResult] = React.useState<{ ok?: boolean, error?: string } | null>(null);
+
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',
-avatarUrl: '/favicon.svg',
+    avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
+=======
   'Content - Type': 'application / json';
 }
 body: JSON.stringify ({
@@ -172,76 +182,10 @@ function SummitPage() {
   const { is_past, days, hours, minutes, seconds } =;
     use_countdown (EVENT_START_ISO);
   const [form, set_form] = React.useState ({
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-const partners: Partner[] = [ {
-  name: 'Gov Partner'
-}
-{
-  name: 'Venture Partner'
-}
-{
-  name: 'University Partner'
-}];
-const onSubmit = async (e: React.FormEvent) => {
-  e.preventDefault ();
-setSubmitting (true);
-setResult (null);
-try {
-  const res = await fetch ('/api/summit/register', {
-  method: 'POST';
-headers: {
-  'Content-Type': 'application/json'
-}
-body: JSON.stringify ({
-  ...form, source: 'summit-page'
-})
-});
-const data = await res.json ();
-if (!res.ok) throw new Error (data?.error |'Failed');
-setResult ({
-  ok: true
-});
-setForm ({
-  name: '', email: '', role: '', country: ''
-})
-}catch (err: any) {
-  setResult ({
-  error: err?.message |'Unexpected error'
-})
-}finally {
-  setSubmitting (false)
-<<<<<<< HEAD
-export default function SummitPage() {
-  const [platform, setPlatform] = React.useState<
-    'youtube' | 'twitch' | 'twitter'
-=======
-
-export default function SummitPage() {
-  const [platform, setPlatform] = React.useState<
-    'youtube' | 'twitch' | 'twitter';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  >('youtube');
-  const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
-  const { isPast, days, hours, minutes, seconds } =
-    useCountdown(EVENT_START_ISO);
-  const [form, setForm] = React.useState({
-<<<<<<< HEAD
-    name: ''
-    email: ''
-    role: ''
-    country: ''
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     name: '',
     email: '',
     role: '',
     country: '',
-<<<<<<< HEAD
   });
   const [submitting, set_submitting] = React.useState (false);
   const [result, set_result] = React.useState<{
@@ -298,60 +242,20 @@ export default function SummitPage() {
         body: JSON.stringify({ ...form, source: 'summit-page' })}),
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Failed');
-=======
-      avatarUrl: '/favicon.svg',
-      bio: 'Leading the architecture of ZionDAO and trust rails.'},
-    {
-      name: 'Jordan Lee',
-      title: 'Zion Alumni | AI Fellow',
-      avatarUrl: '/favicon.svg',
-      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
-      twitter: 'https://twitter.com'}],
-  const partners: Partner[] = [
-    { name: 'Gov Partner' },
-    { name: 'Venture Partner' },
-    { name: 'University Partner' }],
-  const onSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    setSubmitting(true),
-    setResult(null),
-    try {
-      const res = await fetch('/api/summit/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, source: 'summit-page' })}),
-      const data = await res.json(),
-      if (!res.ok) throw new Error(data?.error || 'Failed'),
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       setResult({ ok: true }),
       setForm({ name: '', email: '', role: '', country: '' })
     } catch (err: any) {
       setResult({ error: err?.message || 'Unexpected error' })
     } finally {
       setSubmitting(false)
-<<<<<<< HEAD
     }
-};
-=======
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  };
+
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
       return (
         <iframe
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
-<<<<<<< HEAD
-
-  const _livestreamEmbed = () => {_if (platform === 'youtube') {
-      return (
-        <iframe
-          className=&quot;w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800&quot;
-
           src={`https://www.youtube.com/embed/${embedId}`}
           title="YouTube livestream"
           allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
@@ -378,7 +282,7 @@ export default function SummitPage() {
     }
     return (
       <iframe
-className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+        className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
         src={`https://twitter.com/i/broadcasts/${embedId}`}
         title="Twitter livestream"
         allowFullScreen
@@ -412,7 +316,6 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
         </section>
 
         <section className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <h2 className="text-2xl font-bold mb-4">Event Info</h2>
           <ul className="space-y-2">
             <li><span className="font-medium">Date:</span> Nov 12, 2025</li>
@@ -425,6 +328,7 @@ className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gra
       </div>
 
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'>;
+=======
       twitter: 'https://twitter.com',
     },
   ];
@@ -525,19 +429,17 @@ if ( {) {
 
       <section
         id='speakers'
-        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
-      >
-        <h2 className='text-2xl font-bold mb-6'>Speakers</h2>
-        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-          {speakers.map(s => (
+        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
+        <h2 className='text-2xl font-bold mb-6'>Speakers</h2>;
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>;
+          {speakers && speakers.map(s => (;
             <div
-              key={s.name}
-              className={`p-4 rounded-lg border ${s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}
-            >
-              <div className='flex items-center gap-4'>
+              key={s && s.name}
+              className={`p-4 rounded-lg border ${s && s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>;
+              <div className='flex items-center gap-4'>;
                 <img
-                  src={s.avatarUrl}
-                  alt={s.name}
+                  src={s && s.avatarUrl}
+                  alt={s && s.name}
                   className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
                 />;
                 <div>;
@@ -589,7 +491,6 @@ if ( {) {
               </div>
               <p className="mt-3 text-sm">{s.bio}</p>
               <div className="mt-3 flex gap-3 text-sm">
-<<<<<<< HEAD
                 {s.twitter && <a className="underline" href={s.twitter} target="_blank" rel="noreferrer">Twitter</a>}
                 {s.linkedin && <a className="underline" href={s.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>}
               </div>
@@ -754,6 +655,7 @@ if ( {) {
               className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
               value={platform}
               on_change={e => set_platform (e.target.value as any)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             >;
               <option value='youtube'>YouTube</option>;
               <option value='twitch'>Twitch</option>;
@@ -848,6 +750,7 @@ if ( {) {
             )}          </div>;
         </form>;
       </section>;
+
       <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>;
         <h2 className='text-xl font-semibold'>;
           AI Session Summaries (Optional);
@@ -882,7 +785,7 @@ if ( {) {
               onChange={(e) => setEmbedId(e.target.value)}
             />
             {isPast ? (
-<span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
+              <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
             ) : (
               <span className="px-3 py-2 rounded bg-blue-600 text-white">Live in {days}d {hours}h {minutes}m {seconds}s</span>
             )}
@@ -892,6 +795,7 @@ if ( {) {
           {livestreamEmbed()}
         </div>
       </section>
+
       <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-4">Register</h2>
         <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
@@ -905,7 +809,7 @@ if ( {) {
             />
           </div>
           <div>
-<label className="block text-sm mb-1">Email</label>
+            <label className="block text-sm mb-1">Email</label>
             <input
               type="email"
               required
@@ -915,7 +819,7 @@ if ( {) {
             />
           </div>
           <div>
-<label className="block text-sm mb-1">Role</label>
+            <label className="block text-sm mb-1">Role</label>
             <input
               required
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
@@ -924,7 +828,7 @@ if ( {) {
             />
           </div>
           <div>
-<label className="block text-sm mb-1">Country</label>
+            <label className="block text-sm mb-1">Country</label>
             <input
               required
               className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
@@ -932,7 +836,7 @@ if ( {) {
               onChange={(e) => setForm({ ...form, country: e.target.value })}
             />
           </div>
-<div className="md:col-span-2 flex items-center gap-3">
+          <div className="md:col-span-2 flex items-center gap-3">
             <button
               type="submit"
               disabled={submitting}
@@ -945,6 +849,7 @@ if ( {) {
           </div>
         </form>
       </section>
+
       <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
         <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
@@ -952,6 +857,8 @@ if ( {) {
     </>
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
               value={embed_id}
               on_change={e => setEmbedId (e.target.value)}
             />;

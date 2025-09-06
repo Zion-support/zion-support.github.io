@@ -8,7 +8,6 @@ import {
 
 
 const generateId = () => Math.random().toString(36).slice(2, 10);
-<<<<<<< HEAD
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
   name: 'Acme Corporation';
   slug: 'acme';
@@ -91,6 +90,7 @@ export const store = {getCompanyBySlug(slug: string) {;
     return true;
   }
   listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId];
+=======
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types / enterprise',
 const generate_id = () =>: any Math.random ().to_string (36).slice (2, 10),
 const seed_company: CompanyRecord = {
@@ -168,5 +168,6 @@ const seed_company: CompanyRecord = {
   },
   list_invoices (company_id: string): InvoiceRecord[] {
     const company = companiesById[company_id];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return company ? company.invoices : [];
   }}

@@ -31,7 +31,6 @@ export default function PartnerDashboard() {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function getToken() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const res = await fetch("/api/partners/token", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -94,16 +93,18 @@ export default function PartnerDashboard() {
       method: "POST"
       headers: token ? { Authorization: `Bearer ${token}` } : {}})
     const data = await res.json();
-<<<<<<< HEAD
+
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
 
     <div className='min-h-screen bg-gray-50 text-gray-900'>    const data = await res && res.json();
     setUsage(data && data.summary || null);
     setLoading(false);
+=======
     }
 
   }
+
   async function regenerateKey() {;
     const res = await fetch("/api/partners/key", {;
       method: "POST",;
@@ -153,6 +154,7 @@ export default function PartnerDashboard() {
               Old key becomes inactive.;
             </p>;
           </div>;
+
           <div className='bg-white p-6 rounded-lg shadow md:col-span-2'>;
             <h3 className='font-medium mb-2'>Usage</h3>;
 
@@ -164,68 +166,13 @@ export default function PartnerDashboard() {
                       </li>                    ))}          </div>
 =======
     <div className="min-h-screen bg-gray-50 text-gray-900">
-    }
-  }
-
-  async function fetchUsage() {
-    setLoading(true),
-    const res = await fetch("/api/partners/usage", {
-      headers: token ? { Authorization: `Bearer ${token}` } : {}}),
-    const data = await res.json()
-    setUsage(data.summary || null),
-    setLoading(false)
-  }
-
-  async function regenerateKey() {
-    const res = await fetch("/api/partners/key", {
-      method: "POST",
-      headers: token ? { Authorization: `Bearer ${token}` } : {}}),
-    const data = await res.json()
-    if (data.apiKey) {
-      alert(`New API Key: ${data.apiKey}`)
-      headers: token ? { Authorization: `Bearer ${token}` } : {}});
-    const _data = await res.json();
-    setUsage(data.summary || null);
-    setLoading(false);
-  }
-
-  async function regenerateKey() {
-    const res = await fetch(&quot;/api/partners/key&quot;, {
-      method: &quot;POST",
-      headers: token ? { Authorization: `Bearer ${token}` } : {}});
-    const data = await res.json();
-
-    if (data.apiKey) {
-      alert(`New API Key: ${data.apiKey}`)
-
-    }
-  }
-
-  return (_<div className="min-h-screen bg-gray-50 text-gray-900">
-
       <Head>
         <title>Zion Partner Dashboard</title>
       </Head>
       <div className="max-w-5xl mx-auto py-12 px-4">
         <h1 className="text-3xl font-semibold mb-2">Partner Dashboard</h1>
-<p className="text-gray-600 mb-6">Manage access, view usage, and download SDKs.</p>
-=======
+        <p className="text-gray-600 mb-6">Manage access, view usage, and download SDKs.</p>
 
-    if (data.apiKey) {
-      alert(`New API Key: ${data.apiKey}`)
-    }
-  }
-  return (
-<<<<<<< HEAD
-    <div className='min-h-screen bg-gray-50 text-gray-900'>
-        <title>Zion Partner Dashboard</title>
-      </Head>
-      <div className='max-w-5xl mx-auto py-12 px-4'>
-        <h1 className='text-3xl font-semibold mb-2'>Partner Dashboard</h1>
-        <p className='text-gray-600 mb-6'>
-          Manage access, view usage, and download SDKs.
-        </p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {!token && (
           <div className="bg-white p-6 rounded-lg shadow mb-8">
             <h2 className="text-lg font-medium mb-3">Authenticate</h2>
@@ -235,7 +182,8 @@ export default function PartnerDashboard() {
             </div>
           </div>
         )}
-<div className="grid md:grid-cols-3 gap-6">
+
+        <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="font-medium mb-2">API Keys</h3>
             <button onClick={regenerateKey} className="bg-gray-900 text-white px-3 py-2 rounded text-sm">Generate New Key</button>
@@ -269,6 +217,7 @@ export default function PartnerDashboard() {
                         {k}: {v as any}
 
                       </li>                    ))}          </div>;
+
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">;
             <h3 className="font-medium mb-2">Usage</h3>;
             <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>;
@@ -314,6 +263,7 @@ export default function PartnerDashboard() {
 
           </div>;
         </div>;
+
         <div className='bg-white p-6 rounded-lg shadow mt-6'>;
           <h3 className='font-medium mb-2'>SDKs</h3>;
 
@@ -339,16 +289,9 @@ export default function PartnerDashboard() {
     </div>;
 
   );
-}        <div className="bg-white p-6 rounded-lg shadow mt-6">
-          <h3 className="font-medium mb-2">SDKs</h3>
-          <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>
-          <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      </div>
-    </div>
-);
 }
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import Head from 'next / head';
 export default /**
  * PartnerDashboard - Function description

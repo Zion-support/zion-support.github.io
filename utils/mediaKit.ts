@@ -1,6 +1,7 @@
 
 
   };
+}
 
 
   }
@@ -10,6 +11,17 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
+=======
+export async function generateMediaContent (request: MediaGenerationRequest): Promise < MediaGenerationResponse> {
+  // Mock implementation - in production, this would call OpenAI or other AI service;
+  return {
+    ok: true,
+    text: `Mock ${request.type} for ${request.company_name} on ${request.date}`;
+  }
+;
+export function buildLegalDocs (kind: MediaBundle): MediaAsset[] {
+  const base: MediaAsset[] = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
 
 =======
@@ -57,7 +69,6 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 
 export function buildPressRelease(
-<<<<<<< HEAD
   type: PressReleaseType
   params: {
     company_name: string;
@@ -70,8 +81,8 @@ export function buildPressRelease(
     companyName: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     date: string;
-    raiseAmount?: string;
-    tokenName?: string;
+    raise_amount?: string;
+    token_name?: string;
     anchors?: string[];
   }
 ): string {
@@ -81,10 +92,10 @@ export function buildPressRelease(
 
 
   if (type === 'seed-round') {
-    return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} announces a seed round of ${params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params.companyName}:\n${boilerplate}`;
+    return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
   if (type === 'token-sale') {
-    return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} announces the ${params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params.companyName}:\n${boilerplate}`;
+    return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces the ${params && params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
 
   return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
@@ -93,9 +104,9 @@ export function buildPressRelease(
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function buildTimeline(startDate: Date) {
-  const addDays = (d: Date, days: number) =>;
-    new Date(d.getFullYear(), d.getMonth(), d.getDate() + days);
-  const fmt = (d: Date) => d.toISOString().substring(0, 10);
+  const addDays = (d: Date, days: number) =>
+    new Date(d && d.getFullYear(), d && d.getMonth(), d && d.getDate() + days);
+  const fmt = (d: Date) => d && d.toISOString().substring(0, 10);
   return [
     { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) }
     { label: 'Week 2: ZionGPT Core Reveal', date: fmt(addDays(startDate, 7)) }
@@ -124,8 +135,53 @@ function titleCase(s: string) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-
+// Media Kit utilities
+export interface MediaAsset {
+  id: string;
+  type: 'image' | 'video' | 'audio' | 'document' | 'archive';
+  name: string;
+  filename: string;
+  url: string;
+  thumbnailUrl?: string;
+  size: number; // in bytes
+  mimeType: string;
+  duration?: number; // for video/audio in seconds
+  dimensions?: {
+    width: number;
+    height: number;
+  };
+  metadata?: Record<string, any>;
+  uploadedAt: string;
+  uploadedBy: string;
+  tags: string[];
+  isPublic: boolean;
+  category: 'logo' | 'banner' | 'icon' | 'screenshot' | 'demo' | 'documentation' | 'other';
 }
+
+export interface MediaCollection {
+  id: string;
+  name: string;
+  description?: string;
+  assets: string[]; // asset IDs
+  createdAt: string;
+  updatedAt: string;
+  createdBy: string;
+  isPublic: boolean;
+  tags: string[];
+}
+
+export interface MediaUploadOptions {
+  maxSize?: number; // in bytes
+  allowedTypes?: string[];
+  generateThumbnail?: boolean;
+  compress?: boolean;
+  quality?: number; // 0-100
+  watermark?: {
+    text?: string;
+    image?: string;
+    position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
+    opacity?: number;
+  };
 }
     return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces the ${params.token_name ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\n_distribution:\n- Community: 40%\n- Treasury: 20%\n\n_about ${params.company_name}:\n${boilerplate}`;
   }

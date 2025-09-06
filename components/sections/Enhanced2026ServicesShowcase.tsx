@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -32,7 +36,6 @@ const Enhanced2026ServicesShowcase = () => {
       description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',
 =======
   ArrowRight,
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Brain,
   Zap,
   Shield,
@@ -42,7 +45,6 @@ const Enhanced2026ServicesShowcase = () => {
   TrendingUp,
   Globe,
   Cpu,
-<<<<<<< HEAD
   Lock,
   Cloud,
 } from 'lucide-react';
@@ -153,6 +155,7 @@ const Enhanced2026ServicesShowcase = () =>: any {
       id: 'space-debris-tracking-system',
       name: 'Space Debris Tracking System 2026',
       description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',
+=======
       features: [;
         'Brain - like Processing',
         'Low Power',
@@ -203,11 +206,6 @@ import {;
   Cpu,;
   Lock,;
   Cloud,;
-=======
-  Lock,;
-  Cloud,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
 import Link from 'next/link';
@@ -343,6 +341,7 @@ const Enhanced2026ServicesShowcase = () => {;
       ],;
     },;
   ];
+
   const categories = [;
     {;
       name: 'AI Services',;
@@ -368,6 +367,7 @@ const Enhanced2026ServicesShowcase = () => {;
       icon: Cloud,;
       color: 'from-yellow-500 to-orange-500',;
     },;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
 =======
   ];
@@ -415,6 +415,7 @@ const Enhanced2026ServicesShowcase = () => {;
 =======
           className="text-center mb-16"
         >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               2026 Revolutionary Services
@@ -463,6 +464,7 @@ const Enhanced2026ServicesShowcase = () => {;
         >
           {categories.map((category, index) => (
             <motion.div
+=======
       features: [;
         'Real - time Tracking',
         'Collision Prediction',
@@ -523,7 +525,6 @@ const Enhanced2026ServicesShowcase = () => {;
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='text - center mb - 16';
         >;
           <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
@@ -553,8 +554,10 @@ const Enhanced2026ServicesShowcase = () => {;
         >;
           {categories.map ((category, index) => (
             <motion.div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               key={category.name}
               initial={{ opacity: 0, scale: 0.8 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 + index * 0 && 0.1 }}
               viewport={{ once: true }}
@@ -623,8 +626,9 @@ const Enhanced2026ServicesShowcase = () => {;
             <motion.div
               key={service.id}
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+              transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               viewport={{ once: true }}
 
               whileHover={{ scale: 1.02, y: -5 }}
@@ -636,11 +640,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div
-                className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}
-              ></div>
-              <div className='relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300'>
+                className={`absolute inset-0 bg-gradient-to-r ${service && service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>;
+              <div className='relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300'>;
                 {/* Service Header */}
-                <div className='flex items-center space-x-3 mb-4'>
+                <div className='flex items-center space-x-3 mb-4'>;
                   <div
 
               whileHover={{ scale: 1.02, y: -5 }}
@@ -665,6 +668,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
                   {service.description}
                 </p>
+=======
                     className={`w-12 h-12 bg-gradient-to-br ${service && service.color} rounded-xl flex items-center justify-center`}>;
                     <service && service.icon className='w-6 h-6 text-white' />;
                   </div>;
@@ -674,9 +678,11 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     </h3>;
                     <p className='text-gray-400 text-sm'>{service && service.category}</p>                  </div>;
                 </div>;
+
                 {/* Description */}
                 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                  {service && service.description}
                 </p>;
+
                 {/* Features */}            >;
               <div className={`absolute inset-0 bg-gradient-to-r ${service && service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>;
               <div className="relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">;
@@ -690,10 +696,13 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     <p className="text-gray-400 text-sm">{service && service.category}</p>;
                   </div>;
                 </div>;
+
                 {/* Description */}
                 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
                   {service && service.description}
                 </p>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Features */}
 
 =======
@@ -823,7 +832,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500/10 transition-all duration-200"
                 >
-<Shield className="w-5 h-5 mr-2" />
+                  <Shield className="w-5 h-5 mr-2" />
                   Get Started
                 </Link>
               </motion.div>

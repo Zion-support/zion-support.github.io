@@ -195,10 +195,10 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
           <CardTitle className="text-white">Video Call</CardTitle>;
           <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">;
             Room: {roomId}
-          </Badge>
-        </div>
-        <div className="flex items-center space-x-2">
-          <Badge variant="secondary" className="bg-zion-blue-light text-white">
+          </Badge>;
+        </div>;
+        <div className="flex items-center space-x-2">;
+          <Badge variant="secondary" className="bg-zion-blue-light text-white">;
             {formatDuration(callDuration)}
 
 import React, { useState } from 'react';
@@ -362,22 +362,22 @@ if ( {) {
                   <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">;
 
                     {/* Placeholder for actual video stream */}
-                    <Video className="h-12 w-12 opacity-50" />
-                  </div>
-                ) : participant.isScreenSharing ? (
-                  <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">
+                    <Video className="h-12 w-12 opacity-50" />;
+                  </div>;
+                ) : participant && participant.isScreenSharing ? (;
+                  <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">;
                     {/* Placeholder for screen share */}
-                    <ScreenShare className="h-12 w-12 opacity-50" />
-                  </div>
-                ) : (
-                  <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">
-                    <Avatar className="h-20 w-20">
-                      <AvatarImage src={participant.avatar} alt={participant.name} />
-                      <AvatarFallback className="bg-zion-purple text-white text-2xl">
-                        {participant.name.charAt(0).toUpperCase()}
-                      </AvatarFallback>
-                    </Avatar>
-                  </div>
+                    <ScreenShare className="h-12 w-12 opacity-50" />;
+                  </div>;
+                ) : (;
+                  <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">;
+                    <Avatar className="h-20 w-20">;
+                      <AvatarImage src={participant && participant.avatar} alt={participant && participant.name} />;
+                      <AvatarFallback className="bg-zion-purple text-white text-2xl">;
+                        {participant && participant.name.charAt(0).toUpperCase()}
+                      </AvatarFallback>;
+                    </Avatar>;
+                  </div>;
                 )}
 
 

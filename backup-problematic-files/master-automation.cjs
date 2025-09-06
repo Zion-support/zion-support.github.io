@@ -234,8 +234,6 @@ module.exports = MasterAutomation;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
     console.error('Master automation "failed")
 =======
 <<<<<<< HEAD

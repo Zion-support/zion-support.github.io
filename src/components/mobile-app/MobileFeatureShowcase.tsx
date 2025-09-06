@@ -172,17 +172,17 @@ export const MobileFeatureShowcase: React.FC = () => {;
             The Zion mobile app brings the power of our AI marketplace to your pocket with these key features;
           </p>;
         </div>;
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">;
-          {features.map((feature, index) => (;
-            <div;
-              key={index} ;
-              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300";
-            >;
+          {features && features.map((feature, index,) => (;
+            <div
+              key={index} 
+              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover: border-zion-purple/50 transition-all duration-300">;
               <div className="mb-4">;
-                {feature.icon}
+                {feature && feature.icon}
               </div>;
-              <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>;
-              <p className="text-zion-slate-light">{feature.description}</p>;
+              <h3 className="text-xl font-bold text-white mb-2">{feature && feature.title}</h3>;
+              <p className="text-zion-slate-light">{feature && feature.description}</p>;
             </div>;
           ))}
         </div>;

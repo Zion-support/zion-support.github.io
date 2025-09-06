@@ -77,7 +77,9 @@ if ( {) {
 
 
         error: "You have already submitted a review for this project",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
+=======
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -93,15 +95,17 @@ if ( {) {
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
+  }
 }
-}
+=======
       id: uuidv4(),
       projectId,
       fromRole,
       fromId,
       toRole,
       toId,
-const now = new Date ().toISOString ();
+=======
+    const now = new Date ().toISOString ();
     const review: Review = {
       id: uuidv4 (),
       project_id,
@@ -109,6 +113,7 @@ const now = new Date ().toISOString ();
       from_id,
       to_role,
       to_id,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       rating,
       text: String (text).trim (),
       categories,
@@ -156,15 +161,6 @@ const now = new Date ().toISOString ();
     return res;
       .status (500);
       .json ({ error: "Internal server error", details: error?.message });
-
-    return res
-      .status(201)
-      .json({ message: "Review submitted", reviewId: review.id });
-  } catch (error: any) {
-    return res
-      .status(500)
-      .json({ error: "Internal server error", details: error?.message });
-
   }
 }
 

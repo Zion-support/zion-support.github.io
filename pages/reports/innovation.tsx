@@ -120,17 +120,12 @@ const InnovationPage: React.FC = () => {
       name: 'Quantum Computing Integration',
       description: 'Exploring quantum algorithms for optimization problems',
       timeline: 'Q2 2025',
-<<<<<<< HEAD
       status: 'research';
-=======
-      status: 'research'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Edge Computing Network',
       description: 'Distributed computing for improved global performance',
       timeline: 'Q3 2025',
-<<<<<<< HEAD
       status: 'planning';
     },
     {
@@ -174,6 +169,7 @@ const InnovationPage: React.FC = () => {
 =======
 ;
   const getImpactColor = (impact: string) =>: any {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (impact) {
 
       case 'critical': return 'bg-red-500/20 text-red-400';

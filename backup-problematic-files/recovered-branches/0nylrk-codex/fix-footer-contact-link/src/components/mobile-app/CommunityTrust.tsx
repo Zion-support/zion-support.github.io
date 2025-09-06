@@ -69,7 +69,6 @@ export const CommunityTrust:React.FC = () => {;
         </div>;
         ;
         {/* Rating display */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;
           <div className="flex justify-center mb-4">;
             {[1, 2, 3, 4, 5].map((star) => (;

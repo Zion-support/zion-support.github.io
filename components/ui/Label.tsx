@@ -25,6 +25,7 @@ const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {
   );
 }
 export { Label }
+=======
 const Label: React.FC < LabelProps> = ({ children, class_name = "", html_for }) => {
   return (
     <label;
@@ -37,3 +38,4 @@ const Label: React.FC < LabelProps> = ({ children, class_name = "", html_for }) 
 ;
 export { Label }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

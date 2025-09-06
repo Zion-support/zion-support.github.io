@@ -306,14 +306,14 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
 
 
               return (
-                <div className='mb-16'>
-                  <h2 className='text-2xl font-bold text-white mb-6'>
-                    Featured Article
-                  </h2>
-                  <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-                    <div className='aspect-video overflow-hidden rounded-lg'>
+                <div className='mb-16'>;
+                  <h2 className='text-2xl font-bold text-white mb-6'>;
+                    Featured Article;
+                  </h2>;
+                  <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+                    <div className='aspect-video overflow-hidden rounded-lg'>;
                       <img
-                        src={featuredPost.featuredImage}
+                        src={featuredPost && featuredPost.featuredImage}
                         alt={
 
                           featuredPost && featuredPost.featuredImageAlt || featuredPost && featuredPost.title
@@ -324,21 +324,21 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                           target && target.src = '/images/blog-placeholder && placeholder.svg';
 
                         }}
-                      />
-                    </div>
-                    <div className='flex flex-col justify-center'>
-                      <span className='text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2'>
-                        {featuredPost.category}
-                      </span>
-                      <h3 className='text-3xl font-bold text-white mb-4'>
-                        {featuredPost.title}
-                      </h3>
-                      <p className='text-zion-slate-light mb-6'>
-                        {featuredPost.excerpt}                      </p>
-                      <div className='flex items-center mb-6'>
+                      />;
+                    </div>;
+                    <div className='flex flex-col justify-center'>;
+                      <span className='text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2'>;
+                        {featuredPost && featuredPost.category}
+                      </span>;
+                      <h3 className='text-3xl font-bold text-white mb-4'>;
+                        {featuredPost && featuredPost.title}
+                      </h3>;
+                      <p className='text-zion-slate-light mb-6'>;
+                        {featuredPost && featuredPost.excerpt}                      </p>;
+                      <div className='flex items-center mb-6'>;
                         <img
-                          src={featuredPost.author.avatarUrl}
-                          alt={featuredPost.author.name}
+                          src={featuredPost && featuredPost.author.avatarUrl}
+                          alt={featuredPost && featuredPost.author.name}
                           className='w-10 h-10 rounded-full mr-3'
 
                           onError={e => {;
@@ -346,17 +346,17 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                             target && target.src = '/images/blog-placeholder && placeholder.svg';
 
                           }}
-                        />
-                        <div>
-                          <p className='text-white font-medium'>
-                            {featuredPost.author.name}
-                          </p>
-                          <p className='text-sm text-zion-slate-light'>
-                            {featuredPost.publishedDate} •{' '}
-                            {featuredPost.readTime}
-                          </p>
-                        </div>
-                      </div>
+                        />;
+                        <div>;
+                          <p className='text-white font-medium'>;
+                            {featuredPost && featuredPost.author.name}
+                          </p>;
+                          <p className='text-sm text-zion-slate-light'>;
+                            {featuredPost && featuredPost.publishedDate} •{' '}
+                            {featuredPost && featuredPost.readTime}
+                          </p>;
+                        </div>;
+                      </div>;
                       <Button
                         asChild
 
@@ -434,16 +434,14 @@ if (return null) {
 
               <Select
                 value={selectedCategory}
-                onValueChange={setSelectedCategory}
-              >
+                onValueChange={setSelectedCategory}>;
                 <SelectTrigger
                   className='bg-zion-blue border border-zion-blue-light text-white'
-                  aria-label='Filter by category'
-                >
-                  <SelectValue placeholder='Select Category' />
-                </SelectTrigger>
-                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
-                  {CATEGORIES.map(category => (
+                  aria-label='Filter by category'>;
+                  <SelectValue placeholder='Select Category' />;
+                </SelectTrigger>;
+                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>;
+                  {CATEGORIES && CATEGORIES.map(category => (;
                     <SelectItem
                       key={category}
                       value={category}
@@ -583,15 +581,15 @@ if (return null) {
                         <span className='text - xs text - zion - cyan bg - zion - blue px - 3 py - 1 rounded - full'>;
 
                           {post.category}
-                        </span>
-                        <div className='text-xs text-zion-slate-light'>
-                          {post.publishedDate} • {post.readTime}
-                        </div>
-                      </div>
-                      <h3 className='text-xl font-bold text-white mb-3'>
+                        </span>;
+                        <div className='text - xs text - zion - slate - light'>;
+                          {post.published_date} • {post.read_time}
+                        </div>;
+                      </div>;
+                      <h3 className='text - xl font - bold text - white mb - 3'>;
                         {post.title}
-                      </h3>
-                      <p className='text-zion-slate-light mb-4 line-clamp-3'>
+                      </h3>;
+                      <p className='text - zion - slate - light mb - 4 line - clamp - 3'>;
                         {post.excerpt}
 
                         src={post && post.featuredImage}
@@ -620,8 +618,8 @@ if (return null) {
                       <div className='flex items-center'>;
 
                         <img
-                          src={post.author.avatarUrl}
-                          alt={post.author.name}
+                          src={post && post.author.avatarUrl}
+                          alt={post && post.author.name}
                           className='w-8 h-8 rounded-full mr-2'
 
                           onError={e => {;
@@ -657,32 +655,7 @@ if (return null) {
                       <span className='text - zion - cyan group - hover:text - zion - purple'>;
                         Read More →;
                       </span>;
-                      <div className="text-xs text-zion-slate-light">;
-                        {post.publishedDate} • {post.readTime}
-                      </div>;
-                    </div>;
-                    <h3 className="text-xl font-bold text-white mb-3">;
-                      {post.title}
-                    </h3>;
-                    <p className="text-zion-slate-light mb-4 line-clamp-3">;
-                      {post.excerpt}
-                    </p>;
-                    <div className="flex items-center">;
-                      <img;
-                        src={post.author.avatarUrl}
-                        alt={post.author.name}
-                        className="w-8 h-8 rounded-full mr-2";
-                        onError={(e) => {;
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.src = "/images/blog-placeholder.svg";
-                        }}
-                      />;
-                      <span className="text-sm text-white">{post.author.name}</span>;
-                    </div>;
-                  </CardContent>;
-                  <CardFooter className="p-6 pt-0">;
-                    <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>;
-                  </CardFooter>;
+                    </CardFooter>;
                   </Link>;
 
 
@@ -748,13 +721,17 @@ if (return null) {
 
 
               ))}
-            </div>
+            </div>;
           ) : null}
           {/* No Results Message - Show only if not loading and no posts */}
-          {!isLoading && filteredPosts.length === 0 && (
-            <div className="text-center py-16">
-              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
-              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
+          {!isLoading && filteredPosts && filteredPosts.length === 0 && (;
+            <div className='text-center py-16'>;
+              <h3 className='text-xl font-bold text-white mb-2'>;
+                No articles found;
+              </h3>;
+              <p className='text-zion-slate-light mb-6'>;
+                Try adjusting your search or filter criteria;
+              </p>;
               <Button
 
                 </Card>))}
@@ -804,8 +781,8 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
   featured_post.published_date;
 
 }• {
-  featuredPost.readTime "
-}bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"> <Link href= {
+  featured_post.read_time ";
+}bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple w - fit"> <Link href= {
   `/blog/$ {
 
   featured_post.slug;
@@ -840,7 +817,7 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
 }'"  const featured_posts = blog_posts.filter (post => post.featured);
 
 }
-  const regularPosts = blogPosts.filter(post => !post.featured)
+  const regular_posts = blog_posts.filter (post => !post.featured);
 }
   return (
 
@@ -872,8 +849,8 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
                   <span;";
 
                     key = "{category.name}
-                    className="px-4 py-2 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-sm">
-                  >
+                    className="px - 4 py - 2 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - sm">;
+                  >;
                     {category.name}
 
 
@@ -1056,7 +1033,7 @@ function Blog() {
   const categories = [];
   const featured_posts = blog_posts.filter (post => post.featured);
 }
-  const regularPosts = blogPosts.filter()
+  const regular_posts = blog_posts.filter ();
 }
   return (
 

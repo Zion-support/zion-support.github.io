@@ -73,10 +73,13 @@ const path = require('path')
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+
 console.log('🔄 Starting Intelligent Git Workflow Automation...');
+
 class IntelligentGitWorkflow {
   constructor() {
     this.projectRoot = process.cwd();
@@ -88,18 +91,13 @@ class IntelligentGitWorkflow {
     };
     this.workflowData = this.loadWorkflowData();
   }
+
   loadWorkflowData() {
     const dataFile = path.join(
       this.projectRoot,
       'logs',
       'git-workflow-data.json'
     );
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -148,6 +146,7 @@ class IntelligentGitWorkflow {
       performance: {},
     };
   }
+
   saveWorkflowData() {
     const dataFile = path.join(
       this.projectRoot,
@@ -156,6 +155,7 @@ class IntelligentGitWorkflow {
     );
     fs.writeFileSync(dataFile, JSON.stringify(this.workflowData, null, 2));
   }
+
   async runWorkflow() {
     console.log('🚀 Starting intelligent Git workflow...');
 
@@ -185,6 +185,7 @@ class IntelligentGitWorkflow {
     try {
       const status = execSync('git status --porcelain', { encoding: 'utf8' });
       const hasChanges = status.trim().length > 0;
+
       return {
         hasChanges,
         status: status.trim(),
@@ -253,14 +254,15 @@ class IntelligentGitWorkflow {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   shouldAutoCommit(changes) {
     if (!this.config.autoCommit) return false;
+
     // Don't auto-commit if there are too many changes
     if (changes.linesAdded > 500 || changes.linesDeleted > 200) {
     console.log('⚠️  Too many changes for auto-commit'),
     return false
   }
+
     // Don't auto-commit if there are test failures
     if (changes.types.tests > 0) {
       console.log('🧪 Test changes detected, skipping auto-commit');
@@ -270,23 +272,21 @@ class IntelligentGitWorkflow {
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }
+
     // Auto-commit for small fixes and documentation
     if (changes.types.fixes > 0 || changes.types.documentation > 0) {
       return true;
     }
+
     // Auto-commit for small feature additions
     if (changes.types.features > 0 && changes.linesAdded < 100) {
       return true;
     }
+
     return false;
   }
 <<<<<<< HEAD
@@ -313,29 +313,27 @@ class IntelligentGitWorkflow {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async intelligentCommit(changes) {
     console.log('💾 Performing intelligent commit...');
+
     try {
       // Stage all changes
       execSync('git add .', { stdio: 'inherit' });
+
       // Generate intelligent commit message
       const commitMessage = this.generateCommitMessage(changes);
+
       // Create commit
       execSync(`git commit -m "${commitMessage}"`, { stdio: 'inherit' });
+
       console.log(`✅ Committed: ${commitMessage}`);
+
       // Update workflow data
       this.workflowData.lastCommit = {
         message: commitMessage,
         timestamp: new Date().toISOString(),
         changes: changes,
       };
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -385,15 +383,16 @@ class IntelligentGitWorkflow {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   generateCommitMessage(changes) {
     const timestamp = new Date().toISOString().split('T')[0];
+
     // Determine commit type
     let type = 'feat';
     if (changes.types.fixes > 0) type = 'fix';
     else if (changes.types.refactoring > 0) type = 'refactor';
     else if (changes.types.documentation > 0) type = 'docs';
     else if (changes.types.tests > 0) type = 'test';
+
     // Generate description
     let description = '';
     if (changes.types.fixes > 0) {
@@ -544,34 +543,32 @@ class IntelligentGitWorkflow {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async intelligentMerge() {
     console.log('🔀 Checking for merge opportunities...');
+
     try {
       // Get current branch
       const currentBranch = execSync('git branch --show-current', {
         encoding: 'utf8',
       }).trim();
+
       // Get all branches
       const branches = execSync('git branch -r', { encoding: 'utf8' })
         .split('\n')
         .map(branch => branch.trim())
         .filter(branch => branch && !branch.includes('HEAD'));
+
       // Find mergeable branches
       const mergeableBranches = await this.findMergeableBranches(
         currentBranch,
         branches
       );
+
       if (mergeableBranches.length > 0) {
         console.log(`🔀 Found ${mergeableBranches.length} mergeable branches`);
+
         for (const branch of mergeableBranches) {
           await this.performIntelligentMerge(branch);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -743,8 +740,10 @@ class IntelligentGitWorkflow {
       console.log('⚠️  Merge check failed:', error.message);
     }
   }
+
   async findMergeableBranches(currentBranch, branches) {
     const mergeable = [];
+
     for (const branch of branches) {
       try {
         // Check if branch can be merged
@@ -758,15 +757,10 @@ class IntelligentGitWorkflow {
         const branchCommit = execSync(`git rev-parse ${branch}`, {
           encoding: 'utf8',
         }).trim();
+
         // If branch is ahead of current branch
         if (branchCommit !== currentCommit && mergeBase === currentCommit) {
           mergeable.push(branch);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -778,9 +772,6 @@ class IntelligentGitWorkflow {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
         }
       }
-<<<<<<< HEAD
-    }
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1629,21 +1620,25 @@ class IntelligentGitWorkflow {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return mergeable;
   }
+
   async performIntelligentMerge(branch) {
     console.log(`🔀 Attempting to merge ${branch}...`);
+
     try {
       // Check for conflicts first
       const mergeCheck = execSync(`git merge --no-commit --no-ff ${branch}`, {
         encoding: 'utf8',
       });
+
       // If no conflicts, complete the merge
       execSync(`git commit -m "Merge ${branch} [auto-merge]"`, {
         stdio: 'inherit',
       });
+
       console.log(`✅ Successfully merged ${branch}`);
+
       // Update workflow data
       this.workflowData.mergeHistory.push({
         branch: branch,
@@ -1652,10 +1647,12 @@ class IntelligentGitWorkflow {
       });
     } catch (error) {
       console.log(`⚠️  Merge failed for ${branch}:`, error.message);
+
       // Handle conflicts if configured
       if (this.config.conflictResolution === 'ai-powered') {
         await this.handleMergeConflicts(branch);
       }
+
       // Update workflow data
       this.workflowData.mergeHistory.push({
         branch: branch,
@@ -1665,10 +1662,12 @@ class IntelligentGitWorkflow {
       });
     }
   }
+
   async handleMergeConflicts(branch) {
     console.log(
       `🤖 Attempting AI-powered conflict resolution for ${branch}...`
     );
+
     try {
       // Get conflicted files
       const status = execSync('git status --porcelain', { encoding: 'utf8' });
@@ -1679,16 +1678,17 @@ class IntelligentGitWorkflow {
             line.includes('UU') || line.includes('AA') || line.includes('DD')
         )
         .map(line => line.split(' ').pop());
+
       for (const file of conflictedFiles) {
         await this.resolveFileConflict(file);
       }
+
       // Complete the merge
       execSync(`git commit -m "Merge ${branch} [ai-resolved conflicts]"`, {
         stdio: 'inherit',
       });
+
       console.log(`✅ AI resolved conflicts for ${branch}`);
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1702,12 +1702,11 @@ class IntelligentGitWorkflow {
         `❌ AI conflict resolution failed for ${branch}:`,
         error.message
       );
+
       // Abort the merge
       execSync('git merge --abort', { stdio: 'inherit' });
     }
   }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1760,9 +1759,9 @@ class IntelligentGitWorkflow {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async resolveFileConflict(filePath) {
     console.log(`🔧 Resolving conflict in ${filePath}...`);
+
     try {
       const content = fs.readFileSync(filePath, 'utf8');
 <<<<<<< HEAD
@@ -1780,25 +1779,10 @@ class IntelligentGitWorkflow {
       let conflictType = '';
 <<<<<<< HEAD
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      const lines = content.split('\n');
-      const resolvedLines = [];
-      let inConflict = false;
-      let conflictType = '';
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         if (line.startsWith('<<<<<<<')) {
-<<<<<<< HEAD
-    inConflict = true,
-    conflictType = 'ours'
-  } else if (line.startsWith('')) {
-=======
           inConflict = true;
           conflictType = 'start';
           continue;
@@ -1837,14 +1821,11 @@ class IntelligentGitWorkflow {
 =======
 =======
   } else if (line.startsWith('=======')) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           conflictType = 'theirs';
         } else if (line.startsWith('>>>>>>>')) {
     inConflict = false,
     conflictType = ''
   } else if (!inConflict) {
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -1888,11 +1869,11 @@ class IntelligentGitWorkflow {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       fs.writeFileSync(filePath, resolvedLines.join('\n'));
+
       // Add resolved file
       execSync(`git add ${filePath}`, { stdio: 'inherit' });
+
       console.log(`✅ Resolved conflict in ${filePath}`);
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -2355,7 +2336,6 @@ workflow.runWorkflow().catch(console.error);
     );
     let errors = [];
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     try {
       if (fs.existsSync(errorFile)) {
         errors = JSON.parse(fs.readFileSync(errorFile, 'utf8'));
@@ -2363,6 +2343,7 @@ workflow.runWorkflow().catch(console.error);
     } catch (e) {
       // Start fresh if file is corrupted
     }
+
     errors.push(errorLog);
     fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
   }

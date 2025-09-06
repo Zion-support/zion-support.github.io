@@ -502,7 +502,6 @@ const BlueprintsIndexPage: React.FC = () => {
                         </Link>;
                         <span className={`px - 2 py - 1 text - xs rounded - full ${getComplexityColor (blueprint.complexity)}`}>;
                           {blueprint.complexity}
-<<<<<<< HEAD
                         </span>;
                       </div>;
                       <p className="text - gray - 300 text - sm mb - 2">{blueprint.description}</p>;

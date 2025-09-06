@@ -58,7 +58,6 @@ function handler() {
     discount: '20%',
     lead_investor: 'TBD'});
   res.status (200).json (terms);
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

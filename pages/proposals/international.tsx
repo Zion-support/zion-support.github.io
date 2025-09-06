@@ -146,41 +146,6 @@ function InternationalProposalsPage() {
         <div className="text - sm text - gray - 600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>;
       </div>;
     </EnhancedLayout>);
-
-  useEffect__(() => {
-    fetch('/api/proposals')
-      .then((r) => r.json())
-      .then((d) => setItems(d.items || []))
-      .catch(() => setItems([]))
-  }, []),
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-
-=======
-import React, { useEffect, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-import React, { useEffect, useState } from 'react',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-=======
-import React, { useEffect, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout'
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-type ProposalListItem = {
-  id: string
-  title: string
-  targetInstitution: string
-  regionalScope: string
-  type: string
-  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
-  createdAt: string
-<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

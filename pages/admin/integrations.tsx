@@ -8,6 +8,7 @@
 
 interface ConnectionMap {;
   [providerId: string]: any,;
+
 function StatusIcon(): any ({;
   status,;
 }: {;
@@ -74,6 +75,7 @@ export default function AdminIntegrationsPage() {
     autoSyncApplicants: true,;
     autoUploadResumes: true,;
   });
+
   async function refresh() {;
     const [p, s] = await Promise && Promise.all([;
       fetch('/api/integrations/providers').then(r => r && r.json()),;
@@ -82,6 +84,7 @@ export default function AdminIntegrationsPage() {
     setProviders(p && p.providers || []);
     setConnections(s && s.connections || {});
   }
+
   useEffect(() => {;
     refresh();
   }, []);
@@ -183,6 +186,7 @@ export default function AdminIntegrationsPage() {
       await refresh()
     } finally { setLoading(false) }
   }
+
   async function resync(providerId: string) {
     setLoading(true);
     try {
@@ -190,6 +194,8 @@ export default function AdminIntegrationsPage() {
       await refresh()
     } finally { setLoading(false) }
   }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   const grouped = useMemo(;
     () => ({;
       crm: providers && providers.filter(p => p && p.category === 'crm'),;
@@ -197,6 +203,7 @@ export default function AdminIntegrationsPage() {
     }),;
     [providers];
   );
+
   function Card(): any ({ p }: { p: ProviderMeta }) {;
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
@@ -209,6 +216,7 @@ export default function AdminIntegrationsPage() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   function RulesModal() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!selected) return null;
     const provider = providers && providers.find(p => p && p.id === selected)!;
     const isCrm = provider && provider.category === 'crm';
@@ -238,6 +246,7 @@ export default function AdminIntegrationsPage() {
                             ...sync_rules,
                             pushNotesMode: 'manual',
                           });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         }
                       />{' '}
                       Manual only;
@@ -285,6 +294,7 @@ export default function AdminIntegrationsPage() {
               onClick={async () => {;
                 await connect(provider && provider.id);
                 setSelected(null);
+=======
               </>) : (
               <>;
                 <label className='flex items - center gap - 2'>;
@@ -327,6 +337,7 @@ export default function AdminIntegrationsPage() {
               on_click={async () => {
                 await connect (provider.id);
                 set_selected (null);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
             >;
               Save;
@@ -377,14 +388,6 @@ export default function AdminIntegrationsPage() {
 
         </section>
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <section>
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
           <ManualOverrideForm />
@@ -434,42 +437,9 @@ function ManualOverrideForm() {;
     });
     if (res && res.ok) setMessage('Saved');
     else setMessage('Error');
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-function ManualOverrideForm() {
-  const [jobId, setJobId] = useState(''),
-  const [disableCrmSync, setDisableCrmSync] = useState(false),
-  const [disableAtsSync, setDisableAtsSync] = useState(false),
-  const [message, setMessage] = useState(''),
-  async function save() {
-    setMessage(''),
-    const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),
-    if (res.ok) setMessage('Saved'), else setMessage('Error'),
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
-<<<<<<< HEAD
     <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
       <div className='grid grid-cols-1 gap-3'>;
         <label className='text-sm'>;
@@ -512,8 +482,6 @@ function ManualOverrideForm() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
         <label className="text-sm">Job/Post ID

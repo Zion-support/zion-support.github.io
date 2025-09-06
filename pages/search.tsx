@@ -35,6 +35,7 @@ import React, { useState } from 'react';
 import React, { useState, useEffect } from 'react',
 
 import Head from 'next/head';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
@@ -174,9 +175,112 @@ export default function SearchPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+import {;
+  Search,;
+  Filter,;
+  ArrowRight,;
+  Clock,;
+  Star,;
+  FileText,;
+  Code,;
+  Database,;
+  Cloud,;
+  Shield,;
+  Brain,;
+  Users,;
+  Settings,;
+  Globe,;
+  CheckCircle,;
+  X,;
+  ChevronDown,;
+  ChevronUp;
+} from 'lucide-react';
+
+const searchResults = [;
+  {;
+    id: 1,;
+    title: 'AI Development Services',;
+    description: 'Comprehensive AI development solutions including machine learning, computer vision, and natural language processing.',;
+    url: '/ai-services',;
+    category: 'Services',;
+    type: 'Page',;
+    icon: Brain,;
+    rating: 4 && 4.9,;
+    lastUpdated: '2024-01-15';
+  },;
+  {;
+    id: 2,;
+    title: 'Cloud Infrastructure Setup',;
+    description: 'Complete guide to setting up scalable cloud infrastructure for your applications.',;
+    url: '/guides',;
+    category: 'Guides',;
+    type: 'Article',;
+    icon: Cloud,;
+    rating: 4 && 4.8,;
+    lastUpdated: '2024-01-10';
+  },;
+  {;
+    id: 3,;
+    title: 'Cybersecurity Best Practices',;
+    description: 'Essential cybersecurity practices to protect your applications and data.',;
+    url: '/guides',;
+    category: 'Guides',;
+    type: 'Article',;
+    icon: Shield,;
+    rating: 4 && 4.7,;
+    lastUpdated: '2024-01-08';
+  },;
+  {;
+    id: 4,;
+    title: 'Database Optimization',;
+    description: 'Learn database design principles and optimization techniques.',;
+    url: '/guides',;
+    category: 'Guides',;
+    type: 'Article',;
+    icon: Database,;
+    rating: 4 && 4.8,;
+    lastUpdated: '2024-01-05';
+  },;
+  {;
+    id: 5,;
+    title: 'Our Team',;
+    description: 'Meet our talented team of experts who are passionate about technology and innovation.',;
+    url: '/team',;
+    category: 'Company',;
+    type: 'Page',;
+    icon: Users,;
+    rating: 4 && 4.9,;
+    lastUpdated: '2024-01-12';
+  },;
+  {;
+    id: 6,;
+    title: 'Contact Us',;
+    description: 'Get in touch with our team for project inquiries and support.',;
+    url: '/contact',;
+    category: 'Company',;
+    type: 'Page',;
+    icon: Settings,;
+    rating: 4 && 4.9,;
+    lastUpdated: '2024-01-14';
+  }
+];
+
+const categories = [;
+  { name: 'All', count: searchResults && searchResults.length },;
+  { name: 'Services', count: 1 },;
+  { name: 'Guides', count: 3 },;
+  { name: 'Company', count: 2 }
+];
+
+const filters = [;
+  { name: 'Pages', count: 3 },;
+  { name: 'Articles', count: 3 },;
+  { name: 'Recent', count: 4 },;
+  { name: 'Popular', count: 2 }
+];
+
 export default function SearchPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -227,7 +331,6 @@ export default function SearchPage() {;
 
 
               {/* Search Bar */}
-<<<<<<< HEAD
               <div className="max-w-2xl mx-auto">;
                 <div className="relative">;
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
@@ -507,6 +610,7 @@ function SearchPage() {
               <motion.div
 =======
                 </button>;
+
                 {categories && categories.map((category) => (;
                   <button
                     key={category && category.name}
@@ -520,14 +624,16 @@ function SearchPage() {
                     {category && category.name} ({category && category.count});
                   </button>;
                 ))}
-<<<<<<< HEAD
               </div>;
+
               <div className="text-sm text-gray-600">;
                 {filteredResults && filteredResults.length} results found;
               </div>;
             </div>;
+
             {showFilters && (;
               <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="mt-4 p-4 bg-gray-50 rounded-lg"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
@@ -632,10 +738,12 @@ function SearchPage() {
 =======
 ))}
                 </div>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
               </motion.div>
             )}
           </div>
         </section>
+=======
                     >;
                       {filter && filter.name} ({filter && filter.count});
                     </button>;
@@ -645,6 +753,8 @@ function SearchPage() {
             )}
           </div>;
         </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Search Results */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -968,7 +1078,6 @@ function SearchPage() {
                     initial={{ opacity: 0, coordinate_y: 20 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
                   >;
                     <div className="flex items - start justify - between">;
                       <div className="flex - 1">;
@@ -987,10 +1096,7 @@ function SearchPage() {
                             {result.title}
 
                       </Link>
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -999,11 +1105,11 @@ function SearchPage() {
     category: 'all',
     status: 'all',
     priceRange: 'all',
-<<<<<<< HEAD
     technology: 'all'
-});
+  });
   const [sortBy, setSortBy] = useState('relevance');
   const [showFilters, setShowFilters] = useState(false);
+
   // Mock data for search
   const allServices = [
     {
@@ -1019,7 +1125,7 @@ function SearchPage() {
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       relevance: 95
-};
+    };
     {
       id: 'quantum-cybersecurity',
       title: 'Quantum Cybersecurity',
@@ -1033,7 +1139,7 @@ function SearchPage() {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       relevance: 92
-};
+    };
     {
       id: 'ai-customer-experience',
       title: 'AI Customer Experience',
@@ -1047,7 +1153,7 @@ function SearchPage() {
       icon: Users,
       color: 'from-green-500 to-teal-500',
       relevance: 88
-};
+    };
     {
       id: 'edge-computing-orchestration',
       title: 'Edge Computing Orchestration',
@@ -1061,7 +1167,7 @@ function SearchPage() {
       icon: Network,
       color: 'from-purple-500 to-pink-500',
       relevance: 85
-};
+    };
     {
       id: 'space-technology',
       title: 'Space Technology Innovation',
@@ -1069,13 +1175,13 @@ function SearchPage() {
       category: 'Space Technology',
       status: 'beta',
       price: '$2,499/month',
-technology: 'Space',
+    technology: 'Space',
       features: ['Satellite managementAI mission planningQuantum communicationResource optimization'],
       link: '/space-technology',
       icon: Rocket,
       color: 'from-violet-500 to-purple-500',
       relevance: 82
-};
+    };
     {
       id: 'neural-interface',
       title: 'Neural Interface Development',
@@ -1089,7 +1195,7 @@ technology: 'Space',
       icon: Brain,
       color: 'from-pink-500 to-rose-500',
       relevance: 78
-};
+    };
     {
       id: 'quantum-neural-networks',
       title: 'Quantum Neural Networks',
@@ -1097,13 +1203,13 @@ technology: 'Space',
       category: 'Quantum Computing',
       status: 'beta',
       price: '$1,299/month',
-technology: 'Quantum',
+    technology: 'Quantum',
       features: ['Quantum algorithmsNeural optimizationConsciousness simulationResearch tools'],
       link: '/quantum-neural-networks',
       icon: Atom,
       color: 'from-blue-500 to-cyan-500',
       relevance: 75
-};
+    };
     {
       id: 'autonomous-devops',
       title: 'Autonomous DevOps',
@@ -1117,7 +1223,7 @@ technology: 'Quantum',
       icon: Cpu,
       color: 'from-emerald-500 to-teal-500',
       relevance: 72
-};
+    };
     {
       id: 'ai-autonomous-business',
       title: 'AI Autonomous Business Manager',
@@ -1125,13 +1231,13 @@ technology: 'Quantum',
       category: 'AI & Machine Learning',
       status: 'beta',
       price: '$1,999/month',
-technology: 'AI/ML',
+    technology: 'AI/ML',
       features: ['Business automationDecision makingResource allocationPerformance optimization'],
       link: '/ai-autonomous-business',
       icon: Target,
       color: 'from-indigo-500 to-purple-500',
       relevance: 70
-};
+    };
     {
       id: 'quantum-financial-trading',
       title: 'Quantum Financial Trading',
@@ -1139,14 +1245,15 @@ technology: 'AI/ML',
       category: 'Financial Technology',
       status: 'beta',
       price: '$3,999/month',
-technology: 'Quantum',
+    technology: 'Quantum',
       features: ['Quantum algorithmsRisk assessmentPortfolio optimizationReal-time analysis'],
       link: '/quantum-financial-trading',
       icon: TrendingUp,
       color: 'from-emerald-500 to-green-500',
       relevance: 68
     }
-];
+  ];
+
   const categories = [
     { id: 'all', name: 'All Categories', icon: '📂' },
     { id: 'AI & Machine Learning', name: 'AI & Machine Learning', icon: '🧠' },
@@ -1157,20 +1264,23 @@ technology: 'Quantum',
     { id: 'Space Technology', name: 'Space Technology', icon: '🚀' },
     { id: 'Biotechnology', name: 'Biotechnology', icon: '🧬' },
     { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' }
-];
+  ];
+
   const statuses = [
     { id: 'all', name: 'All Statuses', icon: '📊' },
     { id: 'active', name: 'Active', icon: '✅' },
     { id: 'beta', name: 'Beta', icon: '🧪' },
     { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' }
-];
+  ];
+
   const priceRanges = [
     { id: 'all', name: 'All Prices', icon: '💰' },
     { id: 'under-500', name: 'Under $500/month', icon: '💵' },
     { id: '500-1000', name: '$500 - $1,000/month', icon: '💵' },
     { id: '1000-2500', name: '$1,000 - $2,500/month', icon: '💵' },
     { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' }
-];
+  ];
+
   const technologies = [
     { id: 'all', name: 'All Technologies', icon: '🔧' },
     { id: 'AI/ML', name: 'AI/ML', icon: '🧠' },
@@ -1179,14 +1289,17 @@ technology: 'Quantum',
     { id: 'Space', name: 'Space', icon: '🚀' },
     { id: 'Biotech', name: 'Biotech', icon: '🧬' },
     { id: 'DevOps', name: 'DevOps', icon: '⚙️' }
-];
+  ];
+
   // Search function
   const performSearch = () => {
     if (!searchTerm.trim()) {
       setSearchResults([]);
       return
     }
+
     setIsSearching(true);
+    
     // Simulate search delay
     setTimeout(() => {
       const results = allServices.filter(service => {
@@ -1194,9 +1307,11 @@ technology: 'Quantum',
                             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                             service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                             service.technology.toLowerCase().includes(searchTerm.toLowerCase());
+        
         const matchesCategory = filters.category === 'all' || service.category === filters.category;
         const matchesStatus = filters.status === 'all' || service.status === filters.status;
         const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology;
+        
         let matchesPrice = true;
         if (filters.priceRange !== 'all') {
           const price = parseInt(service.price.replace(/[^0-9]/g, ''));
@@ -1215,8 +1330,10 @@ technology: 'Quantum',
               break
           }
         }
+        
         return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice
       });
+
       // Sort results
       const sortedResults = results.sort((a, b) => {
         switch (sortBy) {
@@ -1233,86 +1350,26 @@ technology: 'Quantum',
           default: return 0
         }
       });
+
       setSearchResults(sortedResults);
       setIsSearching(false)
     }, 500)
   };
-    setIsSearching(true),
-    
-    // Simulate search delay
-    setTimeout__(() => {_const _results = allServices.filter(service => {
-        const _matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            service.technology.toLowerCase().includes(searchTerm.toLowerCase()),
-        
-        const matchesCategory = filters.category === 'all' || service.category === filters.category
-        const matchesStatus = filters.status === 'all' || service.status === filters.status
-        const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology
-        
-        let matchesPrice = true
-        if (filters.priceRange !== 'all') {
-          const price = parseInt(service.price.replace(/[^0-9]/g, '')),
-
-          switch (filters.priceRange) {
-            case 'under-500':
-              matchesPrice = price < 500,
-              break,
-            case '500-1000':
-              matchesPrice = price >= 500 && price < 1000,
-              break,
-            case '1000-2500':
-              matchesPrice = price >= 1000 && price < 2500,
-              break,
-            case 'over-2500':
-              matchesPrice = price >= 2500,
-              break
-          }
-              matchesPrice = price >= 2500;
-              break;}
-
-        }
-        
-        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice
-      }),
-
-      // Sort results
-      const _sortedResults = results.sort(_(a, _b) => {_switch (sortBy) {
-          case 'relevance':
-            return b.relevance - a.relevance,
-          case 'price-low':
-            return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
-          case 'price-high':
-            return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),
-          case 'name':
-            return a.title.localeCompare(b.title),
-          case 'status':
-          case 'name':
-            return a.title.localeCompare(b.title),
-          case 'status':
-
-            return a.status.localeCompare(b.status),
-          default: return 0
-        }
-      }),
-
-      setSearchResults(sortedResults),
-      setIsSearching(false)
-    }, 500)
-  },
 
   // Handle search on Enter key
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       performSearch()
     }
-};
+  };
+
   // Update search when filters change
   useEffect(() => {
     if (searchTerm.trim()) {
       performSearch()
     }
-}, [filters, sortBy]);
+  }, [filters, sortBy]);
+
   // Clear all filters
   const clearFilters = () => {
     setFilters({
@@ -1320,9 +1377,10 @@ technology: 'Quantum',
       status: 'all',
       priceRange: 'all',
       technology: 'all'
-});
+    });
     setSortBy('relevance')
   };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -1332,7 +1390,9 @@ technology: 'Quantum',
         <meta property="og:description" content="Advanced search across all services and solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/search" />
       </Head>
+
       <SmartHeader />
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -1351,7 +1411,8 @@ technology: 'Quantum',
           </motion.div>
         </div>
       </section>
-{/* Search Interface */}
+
+      {/* Search Interface */}
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
@@ -1378,7 +1439,8 @@ technology: 'Quantum',
                   </button>
                 </div>
               </div>
-{/* View Mode Toggle */}
+
+              {/* View Mode Toggle */}
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setViewMode('grid')}
@@ -1398,6 +1460,7 @@ technology: 'Quantum',
                 </button>
               </div>
             </div>
+
             {/* Filters and Sort */}
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="flex items-center gap-4">
@@ -1411,6 +1474,7 @@ technology: 'Quantum',
                     <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   )}
                 </button>
+                
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
@@ -1423,6 +1487,7 @@ technology: 'Quantum',
                   <option value="status">Sort by Status</option>
                 </select>
               </div>
+
               {Object.values(filters).some(f => f !== 'all') && (
                 <button
                   onClick={clearFilters}
@@ -1440,7 +1505,7 @@ technology: 'Quantum',
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
-className="mt-6 pt-6 border-t border-white/20"
+                className="mt-6 pt-6 border-t border-white/20"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {/* Category Filter */}
@@ -1458,7 +1523,8 @@ className="mt-6 pt-6 border-t border-white/20"
                       ))}
                     </select>
                   </div>
-{/* Status Filter */}
+
+                  {/* Status Filter */}
                   <div>
                     <label className="block text-white font-medium mb-2">Status</label>
                     <select
@@ -1473,7 +1539,8 @@ className="mt-6 pt-6 border-t border-white/20"
                       ))}
                     </select>
                   </div>
-{/* Price Range Filter */}
+
+                  {/* Price Range Filter */}
                   <div>
                     <label className="block text-white font-medium mb-2">Price Range</label>
                     <select
@@ -1488,7 +1555,8 @@ className="mt-6 pt-6 border-t border-white/20"
                       ))}
                     </select>
                   </div>
-{/* Technology Filter */}
+
+                  {/* Technology Filter */}
                   <div>
                     <label className="block text-white font-medium mb-2">Technology</label>
                     <select
@@ -1523,51 +1591,21 @@ className="mt-6 pt-6 border-t border-white/20"
             <p className="text-white/60">
               {isSearching ? 'Searching...' : `${searchResults.length} services found`}
               {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
-=======
-<<<<<<< HEAD
-    technology: 'all',
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-        </div>
-      </section>
-
-      {/* Search Results */}
-      <section className='px-6 pb-20'>
-        <div className='max-w-7xl mx-auto'>
-          {/* Results Header */}
-          <div className='mb-8'>
-            <h2 className='text-3xl font-bold text-white mb-2'>
-              {searchTerm
-                ? `Search Results for "${searchTerm}"`
-                : 'All Services'}
-            </h2>
-            <p className='text-white/60'>
-              {isSearching
-                ? 'Searching...'
-                : `${searchResults.length} services found`}              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </p>
           </div>
-{/* Loading State */}
+
+          {/* Loading State */}
           {isSearching && (
-<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
                 <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
               </div>
               <p className="text-white/60">Searching our services...</p>
             </div>
-=======
-            <div className='text-center py-20'>
-              <div className='w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center'>
-                <div className='w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin'></div>
-              </div>
-              <p className='text-white/60'>Searching our services...</p>            </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           )}
+
           {/* No Results */}
           {!isSearching && searchTerm && searchResults.length === 0 && (
-<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
@@ -1578,49 +1616,24 @@ className="mt-6 pt-6 border-t border-white/20"
               </p>
               <button
                 onClick={clearFilters}
-className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
+                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
               >
-=======
-            <div className='text-center py-20'>
-              <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
-                <Search className='w-12 h-12 text-white/40' />
-              </div>
-              <h3 className='text-2xl font-semibold text-white mb-2'>
-                No services found
-              </h3>
-              <p className='text-white/60 mb-6'>                Try adjusting your search terms or filters
-              </p>
-              <button
-                onClick={clearFilters}
-                className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Clear All Filters
               </button>
             </div>
           )}
-{/* Search Results */}
+
+          {/* Search Results */}
           {!isSearching && searchResults.length > 0 && (
-<<<<<<< HEAD
             <AnimatePresence mode="wait">
               <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
                 {searchResults.map((service, index) => (
-=======
-            <AnimatePresence mode='wait'>
-              <div
-                className={
-                  viewMode === 'grid'
-                    ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                    : 'space-y-6'
-                }
-              >                {searchResults.map((service, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`group relative ${
-<<<<<<< HEAD
                       viewMode === 'grid' 
                         ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                         : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
@@ -1643,12 +1656,15 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                           <span className="text-xs text-white/40">{service.technology}</span>
                         </div>
                       </div>
+                      
                       <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
                       <p className="text-white/70 leading-relaxed mb-4">{service.description}</p>
+                      
                       {/* Price */}
                       <div className="mb-4">
                         <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                       </div>
+                      
                       {/* Features */}
                       <div className="mb-6">
                         <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
@@ -1657,70 +1673,12 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                             <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
                               <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                               <span>{feature}</span>
-=======
-                      viewMode === 'grid'                        ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-                        : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
-                    }`}
-                  >
-                    <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
-                    <div className='relative z-10'>
-                      <div className='flex items-start justify-between mb-4'>
-                        <div
-                          className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center`}
-                        >
-                          <service.icon className='w-8 h-8 text-white' />
-                        </div>
-                        <div className='flex flex-col items-end gap-2'>
-                          <span
-                            className={`px-3 py-1 rounded-full text-xs font-medium ${
-                              service.status === 'active'
-                                ? 'bg-green-500/20 text-green-300'
-                                : service.status === 'beta'
-                                  ? 'bg-yellow-500/20 text-yellow-300'
-                                  : 'bg-blue-500/20 text-blue-300'
-                            }`}
-                          >
-                            {service.status}
-                          </span>
-                          <span className='text-xs text-white/40'>
-                            {service.technology}
-                          </span>
-                        </div>
-                      </div>
-
-                      <h3 className='text-xl font-bold mb-3 text-white'>
-                        {service.title}
-                      </h3>
-                      <p className='text-white/70 leading-relaxed mb-4'>
-                        {service.description}
-                      </p>
-
-                      {/* Price */}
-                      <div className='mb-4'>
-                        <span className='text-2xl font-bold text-cyan-400'>
-                          {service.price}
-                        </span>
-                      </div>
-
-                      {/* Features */}
-                      <div className='mb-6'>
-                        <h4 className='text-white font-semibold mb-3 text-sm'>
-                          Key Features:
-                        </h4>
-                        <div className='space-y-2'>
-                          {service.features.map((feature, idx) => (
-                            <div
-                              key={idx}
-                              className='flex items-center gap-2 text-sm text-white/70'
-                            >
-                              <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />                              <span>{feature}</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             </div>
                           ))}
                         </div>
                       </div>
-<<<<<<< HEAD
-<div className="flex items-center justify-between">
+                      
+                      <div className="flex items-center justify-between">
                         <a
                           href={service.link}
                           className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300"
@@ -1745,10 +1703,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 </Link>
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                     </div>
-=======
-                      </Link>                    </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </motion.div>
                 ))}
               </div>
@@ -1767,6 +1721,7 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                           <span className="mx-2 text-gray-300">•</span>;
                           <span className="text-sm text-gray-500">{result && result.type}</span>;
                         </div>;
+
                         <h3 className="text-xl font-bold text-gray-900 mb-2">;
                           <Link
                             href={result && result.url}
@@ -1774,9 +1729,11 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                             {result && result.title}
                           </Link>;
                         </h3>;
+
                         <p className="text-gray-600 mb-4">;
                           {result && result.description}
                         </p>;
+
                         <div className="flex items-center text-sm text-gray-500">;
                           <Clock className="w-4 h-4 mr-1" />;
                           <span className="mr-4">Updated {result && result.lastUpdated}</span>;
@@ -1786,6 +1743,7 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                           </div>;
                         </div>;
                       </div>;
+
                       <Link
                         href={result && result.url}
                         className="ml-4 text-blue-600 hover:text-blue-700 transition-colors">;
@@ -1797,17 +1755,7 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
               </div>;
             ) : (;
               <motion&& motion.div
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-            ) : (
-              <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="text-center py-16"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1843,7 +1791,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 Popular Searches;
@@ -1877,6 +1824,7 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                   {term}
                 </motion && motion.button>;
               ))}
+=======
                           </Link>;
                         </h3>;
                         <p className="text - gray - 600 mb - 4">;
@@ -1963,6 +1911,7 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                 >;
                   {term}
                 </motion.button>))}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </section>;
@@ -1978,12 +1927,11 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </AnimatePresence>
           )}
+
           {/* Initial State - Show all services when no search */}
           {!isSearching && !searchTerm && (
-<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
@@ -1994,7 +1942,7 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 <span className="text-sm text-white/40">Popular searches:</span>
-{['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
+                {['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
                   <button
                     key={term}
                     onClick={() => {
@@ -2004,37 +1952,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                     className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
                   >
                     {term}
-                  >
-                    {_term}
-
-=======
-            <div className='text-center py-20'>
-              <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
-                <Search className='w-12 h-12 text-white/40' />
-              </div>
-              <h3 className='text-2xl font-semibold text-white mb-2'>
-                Start Your Search
-              </h3>
-              <p className='text-white/60 mb-6'>
-                Enter keywords above to find the perfect technology solutions
-                for your business
-              </p>
-              <div className='flex flex-wrap justify-center gap-2'>
-                <span className='text-sm text-white/40'>Popular searches:</span>
-                {[
-                  'AI',
-                  'Cybersecurity',
-                  'Quantum Computing',
-                  'Edge Computing',
-                ].map(term => (                  <button
-                    key={term}
-                    onClick={() => {
-                      setSearchTerm(term);
-                      performSearch();
-                    }}
-                    className='px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors'                  >
-                    {term}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </button>
                 ))}
               </div>
@@ -2042,7 +1959,8 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
           )}
         </div>
       </section>
-<SmartFooter />
+
+      <SmartFooter />
     </div>
 
   );

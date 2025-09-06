@@ -135,11 +135,7 @@ import { additionalLiveServices2025 } from '../../data/additional-live-services-
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 import { realServicesQ42025 } from '../../data/real-services-q4-2025';
 
@@ -239,6 +235,7 @@ const sampleServices: Service[] = [;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function ServicesIndexPage() {
+
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
       extraServices as unknown[]
@@ -445,7 +442,7 @@ interface Service {
   price?: string,
   category?: string,
   popular?: boolean,
-launch_date?: string,
+  launch_date?: string,
   [key: string]: unknown, // Allow additional properties;
 }
 // Define a unified service interface;
@@ -459,7 +456,7 @@ interface Service {
   features: string[],
   popular?: boolean,
   icon?: string,
-link?: string;
+  link?: string;
 }
 // Sample services for now;
 const sample_services: Service[] = [;
@@ -489,7 +486,7 @@ const sample_services: Service[] = [;
     name: 'Cybersecurity',
     tagline: 'Enterprise security solutions',
     description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.',
-price: '$1, 999 / month',
+    price: '$1, 999 / month',
     category: 'Security',
     features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'],
     link: '/cybersecurity';
@@ -629,7 +626,7 @@ if (return null, ) {
                           {category === 'Government' && '🏛️'}
                           {category === 'Energy' && '⚡'}
                           {category === 'Transportation' && '🚗'}
-</span>;
+                        </span>;
                         {category}
 
 
@@ -1054,7 +1051,7 @@ if (return null, ) {
                         {category === 'Government' && '🏛️'}
                         {category === 'Energy' && '⚡'}
                         {category === 'Transportation' && '🚗'}
-</span>;
+                      </span>;
                       {category}
 
 
@@ -1234,159 +1231,6 @@ if (return null, ) {
 
                         {service.price}
                       </div>;
-=======
-=======
-          <section className="mb-20">;
-            <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
-              Services by Category;
-            </h2>;
-            <div className="space-y-12">;
-              {categories.map((category) => {;
-                const categoryServices = servicesByCategory[category];
-                if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-                      {category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                      <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
-                        {categoryServices.length} services
-                      </span>
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {categoryServices.slice(0, 6).map((service: Service, index: number) => (
-                        <UltraFuturisticServiceCard2026
-<<<<<<< HEAD
-<<<<<<< HEAD
-                          key={`${service.id |service.name}-${index}`}
-=======
-                          key={`${service.id || service.name}-${index}`}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                          service={service}
-=======
-                          key={`${service.id || service.name}-${index}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          service={service  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                          variant="default"
-                        />
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </div>
-                    {categoryServices.length > 6 && (
-                      <div className="text-center mt-6">
-                        <Link
-<<<<<<< HEAD
-                          href={`/services/category/${toSlug(category)}`}
-=======
-                          href={`/services/category/${toSlug(category)}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all"
-                        >
-                          View All {category} Services ({categoryServices.length})
-                        </Link>
-                      </div>
-<<<<<<< HEAD
-                    )}
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-                    )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="text-cyan-400 group-hover:text-blue-400 transition-colors duration-300">
-                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
-                          <span className="text-2xl font-bold">{service.name.charAt(0)}</span>
-                        </div>
-                      </div>
-                      <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition-colors duration-300" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-<<<<<<< HEAD
-                      {service.name}
-                    </h3>
-                    <p className="text-cyan-400 text-sm mb-4">
-                      {service.tagline}
-                    </p>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {service.description}
-=======
-                      {service.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </h3>
-                    <p className="text-cyan-400 text-sm mb-4">
-                      {service.tagline  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </p>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {service.description  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    </p>
-                    <div className="space-y-2 mb-6">
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-<<<<<<< HEAD
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="text-2xl font-bold text-white">
-                        {service.price}
-                      </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       {service.link && (
                         <a;
                           href={service.link}

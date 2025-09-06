@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -38,8 +36,6 @@ console.log('===')
         if (trimmedLine.includes('function ') || trimmedLine.includes('=> {'})
         if (inFunction && braceCount === 0 && trimmedLine === '}')
           const nextLine = i + 1 < lines.length ? lines[i + 1].trim() : ''
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -198,9 +194,6 @@ fixer.run().catch(console.error)
 // console.log('\n "Summary")
       console.log('\n� Fixed "files")
 // console.log('\n� "Errors")
-<<<<<<< HEAD
-    console.log('\n� Report saved "to")
-=======
 <<<<<<< HEAD
     console.log('\n� Report saved "to")
 =======

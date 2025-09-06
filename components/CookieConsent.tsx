@@ -1,8 +1,6 @@
 
 
 export default function CookieConsent() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState({;
@@ -11,12 +9,14 @@ export default function CookieConsent() {;
     marketing: false,;
     functional: false,;
   });
+
   useEffect(() => {;
     const consent = localStorage && localStorage.getItem("cookie-consent");
     if (!consent) {;
       setIsVisible(true);
     }
   }, []);
+
   const acceptAll = () => {;
     const allAccepted = {;
       necessary: true,;
@@ -36,15 +36,18 @@ export default function CookieConsent() {;
       console && console.log("Analytics initialized");
     }
   };
+
   const acceptSelected = () => {;
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(preferences));
     setIsVisible(false);
+
     // Initialize analytics if accepted;
     if (preferences && preferences.analytics) {;
       // Add your analytics initialization code here;
       console && console.log("Analytics initialized");
     }
   };
+
   const rejectAll = () => {;
     const onlyNecessary = {;
       necessary: true,;
@@ -58,6 +61,7 @@ export default function CookieConsent() {;
     setIsVisible(false);
 
   };
+
   if (!isVisible) {;
 
     return null;
@@ -75,6 +79,7 @@ export default function CookieConsent() {;
                   We use cookies to enhance your experience;
                 </h3>;
                 <p className="text-sm text-gray-600">;
+=======
 import React, { useState, useEffect } from './react';
 import { X, Cookie, Settings  } from './lucide-react';
 ;
@@ -179,6 +184,7 @@ if ( {) {
                 <X className="w-5 h-5" />;
               </button>;
             </div>;
+
             <div className="space-y-4 mb-6">;
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
                 <div>;
@@ -198,6 +204,7 @@ if ( {) {
 
                 />;
               </div>;
+
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
                 <div>;
                   <h4 className="font-medium text-gray-900">;
@@ -219,6 +226,7 @@ if ( {) {
                   className="w-4 h-4 text-blue-600 rounded";
                 />;
               </div>;
+
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
                 <div>;
                   <h4 className="font-medium text-gray-900">;
@@ -241,6 +249,7 @@ if ( {) {
                   className="w-4 h-4 text-blue-600 rounded";
                 />;
               </div>;
+
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
                 <div>;
                   <h4 className="font-medium text-gray-900">;
@@ -281,6 +290,7 @@ if ( {) {
       </div>;
     </div>;
   );
+=======
             <div className="flex flex - col sm:flex - row gap - 2 w - full md:w - auto">;
               <button;
                 on_click={() => setShowSettings (true)}
@@ -414,4 +424,5 @@ if ( {) {
           </div>)}
       </div>;
     </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

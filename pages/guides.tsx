@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -95,6 +99,7 @@ import Layout from "./components/Layout";
                 skill level.;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">;
               {categories && categories.map((category, index) => (;
                 <motion&& motion.div
@@ -137,6 +142,7 @@ import Layout from "./components/Layout";
                 technologies.;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {guides && guides.map((guide, index) => (;
                 <motion&& motion.div
@@ -619,6 +625,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                             : guide.difficulty === "Intermediate";
                               ? "bg - yellow - 100 text - yellow - 600";
                               : "bg - red - 100 text - red - 600";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         }`}
                       >;
                         {guide.difficulty}
@@ -628,6 +635,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                       </span>;
                     </div>;
                   </div>;
+
                   <div className="p-6">;
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">;
                       <div className="flex items-center">;
@@ -639,10 +647,12 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                         {guide && guide.author}
                       </div>;
                     </div>;
+
                     <h3 className="text-xl font-bold text-gray-900 mb-2">;
                       {guide && guide.title}
                     </h3>;
                     <p className="text-gray-600 mb-4">{guide && guide.description}</p>;
+
                     <div className="flex items-center justify-between mb-4">;
                       <div className="flex items-center">;
                         <div className="flex items-center">;
@@ -665,6 +675,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                         </span>;
                       </div>;
                     </div>;
+
                     <div className="flex flex-wrap gap-2 mb-6">;
                       {guide && guide.tags.map((tag) => (;
 
@@ -725,7 +736,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                   href="/contact"
 
 import Layout from '../components/Layout';
+
 export default function GuidesPage() {
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -749,6 +762,7 @@ export default function GuidesPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </Layout>
+=======
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">;
                   Request Custom Guide;
                   <ExternalLink className="ml-2 w-5 h-5" />;
@@ -758,17 +772,10 @@ export default function GuidesPage() {
           </div>;
         </section>;
       </div>;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-      </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </Layout>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
+=======
                       </span>;
                     </div>;
                   </div>;
@@ -872,4 +879,5 @@ export default function GuidesPage() {
         </section>;
       </div>;
     </Layout>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

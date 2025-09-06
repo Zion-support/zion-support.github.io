@@ -6,6 +6,7 @@
 
     const existingIdx = state && state.connections.findIndex(
       (c) => c && c.providerId === providerId,
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { write_state  } from '../../../lib / integrations / file_store';
 import { getProviderById  } from '../../../lib / integrations / registry';
@@ -68,14 +69,6 @@ if (state.connections[existing_idx] = connection) {
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules };
   if (!providerId || !getProviderById(providerId)) {
     return res.status(400).json({ error: 'Invalid providerId' })
-    return res.status(405).json({ error: "Method not allowed" });
-  const { providerId, syncRules } = req.body as {
-    providerId?: string;
-    syncRules?: SyncRules;
-  }
-  if (!providerId |!getProviderById(providerId)) {
-    return res.status(400).json({ error: "Invalid providerId" });
-
   }
   const now = Date.now();
   const updated = writeState(state => {
@@ -86,14 +79,16 @@ if (state.connections[existing_idx] = connection) {
       expiresAt: now + 1000 * 60 * 60, connectedAt: now,
       syncRules: syncRules || {},
       lastSyncAt: undefined,
-lastError: null};
+      lastError: null};
     if (existingIdx >= 0) state.connections[existingIdx] = connection; else state.connections.push(connection);
     state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
   });
   res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
 
 }
-res.status (200).json ({
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  res.status (200).json ({
     ok: true,
     connection: updated.connections.find ((c) => c.provider_id === provider_id),
   });

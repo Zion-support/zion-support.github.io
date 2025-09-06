@@ -100,7 +100,7 @@ export function MobileHeader(): any ({;
               <span className="sr-only">Back</span>;
             </Button>;
           )}
-          <h1 className="text-lg font-medium leading-none truncate">
+          <h1 className="text-lg font-medium leading-none truncate">;
             {title}
 
           </h1>;
@@ -111,11 +111,10 @@ export function MobileHeader(): any ({;
               variant="ghost" 
 
               size="icon"
-              onClick={onNotificationsClick}
-            >
-              <Bell className="h-5 w-5" />
-              <span className="sr-only">Notifications</span>
-            </Button>
+              onClick = {onNotificationsClick,}>;
+              <Bell className="h-5 w-5" />;
+              <span className="sr-only">Notifications</span>;
+            </Button>;
           )}
 
           {showSettings && (;

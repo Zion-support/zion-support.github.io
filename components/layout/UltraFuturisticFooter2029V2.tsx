@@ -110,18 +110,21 @@ const serviceCategories = [
     title: 'Quantum Technology',
     icon: Globe,
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     services: [
 
 
     title: 'Space & Metaverse',
     icon: Rocket,
     color: 'from-teal-600 via-emerald-600 to-green-600',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     services: [
 
 
     title: 'Enterprise IT',
     icon: Cpu,
     color: 'from-blue-600 via-cyan-600 to-teal-600',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     services: [
 
 
@@ -173,9 +176,14 @@ const main_navigation = [;
 
 
 const quickLinks = [
+=======
+  { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+];
+;
+const quick_links = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
-
+  { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
   { name: 'Blog', href: '/blog', icon: BookOpen },
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
@@ -183,10 +191,12 @@ const quickLinks = [
 
 
 const resources = [
+=======
   { name: 'Support', href: '/support', icon: MessageCircle }, ];  { name: 'Support', href: '/support', icon: MessageCircle }
 ];
 ;
 const resources = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: 'Documentation', href: '/docs', icon: BookOpen },
   { name: 'API Reference', href: '/api', icon: Code },
   { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
@@ -198,10 +208,12 @@ const resources = [;
 
 
 const company = [
+=======
   { name: 'Webinars', href: '/webinars', icon: Video }, ];  { name: 'Webinars', href: '/webinars', icon: Video }
 ];
 ;
 const company = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Our Team', href: '/team', icon: Users },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
@@ -212,24 +224,7 @@ const company = [;
 
 
 
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home }
-  { name: 'Services', href: '/services', icon: Briefcase }
-  { name: 'AI Solutions', href: '/ai-solutions', icon: Brain }
-  { name: 'Quantum Tech', href: '/quantum-tech', icon: Globe }
-  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu }
-  { name: 'Space Tech', href: '/space-tech', icon: Rocket }
-  { name: 'Micro SAAS', href: '/micro-saas', icon: Target }
-  { name: 'Innovations', href: '/innovations', icon: Sparkles }
-  { name: 'About', href: '/about', icon: Users }
-  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const footerSections = [
   {
     title: 'Services'
@@ -259,6 +254,7 @@ const footerSections = [
   },  {      { name: 'Government', href: '/industries/government' }
     ]
   }
+=======
       { name: 'AI Consciousness', href: '/solutions/ai-consciousness' },
       { name: 'Quantum Security', href: '/solutions/quantum-security' },
       { name: 'Space Mining', href: '/solutions/space-mining' },
@@ -343,6 +339,7 @@ const footer_sections = [;
   {
     title: 'Resources',
     links: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       { name: 'Documentation', href: '/docs' },
       { name: 'API Reference', href: '/api' },
       { name: 'Case Studies', href: '/case - studies' },
@@ -352,9 +349,10 @@ const footer_sections = [;
 
   return (
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>;
+=======
       { name: 'Research', href: '/research' }
     ]
-<<<<<<< HEAD
+=======
   }, ];
 ;
 export default /**
@@ -364,6 +362,7 @@ function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg - black / 90 backdrop - blur - xl border - t border - cyan - 500 / 20'>      { name: 'Research', href: '/research' }
     ];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 ];
 ;
@@ -458,6 +457,7 @@ export default function UltraFuturisticFooter2029V2() {
                 space technology, and innovative micro SAAS solutions.;
                 Transforming businesses through next-generation technology.;
               </p>;
+
               {/* Contact Info */}
               <div className='space-y-3'>;
                 <div className='flex items-center space-x-3 text-gray-300'>;
@@ -484,10 +484,12 @@ export default function UltraFuturisticFooter2029V2() {
                   <p className="text-sm text-gray-400">Future Technology Solutions</p>;
                 </div>;
               </Link>;
+
               <p className="text-gray-300 mb-6 leading-relaxed">;
                 Leading the future with cutting-edge AI, quantum computing, space technology, and innovative micro SAAS solutions. ;
                 Transforming businesses through next-generation technology.;
               </p>;
+
               {/* Contact Info */}
               <div className="space-y-3">;
                 <div className="flex items-center space-x-3 text-gray-300">;
@@ -509,9 +511,6 @@ export default function UltraFuturisticFooter2029V2() {
               </div>;
             </motion && motion.div>;
           </div>;
-=======
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -544,6 +543,7 @@ export default function UltraFuturisticFooter2029V2() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {serviceCategories.map((category, index) => (
               <motion.div
+=======
                     </Link>;
                   </li>))}
               </ul>;
@@ -567,8 +567,10 @@ export default function UltraFuturisticFooter2029V2() {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
             {service_categories.map ((category, index) => (
               <motion.div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={category.title}
                 initial={{ opacity: 0, scale: 0.9 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
@@ -617,37 +619,6 @@ export default function UltraFuturisticFooter2029V2() {
 =======
                 className="group"
               >
-=======
-                className='group'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              >
-                <div
-                  className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}
-                >
-                  <div className='flex items-center space-x-3 mb-3'>
-                    <div
-                      className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}
-                    >
-                      <category.icon className='w-5 h-5 text-white' />
-                    </div>
-                    <h4 className='font-semibold text-white text-sm'>
-                      {category.title}
-                    </h4>
-                  </div>
-                  <ul className='space-y-2'>
-                    {category.services.slice(0, 3).map(service => (
-                      <li key={service.name}>
-                        <Link
-                          href={service.href}
-                          className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block'                        >              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
                   <div className="flex items-center space-x-3 mb-3">
                     <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
@@ -659,6 +630,7 @@ export default function UltraFuturisticFooter2029V2() {
                     {category.services.slice(0, 3).map((service) => (
                       <li key={service.name}>
                         <Link
+=======
                 className='group';
               >;
                 <div;
@@ -716,28 +688,7 @@ export default function UltraFuturisticFooter2029V2() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
 
 =======
-                          className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block"
-                        >
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -913,27 +864,6 @@ export default function UltraFuturisticFooter2029V2() {
 =======
       </motion.div>;
     </footer>);
-              <input
-                type=&quot;email&quot;
-                placeholder=&quot;Enter your email&quot;
-                className=&quot;flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50&quot;
-              />
-<<<<<<< HEAD
-              <button className=&quot;px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105&quot;>
-=======
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-<<<<<<< HEAD
-    </footer>
-<<<<<<< HEAD
-  )
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

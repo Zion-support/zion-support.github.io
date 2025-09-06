@@ -138,6 +138,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       </div>;
     </>;
   );
+
 }
 
 import Link from 'next / link';

@@ -1,11 +1,13 @@
 // Innovative Services: 2031 - Zion Tech Group
 // Innovative "Services": 2031 - Zion Tech Group
 // Cutting-edge Micro SAAS, IT Infrastructure, and AI Services
+
 export interface ServiceContact {
   "phone": string;
   email: string;
   website: string;
   address: "string""}
+
 export interface MicroSaasService {
   "id": number;
   name: string;
@@ -29,6 +31,7 @@ export interface MicroSaasService {
   trialPeriod: string;
   innovationLevel: string;
   marketSize: string;"  growthRate: "string""}
+
 export interface ITService {
   "id": number;
   name: string;
@@ -51,6 +54,7 @@ export interface ITService {
   marketSize: string;
   compliance: string[]
 }
+
 export interface AIService {
   "id": number;
   name: string;
@@ -155,6 +159,8 @@ export const innovativeAIServices2031: AIService[] = [{
 ];
 // Export all services;
 "  "microSaas": "innovativeMicroSaasServices2031","  "itInfrastructure": "innovativeITInfrastructureServices2031",
+
+
   "ai": innovativeAIServices2031;
 "};
 

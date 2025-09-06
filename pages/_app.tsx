@@ -15,12 +15,8 @@ export default function App({ Component, pageProps }: AppProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
-=======
-import '../src/styles/globals.css';
-
-export default function App({ Component, pageProps }: AppProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 return <Component {...pageProps} />;
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 import '../styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
@@ -36,7 +32,6 @@ export default function App({ Component, pageProps }: AppProps) {
 =======
 import '../src/styles/globals.css';
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function App({ Component, pageProps }: AppProps) {
 
 import '../styles/globals.css';

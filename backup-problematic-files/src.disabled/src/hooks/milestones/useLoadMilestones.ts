@@ -23,6 +23,7 @@ export default function Page() {;
           if(activitiesError) throw activitiesError;
           activitiesMap[milestone && milestone.id] = activitiesData || []}
       }
+
       setActivities(activitiesMap);
       setError(null)} catch("err": unknown) {};
       setActivities({});  // Clear activities on error} finally {}}

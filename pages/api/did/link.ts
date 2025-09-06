@@ -62,12 +62,9 @@ function handler() {
   if (return res.status (400).json ({ error: 'Missing payload' }), ) {
   $2
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const key = `${payload.address}`,
+  store[key] = { payload, message, signature, updated_at: Date.now () },
+  return res.status (200).json ({ ok: true });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

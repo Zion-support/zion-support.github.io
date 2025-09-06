@@ -96,7 +96,6 @@ import {
   Lock,
   Phone,
   Mail,
-<<<<<<< HEAD
   MapPin,
   ExternalLink,
 } from 'lucide-react';

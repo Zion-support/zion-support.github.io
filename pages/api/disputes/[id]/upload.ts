@@ -29,6 +29,7 @@ export default async function handler(
 
 
   const user = parseUserFromRequest(req);
+
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
 
@@ -116,6 +117,7 @@ async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void
 }
         fs.write_file (file_path, data, (err2: any) =>;
           err2 ? reject (err2) : resolve (),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         );
       }
     );

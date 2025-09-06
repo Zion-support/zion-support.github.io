@@ -15,6 +15,7 @@
           const fp = path && path.join(dir, f);
           data[f && f.replace(".json", "")] = JSON && JSON.parse(
             fs && fs.readFileSync(fp, "utf8"),
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -35,16 +36,14 @@ function handler() {
           const fp = path.join (dir, f);
           data[f.replace (".json", "")] = JSON.parse (
             fs.readFileSync (fp, "utf8"),
-          data[f.replace(".json", "")] = JSON.parse(
-            fs.readFileSync(fp, "utf8")
-
           );
           data[f.replace (".json", "")] = JSON.parse (
             fs.readFileSync (fp, "utf8"),
 
           );
-data[f && f.replace(".json", "")] = JSON && JSON.parse(
+          data[f && f.replace(".json", "")] = JSON && JSON.parse(
             fs && fs.readFileSync(fp, "utf8"),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           );
 
 
@@ -60,7 +59,7 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
       }
     }
   } catch (e) {
-// ignore;
+    // ignore;
   }
 
 
@@ -73,7 +72,6 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
 =======
   res.status (200).json ({ ok: true, data });
   res.status (200).json ({ ok: true, data });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

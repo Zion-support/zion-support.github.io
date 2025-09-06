@@ -29,7 +29,6 @@ export interface AdminAction {;
   status: 'pending' | 'executed' | 'failed',
 
 }
-<<<<<<< HEAD
 export interface FraudDetectionResult {
   is_fraud: boolean;
 =======
@@ -47,7 +46,6 @@ export interface FraudDetectionResult {;
   metadata: Record < string, any>;
 
 }
-<<<<<<< HEAD
 export interface FraudDetectionConfig {
 =======
 }
@@ -58,7 +56,7 @@ export interface FraudDetectionConfig {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   enabled: boolean;
   rules: {
-    suspiciousActivity: {
+    suspicious_activity: {
       enabled: boolean;
 
       threshold: number,

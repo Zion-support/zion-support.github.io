@@ -8,7 +8,6 @@ function ensure() {
   if (!fs && fs.existsSync(FILE_PATH))
     fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8');  if (!fs && fs.existsSync(FILE_PATH)) fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8')
 }
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
@@ -38,7 +37,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const list: string[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   if (!list.includes(email)) list.push(email);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
-<<<<<<< HEAD
+
   res.status(200).json({ ok: true })
 }
 
@@ -117,6 +116,5 @@ function handler() {
 }
   fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8');
   res.status (200).json ({ ok: true });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -29,6 +29,7 @@
 
   const days = Object.keys(byDay).sort();
   const line = days.map((d) => ({ date: d, value: byDay[d] }));
+
   const funnelStages = [
     'Visit',
     'AI Prompt Used',
@@ -39,6 +40,7 @@
     label: stage, 
     value: byEvent[stage] || 0 
   }));
+
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 
 

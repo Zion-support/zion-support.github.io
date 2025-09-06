@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -39,7 +43,9 @@ export type LandingPayload = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
+
   const [payload, setPayload] = React && React.useState<LandingPayload | null>(null);
+
   React && React.useEffect(() => {;
     if (!router && router.isReady || !slug) return;
     const dataParam = (router && router.query?.data as string) || '';
@@ -75,9 +81,11 @@ export type LandingPayload = {
 
         dangerouslySetInnerHTML={{ __html: payload && payload.bodyHtml }}
       />;
+
       <div className='mt-8'>;
         <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>        <TalentGrid region={payload && payload.region} service={payload && payload.service} />;
       </div>;
+
       <FAQ items={payload && payload.faq} />;
     </div>;
   );
@@ -86,6 +94,8 @@ export type LandingPayload = {
 =======
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
   faq: Array<{ q: string; array: string }>;}
 ;
 export default /**

@@ -305,7 +305,6 @@
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
     "@types/mongodb": "^4.0.6",
-    "@types/react": "17.0.88",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "aws-sdk": "^2.1692.0",

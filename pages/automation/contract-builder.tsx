@@ -41,11 +41,7 @@ export default function ContractBuilderPage() {
       !!endDate &&
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
     )
-<<<<<<< HEAD
-}, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
-=======
   }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async function submitForm(event: React.FormEvent) {
     event.preventDefault()
     if (!canSubmit) return
@@ -91,7 +87,7 @@ export default function ContractBuilderPage() {
       setContract(data.contract)
     } catch (e: any) {
       setError(e?.message |'Failed to generate contract')
-<<<<<<< HEAD
+=======
 import React, { useEffect, useMemo, useState } from 'react',
 import DatePicker from 'react - datepicker',
 import { use_router } from 'next / router',
@@ -196,6 +192,7 @@ if ( {) {
       set_contract (data.contract);
     } catch (e: any) {
       set_error (e?.message || 'Failed to generate contract');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
@@ -563,6 +560,7 @@ if (return, ) {
           {error && <span className="text - red - 600 text - sm">{error}</span>}
         </div>;
       </form>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {contract && (
 
 =======

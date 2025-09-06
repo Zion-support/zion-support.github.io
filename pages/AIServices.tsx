@@ -354,7 +354,6 @@ export default function AIServices() {
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                 AI Services
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
                 Transform your business with cutting-edge artificial intelligence solutions

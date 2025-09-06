@@ -40,6 +40,7 @@ export default function AboutPage() {;
                 {" "}
                 To democratize access to enterprise-grade technology;
                 solutions,making AI,cloud infrastructure,and software;
+=======
   description:;
     "Learn about Zion Tech Group's mission to deliver enterprise - grade AI, micro SaaS, and IT solutions that drive real business results.",
 }
@@ -75,6 +76,7 @@ function AboutPage() {
                 {" "}
                 To democratize access to enterprise - grade technology;
                 solutions, making AI, cloud infrastructure, and software;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 development accessible to businesses of all sizes.{" "}
               </p>{" "}
             </div>{" "}
@@ -179,6 +181,7 @@ function AboutPage() {
             <a
               href="/contact"
               className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">;
+=======
           <div className="text - center">;
             {" "}
             <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">;
@@ -193,6 +196,7 @@ function AboutPage() {
               href="/contact";
               className="inline - block bg - blue - 600 text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 700 transition - colors";
             >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {" "}
               Contact Us Today{" "}
             </a>{" "}

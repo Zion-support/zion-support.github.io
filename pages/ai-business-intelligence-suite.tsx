@@ -41,69 +41,10 @@ export default function AIBusinessIntelligenceSuite() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
     website: 'https://ziontechgroup.com'
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
-  DollarSign, Shield, Mail, MapPin, Rocket, BarChart3
-  Brain, Database, TrendingUp as TrendingUpIcon, Users
-=======
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  DollarSign, Shield, Mail, MapPin, Rocket, BarChart3,
-  Brain, Database, TrendingUp as TrendingUpIcon, Users,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  Target, BarChart, PieChart, Activity, Eye, Lock
-<<<<<<< HEAD
-} from 'lucide-react'
-import Button from '../components/ui/Button';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-=======
-} from 'lucide-react',;
-import Button from '../components/ui/Button',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default function AIBusinessIntelligenceSuite() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
   }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const features = [
     'Real-time data analysis and visualizationAI-powered trend prediction and forecastingAutomated report generation and schedulingCustom dashboard builder with drag-and-dropMulti-source data integration (CRM, ERP, Analytics)Natural language query interfacePredictive analytics and machine learning modelsMobile-responsive dashboards'
     'Role-based access control and securityAPI access for custom integrations'
-<<<<<<< HEAD
   ]
   const useCases = [
     'Sales performance analysisCustomer behavior insightsFinancial forecastingMarketing ROI optimizationOperational efficiency tracking'
@@ -114,20 +55,11 @@ export default function AIBusinessIntelligenceSuite() {
   const technology = [
     'PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker'
   ]
-<<<<<<< HEAD
-=======
 
   return (
-<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground
       intensity="high"
-=======
-<<<<<<< HEAD
-    <UltraAdvancedFuturisticBackground 
-      intensity="high" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       colorScheme="quantum-fusion"
-<<<<<<< HEAD
       particleCount={500}
       animationSpeed={2.0}
       enableHolographic={true}
@@ -274,7 +206,6 @@ function AIBusinessIntelligenceSuite() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 Transform data into actionable insights with <span className="text-blue-400 font-bold">AI-powered analytics</span>
               </motion.p>
@@ -615,8 +546,8 @@ function AIBusinessIntelligenceSuite() {
                   className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
-                      <CheckCircle className="w-5 h-5 text-white" />
+                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
+                      <Target className="w-5 h-5 text-white" />
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
 
@@ -643,6 +574,7 @@ function AIBusinessIntelligenceSuite() {
             </div>;
           </div>;
         </section>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Technology & Integrations */}
 
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
@@ -884,7 +816,6 @@ function AIBusinessIntelligenceSuite() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantage</h3>
                 <p className="text-gray-300 mb-6">
@@ -936,7 +867,6 @@ function AIBusinessIntelligenceSuite() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Return on Investment</h3>
                 <div className="text-4xl font-bold text-green-400 mb-4">400% ROI</div>
@@ -1046,6 +976,7 @@ function AIBusinessIntelligenceSuite() {
             </div>;
           </div>;
         </section>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-4xl mx - auto text - center">;

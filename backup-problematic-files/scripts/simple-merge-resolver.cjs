@@ -8,15 +8,6 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,8 +49,6 @@ const files = [
   'pages/contact.tsx',
   'pages/index.tsx'
 ];
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -838,9 +827,6 @@ const util = require('util')
       return stdout.trim().split('\n')
       await this.log(`Error finding conflicted "files"`)
       await this.log(`Encountered ${this.errors.length} "errors"`)
-<<<<<<< HEAD
-    console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
-=======
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
 <<<<<<< HEAD
 <<<<<<< HEAD

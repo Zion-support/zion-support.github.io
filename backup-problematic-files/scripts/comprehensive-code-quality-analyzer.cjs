@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -543,9 +541,6 @@ console.log('')
     "message"
     "action"
       log('warn', 'Issues "found")
-<<<<<<< HEAD
-      log('info', 'Quality "Recommendations")
-=======
 <<<<<<< HEAD
       log('info', 'Quality "Recommendations")
 =======

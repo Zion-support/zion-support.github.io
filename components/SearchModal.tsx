@@ -5,7 +5,10 @@ import Link from './next / link';
 ;
 
 interface SearchResult {
+=======
+
 interface SearchResult {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title: string;
   description: string;
   url: string;
@@ -141,6 +144,7 @@ interface SearchModalProps {;
   isOpen: boolean;
   onClose: () => void;
 }
+
 const searchData: SearchResult[] = [;
   // Services;
   {;
@@ -179,6 +183,7 @@ const searchData: SearchResult[] = [;
     url: "/blockchain-services",;
     category: "Services",;
   },;
+
   // Solutions;
   {;
     title: "Digital Transformation",;
@@ -198,6 +203,7 @@ const searchData: SearchResult[] = [;
     url: "/startup-solutions",;
     category: "Solutions",;
   },;
+
   // Industries;
   {;
     title: "Healthcare",;
@@ -223,6 +229,7 @@ const searchData: SearchResult[] = [;
     url: "/industries/manufacturing",;
     category: "Industries",;
   },;
+
   // Company;
   {;
     title: "About Us",;
@@ -276,6 +283,7 @@ const searchData: SearchResult[] = [;
       setRecentSearches(JSON && JSON.parse(saved));
     }
   }, []);
+
   useEffect(() => {;
     if (query && query.trim()) {;
       const filtered = searchData && searchData.filter(;
@@ -288,6 +296,7 @@ const searchData: SearchResult[] = [;
       setResults(filtered);
     } else {;
       setResults([]);
+=======
 ;
 export default /**
  * SearchModal - Function description
@@ -332,6 +341,7 @@ if ( {) {
       set_results (filtered);
     } else {
       set_results ([]);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     setSelectedIndex (0);
   }, [query]);
@@ -352,6 +362,7 @@ if ( {) {
     }
 
   };
+
   const handleResultClick = (result: SearchResult) => {;
     // Add to recent searches;
     const newRecent = [;
@@ -360,6 +371,7 @@ if ( {) {
     ].slice(0, 5);
     setRecentSearches(newRecent);
     localStorage && localStorage.setItem("recent-searches", JSON && JSON.stringify(newRecent));
+
     // Navigate to result;
     window && window.location.href = result && result.url;
   };
@@ -409,6 +421,7 @@ if ( {) {
                 <div className="p-2">;
                   {results && results.map((result, index) => (;
                     <div
+=======
 ;
   const handleKeyDown = (e: React.KeyboardEvent) =>: any {
     // Check condition
@@ -493,6 +506,7 @@ if (return null) {
                 <div className="p - 2">;
                   {results.map ((result, index) => (
                     <div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       key={index}
                       className={`p - 3 rounded - lg cursor - pointer transition - colors ${
                         index === selected_index;
@@ -530,6 +544,7 @@ if (return null) {
       </div>;
     </div>;
   );
+=======
                       on_click={() => handleResultClick (result)}
                     >;
                       <div className="flex items - start justify - between">;
@@ -598,4 +613,5 @@ if (return null) {
         </div>;
       </div>;
     </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

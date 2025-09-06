@@ -18,43 +18,29 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       name: 'Continuous Integration',
       description: 'Automated testing, building, and quality checks',
       status: 'active',
-      frequency: 'on-push',
-      health: 'excellent'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      frequency: 'on - push',
+      health: 'excellent';
     },
     {
       name: 'Continuous Deployment',
       description: 'Automated deployment to staging and production',
       status: 'active',
-<<<<<<< HEAD
       frequency: 'on - merge',
       health: 'excellent';
-=======
-      frequency: 'on-merge',
-      health: 'excellent'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Security Scanning',
       description: 'Automated vulnerability and dependency scanning',
       status: 'active',
       frequency: 'daily',
-<<<<<<< HEAD
       health: 'excellent';
-=======
-      health: 'excellent'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Performance Testing',
       description: 'Automated performance and load testing',
       status: 'active',
       frequency: 'weekly',
-<<<<<<< HEAD
       health: 'excellent';
-=======
-      health: 'excellent'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Content Generation',
@@ -71,39 +57,11 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       description: 'Automatic detection and resolution of pipeline failures',
       benefit: 'Reduced manual intervention and faster deployments',
       status: 'implemented';
-=======
-      health: 'excellent'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  ];
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const automationFeatures = [
-    {
-      feature: 'Self-Healing CI/CD',
-      description: 'Automatic detection and resolution of pipeline failures',
-      benefit: 'Reduced manual intervention and faster deployments',
-      status: 'implemented'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       feature: 'Intelligent Branch Management',
       description: 'Automated branch synchronization and conflict resolution',
       benefit: 'Maintained code consistency across branches',
-<<<<<<< HEAD
       status: 'implemented';
     },
     {
@@ -111,21 +69,11 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       description: 'AI - powered code quality analysis and suggestions',
       benefit: 'Improved code quality and reduced review time',
       status: 'implemented';
-=======
-      status: 'implemented'
-    },
-    {
-      feature: 'Automated Code Review',
-      description: 'AI-powered code quality analysis and suggestions',
-      benefit: 'Improved code quality and reduced review time',
-      status: 'implemented'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       feature: 'Smart Testing Strategy',
       description: 'Intelligent test selection based on code changes',
       benefit: 'Faster feedback and reduced test execution time',
-<<<<<<< HEAD
       status: 'implemented';
     },
     {
@@ -176,6 +124,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 =======
 ;
   const getFrequencyColor = (frequency: string) =>: any {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (frequency) {
 
       case 'on-push': return 'bg-blue-500/20 text-blue-400';

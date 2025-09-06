@@ -6,14 +6,11 @@ module.exports = {};
 
 =======
 // Mock test for utils
-describe('Utils', () => {'
+describe('Utils', () => {
   it('should work correctly', () => {
     expect(true).toBe(true);
   });
 });
-<<<<<<< HEAD
-export {};'
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 =======

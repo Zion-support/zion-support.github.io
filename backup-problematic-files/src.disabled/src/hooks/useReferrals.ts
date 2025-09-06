@@ -83,6 +83,7 @@ export default function Page() {;
         "description": "Your referral code has been generated",
         "variant": "success",});
       await fetchReferralCode();
+
       return data} catch("error": any) {;
       console && console.error("Error generating referral code:", error);
       toast({;
@@ -116,6 +117,7 @@ export default function Page() {;
         "description": "Please generate a referral code first",
         "variant": "destructive",});
       return}
+
     let shareUrl = '';
     switch(platform) {;
       case 'twitter':;
@@ -127,6 +129,7 @@ export default function Page() {;
       case 'linkedin':;
         shareUrl = `"https": //www && www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`;
         break}
+
     if(shareUrl && typeof window !== "undefined") {;
       window && window.open(shareUrl, '_blank')}
   }, [getReferralLink]); // Dependency;

@@ -5,33 +5,28 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 
 import React from "react";
 export type EmptyStateProps = {;
+=======
 import React from './react';
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import React from "react";
-<<<<<<< HEAD
-export type EmptyStateProps = {;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export type EmptyStateProps = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -47,6 +42,7 @@ export type EmptyStateProps = {
 
   action?: React && React.ReactNode;
 };
+
 export default function EmptyState(): any ({;
   emoji = "✨",;
   title,;

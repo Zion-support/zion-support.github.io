@@ -65,8 +65,6 @@ if ( {) {
   }
   const summary = await calculateUsageSummary (auth.partner.id);
   return res.status (200).json ({ summary });
-
-<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -48,6 +52,7 @@ type Props = {;
   onLeave?: (durationSec: number) => void;
 
 };
+
 export default function CallRoom(): any ({;
   projectId,;
   userId,;
@@ -116,36 +121,21 @@ type Props = {;
   startMode: StartMode,;
   onLeave?: (durationSec: number) => void;
 };
-export default function CallRoom(): any ({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
-=======
-type Props = {
-  projectId: string
-  userId: string
-  displayName: string
-  roomName: string
-  serverUrl: string
-  token: string
-  startMode: StartMode
-  onLeave?: (durationSec: number) => void
-<<<<<<< HEAD
-}
-export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
-=======
-};
 
-export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export default function CallRoom(): any ({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
+
   const connect = useCallback(async () => {;
     const r = new Room();
+
     r && r.on(RoomEvent && RoomEvent.ParticipantConnected, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.ParticipantDisconnected, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.ActiveSpeakersChanged, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.LocalTrackPublished, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.TrackSubscribed, () => rebuild());
+
     // create local tracks per start mode;
     let localTracks: any[] = [];
     if (startMode === 'video') {;
@@ -242,8 +232,10 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec);
+
   const gridCols = useMemo(() => {;
     const count = participants && participants.length || 1;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (count <= 1) return 'grid-cols-1';
     if (count === 2) return 'grid-cols-2';
 

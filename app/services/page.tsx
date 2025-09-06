@@ -26,7 +26,7 @@ export default function ServicesOverviewPage() {
           bullets={[
             "Foundational architecture",
             "Billing + subscriptions",
-            "Growth analytics",
+            "Growth analytics"
           ]}
           icon="🚀"
         />
@@ -108,60 +108,105 @@ export default function ServicesOverviewPage() {
           icon="🤖"
         />
         <ServiceCard
-          href="/services/lead-generation-tool"
-          title="Lead Generation Tool"
-          description="AI-powered lead generation with automated prospecting and qualification"
-          bullets={["AI prospecting", "Automated outreach", "Lead scoring"]}
-          icon="🎯"
-        />
-        <ServiceCard
-          href="/services/ai-content-writer"
-          title="AI Content Writer"
-          description="Advanced AI-powered content creation with SEO optimization and brand voice training"
-          bullets={["Multi-format support", "SEO optimization", "Brand voice training"]}
-          icon="✍️"
-        />
-        <ServiceCard
-          href="/services/website-analyzer"
-          title="Website Analyzer"
-          description="Comprehensive website analysis with SEO audit and performance monitoring"
-          bullets={["SEO audit", "Performance monitoring", "Competitive intelligence"]}
-          icon="🔍"
-        />
-        <ServiceCard
           href="/services/ai-video-generator"
           title="AI Video Generator"
           description="Create professional videos with AI-powered editing and voice synthesis"
-          bullets={["AI video editing", "Voice synthesis", "Multi-format export"]}
+          bullets={["AI video editing", "Voice synthesis", "Template library"]}
           icon="🎬"
         />
         <ServiceCard
           href="/services/cybersecurity-suite"
           title="Cybersecurity Suite"
-          description="Enterprise-grade security solutions with threat detection and 24/7 monitoring"
-          bullets={["Threat detection", "Vulnerability assessment", "Compliance management"]}
-          icon="🛡️"
+          description="Comprehensive security solutions to protect your digital assets"
+          bullets={["Threat detection", "Security audits", "Compliance management"]}
+          icon="🔒"
         />
         <ServiceCard
-          href="/services/ai-data-analytics"
-          title="AI Data Analytics"
-          description="Advanced AI-powered analytics with predictive modeling and real-time insights"
-          bullets={["Predictive modeling", "Real-time dashboards", "Business intelligence"]}
-          icon="📊"
+          href="/services/data-science"
+          title="Data Science"
+          description="Advanced data science solutions with machine learning and predictive analytics"
+          bullets={["Machine learning", "Predictive models", "Data visualization"]}
+          icon="📈"
+        />
+        <ServiceCard
+          href="/services/devops"
+          title="DevOps"
+          description="Streamline development workflows with CI/CD and infrastructure automation"
+          bullets={["CI/CD pipelines", "Infrastructure as code", "Monitoring & alerting"]}
+          icon="🔄"
+        />
+        <ServiceCard
+          href="/services/lead-generation-tool"
+          title="Lead Generation Tool"
+          description="AI-powered lead generation and qualification with advanced targeting"
+          bullets={["AI targeting", "Lead scoring", "CRM integration"]}
+          icon="🎯"
+        />
+        <ServiceCard
+          href="/services/website-analyzer"
+          title="Website Analyzer"
+          description="Comprehensive website analysis with performance optimization recommendations"
+          bullets={["Performance audit", "SEO analysis", "Security scan"]}
+          icon="🔍"
         />
       </div>
-      <CTA />
+      
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          Why Choose Zion Tech Group?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">⚡</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Fast Delivery</h3>
+            <p className="text-gray-600">Rapid development cycles with agile methodologies</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">🎯</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>
+            <p className="text-gray-600">Track record of successful project deliveries</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">🔧</span>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Support</h3>
+            <p className="text-gray-600">Dedicated support team for ongoing maintenance</p>
+          </div>
+        </div>
+        
+        <div className="bg-gray-50 rounded-lg p-8">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Ready to Get Started?
+          </h3>
+          <p className="text-gray-600 mb-6">
+            Contact us today to discuss your project requirements and get a free consultation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Free Consultation
+            </Link>
+            <Link
+              href="/pricing"
+              className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              View Pricing
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
-function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon,
-}: {
+function ServiceCard({ href, title, description, bullets, icon }: {
   href: string;
   title: string;
   description: string;
@@ -171,52 +216,19 @@ function ServiceCard({
   return (
     <Link
       href={href}
-      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+      className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200"
     >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-        {title}
-      </h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <ul className="text-gray-600 space-y-2">
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {bullet}
+      <div className="text-3xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-1">
+        {bullets.map((bullet, index) => (
+          <li key={index} className="text-sm text-gray-500 flex items-center">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+            {bullet}
           </li>
         ))}
       </ul>
     </Link>
-  );
-}
-
-function CTA() {
-  return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Get Started?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Talk to our experts about your project. We'll help you choose the right
-        service and create a custom solution for your business needs.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
-      </div>
-      <div className="mt-4 text-sm text-gray-500">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-      </div>
-    </div>
   );
 }

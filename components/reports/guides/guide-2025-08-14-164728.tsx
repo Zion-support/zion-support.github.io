@@ -5,26 +5,11 @@ export default function Page() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function Page() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Guide — Implementation</title>;
-=======
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default function Page() {
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>
-      <Head>
-        <title>Guide — Implementation</title>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <meta
           name='description'
           content='Step-by-step guidance derived from live research signals.'

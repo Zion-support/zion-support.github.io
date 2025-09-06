@@ -245,8 +245,8 @@ export function PartnerReferralLinks() {;
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
-          <CardTitle className="flex items-center justify-between">;
-            <span>Your Referral Link</span>;
+          <CardTitle className='flex items - center justify - between'>;
+            <span > Your Referral Link</span>;
             <Button;
               variant='outline';
               size='sm';
@@ -256,7 +256,9 @@ export function PartnerReferralLinks() {;
               Export Links;
             </Button>;
           </CardTitle>;
-          <CardDescription>Share this link with your audience to earn rewards</CardDescription>;
+          <CardDescription>;
+            Share this link with your audience to earn rewards;
+          </CardDescription>;
         </CardHeader>;
         <CardContent>;
 
@@ -429,7 +431,7 @@ export function PartnerReferralLinks() {;
               <CardContent className='pb-4'>;
                 <div className='flex space-x-2'>;
                   <Input
-                    value={item.link}
+                    value = {item && item.link,}
                     readOnly
 
                     className="font-mono text-xs"
@@ -520,15 +522,69 @@ document && document.body.removeChild (link);
                 variant='secondary';
                 on_click={() => setIsDialogOpen (false)}
               >;
-                <Plus className="h-4 w-4" />;
+                Cancel;
+              </Button>;
+              <Button;
+                type='button';
+                on_click={handleGenerateLink}
+                className='bg - zion - purple hover:bg - zion - purple - dark'              >;
+                Generate Link;
+              </Button>;
+            </DialogFooter>;
+          </DialogContent>;
+        </Dialog>;
+      </div>;
+      <div className='grid gap - 4'>;
+        {generated_links.length > 0 ? (
+          generated_links.map ((item, index) => (
+            <Card;
+              key={index}
+              className='bg - zion - blue - dark border - zion - blue - light';
+            >;
+              <CardHeader className='pb - 2'>;
+                <CardTitle className='text - base flex items - center justify - between'>;
+                  <div className='flex items - center gap - 2'>;
+                    <Link className='h - 4 w - 4 text - zion - purple' />;
+                    <span>{item.name || 'Campaign Link'}</span>                  </div>;
+                </CardTitle>;
+              </CardHeader>;
+              <CardContent className='pb - 4'>;
+                <div className='flex space - x-2'>;
+                  <Input;
+                    value = {item.link, }
+                    read_only;
+                    className='font - mono text - xs';
+                  />;
+                  <Button;
+                    variant='outline';
+                    size='sm';
+                    on_click={() => handleCopyLink (item.link)}                  >;
+                    <Copy className='h - 4 w - 4' />;
+                    <span className='sr - only'>Copy</span>;
+                  </Button>;
+                </div>;
+              </CardContent>;
+            </Card>))) : (
+          <Card className='bg - zion - blue / 20 border - dashed border - zion - blue - light'>;
+            <CardContent className='flex flex - col items - center justify - center p - 6'>;
+              <p className='text - zion - slate - light text - center mb - 4'>;
+                Create custom campaign links to track different marketing;
+                efforts;
+              </p>;
+              <Button;
+                variant='outline';
+                on_click={() => setIsDialogOpen (true)}
+                className='flex items - center gap - 2'              >;
+                <Plus className='h - 4 w - 4' />;
                 Create First Link;
               </Button>;
             </CardContent>;
-          </Card>;
-        )}
+          </Card>)}
       </div>;
-    </div>;
-  );
+    </div>);
+}//Add custom parameter if provided // Check condition
+if ( {) {
+  $2
 }
 }const new_link = {
   name: `$ {

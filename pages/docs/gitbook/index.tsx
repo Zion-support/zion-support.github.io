@@ -21,6 +21,7 @@ function list(dir: string, baseDir: string) {
         title: entry.name
         items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
     : []
+
   return { props: { sections }, revalidate: 600 }
 =======
 
@@ -70,6 +71,7 @@ export async function getStaticProps() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
+=======
 import fs from 'fs',
 import path from 'path',
 import Link from 'next / link',
@@ -101,6 +103,7 @@ export default /**
  * DocsIndex - Function description
  */
 function DocsIndex() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
 
     <div className="space - y-6">;

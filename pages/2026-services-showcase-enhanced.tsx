@@ -211,69 +211,9 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
     if (serviceVariant.includes('api')) return 'quantum-advanced';
     if (serviceVariant.includes('integration')) return 'quantum-advanced';
     if (serviceVariant.includes('analytics')) return 'neural';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-import React, { useState, useMemo } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion, AnimatePresence } from 'framer-motion',;
-import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react',;
-import Button from '../components/ui/Button',;
-import Card from '../components/ui/Card',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',;
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2',;
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2',;
-import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3',;
-import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3',;
-import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3',;
-export default function Services2026ShowcaseEnhancedPage() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<string>('name'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-
-  // Map service variants to supported card variants
-  const mapServiceVariantToCardVariant = (serviceVariant: string): 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'enterprise-futuristic' | 'quantum-futuristic' | 'holographic-futuristic' | 'quantum-iot' | 'quantum-logistics' | 'quantum-financial' | 'quantum-energy' | 'quantum-neural' | 'quantum-cyberpunk' => {
-    if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 'quantum-advanced',
-    if (serviceVariant.includes('quantum')) return 'quantum',
-    if (serviceVariant.includes('ai')) return 'ai-futuristic',
-    if (serviceVariant.includes('holographic')) return 'holographic',
-    if (serviceVariant.includes('neural')) return 'neural',
-    if (serviceVariant.includes('cyberpunk')) return 'cyberpunk',
-    if (serviceVariant.includes('enterprise')) return 'enterprise-futuristic',
-    if (serviceVariant.includes('cloud')) return 'quantum-advanced',
-    if (serviceVariant.includes('security')) return 'cyberpunk',
-    if (serviceVariant.includes('data')) return 'neural',
-    if (serviceVariant.includes('mobility')) return 'holographic',
-    if (serviceVariant.includes('network')) return 'quantum-advanced',
-    if (serviceVariant.includes('backup')) return 'quantum-advanced',
-    if (serviceVariant.includes('itsm')) return 'enterprise-futuristic',
-    if (serviceVariant.includes('monitoring')) return 'neural',
-    if (serviceVariant.includes('blockchain')) return 'quantum-advanced',
-    if (serviceVariant.includes('metaverse')) return 'holographic',
-    if (serviceVariant.includes('iot')) return 'quantum-iot',
-    if (serviceVariant.includes('edge')) return 'quantum-advanced',
-    if (serviceVariant.includes('ar')) return 'holographic',
-    if (serviceVariant.includes('digital-twin')) return 'quantum-advanced',
-    if (serviceVariant.includes('5g')) return 'quantum-advanced',
-    if (serviceVariant.includes('biometric')) return 'cyberpunk',
-    if (serviceVariant.includes('autonomous')) return 'ai-futuristic',
-    if (serviceVariant.includes('revolutionary')) return 'quantum-advanced',
-    if (serviceVariant.includes('consulting')) return 'enterprise-futuristic',
-    if (serviceVariant.includes('api')) return 'quantum-advanced',
-    if (serviceVariant.includes('integration')) return 'quantum-advanced',
-    if (serviceVariant.includes('analytics')) return 'neural',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return 'default'
   };
+
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -290,19 +230,6 @@ export default function Services2026ShowcaseEnhancedPage() {
     ...emergingTech2026ServicesV3;
     ...enterpriseIT2026ServicesV3
   ];
-=======
-  },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-
-  // Combine all 2026 services including new ones
-  const all2026Services = [
-    ...innovative2026MicroSaasServicesV2,
-    ...emergingTech2026ServicesV2,
-    ...enterpriseIT2026ServicesV2,
-    ...innovative2026AIServicesV3,
-    ...emergingTech2026ServicesV3,
-    ...enterpriseIT2026ServicesV3
-  ],
 
   // Enhanced categories for 2026
   const categories = [
@@ -314,7 +241,8 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'healthcare', name: 'Healthcare & Biotech', icon: '🏥', count: all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length },
     { id: 'financial', name: 'Financial Technology', icon: '💰', count: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length }
-];
+  ];
+
   const priceRanges = [
 
       }
@@ -533,12 +461,9 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     healthcareServices: all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length,
     financialServices: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length
-<<<<<<< HEAD
-};
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen">
@@ -735,6 +660,7 @@ if (return price >= 20000, ) {
           <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />;
           <meta name="twitter:image" content="https://ziontechgroup.com / og - image.svg" />;
         </Head>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Enhanced Header Section */}
         <section className="relative py - 32 px - 4 sm:px - 6 lg:px - 8 overflow - hidden">;
           <div className="absolute inset - 0 bg - gradient - to - r from - purple - 900 / 30 via - transparent to - cyan - 900 / 30"></div>;
@@ -985,7 +911,6 @@ if (return price >= 20000, ) {
                   <label className="block text - sm font - medium text - gray - 300 mb - 2">Price Range</label>;
                   <select;
                     value={selectedPriceRange}
-<<<<<<< HEAD
                     on_change={(e) => setSelectedPriceRange (e.target.value)}
                     className="w - full bg - gray - 800 / 50 border border - gray - 600 / 30 rounded - lg px - 3 py - 2 text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500";
                   >;
@@ -1223,253 +1148,6 @@ if (return price >= 20000, ) {
                       initial={{ opacity: 0, coordinate_y: 20 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       exit={{ opacity: 0, coordinate_y: -20 }}
-=======
-                    onChange={(e) => setSelectedPriceRange(e.target.value)}
-=======
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </select>;
-                </div>;
-                {/* Price Range Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
-                  <select
-                    value={selectedPriceRange  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    onChange={(e) => setSelectedPriceRange(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                  >
-                    {priceRanges.map((range) => (
-                      <option key={range.id} value={range.id}>
-<<<<<<< HEAD
-                        {range.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                {/* Sort Options */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-=======
-                        {range.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </option>;
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </select>;
-                </div>;
-                {/* Sort Options */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
-                  <select
-                    value={sortBy  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    onChange={(e) => setSortBy(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                  >
-                    {sortOptions.map((option) => (
-                      <option key={option.id} value={option.id}>
-<<<<<<< HEAD
-                        {option.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                {/* View Mode Toggle */}
-=======
-                        {option.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </option>;
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </select>;
-                </div>;
-                {/* View Mode Toggle */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
-                  <div className="flex bg-gray-800/50 border border-gray-600/30 rounded-lg p-1">
-                    <button
-                      onClick={() => setViewMode('grid')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${;
-                        viewMode === 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white';
-                      }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    >
-                      <Grid className="w-4 h-4 mx-auto" />
-                    </button>
-                    <button
-                      onClick={() => setViewMode('list')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${;
-                        viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white';
-                      }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    >
-                      <List className="w-4 h-4 mx-auto" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-<<<<<<< HEAD
-              {/* Results Count */}
-              <div className="text-center">
-                <p className="text-gray-400">
-                  Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
-=======
-              {/* Results Count */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <div className="text-center">
-                <p className="text-gray-400">
-                  Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  <span className="text-cyan-400 font-semibold">{all2026Services.length}</span> services
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-        {/* Enhanced Services Grid */}
-=======
-        {/* Enhanced Services Grid */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <AnimatePresence mode="wait">
-              {filteredServices.length === 0 ? (
-                <motion.div
-<<<<<<< HEAD
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-=======
-                  initial={{ opacity: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  animate={{ opacity: 1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  exit={{ opacity: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  className="text-center py-20"
-                >
-                  <div className="text-6xl mb-4">🔍</div>
-                  <h3 className="text-2xl font-semibold text-gray-300 mb-2">No services found</h3>
-                  <p className="text-gray-400">Try adjusting your search criteria or filters</p>
-                </motion.div>
-              ) : (
-                <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
-                  {filteredServices.map((service, index) => (
-                    <motion.div
-<<<<<<< HEAD
-                      key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       transition={{ duration: 0.5, delay: index * 0.1 }}
 
 
@@ -1533,7 +1211,6 @@ if (return price >= 20000, ) {
                       >;
                         <div className="p - 6">;
                           {/* Service Header */}
-<<<<<<< HEAD
                           <div className="flex items - start justify - between mb - 4">;
                             <div className="text - 4xl">{service.icon}</div>;
                             {service.popular && (

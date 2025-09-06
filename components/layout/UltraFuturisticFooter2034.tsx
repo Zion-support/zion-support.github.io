@@ -117,148 +117,15 @@ const quickLinks = [;
   { name: 'Resources', href: '/resources', icon: BookOpen },;
   { name: 'Case Studies', href: '/case-studies', icon: FileText },;
   { name: 'Blog', href: '/blog', icon: MessageSquare },;
-=======
-      {
-        name: 'AI Business Intelligence Pro'
-        href: '/ai-business-intelligence-pro'
-        price: '$299/month'
-      }
-      {
-        name: 'AI Video Generation Platform'
-        href: '/ai-video-generation-platform'
-        price: '$499/month'
-      }
-      {
-        name: 'AI-Powered Cybersecurity'
-        href: '/ai-cybersecurity-platform'
-        price: '$799/month'
-      }
-      {
-        name: 'AI Drug Discovery Platform'
-        href: '/ai-drug-discovery-platform'
-        price: '$3,999/month'
-      }
-    ]
-  },  {
-    title: '⚛️ Quantum & Emerging Tech'
-    icon: Atom
-    services: [      { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', price: '$299/month' }
-      { name: 'AI Video Generation Platform', href: '/ai-video-generation-platform', price: '$499/month' }
-      { name: 'AI-Powered Cybersecurity', href: '/ai-cybersecurity-platform', price: '$799/month' }
-      { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', price: '$3,999/month' }
-    ]
-  }
-    title: '⚛️ Quantum & Emerging Tech'
-    icon: Atom
-    services: [
-      {
-        name: 'Quantum Machine Learning'
-        href: '/quantum-machine-learning-platform'
-        price: '$1,999/month'
-      }
-      {
-        name: 'Blockchain AI Platform'
-        href: '/blockchain-ai-platform'
-        price: '$899/month'
-      }
-      {
-        name: 'Edge AI Computing'
-        href: '/edge-ai-computing-platform'
-        price: '$599/month'
-      }
-      {
-        name: 'AI Climate Modeling'
-        href: '/ai-climate-modeling-platform'
-        price: '$1,299/month'
-      }
-    ]
-  },  {
-    title: '🏙️ Enterprise IT Solutions'
-    icon: Cpu
-    services: [      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', price: '$1,999/month' }
-      { name: 'Blockchain AI Platform', href: '/blockchain-ai-platform', price: '$899/month' }
-      { name: 'Edge AI Computing', href: '/edge-ai-computing-platform', price: '$599/month' }
-      { name: 'AI Climate Modeling', href: '/ai-climate-modeling-platform', price: '$1,299/month' }
-    ]
-  }
-    title: '🏙️ Enterprise IT Solutions'
-    icon: Cpu
-    services: [
-      {
-        name: 'API Security & Monitoring'
-        href: '/api-security-monitoring-suite'
-        price: '$399/month'
-      }
-      {
-        name: 'Customer Success Automation'
-        href: '/customer-success-automation'
-        price: '$199/month'
-      }
-      {
-        name: 'HR Automation Suite'
-        href: '/hr-automation-suite'
-        price: '$179/month'
-      }
-      {
-        name: 'Project Management AI'
-        href: '/project-management-ai-platform'
-        price: '$199/month'
-      }
-    ]
-  },  {
-    title: '🛒 Business Automation'
-    icon: ShoppingCart
-    services: [      { name: 'API Security & Monitoring', href: '/api-security-monitoring-suite', price: '$399/month' }
-      { name: 'Customer Success Automation', href: '/customer-success-automation', price: '$199/month' }
-      { name: 'HR Automation Suite', href: '/hr-automation-suite', price: '$179/month' }
-      { name: 'Project Management AI', href: '/project-management-ai-platform', price: '$199/month' }
-    ]
-  }
-    title: '🛒 Business Automation'
-    icon: ShoppingCart
-    services: [
-      {
-        name: 'E-commerce Automation'
-        href: '/ecommerce-automation-platform'
-        price: '$249/month'
-      }
-      {
-        name: 'Marketing Automation Suite'
-        href: '/marketing-automation-suite'
-        price: '$279/month'
-      }
-      {
-        name: 'Financial Analytics Platform'
-        href: '/financial-analytics-platform'
-        price: '$349/month'
-      }
-      {
-        name: 'Legal Document Automation'
-        href: '/legal-document-automation'
-        price: '$399/month'
-      }
-    ]
-  },];      { name: 'E-commerce Automation', href: '/ecommerce-automation-platform', price: '$249/month' }
-      { name: 'Marketing Automation Suite', href: '/marketing-automation-suite', price: '$279/month' }
-      { name: 'Financial Analytics Platform', href: '/financial-analytics-platform', price: '$349/month' }
-      { name: 'Legal Document Automation', href: '/legal-document-automation', price: '$399/month' }
-    ]
-  }
-const quickLinks = [
-  { name: 'Home', href: '/', icon: Home }
-  { name: 'Services', href: '/services', icon: Briefcase }
-  { name: 'Solutions', href: '/solutions', icon: Target }
-  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign }
-  { name: 'Resources', href: '/resources', icon: BookOpen }
-  { name: 'Case Studies', href: '/case-studies', icon: FileText }
-  { name: 'Blog', href: '/blog', icon: MessageSquare }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+=======
   { label: 'Happy Customers', value: '50K+', icon: Users },
   { label: 'Services Delivered', value: '200+', icon: Rocket },
   { label: 'Countries Served', value: '45+', icon: Globe },
   { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
+
 const companyLinks = [;
   { name: 'About Us', href: '/about', icon: Users },;
   { name: 'Careers', href: '/careers', icon: Briefcase },;
@@ -267,6 +134,7 @@ const companyLinks = [;
   { name: 'Support', href: '/support', icon: LifeBuoy },;
   { name: 'Status', href: '/status', icon: Activity },;
 ];
+
 const socialLinks = [;
   {;
     name: 'LinkedIn',;
@@ -286,6 +154,7 @@ const socialLinks = [;
   },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
 ];
+
 const certifications = [;
   'ISO 27001 Certified',;
   'SOC 2 Type II Compliant',;
@@ -295,6 +164,7 @@ const certifications = [;
   'FedRAMP Authorized',;
   'Quantum Security Certified',;
   'AI Ethics Compliant',];];
+
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },;
   { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
@@ -302,14 +172,18 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
 ];
+
 const certifications = [;
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant';
 ];
+
 const stats = [;
   { label: 'Happy Customers', value: '50K+', icon: Users },;
   { label: 'Services Delivered', value: '200+', icon: Rocket },;
   { label: 'Countries Served', value: '45+', icon: Globe },;
   { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 export default function UltraFuturisticFooter2034() {;
   return (
 
@@ -339,7 +213,9 @@ export default function UltraFuturisticFooter2034() {;
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>;
       </div>;
+
       <div className="relative z-10">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
@@ -384,7 +260,10 @@ export default function UltraFuturisticFooter2034() {;
                 </p>
                 {/* Stats */}
                 <div className='grid grid-cols-2 gap-4'>                  {stats.map((stat, index) => (              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+                className="space-y-6"
+              >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <div className="flex items-center space-x-3">
                   <div className="relative">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
@@ -422,11 +301,13 @@ export default function UltraFuturisticFooter2034() {;
                     </p>;
                   </div>;
                 </div>;
+
                 <p className='text-gray-300 leading-relaxed'>;
                   Leading provider of cutting-edge AI, quantum computing, and;
                   emerging technology solutions. Empowering businesses with;
                   innovative tools for the future.;
                 </p>;
+
                 {/* Stats */}
 
                   ))}
@@ -468,38 +349,13 @@ export default function UltraFuturisticFooter2034() {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
                 </div>
-=======
-                      <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>
 
-                    </motion.div>
-
-                  ))}
-                </div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Contact Info */}
-<<<<<<< HEAD
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
                     <Phone className="w-4 h-4" />
-=======
-                <div className='space-y-3'>
-                  <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>
-                    <Phone className='w-4 h-4' />
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <span>{contactInfo.mobile}</span>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">
                     <Mail className="w-4 h-4" />
@@ -570,7 +426,7 @@ export default function UltraFuturisticFooter2034() {;
 
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
-transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                      transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                       viewport={{ once: true }}
 
 
@@ -580,8 +436,8 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
-                      </div>
-                    </motion.div>
+                      </div>;
+                    </motion && motion.div>;
                   ))}
 
                 </div>;

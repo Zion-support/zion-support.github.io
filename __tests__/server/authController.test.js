@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-
-describe('Basic Test', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
-=======
 const { describe, it, expect, vi, beforeEach } = require(
 
 
@@ -16,7 +6,7 @@ const { describe, it, expect, vi, beforeEach } = require(
   '@sendgrid/mail')'
   '../../server/controllers/authController')'
   '@sendgrid/mail', () => ({'
-  authController.forgotPassword', () => {'
+  authController && authController.forgotPassword', () => {'
   'node-mocks-http')'
   @sendgrid/mail'
   '

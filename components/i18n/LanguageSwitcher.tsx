@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -56,6 +60,7 @@ export default function LanguageSwitcher() {;
     document.documentElement.setAttribute('lang', lng);
 
 import {supportedLocales, isRtl} from '../../utils/i18n';
+
 const localeToFlag: Record<string, string> = {;
   en: 'us',;
   pt: 'br',;
@@ -72,6 +77,7 @@ export default function LanguageSwitcher() {;
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n && i18n.resolvedLanguage || i18n && i18n.language || 'en';
+
   const changeLanguage = async (lng: string) => {;
     await i18n && i18n.changeLanguage(lng),;
     localStorage && localStorage.setItem('preferredLanguage', lng);
@@ -159,6 +165,8 @@ export default function LanguageSwitcher() {;
     </div>
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import {use_translation} from 'react - i18next';
 import i18n from '../../utils / i18n';
 import {supported_locales, is_rtl} from '../../utils / i18n';
@@ -254,37 +262,6 @@ function LanguageSwitcher() {
             </li>))}
         </ul>)}
     </div>);
-              >
-                <span className={_`fi fi-${localeToFlag[lng]}`}></span>
-                <span>{_t(localeLabelKey[lng])}</span>
-=======
-      >
-        <span className={`fi fi-${localeToFlag[current] |'us'}`}></span>
-        <span>{t(localeLabelKey[current] |'lang.english')}</span>
-        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" className="opacity-70"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.187l3.71-3.955a.75.75 0 011.08 1.04l-4.24 4.52a.75.75 0 01-1.08 0l-4.24-4.52a.75.75 0 01.02-1.06z" clipRule="evenodd" /></svg>
-      </button>
-      {open && (
-        <ul role="listbox" className="absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded shadow-lg z-50">
-          {supportedLocales.map((lng) => (
-            <li key={lng}>
-              <button
-                role="option"
-                aria-selected={current.startsWith(lng)}
-                className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900"
-                onClick={() => changeLanguage(lng)}
-              >
-                <span className={`fi fi-${localeToFlag[lng]}`}></span>
-                <span>{t(localeLabelKey[lng])}</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-<<<<<<< HEAD
-  )
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

@@ -8,77 +8,77 @@ import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 export default [
-  js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
-      '.next/**',
-      'out/**',
       'dist/**',
       'build/**',
+      '.next/**',
       'node_modules/**',
-      'coverage/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
       'scripts/**',
       'automation/**',
-      'backup-merge-conflicts/**',
-      '**/*.backup.*',
-      '**/*.old.*',
-      '**/*.disabled.*',
-      '**/*.broken.*',
-      '**/*.corrupted.*',
-      '**/*.temp.*',
-      '**/*.test.*',
-      '**/*.spec.*',
-      '**/performance-*.txt',
-      '**/zion-os/**',
-      '**/zion-website/**',
-      '**/zion-academy/**',
-      '**/zion-film/**',
-      '**/zion-ai-assistant/**',
-      '**/*.min.js',
-      '**/*.bundle.js',
-      '**/public/**',
-      '**/static/**',
       'temp_exclude/**',
-      'test_build/**',
-      'tests/**',
-      'types/**',
-      'utils/**',
-      'vite.config.js',
-      'vite.config.ts',
+      'src.disabled/**',
+      'src.pages.disabled/**',
+      'pages-disabled/**',
+      'zion-os/**',
       'zion-website/**',
       'zion_academy/**',
-      'ultimate-*.cjs',
-      'test-next.js',
-      'src_backup_temp/**',
+      'zion-film/**',
+      'zion-ai-assistant/**',
+      'backup-problematic-files/**',
+      'broken_files_backup/**',
+      'corrupted-files-backup/**',
       'temp-backup/**',
-      'temp_components/**',
-      'temp_conflicts/**',
-      'temp_working/**',
-      'supabase/**',
-      'super-syntax-fixer.cjs',
-      'system-monitor.cjs',
-      'tailwind.config.js',
-      'start-dev.js',
-      'structural-fix.js',
-      'types/service-variants.js',
-      'utils/accessibility-utils.js',
-      'utils/csrf-protection.js',
-      'utils/dynamic-imports.js',
-      'utils/env-security.js',
-      'utils/input-validation.js',
-      'utils/performance-monitor.js',
-      'utils/performance-optimizations.js',
-      'utils/rate-limiting.js',
-      'utils/security-headers.js',
-      'utils/seo-utils.js',
-      'zion-website/**',
-      'zion_academy/**'
-    ],
+      'temp_exclude/**',
+      'src_backup/**',
+      'src_backup_temp/**',
+      'recovered-branches/**',
+      'workflow_templates/**',
+      'automation_logs/**',
+      'automation_backup/**',
+      'apps.backup/**',
+      'apps.disabled/**',
+      'api.disabled/**',
+      'api.disabled.temp/**',
+      'api.backup/**',
+      'components.disabled/**',
+      'components.disabled_full/**',
+      'contracts.disabled/**',
+      'cypress_backup/**',
+      'cypress.disabled/**',
+      'data_backup/**',
+      'data.disabled/**',
+      'tests.disabled/**',
+      'zion-os.disabled/**',
+      'temp_exclude/**',
+      'test_build/**',
+      'cache/**',
+      'automation/**',
+      'scripts/**',
+      '*.backup.*',
+      '*.disabled.*',
+      '*.temp.*',
+      '*.old.*',
+      '*.bak.*',
+      '*.backup',
+      '*.disabled',
+      '*.temp',
+      '*.old',
+      '*.bak'
+    ]
+  },
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2020
+      },
       parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
@@ -86,80 +86,40 @@ export default [
         ecmaFeatures: {
           jsx: true
         }
-      },
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        React: 'readonly',
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly'
       }
     },
     plugins: {
-      '@typescript-eslint': tseslint,
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      '@typescript-eslint': tseslint,
       'jsx-a11y': jsxA11y
     },
     rules: {
-      ...tseslint.configs.recommended.rules,
+      ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      ...tseslint.configs.recommended.rules,
       ...jsxA11y.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }
       ],
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-undef': 'off',
-      'no-unused-vars': 'off',
-      'no-console': 'warn',
+      'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'no-console': 'warn',
+      'no-debugger': 'error',
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'object-shorthand': 'error',
+      'prefer-template': 'error'
     },
     settings: {
       react: {
         version: 'detect'
       }
-    }
-  },
-  {
-    files: [
-      '**/*.cjs',
-      '**/scripts/**/*.js',
-      '**/automation/**/*.js',
-      '**/pm2/**/*.js'
-    ],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: 'script',
-      globals: {
-        ...globals.node,
-        console: 'readonly',
-        process: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        Buffer: 'readonly',
-        global: 'readonly'
-      }
-    },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'no-undef': 'error'
     }
   }
 ];

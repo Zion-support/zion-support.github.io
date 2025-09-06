@@ -15,6 +15,7 @@ module && module.exports = {
     {
       name: "auto-fix",
       script: "scripts/pm2/auto-fix && fix.js",
+=======
       name: "auto - fix",
       script: "scripts / pm2 / auto - fix.js",
 
@@ -642,9 +643,6 @@ module.exports = {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
 =======
 
 
@@ -700,8 +698,6 @@ module.exports = {
 
 
 =======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         NODE_ENV: "development"
         PM2_PROCESS_NAME: "code-quality-monitor"
         QUALITY_THRESHOLD: "80"

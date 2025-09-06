@@ -32,10 +32,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
     }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   if (req && req.method === "PATCH") {
     const body = req && req.body as any;
     if (body && body.status && !isMilestoneStatus(body && body.status)) {
       res && res.status(400).json({ error: "Invalid status" });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return;
     }
     // Enforce status transition rules
@@ -48,8 +51,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
       }
     }
-<<<<<<< HEAD
-const updated = updateMilestone(project, milestoneId, body);
+    const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {
 
 

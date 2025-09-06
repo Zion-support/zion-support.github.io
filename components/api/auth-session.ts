@@ -30,10 +30,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.status(200).json({ message: 'OK' });
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 res.status (200).json ({ message: 'OK' });    return;
   }
   res.status (200).json ({ message: 'OK' });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

@@ -1,11 +1,13 @@
 // Comprehensive AI Services 2030 - Zion Tech Group
 // Cutting-edge artificial intelligence and machine learning solutions
+
 export interface ServiceContact {
   "phone": string;
   email: string;
   website: string;
   address: string
 }
+
 export interface AIService {
   "id": number;
   name: string;
@@ -41,6 +43,7 @@ const "zionContact": ServiceContact = {
   phone: "+1 302 464 0950","
   "email": "kleber@ziontechgroup && ziontechgroup.com","
   "website": "https://ziontechgroup && ziontechgroup.com",
+
   ;"
   "address": "364 E Main St STE 1008 Middletown DE 19709"}};
 // Comprehensive AI Services 2030export const "comprehensiveAIServices2030": AIService[] = [{

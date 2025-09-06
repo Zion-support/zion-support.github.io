@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -28,7 +32,6 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 
-"use client";
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -76,6 +79,8 @@ import {
   Factory
   Truck
   CreditCard
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
 import {;
   Menu,;
   X,;
@@ -93,10 +98,7 @@ import {;
   Factory,;
   Truck,;
   CreditCard,;
-} from "lucide-react";
-
-  CreditCard,;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "lucide-react";
 
 export default function Header() {;
@@ -161,18 +163,23 @@ function Header() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm">
             <div className="flex items-center space-x-6 mb-2 md:mb-0">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
+              <div className="flex items-center">
+                <Phone className="w-4 h-4 mr-2" />
+                <a href="tel:+13024640950" className="hover:text-blue-300">+1 302 464 0950</a>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+              <div className="flex items-center">
+                <Mail className="w-4 h-4 mr-2" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">kleber@ziontechgroup.com</a>
               </div>
             </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+            <div className="flex items-center space-x-4">
+              <span className="text-blue-200">24/7 Support Available</span>
+              <div className="flex space-x-2">
+                <a href="#" className="hover:text-blue-300"><Facebook className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-blue-300"><Twitter className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-blue-300"><Linkedin className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>
+              </div>
             </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -188,6 +195,7 @@ function Header() {
     window && window.addEventListener("scroll", handleScroll);
     return () => window && window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const servicesDropdown = [;
     {;
       title: "Web Development",;
@@ -226,6 +234,7 @@ function Header() {
       icon: Zap,;
     },;
   ];
+
   const solutionsDropdown = [;
     {;
       title: "Enterprise Solutions",;
@@ -252,6 +261,7 @@ function Header() {
       icon: GraduationCap,;
     },;
   ];
+
   const industriesDropdown = [;
     { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },;
     { name: "Logistics", href: "/industries/logistics", icon: Truck },;
@@ -260,6 +270,7 @@ function Header() {
     { name: "Education", href: "/industries/education", icon: GraduationCap },;
     { name: "Retail", href: "/industries/retail", icon: ShoppingCart },;
   ];
+
   const navigation = [;
     { name: "Home", href: "/" },;
     {;
@@ -277,10 +288,12 @@ function Header() {
     { name: "Industries", href: "/industries" },;
     { name: "Contact", href: "/contact" },;
   ];
+
   const handleServiceClick = (href: string) => {;
     closeMenu();
     window && window.location.href = href;
   };
+
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -291,6 +304,7 @@ function Header() {
               Zion Tech Group;
             </Link>;
           </div>;
+
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">;
             {navigation && navigation.map((item) => (;
@@ -335,6 +349,8 @@ function Header() {
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">;
             <Link
@@ -367,6 +383,8 @@ function Header() {
             </Link>
           </div>
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -384,13 +402,7 @@ function Header() {
 
 
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
-              {navigation.map((item) => (
-                <div key={item.name}>
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isMenuOpen && (;
@@ -398,7 +410,7 @@ function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-className="lg:hidden bg-white shadow-lg">;
+              className="lg:hidden bg-white shadow-lg">;
               <div className="px-4 py-6 space-y-4">;
                 {navigation && navigation.map((item) => (;
                   <Link
@@ -408,15 +420,6 @@ className="lg:hidden bg-white shadow-lg">;
                     className="block text-gray-700 hover:text-blue-600 font-medium">;
                     {item && item.name}
                   </Link>;
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    onClick={closeMenu}
-                    className="block text-gray-700 hover:text-blue-600 font-medium"
-                  >
-                    {item.name}
-                  </Link>
-
                 ))}
                 <Link
                   href="/contact"

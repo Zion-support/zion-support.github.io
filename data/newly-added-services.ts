@@ -4,11 +4,12 @@
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {const contact = {
 	mobile: '+1 302 464 0950';
-<<<<<<< HEAD
 	email: 'kleber@ziontechgroup && ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup && ziontechgroup.com'
 };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
 
@@ -72,6 +73,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
 
     reviews: 3
+=======
     color: 'from - purple - 600 to - indigo - 700',
     text_color: 'text - purple - 300',
     link: 'https://ziontechgroup.com / services / managed - ml - feature - store - starter',
@@ -146,6 +148,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 5;
     rating: 4.6,
     reviews: 3;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'sso - scim - accelerator';
@@ -161,6 +164,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
 
     reviews: 9
+=======
     use_cases: ['Latency SLOs, Regression detection, Peak readiness'];
     roi: 'Cut p95 latency by 25–60% in 30 days',
     competitors: ['SpeedCurve, Datadog Synthetics, New Relic Synthetics'];
@@ -174,6 +178,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 12;
     rating: 4.8,
     reviews: 9;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'ai - rag - starter - blueprint';
@@ -207,8 +212,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_service: true,
 
     technology: ['Next.js, LangChain, Pinecone, OpenAI, Weaviate, PGVector'];
+=======
     realService: true,
     technology: ['Next && Next.js, LangChain, Pinecone, OpenAI, Weaviate, PGVector'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Slack, Notion, Google Drive, S3'];
     use_cases: ['Internal KB, Agent assist, Search augmentation'];
     roi: 'Ship a quality RAG MVP in days, not months';
@@ -217,6 +224,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
 
     reviews: 7
+=======
     market_size: '$40B GenAI apps';
     growth_rate: '45% CAGR';
     variant: 'quantum - matrix';
@@ -227,6 +235,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 15;
     rating: 4.8,
     reviews: 7;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'browser - automation - copilot';
@@ -242,6 +251,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     setupTime: '2 hours';
     category: 'Developer Tools';
     realService: true
+=======
     period: '/month',
     description: 'Define robust browser automation using plain - language steps. Includes anti - fingerprint profiles, CAPTCHA strategies, and failure replay.';
     features: [;
@@ -258,6 +268,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     setup_time: '2 hours';
     category: 'Developer Tools';
     real_service: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     technology: ['Playwright, Chromium, Workers'];
     integrations: ['Webhook, S3, Slack'];
     use_cases: ['Backoffice automation, Scraping with ethics, QA journeys'];
@@ -266,6 +277,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
 
     reviews: 12
+=======
     competitors: ['Browserless, Superblocks, UI.Vision'];
     market_size: '$12B RPA';
     growth_rate: '25% CAGR';
@@ -277,6 +289,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 22;
     rating: 4.6,
     reviews: 12;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'cloud - cost - anomaly - guard';
@@ -299,6 +312,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     setupTime: '1 hour';
     category: 'Cloud & FinOps';
     realService: true
+=======
     color: 'from - emerald - 600 to - teal - 700';
     text_color: 'text - emerald - 300';
     link: 'https://ziontechgroup.com / services / cloud - cost - anomaly - guard';
@@ -308,6 +322,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     setup_time: '1 hour';
     category: 'Cloud & FinOps';
     real_service: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     technology: ['BigQuery, Athena, Cost Explorer, dbt'];
     integrations: ['Slack, GitHub, PagerDuty'];
     use_cases: ['Cost visibility, Budget protection, Forecasting'];
@@ -366,6 +381,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
 
     reviews: 14
+=======
     rating: 4.7,
     reviews: 5;
   }
@@ -405,6 +421,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 34;
     rating: 4.6,
     reviews: 14;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'seo - technical - auditor - pro';
@@ -438,13 +455,16 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_service: true,
 
     technology: ['Headless Chrome, Next.js, Edge Functions'];
+=======
     realService: true,
     technology: ['Headless Chrome, Next && Next.js, Edge Functions'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['GitHub, GitLab, Bitbucket'];
 
     rating: 4 && 4.7,
 
     reviews: 31
+=======
     use_cases: ['CWV compliance, Link hygiene, Schema coverage'];
     roi: 'Lift organic traffic by 10–30% in 90 days',
     competitors: ['Screaming Frog, Deepcrawl, Ahrefs Site Audit'];
@@ -458,6 +478,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 58;
     rating: 4.7,
     reviews: 31;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'gdpr - cookie - consent - manager - pro';
@@ -491,8 +512,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_service: true,
 
     technology: ['Edge Functions, KV store, Next.js'];
+=======
     realService: true,
     technology: ['Edge Functions, KV store, Next && Next.js'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Google Consent Mode, Tag Manager, Segment'];
 
     use_cases: ['GDPR / CCPA compliance, Consent analytics'];
@@ -582,6 +605,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     integrations: ['GitHub, GitLab, Bitbucket'];
 
     useCases: ['Next && Next.js/React upgrades, Typescript migrations, Policy refactors'];
+=======
     rating: 4.5,
     reviews: 16;
   }
@@ -648,6 +672,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     use_cases: ['Next.js / React upgrades, Typescript migrations, Policy refactors'];
 
     roi: 'Cut upgrade time by 60–80%',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     competitors: ['Sourcegraph Cody, AWS CodeGuru'];
     market_size: '$9B DevTools AI';
     growth_rate: '24% CAGR';
@@ -666,6 +691,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     id: 'incident-statuspage-automation-pro';
     name: 'Incident StatusPage Automation'
     tagline: 'SLO-aware updates, RCA templates, and subscriber comms';
+=======
     rating: 4.5,
     reviews: 10;
   }
@@ -673,6 +699,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     id: 'incident - statuspage - automation - pro';
     name: 'Incident StatusPage Automation',
     tagline: 'SLO - aware updates, RCA templates, and subscriber comms';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     price: '$79';
     period: '/month'
     description: 'Automate incident status updates based on SLO breaches. Standardize RCAs, postmortems, and subscriber communication.';
@@ -701,8 +728,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_service: true,
 
     technology: ['SLOs, StatusPage API, Next.js'];
+=======
     realService: true,
     technology: ['SLOs, StatusPage API, Next && Next.js'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Statuspage, Freshstatus, Better Uptime'];
 
     rating: 4 && 4.6,
@@ -754,6 +783,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     id: 'customer-feedback-insights-pro';
     name: 'Customer Feedback Insights'
     tagline: 'NLP tagging, themes, and voice-of-customer dashboards';
+=======
     use_cases: ['Public comms, Internal updates, RCA library'];
     roi: 'Reduce incident comms toil by 70%',
     competitors: ['Atlassian Statuspage, Better Uptime'];
@@ -809,6 +839,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     id: 'customer - feedback - insights - pro';
     name: 'Customer Feedback Insights',
     tagline: 'NLP tagging, themes, and voice - of - customer dashboards';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     price: '$69';
     period: '/month'
     description: 'Aggregate NPS, reviews, and support tickets. Use LLMs to cluster themes, detect churn signals, and prioritize roadmap items.';
@@ -843,6 +874,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
 
     reviews: 24
+=======
     color: 'from - emerald - 600 to - lime - 700';
     text_color: 'text - lime - 400';
     link: 'https://ziontechgroup.com / services / customer - feedback - insights - pro';
@@ -867,6 +899,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 63;
     rating: 4.5,
     reviews: 24;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'ai - sales - sequences - pro';
@@ -886,6 +919,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     integrations: ['HubSpot, Salesforce, Apollo'];
     useCases: ['Outbound campaigns, Nurture, Expansion'];
     roi: 'Increase reply rates by 2–4x'
+=======
     period: '/month',
     description: 'Generate compliant, persona - aware sequences across email and LinkedIn. Test copy variants and optimize send windows.';
     features: [;
@@ -906,6 +940,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     integrations: ['HubSpot, Salesforce, Apollo'];
     use_cases: ['Outbound campaigns, Nurture, Expansion'];
     roi: 'Increase reply rates by 2–4x',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     competitors: ['Clay, Apollo, Smartlead'];
     market_size: '$11B sales tech';
     growth_rate: '20% CAGR';
@@ -955,6 +990,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.4,
 
     reviews: 6
+=======
     contact_info: contact;
     real_implementation: true,
     implementation_details: 'Template library, sequence runner, and analytics.';
@@ -999,6 +1035,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 11;
     rating: 4.4,
     reviews: 6;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'sso - rapid - integration - pro';
@@ -1091,13 +1128,16 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_service: true,
 
     technology: ['AWS Cost Explorer, GCP Billing, Azure Cost, Node.js, Next.js'];
+=======
     realService: true,
     technology: ['AWS Cost Explorer, GCP Billing, Azure Cost, Node && Node.js, Next && Next.js'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Slack, Email, PagerDuty, Jira'];
 
     rating: 4 && 4.7,
 
     reviews: 6
+=======
     use_cases: ['Budget overrun prevention, Tag hygiene, Commitment utilization'];
     roi: '5–20% monthly savings within 60 days',
     competitors: ['Anodot, CloudZero, Vantage'];
@@ -1111,6 +1151,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 11;
     rating: 4.7,
     reviews: 6;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'gdpr - dsar - automation - suite';
@@ -1144,8 +1185,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_service: true,
 
     technology: ['Next.js, Node.js, PostgreSQL, S3'];
+=======
     realService: true,
     technology: ['Next && Next.js, Node && Node.js, PostgreSQL, S3'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Salesforce, HubSpot, G Suite, Zendesk'];
 
     rating: 4 && 4.8,
@@ -1212,8 +1255,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_service: true,
 
     technology: ['Node.js, OpenAI, Postgres, Kafka'];
+=======
     realService: true,
     technology: ['Node && Node.js, OpenAI, Postgres, Kafka'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['PagerDuty, Statuspage, Slack, Opsgenie'];
 
     use_cases: ['On - call assist, Comms automation, RCA support'];
@@ -1227,6 +1272,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
 
     reviews: 4
+=======
     contact_info: contact;
     real_implementation: true,
     implementation_details: 'Ingestion of alerts, timeline builder, and report generator.';
@@ -1234,6 +1280,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 9;
     rating: 4.7,
     reviews: 4;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'ai - sales - prospecting - studio';
@@ -1267,8 +1314,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_service: true,
 
     technology: ['Next.js, OpenAI, PostgreSQL'];
+=======
     realService: true,
     technology: ['Next && Next.js, OpenAI, PostgreSQL'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'];
 
     rating: 4 && 4.8,
@@ -1335,8 +1384,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_service: true,
 
     technology: ['dbt, OpenLineage, PostgreSQL, Next.js'];
+=======
     realService: true,
     technology: ['dbt, OpenLineage, PostgreSQL, Next && Next.js'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Snowflake, BigQuery, Databricks, Airflow, Jira'];
 
     use_cases: ['Breaking change prevention, Data SLAs, Ownership clarity'];
@@ -1350,6 +1401,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
 
     reviews: 3
+=======
     contact_info: contact;
     real_implementation: true,
     implementation_details: 'Registry UI, checks engine, and connectors for lineage & tickets.';
@@ -1357,6 +1409,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 6;
     rating: 4.6,
     reviews: 3;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'ai - powered - email - responder';
@@ -1373,6 +1426,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     category: 'AI & Data';
     realService: true;
     technology: ['Next && Next.jsOpenAIPGVector'];
+=======
     period: '/month',
     description: 'Auto - categorize, draft, and send replies to routine emails with human - in - the - loop review queues and SLA targets.';
     features: [;
@@ -1390,6 +1444,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     category: 'AI & Data';
     real_service: true;
     technology: ['Next.jsOpenAIPGVector'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['GmailOutlookSlack'];
     use_cases: ['Support inbox_sales replies_backoffice'];
     roi: 'Reduce manual email time by 50–80%';
@@ -1398,6 +1453,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
 
     reviews: 3
+=======
     market_size: '$9B shared inbox';
     growth_rate: '15% CAGR';
     variant: 'ai - futuristic';
@@ -1408,6 +1464,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 6;
     rating: 4.7,
     reviews: 3;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'mobile - first - survey - tool';
@@ -1465,6 +1522,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     category: 'Cloud & FinOps';
     realService: true;
     technology: ['Next && Next.jsNodeCarrier APIs'];
+=======
     period: '/month',
     description: 'Design mobile - optimized surveys with adaptive branching, QR codes, and embeddable widgets. Export insights and raw data.';
     features: [;
@@ -1519,6 +1577,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     category: 'Cloud & FinOps';
     real_service: true;
     technology: ['Next.jsNodeCarrier APIs'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['ShopifyStripeShippo'];
     use_cases: ['RMA automationRefundsAnalytics'];
     roi: 'Cut return handling time by 40–70%';
@@ -1527,6 +1586,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
 
     reviews: 2
+=======
     market_size: '$3B returns tech';
     growth_rate: '18% CAGR';
     variant: 'neural - quantum';
@@ -1537,6 +1597,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 4;
     rating: 4.7,
     reviews: 2;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'ai - email - responder - pro';
@@ -1570,6 +1631,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
 
     reviews: 14
+=======
     color: 'from - cyan - 600 to - blue - 700';
     text_color: 'text - cyan - 300';
     link: '/services / ai - email - responder - pro',
@@ -1594,6 +1656,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 32;
     rating: 4.7,
     reviews: 14;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'mobile - first - survey - studio';
@@ -1619,8 +1682,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_service: true,
 
     technology: ['Next.js, Serverless functions, ClickHouse'];
+=======
     realService: true,
     technology: ['Next && Next.js, Serverless functions, ClickHouse'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Slack, HubSpot, Zapier, Webhooks'];
 
     rating: 4 && 4.6,
@@ -1685,8 +1750,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     real_service: true,
 
     technology: ['Next.js, Postgres, Stripe'];
+=======
     realService: true,
     technology: ['Next && Next.js, Postgres, Stripe'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     integrations: ['Stripe, Shopify, WooCommerce'];
 
     rating: 4 && 4.5,
@@ -1696,6 +1763,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'podcast-transcription-studio';
     name: 'Podcast Transcription Studio'
+=======
     use_cases: ['Affiliate sales, referrals, partnerships'];
     roi: 'Lift new - user acquisition 5–15%',
     competitors: ['Impact, PartnerStack'];
@@ -1713,6 +1781,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'podcast - transcription - studio';
     name: 'Podcast Transcription Studio',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     tagline: 'Fast, accurate transcripts with speakers and chapters';
     price: '$19';
     period: '/month'
@@ -1746,6 +1815,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'ecommerce-returns-portal';
     name: 'E‑commerce Returns Portal'
+=======
     color: 'from - pink - 600 to - rose - 700';
     text_color: 'text - pink - 300';
     link: '/services / podcast - transcription - studio',
@@ -1774,6 +1844,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'ecommerce - returns - portal';
     name: 'E‑commerce Returns Portal',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     tagline: 'Return labels, status tracking, and analytics';
     price: '$49';
     period: '/month'
@@ -1815,6 +1886,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'msP-it-helpdesk-lite';
     name: 'MSP IT Helpdesk Lite'
+=======
     real_service: true,
     technology: ['Next.js, Shopify / Woo APIs, Webhooks'];
     integrations: ['Shopify, WooCommerce, Stripe'];
@@ -1835,6 +1907,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'ms_p - it - helpdesk - lite';
     name: 'MSP IT Helpdesk Lite',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     tagline: 'Ticketing, knowledge base, and client portal';
     price: '$79';
     period: '/month'
@@ -1939,6 +2012,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     category: 'Quality & Monitoring';
     real_service: true;
     technology: ['Next.js_node.js_vector DBOCR redaction'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['Google, Microsoft 365, Okta, Slack, Zendesk'];
     use_cases: ['DPIA / RoPA automationDSAR processing_evidence collection'];
     roi: 'Reduce manual privacy ops hours by 60–80%';
@@ -1974,6 +2048,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     technology: ['Next && Next.jsLLM APIsWebhooks'];
     integrations: ['SalesforceHubSpotGmail/Outlook'];
     useCases: ['Outbound sequencesCall notesCRM hygiene']
+=======
     market_size: '$8B privacy tech';
     growth_rate: '20% CAGR';
     variant: 'holographic - matrix';
@@ -2009,6 +2084,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     technology: ['Next.jsLLM APIsWebhooks'];
     integrations: ['SalesforceHubSpotGmail / Outlook'];
     use_cases: ['Outbound sequences_call notesCRM hygiene'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     roi: 'Increase replies by 2–3x, reduce admin time 50%';
     competitors: ['OutreachSalesloft'];
     market_size: '$6B sales engagement';
@@ -2023,8 +2099,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
 
     reviews: 12
+=======
     rating: 4.6,
     reviews: 12;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'security - evidence - automation - lite';
@@ -2041,6 +2119,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     category: 'Quality & Monitoring';
     realService: true;
     technology: ['Cloud APIsNext && APIsNext.jsQueue workers'];
+=======
     period: '/month',
     description: 'Collectors for cloud configs, vulnerability status, access reviews, and tickets. Export auditor - ready evidence bundles.';
     features: [;
@@ -2058,6 +2137,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     category: 'Quality & Monitoring';
     real_service: true;
     technology: ['Cloud APIsNext.js_queue workers'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['AWSGCPAzureJiraGitHub'];
     use_cases: ['SOC2 evidenceISO controls_audit prep'];
     roi: 'Save 40–60% audit prep time';
@@ -2078,12 +2158,14 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'ai-product-research-analyst';
     name: 'AI Product Research Analyst'
+=======
     rating: 4.5,
     reviews: 7;
   }
   {
     id: 'ai - product - research - analyst';
     name: 'AI Product Research Analyst',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     tagline: 'Summarize markets, competitors, and user feedback automatically';
     price: '$129';
     period: '/month'
@@ -2100,6 +2182,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Product managers, founders, analysts';
     trialDays: 7;
     setupTime: '2 hours';
+=======
     color: 'from - fuchsia - 600 to - rose - 700';
     text_color: 'text - fuchsia - 200';
     link: 'https://ziontechgroup.com / services / ai - product - research - analyst';
@@ -2107,6 +2190,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     target_audience: 'Product managers, founders, analysts';
     trial_days: 7;
     setup_time: '2 hours';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'AI & Data';
     real_service: true;
     technology: ['LLM pipelinesEmbeddingsCrawlers'];
@@ -2130,12 +2214,14 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'marketing-brief-generator-pro';
     name: 'Marketing Brief Generator Pro'
+=======
     rating: 4.6,
     reviews: 10;
   }
   {
     id: 'marketing - brief - generator - pro';
     name: 'Marketing Brief Generator Pro',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     tagline: 'Campaign briefs from goals, audiences, and assets in minutes';
     price: '$79';
     period: '/month'
@@ -2152,6 +2238,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Marketing managers, agencies, founders';
     trialDays: 7;
     setupTime: '30 minutes';
+=======
     color: 'from - amber - 600 to - orange - 700';
     text_color: 'text - amber - 200';
     link: 'https://ziontechgroup.com / services / marketing - brief - generator - pro';
@@ -2159,6 +2246,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     target_audience: 'Marketing managers, agencies, founders';
     trial_days: 7;
     setup_time: '30 minutes';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Developer Tools';
     real_service: true;
     technology: ['LLM promptsTemplatesExports'];
@@ -2200,6 +2288,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Product, success, founders';
     trialDays: 14;
     setupTime: '1 day';
+=======
     rating: 4.5,
     reviews: 9;
   }
@@ -2222,6 +2311,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     target_audience: 'Product, success, founders';
     trial_days: 14;
     setup_time: '1 day';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'AI & Data';
     real_service: true;
     technology: ['Events APIEmbeddingsDashboards'];
@@ -2233,6 +2323,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
 
     reviews: 8
+=======
     market_size: '$1.2B feedback tools';
     growth_rate: '14% CAGR';
     variant: 'holographic - matrix';
@@ -2243,6 +2334,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 15;
     rating: 4.6,
     reviews: 8;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'real - time - feature - flags - lite';
@@ -2256,6 +2348,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Platform, growth, product eng';
     trialDays: 14;
     setupTime: '2 hours';
+=======
     period: '/month',
     description: 'Edge - deployed flags, segments, and experiments for teams that need speed without platform bloat.';
     features: [;
@@ -2270,6 +2363,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     target_audience: 'Platform, growth, product eng';
     trial_days: 14;
     setup_time: '2 hours';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Developer Tools';
     real_service: true;
     technology: ['Edge runtimeKV storeSDKs'];
@@ -2289,8 +2383,10 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
 
     reviews: 5
+=======
     rating: 4.5,
     reviews: 5;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'ai - legal - clause - recommender';
@@ -2311,6 +2407,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'In-house legal, procurement';
     trialDays: 7;
     setupTime: '1–2 days';
+=======
     color: 'from - purple - 700 to - indigo - 800';
     text_color: 'text - purple - 200';
     link: 'https://ziontechgroup.com / services / ai - legal - clause - recommender',
@@ -2318,6 +2415,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     target_audience: 'In - house legal, procurement';
     trial_days: 7;
     setup_time: '1–2 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'AI & Data';
     real_service: true;
     technology: ['LLMVector DBTemplate engine'];
@@ -2359,6 +2457,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'SRE, platform, dev teams';
     trialDays: 14;
     setupTime: '1 day';
+=======
     rating: 4.5,
     reviews: 4;
   }
@@ -2381,6 +2480,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     target_audience: 'SRE, platform, dev teams';
     trial_days: 14;
     setup_time: '1 day';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Observability';
     real_service: true;
     technology: ['APM APIsLLMDiff engine'];
@@ -2404,12 +2504,14 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'ai-data-quality-monitor';
     name: 'AI Data Quality Monitor'
+=======
     rating: 4.6,
     reviews: 3;
   }
   {
     id: 'ai - data - quality - monitor';
     name: 'AI Data Quality Monitor',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     tagline: 'Detect schema drifts, null spikes, and anomalies continuously';
     price: '$169';
     period: '/month'
@@ -2426,6 +2528,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Data engineering, analytics';
     trialDays: 14;
     setupTime: '2–4 hours';
+=======
     color: 'from - teal - 600 to - cyan - 700';
     text_color: 'text - teal - 200';
     link: 'https://ziontechgroup.com / services / ai - data - quality - monitor';
@@ -2433,6 +2536,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     target_audience: 'Data engineering, analytics';
     trial_days: 14;
     setup_time: '2–4 hours';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Observability';
     real_service: true;
     technology: ['Warehouse APIsAnomaly detectionLLM'];
@@ -2444,6 +2548,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
 
     reviews: 6
+=======
     market_size: '$3B data ops';
     growth_rate: '20% CAGR';
     variant: 'holographic - matrix';
@@ -2454,6 +2559,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 12;
     rating: 4.6,
     reviews: 6;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
     id: 'ai - ux - copy - optimizer';
@@ -2474,6 +2580,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Product, design, growth';
     trialDays: 7;
     setupTime: '30 minutes';
+=======
     color: 'from - lime - 600 to - green - 700';
     text_color: 'text - lime - 200';
     link: 'https://ziontechgroup.com / services / ai - ux - copy - optimizer';
@@ -2481,6 +2588,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     target_audience: 'Product, design, growth';
     trial_days: 7;
     setup_time: '30 minutes';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Developer Tools';
     real_service: true;
     technology: ['LLMExperimentsSDK'];
@@ -2504,12 +2612,14 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'ai-governance-policy-center';
     name: 'AI Governance Policy Center'
+=======
     rating: 4.5,
     reviews: 5;
   }
   {
     id: 'ai - governance - policy - center';
     name: 'AI Governance Policy Center',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     tagline: 'Register models, risks, prompts, and controls in one place';
     price: '$249';
     period: '/month'
@@ -2526,6 +2636,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'AI platform, legal, risk';
     trialDays: 14;
     setupTime: '2–5 days';
+=======
     color: 'from - blue - 700 to - indigo - 800';
     text_color: 'text - blue - 200';
     link: 'https://ziontechgroup.com / services / ai - governance - policy - center';
@@ -2533,6 +2644,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     target_audience: 'AI platform, legal, risk';
     trial_days: 14;
     setup_time: '2–5 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Quality & Monitoring';
     real_service: true;
     technology: ['RegistryEvalsWorkflows'];
@@ -2579,6 +2691,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 4,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -2628,9 +2741,11 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 3,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'SAML/OIDC providers ready-to-go',
+=======
     id: 'sso - scim - accelerator',
     name: 'SSO + SCIM Accelerator',
     tagline: 'Enterprise SSO and user provisioning templates and adapters',
@@ -2676,6 +2791,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 2,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -2727,6 +2843,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 9,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -2776,9 +2893,11 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 7,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Step-based DSL',
+=======
     id: 'browser - automation - copilot',
     name: 'Browser Automation Copilot',
     tagline: 'Headless browser workflows with resilient selectors and retries',
@@ -2828,6 +2947,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 12,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -2876,6 +2996,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -2928,6 +3049,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 14,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -2978,6 +3100,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 31,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3027,9 +3150,11 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 16,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Auto-record & transcribe',
+=======
     id: 'ai - meeting - notes - summarizer - pro',
     name: 'AI Meeting Notes Summarizer',
     tagline: 'Auto - recording, diarization, action items, and CRM sync',
@@ -3079,6 +3204,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 52,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3132,9 +3258,11 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 10,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'SLO-triggered updates',
+=======
     id: 'incident - statuspage - automation - pro',
     name: 'Incident StatusPage Automation',
     tagline: 'SLO - aware updates, RCA templates, and subscriber comms',
@@ -3181,6 +3309,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 12,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3230,6 +3359,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 8,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3278,6 +3408,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 24,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3326,6 +3457,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 77,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3374,6 +3506,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.4,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3423,9 +3556,11 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 19,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Real-time anomaly detection',
+=======
     id: 'finops - cost - anomaly - guard',
     name: 'FinOps Cost Anomaly Guard',
     tagline: 'Detect, alert, and remediate cloud cost spikes in real - time',
@@ -3494,6 +3629,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3546,6 +3682,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3597,6 +3734,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 4,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3646,6 +3784,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 10,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3696,6 +3835,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 3,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3745,6 +3885,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 3,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3792,6 +3933,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 2,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3840,6 +3982,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 2,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Faster setup than bespoke Gmail/Outlook add-ins; safer defaults for SMBs.',
@@ -3849,6 +3992,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     category: 'AI & Data',
     realService: true,
     technology: ['IMAP/Graph API, OpenAI-compatible, Next && Next.js'],
+=======
     id: 'ai - email - responder - pro',
     name: 'AI Email Responder Pro',
     tagline: 'Categorize and draft replies to routine emails with safety',
@@ -3893,6 +4037,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 14,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3941,6 +4086,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -3988,6 +4134,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -4037,6 +4184,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 9,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -4086,6 +4234,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 7,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -4134,6 +4283,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 8,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -4188,6 +4338,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -4237,9 +4388,11 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 12,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Cloud config collectors (AWS/GCP/Azure)',
+=======
     id: 'security - evidence - automation - lite',
     name: 'Security Evidence Automation Lite',
     tagline: 'SOC2 / ISO evidence capture with zero - spreadsheet workflows',
@@ -4287,6 +4440,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 7,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -4334,6 +4488,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 10,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -4382,9 +4537,11 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 9,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'NPS/CSAT and feedback widgets',
+=======
     id: 'customer - feedback - hub',
     name: 'Customer Feedback Hub',
     tagline: 'Collect, tag, and route feedback across channels with AI',
@@ -4431,6 +4588,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 8,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -4478,6 +4636,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -4526,6 +4685,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 4,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -4579,6 +4739,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 3,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -4627,6 +4788,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -4675,6 +4837,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
 =======
@@ -4724,6 +4887,8 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 2,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
     id: 'managed-ml-feature-store-starter', name: 'Managed ML Feature Store Starter',
     tagline: 'Production-ready feature store with governance and lineage', price: '$249',
     period: '/month',
@@ -5309,7 +5474,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     price: '$149', period: '/month',
     description: 'Reduce MTTR with incident detection, guided diagnostics, automated status updates, and post-incident summaries.',
     features: [
-<<<<<<< HEAD
       'Playbook suggestionsAuto status page updatesRoot-cause timelinesSlack/PagerDuty bridgesPostmortem draftsService dependency mapping'
     ];
     popular: false, icon: '🆘',
@@ -7662,6 +7826,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
   }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
 
 ;

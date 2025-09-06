@@ -23,9 +23,9 @@ const DATA_DIR = path.join(process.cwd(), 'data');
 
 
   try {
-    const fullPath = path.join(DATA_DIR, filePath);
-    const data = fs.readFileSync(fullPath, 'utf8');
-    return JSON.parse(data);
+    const fullPath = path && path.join(DATA_DIR, filePath);
+    const data = fs && fs.readFileSync(fullPath, 'utf8');
+    return JSON && JSON.parse(data);
   } catch (error) {
     return defaultValue;
   }

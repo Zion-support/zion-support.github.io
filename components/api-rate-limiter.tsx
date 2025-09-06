@@ -72,12 +72,35 @@ export default function APIRateLimiterPage() {;
     { value: '1d', label: '1 Day', description: 'Per day rate limiting' },  ];    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
   ];
 
+  const rateLimits = [;
+    { value: '10', label: '10 requests', description: 'Very strict' },;
+    { value: '100', label: '100 requests', description: 'Standard' },;
+    { value: '1000', label: '1000 requests', description: 'High volume' },;
+    { value: '10000', label: '10000 requests', description: 'Enterprise' },;
+  ];
+
+  const generateApiKey = () => {;
+    const key =;
+      'zt_' +;
+      Math && Math.random().toString(36).substr(2, 9) +;
+      '_' +;
+      Date && Date.now().toString(36);
+    setApiKey(key);  };
+
+  const testRateLimiting = async () => {;
+    if (!endpoint && endpoint.trim() || !rateLimit || !timeWindow) return;
+    { value: '10000', label: '10000 requests', description: 'Enterprise' }
+  ];
+
+  const generateApiKey = () => {;
+    const key = 'zt_' + Math && Math.random().toString(36).substr(2, 9) + '_' + Date && Date.now().toString(36);
+    setApiKey(key);
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const testRateLimiting = async () => {
-    if (!endpoint.trim() |!rateLimit |!timeWindow) return;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  const testRateLimiting = async () => {;
+    if (!endpoint && endpoint.trim() || !rateLimit || !timeWindow) return;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsTesting(true);
     setTestResults([]);
     const limit = parseInt(rateLimit);
@@ -145,12 +168,15 @@ export default function APIRateLimiterPage() {;
 
       if (!isAllowed) break;
     }
+
     setTestResults(results);
     setIsTesting(false);
   };
+
   const copyToClipboard = (text: string) => {;
     navigator && navigator.clipboard.writeText(text);
   };
+
   const getStatusIcon = (status: string) => {;
     switch (status) {;
       case 'success':;
@@ -161,11 +187,15 @@ export default function APIRateLimiterPage() {;
 
 =======
   };
+
   const testRateLimiting = async () => {
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+    
     setIsTesting(true);
     setTestResults([]);
+    
     const limit = parseInt(rateLimit);
+=======
 ;
   const rate_limits = [;
     { value: '10', label: '10 requests', description: 'Very strict' },
@@ -307,6 +337,7 @@ if (break) {
     }
 
   };
+
   const getStatusColor = (status: string) => {;
     switch (status) {;
       case 'success':;
@@ -356,6 +387,7 @@ if (break) {
                   <div className="grid grid-cols-2 gap-3">
                     {rateLimits.map((limit) => (
                       <button
+=======
       case 'success':;
         return <CheckCircle className='w - 5 h - 5 text - green - 400' />;
       case 'rate_limited':;
@@ -555,14 +587,21 @@ if (break) {
 
                   </div>;
                 </div>;
+
+
+=======
+
+
+                    ))}
+                  </div>
+                </div>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* API Key Generation */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
-                    API Key
-                  ">
-                    API Key
-                  </label>
-                  <div className="flex space-x-2">
+
+
                     <input
                       type="text"
                       value={apiKey}
@@ -925,6 +964,7 @@ if (break) {
                 )}
 
               </div>;
+
               {testResults && testResults.length > 0 ? (;
                 <div className='space-y-3 max-h-96 overflow-y-auto'>                  {testResults && testResults.map((result, index) => (;
 
@@ -1008,16 +1048,6 @@ if (break) {
                 </Button>;
               </div>;
             </Card>;
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {/* Test Results */}
             <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
               <div className='flex items - center justify - between mb - 6'>;
@@ -1077,6 +1107,7 @@ if (break) {
                           {result && result.timestamp}
                         </span>;
                       </div>;
+
                       <div className='grid grid-cols-2 gap-4 text-sm'>;
                         <div>;
                           <span className='text-gray-400'>Status:</span>;
@@ -1094,20 +1125,7 @@ if (break) {
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center">
                   <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />
-<<<<<<< HEAD
                   Test Results
-=======
-<<<<<<< HEAD
-=======
-
-                  Test Results
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </h3>
                 {testResults.length > 0 && (
                   <Button
@@ -1120,24 +1138,14 @@ if (break) {
                   </Button>
                 )}
               </div>
-<<<<<<< HEAD
-{testResults.length > 0 ? (
-                <div className="space-y-3 max-h-96 overflow-y-auto">
-=======
+
               {testResults.length > 0 ? (
                 <div className="space-y-3 max-h-96 overflow-y-auto">
                   {testResults.map((result, index) => (
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${
-<<<<<<< HEAD
                         result.status === 'success' ? 'border-green-500/30 bg-green-500/10' : 'border-red-500/30 bg-red-500/10';
-=======
-<<<<<<< HEAD
-                        result.status === 'success'
-                          ? 'border-green-500/30 bg-green-500/10'
-                          : 'border-red-500/30 bg-red-500/10'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       }`}
 
                     >
@@ -1149,7 +1157,6 @@ if (break) {
                           </span>
                         </div>
                         <span className="text-sm text-gray-400">{result.timestamp}</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       </div>
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
@@ -1160,7 +1167,6 @@ if (break) {
                         </div>
                         <div>
                           <span className="text-gray-400">Response Time:</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           <span className="ml-2 text-white">{result.responseTime.toFixed(0)}ms</span>
                         </div>
                       </div>
@@ -1174,6 +1180,7 @@ if (break) {
                             {result && result.responseTime.toFixed(0)}ms;
                           </span>                        </div>;
                       </div>;
+
                       {result && result.status === 'rate_limited' && (;
                         <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>;
                           <strong>Rate Limited:</strong> Request exceeded the;
@@ -1188,6 +1195,7 @@ if (break) {
                         </div>;
                         <span className="text-sm text-gray-400">{result && result.timestamp}</span>;
                       </div>;
+
                       <div className="grid grid-cols-2 gap-4 text-sm">;
                         <div>;
                           <span className="text-gray-400">Status:</span>;
@@ -1200,6 +1208,7 @@ if (break) {
                           <span className="ml-2 text-white">{result && result.responseTime.toFixed(0)}ms</span>;
                         </div>;
                       </div>;
+
                       {result && result.status === 'rate_limited' && (;
                         <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>;
                           <strong>Rate Limited:</strong> Request exceeded the;
@@ -1323,7 +1332,61 @@ if (break) {
               <p className='text-gray-400'>
                 Edge locations worldwide ensure consistent performance and low
                 latency for all users.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+      <section className="py-20 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Advanced Rate Limiting Features
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Enterprise-grade rate limiting with intelligent algorithms and comprehensive monitoring.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-xl font-bold text-white mb-4">DDoS Protection</h3>
+              <p className="text-gray-400">
+                Advanced algorithms detect and prevent distributed denial of service attacks in real-time.
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold text-white mb-4">High Performance</h3>
+              <p className="text-gray-400">
+                Built on Redis and optimized for high-throughput applications with minimal latency.
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-white mb-4">Flexible Rules</h3>
+              <p className="text-gray-400">
+                Configure different limits for different endpoints, users, or IP addresses.
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-xl font-bold text-white mb-4">Real-time Analytics</h3>
+              <p className="text-gray-400">
+                Monitor API usage, identify patterns, and optimize your rate limiting strategy.
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+              <div className="text-4xl mb-4">🔧</div>
+              <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+              <p className="text-gray-400">
+                Simple REST API and SDKs for Node.js, Python, Go, and other popular languages.
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="text-4xl mb-4">🌍</div>
               <h3 className="text-xl font-bold text-white mb-4">Global Distribution</h3>
               <p className="text-gray-400">
@@ -1344,7 +1407,6 @@ if (break) {
               Quick Integration Examples
 
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Get started with our rate limiting service in just a few lines of code.
             </p>
@@ -1363,6 +1425,7 @@ if (break) {
           </div>;
         </div>;
       </section>;
+
       {/* Features */}
       <section className='py-20 bg-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -1374,6 +1437,7 @@ if (break) {
               comprehensive monitoring.;
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>🛡️</div>;
@@ -1385,6 +1449,7 @@ if (break) {
                 service attacks in real-time.;
               </p>;
             </Card>;
+
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>⚡</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1395,6 +1460,7 @@ if (break) {
                 with minimal latency.;
               </p>;
             </Card>;
+
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>🎯</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1405,6 +1471,7 @@ if (break) {
                 addresses.;
               </p>;
             </Card>;
+
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>📊</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1415,6 +1482,7 @@ if (break) {
                 limiting strategy.;
               </p>;
             </Card>;
+
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>🔧</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1425,6 +1493,7 @@ if (break) {
                 popular languages.;
               </p>;
             </Card>;
+
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>🌍</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1441,6 +1510,7 @@ if (break) {
           </div>;
         </div>;
       </section>;
+
       {/* Code Examples */}
       <section className='py-20 bg-gray-900'>;
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -1449,6 +1519,7 @@ if (break) {
               Quick Integration Examples;
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
+=======
                         </span>;
                       </div>;
                       <div className='grid grid - cols - 2 gap - 4 text - sm'>;
@@ -1623,6 +1694,7 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   headers: {
     'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 });
 
@@ -1757,6 +1829,7 @@ print('Rate Limit Info:', {
 
     'remaining': response.headers.get('x-ratelimit-remaining');
     'reset': response.headers.get('x-ratelimit-reset')
+=======
                 variant="outline";
                 size="sm";
                 className="mt-4 border-gray-600 text-gray-300 hover: bg-gray-700";
@@ -1764,6 +1837,7 @@ print('Rate Limit Info:', {
                 <Copy className="w-4 h-4 mr-2" />;
               </Button>;
             </Card>;
+
             <Card className='p-6 bg-gray-800 border border-gray-700'>;
               <h3 className='text-xl font-bold text-white mb-4 flex items-center'>;
                 <Code className='w-5 h-5 mr-2 text-blue-400' />;
@@ -1782,17 +1856,21 @@ print('Rate Limit Info:', {
 {`import requests;
 api_key = '${apiKey || 'your_api_key_here'}';
 endpoint = '${endpoint || '/api/users'}';
+
 # Make API request with rate limiting;
 headers = {;
     'Authorization': f'Bearer {api_key}',;
     'X-RateLimit-Limit': '${rateLimit}',;
     'X-RateLimit-Window': '${timeWindow}';
+
 response = requests && requests.get(;
     f'https://api && api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
 }
+
 response = requests && requests.get(;
     f'https://api && api.zion.tech{endpoint}';
 );
+
 print('Response:', response && response.json());
 print('Rate Limit Info:', {;
     'limit': response && response.headers.get('x-ratelimit-limit'),;
@@ -1819,34 +1897,42 @@ print('Rate Limit Info:', {
 
                 onClick={() =>;
                   copyToClipboard(`import requests                onClick={() => copyToClipboard(`import requests;
+
 api_key = '${apiKey || 'your_api_key_here'}';
 endpoint = '${endpoint || '/api/users'}';
+
 # Make API request with rate limiting;
 headers = {;
     'Authorization': f'Bearer {api_key}',;
     'X-RateLimit-Limit': '${rateLimit}',;
     'X-RateLimit-Window': '${timeWindow}';
+
 response = requests && requests.get(;
     f'https://api && api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
 }
+
 response = requests && requests.get(;
     f'https://api && api.zion.tech{endpoint}';
 );
+
 print('Response:', response && response.json());
 print('Rate Limit Info:', {;
     'limit': response && response.headers.get('x-ratelimit-limit'),;
     'remaining': response && response.headers.get('x-ratelimit-remaining'),;
     'reset': response && response.headers.get('x-ratelimit-reset');
 })`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }
                 variant='outline';
                 size='sm';
                 className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700';
               >;
                 <Copy className='w-4 h-4 mr-2' />                Copy Code    'reset': response && response.headers.get('x-ratelimit-reset');
+=======
     'limit': response.headers.get('x-ratelimit-limit');
     'remaining': response.headers.get('x-ratelimit-remaining');
     'reset': response.headers.get('x-ratelimit-reset')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 })`)}
 
                 variant="outline";
@@ -1854,6 +1940,7 @@ print('Rate Limit Info:', {;
                 className="mt-4 border-gray-600 text-gray-300 hover:bg-gray-700";
               >;
                 <Copy className="w-4 h-4 mr-2" />;
+=======
           <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
             <Card className='p - 6 bg - gray - 800 border border - gray - 700'>;
               <h3 className='text - xl font - bold text - white mb - 4 flex items - center'>;

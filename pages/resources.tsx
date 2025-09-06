@@ -345,27 +345,8 @@ function ResourcesPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
-                <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
-<<<<<<< HEAD
-                      {paper.category}
-=======
-                      {paper.category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    </span>
-                    <span className="text-white/80 text-sm">{paper.pages} pages</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-3 leading-tight">{paper.title}</h3>
-                  <p className="text-blue-100 leading-relaxed">{paper.description}</p>
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
+                  <FileText className="w-8 h-8 text-white" />
                 </div>
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
 
@@ -583,33 +564,6 @@ function ResourcesPage() {
                     Watch Video
                   </a>
                 </div>
-                <a
-                  href={study.readUrl}
-=======
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </ul>;
-                </div>;
-                <a;
-                  href={study.readUrl  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
-                >
-                  <span>Read Case Study</span>
-                  <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD
-                </a>
               </motion.div>
 
                   </span>;
@@ -728,23 +682,8 @@ function ResourcesPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
-                <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 text-center">
-                  <Play className="w-12 h-12 text-white mx-auto mb-3" />
-                  <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
-<<<<<<< HEAD
-                    {video.category}
-=======
-                    {video.category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  </span>
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
+                  <BookOpen className="w-8 h-8 text-white" />
                 </div>
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
 
@@ -933,24 +872,6 @@ function ResourcesPage() {
       </section>;
       <EnhancedFooter />;
     </>);
-              <a
-                href=&quot;/contact&quot;
-                className=&quot;bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105&quot;
-              >
-                Contact Our Experts
-              </Link>
-              <a
-                href=&quot;/contact&quot;
-                className=&quot;border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200&quot;
-              >
-                Request Custom Research
-              </Link>
-=======
-=======
-                key={doc.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 
 

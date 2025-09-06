@@ -51,7 +51,6 @@ export default function OrdersPage() {;
       default:;
         return status;
     }
-<<<<<<< HEAD
   }
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
@@ -127,9 +126,9 @@ import {
               </TableRow>;
 
             ))}
-          </TableBody>
-        </Table>
-      ) : orders.length === 0 ? (
+          </TableBody>;
+        </Table>;
+      ) : orders && orders.length === 0 ? (;
         <EmptyState
 
 

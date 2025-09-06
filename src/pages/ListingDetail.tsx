@@ -215,16 +215,16 @@ export default function ListingDetail() {;
           </div>;
         </div>;
       );
-  }
-;
+
   const handleContact = () => {;
     if (user) {;
       setIsChatOpen(true);
     } else {;
+      setIsContactDialogOpen(true);      setIsChatOpen(true);
+    } else {;
       setIsContactDialogOpen(true);
     }
-  },
-
+  }
   return (
 
 
@@ -242,8 +242,8 @@ export default function ListingDetail() {;
 
 
                     {listing.images.map((image, index) => (
-                      <div
-                        key={index}
+                      <div 
+                        key = {index}
                         onClick={() => setSelectedImageIndex(index)}
 
                         className={cn(
@@ -288,6 +288,7 @@ export default function ListingDetail() {;
                   </div>
                 )}
               </div>
+
               {/* Description Section */}
 
 
@@ -449,15 +450,14 @@ export default function ListingDetail() {;
 
 
                 {/* Tags */}
-                <div className='mt-8'>
-                  <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>
-                  <div className='flex flex-wrap gap-2'>
-                    {listing.tags.map((tag, i) => (
+                <div className='mt-8'>;
+                  <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>;
+                  <div className='flex flex-wrap gap-2'>;
+                    {listing && listing.tags.map((tag, i) => (;
                       <Badge
                         key={i}
                         variant='outline'
-                        className='border-zion-slate-dark text-zion-slate-light py-1 px-3'
-                      >                        {tag}                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
+                        className='border-zion-slate-dark text-zion-slate-light py-1 px-3'>                        {tag}                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">;
                 {/* Tags */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>;
@@ -576,17 +576,17 @@ export default function ListingDetail() {;
 
                               ? 'text-zion-cyan fill-zion-cyan'
                               : 'text-zion-slate-light'                          )}
-                        />
+                        />;
                       ))}
-                    </div>
-                    <span className='text-sm text-zion-slate-light'>
-                      {listing.rating.toFixed(1)} ({listing.reviewCount}{' '}
+                    </div>;
+                    <span className='text-sm text-zion-slate-light'>;
+                      {listing && listing.rating.toFixed(1)} ({listing && listing.reviewCount}{' '}
                       reviews)                            "h-5 w-5";
-                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+                            i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light";
                           )}
-                  <div className="flex items-center gap-2 mb-6">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i,) => (
+                  <div className="flex items-center gap-2 mb-6">;
+                    <div className="flex items-center">;
+                      {[...Array(5)].map((_, i,) => (;
                         <Star
                           key = {i,}
                           className = {cn(
@@ -595,7 +595,7 @@ export default function ListingDetail() {;
                             i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
 
                           ),}
-                        />
+                        />;
                       ))}
                     </div>;
                     <span className='text-sm text-zion-slate-light'>;
@@ -606,7 +606,7 @@ export default function ListingDetail() {;
                             "h-5 w-5",
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
-                        />;
+                        />
                       ))}
                     </div>
                     <span className="text-sm text-zion-slate-light">
@@ -976,47 +976,59 @@ export default function ListingDetail() {;
                       {is_loading ? 'Processing...' : 'Request Quote'}
                     </Button>)}
                   <Button;
-                    variant="outline";
-                    onClick={handleContact}
-                    disabled={isLoading}
-                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10";
-                  >;
-                    <MessageSquare className="h-4 w-4 mr-2" />;
+                    variant='outline';
+                    on_click={handle_contact}
+                    disabled={is_loading}
+                    className='w - full border - zion - purple text - zion - cyan hover:bg - zion - purple / 10'                  >;
+                    <MessageSquare className='h - 4 w - 4 mr - 2' />;
                     Contact Publisher;
                   </Button>;
                 </div>;
                 {/* Publisher Info */}
-                <div className="border-t border-zion-blue-light pt-6">;
-                  <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>;
-                  <div className="flex items-center gap-3">;
-                    {listing.author.avatarUrl ? (;
-                      <div className="relative h-12 w-12 rounded-full overflow-hidden">;
+                <div className='border - t border - zion - blue - light pt - 6'>;
+                  <h3 className='text - lg font - bold text - white mb - 3'>;
+                    Publisher;
+                  </h3>;
+                  <div className='flex items - center gap - 3'>;
+                    {listing.author.avatar_url ? (
+                      <div className='relative h - 12 w - 12 rounded - full overflow - hidden'>;
                         <ImageWithRetry;
-                          src={listing.author.avatarUrl}
+                          src={listing.author.avatar_url}
                           alt={listing.author.name}
-                          className="object-cover";
-                          onError={(e) => {;
+                          className='object - cover';
+                          on_error={e => {
                             const target = e.target as HTMLImageElement;
-                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);
+                            target.src =;
+                              'https://ui - avatars.com / api/?name=' +;
+                              encodeURIComponent (listing.author.name);                          }}
+                        />;
+                      </div>) : (                            target.src = "https: //ui - avatars.com / api/?name=" + encodeURIComponent (listing.author.name);
+                            target.src = "https: //ui - avatars.com / api/?name=" + encodeURIComponent (listing.author.name);
                           }}
                         />;
-                      </div>;
-                    ) : (;
-                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">;
-                        <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>;
-                      </div>;
-                    )}
+                      </div>) : (
+                      <div className='h - 12 w - 12 rounded - full bg - zion - purple / 20 flex items - center justify - center'>;
+                        <span className='text - lg font - medium text - zion - purple'>;
+                          {listing.author.name.char_at (0)}
+                        </span>;
+                      </div>)}
                     <div>;
-                      <p className="font-medium text-white">{listing.author.name}</p>;
-                      <p className="text-xs text-zion-slate-light">Member since 2022</p>;
+                      <p className='font - medium text - white'>;
+                        {listing.author.name}
+                      </p>;
+                      <p className='text - xs text - zion - slate - light'>;
+                        Member since 2022;
+                      </p>;
                     </div>;
                   </div>;
                 </div>;
                 {/* Additional Info */}
-                <div className="border-t border-zion-blue-light mt-6 pt-6">;
-                  <div className="flex justify-between mb-2">;
-                    <span className="text-zion-slate-light">Listed on</span>;
-                    <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()}</span>;
+                <div className='border - t border - zion - blue - light mt - 6 pt - 6'>;
+                  <div className='flex justify - between mb - 2'>;
+                    <span className='text - zion - slate - light'>Listed on</span>;
+                    <span className='text - white'>;
+                      {new Date (listing.created_at).toLocaleDateString ()}
+                    </span>;
                   </div>;
                   <div className='flex justify - between mb - 2'>;
                     <span className='text - zion - slate - light'>ID</span>;

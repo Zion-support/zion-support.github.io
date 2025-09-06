@@ -17,6 +17,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     lg: 'w-12 h-12'
   };
 
+const LoadingSpinner: React.FC = () => {
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <div

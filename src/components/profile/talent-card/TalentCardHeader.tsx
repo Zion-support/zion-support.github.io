@@ -1,7 +1,7 @@
 yearsExperience
 }: TalentCardHeaderProps) {
   return (
-    <div className="flex items-start gap-4 mb-4">
+    <div className='flex items-start gap-4 mb-4'>
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
 
 export function TalentCardHeader(): any ({;
@@ -43,7 +43,8 @@ export function TalentCardHeader(): any ({;
 
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
-        <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
+
+        <p className='text-zion-cyan text-sm'>{professionalTitle}</p>;
       </div>;
     </div>;
   );

@@ -1,7 +1,9 @@
 
 
 }</div> </div>) import fs from 'fs';
+=======
 import fs from 'fs';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
 
 
@@ -11,36 +13,13 @@ import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },;
 export async function getServerSideProps() {;
   const file = path && path.join(process && process.cwd(), 'datanews-digest && digest.json');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-</div> </div>) )
-=======
- </div> </div>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
-export async function getServerSideProps() {
-=======
-</div> </div>) ) 
-=======
- </div> </div>) ) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
-export async function getServerSideProps() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const file = path.join(process.cwd(), 'datanews-digest.json');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   let items: NewsItem[] = [];  let generatedAt = '';
   try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
     const json = JSON && JSON.parse(raw);
     items = json && json.items || [];
     generatedAt = json && json.generatedAt || '';
+=======
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 export async /**
  * getServerSideProps - Function description
@@ -49,19 +28,11 @@ function getServerSideProps() {
   const file = path.join (process.cwd (), 'datanews - digest.json');
   let items: NewsItem[] = [];  let generated_at = '';
   try {
-<<<<<<< HEAD
     const raw = fs.readFileSync (file, 'utf - 8');
     const json = JSON.parse (raw);
     items = json.items || [];
     generated_at = json.generated_at || '';
-=======
-    const raw = fs.readFileSync(file, 'utf-8');
-    const json = JSON.parse(raw);
-<<<<<<< HEAD
-    items = json.items |[];
-    generatedAt = json.generatedAt |''
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {}
   return { props: { items, generated_at } }
 }
@@ -129,11 +100,5 @@ function NewsDigestPage() {
           </div>))}
       </div>;
     </div>);
-=======
-=======
-    items = json.items || [];
-    generatedAt = json.generatedAt || ''
-  } catch {}
-  return { props: { items, generatedAt } }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

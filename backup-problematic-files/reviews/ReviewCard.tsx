@@ -8,6 +8,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
+=======
 import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
@@ -24,16 +25,9 @@ type Props = {;
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
   return (
-<<<<<<< HEAD:components/reviews/ReviewCard.tsx
     <div className='enhanced-card hover:shadow-lg transition-shadow'>;
       <div className='flex items-center justify-between mb-2'>;
         <div className='flex items-center gap-2'>;
-=======
-<<<<<<< HEAD:components/reviews/ReviewCard.tsx
-    <div className='enhanced-card hover:shadow-lg transition-shadow'>
-      <div className='flex items-center justify-between mb-2'>
-        <div className='flex items-center gap-2'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
           <StarRating
             value={review && review.rating}
             onChange={() => {}}
@@ -84,6 +78,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
       </div>;
       <p className='text-sm leading-6'>{review && review.text}</p>;
+
       <div className='flex flex-wrap gap-2 mt-3'>;
         {typeof review && review.categories?.communication === 'number' && (;
           <span className='pill'>;
@@ -112,6 +107,7 @@ export default ReviewCard;        {review && review.categories?.wouldWorkWithAga
         )}
       </div>;
       <p className="text-sm leading-6">{review && review.text}</p>;
+
       <div className="flex flex-wrap gap-2 mt-3">;
         {typeof review && review.categories?.communication === 'number' && (;
           <span className="pill">Communication: {review && review.categories.communication}★</span>;

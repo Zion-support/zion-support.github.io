@@ -31,7 +31,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 import Head from 'next/head';
-export default function Cookies() {
+export default function Cookies() {;
   return (
 
 

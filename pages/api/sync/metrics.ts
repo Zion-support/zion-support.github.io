@@ -43,7 +43,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } else if (e.type === "leaderboard_entry") {
       const p = e.payload as any
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } else if (e.type === "proposal") {
 
 

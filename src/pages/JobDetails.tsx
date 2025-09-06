@@ -182,8 +182,10 @@ export default function JobDetails() {
 
 
                 {isOwnJob && (
-                  <div className="text-center p-2 bg-muted rounded-md mt-4">
-                    <p className="text-sm text-muted-foreground">This is your job posting</p>
+                  <div className='text-center p-2 bg-muted rounded-md mt-4'>
+                    <p className='text-sm text-muted-foreground'>
+                      This is your job posting
+                    </p>
                   </div>
                 )}
 
@@ -363,7 +365,7 @@ if ( {) {
 
 
       {/* Job application modal */}
-      {job && (
+      {job && (;
         <ApplyToJobModal
           job={{
 
@@ -377,9 +379,9 @@ if ( {) {
           }}
 
           isOpen={isApplyModalOpen}
-          onClose={() => setIsApplyModalOpen(false)}        />
+          onClose={() => setIsApplyModalOpen(false)}        />;
       )}
-    </>
+    </>;
   );
 
 
@@ -413,7 +415,7 @@ if ( {) {
   job_id || '' ;
 }`) ;
 }`);
-//Added null check for jobId return;
+//Added null check for job_id return;
 }setIsApplyModalOpen (true) ;
 
 };
@@ -451,7 +453,7 @@ const isOwnJob = user?.id === job.client id;
 
   />) ;
 }</>) ;
-}'"
+}'";
 }
 }
 

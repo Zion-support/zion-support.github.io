@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -341,9 +339,6 @@ console.log(' Starting Advanced Monitoring System...')
     throw new Error("Performance "issues")
     throw new Error("Performance "issues")
     console.log("⚠  Performance "issues")
-<<<<<<< HEAD
-  return { "status": 'success', "metrics": mockPerformance, "message"}
-=======
 <<<<<<< HEAD
   return { "status": 'success', "metrics": mockPerformance, "message"}
 =======

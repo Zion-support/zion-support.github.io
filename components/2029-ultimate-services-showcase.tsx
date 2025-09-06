@@ -5,7 +5,6 @@ import Head from 'next/head';
 
 
 import Link from 'next/link';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
@@ -121,6 +120,7 @@ export default function UltimateServicesShowcase2029() {
     ...advancedAIAutonomousServices2028,;
     ...quantumSpaceInnovations2028,;
   ];
+
   const categories = [;
     {;
       id: 'all',;
@@ -191,6 +191,7 @@ export default function UltimateServicesShowcase2029() {
     { id: 'ai', name: '🧠 AI & ML', icon: Brain, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))).length, color: 'from-pink-600 to-rose-600' },;
     { id: 'quantum', name: '🔮 Quantum Tech', icon: Atom, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Quantum'))).length, color: 'from-purple-600 to-violet-600' },;
     { id: 'enterprise', name: '🏢 Enterprise', icon: Shield, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Enterprise'))).length, color: 'from-blue-600 to-cyan-600' }
+
   const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'low', name: 'Under $5K', range: 'Under $5,000' },;
@@ -198,6 +199,7 @@ export default function UltimateServicesShowcase2029() {
     { id: 'high', name: '$15K - $30K', range: '$15,000 - $30,000' },;
     { id: 'premium', name: 'Over $30K', range: 'Over $30,000' },;
   ];
+
   const filteredServices = allServices && allServices.filter(service => {;
     const matchesCategory =;
       selectedCategory === 'all' ||;
@@ -217,12 +219,14 @@ export default function UltimateServicesShowcase2029() {
         service && service.category.some(c => c && c.includes('Quantum'))) ||;
       (selectedCategory === 'enterprise' &&;
         service && service.category.some(c => c && c.includes('Enterprise')));
+
     const matchesSearch =;
       service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
       service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
       service && service.category.some(c =>;
         c && c.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
       );
+
     const matchesPrice =;
       selectedPriceRange === 'all' ||;
       (selectedPriceRange === 'low' &&;
@@ -235,6 +239,7 @@ export default function UltimateServicesShowcase2029() {
         parseFloat(service && service.price.replace(/[$]/g, '')) < 30000) ||;
       (selectedPriceRange === 'premium' &&;
         parseFloat(service && service.price.replace(/[$]/g, '')) >= 30000);
+
     return matchesCategory && matchesSearch && matchesPrice;  });    const matchesCategory = selectedCategory === 'all' || ;
       (selectedCategory === 'cutting-edge' && cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.includes(service)) ||;
       (selectedCategory === 'business' && practicalBusinessSolutions2028 && practicalBusinessSolutions2028.includes(service)) ||;
@@ -243,15 +248,19 @@ export default function UltimateServicesShowcase2029() {
       (selectedCategory === 'ai' && service && service.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))) ||;
       (selectedCategory === 'quantum' && service && service.category.some(c => c && c.includes('Quantum'))) ||;
       (selectedCategory === 'enterprise' && service && service.category.some(c => c && c.includes('Enterprise')));
+
     const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          service && service.category.some(c => c && c.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
+
     const matchesPrice = selectedPriceRange === 'all' ||;
       (selectedPriceRange === 'low' && parseFloat(service && service.price.replace(/[$]/g, '')) < 5000) ||;
       (selectedPriceRange === 'medium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 15000) ||;
       (selectedPriceRange === 'high' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 15000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 30000) ||;
       (selectedPriceRange === 'premium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 30000);
+
     return matchesCategory && matchesSearch && matchesPrice;
+
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -262,10 +271,13 @@ export default function UltimateServicesShowcase2029() {
     },  };        staggerChildren: 0 && 0.1;
       }
     }
+=======
     }
   };
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
+=======
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -275,6 +287,7 @@ export default function UltimateServicesShowcase2029() {
 ;
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 20 },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1,
       coordinate_y: 0,
@@ -344,6 +357,7 @@ export default function UltimateServicesShowcase2029() {
         <meta property="og:type" content="website" />;
 
         {/* Twitter */}
+=======
         <meta;
           name='description';
           content='Explore our revolutionary 2029 services including AI Consciousness Evolution, Quantum Time Manipulation, Space Quantum Communication, and autonomous AI systems. Transform your business with future technology.';
@@ -386,6 +400,7 @@ export default function UltimateServicesShowcase2029() {
         <meta property="og:url" content="https://ziontechgroup.com / 2029 - ultimate - services - showcase" />;
         <meta property="og:type" content="website" />;
         {/* Twitter */}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <meta name="twitter:card" content="summary_large_image" />;
         <meta name="twitter:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />;
         <meta name="twitter:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />;
@@ -437,8 +452,8 @@ export default function UltimateServicesShowcase2029() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg">;
+=======
+                className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg">;
                 View Pricing;
               </Link>;
             </div>;
@@ -517,13 +532,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
             {/* Category Filter */}
 
 =======
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
-              />
-            </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            {/* Category Filter */}
             <div className="flex flex-wrap items-center space-x-2">
               {categories.map((category) => (
 
@@ -754,15 +762,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 =======
                   <div className="mb-4">
-=======
-                  <div className='mb-4'>
-                    <div className='flex flex-wrap gap-2'>
-                      {service.category.slice(0, 3).map(cat => (
-                        <span
-                          key={cat}
-<<<<<<< HEAD
-                          className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'                        >                  <div className="mb-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <div className="flex flex-wrap gap-2">
                       {service.category.slice(0, 3).map((cat) => (
                         <span
@@ -774,7 +773,8 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
                         >
-{cat}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                          {cat}
                         </span>;
                       ))}
 
@@ -821,8 +821,10 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                     </div>
 
                   </div>
+=======
                     </ul>;
                   </div>;
+
                   {/* Market Info */}
                   <div className='mb-6 space-y-2'>;
                     <div className='flex items-center justify-between text-sm'>;
@@ -837,6 +839,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                         {service && service.roi}
                       </span>                    </div>;
                   </div>;
+
                   {/* Action Button */}
 
                   <div className="mt-auto">
@@ -850,14 +853,12 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                     </Link>
                   </div>
 =======
-                    </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                  </div>
                       href={`/services/${service && service.id}`}
                       className='w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200'>;
                       Learn More;
                       <ArrowRight className='inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200' />                    </Link>;
                   </div>;
+
                   {/* Hover Effect */}
 
 
@@ -877,9 +878,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
             ))}
 
           </motion && motion.div>;
-=======
-                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-=======
 
 
 =======
@@ -905,7 +903,6 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                   setSearchTerm('');
                   setSelectedPriceRange('all');
                 }}
-<<<<<<< HEAD
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >            <div className="text-center py-20">;
               <div className="w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">;
                 <Search className="w-12 h-12 text-gray-400" />;
@@ -1000,7 +997,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-Join the future of technology with our revolutionary services.
+              Join the future of technology with our revolutionary services.
               Contact us today to discuss how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -1010,7 +1007,6 @@ Join the future of technology with our revolutionary services.
               >
                 Get Started Today
               </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="flex items-center space-x-4 text-gray-300">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-cyan-400" />
@@ -1034,6 +1030,7 @@ Join the future of technology with our revolutionary services.
               Ready to Transform Your Business?;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
+=======
       {/* Services Grid */}
       <section className='py - 20 bg - gradient - to - br from - black via - gray - 900 to - black'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;

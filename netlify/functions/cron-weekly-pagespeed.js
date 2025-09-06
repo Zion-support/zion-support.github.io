@@ -11,6 +11,7 @@ async function psi(url, strategy = 'mobile', key) {
   const resp = await fetch(endpoint && endpoint.toString());
   if (!resp && resp.ok) throw new Error(`PSI HTTP ${resp && resp.status}`);
   return resp && resp.json();
+
 exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
@@ -68,15 +69,18 @@ exports.handler = async function () {
         results && results.push({ url, error: e && e.message || String(e) });
       }
     }
+
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
     const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), results }, null, 2);
+
     if (owner && repo && token) {
       await upsertFile({
         owner,
         repo,
         path: 'data/reports/performance/weekly-pagespeed && pagespeed.json',
+=======
     const content = JSON.stringify ({ updated_at: Date.now (), results }, null, 2);
 ;
     // Check condition
@@ -91,6 +95,7 @@ if ( {) {
         content,
         message: 'chore (automation): weekly PageSpeed report',
         token,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
@@ -102,6 +107,7 @@ if ( {) {
   const resp = await fetch(endpoint.toString()),
   if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`),
   return resp.json()
+=======
       status_code: 200,
       body: JSON.stringify ({ ok: true, pages: results.length }),
     }
@@ -140,6 +146,7 @@ exports.handler = async function () {
       } catch (e) {
         results.push ({ url, error: e.message || String (e) });
       }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
 
     const owner = process.env.GITHUB_OWNER,
@@ -173,6 +180,7 @@ if ( {) {
   if (!resp && resp.ok) throw new Error(`PSI HTTP ${resp && resp.status}`),
   return resp && resp.json()
 }
+
 exports && exports.handler = async function() {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
@@ -195,6 +203,7 @@ exports && exports.handler = async function() {
         results && results.push({ url, error: e && e.message || String(e) })
       }
     }
+
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
@@ -211,6 +220,12 @@ exports && exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+
 }
+
+=======
 },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

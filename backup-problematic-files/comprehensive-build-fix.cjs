@@ -141,8 +141,6 @@ console.log(' Starting comprehensive build fix...')
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
   fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
 =======
 <<<<<<< HEAD

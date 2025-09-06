@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -21,6 +25,7 @@ import React, { useState } from 'react';
 
 
 } from 'lucide-react';
+
 interface Service {;
 =======
 =======
@@ -45,6 +50,7 @@ interface Service {;
 } from 'lucide-react';
 ;
 interface Service {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   name: string;
   tagline: string;
@@ -69,6 +75,7 @@ interface Service {
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]' />;
       </div>;
+
       <div className='max-w-7xl mx-auto relative z-10'>;
         {/* Header */}
         <div className='text-center mb-16'>;
@@ -81,11 +88,14 @@ interface Service {
             Cutting-edge technology solutions designed to transform your;
             business and accelerate innovation          </p>;
         </div>;
+
         {/* Filters */}
         <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>    };
     return iconMap[category] || Brain;
 
   };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section id="services" className="py-24 px-6 relative overflow-hidden">;
       {/* Background */}
@@ -94,6 +104,7 @@ interface Service {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]" />;
       </div>;
+
       <div className="max-w-7xl mx-auto relative z-10">;
         {/* Header */}
         <div className="text-center mb-16">;
@@ -129,7 +140,7 @@ interface Service {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {category === 'all' ? 'All Categories' : category}
-                </option>
+                </option>;
               ))}
 
 
@@ -367,33 +378,6 @@ interface Service {
                 </div>)}
               {/* Service Content */}
               <div className='p - 8'>;
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              {/* Service Content */}
-              <div className='p-8'>
-=======
-        </div>
-
-        {/* Services Grid */}
-
-                    Popular
-
-                  </div>
-                </div>
-              )}
-
-              {/* Service Content */}
-              <div className='p-8'>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {/* Icon and Category */}
                 <div className='flex items - center justify - between mb - 4'>;
                   <div;
@@ -423,6 +407,7 @@ interface Service {
                     <div className="text-xs text-white/40">{service.category}</div>
                   </div>
                 </div>
+=======
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>;
                     <service && service.icon className='w-8 h-8 text-white' />;
                   </div>;
@@ -436,6 +421,7 @@ interface Service {
                       {service && service.category}
                     </div>                  </div>;
                 </div>;
+
                 {/* Service Info */}                {/* Icon and Category */}
                 <div className="flex items-center justify-between mb-4">;
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>;
@@ -450,6 +436,7 @@ interface Service {
 
                 <h3 className="text-xl font-bold mb-3 text-white">{service.name}</h3>
                 <p className="text-white/70 text-sm mb-4 leading-relaxed">{service.tagline}</p>
+
                 {/* Pricing */}
                 <div className="mb-6">
                   <div className="flex items-baseline gap-2 mb-2">
@@ -468,8 +455,8 @@ interface Service {
                     </span>
                   </div>
                 </div>
-<<<<<<< HEAD
-<div className='mb-6'>;
+=======
+                <div className='mb-6'>;
                   <div className='flex items-baseline gap-2 mb-2'>;
                     <span className='text-3xl font-bold text-white'>;
                       {service && service.price}
@@ -488,6 +475,8 @@ interface Service {
                     </span>;
                   </div>;
                 </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Key Features */}
 
 =======
@@ -533,8 +522,10 @@ interface Service {
 
                   </div>
                 </div>
+=======
                   </div>;
                 </div>;
+
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-white/5 rounded-lg'>;
                   <div className='text-xs text-white/60 mb-2'>;
@@ -780,6 +771,7 @@ interface Service {
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                href="tel:+13024640950";
                 className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10";
               >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Call Now;
               </a>;
             </div>;
@@ -789,8 +781,11 @@ interface Service {
 
 
 };
+
 export default EnhancedServicesShowcase;  );
 };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedServicesShowcase;
 
 

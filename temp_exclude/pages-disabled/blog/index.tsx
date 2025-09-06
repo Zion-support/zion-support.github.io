@@ -2,7 +2,6 @@
 
 import React from 'react';
 
-<<<<<<< HEAD:temp_exclude/pages-disabled/blog/index.tsx
 interface IndexProps {
   // Add props here as needed
 }

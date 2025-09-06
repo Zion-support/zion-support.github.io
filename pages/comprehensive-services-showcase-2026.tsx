@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -46,7 +50,6 @@ import {
   Database,
   Globe,
   Robot,
-<<<<<<< HEAD
   Cube,
   Sparkles,
 } from 'lucide-react';
@@ -71,7 +74,6 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
   text_color: string;
   link: string;
   market_position: string;
@@ -93,6 +95,7 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
     mobile: string;
     email: string;
     address: string;
+
     website: string;
 
 
@@ -106,8 +109,10 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   customers: number;
   rating: number;
+
   reviews: number;
 const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
@@ -117,6 +122,7 @@ import {
   Clock, Zap, Shield, Cloud, Brain, 
   Database, Globe, Robot, Cube, Sparkles
 } from 'lucide-react';
+
 interface Service {
   id: string,
   name: string,
@@ -144,11 +150,13 @@ interface Service {
   marketSize: string,
   growthRate: string,
   contactInfo: {
+      
     mobile: string,
     email: string,
     address: string,
     website: string
-},
+  
+    },
     realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -156,6 +164,7 @@ interface Service {
   rating: number,
   reviews: number
 }
+
 const ComprehensiveServicesShowcase2026: React.FC = () => {
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -224,28 +233,32 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     { value: '100-200', label: '$100 - $200' },;
     { value: '200-400', label: '$200 - $400' },;
     { value: '400-600', label: '$400 - $600' },;
-<<<<<<< HEAD
     { value: '600+', label: '$600+' },;
   ];
+
   const filteredServices = allServices && allServices.filter(service => {;
     const matchesSearch =;
       service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
       service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
       service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+
     const matchesCategory =;
       selectedCategory === 'all' || service && service.category === selectedCategory;
+
     const matchesPrice =;
       selectedPriceRange === 'all' ||;
       (() => {;
         const price = parseInt(service && service.price.replace('$', ''));
         switch (selectedPriceRange) {;
           case '0-100':;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             return price <= 100;
           case '100-200':;
             return price > 100 && price <= 200;
           case '200-400':;
             return price > 200 && price <= 400;
           case '400-600':;
+=======
   const [search_term, setSearchTerm] = useState ('');
   const [selected_category, setSelectedCategory] = useState ('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState ('all');
@@ -314,6 +327,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           case '200 - 400':;
             return price > 200 && price <= 400;
           case '400 - 600':;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             return price > 400 && price <= 600;
           case '600+':;
             return price > 600;
@@ -328,6 +342,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       case 'price-high':
         return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', ''));
       case 'rating':
+=======
 ;
     return matches_search && matches_category && matches_price;  });
 ;
@@ -399,6 +414,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               </span>;
             </h1>;
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
+=======
       default:;
         return 0;    }
   });
@@ -532,6 +548,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           </div>;
         </div>;
       </div>;
+
       {/* Services Grid */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
         <div className='mb-8'>;
@@ -542,6 +559,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
             Discover innovative solutions tailored to your business needs;
           </p>;
         </div>;
+
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {sortedServices && sortedServices.map((service, index) => (;
             <motion&& motion.div
@@ -714,8 +732,10 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                     {service.period}
 
               </div>;
+
               {/* Service Details */}
               <p className='text-gray-300 mb-4'>{service && service.tagline}</p>;
+
               {/* Price and Trial */}
               <div className='flex items-center justify-between mb-4'>;
                 <div className='text-2xl font-bold text-white'>;
@@ -782,6 +802,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 
                 </ul>;
               </div>;
+
               {/* Stats */}
               <div className='grid grid-cols-3 gap-4 mb-4 text-center'>;
                 <div>;
@@ -803,6 +824,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   <div className='text-xs text-gray-400'>Setup</div>;
                 </div>;
               </div>;
+
               {/* Market Info */}
               <div className='mb-4 p-3 bg-white/5 rounded-lg'>;
                 <div className='text-xs text-gray-300 mb-1'>;
@@ -918,15 +940,15 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               Discover innovative solutions tailored to your business needs
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => (
               <motion.div
-<<<<<<< HEAD
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-4">
@@ -935,47 +957,7 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                       {service.icon}
                     </div>
                     <div>
-<h3 className="text-xl font-bold text-white">{service.name}</h3>
-=======
-                key={service.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                {/* Service Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-3">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>
-                      {service.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </div>
-                    <div>
                       <h3 className="text-xl font-bold text-white">{service.name}</h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <p className="text-sm text-gray-300">{service.category}</p>
                     </div>
                   </div>
@@ -983,31 +965,13 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                     <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
                       Popular
                     </div>
-<<<<<<< HEAD
                   )}
                 </div>
-{/* Service Details */}
+
+                {/* Service Details */}
                 <p className="text-gray-300 mb-4">{service.tagline}</p>
+                
                 {/* Price and Trial */}
-=======
-                  )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </div>;
-                {/* Service Details */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                <p className="text-gray-300 mb-4">{service.tagline}</p>
-                {/* Price and Trial */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-2xl font-bold text-white">
                     {service.price}<span className="text-sm text-gray-400">{service.period}</span>
@@ -1016,48 +980,21 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                     {service.trialDays} days free trial
                   </div>
                 </div>
-<<<<<<< HEAD
+
                 {/* Features */}
-=======
-                {/* Features */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className="text-xs text-gray-300 flex items-center">
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-<<<<<<< HEAD
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-{/* Stats */}
-=======
-                        {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </li>;
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </ul>;
-                </div>;
-                {/* Stats */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+                {/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mb-4 text-center">
                   <div>
                     <div className="text-lg font-bold text-white">{service.rating}</div>
@@ -1072,43 +1009,23 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                     <div className="text-xs text-gray-400">Setup</div>
                   </div>
                 </div>
-<<<<<<< HEAD
+
                 {/* Market Info */}
-=======
-                {/* Market Info */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="mb-4 p-3 bg-white/5 rounded-lg">
                   <div className="text-xs text-gray-300 mb-1">Market Size: {service.marketSize}</div>
                   <div className="text-xs text-gray-300">Growth Rate: {service.growthRate}</div>
                 </div>
-<<<<<<< HEAD
+
                 {/* CTA Button */}
                 <a
                   href={service.link}
-=======
-                {/* CTA Button */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                <a;
-                  href={service.link  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Learn More & Get Started
-<<<<<<< HEAD
                 </a>
+
                 {/* Contact Info */}
                 <div className="mt-4 text-center">
                   <div className="text-xs text-gray-400">
@@ -1122,44 +1039,8 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
             ))}
           </div>
         </div>
-{/* Contact Section */}
-=======
-                </Link>
-                {/* Contact Info */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                <div className="mt-4 text-center">
-                  <div className="text-xs text-gray-400">
-                    Contact: {service.contactInfo.email  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </div>
-                  <div className="text-xs text-gray-400">
-                    Phone: {service.contactInfo.mobile  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </div>;
-                </div>;
-              </motion.div>;
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-        {/* Contact Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+        {/* Contact Section */}
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
             <div className="text-center">
@@ -1198,45 +1079,13 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 h
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                 >
                   Email Us
-<<<<<<< HEAD
                 </a>
-=======
-                </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <a
                   href="tel:+13024640950"
                   className="bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
                 >
                   Call Us
-<<<<<<< HEAD
                 </a>
-                Ready to Transform Your Business?
-              </h2>
-              <p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
-                Get in touch with our team to discuss how our innovative services can help you achieve your goals.
-              </p>
-              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot;>
-                <div className=&quot;text-center&quot;>
-                  <div className=&quot;w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
-                    <Users className=&quot;w-8 h-8 text-cyan-400&quot; />
-                  </div>
-                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>Expert Team</h3>
-                  <p className=&quot;text-gray-300 text-sm&quot;>Dedicated professionals ready to help</p>
-                </div>
-                <div className=&quot;text-center&quot;>
-                  <div className=&quot;w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
-                    <Zap className=&quot;w-8 h-8 text-blue-400&quot; />
-                  </div>
-                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>Fast Implementation</h3>
-                  <p className=&quot;text-gray-300 text-sm&quot;>Quick setup and deployment</p>
-                </div>
-                <div className=&quot;text-center&quot;>
-                  <div className=&quot;w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
-                    <Shield className=&quot;w-8 h-8 text-purple-400&quot; />
-                  </div>
-                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>24/7 Support</h3>
-                  <p className=&quot;text-gray-300 text-sm&quot;>Round-the-clock assistance</p>
-                </div>
               </div>
 
 
@@ -1392,6 +1241,5 @@ export default ComprehensiveServicesShowcase2026;
 }</div> </div> <div className="bg - gradient - to - r from - cyan - 600 / 20 to - blue - 600 / 20 rounded - 2xl p - 8 border border - cyan - 400 / 30"> <div className="text - center"> <h2 className="text - 3xl font - bold text - white mb - 4"> text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto"> Get in touch with our team to discuss how our innovative services can help you achieve your goals. </p> <div className=" grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8"> <div className=" text - center"> <div className=" w - 16 h - 16 bg - cyan - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4"> <Users className=" w - 8 h - 8 text - cyan - 400"/> </div> <h3 className=" text - lg font - semibold text - white mb - 2">Expert Team</h3> <p className=" text - gray - 300 text - sm">Dedicated professionals ready to help</p> </div> <div className=" text - center"> <div className=" w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4"> <Zap className=" w - 8 h - 8 text - blue - 400"/> </div> <h3 className=" text - lg font - semibold text - white mb - 2">Fast Implementation</h3> <p className=" text - gray - 300 text - sm">Quick setup and deployment</p> </div> <div className=" text - center"> <div className=" w - 16 h - 16 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4"> <Shield className=" w - 8 h - 8 text - purple - 400"/> </div> <h3 className=" text - lg font - semibold text - white mb - 2">24 / 7 Support</h3> <p className=" text - gray - 300 text - sm">Round - the - clock assistance</p> </div> </div> <div className=" flex flex - col sm:flex - row gap - 4 justify - center items - center"> <a href=" mailto:kleber@ziontechgroup.com"className=" bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white px - 8 py - 3 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300"> Email Us </Link> <a href=" tel:+13024640950"className=" bg - white / 10 text - white px - 8 py - 3 rounded - lg font - semibold border border - white / 30 hover:bg - white / 20 transition - all duration - 300" > Call Us </Link> </div> </div> </div> </div> </div>);
 }
 export default ComprehensiveServicesShowcase2026;
-<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

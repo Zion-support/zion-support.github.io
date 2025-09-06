@@ -1,7 +1,7 @@
 
 
   id: string;
-  userId: string;
+  user_id: string;
   amount: number;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
@@ -10,8 +10,7 @@
 
 
 }
-
-// Mock data storage - replace with actual database
+// Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
 
 
@@ -78,9 +77,7 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
     reason,
     timestamp: Date && Date.now()
   };
-  
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  transactions.push(transaction);
+  transactions && transactions.push(transaction);
   return transaction;
 }
 

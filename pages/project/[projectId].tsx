@@ -60,6 +60,7 @@ export default function ProjectPage() {
 
 
         setProject(json.project)
+=======
 import { useEffect, useState  } from './react';,
 import { use_router  } from './next / router';,
 import FeedbackModal from "../../components / ui / FeedbackModal",
@@ -96,6 +97,7 @@ if (return, ) {
   $2
 }
         set_project (json.project);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch (e: any) {
         set_error (e.message);
       } finally {
@@ -193,6 +195,7 @@ if ( {) {
 }
       set_project (json.project),
       setShowFeedback (true);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
@@ -424,8 +427,8 @@ export default function ProjectPage(req, res) {
             <ul className="list - disc pl - 6 space - y-1 text - sm">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {project.documents?.length ? (
-                project.documents.map((d: any) => (
-                  <li key={d.id}>
+                project.documents.map ((d: any) => (
+                  <li key={d.id}>;
                     {d.url ? (
 
 
@@ -445,11 +448,7 @@ export default function ProjectPage(req, res) {
                 ))
               ) : (
                 <li>No documents</li>
-              )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              )}
             </ul>
           </section>
           <section className="rounded border p-4 space-y-3">
@@ -497,21 +496,41 @@ export default function ProjectPage(req, res) {
 }
 
 =======
-  );
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      <a href={d.url} className="text - indigo - 600 underline" target="_blank" rel="noreferrer">{d.name}</a>) : (
+                      <span>{d.name}</span>)}
+                    <span className="text - gray - 500"> • uploaded {new Date (d.uploadedAtIso).toLocaleString ()}</span>;
+                  </li>))) : (
+                <li > No documents</li>)}
+            </ul>;
+          </section>;
+          <section className="rounded border p - 4 space - y-3">;
+            <h2 className="font - medium">Shared notes / messages</h2>;
+            <div className="space - y-2">;
+              {project.notes?.length ? (
+                project.notes.map ((number: any) => (
+                  <div key={n.id} className="text - sm">;
+                    <span className="font - medium">{n.author_role}</span>: {n.content}
+                    <span className="text - gray - 500"> • {new Date (n.createdAtIso).toLocaleString ()}</span>;
+                  </div>))) : (
+                <div className="text - sm text - gray - 600">No notes yet.</div>)}
+            </div>;
+            <div className="flex gap - 2">;
+              <input value={note} on_change={(e) => set_note (e.target.value)} placeholder="Add a note" className="flex - 1 border rounded px - 3 py - 2" />;
+              <button on_click={add_note} className="px - 3 py - 2 rounded bg - gray - 900 text - white">Add</button>;
+            </div>;
+          </section>;
+          <div className="flex justify - end">;
+            {project.status !== "COMPLETED" && (
+              <button on_click={mark_completed} className="px - 4 py - 2 rounded bg - emerald - 600 text - white">Mark as Completed</button>)}
           </div>;
-        </div>;
-      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+        </div>)}
+      <FeedbackModal;
+        is_open={show_feedback}
+        on_close={() => setShowFeedback (false)}
+        default_context={{ action_type: 'chatbot_use', metadata: { project_id } }}
+        user_headers={headers}
+      />;
+    </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

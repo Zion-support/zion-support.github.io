@@ -20,7 +20,9 @@ export default function GrantDetailPage() {;
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
+
   useEffect(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!id) return;
     setLoading(true);
 
@@ -47,6 +49,7 @@ export default function GrantDetailPage() {;
   const addUpdate = async () => {;
     if (!id || !updateContent && updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r && r.json()).then((d) => setItem(d && d.record)).finally(() => setLoading(false));
   }, [id]);
+
   const addUpdate = async () => {;
     if (!id || !updateContent && updateContent.trim()) return;
     const resp = await fetch(`/api/grants/${id}/updates`, {;
@@ -61,7 +64,9 @@ export default function GrantDetailPage() {;
       setUpdateContent('');
     }
   };
+
   if (loading);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <EnhancedLayout>;
         <div>Loading...</div>;
@@ -185,6 +190,7 @@ if (
           </span>;
         </div>;
       </div>;
+
       <div className='grid md:grid-cols-3 gap-6'>;
         <div className='md:col-span-2 space-y-4'>;
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
@@ -209,7 +215,6 @@ if (
                         className='text-blue-600'
                         href={l}
                         target='_blank'
-<<<<<<< HEAD
                         rel='noreferrer'>;
                         {l}
                       </a>;
@@ -248,7 +253,8 @@ if (
             </div>
           </section>
         </div>
-<aside className="space-y-4">
+
+        <aside className="space-y-4">
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h3 className="font-medium mb-2">Milestones</h3>
             <ul className="space-y-2">
@@ -293,6 +299,7 @@ if (
               Funds Released: {item && item.fundsReleased || 0}
             </div>;
           </section>;
+
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
             <h3 className='font-medium mb-2'>Team</h3>;
             <div className='text-sm whitespace-pre-wrap'>{item && item.teamInfo}</div>          </section>                  <div>;
@@ -307,6 +314,7 @@ if (
             </ul>;
             <div className="mt-3 text-sm">Funds Released: {item && item.fundsReleased || 0}</div>;
           </section>;
+
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">;
             <h3 className="font-medium mb-2">Team</h3>;
             <div className="text-sm whitespace-pre-wrap">{item && item.teamInfo}</div>;
@@ -316,8 +324,12 @@ if (
     </EnhancedLayout>;
   );
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
             <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
               Incubated by Zion;
             </span>)}

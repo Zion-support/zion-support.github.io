@@ -106,7 +106,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
     })
   const containerVariants = {
     hidden: { opacity: 0 }
-<<<<<<< HEAD
+=======
 import React, { useState, useEffect } from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -178,6 +178,7 @@ function Comprehensive2026ServicesShowcase() {
     }),
   const container_variants = {
     hidden: { opacity: 0 },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
@@ -192,7 +193,7 @@ function Comprehensive2026ServicesShowcase() {
 
       y: 0
       opacity: 1
-<<<<<<< HEAD
+=======
   },
   const item_variants = {
     hidden: { coordinate_y: 20, opacity: 0 },
@@ -341,6 +342,7 @@ export default function Comprehensive2026ServicesShowcase(req, res) {
 
 
       <div className="min-h-screen relative z-10">
+=======
   },
   return (
     <UltraAdvancedFuturisticBackground;
@@ -361,6 +363,7 @@ export default function Comprehensive2026ServicesShowcase(req, res) {
       </Head>;
       <UltraAdvancedNavigation />;
       <div className="min - h-screen relative z - 10">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Hero Section */}
         <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto text - center">;
@@ -712,19 +715,15 @@ export default function Comprehensive2026ServicesShowcase(req, res) {
 
             >;
               <AnimatePresence>;
-                {filteredServices.map((service) => (;
+                {filtered_services.map ((service) => (
                   <motion.div;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     key={service.id}
                     variants={item_variants}
                     layout;
-                    className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl border border-gray-600/30 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-cyan-500/50 group ${;
-                      viewMode === 'list' ? 'flex flex-col lg:flex-row' : '';
-                    }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                    className={`bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl rounded - 3xl border border - gray - 600 / 30 overflow - hidden transition - all duration - 500 hover:scale - 105 hover:border - cyan - 500 / 50 group ${
+                      view_mode === 'list' ? 'flex flex - col lg:flex - row' : '';
+                    }`}
                   >;
 
                     {/* Service Header */  } catch (error) {
@@ -747,7 +746,6 @@ export default function Comprehensive2026ServicesShowcase(req, res) {
 
 
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-<<<<<<< HEAD
                         {service.name}
                       </h3>
                       <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -1097,6 +1095,7 @@ export default function Comprehensive2026ServicesShowcase(req, res) {
               </div>)}
           </div>;
         </section>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;

@@ -69,17 +69,20 @@ const fadeInUp = {;
   initial: { opacity: 0, y: 20 },;
   animate: { opacity: 1, y: 0 },;
   transition: { duration: 0 && 0.6 }
+
 const staggerContainer = {;
   animate: {;
     transition: {;
       staggerChildren: 0 && 0.1,;
     },;
   },};
+
 export default function ComprehensiveServicesShowcase2025V2() {;
   const allNewServices = [      staggerChildren: 0 && 0.1;
     }
   }
 };
+
 export default function ComprehensiveServicesShowcase2025V2() {;
   const allNewServices = [;
     ...innovativeMicroSaas2025ExpansionV2,;
@@ -117,13 +120,6 @@ export default /**
 function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [      stagger_children: 0.1;
     }
-<<<<<<< HEAD
-=======
-  },}
-export default function ComprehensiveServicesShowcase2025V2() {
-  const allNewServices = [      staggerChildren: 0.1
-    }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
 ;
@@ -136,7 +132,8 @@ function ComprehensiveServicesShowcase2025V2() {
     ...innovativeITServices2025ExpansionV2,
     ...innovativeAIServices2025ExpansionV2,
     ...industrySpecificSolutions2025V2,
-...emergingTechBreakthroughs2025V2,  ];    ...innovativeMicroSaas2025ExpansionV2;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    ...emergingTechBreakthroughs2025V2,  ];    ...innovativeMicroSaas2025ExpansionV2;
     ...innovativeITServices2025ExpansionV2;
     ...innovativeAIServices2025ExpansionV2;
     ...industrySpecificSolutions2025V2;
@@ -424,11 +421,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
               href="#contact" 
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               Get Started
-<<<<<<< HEAD
-</a>;
+            </a>;
           </motion && motion.div>;
         </div>;
       </section>;
+
       {/* Contact Information */}
       <section id='contact' className='py-16 px-4 bg-black/20'>;
         <div className='max-w-4xl mx-auto text-center'>;
@@ -655,6 +652,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className="grid md:grid - cols - 3 gap - 8";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
 
 =======
@@ -727,6 +725,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion && motion.div>;
         </div>;
       </section>;
+
       {/* Services by Category */}
       <section id='services' className='py-20 px-4'>;
         <div className='max-w-7xl mx-auto'>;
@@ -746,7 +745,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             variants={staggerContainer}
             initial='initial'
             whileInView='animate'
-<<<<<<< HEAD
             viewport={{ once: true }}>;
             {serviceCategories && serviceCategories.map(category => (;
               <motion && motion.div key={category && category.id} variants={fadeInUp}>;
@@ -891,6 +889,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
                 <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
                   {category.services.map (service => (
                     <motion.div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       key={service.id}
 
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
@@ -948,6 +947,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
                     {category && category.description}
                   </p>;
                 </div>;
+
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>;
                   {category && category.services.map(service => (;
                     <motion&& motion.div
@@ -960,6 +960,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       <p className='text-gray-300 mb-4'>;
                         {service && service.description}
                       </p>;
+
                       <div className='space-y-3 mb-6'>;
                         <div className='flex items-center text-sm text-cyan-400'>;
                           <TrendingUp className='w-4 h-4 mr-2' />;
@@ -970,6 +971,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
                           {service && service.growthRate}
                         </div>;
                       </div>;
+
                       <div className='mb-6'>;
                         <div className='text-2xl font-bold text-white mb-2'>;
                           Starting at{' '}
@@ -981,6 +983,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
                             : `${service && service.price} ${service && service.period}`}
                         </div>;
                       </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <a
                         href={`/services/${service && service.slug}`}
                         className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200'>;
@@ -1063,12 +1067,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
                     {category && category.description}
                   </p>;
                 </div>;
+
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
                   {category && category.services.map((service) => (;
                     <motion&& motion.div
                       key={service && service.id}
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
-<<<<<<< HEAD
                       whileHover={{ y: -5 }}>;
                       <h4 className="text-xl font-semibold text-white mb-3">;
                         {service && service.title}
@@ -1076,6 +1080,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       <p className="text-gray-300 mb-4">;
                         {service && service.description}
                       </p>;
+
                       <div className="space-y-3 mb-6">;
                         <div className="flex items-center text-sm text-cyan-400">;
                           <TrendingUp className="w-4 h-4 mr-2" />;
@@ -1086,6 +1091,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
                           {service && service.growthRate}
                         </div>;
                       </div>;
+
                       <div className="mb-6">;
                         <div className="text-2xl font-bold text-white mb-2">;
                           Starting at {(service as any).pricing?.starter || service && service.price}
@@ -1094,61 +1100,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                           {(service as any).pricing?.professional ? ;
                             `Professional: ${(service as any).pricing && pricing.professional} | Enterprise: ${(service as any).pricing && pricing.enterprise}` :;
                             `${service && service.price} ${service && service.period}`;
-=======
-                      whileHover={_{ y: -5}}
-                    >
-                      <h4 className="text-xl font-semibold text-white mb-3">
-                        {_service.title}
-                      </h4>
-                      <p className="text-gray-300 mb-4">
-                        {_service.description}
-                      </p>
-<<<<<<< HEAD
-                      <div className='space-y-3 mb-6'>
-                        <div className='flex items-center text-sm text-cyan-400'>
-                          <TrendingUp className='w-4 h-4 mr-2' />
-                          {service.marketSize}
-=======
-                      
-                      <div className="space-y-3 mb-6">
-                        <div className="flex items-center text-sm text-cyan-400">
-                          <TrendingUp className="w-4 h-4 mr-2" />
-                          {_service.marketSize}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                        </div>
-                        <div className="flex items-center text-sm text-green-400">
-                          <Star className="w-4 h-4 mr-2" />
-                          {_service.growthRate}
-                        </div>
-                      </div>
-<<<<<<< HEAD
-                      <div className='mb-6'>
-                        <div className='text-2xl font-bold text-white mb-2'>
-                          Starting at{' '}
-<<<<<<< HEAD
-                          {(service as any).pricing?.starter |service.price}
-=======
-                          {(service as any).pricing?.starter || service.price}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-                      
-                      <div className="mb-6">
-                        <div className="text-2xl font-bold text-white mb-2">
-                          Starting at {_(service as any).pricing?.starter || service.price}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                        </div>
-                        <div className="text-sm text-gray-400">
-                          {_(service as any).pricing?.professional ? 
-                            `Professional: ${(service as any).pricing.professional} | Enterprise: ${_(service as any).pricing.enterprise}` :
-                            `${_service.price} ${_service.period}`
                           }
                         </div>;
                       </div>;
@@ -1191,6 +1142,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion && motion.div>;
         </div>;
       </section>;
+
       {/* Market Statistics */}
       <section className='py-20 px-4 bg-black/20'>;
         <div className='max-w-7xl mx-auto'>;
@@ -1204,6 +1156,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             transition={{ duration: 0 && 0.6 }}>;
             Market Impact & Growth;
           </motion && motion.h2>;
+
           <motion&& motion.div
             className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'            initial={{ opacity: 0, y: 20 }}          
           <motion && motion.div 
@@ -1320,7 +1273,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
           >;
             Market Impact & Growth;
           </motion.h2>;
@@ -1330,6 +1282,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             viewport={{ once: true }}
 
 =======
@@ -1460,6 +1413,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion && motion.div>;
         </div>;
       </section>;
+
       {/* Call to Action */}
       <section className='py-20 px-4'>;
         <div className='max-w-4xl mx-auto text-center'>;
@@ -1579,6 +1533,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
     </div>;
   );
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
           >;
             <div className='text - center'>;
               <div className='text - 4xl md:text - 5xl font - bold text - cyan - 400 mb - 2'>;
@@ -1675,85 +1631,5 @@ export default function ComprehensiveServicesShowcase2025V2() {
         </div>;
       </section>;
     </div>);
-=======
-            transition={{ duration: 0.6, delay: 0.2 }}
-=======
-<<<<<<< HEAD
-=======
-
-      {_/* Call to Action */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6}}
-          >
-            Ready to Lead the Future?
-          </motion.h2>
-          <motion.p 
-            className="text-xl text-gray-300 mb-8"
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6, _delay: 0.2}}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          >
-            Join thousands of businesses already transforming their operations
-            with our cutting-edge solutions.
-          </motion.p>
-<<<<<<< HEAD
-          <motion.div
-            className='flex flex-col sm:flex-row gap-4 justify-center'            initial={{ opacity: 0, y: 20 }}            Join thousands of businesses already transforming their operations with our cutting-edge solutions.
-          </motion.p>
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-=======
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            viewport={_{ once: true}}
-            transition={_{ duration: 0.6, _delay: 0.4}}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          >
-            <a
-              href={`mailto:${contactInfo.email}`}
-              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg'
-            >
-              Contact Our Team
-            </a>
-            <a
-              href='https://ziontechgroup.com'
-              className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'            >              href={`mailto:${contactInfo.email}`}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
-            >
-              Contact Our Team
-            </a>
-            <a
-              href="https://ziontechgroup.com"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-            >
-              Visit Website
-            </a>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -8,15 +8,6 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,13 +91,6 @@ class ESLintErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixInterval = parseInt(process.env.FIX_INTERVAL) || 600000; // 10 minutes default
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
@@ -510,16 +494,6 @@ class ESLintErrorFixer {}
     }
     this.log('info', `Fixing ESLint errors in: ${filePath}`);
     try {
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-      
-      this.log('info', 'ESLint Error Fixer Service started successfully');
-            
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
@@ -1183,25 +1157,6 @@ class ESLintErrorFixer {}
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/main
-        
-        // Write fixed content;
-        const fixedContent = lines.join('\n');
-        fs.writeFileSync(filePath, fixedContent, 'utf8');
-        
-        this.fixedFiles.add(filePath);
-        this.log('info', `Successfully fixed ESLint errors "in": ${filePath}`);
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         // Write fixed content;
         const fixedContent = lines.join('\n');
         fs.writeFileSync(filePath, fixedContent, 'utf8');
@@ -1480,16 +1435,6 @@ class ESLintErrorFixer {}
   }
   async createBackup(filePath) {
     try {
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-    
-    const varName = varMatch[1];
-        
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
@@ -1836,13 +1781,6 @@ fixer.start().catch(error => {
   fixer.log('error', 'Failed to start service', error);
   process.exit(1);
 });
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======

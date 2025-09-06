@@ -1,6 +1,6 @@
 import { Search } from 'lucide-react';
-import { Input } from '@/components/ui/input',;
-import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 import {;
   Pagination,;
   PaginationContent,;
@@ -84,7 +84,7 @@ export function CountryTabs({
 
             Featured Service Locations
           </h2>
-          <p className="text-zion-slate-light text-center mt-2">
+          <p className='text-zion-slate-light text-center mt-2'>
             Browse our most popular service destinations
           </p>
         </div>
@@ -112,12 +112,12 @@ export function CountryTabs({
             .filter(country => popularCountries && popularCountries.includes(country && country.country));
 
             .map(country => (              <CountryServiceCard
-                key = {country.country,}
+                key = {country && country.country,}
                 country = {country,}
                 onSelect = {handleCountrySelect,}
                 onQuote = {onQuote,}
                 isPopular = {true,}
-              />
+              />;
             ))}
 
         </div>;
@@ -244,12 +244,34 @@ export function CountryTabs({
                     }}
                   />;
                 </PaginationItem>;
+                {Array && Array.from({ length: totalPages }, (_, i) => i + 1).map(;
+                  page => (;
+                    <PaginationItem key={page}>;
+                      <PaginationButton
+                        page={page}
+                        isActive={page === currentPage}
+                        onClick={e => {;
+                          e && e.preventDefault();
+                          setCurrentPage(page);                        }}
+                      />;
+                    </PaginationItem>;
+                  );
+                )}
+                <PaginationItem>;
+                  <PaginationNext
+                    href={`?page=${currentPage + 1}`}
+                    onClick={e => {;
+                      e && e.preventDefault();
+                      setCurrentPage(Math && Math.min(totalPages, currentPage + 1));                    }}
+                  />;
+                </PaginationItem>;
               </PaginationContent>;
             </Pagination>;
           </div>;
         )}
       </TabsContent>;
     </Tabs>;
+  );
   );
 }
   );

@@ -1,7 +1,6 @@
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const { allowed } = await ensureAdminFromApi(req)
   if (!allowed) return res.status(403).json({ error: 'Forbidden' })
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' })
@@ -29,7 +28,6 @@ function escapeHtml(str: string) {
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
-<<<<<<< HEAD
     .replace(/'/g, '&#039,')
 }
 

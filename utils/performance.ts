@@ -38,7 +38,7 @@ export const measure_performance = (): PerformanceMetrics | null => {
     }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (error) {
-    console.warn('Error measuring performance:', error);
+    console.warn ('Error measuring performance:', error);
     return null;
   }
 
@@ -95,9 +95,61 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 
   let overall: 'good' | 'needs-improvement' | 'poor';
   if (poorCount > 0) {
+=======
+    fcp: 'good' | 'needs - improvement' | 'poor';
+    lcp: 'good' | 'needs - improvement' | 'poor';
+    fid: 'good' | 'needs - improvement' | 'poor';
+    cls: 'good' | 'needs - improvement' | 'poor';
+    ttfb: 'good' | 'needs - improvement' | 'poor';
+  }
+} => {
+  const thresholds = {
+    fcp: { good: 1000, needs_improvement: 2000 },
+    lcp: { good: 1500, needs_improvement: 3000 },
+    fid: { good: 50, needs_improvement: 100 },
+    cls: { good: 0.05, needs_improvement: 0.1 },
+    ttfb: { good: 200, needs_improvement: 400 }
+  }
+;
+  const get_score = (value: number | undefined, threshold: { good: number; needs_improvement: number }, reverse = false): 'good' | 'needs - improvement' | 'poor' => {
+    // Check condition
+if (return 'poor') {
+  $2
+}
+    const compare_value = reverse ? threshold.good / value : value / threshold.good;
+    // Check condition
+if (return 'good') {
+  $2
+}
+    if () return 'needs - improvement') {
+  $2
+}
+    return 'poor';
+  }
+;
+  const scores = {
+    fcp: get_score (metrics.fcp, thresholds.fcp),
+    lcp: get_score (metrics.lcp, thresholds.lcp),
+    fid: get_score (metrics.fid, thresholds.fid),
+    cls: get_score (metrics.cls, thresholds.cls, true),
+    ttfb: get_score (metrics.ttfb, thresholds.ttfb);
+  }
+;
+  const poor_count = Object.values (scores).filter (score => score === 'poor').length;
+  const needsImprovementCount = Object.values (scores).filter (score => score === 'needs - improvement').length;
+;
+  let overall: 'good' | 'needs - improvement' | 'poor';
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     overall = 'poor';
-  } else if (needsImprovementCount > 0) {
-    overall = 'needs-improvement';
+  } else // Check condition
+if ( {) {
+  $2
+}
+    overall = 'needs - improvement';
   } else {
     overall = 'good';
   }
@@ -137,7 +189,7 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   return { overall, scores }
 }

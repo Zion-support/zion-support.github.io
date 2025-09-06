@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Advanced Monitoring Script

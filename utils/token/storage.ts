@@ -4,16 +4,12 @@
 
 
 export interface TokenConfig {
-=======
-<<<<<<< HEAD
-export interface TokenConfig {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  tokenName: string;
-  tokenSymbol: string;
+  token_name: string;
+  token_symbol: string;
   decimals: number;
-  totalSupply: number;
-  issueRate: number;
-  redeemRate: number;
+  total_supply: number;
+  issue_rate: number;
+  redeem_rate: number;
   minIssueAmount: number;
   maxIssueAmount: number;
 }
@@ -56,11 +52,6 @@ class TokenStore {
 
   }
 export interface TokenStoreData {
-=======
-  };
-
-export interface TokenStoreData {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;

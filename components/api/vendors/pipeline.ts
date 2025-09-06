@@ -14,7 +14,6 @@ function handler() {
   const items = listPipelineForVendor (vendor_id);
   res.status (200).json ({ items });
   res.status (200).json ({ items });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

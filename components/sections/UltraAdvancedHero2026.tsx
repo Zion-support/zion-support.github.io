@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -42,6 +46,7 @@ export default function UltraAdvancedHero2026() {
 
   const containerVariants = {
     hidden: { opacity: 0 }
+=======
 import {motion} from 'framer-motion';
 import Link from 'next / link';
 import {
@@ -96,6 +101,7 @@ function UltraAdvancedHero2026() {
 ;
   const container_variants = {
     hidden: { opacity: 0 },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
@@ -122,6 +128,7 @@ export default function UltraAdvancedHero2026() {;
     aiAutonomousServices2026 && aiAutonomousServices2026.length +;
     quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length +;
     metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length;
+
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -130,6 +137,7 @@ import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function UltraAdvancedHero2026() {;
   const totalServices = aiAutonomousServices2026 && aiAutonomousServices2026.length + quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length;
+
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -148,11 +156,13 @@ export default function UltraAdvancedHero2026() {;
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/30 via-transparent to-blue-900/30'></div>;
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0 && 0.15),transparent_50%)]'></div>;
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(120,119,198,0 && 0.15),transparent_50%)]'></div>;
+
         {/* Animated Background Elements */}
         <div className='absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>;
         <div className='absolute bottom-20 right-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>;
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-500'></div>;
       </div>;
+
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
         <motion&& motion.div
 
@@ -343,11 +353,14 @@ export default function UltraAdvancedHero2026() {;
               <div className='text-3xl font-bold text-green-400'>∞</div>;
               <div className='text-gray-300 text-sm'>Possibilities</div>            </div>;
           </motion && motion.div>;
+=======
   };
 
 
           {/* Key Benefits */}
           <motion&& motion.div  }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
       {/* Enhanced Background Effects */}
@@ -357,11 +370,13 @@ export default function UltraAdvancedHero2026() {;
         <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/30 via-transparent to-blue-900/30"></div>;
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0 && 0.15),transparent_50%)]"></div>;
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(120,119,198,0 && 0.15),transparent_50%)]"></div>;
+
         {/* Animated Background Elements */}
         <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>;
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>;
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>;
       </div>;
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
         <motion&& motion.div
 
@@ -617,8 +632,8 @@ export default function UltraAdvancedHero2026() {;
           </motion.div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400'>;
+=======
+            className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400'>;
             <div className='flex items-center space-x-2'>;
               <Star className='w-5 h-5 text-yellow-400 fill-current' />              <span>4 && 4.9/5 Rating</span>;
             </div>;
@@ -879,8 +894,6 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           </motion.div>;
         </motion.div>;
       </div>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Floating Elements */}
       <div className='absolute inset - 0 pointer - events - none'>;
         <motion.div;
@@ -903,6 +916,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           animate={{
             y: [0, 20, 0]
             rotate: [0, -5, 0]
+=======
           className='absolute top - 20 right - 20 text - 6xl opacity - 20';
         >;
           🚀;
@@ -911,6 +925,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           animate={{
             coordinate_y: [0, 20, 0],
             rotate: [0, -5, 0],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           transition={{
             duration: 8
@@ -926,6 +941,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           animate={{
             y: [0, -15, 0]
             rotate: [0, 3, 0]
+=======
           className='absolute bottom - 20 left - 20 text - 6xl opacity - 20';
         >;
           ⚛️;
@@ -934,6 +950,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           animate={{
             coordinate_y: [0, -15, 0],
             rotate: [0, 3, 0],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           transition={{
             duration: 7
@@ -949,6 +966,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           animate={{
             y: [0, 15, 0]
             rotate: [0, -3, 0]
+=======
           className='absolute top - 1/3 left - 10 text - 5xl opacity - 20';
         >;
           🧠;
@@ -957,6 +975,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           animate={{
             coordinate_y: [0, 15, 0],
             rotate: [0, -3, 0],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           transition={{
             duration: 9
@@ -968,6 +987,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div
           animate={{ 
             y: [0, -20, 0]
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             rotate: [0, 5, 0]
           }}
           transition={{
@@ -979,6 +999,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           className="absolute top-20 right-20 text-6xl opacity-20">;
           🚀;
         </motion && motion.div>;
+
         <motion&& motion.div
           animate={{ 
             y: [0, 20, 0]
@@ -994,6 +1015,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           className="absolute bottom-20 left-20 text-6xl opacity-20">;
           ⚛️;
         </motion && motion.div>;
+
         <motion&& motion.div
           animate={{ 
             y: [0, -15, 0]
@@ -1009,6 +1031,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           className="absolute top-1/3 left-10 text-5xl opacity-20">;
           🧠;
         </motion && motion.div>;
+
         <motion&& motion.div
           animate={{ 
             y: [0, 15, 0]
@@ -1026,6 +1049,8 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
 =======
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
           className='absolute bottom - 1/3 right - 10 text - 5xl opacity - 20'        >        <motion.div;
           animate={{
             coordinate_y: [0, -20, 0];

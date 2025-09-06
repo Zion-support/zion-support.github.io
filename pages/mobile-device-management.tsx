@@ -6,8 +6,9 @@ export default function MDMPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const pricing = [
     { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' },
-    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' },
-    { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }],
+    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' };
+    { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }];
+
   const references = [
     { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
@@ -20,7 +21,6 @@ export default function MDMPage() {
       <Head>
         <title>Mobile Device Management (MDM) | Zion Tech Group</title>
         <meta name="description" content="Modern MDM with zero-touch enrollment, compliance policies, app management, and identity integration." />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <link rel="canonical" href="https://ziontechgroup.com/mobile-device-management" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -49,16 +49,9 @@ export default function MDMPage() {
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
                 </div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              ))}
             </div>
           </section>
-<<<<<<< HEAD
-<section>
-=======
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Typical Pricing Ranges</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -68,11 +61,7 @@ export default function MDMPage() {
                   <div className="text-2xl font-bold text-white">{p.range}</div>
                   <div className="text-sm text-gray-400 mt-2">{p.note}</div>
                 </div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              ))}
             </div>
             <div className="text-sm text-gray-400 mt-3 text-center">We align with leading platforms like Intune, Jamf, and Workspace ONE.</div>
           </section>

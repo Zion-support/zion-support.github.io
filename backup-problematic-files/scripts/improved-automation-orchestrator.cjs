@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -215,9 +213,6 @@ const { execSync } = require('child_process')
       return { "status": 'completed', "message"}
         "status"
         "status"
-<<<<<<< HEAD
-    console.error(' Improved automation "failed")
-=======
 <<<<<<< HEAD
     console.error(' Improved automation "failed")
 =======

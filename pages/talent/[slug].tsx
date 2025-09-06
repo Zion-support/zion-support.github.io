@@ -197,12 +197,14 @@ const TalentProfile: NextPage = () => {;
             />;
           </div>;
         </div>;
+
         <aside className="space-y-4">;
           <div className="border rounded-md p-4">;
             <h3 className="font-semibold mb-2">Response Log</h3>;
             <ul className="space-y-1 text-sm">;
               {responseLog && responseLog.length === 0 && (;
                 <li className="opacity-70">No responses yet.</li>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
               {responseLog && responseLog.map((r, idx) => (;
                 <li key={idx} className="flex items-center justify-between">;
@@ -212,6 +214,7 @@ const TalentProfile: NextPage = () => {;
                   </span>{" "}
                 </li>;
               ))}
+=======
       <section className="grid md:grid - cols - 3 gap - 6">;
         <div className="md:col - span - 2 space - y-4">;
           <div className="border rounded - md p - 4">;
@@ -264,17 +267,7 @@ export default TalentProfile;
 =======
     </div>);
 }
-            </ul>;
-          </div>;
-        </aside>;
-      </section>;
-    </div>;
-  );
-},;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
 export default TalentProfile;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

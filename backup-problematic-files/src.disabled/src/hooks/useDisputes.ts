@@ -69,6 +69,7 @@ export default function Page() {;
       if(error) throw error;
       toast && toast.success("Dispute submitted successfully");
       fetchDisputes();
+
       return data as Dispute} catch("err": any) {;
       console && console.error("Error creating dispute:", err);
       toast && toast.error("Failed to submit dispute");

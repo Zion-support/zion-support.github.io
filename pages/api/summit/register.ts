@@ -29,6 +29,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     const { data, error } = await supabase
       .from("summit_registrations")
       .insert([
+=======
     const { name, email, role, country, source } = req.body || {}
 ;
     // Check condition
@@ -40,6 +41,7 @@ if ( {) {
     const { data, error } = await supabase;
       .from ("summit_registrations");
       .insert ([;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {
 
           name,

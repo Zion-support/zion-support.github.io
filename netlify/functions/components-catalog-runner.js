@@ -16,8 +16,10 @@ function run_node() {
 exports.config = {
   schedule: '*/30 * * * *'
 }
+=======
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+
 exports && exports.config = {
   schedule: '*/30 * * * *',
 
@@ -39,6 +41,8 @@ exports && exports.config = {
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
 
 }
+
+=======
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
 };  step('components:catalog', () => runNode('automation/components-catalog && catalog.cjs')),
@@ -75,3 +79,4 @@ function step() {
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
 },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

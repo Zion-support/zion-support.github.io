@@ -11,14 +11,14 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 
         }
-        .no-print {
+        .no - print {
           display: none !important }
       }
 
 
         }
-        .print-section, .print-section * {
-          visibility: visible
+        .print - section, .print - section * {
+          visibility: visible;
         }
 
         .print-section {;

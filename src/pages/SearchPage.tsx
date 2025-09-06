@@ -29,7 +29,7 @@ import { generateSearchSuggestions } from "@/data/marketplaceData";
 
 import { SearchSuggestion } from "@/types/search";
 import {logErrorToProduction} from '@/utils/productionLogger';
-import {
+import {;
   Tabs;
   TabsContent;
   TabsList;
@@ -111,9 +111,9 @@ function highlight(text: string, term: string) {
 
 
   return (
-    <div key={pageKey}>
-      <main className="container mx-auto px-4 py-8">
-        <form onSubmit={handleSubmit} className="mb-6">
+    <div key={pageKey}>;
+      <main className="container mx-auto px-4 py-8">;
+        <form onSubmit={handleSubmit} className="mb-6">;
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -148,21 +148,21 @@ function highlight(text: string, term: string) {
             <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
           </div>;
         )}
-        {!loading && marketplaceResults.length === 0 && blogResults.length > 0 && (
-          <div>
-            <p className="text-zion-slate-light mb-2">No marketplace results found. Related blog posts:</p>
-            <div className="space-y-4">
-              {blogResults.map(r => (
-                <div key={`blog-${r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">
-                  <h3 className="text-lg font-bold text-white">{highlight(r.title, query)}</h3>
-                  <p className="text-zion-slate-light">{highlight(r.description, query)}</p>
-                </div>
+        {!loading && marketplaceResults && marketplaceResults.length === 0 && blogResults && blogResults.length > 0 && (;
+          <div>;
+            <p className="text-zion-slate-light mb-2">No marketplace results found. Related blog posts:</p>;
+            <div className="space-y-4">;
+              {blogResults && blogResults.map(r => (;
+                <div key={`blog-${r && r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
+                  <h3 className="text-lg font-bold text-white">{highlight(r && r.title, query)}</h3>;
+                  <p className="text-zion-slate-light">{highlight(r && r.description, query)}</p>;
+                </div>;
               ))}
-            </div>
-          </div>
+            </div>;
+          </div>;
         )}
-        {!loading && marketplaceResults.length === 0 && blogResults.length === 0 && query && (
-          <p className="text-zion-slate-light">No results found for "{query}".</p>
+        {!loading && marketplaceResults && marketplaceResults.length === 0 && blogResults && blogResults.length === 0 && query && (;
+          <p className="text-zion-slate-light">No results found for "{query}".</p>;
         )}
 
         {!loading && marketplaceResults && marketplaceResults.length > 0 && (;
@@ -191,70 +191,66 @@ function highlight(text: string, term: string) {
                 .map((r) => (
 
                   <div
-                    key={`${r.type}-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
-                  >
-                    <h3 className="text-lg font-bold text-white">
-                      {highlight(r.title, query)}
-                    </h3>
-                    <p className="text-zion-slate-light">
-                      {highlight(r.description, query)}
-                    </p>
-                  </div>
+                    key={`${r && r.type}-${r && r.id}`}
+                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
+                    <h3 className="text-lg font-bold text-white">;
+                      {highlight(r && r.title, query)}
+                    </h3>;
+                    <p className="text-zion-slate-light">;
+                      {highlight(r && r.description, query)}
+                    </p>;
+                  </div>;
                 ))}
-            </TabsContent>
-            <TabsContent value="talent" className="space-y-4">
-              {results
-                .filter((r) => r.type === "talent")
-                .map((r) => (
+            </TabsContent>;
+            <TabsContent value="talent" className="space-y-4">;
+              {results;
+                .filter((r,) => r && r.type === "talent");
+                .map((r,) => (;
                   <div
-                    key={`talent-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
-                  >
-                    <h3 className="text-lg font-bold text-white">
-                      {highlight(r.title, query)}
-                    </h3>
-                    <p className="text-zion-slate-light">
-                      {highlight(r.description, query)}
-                    </p>
-                  </div>
+                    key={`talent-${r && r.id}`}
+                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
+                    <h3 className="text-lg font-bold text-white">;
+                      {highlight(r && r.title, query)}
+                    </h3>;
+                    <p className="text-zion-slate-light">;
+                      {highlight(r && r.description, query)}
+                    </p>;
+                  </div>;
                 ))}
-            </TabsContent>
-            <TabsContent value="docs" className="space-y-4">
-              {results
-                .filter((r) => r.type === "doc")
-                .map((r) => (
+            </TabsContent>;
+            <TabsContent value="docs" className="space-y-4">;
+              {results;
+                .filter((r,) => r && r.type === "doc");
+                .map((r,) => (;
                   <div
-                    key={`doc-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
-                  >
-                    <h3 className="text-lg font-bold text-white">
-                      {highlight(r.title, query)}
-                    </h3>
-                    <p className="text-zion-slate-light">
-                      {highlight(r.description, query)}
-                    </p>
-                  </div>
+                    key={`doc-${r && r.id}`}
+                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
+                    <h3 className="text-lg font-bold text-white">;
+                      {highlight(r && r.title, query)}
+                    </h3>;
+                    <p className="text-zion-slate-light">;
+                      {highlight(r && r.description, query)}
+                    </p>;
+                  </div>;
                 ))}
-            </TabsContent>
-            <TabsContent value="blog" className="space-y-4">
-              {results
-                .filter((r) => r.type === "blog")
-                .map((r) => (
+            </TabsContent>;
+            <TabsContent value="blog" className="space-y-4">;
+              {results;
+                .filter((r,) => r && r.type === "blog");
+                .map((r,) => (;
                   <div
-                    key={`blog-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
-                  >
-                    <h3 className="text-lg font-bold text-white">
-                      {highlight(r.title, query)}
-                    </h3>
-                    <p className="text-zion-slate-light">
-                      {highlight(r.description, query)}
-                    </p>
-                  </div>
+                    key={`blog-${r && r.id}`}
+                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
+                    <h3 className="text-lg font-bold text-white">;
+                      {highlight(r && r.title, query)}
+                    </h3>;
+                    <p className="text-zion-slate-light">;
+                      {highlight(r && r.description, query)}
+                    </p>;
+                  </div>;
                 ))}
-            </TabsContent>
-          </Tabs>
+            </TabsContent>;
+          </Tabs>;
         )}
 
 
@@ -429,8 +425,8 @@ set_results ([]);
   set_loading (false);
 
 }
-const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault ()
+const handle_submit = (e: React.FormEvent) =>: any {
+  e.prevent_default ();
 router.push (`/search?q=$ {
 
   encodeURIComponent (query.trim () );
@@ -462,41 +458,41 @@ router.push (`/search?q=$ {
 }'"  );
 
               {/* Sort Options */}
-              <div  className="mb-6">
-                <label className="block text-sm font - medium text-gray - 700 mb-2">Sort By</label>
-                <select
-                  value={sortBy}
-                  onChange={ (e) => setSortBy(e.target.value as any) }
-                  className="w-full px-3 py-2 border border-gray - 300 rounded-lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-blue -500">
-                  <option value="relevance">Relevance</option>
-                  <option value="date">Date</option>
-                  <option value="popularity">Popularity</option>
-                </select>
-              </div>
+              <div  className="mb - 6">;
+                <label className="block text - sm font - medium text - gray - 700 mb - 2">Sort By</label>;
+                <select;
+                  value={sort_by}
+                  on_change={ (e) => setSortBy (e.target.value as any) }
+                  className="w - full px - 3 py - 2 border border - gray - 300 rounded - lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - blue -500">;
+                  <option value="relevance">Relevance</option>;
+                  <option value="date">Date</option>;
+                  <option value="popularity">Popularity</option>;
+                </select>;
+              </div>;
               {/* Filter Options */}
-              <div  className="space - y-3">
-                {filterOptions.map(filter => (<button     key={filter.id}
-                    onClick={ () => toggleFilter(filter.id) }
-                    className={`w-full flex items - center justify - between p - 3 rounded-lg transition - colors ${selectedFilters.has(filter.id) ? 'bg-blue - 50 border border-blue - 200'
-                        : 'hover:bg-gray - 50'
+              <div  className="space - y - 3">;
+                {filter_options.map (filter => (<button     key={filter.id}
+                    on_click={ () => toggle_filter (filter.id) }
+                    className={`w - full flex items - center justify - between p - 3 rounded - lg transition - colors ${selected_filters.has (filter.id) ? 'bg - blue - 50 border border - blue - 200';
+                        : 'hover:bg - gray - 50';
 }`}
-                  >
-                    <div  className="flex items - center space - x-3">
-                      <filter.icon className="h-5 w-5 text-gray -600" />
-                      <span className="text-sm font - medium text-gray -700">{filter.name}</span>
-                    </div>
-                    <span className="text-sm text-gray -500">{filter.count}</span>
+                  >;
+                    <div  className="flex items - center space - x - 3">;
+                      <filter.icon className="h - 5 w - 5 text - gray -600" />;
+                      <span className="text - sm font - medium text - gray -700">{filter.name}</span>;
+                    </div>;
+                    <span className="text - sm text - gray -500">{filter.count}</span>;
                   </button>) ) }
-              </div>
-            </div>
-          </div>
-        </motion.div>
+              </div>;
+            </div>;
+          </div>;
+        </motion.div>;
         {/* Search Results */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 20 }}
+          animate={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="max - w-6xl mx -auto">
+          className="max - w - 6xl mx -auto">;
           {/* Results Count */}
 
 

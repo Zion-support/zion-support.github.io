@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -30,7 +34,6 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
   Search
   HelpCircle
   BookOpen
@@ -117,19 +120,6 @@ const help_articles = [;
     description: "Overview of all available services and solutions",
     read_time: "7 min read",
     type: "Overview",
-=======
-      {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title: "AI Best Practices",
-        description: "Tips and best practices for AI development",
-        readTime: "6 min read",
-        type: "Best Practice",
-      },
-    ],
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   },
   {
     id: "ai - services",
@@ -201,7 +191,6 @@ const help_articles = [;
 
     articles: [;
       {
-<<<<<<< HEAD
         title: "Cloud Migration Guide",
         description: "Step - by - step guide to migrating to the cloud",
         read_time: "12 min read",
@@ -231,6 +220,7 @@ const help_articles = [;
       }
     ]
   }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 
 ;
@@ -272,6 +262,7 @@ import {;
   ChevronDown,;
   Cloud,;
 } from "lucide-react";
+
 const helpArticles = [;
   {;
     id: "overview",;
@@ -329,6 +320,7 @@ const helpArticles = [;
     ],;
   },;
 ];
+
 const helpCategories = [;
   {;
     title: "Getting Started",;
@@ -338,6 +330,7 @@ const helpCategories = [;
     articles: helpArticles,;
   },;
 ];
+
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
 =======
@@ -358,6 +351,7 @@ export default function HelpPage() {
 
 
   }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   const filteredCategories = helpCategories
     .map((category) => ({
       ...category
@@ -388,8 +382,7 @@ export default function HelpPage() {
       ),;
     }));
     .filter((category) => category && category.articles.length > 0);
-=======
->>>>>>> origin/automation-improvements-final
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -445,6 +438,7 @@ export default function HelpPage() {
       </div>;
     </>;
   );
+=======
 ;
 export default /**
  * HelpPage - Function description
@@ -513,4 +507,5 @@ function HelpPage() {
         </section>;
       </div>;
     </>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

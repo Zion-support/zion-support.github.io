@@ -6,7 +6,7 @@ interface GeneratedContent {
     max: number;
 
   }
-  keyPoints: string[]
+  key_points: string[];
 }
 interface AIListingGeneratorProps {
 
@@ -28,7 +28,7 @@ interface AIListingGeneratorProps {;
     title?: string;
     category?: string;
     keyFeatures?: string;
-    targetAudience?: string
+    targetAudience?: string;
   }
 }
 
@@ -60,13 +60,16 @@ function AIListingGenerator() {
     target_audience: string;
 
   }) => {
-    setIsLoading(true)
+    setIsLoading (true);
     try {
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
-        body: { title, category, keyFeatures, targetAudience }
-      })
-      if (error) {
-        throw new Error(error.message)
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
+        body: { title, category, key_features, target_audience }
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (error.message);
       }
 
 
@@ -102,7 +105,7 @@ if (.error) {) {
         variant: "destructive";
       });
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
 
 
@@ -263,7 +266,7 @@ key_features: string;
 target_audience: string;
 
 }) => {
-  setIsLoading (true)
+  setIsLoading (true);
 try {
   const {
 
@@ -285,7 +288,7 @@ if (.error) {) {
 }setGeneratedContent ( (data as any) ?.generated || null);
 
 toast ({
-}catch (error) {'
+}catch (error) {';
   logErrorToProduction ('Error generating content:', {
 
           />;
@@ -384,7 +387,6 @@ toast ({
 }
 
 }'";
-};
 }
 
 }
