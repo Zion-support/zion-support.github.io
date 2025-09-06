@@ -1,26 +1,23 @@
 
+
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 >(({ className, ...props }, ref) => {
+
       {...props}
       ref={ref}
     />;
   );
 });
 
-
-
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;
-RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
-const RadioGroupItem = React.forwardRef<;
-  React.ElementRef<typeof RadioGroupPrimitive.Item>,;
+
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
 >(({ className, ...props }, ref) => {;
   return (;
     <RadioGroupPrimitive.Item;
       ref={ref}
-
 
         className
       )}
@@ -33,8 +30,9 @@ const RadioGroupItem = React.forwardRef<;
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
-export { RadioGroup, RadioGroupItem }
 
+export { RadioGroup, RadioGroupItem }
 
 export { RadioGroup, RadioGroupItem }
 ;
+

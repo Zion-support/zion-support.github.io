@@ -6,6 +6,6 @@ const ScrollToTop.js = ({ className }) => {
       <h1>ScrollToTop.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

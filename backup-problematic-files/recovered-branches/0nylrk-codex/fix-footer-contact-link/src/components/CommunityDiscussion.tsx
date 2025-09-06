@@ -168,7 +168,7 @@ body: newBody
 ...posts]);
 setNewTitle ("");
 setNewBody ("");
-setShowNew (false);
+setShowNew (false)
 };
   newTitle 
 }onChange= {

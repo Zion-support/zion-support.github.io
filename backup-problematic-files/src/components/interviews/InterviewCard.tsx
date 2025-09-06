@@ -59,15 +59,15 @@ export function InterviewCard({ interview, onRefresh } InterviewCardProps) {;
     ;
     if (success) {;
       toast({;
-        title:`Interview ${status}`,;
-        description:`You have successfully ${status} the interview request.`;
+        title:`Interview ${status}`,,
+  description:`You have successfully ${status} the interview request.`;
       }),;
       setIsResponseDialogOpen(false),;
       await onRefresh(),;
     } else {;
       toast({;
-        title:"Error",;
-        description:"Failed to respond to the interview request. Please try again.",;
+        title:"Error",,
+  description:"Failed to respond to the interview request. Please try again.",;
         variant:"destructive";
       }),;
     }
@@ -80,14 +80,14 @@ export function InterviewCard({ interview, onRefresh } InterviewCardProps) {;
     ;
     if (success) {;
       toast({;
-        title:"Interview cancelled",;
-        description:"The interview has been cancelled successfully.";
+        title:"Interview cancelled",,
+  description:"The interview has been cancelled successfully.";
       }),;
       await onRefresh(),;
     } else {;
       toast({;
-        title:"Error",;
-        description:"Failed to cancel the interview. Please try again.",;
+        title:"Error",,
+  description:"Failed to cancel the interview. Please try again.",;
         variant:"destructive";
       }),;
     }
@@ -313,9 +313,9 @@ if (success) {;
   title: `Interview $ {;
   status ;
 }`;
-}setIsLoading (false) ;
+}setIsLoading (false) 
 };
-}setIsLoading (false) ;
+}setIsLoading (false) 
 };
 const getStatusBadge = () => {;
   switch (interview.status) {';

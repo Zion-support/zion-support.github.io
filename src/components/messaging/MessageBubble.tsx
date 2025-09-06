@@ -1,5 +1,23 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
   message: Message
   isUserMessage: boolean
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import React from 'react';
+import { format } from 'date-fns';
+import { PaperclipIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { Message } from '@/types/messaging';
+<<<<<<< HEAD
+
+interface MessageBubbleProps {
+  message: Message;
+  isUserMessage: boolean;
+}
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
     <div
@@ -16,6 +34,20 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
             : 'bg-zion-blue-dark text-white'
         )}
       >
+=======
+interface MessageBubbleProps {
+
+        <div className='text-xs opacity-70 text-right mt-1'>
+  isUserMessage: boolean
+}
+export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
+  return (
+    <div className;
+        isUserMessage 
+          ? "bg-zion-purple text-white" 
+          : "bg-zion-blue-dark text-white"
+      )}>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="whitespace-pre-wrap">{message.content}</div>
         
         {message.attachment_url && (
@@ -32,6 +64,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
+<<<<<<< HEAD
         </div>;
       </div>;
     </div>;
@@ -141,3 +174,14 @@ function MessageBubble() {
       </div>;
     </div>));
 }
+=======
+        </div>
+      </div>
+    </div>
+<<<<<<< HEAD
+  );
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

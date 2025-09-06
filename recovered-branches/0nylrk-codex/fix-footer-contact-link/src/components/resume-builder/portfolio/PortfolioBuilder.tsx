@@ -6,8 +6,7 @@ import {ProjectCard} from './ProjectCard';
 import {ProjectForm} from './ProjectForm';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
-export function PortfolioBuilder() {;
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
+export function PortfolioBuilder() {;  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
   const [showAddProject, setShowAddProject] = useState(false);
   const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
     null,
@@ -19,13 +18,13 @@ export function PortfolioBuilder() {;
 
   const handleAddSuccess = () => {
     setShowAddProject(false);
-    fetchProjects();
-  };
+    fetchProjects()
+};
 
   const handleEditSuccess = () => {
     setEditingProject(null);
-    fetchProjects();
-  };
+    fetchProjects()
+};
 
   const handleDeleteProject = async (projectId: string) => {
     const success = await deleteProject(projectId);
@@ -62,8 +61,7 @@ export function PortfolioBuilder() {;
       fetchProjects();
     }
   },
-  
-  if (isLoading) {
+    if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -95,6 +93,8 @@ export function PortfolioBuilder() {;
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
+              {editingProject ? "Edit Project" : "Add New Project"}
+            </h2>
 
             <ProjectForm
               project={editingProject || undefined}
@@ -108,7 +108,6 @@ export function PortfolioBuilder() {;
           </CardContent>;
         </Card>;
       )}
-
 
       {/* Projects List */}
       {projects && projects.length > 0 ? (;
@@ -160,33 +159,33 @@ if ( {) {
   $2
 }
     return (
-      <div className="flex justify - center items - center h - 64">;
-        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
+      <div className="flex justify - center items - center h-64">;
+        <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
       </div>);
   }
   return (
-    <div className="space - y-6">;
-      <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6">;
+    <div className="space-y-6">;
+      <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb-6">;
         <div>;
-          <h1 className="text - 2xl font - bold">Portfolio Projects</h1>;
-          <p className="text - muted - foreground">;
+          <h1 className="text - 2xl font-bold">Portfolio Projects</h1>;
+          <p className="text - muted-foreground">;
             Showcase your best work and projects;
           </p>;
         </div>;
         <Button;
           on_click={() => setShowAddProject (true)}
-          className="gap - 2";
+          className="gap-2";
           disabled={showAddProject || !!editing_project}
         >;
-          <FilePlus className="h - 4 w - 4" />;
+          <FilePlus className="h - 4 w-4" />;
           Add Project;
         </Button>;
       </div>;
       {/* Edit or Add Form */}
       {(showAddProject || editing_project) && (
         <Card>;
-          <CardContent className="pt - 6">;
-            <h2 className="text - xl font - semibold mb - 6">;
+          <CardContent className="pt-6">;
+            <h2 className="text - xl font - semibold mb-6">;
               {editing_project ? "Edit Project" : "Add New Project"}
             </h2>;
             <ProjectForm;
@@ -201,7 +200,7 @@ if ( {) {
         </Card>)}
       {/* Projects List */}
       {projects.length > 0 ? (
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">;
           {projects.map ((project) => (
             <ProjectCard;
               key={project.id}
@@ -211,25 +210,19 @@ if ( {) {
             />))}
         </div>) : (
         !showAddProject && (
-          <Card className="text - center py - 12">;
+          <Card className="text - center py-12">;
             <CardContent>;
-              <div className="flex flex - col items - center gap - 4">;
-                <div className="bg - muted / 50 p - 6 rounded - full">;
-                  <FilePlus className="h - 12 w - 12 text - muted - foreground" />;
+              <div className="flex flex - col items - center gap-4">;
+                <div className="bg - muted / 50 p - 6 rounded-full">;
+                  <FilePlus className="h - 12 w - 12 text - muted-foreground" />;
                 </div>;
-                <h3 className="text - xl font - medium">;
+                <h3 className="text - xl font-medium">;
                   No portfolio projects yet;
                 </h3>;
-                <p className="text - muted - foreground max - w-md mx - auto">;
+                <p className="text - muted - foreground max - w-md mx-auto">;
                   Add your best work to showcase your skills and experience to;
                   potential employers.;
                 </p>;
                 <Button;
                   on_click={() => setShowAddProject (true)}
-                  className="mt - 2";
-
-                >;
-                  Add Your First Project;
-                </Button>;
-              </div>;
-            </CardContent>;
+                  className="mt-2";

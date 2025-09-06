@@ -22,8 +22,7 @@ export default function DataAnalyticsServices() {
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform your data into actionable insights with advanced analytics,
-                business intelligence, and AI-powered data solutions.
-              </p>
+                business intelligence, and AI-powered data solutions.              </p>
             </motion.div>
           </div>
         </section>
@@ -43,8 +42,7 @@ export default function DataAnalyticsServices() {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                    <feature.icon className="w-6 h-6 text-purple-600" />
-                  </div>
+                    <feature.icon className="w-6 h-6 text-purple-600" />                  </div>
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="space-y-2 mb-4">
@@ -86,4 +84,3 @@ export default function DataAnalyticsServices() {
             </div>
           </div>
         </section>
-

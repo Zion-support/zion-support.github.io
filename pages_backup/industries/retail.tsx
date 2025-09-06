@@ -4,8 +4,7 @@ import Layout from '../../components/Layout';
 import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
+import { motion } from 'framer-motion';import Layout from '../../components/Layout';
 const services = [
   {
     title: 'E-commerce Platforms',
@@ -15,34 +14,42 @@ const services = [
       'Custom storefront development,',
       'Payment gateway integration',',
       'Inventory management',',
-    title: 'E-commerce Platforms,',;
-    description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',;
+    title: 'E-commerce Platforms,',,
+  description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',;
 import Layout from '../../components/Layout';
 const services = [;
   {;
-    title: 'E-commerce Platforms',;
-    description: 'Custom e-commerce solutions with advanced features and seamless user experience.',;
+    title: 'E-commerce Platforms',,
+  description: 'Custom e-commerce solutions with advanced features and seamless user experience.',;
     icon: Globe,;
     features: [,;
       'Custom storefront development,',;
       'Payment gateway integration',',;
-      'Inventory management',',;
-      'Order processing systems'';
+      'Inventory management',',;      'Waste reduction'';
     ];
   },
   {}
-      'Waste reduction'';
-    ];
-  },
-  {}
+    title: 'Customer Analytics,',
+    description: 'Advanced analytics to understand customer behavior and preferences.,',
+    icon: BarChart3,
+    features: [;
+      'Customer segmentation,',
+      'Purchase pattern analysis',',
+      'Personalization engines',',
       'Lifetime value prediction'';
     ];
   },
   {}
-      'A/B testing frameworks'';
     ];
   },
   {}
+    title: 'Supply Chain Optimization,',
+    description: 'End-to-end supply chain management with AI optimization.,',
+    icon: Package,
+    features: [;
+      'Supplier management,',
+      'Logistics optimization',',
+      'Demand planning',',
       'Cost reduction'';
     ];
   },
@@ -50,10 +57,9 @@ const services = [;
 ;];
 const benefits = [;
   {}
-    title: 'Increased Sales,',;
-    description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',;
-    icon: ShoppingCart;
-  {}
+    title: 'Increased Sales,',,
+  description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',;
+    icon: ShoppingCart;  {}
     title: 'Better Customer Experience,',
     description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',
     icon: Users;
@@ -104,33 +110,7 @@ export default function RetailPage() {;
               </div>;
             </motion && motion.div>;
           </div>;
-        </section>;
-];
-export default function RetailPage() {
-  return (
-    <Layout
-      title="Retail Technology Solutions - Zion Tech Group"
-      description="Transform retail with e-commerce platforms, inventory management AI, customer analytics, and omnichannel solutions."
-      keywords="retail technology, e-commerce, inventory management, customer analytics, omnichannel retail, retail AI"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-purple-900 via-violet-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Comprehensive retail technology solutions designed for modern businesses, ;
-                from small boutiques to large retail chains.;
-              </p>;
-              className="text-center mb-16"
+        </section>;              className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Retail Technology Services
@@ -183,30 +163,7 @@ export default function RetailPage() {
                   <ul className="space-y-3">";
                     {service && service.features.map((feature, featureIndex) => (,;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  <ul className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100";
-                >;
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">;
-                    <service && service.icon className="w-6 h-6 text-white" />;
-                  </div>;
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service && service.title}</h3>;
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service && service.description}</p>;
-                  <ul className="space-y-3">;
-                    {service && service.features.map((feature, featureIndex) => (;
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">;
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />;
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";                        {feature}
                       </li>,
                     ))}
                   </ul>,
@@ -226,19 +183,7 @@ export default function RetailPage() {
         </section>;
             </div>;
           </div>;
-        </section>;
-        {/* Benefits Section */}
-        <section className="py-20 bg-gray-50">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Our retail technology solutions deliver measurable improvements in sales, ;
-                customer experience, and operational efficiency.,;
-              </p>;
-              className="text-center mb-16"
+        </section>;              className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our Retail Solutions?
@@ -268,35 +213,7 @@ export default function RetailPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
-                  key={benefit && benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center""
-                >;
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-600 rounded-full flex items-center justify-center mx-auto mb-6">";
-                    <benefit.icon className="w-8 h-8 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
-                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
-                </motion.div>;
-              ))}
-            </div>
-          </div>
-        </section>
-            </div>,;
-          </div>;
-        </section>;
-            </div>,;
-          </div>;
-        </section>;
-            </div>,;
-          </div>;
-        </section>;
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
+                  key={benefit && benefit.title}        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-violet-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
@@ -313,8 +230,7 @@ export default function RetailPage() {
           </div>;
         </section>;
       </div>;
-    </Layout>;
-            >
+    </Layout>;            >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Retail?
               </h2>

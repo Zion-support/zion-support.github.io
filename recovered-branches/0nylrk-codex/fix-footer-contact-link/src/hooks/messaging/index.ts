@@ -1,11 +1,10 @@
 // Index utility
 export const Index = () => {
   // Implementation here
-  return null;
+  return null
 };
 
 export * from './useConversationState';
-
 
 export * from './useConversations',;
 export * from './useMessages',;

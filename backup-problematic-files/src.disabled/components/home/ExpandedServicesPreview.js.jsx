@@ -6,6 +6,6 @@ const ExpandedServicesPreview.js = ({ className }) => {
       <h1>ExpandedServicesPreview.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

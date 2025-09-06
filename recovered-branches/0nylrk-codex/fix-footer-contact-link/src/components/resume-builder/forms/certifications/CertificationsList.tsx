@@ -20,61 +20,36 @@ import { format } from 'date-fns',;
 interface CertificationsListProps {;
   certifications: Certification[],;
   onEdit: (cert: Certification) => void;
-  onDelete: (id: string) => void;
-import { Certification } from "@/types/resume";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Edit, Trash2 } from "lucide-react";
-import { format } from "date-fns";
-interface CertificationsListProps {
-  certifications: Certification[];
-  onEdit: (cert: Certification) => void;
-  onDelete: (id: string) => void;
-}
-
-export function CertificationsList({
-  certifications,
-  onEdit,
-  onDelete,
-}: CertificationsListProps) {
-  if (certifications.length === 0) {
-    return null;
-  }
-
-
-
-
-
-  return (
-                  )}
+  onDelete: (id: string) => void;                  )}
                 </p>;
               </div>;
               <div className="flex gap-2">;
-                  onClick={() => onEdit(cert)}
+                <Button
+                  variant="ghost"
+                  size="icon"                  onClick={() => onEdit(cert)}
                 >;
                   <Edit className="h-4 w-4" />;
                 </Button>;
-            {cert.credential_url && (
-                      {typeof cert.expiration_date === "string";
+            {cert.credential_url && (                      {typeof cert.expiration_date === "string";
                         ? cert.expiration_date;
                         : format (cert.expiration_date, "MMM yyyy")}
                     </>)}
                 </p>;
               </div>;
-              <div className="flex gap - 2">;
+              <div className="flex gap-2">;
                 <Button;
                   variant="ghost";
                   size="icon";
                   on_click={() => on_edit (cert)}
                 >;
-                  <Edit className="h - 4 w - 4" />;
+                  <Edit className="h - 4 w-4" />;
                 </Button>;
                 <Button;
                   variant="ghost";
                   size="icon";
                   on_click={() => on_delete (cert.id!)}
                 >;
-                  <Trash2 className="h - 4 w - 4" />;
+                  <Trash2 className="h - 4 w-4" />;
                 </Button>;
               </div>;
             </div>;
@@ -121,3 +96,4 @@ export function CertificationsList({
   )
 }
 ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

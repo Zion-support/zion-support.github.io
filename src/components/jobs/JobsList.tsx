@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import { Job, JobStatus } from '@/types/jobs';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Loader2, Edit, X, Eye } from 'lucide-react';
+import { format } from 'date-fns';
+import Link from 'next/link';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -12,7 +34,11 @@ import { format } from "date-fns",
 import Link from "next/link",
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface JobsListProps {
+<<<<<<< HEAD
   filter?: JobStatus,
+=======
+  filter?: JobStatus;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
 
@@ -22,10 +48,15 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const [isLoading, setIsLoading] = useState(true),
 
   useEffect(() => {
+<<<<<<< HEAD
     const fetchJobs = async () => {
       if (!user) return,
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       try {
         let query = supabase
           .from("jobs")
@@ -189,6 +220,9 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
 
 
+=======
+    const fetchJobs = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (
@@ -447,3 +481,36 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
                 <X className="h-4 w-4" />
               </Button>
             </div>
+<<<<<<< HEAD
+=======
+          </CardFooter>
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        </Card>
+      ))}
+    </div>
+  );
+
+};";
+return (<div className="grid gap-6 md:grid-cols-2" > {;
+  jobs.map ( (job) => (<Card key= {;
+  job.id ;
+}className= {;
+  `overflow-hidden cursor-pointer transition-shadow hover:shadow-md $ {";
+  onSelectJob ? "cursor-pointer" : "" ;
+}` ;
+}onClick={;
+  () => onSelectJob?. (job.id, job.title) ;
+}job.description ;
+}</p> + {;
+  job.skills.length - 3 ;
+}more </Badge>) ";
+}</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {;
+  job.budget.min ;
+}- $ {;
+  job.budget.max ";
+}</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) ) ;
+}</div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

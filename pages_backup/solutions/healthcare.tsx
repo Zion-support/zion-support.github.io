@@ -1,3 +1,17 @@
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Heart, 
+  Shield, 
+  Database, 
+  Users, 
+  Activity, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
 const features = [
   {
     icon: Heart,
@@ -34,8 +48,7 @@ const features = [
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform healthcare delivery with secure, compliant, and intelligent technology solutions
-                designed for modern healthcare providers.
-              </p>
+                designed for modern healthcare providers.              </p>
             </motion.div>
           </div>
         </section>
@@ -52,8 +65,7 @@ const features = [
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Healthcare Technology Features</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our healthcare solutions are built with security and compliance in mind.
-              </p>
-              {features.map((feature, index) => (
+              </p>              {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -245,8 +257,7 @@ const features = [
                 </button>
               </div>
 ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-            </div>
+ursor/fix-syntax-push-and-merge-to-main-40de            </div>
           </div>
         </section>
 

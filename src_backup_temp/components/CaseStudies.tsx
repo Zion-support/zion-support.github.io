@@ -12,8 +12,8 @@ interface CaseStudy { id: string title: string
 }';
 ';';
 const caseStudies: CaseStud y[] = [{ id: '1',';';
-    title: 'AI-Powered Customer Service Automation',';';
-    description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.',';';
+    title: 'AI-Powered Customer Service Automation',';',
+  description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.',';';
     industry: 'E-commerce',';
     results: [';';
       { metric: 'Response Time', value: '85% faster', icon: <TrendingUp className="w-5 h-5"  /> },';';
@@ -24,8 +24,8 @@ const caseStudies: CaseStud y[] = [{ id: '1',';';
     duration: '3 months'';
   },';';
   { id: '2',';';
-    title: 'Cloud-Native Data Platform Migration',';';
-    description: 'Migrated legacy data infrastructure to modern cloud-native platform with real-time analytics capabilities.',';';
+    title: 'Cloud-Native Data Platform Migration',';',
+  description: 'Migrated legacy data infrastructure to modern cloud-native platform with real-time analytics capabilities.',';';
     industry: 'Financial Services',';';
     results: [{ metric: 'Processing Speed', value: '10x faster', icon: <TrendingUp className="w-5 h-5"  /> },';';
       { metric: 'Scalability', value: 'Unlimited', icon: <Users className="w-5 h-5"  /> },';';
@@ -35,8 +35,8 @@ const caseStudies: CaseStud y[] = [{ id: '1',';';
     duration: '6 months'';
   },';';
   { id: '3',';';
-    title: 'Zero-Trust Cybersecurity Implementation',';';
-    description: 'Deployed comprehensive zero-trust security framework with automated threat detection and response.',';';
+    title: 'Zero-Trust Cybersecurity Implementation',';',
+  description: 'Deployed comprehensive zero-trust security framework with automated threat detection and response.',';';
     industry: 'Healthcare',';';
     results: [{ metric: 'Security Incidents', value: '-95%', icon: <CheckCircle className="w-5 h-5"  /> },';';
       { metric: 'Compliance Score', value: '99.9%', icon: <CheckCircle className="w-5 h-5"  /> },';';

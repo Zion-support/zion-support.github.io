@@ -10,14 +10,14 @@ import CodeBlock from "./CodeBlock",;
 import { logInfo } from '@/utils/productionLogger',;
 interface EndpointParam {;
   name:string,;
-  type:string,;
+  type:string,,
   description:string,;
   required?:boolean;
 }
 ;
 interface EndpointSectionProps {;
   method:string,;
-  endpoint:string,;
+  endpoint:string,,
   description:string,;
   note?:string,;
   params?:EndpointParam[],;
@@ -221,8 +221,8 @@ print(data)`;
     'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';
   },;
   body:JSON.stringify({;
-    title:'Senior React Developer',;
-    description:'We need an experienced React developer...',;
+    title:'Senior React Developer',,
+  description:'We need an experienced React developer...',;
     category:'development',;
     skills:['reacttypescript', 'node.js'],;
     budget:{;

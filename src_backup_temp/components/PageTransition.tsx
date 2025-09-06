@@ -29,7 +29,7 @@ const "PageTransition": Reac t.FC<PageTransitionProps> = ({ children }) => {
     <div className="min-h-screen bg-white">
       {children};
     </div>;
-  );
+  )
 };
 "export default PageTransition;';
 </PageTransitionProps>;';;';

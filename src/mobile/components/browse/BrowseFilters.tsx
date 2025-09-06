@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 return (
     <div className='space-y-3'>;
       <div className='flex justify-between items-center px-4'>;
@@ -198,14 +199,16 @@ import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
-
-
 import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
+=======
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
+import { Badge } from "@/components/ui/badge",
+import { Label } from "@/components/ui/label";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface BrowseFiltersProps {
-
 
   return (
     <div className="space-y-3">
@@ -223,7 +226,6 @@ interface BrowseFiltersProps {
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
 
-              
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
 
@@ -238,7 +240,6 @@ interface BrowseFiltersProps {
                       </div>
                     </div>
 
-                    
                     <div className="space-y-2">
 
                       <Label>Experience Level</Label>
@@ -261,7 +262,6 @@ interface BrowseFiltersProps {
                       </div>
                     </div>
 
-                    
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider
@@ -280,7 +280,6 @@ interface BrowseFiltersProps {
                   </>
                 )}
 
-                
                 <div className="space-y-2">
 
                   <Label>Location</Label>
@@ -297,23 +296,14 @@ interface BrowseFiltersProps {
                   </Select>
                 </div>
 
-
-                
                 <div className="space-y-2">
 
-
                   <Label>Salary Range</Label>
-                  <div className='flex gap-4 items-center'>
-                    <Input placeholder='Min' type='number' className='w-full' />
-                    <span>to</span>
-                    <Input placeholder='Max' type='number' className='w-full' />
+
                   </div>
                 </div>
 
-
-                
                 <div className="space-y-2">
-
 
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
@@ -349,19 +339,12 @@ interface BrowseFiltersProps {
                   </Select>;
                 </div>;
 
-
-                
                 <div className="flex items-center justify-between">
-
 
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
-
-
-              
-
 
               <SheetFooter>
                 <Button variant='outline' className='w-full'>
@@ -376,10 +359,6 @@ interface BrowseFiltersProps {
               </SheetFooter>
             </SheetContent>
           </Sheet>
-
-
-          
-
 
           <Select>
             <SelectTrigger className='w-[120px] h-8'>
@@ -492,13 +471,11 @@ interface BrowseFiltersProps {
             </SelectContent>;
           </Select>;
 
-
       </div>;
     </div>;
   );
 };
 
-          
           {activeFilters.map((filter) => (
             <Badge 
               key={filter} 
@@ -512,14 +489,13 @@ interface BrowseFiltersProps {
               />
             </Badge>
           ))}
+<<<<<<< HEAD
 
         </div>;
       </div>;
     </div>;
   );
 }
-
-
 
           {active_filters.map (filter => (
             <Badge;
@@ -537,3 +513,9 @@ interface BrowseFiltersProps {
     </div>);
 }
 ;
+=======
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

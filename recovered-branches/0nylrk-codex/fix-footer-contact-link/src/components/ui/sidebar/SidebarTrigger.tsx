@@ -7,26 +7,13 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { Menu, X } from "lucide-react",
 import { useSidebar } from "./sidebar-context",
-import { cn } from "@/lib/utils",
-interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
+import { cn } from "@/lib/utils",interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
   const { open, toggleSidebar } = useSidebar(),
 
-
-export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
-  const { open, toggleSidebar } = useSidebar();
-export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
-  const { open, toggleSidebar } = useSidebar(),
-
-  return (
-    <Button
-      variant="ghost"
-      size="icon"
-import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Menu, X } from "lucide-react",;
 import { useSidebar } from "./sidebar-context",;
@@ -42,9 +29,6 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
       variant="ghost";
       size="icon";
 
-
-
-
       className={cn("", className)}
       onClick={toggleSidebar}
       {...props}>;
@@ -53,4 +37,3 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
     </Button>
   );
 }
-;

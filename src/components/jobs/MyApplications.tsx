@@ -1,8 +1,38 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
       default:
+=======
+default:
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return <Badge variant="outline">{status}</Badge>
     }
 
 import {ApplicationStatus} from "@/types/jobs";
+=======
+import { useState } from 'react';
+import { useJobApplications } from '@/hooks/useJobApplications';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
+import { formatDistanceToNow } from 'date-fns';
+import Link from 'next/link';
+import { ApplicationStatus } from '@/types/jobs';
+
+import { useState } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
+import { formatDistanceToNow } from "date-fns",
+import Link from "next/link";
+import { ApplicationStatus } from "@/types/jobs";
+export function MyApplications() {
+  const { applications, isLoading, error } = useJobApplications();
+  const getStatusBadge = null;
+  if (isLoading) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -70,6 +100,17 @@ export function MyApplications() {;
   const getStatusBadge = (status: ApplicationStatus,) => {;
     switch (status) {;
       case "new": return <Badge variant="secondary">New</Badge>;
+<<<<<<< HEAD
+=======
+        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  },;
+
+  if (isLoading) {;
+    return (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
@@ -135,9 +176,12 @@ export function MyApplications() {;
                   variant="outline" 
                   size="sm" 
 
+<<<<<<< HEAD
                   {application.cover_letter}
                 </p>
               )}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   className="text-xs"
                   asChild
                 >
@@ -200,6 +244,7 @@ export function MyApplications() {;
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
 
     </div>;
   );
@@ -298,3 +343,24 @@ if ( {) {
   );
 
 }
+<<<<<<< HEAD
+=======
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </div>
+  );
+
+};
+<p> {;
+  error ;
+}</p> </div>) ";
+}You haven't submitted any applications yet. </p> <Button className="mt-4" asChild> <Link href="/jobs" >Browse Jobs</Link> </Button> </CardContent> </Card> </CardTitle> {;
+  getStatusBadge (application.status) ;
+}</div> {;
+  application.cover letter ;
+}</p>) ";
+}<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) ) ;
+}</div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

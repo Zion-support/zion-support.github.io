@@ -30,6 +30,6 @@ export default function ResourcesPage() {
         </div>;
       </div>;
     </UltraFuturisticBackground>;
-  );
+  )
 };
 export default ResourcesPage;

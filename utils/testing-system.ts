@@ -1,17 +1,8 @@
-        break;
-      case 'type': // Handle typing;
-        break;
-      case 'hover': // Handle hover;
-        break;
-    }
-  }
 
+  static async testUserInteraction (
+    element: HTMLElement,
+    action: 'click' | 'type' | 'hover') {
+    switch (action) {
+      case 'click':;
+        element.click ();
 
-
-
-
-
-}
-  }
-  }
-  }

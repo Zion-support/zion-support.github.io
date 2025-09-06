@@ -6,10 +6,7 @@ export type NotificationType =
   | 'booking_confirmation'
   | 'hire_request'
 
-
-
 export interface Notification extends BaseNotification {;
-
 
   type: NotificationType;
   action_url?: string;
@@ -20,11 +17,9 @@ export type FilterType =
   | 'unread'
   | 'messages'
 
-
 export interface NotificationContextType {;
 
-export interface NotificationContextType {
-export interface NotificationContextType {
+export interface NotificationContextType {export interface NotificationContextType {
   notifications: Notification[];
   filtered_notifications: Notification[];
   unread_count: number;
@@ -38,8 +33,7 @@ export interface NotificationContextType {;
   loading: boolean,;
   filter: FilterType,;
   markAsRead: (id: string) => Promise<void>,;
-  markAllAsRead: () => Promise<void>,;
-  dismissNotification: (id: string) => Promise<void>;
+  markAllAsRead: () => Promise<void>,;  dismissNotification: (id: string) => Promise<void>;
   setFilter: (filter: FilterType) => void;
   fetchNotifications: () => Promise<void>;
 }

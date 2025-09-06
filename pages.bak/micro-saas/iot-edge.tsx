@@ -4,9 +4,6 @@ import React from 'react';
 interface IotedgeProps {
   // Add props here as needed
 
-
-
-import React from 'react';
 import React from 'react';
 import * as React from 'react';
 
@@ -20,10 +17,7 @@ export default function Iotedge({ }: IotedgeProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
-export default function Iotedge({ }: IotedgeProps) {
+}}
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -65,6 +59,3 @@ export default function Iotedge(): any ({ }: IotedgeProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
-}
-}
-}

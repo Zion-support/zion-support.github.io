@@ -2,7 +2,7 @@ export type AccessLevel = "public" | "private" | "admin";
 
 export interface SearchResult {
   id: string;
-  title: string;
+  title: string,
   description: string;
   type: string;
   rating?: number;
@@ -27,8 +27,8 @@ export interface SearchFilters {
   maxRating?: number;
   priceRange?: {
     min?: number;
-    max?: number;
-  };
+    max?: number
+};
 }
 
 // Mock data for search results

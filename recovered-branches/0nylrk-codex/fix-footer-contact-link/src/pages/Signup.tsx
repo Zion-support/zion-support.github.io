@@ -1,71 +1,29 @@
 
 
-
-import { useState } from "react",
 import { Link, Navigate } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
-
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Checkbox} from "@/components/ui/checkbox";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-
-
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Checkbox } from "@/components/ui/checkbox",
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-// Form validation schema
-const signupSchema = z
-  .object({
-
-
-import { useState } from "react",
-import { Link, Navigate } from "react-router-dom",
-import { useForm, type UseFormReturn } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
-
-
-
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Checkbox} from "@/components/ui/checkbox";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-
-
-    displayName: z.string().min(2, "Name must be at least 2 characters"),
-    email: z.string().email("Please enter a valid email"),
-
-
-    displayName: z.string().min(2, "Name must be at least 2 characters");
-    email: z.string().email("Please enter a valid email")
-    displayName: z.string().min(2, "Name must be at least 2 characters"),
-    email: z.string().email("Please enter a valid email"),
-    password: z.string()
-      .min(8, "Password must be at least 8 characters")
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",      .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
-  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+
+// Form validation schema;
+const signupSchema = z;
+  .object({;
+    displayName: z && z.string().min(2, "Name must be at least 2 characters");
+    email: z && z.string().email("Please enter a valid email"),;
+    password: z && z.string();
+      .min(8, "Password must be at least 8 characters");
+      .regex(/[A-Z]/, "Password must contain at least one uppercase letter");
+      .regex(/[a-z]/, "Password must contain at least one lowercase letter");
+      .regex(/[0-9]/, "Password must contain at least one number");
+    confirmPassword: z && z.string(),;
+    termsAccepted: z && z.boolean().refine(val => val === true, {;
+      message: "You must accept the terms and conditions"})});
+  .refine(data => data && data.password === data && data.confirmPassword, {;
+    message: "Passwords do not match",;
+    path: ["confirmPassword"]}),;
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -77,37 +35,12 @@ import {Footer} from "@/components/Footer";
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
-
 type SignupFormValues = z && z.infer<typeof signupSchema>;
-
-
-
 
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  // Initialize react-hook-form
-  const form = useForm({
-    resolver: zodResolver(signupSchema)
-    defaultValues: {
-      displayName: ""
-      email: ""
-      password: ""
-      confirmPassword: ""
-      termsAccepted: false}}) as UseFormReturn<SignupFormValues>
-  // Form submission handler
-  const onSubmit = async (data: SignupFormValues) => {
-    if (isSubmitting) return, // Prevent multiple submissions
-    try {
-      await signup(data.email, data.password, data.displayName)
-    } finally {
-      setIsSubmitting(false)
-    }
-
-  },
-
-
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />
@@ -198,7 +131,6 @@ export default function Signup() {;
   const [showPassword, setShowPassword] = useState(false),;
   const [showConfirmPassword, setShowConfirmPassword] = useState(false),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
-
   // Initialize react-hook-form;
   const form = useForm({;
     resolver: zodResolver(signupSchema),;
@@ -217,27 +149,8 @@ export default function Signup() {;
     try {;
       await signup(data && data.email, data && data.password, data && data.displayName);
     } finally {;
-      setIsSubmitting(false);
-    }
-  }
-  // Redirect if user is already logged in and has completed profile;
-  if (isAuthenticated && user?.profileComplete) {;
-    return <Navigate to="/" />;
-  }
-
-
-  // Redirect to onboarding if user is authenticated but hasn't completed profile;
-  if (isAuthenticated && !user?.profileComplete) {;
-    return <Navigate to="/onboarding" />;
-
-    setIsSubmitting(true);
-    try {;
-      await signup(data && data.email, data && data.password, data && data.displayName);
-    } finally {;
-      setIsSubmitting(false);
-    }
-  }
-import { useState } from './react';
+      setIsSubmitting(false);    }
+  }import { useState } from './react';
 import { Link, Navigate } from './react-router-dom';
 import { use_form, type, UseFormReturn } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -317,68 +230,19 @@ if ( {) {
   }
   return (
     <>;
-      <Header />;
-                <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
-      <div className="flex min - h-screen bg - zion - blue">;
-        <div className="flex - 1 flex flex - col justify - center px - 4 py - 12 sm:px - 6 lg:flex - none lg:px - 20 xl:px - 24">;
-          <div className="mx - auto w - full max - w-sm lg:w - 96">;
-            <div className="text - center mb - 10">;
-              <h2 className="text - 3xl font - bold tracking - tight text - white">;
-                Create your account;
-              </h2>;
-              <p className="mt - 2 text - sm text - zion - slate - light">;
-                Already have an account?{" "}
-                <Link to="/login" className="font - medium text - zion - cyan hover:text - zion - cyan - light">;
-
-                  Sign in;
-                </Link>;
-              </p>;
-            </div>;
-                            <Input
-                              placeholder="John Doe"
-                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              {...field}
-                            />;
-                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+      <Header />;                            />;
+                            <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                           </div>;
                         </FormControl>;
                         <FormMessage className="text-red-400" />;
                       </FormItem>;
                     )}
-                  <FormField
-                    control={form && form.control}
-                    name="email"
-                    render={({ field }) => (;
-                      <FormItem>;
-                        <FormLabel className="text-zion-slate-light">Email address</FormLabel>;
-                        <FormControl>;
-                          <div className="relative">;
-                            <Input
-                              placeholder="you@example && example.com"
-                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              {...field}
-                              autoComplete="off"
-                              aria-autocomplete="none"
-                              type="email"
-                            />;
-                            <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
-                          </div>;
-                        </FormControl>;
-                        <FormMessage className="text-red-400" />;
-                  <FormField
-                    control={form && form.control}
-                    name="password"
+
                   />;
+
                   <FormField
                     control={form && form.control}
-                    name="password"
-                      </FormItem>;                    )}
-                  />;
-;
-                  <FormField;
-                    control={form.control}
-                    name="password";
-                  <FormField
+                    name="password"                  <FormField
                     control={form && form.control}
                     name="password"
                     render={({ field }) => (;
@@ -393,56 +257,13 @@ if ( {) {
                               {...field}
                               autoComplete="new-password"
                             />;
-                            <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
-                            />;
+                            <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;                            />;
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                             <Button
                               type="button"
                               variant="ghost"
                               size="sm"
-                              className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
-                            <Input;
-                              type={showPassword ? "text" :"password"}
-                              placeholder="••••••••";
-                              className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple";
-                              {...field}
-                              autoComplete="new-password";
-                            />;
-                            <Button;
-                              type="button";
-                              variant="ghost";
-                              size="sm";
-                              className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan";
-                              onClick={() => setShowPassword(!showPassword)}
-                            >;
-                              {showPassword ? (;
-                                <EyeOff className="h-4 w-4" />;
-                              ) : (;
-                                <Eye className="h-4 w-4" />;
-                              )}
-                              <span className="sr-only">;
-                                {showPassword ? "Hide password" : "Show password"}
-                            <Input;
-                              placeholder="John Doe";
-                              className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
-                              {...field}
-                              aria - autocomplete="none";
-                              auto_complete="off";
-                            />;
-                            <User className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
-                          </div>;
-                        </FormControl>;
-                  />;
-                  <FormField
-                    control={form && form.control}
-                    name="confirmPassword"
-                    render={({ field }) => (;
-                      <FormItem>;
-                        <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>;
-                        <FormControl>;
-                          <div className="relative">;
-                            <Input
-                        <FormMessage className="text - red - 400" />;
+                              className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"                        <FormMessage className="text - red-400" />;
                       </FormItem>)}
                   />;
                   <FormField;
@@ -450,21 +271,21 @@ if ( {) {
                     name="email";
                     render={({ field }) => (
                       <FormItem>;
-                        <FormLabel className="text - zion - slate - light">Email address</FormLabel>;
+                        <FormLabel className="text - zion - slate-light">Email address</FormLabel>;
                         <FormControl>;
                           <div className="relative">;
                             <Input;
                               placeholder="you@example.com";
-                              className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
+                              className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
                               {...field}
                               auto_complete="off";
                               aria - autocomplete="none";
                               type="email";
                             />;
-                            <Mail className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
+                            <Mail className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w-4" />;
                           </div>;
                         </FormControl>;
-                        <FormMessage className="text - red - 400" />;
+                        <FormMessage className="text - red-400" />;
                       </FormItem>)}
                   />;
                   <FormField;
@@ -472,30 +293,28 @@ if ( {) {
                     name="password";
                     render={({ field }) => (
                       <FormItem>;
-                        <FormLabel className="text - zion - slate - light">Password</FormLabel>;
+                        <FormLabel className="text - zion - slate-light">Password</FormLabel>;
                         <FormControl>;
                           <div className="relative">;
                             <Input;
-                              type={show_password ? "text" : "password"}
-                              placeholder="••••••••";
-                              className="bg - zion - blue pl - 10 text - white border - zion - blue - light focus:border - zion - purple";
+                              type={show_password ? "text" : "password"}                              placeholder="••••••••";
+                              className="bg - zion - blue pl - 10 text - white border - zion - blue - light focus:border - zion-purple";
                               {...field}
                               auto_complete="new - password";
                             />;
-                            <Lock className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
+                            <Lock className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w-4" />;
                             <Button;
                               type="button";
                               variant="ghost";
                               size="sm";
-                              className="absolute right - 1 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 8 hover:text - zion - cyan";
+                              className="absolute right - 1 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 8 hover:text - zion-cyan";
                               on_click={() => setShowPassword (!show_password)}
                             >;
                               {show_password ? (
-                                <EyeOff className="h - 4 w - 4" />) : (
-                                <Eye className="h - 4 w - 4" />)}
-                              <span className="sr - only">;
+                                <EyeOff className="h - 4 w-4" />) : (
+                                <Eye className="h - 4 w-4" />)}
+                              <span className="sr-only">;
                                 {show_password ? "Hide password" : "Show password"}
-                              onClick={() => setShowPassword(!showPassword)}
                             >;
                               </span>;
                             </Button>;
@@ -504,102 +323,14 @@ if ( {) {
 
                   />;
 
-
-                  <FormField
-                    control={form && form.control}
-                    name="confirmPassword"
-                    render={({ field }) => (;
-                      <FormItem>;
-                        <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>;
-                        <FormControl>;
-                          <div className="relative">;
-                            <Input
-                        <FormMessage className="text - red - 400" />;
-                      </FormItem>)}
-                  />;
-                  <FormField;
-                    control={form.control}
-                    name="confirm_password";
-                    render={({ field }) => (
-                      <FormItem>;
-                        <FormLabel className="text - zion - slate - light">Confirm Password</FormLabel>;
-                        <FormControl>;
-                          <div className="relative">;
-                            <Input;
-                              type={showConfirmPassword ? "text" : "password"}
-                              placeholder="••••••••";
-                              className="bg - zion - blue pl - 10 text - white border - zion - blue - light focus:border - zion - purple";
-                              {...field}
-                                {showConfirmPassword ? "Hide password" : "Show password"}
-                              </span>;
-                            </Button>;
-                          </div>;
-                        </FormControl>;
-                  <FormField
-                    control={form && form.control}
-                    name="termsAccepted"
-                    render={({ field }) => (;
-                      <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
-                        <FormControl>;
-                          <Checkbox
-                            checked={field && field.value}
-                            onCheckedChange={field && field.onChange}
-                            className="data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
-                          />;
-                        </FormControl>;
-                        <div className="space-y-1 leading-none">;
-                          <FormLabel className="text-sm text-zion-slate-light">;
-                            I agree to the{" "}
-                            <a href="/terms" className="text-zion-cyan hover:text-zion-cyan-light">;
-                              Terms of Service;
-                            </a>{" "}
-                            and{" "}
-                            <a href="/privacy" className="text-zion-cyan hover:text-zion-cyan-light">;
-                              Privacy Policy;
-                            </a>;
-                          </FormLabel>;
-                          <FormMessage className="text-red-400" />;
-                        </div>;
-                      </FormItem>;
-                    )}
-
-                  />;
-
-                  <Button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    disabled={isLoading || isSubmitting}>;
-                    {isLoading ? "Creating Account..." : "Create Account"}
-                  </Button>;
-                </form>;
-              </Form>;
-
-              <div className="mt-6">;
-                <div className="relative">;
-                  <div className="absolute inset-0 flex items-center">;
-                    <div className="w-full border-t border-zion-blue-light" />;
-                  </div>;
-                  <div className="relative flex justify-center text-sm">;
-                    <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>;
-                  </div>;
-                </div>;
-
-                <div className="mt-6 grid grid-cols-3 gap-3">;
-                  <Button;
-                    type="button";
-                    variant="outline";
-                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
-                    onClick={() => loginWithGoogle()}
                   <Button
                     type="button"
                     variant="outline"
-                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-                  <Button
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"                  <Button
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithTwitter()}
-                  <Button
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -655,20 +386,18 @@ if ( {) {
                   >;
                     <span className="sr-only">Sign in with Twitter</span>;
                     <Twitter className="h-5 w-5" />;
-                  </Button>;
                 </div>;
               </div>;
             </div>;
           </div>;
         </div>;
 
-        <div className="hidden lg:block relative w - 0 flex - 1">;
-          <div className="absolute inset - 0 h - full w - full object - cover bg - gradient - to - br from - zion - blue - dark via - zion - cyan to - zion - purple opacity - 80">;
-            <div className="flex flex - col justify - center items - center h - full px - 8">;
-              <div className="max - w-md text - center">;
-                <h3 className="text - 3xl font - bold text - white mb - 4">Join the Future of AI Marketplace</h3>;
-                <p className="text - lg text - white / 80">;
-
+        <div className="hidden lg:block relative w - 0 flex-1">;
+          <div className="absolute inset - 0 h - full w - full object - cover bg - gradient - to - br from - zion - blue - dark via - zion - cyan to - zion - purple opacity-80">;
+            <div className="flex flex - col justify - center items - center h - full px-8">;
+              <div className="max - w-md text-center">;
+                <h3 className="text - 3xl font - bold text - white mb-4">Join the Future of AI Marketplace</h3>;
+                <p className="text - lg text-white / 80">;
                   Create your profile, showcase your AI services, find jobs, and connect with professionals worldwide.;
                 </p>;
               </div>;
@@ -678,8 +407,7 @@ if ( {) {
       </div>;
       <Footer />;
 
-    </>);
-}
+    </>);}
 }
 ;
 

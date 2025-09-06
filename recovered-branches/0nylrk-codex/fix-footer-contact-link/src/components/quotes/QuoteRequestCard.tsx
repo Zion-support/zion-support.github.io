@@ -30,7 +30,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   onViewDetails,
   onMarkAsResponded,
 
-
   onToggleArchive
 }) => {
   // Format date for display
@@ -66,8 +65,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
 }
-
-
 
 import React from "react",;
 import { format } from "date-fns",;
@@ -166,11 +163,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
             </Button>;
           </div>;
         </div>;
-      </CardContent>;
-
-
-
-
+      </CardContent>
 };
     </Card>);
 }

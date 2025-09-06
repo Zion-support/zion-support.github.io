@@ -3,5 +3,4 @@ const Head from "next/head"; import Link from "next/link"; export default functi
 import React from 'react';
 interface AboutProps {
   // Add props here as needed
-<=
->
+=>

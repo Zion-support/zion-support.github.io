@@ -1,3 +1,19 @@
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  ShoppingCart, 
+  Users, 
+  BarChart3, 
+  Smartphone, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+const features = [
+  {
+    icon: ShoppingCart,
     title: 'E-commerce Platform',
     description: 'Complete online store solution with payment processing'
   },
@@ -27,8 +43,7 @@
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform your retail business with modern e-commerce, omnichannel,
-                and customer experience solutions.
-              </p>
+                and customer experience solutions.              </p>
             </motion.div>
           </div>
         </section>
@@ -45,8 +60,7 @@
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Retail Features</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Everything you need to succeed in modern retail.
-              </p>
-              {features.map((feature, index) => (
+              </p>              {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -126,8 +140,7 @@
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                       <span className="text-gray-700">{benefit}</span>
                     </li>
-                  ))}
-            </div>
+                  ))}            </div>
           </div>
         </section>
 

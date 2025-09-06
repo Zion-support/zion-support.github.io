@@ -25,7 +25,7 @@ function StructuredData() {
         "https://twitter.com / ziontechgroup",
         "https://github.com / ziontechgroup",
         "https://linkedin.com / company / ziontechgroup";
-      ];
+=======      ];
     },
     "feature_list": [;
       "Marketplace & Jobs",
@@ -51,7 +51,7 @@ function StructuredData() {
       "url": "https://ziontechgroup.com";
     }
   }
-  return (;
+  return (  return (;
     <script;
       type="application / ld + json";
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}

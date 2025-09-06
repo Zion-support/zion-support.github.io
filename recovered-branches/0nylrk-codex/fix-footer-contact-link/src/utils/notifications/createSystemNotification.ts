@@ -3,31 +3,17 @@
 import {createNotification} from './createNotification';
 import {SystemNotificationParams} from './types';
 
-
 /**
  * Creates a system notification for a user
  */
-export async function createSystemNotification({
-
-import { createNotification  } from './createNotification';
-import { SystemNotificationParams } from './types';
-import {createNotification} from './createNotification';
-import {SystemNotificationParams} from './types';
-/**
- * Creates a system notification for a user
- */
-export async function createSystemNotification({;
-  userId;
-  title;
+export async function createSystemNotification({  title;
   message;
 
   actionUrl = null;
   actionText = null;
   sendEmail = false
 }: SystemNotificationParams) {
-  try {
-  try {
-  return createNotification({
+  try {  return createNotification({
     userId;
     title;
     message;
@@ -40,10 +26,8 @@ export async function createSystemNotification({;
 
 import {create_notification} from './create_notification';
 import {SystemNotificationParams} from './types';
-
 import {create_notification} from './create_notification';
 import {SystemNotificationParams} from './types';
-
 
 import { createNotification } from './createNotification',;
 import { SystemNotificationParams } from './types',;
@@ -64,9 +48,6 @@ function createSystemNotification() {
     action_url,
     action_text;
   });
-
-
-
 
 }
 ;
@@ -100,8 +81,5 @@ export async function createSystemNotification({;
     actionUrl;
     actionText;
   });
-}
-;
-
 }
 ;

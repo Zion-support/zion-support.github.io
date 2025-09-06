@@ -1,32 +1,15 @@
+
+
+export function useResumeEnhancer() {;
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
 
-export function useResumeEnhancer() {;
-
-export function useResumeEnhancer() {;
-
-
-  const [isEnhancing, setIsEnhancing] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const enhanceContent = async (
-    content: string
-    type: EnhancementType = 'general';
-    context?: string
-  ): Promise<string | null> => {
-    setIsEnhancing(true);
-    setError(null)
-    try {
-          context
+export function useResumeEnhancer() {;          context
         }
       });
-      if (error) {
-      return data && data.enhancedContent
-    } catch (err: any) {
-      setError(err && err.message || 'Failed to enhance content'),
-      console && console.error('Enhancement error:', err);
-
-      return null
+      if (error) {      return null
     } finally {
       setIsEnhancing(false)
     }
@@ -35,30 +18,7 @@ export function useResumeEnhancer() {;
     enhanceContent;
     isEnhancing;
 
-    error
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-type EnhancementType = 'summary' | 'work - description' | 'skill - categorization' | 'general';
-;
-export /**
- * useResumeEnhancer - Function description
- */
-function useResumeEnhancer() {
-  const [is_enhancing, setIsEnhancing] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-;
-  const enhance_content = async (
-    content: string,
-    type: EnhancementType = 'general';
-    context?: string): Promise < string | null> => {
-    setIsEnhancing (true);
-    set_error (null),
-    try {
-      const { data, error } = await supabase.functions.invoke ('resume - enhancer', {
-        body: {
-          content,
-          enhancement_type: type,
-          context;
+    error          context;
         }
       });
 ;
@@ -82,12 +42,6 @@ if ( {) {
     enhance_content;
     is_enhancing;
     error;
-
-
-
-
-  }
-}
 
   }
 }

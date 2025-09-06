@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+type EpisodeListItem = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 useEffect ( () => {
   const load = async () => {
   try {
@@ -30,10 +36,15 @@ useEffect ( () => {
                   <a
                     href={ep && ep.audio.mp3Url}
                     className='px-3 py-2 bg-blue-600 text-white rounded'
+<<<<<<< HEAD
                     download>                    MP3;
                   </a>;
                 )}
                 {ep && ep.audio?.wavUrl && (  if (loading) return <div>Loading episodes…</div>;
+=======
+                    download
+                  >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -56,6 +67,7 @@ useEffect ( () => {
                     MP3;
                   </a>;
                 )}
+<<<<<<< HEAD
                 {ep && ep.audio?.wavUrl && (;
                   <a
                     href={ep && ep.audio.wavUrl}
@@ -86,10 +98,42 @@ useEffect ( () => {
               <Link href={`/media/podcast/${ep && ep.id}`} className="text-blue-600 underline">View Transcript</Link>;
             </div>;
           </li>;
+=======
+                {ep.audio?.wavUrl && (
+<a
+                    href={ep.audio.wavUrl}
+                    className='px-3 py-2 bg-gray-700 text-white rounded'
+                    download
+                  >
+                    WAV
+                  </a>
+                )}
+                {ep.audio?.mp4Url && (
+<a
+                    href={ep.audio.mp4Url}
+                    className='px-3 py-2 bg-purple-700 text-white rounded'
+                    download
+                  >
+                    MP4
+                  </a>
+                )}
+              </div>
+            </div>
+<div className='mt-3 flex gap-4'>
+              <Link
+                href={`/media/podcast/${ep.id}`}
+                className='text-blue-600 underline'
+              >
+                View Transcript
+              </Link>
+            </div>
+          </li>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
       </ul>;
     </div>;
   );
+<<<<<<< HEAD
   // Check condition
 if (return <div > Loading episodes…</div>) {
   $2
@@ -184,4 +228,6 @@ if (return <div > Loading episodes…</div>) {
 }
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }

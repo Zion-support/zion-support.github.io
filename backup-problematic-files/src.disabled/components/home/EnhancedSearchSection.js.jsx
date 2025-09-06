@@ -6,6 +6,6 @@ const EnhancedSearchSection.js = ({ className }) => {
       <h1>EnhancedSearchSection.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

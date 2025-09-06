@@ -74,7 +74,7 @@ const AuthRoutes: React.FC = () => {
         } />
       </Routes>
     </Suspense>
-  );
+  )
 };
 ;
 export default AuthRoutes;

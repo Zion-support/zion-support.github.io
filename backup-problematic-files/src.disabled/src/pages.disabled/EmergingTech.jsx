@@ -6,6 +6,6 @@ const EmergingTech = ({ className }) => {
       <h1>EmergingTech</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

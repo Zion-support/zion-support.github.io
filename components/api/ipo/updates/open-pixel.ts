@@ -1,5 +1,6 @@
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
   const id = String(req.query.id |"");
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -59,3 +60,8 @@ if ( {) {
   res.set_header (
     "Cache - Controlno - store, no - cache, must - revalidate, proxy - revalidate",
   );
+=======
+  const id = null;
+  res.status(200).send(pixel)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

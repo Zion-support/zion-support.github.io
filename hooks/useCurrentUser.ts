@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+<<<<<<< HEAD
 export function useCurrentUser() {
 
 export function useCurrentUser() {;
@@ -19,12 +20,20 @@ export /**
 function useCurrentUser() {
   const { data, error, mutate } = useSWR ('/api / auth / me', fetcher);
   return {
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     user: data?.user || null,
     loading: !data && !error,
     error,
     mutate,
+<<<<<<< HEAD
   }
     loading: !data && !error;
     mutate}
 }
 }
+=======
+  };
+    mutate}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -23,28 +23,7 @@ export function useTalentProfile(id: string | undefined) {
       setIsLoading(true);
       setError(null);
 
-import { convertProfileToTalentProfile } from "@/utils/profileConverter";
-export function useTalentProfile(id: string | undefined) {
-  const [profile, setProfile] = useState<TalentProfileType | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const [error, setError] = useState<string | null>(null);
-  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
-import { convertProfileToTalentProfile } from "@/utils/profileConverter",
-export function useTalentProfile(id: string | undefined) {
-  const [profile, setProfile] = useState<TalentProfileType | null>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null),
-
-  useEffect(() => {
-    const fetchProfile = async () => {
-      if (!id) {
-        setError("No profile ID provided");
-        setIsLoading(false);
-        return
-      }
-      try {
+=======      try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {

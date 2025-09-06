@@ -6,6 +6,6 @@ const MessagingContext = ({ className }) => {
       <h1>MessagingContext</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

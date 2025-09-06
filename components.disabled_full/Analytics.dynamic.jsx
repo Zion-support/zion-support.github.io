@@ -1,9 +1,3 @@
 const Analytics = dynamic(() => import("./Analytics"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Analytics' ,'
-</p>'
-</p>'
-</p>'
-
-
-</p>'
-</p>'
+</p>'</p>'
 </p>'

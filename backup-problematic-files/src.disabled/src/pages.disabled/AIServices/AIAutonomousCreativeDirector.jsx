@@ -6,6 +6,6 @@ const AIAutonomousCreativeDirector = ({ className }) => {
       <h1>AIAutonomousCreativeDirector</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

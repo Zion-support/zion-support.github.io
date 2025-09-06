@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+}
+
+export function usePerformanceMonitor(): PerformanceMetrics | null {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
@@ -12,7 +19,6 @@ interface PerformanceMetrics {
   }
     setIsSupported(true);
     const observer = new PerformanceObserver((list) => {
-
     const updateMetrics = () => {
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (window.performance as any).memory;
@@ -117,10 +123,9 @@ if ( {) {
   }, []);
   return { metrics, isSupported }
 }
-
     return () => {
-      window.removeEventListener('load', updateMetrics);
-    };
+      window.removeEventListener('load', updateMetrics)
+};
   }, []);
 
   return metrics;

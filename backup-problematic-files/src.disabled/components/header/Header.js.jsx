@@ -6,6 +6,6 @@ const Header.js = ({ className }) => {
       <h1>Header.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

@@ -70,8 +70,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
               {project.tags && project.tags.length > 0 && (;
                 <div className="flex flex-wrap gap-1 mb-2">;
                   {project.tags.map((tag, i) => (;
-                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
-              <p className="text-zion-slate text-sm mb-3 line-clamp-2">
+                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;              <p className="text-zion-slate text-sm mb-3 line-clamp-2">
                 {project.description}
               </p>
 
@@ -88,6 +87,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                   ))}
                 </div>;
               )}
+
               <div className="text-xs text-zion-slate-light mt-2">
                 {project.date}
               </div>
@@ -96,6 +96,5 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
         ))}
       </div>
     </div>
-  )
-}
+  )}
 ;

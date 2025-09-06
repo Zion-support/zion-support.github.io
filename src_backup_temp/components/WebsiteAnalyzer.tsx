@@ -90,8 +90,8 @@ export default function Page(props: any) {
         return 'text-yellow-600 bg-yellow-100';';';
       case 'external':'';';
         return 'text-blue-600 bg-blue-100';';';
-      default:'';';
-  };
+      default:'';'
+};
       case 'broken':'
         return 'text-red-600 bg-red-100';
       case 'missing':'
@@ -218,9 +218,9 @@ export default function Page(props: any) {
                   </div>;
                 </div>;
               </div>;
-              <div  className="bg-green - 50 p - 4 rounded-lg border border-green -200">;
+              <div  className="bg-green - 50 p-4 rounded-lg border border-green -200">;
                 <div  className="flex items -center">;
-                  <CheckCircle className="w-8 h-8 text-green - 600 mr-3"  />;
+                  <CheckCircle className="w-8 h-8 text-green-600 mr-3"  />;
                   <div>;
         {analysisResult && ("
           <div className="space-y-6">
@@ -234,9 +234,9 @@ export default function Page(props: any) {
                   </div>
                 </div>
               </div>
-              <div  className="bg-green - 50 p - 4 rounded-lg border border-green -200">
+              <div  className="bg-green - 50 p-4 rounded-lg border border-green -200">
                 <div  className="flex items -center">
-                  <CheckCircle className="w-8 h-8 text-green - 600 mr-3"  />
+                  <CheckCircle className="w-8 h-8 text-green-600 mr-3"  />
                   <div>
           </div>;
         )}
@@ -253,30 +253,30 @@ export default function Page(props: any) {
                   </div>;
                 </div>;
               </div>;
-              <div  className="bg-green - 50 p - 4 rounded-lg border border-green -200">;
+              <div  className="bg-green - 50 p-4 rounded-lg border border-green -200">;
                 <div  className="flex items -center">;
-                  <CheckCircle className="w-8 h-8 text-green - 600 mr-3"  />;
+                  <CheckCircle className="w-8 h-8 text-green-600 mr-3"  />;
                   <div>;
-                    <p className="text-2xl font - bold text-green -900">                      {analysisResult.summary.totalLinks - analysisResult.summary.brokenLinks - analysisResult.summary.missingPages}
+                    <p className="text-2xl font-bold text-green -900">                      {analysisResult.summary.totalLinks - analysisResult.summary.brokenLinks - analysisResult.summary.missingPages}
                     </p>"
                     <p className="text-sm text-green-700">Working Links</p>
                   </div>
                 </div>
               </div>
-              <div  className="bg-red - 50 p - 4 rounded-lg border border-red -200">
+              <div  className="bg-red - 50 p-4 rounded-lg border border-red -200">
                 <div  className="flex items -center">
-                  <XCircle className="w-8 h-8 text-red - 600 mr-3"  />
+                  <XCircle className="w-8 h-8 text-red-600 mr-3"  />
                   <div>
-                    <p className="text-2xl font - bold text-red -900">{analysisResult.summary.brokenLinks}</p>
+                    <p className="text-2xl font-bold text-red -900">{analysisResult.summary.brokenLinks}</p>
                     <p className="text-sm text-red -700">Broken Links</p>
                   </div>
                 </div>
               </div>
-              <div  className="bg-yellow-50 p - 4 rounded-lg border border-yellow-200">
+              <div  className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
                 <div  className="flex items -center">
                   <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3"  />
                   <div>
-                    <p className="text-2xl font - bold text-yellow-900">{analysisResult.summary.missingPages}</p>
+                    <p className="text-2xl font-bold text-yellow-900">{analysisResult.summary.missingPages}</p>
                     <p className="text-sm text-yellow-700">Missing Pages</p>                  </div>
                 </div>
               </div>

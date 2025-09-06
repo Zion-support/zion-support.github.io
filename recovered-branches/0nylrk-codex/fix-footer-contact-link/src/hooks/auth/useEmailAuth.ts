@@ -1,8 +1,5 @@
-import {useState} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
-import {cleanupAuthState} from "@/utils/authUtils";
+
+
 import { useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
@@ -11,23 +8,13 @@ import type { UserProfile } from "@/types/auth";
 import {cleanupAuthState} from "@/utils/authUtils";
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
-import { cleanupAuthState } from "@/utils/authUtils",
-export const useEmailAuth = (
-  setUser: (user: UserProfile | null) => void
-  setIsLoading: (loading: boolean) => void
-) => {
-  const login = async ({ email, password }: { email: string, password: string }) => {
-        email;
+import { cleanupAuthState } from "@/utils/authUtils",        email;
         password});
       if (error) {
         toast({
           title: "Login failed";
-          variant: "destructive"});
-          title: "Login failed";
-
-          description: error && error.message,
-
-          description: error && error.message,
+          variant: "destructive"});          title: "Login failed",
+  description: error && error.message,
           variant: "destructive"});
 
     try {
@@ -35,7 +22,8 @@ export const useEmailAuth = (
 
       // Clean up any stale auth state before login
 
-          title: "Login failed";
+          title: "Login failed",
+  description: error.message
           variant: "destructive"});
       cleanupAuthState(),
       
@@ -49,7 +37,6 @@ export const useEmailAuth = (
           description: error.message,
           variant: "destructive"});
           variant: "destructive"}),
-
         return { error }
       }
       return { data }
@@ -57,11 +44,6 @@ export const useEmailAuth = (
 
       console.error ("Login error:", error);
       toast ({
-
-        title: "Login failed";
-
-        description: error && error.message || "An unexpected error occurred",
-
         variant: "destructive"});
         title: "Login failed",
         description: error.message || "An unexpected error occurred",
@@ -93,17 +75,17 @@ export const useEmailAuth = (
       }
 ;
       toast({;
-        title: "Signup successful",;
-        description: "Check your email for verification instructions."}),;
+        title: "Signup successful",,
+  description: "Check your email for verification instructions."}),;
       return { data }
     } catch (error: any) {;
       console.error("Signup error:", error),;
       toast({;
-        title: "Signup failed",;
-        description: error.message || "An unexpected error occurred",;
+        title: "Signup failed",,
+  description: error.message || "An unexpected error occurred",;
         variant: "destructive"}),;
       return { error }
-;
+      const { data, error } = await supabase && supabase.auth.signUp({
   const signup = async (email: string, password: string, user_data?: any) => {
     try {
       setIsLoading (true);
@@ -124,7 +106,6 @@ export const useEmailAuth = (
         options: {
           // Only store a simple display name in the profile data;
           data: {
-
 ;
       // Check condition
 if ( {) {
@@ -132,9 +113,8 @@ if ( {) {
 }
         toast ({
 
-          title: "Signup failed";
-
-          description: error && error.message,
+          title: "Signup failed",
+  description: error && error.message,
 
           variant: "destructive"});
         return { error }
@@ -148,7 +128,6 @@ if ( {) {
         toast({
           title: "Signup failed",
           description: error.message,
-
           variant: "destructive"});
         return { error };
       }
@@ -160,8 +139,7 @@ if ( {) {
     } catch (error: any) {
       console && console.error("Signup error:", error);
       toast({
-        title: "Signup failed";
-      toast ({
+        title: "Signup failed";      toast ({
         title: "Signup successful",
         description: "Check your email for verification instructions."});
       return { data }
@@ -169,29 +147,8 @@ if ( {) {
       console.error ("Signup error:", error);
       toast ({
 
-        title: "Signup failed";
-
-        description: error && error.message || "An unexpected error occurred",
-
-        title: "Signup failed";
-        variant: "destructive"});
-      return { error }
-    } finally {
-      setIsLoading (false);
-    }
-  }
-      return { error }
-      return { error };
-
-        email;
-        password;
-        options: {
-          // Only store a simple display name in the profile data;
-          data: {
-            display_name: user_data?.display_name ?? user_data?.name ?? "";
-          }}});
-          title: "Signup failed";
-          variant: "destructive"});
+        title: "Signup failed",
+  description: error && error.message || "An unexpected error occurred",          variant: "destructive"});
         return { error }
       }
         title: "Signup failed";
@@ -200,33 +157,19 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-    } finally {
       setIsLoading(false)
     }
   },
 
-        redirectTo: `${window.location.origin}/update-password`}),
-
+  const resetPassword = async (email: string) => {
+    try {
+      setIsLoading(true)
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window.location.origin}/update-password`});
       if (error) {
         toast({
           title: "Password reset failed",
-          description: error.message,
-          variant: "destructive"}),
-        return { error }
-      }
-;
-      toast({;
-        title: "Password reset email sent",;
-        description: "Check your email for password reset instructions."}),;
-      return {}
-    } catch (error: any) {;
-      console.error("Password reset error:", error),;
-      toast({;
-        title: "Password reset failed",;
-        description: error.message || "An unexpected error occurred",;
-        variant: "destructive"}),;
-      return { error }
-
+  description: error.message
   const resetPassword = async (email: string) => {
     try {
 
@@ -236,12 +179,21 @@ if ( {) {
 
       if (error) {
         toast({
-          title: "Password reset failed";
-          description: error && error.message,
+;
+  const reset_password = async (email: string) => {
+    try {
+      setIsLoading (true),
+      const { error } = await supabase.auth.resetPasswordForEmail (email, {
+        redirect_to: `${window.location.origin}/update - password`});
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
           variant: "destructive"});
         return { error }
       }
-
 
         redirectTo: `${window.location.origin}/update-password`}),
 
@@ -254,17 +206,16 @@ if ( {) {
       }
 ;
       toast({;
-        title: "Password reset email sent",;
-        description: "Check your email for password reset instructions."}),;
+        title: "Password reset email sent",,
+  description: "Check your email for password reset instructions."}),;
       return {}
     } catch (error: any) {;
       console.error("Password reset error:", error),;
       toast({;
-        title: "Password reset failed",;
-        description: error.message || "An unexpected error occurred",;
+        title: "Password reset failed",,
+  description: error.message || "An unexpected error occurred",;
         variant: "destructive"}),;
       return { error }
-
           variant: "destructive"});
         return { error };
       }
@@ -275,83 +226,7 @@ if ( {) {
       return {}
     } catch (error: any) {
       console && console.error("Password reset error:", error);
-      toast({
-      toast ({
-        title: "Password reset email sent",
-        description: "Check your email for password reset instructions."});
-      return {}
-    } catch (error: any) {
-      console.error ("Password reset error:", error);
-      toast ({
-
-        title: "Password reset failed";
-
-        description: error && error.message || "An unexpected error occurred",
-
-          variant: "destructive"});
-        return { error }
-      }
-        title: "Password reset failed";
-        variant: "destructive"});
-        variant: "destructive"});
-      return { error };
-      return { error }
-      return { error };
-    } finally {
-      setIsLoading (false);
-    }
-  }
-;
-  return { login, signup, reset_password }
-}
-;
-
-        title: "Password reset failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"});
-
-          variant: "destructive"});
-        return { error };
-      }
-      toast({
-        title: "Password reset email sent"
-        description: "Check your email for password reset instructions."});
-      return {};
-    } catch (error: any) {
-      console.error("Password reset error:", error);
-      toast({
-        title: "Password reset failed";
-        description: error.message |"An unexpected error occurred"
-        variant: "destructive"});
-      return { error }
-    } finally {
-      setIsLoading(false)
-    }
-  }
-
-;
-  return { login, signup, reset_password }
-}
-;
-
-
-        title: "Password reset failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"});
-
-      return { error };
-      return { error }
-      return { error };
-    } finally {
-      setIsLoading(false)
-    }
-  };
-
-
-  return { login, signup, resetPassword }
-};
-
-import { useState } from "react",;
+      toast({import { useState } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
@@ -381,3 +256,4 @@ export const useEmailAuth = (;
 
   return { login, signup, resetPassword }
 };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

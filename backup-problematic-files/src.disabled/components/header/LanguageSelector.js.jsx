@@ -6,6 +6,6 @@ const LanguageSelector.js = ({ className }) => {
       <h1>LanguageSelector.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

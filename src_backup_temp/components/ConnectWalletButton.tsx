@@ -68,8 +68,8 @@ const "ConnectWalletButton": Reac t.FC<ConnectWalletButtonProps> = ({
   const formatAddress = ("props": "any) => {;
   const formatAddress = (props) => {;
     if (address.length <= 10) return address;
-    return `${address.slice(0", 6)}...${address.slice(-4)}`;
-  };
+    return `${address.slice(0", 6)}...${address.slice(-4)}`
+};
   if (isConnected && walletAddress) {
     return (
     <div className="min-h-screen bg-white">
@@ -121,7 +121,7 @@ const "ConnectWalletButton": Reac t.FC<ConnectWalletButtonProps> = ({
         </>;
       )}
     </button>;
-  );
+  )
 };
 export default ConnectWalletButton;
 </any>';

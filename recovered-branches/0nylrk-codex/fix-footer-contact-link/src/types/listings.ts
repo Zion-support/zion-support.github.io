@@ -1,11 +1,17 @@
-export interface ProductListing {
+export interface ListingCategory {
   id: string;
-  title: string;
+  name: string,
+  description: string;
+  icon: string;
+}
+
+}export interface ProductListing {
+  id: string;
+  title: string,
   description: string;
 
   category: string,
   subcategory?: string, // Adding optional subcategory field;
-
 export interface ListingCategory {
 export interface ListingCategory {;
   id: string;
@@ -14,8 +20,10 @@ export interface ListingCategory {;
 }
 export interface ProductListing {
   id: string;
-  title: string;
+  title: string,
   description: string;
+  category: string;
+  subcategory?: string; // Adding optional subcategory field
   price: number | null;
   currency: string;
   tags: string[];
@@ -28,14 +36,14 @@ export interface ProductListing {
 
 export interface ListingCategory {;
   id: string,;
-  name: string,;
+  name: string,,
   description: string,;
   icon: string;
 }
 ;
 export interface ProductListing {;
   id: string,;
-  title: string,;
+  title: string,,
   description: string,;
   category: string,;
   subcategory?: string, // Adding optional subcategory field;
@@ -66,15 +74,11 @@ export interface ListingItem {;
   description?: string;
 }
 ;
-  image?: string,
-  review_count?: number;
+  image?: string,  review_count?: number;
   featured?: boolean,
   ai_score?: number, // Added ai_score as optional property;
   location?: string, // Adding location property to fix TypeScript errors;
   availability?: string, // Adding availability property to fix TypeScript errors;
-
-}
-export interface ListingItem {
   id: string;
   title: string;
   category: string;
@@ -82,8 +86,6 @@ export interface ListingItem {
   description?: string;
 }
 
-
 export interface ListingCategory {;
-
 
 export type ListingView = 'grid' | 'list';

@@ -6,6 +6,6 @@ const FiveGEnterpriseSolutions = ({ className }) => {
       <h1>FiveGEnterpriseSolutions</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

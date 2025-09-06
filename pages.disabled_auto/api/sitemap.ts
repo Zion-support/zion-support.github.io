@@ -1,30 +1,10 @@
 import React from 'react';
 
-
 import React from 'react';
 
 interface SitemapProps {
   // Add props here as needed
-}
-
-interface SitemapProps {
-  // Add props here as needed
-}
-
-interface SitemapProps {
-  // Add props here as needed
-}
-interface SitemapProps {
-  // Add props here as needed
-}
-interface SitemapProps {
-  // Add props here as needed
-}
-interface SitemapProps {
-  // Add props here as needed
-}
-ursor/add-new-services-and-deploy-updates-0462
-  res.status(200).send(sitemap)}
+}  res.status(200).send(sitemap)}
   res.status(200).send(sitemap)}
 import * as React from 'react';
 
@@ -42,21 +22,5 @@ export default function Sitemap({ }: SitemapProps) {
     </div>
   );
 }
-}
 
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-}
 }

@@ -36,43 +36,30 @@ export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryS
   }
   componentDidCatch (error: Error, error_info: React.ErrorInfo) {
     console.error ("Error caught by boundary:", error, error_info);
-  }
-        <div className="p-6 text-center">;
-          <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;
-          <button;
-            on_click={() => this.set_state ({ has_error: false })}
-            className="btn - primary";
-          >;
-            Try again;
-          </button>;
-        </div>);
-    }
-  return (;
-    <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
-  );
-}
-  return (;
-    <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
-  );
-}
-    <div className={`animate-pulse ${className}`}>;
+  }}
+// Skeleton loading component;
+export /**
+ * Skeleton - Function description
+ */
+function Skeleton() {
+  return (
+    <div className={`animate - pulse ${class_name}`}>;
+      {Array.from ({ length: lines }).map ((_, i) => (    <div className={`animate-pulse ${className}`}>;
       {Array.from({ length: lines }).map((_, i) => (;
         <div;
           key={i}
-          className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb - 0";
+          className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb-0";
           style={{ width: `${Math.random () * 40 + 60}%` }}
         />))}
     </div>);
-}
-      // Log performance metrics in development;
+}      // Log performance metrics in development;
       // Check condition
 if ( {) {
   $2
 }
         // // // console.log (`${component_name} render time: ${duration.to_fixed (2)}ms`);
       }
-        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
-        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
+        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
       }
     }
   }

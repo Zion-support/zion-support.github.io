@@ -9,28 +9,27 @@ export interface BlogAuthor {
 
 export interface BlogAuthor {
   name: string;
-}
-export interface BlogAuthor {
+}export interface BlogAuthor {
   name: string;
 }
 export interface BlogPost {
 
 export interface BlogPost {;
-  id: string;
   title: string;
   slug: string;
   excerpt: string;
   content: string;
   author: BlogAuthor;
-  published_date: string;
-  read_time: string;
-  category: string;
-  tags: string[];
-  title: string;
   meta_description: string;
   body: string;
   tags: string[];
-  name: string,;
+  tweetSummary?: string;
+  imagePrompt?: string;
+}
+
+  tweet_summary?: string,
+  image_prompt?: string;
+}  name: string,;
   title: string,;
   avatarUrl: string;
 }
@@ -63,14 +62,6 @@ export interface GeneratedBlogContent {;
   imagePrompt?: string;
 }
 ;
-// Type for generated newsletter content;
-export interface GeneratedNewsletterContent {
-  subject: string;
-  previewText: string;
-  body: string;
-  cta: string;
-}
-
 export interface BlogAuthor {;
 
 // Type for generated newsletter content;

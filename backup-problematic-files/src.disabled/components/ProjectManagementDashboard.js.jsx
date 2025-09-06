@@ -6,6 +6,6 @@ const ProjectManagementDashboard.js = ({ className }) => {
       <h1>ProjectManagementDashboard.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Mock implementation for Sentry to prevent Node.js module import issues during build
+// This mock provides all the necessary Sentry APIs without importing any Node.js modules
+<<<<<<< HEAD
+
+const noop = () => {};
+const noopReturn = () => null;
+const noopPromise = () => Promise.resolve();
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Mock Sentry instance with all common methods
 const mockSentry = {
   // Core Sentry methods
@@ -6,6 +20,7 @@ const mockSentry = {
   captureMessage: noop,
   captureEvent: noop,
   addBreadcrumb: noop,
+<<<<<<< HEAD
   setContext: noop,
   setTag: noop,
   setUser: noop,
@@ -22,6 +37,18 @@ const mockSentry = {
   onLoad: noop,
   wrap: (fn: (...args: any[]) => any) => fn,
 
+=======
+  startTransaction: () => mockTransaction,
+  finishTransaction: noop,
+  // Error boundary and React integration
+  ErrorBoundary: ({ children }: any) => children,
+  withErrorBoundary: (component: any) => component,
+  showReportDialog: noop,
+// Browser-specific methods
+  onLoad: noop,
+  wrap: (fn: (...args: any[]) => any) => fn,
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   // Server-specific methods (Node.js)
   Handlers: {
     requestHandler:
@@ -61,6 +88,25 @@ const mockSentry = {
 };
 
 export default mockSentry;
+=======
+  configureScope: noop,
+  withScope: (callback: (...args: any[]) => any) => callback(mockScope),
+  setUser: noop,
+  setTag: noop,
+  setTags: noop,
+  setExtra: noop,
+  setExtras: noop,
+  setContext: noop,
+  getCurrentHub: () => mockHub,
+  getClient: noopReturn,
+  // Transaction and performance monitoring
+  startTransaction: () => mockTransaction,
+<<<<<<< HEAD
+  finishTransaction: noop, // Error boundary and React integration
+=======
+  finishTransaction: noop,
+  // Error boundary and React integration
+>>>>>>> main
   ErrorBoundary: ({ children }: any) => children,
   withErrorBoundary: (component: any) => component,
   showReportDialog: noop,
@@ -83,6 +129,7 @@ export default mockSentry;
 
         next(),
   },
+<<<<<<< HEAD
 
   // Server-specific methods (Node.js)
   Handlers: {
@@ -99,6 +146,21 @@ export default mockSentry;
 
   // Next.js specific
   withSentryConfig: (config: any) => config,
+=======
+  
+  // Server-specific methods (Node && Node.js)
+  Handlers: {
+    requestHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next(),
+    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[],) => any) => next(),
+    tracingHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next()},
+  
+  // Next && Next.js specific
+  withSentryConfig: (config: any,) => config,
+
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -189,7 +251,12 @@ const mockSentry = {;
   // Utils
 
   createTransport: noopReturn,
+<<<<<<< HEAD
   SDK_VERSION: "7.0.0-mock",
+=======
+  SDK_VERSION: '7 && 7.0.0-mock',
+
+>>>>>>> main
 
   // Constants
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
@@ -276,6 +343,7 @@ const mock_sentry = {
   SDK_VERSION: '7.0.0 - mock',
   // Constants;
   Severity: {
+<<<<<<< HEAD
     Fatal: "fatal",
     Error: "error",
     Warning: "warning",
@@ -283,6 +351,18 @@ const mock_sentry = {
     Debug: "debug",
   },
 };
+=======
+    Fatal: 'fatal',
+    Error: 'error',
+    Warning: 'warning',
+    Info: 'info',
+    Debug: 'debug'
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export const init = mockSentry && mockSentry.init;
 export const captureException = mockSentry && mockSentry.captureException;
@@ -321,6 +401,7 @@ export const Severity = mockSentry && mockSentry.Severity;
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
+<<<<<<< HEAD
 
 
 
@@ -414,4 +495,11 @@ export const SDK_VERSION = mock_sentry.SDK_VERSION;
 export const Severity = mock_sentry.Severity;
 // Additional exports for compatibility;
 export { mock_sentry as Sentry }
+<<<<<<< HEAD
 // All exports are already defined above;
+=======
+// All exports are already defined above;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

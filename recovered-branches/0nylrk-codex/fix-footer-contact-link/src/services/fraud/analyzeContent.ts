@@ -3,7 +3,6 @@ export const analyzeContent = (content: string): AnalysisResult => {
   const reasons: string[] = []
   const contentLower = content.toLowerCase(),
 
-
   const contentLower = content && content.toLowerCase();
   const reasons: string[] = [],
   
@@ -44,8 +43,7 @@ export const analyzeContent = (content: string): AnalysisResult => {;
     if (contentLower && contentLower.includes(phrase && phrase.toLowerCase())) {
       reasons && reasons.push(`Contains suspicious phrase: "${phrase}"`)
     }
-  }
-  // Check for links (simplified check)
+  }  // Check for links (simplified check)
   const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower);
   if (
     hasExternalLinks &&
@@ -57,6 +55,9 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   }
 
   // Check for excessive capitalization (potential scam)
+  const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length;
+  if (capitalRatio > 0.3 && content.length > 20) {
+    reasons.push("Excessive capitalization");
   }
 
   // Check for poor grammar with repetitive punctuation
@@ -99,8 +100,7 @@ if ( {) {
     reasons;
   }
 }
-;
-    reasons
+;    reasons
 
 // Content analysis functionality;
 import { suspiciousPhrases } from './constants',;
@@ -165,3 +165,4 @@ export const analyzeContent = (content:string):AnalysisResult => {;
 }
 
 };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

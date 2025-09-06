@@ -1,3 +1,17 @@
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  DollarSign, 
+  Shield, 
+  TrendingUp, 
+  Users, 
+  Database, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
 const features = [
   {
     icon: DollarSign,
@@ -35,8 +49,7 @@ const features = [
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Secure, compliant, and innovative financial technology solutions
-                designed for modern financial institutions and fintech companies.
-              </p>
+                designed for modern financial institutions and fintech companies.              </p>
             </motion.div>
           </div>
         </section>
@@ -53,8 +66,7 @@ const features = [
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Finance Technology Features</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our finance solutions are built with security and compliance in mind.
-              </p>
-              {features.map((feature, index) => (
+              </p>              {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -246,8 +258,7 @@ const features = [
                 </button>
               </div>
 ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-            </div>
+ursor/fix-syntax-push-and-merge-to-main-40de            </div>
           </div>
         </section>
 

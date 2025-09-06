@@ -36,8 +36,7 @@
               <div key={method.name} className="flex flex-col group">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {method.name}
-export default function ContactPage() {
+                  {method.name}export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -109,8 +108,7 @@ export default function ContactPage() {
         </div>
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <form className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-              <div>
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">              <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Name
                 </label>
@@ -248,12 +246,11 @@ export default function ContactPage() {
             </Link>
             <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Learn More <span aria-hidden="true">→</span>
-            </Link>
-          </div>
+            </Link>          </div>
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default Page;

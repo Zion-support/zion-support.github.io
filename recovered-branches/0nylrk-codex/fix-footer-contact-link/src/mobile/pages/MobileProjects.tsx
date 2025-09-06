@@ -1,43 +1,19 @@
-import React from "react";
-import {MobileHeader} from "../components/common/MobileHeader";
-import {BottomNavigation} from "../components/common/BottomNavigation";
-import {MobileProjectView} from "../components/projects/MobileProjectView";
+
+
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileProjectView } from "../components/projects/MobileProjectView";
 import { BottomNavigation } from "../components/common/BottomNavigation",
-import { MobileProjectView } from "../components/projects/MobileProjectView",
-// Mock data
-
-const projectData = {
-  id: "project-123"
-  title: "Website Redesign"
-  client: {
-    name: "TechCorp Inc."
-    avatar: ""
-import React from "react",;
-import { MobileHeader } from "../components/common/MobileHeader",;
-import { BottomNavigation } from "../components/common/BottomNavigation",;
-import { MobileProjectView } from "../components/projects/MobileProjectView",;
-// Mock data;
-const projectData = {;
-  id: "project-123",;
-  title: "Website Redesign",;
-  client: {;
-    name: "TechCorp Inc.",;
-    avatar: "";
-const milestonesData = [;
+import { MobileProjectView } from "../components/projects/MobileProjectView",const milestonesData = [;
   {;
     id: "milestone-1",;
     title: "Initial Design Concepts",;
-export function MobileProjects() {;
   return (
     <div className="min-h-screen">;
       <MobileHeader
         title="Project Details"
         showBack
-
 
   },
   startDate: "Oct 15, 2023",
@@ -71,20 +47,6 @@ const milestonesData = [
     dueDate: "Dec 30, 2023",
     status: "pending" as const,
     paymentStatus: "pending" as const,
-
-    amount: "$5,000"
-  }
-],
-
-export function MobileProjects() {
-  return (
-    <div className="min-h-screen">
-      <MobileHeader
-        title="Project Details"
-        showBack
-      />
-      <main className="py-4">
-
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -135,15 +97,12 @@ export function MobileProjects() {;
         <MobileProjectView 
           project={projectData} 
 
-
           milestones={milestonesData}
         />
       </main>
       <BottomNavigation />
     </div>
   )
-
-
       />;
 
       <main className="py-4">;
@@ -157,82 +116,8 @@ export function MobileProjects() {;
     </div>;
   );
 }
-
-
-import React from './react';
-import { MobileHeader } from '../components / common / MobileHeader';
-import { BottomNavigation } from '../components / common / BottomNavigation';
-import { MobileProjectView } from '../components / projects / MobileProjectView';
-// Mock data;
-const project_data = {
-  id: "project - 123",
-  title: "Website Redesign",
-  client: {
-    name: "TechCorp Inc.",
-    avatar: "";
-  }
-  start_date: "Oct 15, 2023";
-  end_date: "Jan 15, 2024";
-  status: "in_progress",
-  total_amount: "$12, 000";
-  progress: 60,
-  description: "Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages.";
-}
-;
-const milestones_data = [;
-  {
-    id: "milestone - 1",
-    title: "Initial Design Concepts",
-    due_date: "Oct 30, 2023";
-    status: "completed" as const,
-    payment_status: "paid" as const,
-    amount: "$3, 000";
-  }
-  {
-    id: "milestone - 2",
-    title: "Homepage Development",
-    due_date: "Nov 30, 2023";
-    status: "in_progress" as const,
-    payment_status: "pending" as const,
-    amount: "$4, 000";
-  }
-  {
-    id: "milestone - 3",
-    title: "Product Pages",
-    due_date: "Dec 30, 2023";
-    status: "pending" as const,
-    payment_status: "pending" as const,
-    amount: "$5, 000";
-  }
-];
-;
-export /**
- * MobileProjects - Function description
- */
-function MobileProjects() {
-  return (
-    <div className="min - h-screen">;
-      <MobileHeader;
-        title="Project Details";
-        show_back;
-      />;
-      <main className="py - 4">;
-        <MobileProjectView;
-          project={project_data}
-          milestones={milestones_data}
-        />;
-      </main>;
-      <BottomNavigation />;
-    </div>);
-}
-
 };
 ;
-
-
-};
-;
-
 
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
@@ -251,7 +136,7 @@ const projectData = {;
   endDate:"Jan 15, 2024",;
   status:"in_progress",;
   totalAmount:"$12,000",;
-  progress:60,;
+  progress:60,,
   description:"Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages.";
 },;
 ;
@@ -309,3 +194,4 @@ export function MobileProjects() {;
 }
 };
 ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

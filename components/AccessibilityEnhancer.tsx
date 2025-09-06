@@ -1,3 +1,4 @@
+
       }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
@@ -61,7 +62,6 @@ export default AccessibilityEnhancer;
       </div>;
 };
 
-
       {/* Skip to main content link */}
       <a
         href="#main-content"
@@ -82,7 +82,7 @@ export default AccessibilityEnhancer;
   );
 }
 export default AccessibilityEnhancer;
-export default AccessibilityEnhancer;
+
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
@@ -247,3 +247,4 @@ export default function AccessibilityEnhancer() {
     </div>
   );
 }
+

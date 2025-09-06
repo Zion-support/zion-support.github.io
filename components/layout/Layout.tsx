@@ -1,5 +1,25 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import Head from 'next/head';
+=======
+>>>>>>> main
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { ReactNode } from 'react';
+=======
+React from
+  'react'
+import Header from 'react'
+  './Header';import Footer from 'react'
+  './Footer'
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 import Header from '../Header';
 import Footer from '../Footer';
@@ -95,11 +115,20 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
  */
 function Layout() { return <div>{children}</div> } " ;
 }}
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
+<<<<<<< HEAD
 }
 
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
@@ -117,3 +146,51 @@ export default function Layout({ children, title = "Zion Tech Group", descriptio
     </>
   );
 }
+=======
+  keywords?: string;
+}
+
+export default function Layout({ 
+  children, 
+  title = "Zion Tech Group", 
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, cloud, micro SaaS"
+}: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {children}
+    </div>
+  );
+}
+<<<<<<< HEAD
+=======
+import React, { ReactNode } from 'react';
+import Header from '../Header';
+import Footer from './Footer';
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default Layout;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

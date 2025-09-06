@@ -10,29 +10,6 @@
     custom_domain: ""
     is_co_branded: true
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -81,11 +58,42 @@ export default function TenantOnboarding() {
     company_size: ""
     industry: ""
     custom_domain: ""
-    is_co_branded: true
-  });
+    is_co_branded: true  });
 
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";
+
+  if (!isAdmin) {;
+    return <Navigate to="/unauthorized" />;
+  }
+
+  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e && e.target;
+    setFormData(prev => ({ ...prev, [name]: value }))
+};
+
+  const handleSelectChange = (name: string, value: string) => {;
+    setFormData(prev => ({ ...prev, [name]: value }))
+};
+
+  const handleSwitchChange = (name: string, checked: boolean) => {;
+    setFormData(prev => ({ ...prev, [name]: checked }))
+};
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setIsSubmitting(true),;
+
+    try {;
+      // Generate subdomain if not provided;
+      const subdomain = formData && formData.subdomain || formData && formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+      // Create landing page copy;
+      const landingPageCopy = {;
+        headline: "AI Hiring Assistant",;
+        subtitle: `Find the best talent for your ${formData && formData.industry || "company"}`,;
+        cta: "Get Started"
+};
       // Submit to Supabase;
       const { data, error } = await supabase;
         .from('whitelabel_tenants');
@@ -107,8 +115,8 @@ export default function TenantOnboarding() {
 
       if (error) throw error;
 
-      toast && toast.success("Tenant created successfully!", {;
-        description: `${data && data.brand_name} is now available at ${data && data.subdomain}.ziontechmarketplace && ziontechmarketplace.com`;
+      toast && toast.success("Tenant created successfully!", {,
+  description: `${data && data.brand_name} is now available at ${data && data.subdomain}.ziontechmarketplace && ziontechmarketplace.com`;
       });
 
       // Reset form;
@@ -126,13 +134,11 @@ export default function TenantOnboarding() {
 
     } catch (error: any) {;
       console && console.error("Error creating tenant:", error);
-      toast && toast.error("Failed to create tenant", { ;
-        description: error && error.message ;
+      toast && toast.error("Failed to create tenant", { ,
+  description: error && error.message ;
       });
     } finally {;
-      setIsSubmitting(false);
-
-import React, { useState } from "react",
+      setIsSubmitting(false);import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
@@ -153,7 +159,6 @@ export default function TenantOnboarding() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
 
-    brand_name: ""
     subdomain: ""
     logo_url: ""
     primary_color: "#9b87f5"
@@ -166,7 +171,6 @@ export default function TenantOnboarding() {
 
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";
-  }),
   
   // Check if user has admin role
   const isAdmin = user?.role === "admin",
@@ -174,32 +178,7 @@ export default function TenantOnboarding() {
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  },
-  
-  const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value }))
-  },
-  
-  const handleSwitchChange = (name: string, checked: boolean) => {
-    setFormData(prev => ({ ...prev, [name]: checked }))
-  },
-  
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    setIsSubmitting(true),
-    
-    try {
-      // Generate subdomain if not provided
-      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
-      
-
-      // Create landing page copy
-      const landingPageCopy = {
-        headline: "AI Hiring Assistant"
-        subtitle: `Find the best talent for your ${formData.industry |"company"}`
-        cta: "Get Started"
-      // Submit to Supabase
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {      // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
         .insert({
@@ -215,17 +194,7 @@ export default function TenantOnboarding() {
           dns_verified: false
           email_template_override: null
         })
-        .select('id, brand_name, subdomain')
-        .single(),
-      
-      if (error) throw error,
-      
-      toast.success("Tenant created successfully!", {
-        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
-      }),
-      
-
-      // Reset form
+        .select('id, brand_name, subdomain')      // Reset form
       setFormData({
         brand_name: ""
         subdomain: ""
@@ -237,68 +206,34 @@ export default function TenantOnboarding() {
         custom_domain: ""
         is_co_branded: true
       })
-    } catch (error: any) {
-      })
+    } catch (error: any) {      })
     } finally {
       setIsSubmitting(false)
     }
 
-  return (
+  },
 
-
-  return (
-
-    }
-  }
   return (
     <>;
       <SEO
         title="Tenant Onboarding - Zion AI Marketplace"
-        description="Onboard a new white-label tenant to the Zion AI Marketplace platform."
-      />;
-      <Header />;
-      <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">;
-        <div className="flex flex-col space-y-6">;
-          <div>;
-            <h1 className="text-3xl font-bold tracking-tight">Tenant Onboarding</h1>;
-            <p className="text-muted-foreground mt-2">;
-              Create a new white-label instance of Zion Hire AI for a company.;
-            </p>;
-          </div>;
-
-          <Card>;
-            <CardHeader>;
-              <CardTitle>New Tenant Setup</CardTitle>;
-              <CardDescription>;
-                Configure the branding and details for the new white-label tenant.;
-              </CardDescription>;
-            </CardHeader>;
-            <CardContent>;
-              <form onSubmit={handleSubmit} className="space-y-6">;
-                <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
-                  <TabsList className="mb-4 grid grid-cols-3 w-full">;
-    }
-  }
-
-                    <TabsTrigger value="company">Company Info</TabsTrigger>;
+        description="Onboard a new white-label tenant to the Zion AI Marketplace platform."                    <TabsTrigger value="company">Company Info</TabsTrigger>;
                     <TabsTrigger value="branding">Branding</TabsTrigger>;
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>;
                   </TabsList>;
 
                         placeholder="hire && hire.yourcompany.com"
 
-
                         placeholder="Acme Corporation";
                         required;
                       />;
                     </div>;
-                    <div className="space - y-2">;
+                    <div className="space-y-2">;
                       <Label html_for="industry">Industry</Label>;
                       <Select;
                         name="industry";
                         value={form_data.industry}
                         onValueChange={(value) => handleSelectChange ("industry", value)}
-
                       >;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select industry" />;
@@ -316,13 +251,12 @@ export default function TenantOnboarding() {
                       </Select>;
                     </div>;
 
-                    <div className="space - y-2">;
+                    <div className="space-y-2">;
                       <Label html_for="company_size">Company Size</Label>;
                       <Select;
                         name="company_size";
                         value={form_data.company_size}
                         onValueChange={(value) => handleSelectChange ("company_size", value)}
-
                       >;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select company size" />;
@@ -334,15 +268,13 @@ export default function TenantOnboarding() {
                           <SelectItem value="51 - 200">51 - 200 employees</SelectItem>;
                           <SelectItem value="201 - 500">201 - 500 employees</SelectItem>;
                           <SelectItem value="501 - 1000">501 - 1000 employees</SelectItem>;
-
                           <SelectItem value="1000+">1000+ employees</SelectItem>;
                         </SelectContent>;
                       </Select>;
                     </div>;
                   </TabsContent>;
 
-                        placeholder="https://example && example.com/logo && logo.png"
-                      />;
+                        placeholder="https://example && example.com/logo && logo.png"                      />;
                       <p className="text-xs text-muted-foreground">;
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended);
                       </p>;
@@ -351,7 +283,6 @@ export default function TenantOnboarding() {
                     <div className="space-y-2">;
                       <Label htmlFor="primary_color">Primary Brand Color</Label>;
                       <div className="flex items-center gap-2">;
-
                         <Input
                           id="primary_color"
                           name="primary_color"
@@ -375,13 +306,10 @@ export default function TenantOnboarding() {
                       <Select
                         name="theme_preset" 
                         value={formData && formData.theme_preset} 
-                        onValueChange={(value) => handleSelectChange("theme_preset", value)}
+                        onValueChange={(value) => handleSelectChange("theme_preset", value)}                        placeholder="hire && hire.yourcompany.com"
+
+=======
                         placeholder="hire && hire.yourcompany.com"
-
-
-
-                        placeholder="hire && hire.yourcompany.com"
-
 
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -460,8 +388,8 @@ export default function TenantOnboarding() {;
         .select('id, brand_name, subdomain');
         .single(),;
       if (error) throw error,;
-      toast.success("Tenant created successfully!", {;
-        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`;
+      toast.success("Tenant created successfully!", {,
+  description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`;
       }),;
       // Reset form;
       setFormData({;
@@ -477,8 +405,8 @@ export default function TenantOnboarding() {;
       });
     } catch (error: any) {;
       console.error("Error creating tenant:", error);
-      toast.error("Failed to create tenant", {;
-        description: error.message;
+      toast.error("Failed to create tenant", {,
+  description: error.message;
       });
     } finally {;
       setIsSubmitting(false);
@@ -618,53 +546,7 @@ export default function TenantOnboarding() {;
                         id="logo_url"
                         name="logo_url"
                         value={formData && formData.logo_url}
-                        onChange={handleInputChange}
-                          Show "Powered by Zion AI" in the footer and elsewhere;
-                        </p>;
-                      </div>;
-                      <Switch;
-                        id="is_co_branded";
-                        checked={form_data.is_co_branded}
-                        onCheckedChange={(checked) => handleSwitchChange ("is_co_branded", checked)}
-                      />;
-                    </div>;
-                  </TabsContent>;
-                  <TabsContent value="domain" className="space - y-4">;
-                    <div className="space - y-2">;
-                      <Label html_for="subdomain">Subdomain</Label>;
-                      <div className="flex items - center">;
-                        <Input;
-                          id="subdomain";
-                          name="subdomain";
-                          value={form_data.subdomain}
-                          on_change={handleInputChange}
-                          placeholder={form_data.brand_name ? form_data.brand_name.toLowerCase ().replace (/[^a - z0 - 9]/g, '') : "company"}
-                          className="rounded - r-none";
-                        />;
-                        <div className="bg - muted px - 3 py - 2 border border - l-0 border - input rounded - r-md text - muted - foreground">;
-                          .ziontechmarketplace.com;
-                        </div>;
-                      </div>;
-                      <p className="text - xs text - muted - foreground">;
-                        Leave blank to auto - generate from company name;
-                      </p>;
-                    </div>;
-                    <div className="space - y-2">;
-                      <Label html_for="custom_domain">Custom Domain (Optional)</Label>;
-                      <Input;
-                        id="custom_domain";
-                        name="custom_domain";
-                        value={form_data.custom_domain}
-                        on_change={handleInputChange}
-                        placeholder="hire.yourcompany.com";
-                      />;
-                      <p className="text - xs text - muted - foreground">;
-                        If you want to use your own domain, enter it here. You'll need to configure DNS records.;
-                      </p>;
-                    </div>;
-                  </TabsContent>;
-                </Tabs>;
-                  </Button>;
+                        onChange={handleInputChange}                  </Button>;
                 </div>;
               </form>;
             </CardContent>;
@@ -673,12 +555,6 @@ export default function TenantOnboarding() {;
       </main>;
       <Footer />;
 
-
-
-
-}
-    </>);
-}
 }
     </>);
     </>;
@@ -724,8 +600,8 @@ data, error
 }= await supabase .from ('whitelabel tenants') .insert ({
   brand name: formData.brand name, subdomain: subdomain, custom domain: formData.custom domain || null, primary color: formData.primary color, logo url: formData.logo url || null, theme preset: formData.theme preset, landing page copy: landingPageCopy, is active: true, account manager id: user.id, dns verified: false, email template override: null 
 }) .select ('id, brand name, subdomain') .single ();
-if (error) throw error;
-description: error.message 
+if (error) throw error,
+  description: error.message 
 }) 
 }finally {
   setIsSubmitting (false) 
@@ -737,7 +613,4 @@ Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label 
   );
 }
 ;
-}
-;
-    </>);
-}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

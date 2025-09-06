@@ -1,7 +1,6 @@
 import type { AuthContextType } from "@/types/auth";
 import { createContext } from "react",
 import type { AuthContextType } from "@/types/auth",
-
 import { createContext } from "react";
 import {createContext} from "react";
 import type { AuthContextType } from "@/types/auth";
@@ -15,7 +14,6 @@ import type { AuthContextType } from "@/types/auth",
 // type definitions are unavailable, calling an untyped function with type
 // arguments causes a TypeScript error (TS2347). Instead, we cast the
 
-
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined),
@@ -26,7 +24,6 @@ import type { AuthContextType } from "@/types/auth",;
 // type definitions are unavailable, calling an untyped function with type;
 // arguments causes a TypeScript error (TS2347). Instead, we cast the;
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
-
 // default value so consumers still get some level of type safety.
 export const AuthContext = createContext<AuthContextType | undefined>(
   undefined,

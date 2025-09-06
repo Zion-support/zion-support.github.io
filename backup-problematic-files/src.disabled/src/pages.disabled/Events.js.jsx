@@ -6,6 +6,6 @@ const Events.js = ({ className }) => {
       <h1>Events.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

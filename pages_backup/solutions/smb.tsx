@@ -11,26 +11,26 @@ import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'luci
 export default function SMBSolutionsPage() {;
   const smbServices = [;
     {}
-      title: "Cost-Effective IT",";
-      description: "Affordable technology solutions for small and medium businesses",";
+      title: "Cost-Effective IT",",
+  description: "Affordable technology solutions for small and medium businesses",";
       icon: DollarSign,;
       features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]";
     },;
     {}
-      title: "Quick Setup",";
-      description: "Rapid deployment of essential business systems",";
+      title: "Quick Setup",",
+  description: "Rapid deployment of essential business systems",";
       icon: Zap,;
       features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]";
     },;
     {}
-      title: "Team Collaboration",";
-      description: "Tools and systems to enhance team productivity",";
+      title: "Team Collaboration",",
+  description: "Tools and systems to enhance team productivity",";
       icon: Users,;
       features: ["Communication Tools", "Project Management", "File Sharing"]";
     },;
     {}
-      title: "Business Growth",";
-      description: "Technology solutions that grow with your business",";
+      title: "Business Growth",",
+  description: "Technology solutions that grow with your business",";
       icon: Building2,;
       features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]";
     }
@@ -48,26 +48,26 @@ import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'luci
 export default function SMBSolutionsPage() {;
   const smbServices = [;
     {}
-      title: "Cost-Effective IT",";
-      description: "Affordable technology solutions for small and medium businesses",";
+      title: "Cost-Effective IT",",
+  description: "Affordable technology solutions for small and medium businesses",";
       icon: DollarSign,;
       features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]";
     },;
     {}
-      title: "Quick Setup",";
-      description: "Rapid deployment of essential business systems",";
+      title: "Quick Setup",",
+  description: "Rapid deployment of essential business systems",";
       icon: Zap,;
       features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]";
     },;
     {}
-      title: "Team Collaboration",";
-      description: "Tools and systems to enhance team productivity",";
+      title: "Team Collaboration",",
+  description: "Tools and systems to enhance team productivity",";
       icon: Users,;
       features: ["Communication Tools", "Project Management", "File Sharing"]";
     },;
     {}
-      title: "Business Growth",";
-      description: "Technology solutions that grow with your business",";
+      title: "Business Growth",",
+  description: "Technology solutions that grow with your business",";
       icon: Building2,;
       features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]";
     }
@@ -78,14 +78,14 @@ export default function SMBSolutionsPage() {;
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."">;
       <div className="min-h-screen bg-gray-50">";
   ];
-    >
-      <div className="min-h-screen bg-gray-50">
+    >      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">SMB Solutions</h1>
@@ -109,6 +109,5 @@ export default function SMBSolutionsPage() {;
           </div>;
         </section>;
       </div>;
-    </Layout>;
-  );
+    </Layout>;  );
 }

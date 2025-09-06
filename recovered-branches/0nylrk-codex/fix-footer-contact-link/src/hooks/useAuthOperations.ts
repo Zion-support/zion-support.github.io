@@ -21,7 +21,6 @@ export function useAuthOperations(
     checkUrlForReferralCode()
   }, []),
 
-
   const login = async ({ email, password }: { email: string, password: string }) => {
     setIsLoading (true);
     try {
@@ -100,7 +99,6 @@ function useAuthOperations() {
           variant: "destructive",
           title: "Error during signup",
 
-
           description: error.message});
         return { data: null, error: error.message }
           title: "Error during signup",
@@ -131,12 +129,10 @@ if ( {) {
     }
       const { error } = await supabase.auth.signOut(),
 
-
       if (error) {
         toast({
           variant: "destructive";
           title: "Oh no! Something went wrong.",
-
 
           description: error.message})
 
@@ -207,8 +203,6 @@ if ( {) {
     }
   },
 
-
-
   const updateProfile = async (profileData: Partial<UserProfile>) => {
     setIsLoading(true)
     try {
@@ -237,7 +231,6 @@ if ( {) {
       // Optimistically update the local user state;
       setUser((prevUser) => {;
         if (prevUser) {;
-
 
           return { ...prevUser, ...profileData }
       // Optimistically update the local user state;
@@ -273,15 +266,15 @@ if ( {) {
         return prevUser;
       }),;
       toast({;
-        title: "Profile updated!",;
-        description: "Your profile has been successfully updated."}),;
+        title: "Profile updated!",,
+  description: "Your profile has been successfully updated."}),;
       return { error: null }
     } catch (error) {;
       console.error("Profile update failed:", error),;
       toast({;
         variant: "destructive",;
-        title: "Profile update failed",;
-        description: "There was an issue updating your profile. Please try again."}),;
+        title: "Profile update failed",,
+  description: "There was an issue updating your profile. Please try again."}),;
       return { error: "Failed to update profile." }
     } finally {;
       setIsLoading(false);
@@ -295,15 +288,13 @@ if ( {) {
       if (error) {;
         toast({;
           variant: "destructive",;
-          title: "Oh no! Something went wrong.",;
-          description: error.message});
+          title: "Oh no! Something went wrong.",,
+  description: error.message});
       }
     } finally {;
       setIsLoading(false);
     }
   },
-
-
 
   const loginWithFacebook = async () => {
     setIsLoading (true);
@@ -331,8 +322,8 @@ if ( {) {
       if (error) {;
         toast({;
           variant: "destructive",;
-          title: "Oh no! Something went wrong.",;
-          description: error.message});
+          title: "Oh no! Something went wrong.",,
+  description: error.message});
 
   }
   const loginWithGoogle = async () => {
@@ -371,8 +362,8 @@ if ( {) {
         toast ({
           variant: "destructive";
           title: "Oh no! Something went wrong.",
-          description: error.message});
-  };
+          description: error.message})
+};
   },
 
   const loginWithTwitter = async () => {
@@ -455,8 +446,8 @@ if ( {) {
     } catch (error: any) {;
       toast({;
         variant: 'destructive',;
-        title: 'Web3 login failed',;
-        description: error?.message || 'Unable to connect wallet';
+        title: 'Web3 login failed',,
+  description: error?.message || 'Unable to connect wallet';
       });
     } finally {;
       setIsLoading(false);

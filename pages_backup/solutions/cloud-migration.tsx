@@ -2,8 +2,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
-import React from 'react';
-import Link from 'next/link';';
+import React from 'react';import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Cloud, 
   Shield, 
@@ -34,14 +33,27 @@ const phases = [;
     ];
   },
   {}
+    title: 'Design & Architecture,',
+    description: 'Cloud-native architecture design and security framework implementation.,',
+    icon: Settings,
+    steps: [;
+      'Cloud architecture design,',
+      'Security framework',',
+      'Scalability planning',',
       'Cost optimization'';
     ];
   },
   {}
-      'Go-live support'';
     ];
   },
   {}
+    title: 'Optimization,',
+    description: 'Continuous monitoring and optimization for peak performance.,',
+    icon: Zap,
+    steps: [;
+      'Performance monitoring,',
+      'Cost optimization',',
+      'Security updates',',
       'Continuous improvement'';
     ];
   }
@@ -49,18 +61,30 @@ const phases = [;
 
 const services = [;
   {}
-      'Lambda serverless functions'';
     ];
   },
   {}
+    title: 'Azure Migration,',
+    description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',
+    icon: Shield,
+    features: [;
+      'Azure Virtual Machines,',
+      'Azure SQL Database',',
+      'Azure Storage migration',',
       'Azure Functions deployment'';
     ];
   },
   {}
-      'Cloud Functions deployment'';
     ];
   },
   {}
+    title: 'Multi-Cloud Strategy,',
+    description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',
+    icon: Globe,
+    features: [;
+      'Cross-cloud integration,',
+      'Disaster recovery',',
+      'Load balancing',',
       'Cost optimization'';
     ];
   }
@@ -68,7 +92,6 @@ const services = [;
 
 const benefits = [;
   {}
-  }
 ;];
 
 export default function CloudMigrationPage() {
@@ -96,6 +119,8 @@ export default function CloudMigrationPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <Cloud className="w-12 h-12 text-blue-400 mr-4" />";
+                <h1 className="text-5xl md:text-6xl font-bold">";
+                  Cloud;
                   <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";
                     Migration Solutions;
                   </span>;
@@ -105,7 +130,6 @@ export default function CloudMigrationPage() {
                 Seamlessly migrate your infrastructure to the cloud with our comprehensive migration services. 
                 Reduce costs, improve performance, and enhance security with AWS, Azure, or Google Cloud.,
               </p>;
-                </Link>;
               </div>;
             </motion.div>;
           </div>;
@@ -117,6 +141,11 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Our Cloud Migration Process;
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 A proven methodology that ensures successful cloud migration;
@@ -159,7 +188,6 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Choose from leading cloud providers or implement a multi-cloud strategy;
                 for maximum flexibility and redundancy.;
@@ -172,6 +200,23 @@ export default function CloudMigrationPage() {
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8""
+                >;
+                  <div className="flex items-center mb-6">";
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">";
+                      <service.icon className="w-6 h-6 text-white" />";
+                    </div>;
+                    <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>"
+                  </div>;
+                  
+                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
+                  
+                  <div>;
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>";
+                    <ul className="space-y-2">";
+                      {service.features.map((feature, featureIndex) => (,
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
                           {feature}
                         </li>,
@@ -190,7 +235,6 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our cloud migration services deliver measurable improvements in cost, 
                 performance, and security.,
@@ -234,8 +278,7 @@ export default function CloudMigrationPage() {
           </div>;
         </section>;
       </div>;
-    </Layout>;
-            >
+    </Layout>;            >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?
               </h2>

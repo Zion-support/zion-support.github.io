@@ -9,8 +9,7 @@ import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBa
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
 import { SEO } from "@/components/SEO";
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
-import { SEO } from "@/components/SEO",
-export default function EnterprisePlans() {
+import { SEO } from "@/components/SEO",export default function EnterprisePlans() {
   return (
     <>
       <SEO
@@ -42,7 +41,6 @@ import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadg
 import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
 import {SEO} from "@/components/SEO";
 
-
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -54,26 +52,19 @@ import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBa
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",;
 import { SEO } from "@/components/SEO";
 
+export default function EnterprisePlans() {;
+  return (
     <>;
+      <SEO
+        title="Enterprise Plans - Zion AI Marketplace"
+        description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools."
+      />;
+      <Header />;
+      <main className="min-h-screen bg-background">;    <>;
       <SEO;
         title="Enterprise Plans - Zion AI Marketplace";
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.";
       />;
-      <Header />;
-      <main className="min-h-screen bg-background">;
-      <main className="min-h-screen bg-background">;
-        <EnterpriseHero />;
-        <EnterprisePricingTable />;
-        <EnterpriseFeatures />;
-        <EnterpriseTestimonials />;
-        <EnterpriseTrustBadges />;
-        <EnterpriseCTA />;
-      </main>;
-      <Footer />;
-    </>);
-}
+      <Header />;    </>);
 ;
 
-
-    </>);
-}

@@ -23,8 +23,8 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label);
-  };
+    setActiveDropdown(activeDropdown === label ? null : label)
+};
 
   return (
     <nav className={'bg-white shadow-lg ' + className}>
@@ -123,7 +123,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
         )}
       </div>
     </nav>
-  );
+  )
 };
 
 export default InteractiveNavigation;
@@ -171,8 +171,8 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label);
-  };
+    setActiveDropdown(activeDropdown === label ? null : label)
+};
 
   return (
     <nav className={'bg-white shadow-lg ' + className}>
@@ -271,10 +271,11 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
         )}
       </div>
     </nav>
-  );
+  )
 };
 
-export default InteractiveNavigation;};
+export default InteractiveNavigation
+};
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
 const InteractiveNavigation: React.FC: = () => {";

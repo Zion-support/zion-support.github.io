@@ -1,14 +1,12 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
 
   id: string;
   type: "success" | "error" | "warning" | "info";
+
   title?: string;
   message: string;
   duration?: number;
 }
-
 
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
@@ -63,10 +61,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   return `${baseStyles} ${typeStyles[type]}`;
 };
 
-
 import React from 'react';
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
 interface Notification {
   id: string;
@@ -82,8 +77,6 @@ interface NotificationContextType {
   removeNotification: (id: string) => void;
 }
 
-  if (notifications.length === 0) return null;
-
   return (
     <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
       {children}
@@ -98,38 +91,11 @@ const NotificationContainer: React.FC = () => {
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
       {notifications.map((notification) => (
-        <div
-          key={notification.id}
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
-        >
-          <div className="flex items-start justify-between">
-            <div className="flex-1">
-              <div className="flex items-start space-x-2">
-                {getIcon(notification.type)}
-                <div className="flex-1">
-                  {notification.title && (
-                    <h4 className="font-medium mb-1">{notification.title}</h4>
-                  )}
-                  <p className="text-sm">{notification.message}</p>
-                </div>
-              </div>
-            </div>
-            {onDismiss && (
-              <button
-                onClick={() => handleDismiss(notification.id)}
-                className="ml-2 text-gray-400 hover:text-gray-600 transition-colors"
-              >
-                <X className="h-4 w-4" />
-              </button>
-            )}
-          </div>
-        </div>
+
       ))}
     </div>
   );
 };
-
-export default NotificationSystem;
 
   const colors = {
     success: 'bg-green-500',
@@ -159,10 +125,3 @@ export default NotificationSystem;
   );
 };
 
-export const useNotifications = () => {
-  const context = useContext(NotificationContext);
-  if (context === undefined) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
-  }
-  return context;
-};

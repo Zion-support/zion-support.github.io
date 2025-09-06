@@ -6,6 +6,6 @@ const EnhancedLoading = ({ className }) => {
       <h1>EnhancedLoading</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

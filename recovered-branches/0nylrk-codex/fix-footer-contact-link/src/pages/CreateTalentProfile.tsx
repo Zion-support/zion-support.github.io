@@ -5,14 +5,12 @@ import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationFor
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
 
-
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
 
 import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
-
 export default function CreateTalentProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -45,12 +43,10 @@ export default function CreateTalentProfile() {;
             Showcase your skills to top clients and employers. Create a professional profile;
             to get discovered for AI and tech projects on the Zion Marketplace.;
           </p>;
-        </div>;
-    </div>);
+        </div>;    </div>);
 }
 
 ;
-
 
         ;
         <TalentRegistrationForm />;

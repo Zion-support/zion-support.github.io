@@ -2,8 +2,7 @@ import React from "react",
 import ReactMarkdown from "react-markdown";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown",
-import { cn } from "@/lib/utils",
-interface MarkdownProps {
+import { cn } from "@/lib/utils",interface MarkdownProps {
   content: string;
   className?: string;
 }
@@ -18,8 +17,7 @@ import ReactMarkdown from "react-markdown",;
 import { cn } from "@/lib/utils",;
 interface MarkdownProps {;
   content: string,;
-  className?: string;
-}
+  className?: string;}
 
 export function Markdown(): any ({ content, className }: MarkdownProps) {;
   return (
@@ -28,7 +26,6 @@ export function Markdown(): any ({ content, className }: MarkdownProps) {;
     </div>;
   );
 }
-
 import React from './react';
 import ReactMarkdown from './react - markdown';
 import { cn  } from '@/lib / utils';
@@ -45,7 +42,6 @@ function Markdown() {
       <ReactMarkdown>{content}</ReactMarkdown>;
     </div>);
 }
-
   )
   )
 
@@ -53,7 +49,6 @@ function Markdown() {
 
 ;
 ;
-
 
 import React from "react",;
 import ReactMarkdown from "react-markdown",;
@@ -84,6 +79,5 @@ export function Markdown({ content, className }: MarkdownProps) {;
     </div>;
   );
 }
-;
 ;
 ;

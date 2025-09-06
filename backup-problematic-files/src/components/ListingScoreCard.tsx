@@ -6,7 +6,7 @@ import Image from 'next/image', // Import next/image;
 import React, { useState } from 'react', // Import useState;
 ;
 interface ListingScoreCardProps {;
-  title:string,;
+  title:string,,
   description:string,;
   image?:string,;
   category:string,;
@@ -140,8 +140,8 @@ import {;
   Image from 'next/image',  //Import next/image import React, {;
   useState ';
 }from 'react', //Import useState interface ListingScoreCardProps {;
-  title: string;
-description: string;
+  title: string,
+  description: string;
 image?: string;
 category: string;
 tags?: string[];

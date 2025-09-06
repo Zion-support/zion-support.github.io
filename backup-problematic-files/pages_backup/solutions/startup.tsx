@@ -14,6 +14,6 @@ const Startup: React.FC<StartupProps> = ({ className }) => {
       <h1>Startup</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

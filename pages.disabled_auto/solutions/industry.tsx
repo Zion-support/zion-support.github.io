@@ -2,12 +2,3 @@ import type { NextPage } from \'next\'; import MainLayout from \'../../component
 import React from 'react';
 interface IndustryProps {
   // Add props here as needed
-export default function Industry({ }: IndustryProps) {
-  return (
-    <div>;
-      <h1>Industry</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  );
-
-

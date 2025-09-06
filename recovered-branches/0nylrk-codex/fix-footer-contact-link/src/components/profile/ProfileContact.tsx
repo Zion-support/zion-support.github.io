@@ -1,3 +1,9 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Send } from "lucide-react";
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
 interface ProfileContactProps {
   email?: string;
   profileName: string;
@@ -8,8 +14,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   const [message, setMessage] = useState(""),
   const [subject, setSubject] = useState(""),
   const [isSending, setIsSending] = useState(false),
-  
-  const handleSendMessage = (e: React.FormEvent) => {
+    const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSending(true);
 
@@ -24,7 +29,6 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
     }, 1000)
   },
 
-
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -32,7 +36,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         Contact
       </h3>
       {email && (
-        <div className="mb - 4 text - zion - slate - light">;
+        <div className="mb - 4 text - zion - slate-light">;
           <span className="block">Email: </span>;
           <a;
             href={`mailto:${email}`}
@@ -73,12 +77,11 @@ function ProfileContact() {
   }
 ;
   return (
-    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8">;
-      <h3 className="text - xl font - bold text - white mb - 4 flex items - center">;
-        <Mail className="mr - 2 h - 5 w - 5 text - zion - cyan" />;
+    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb-8">;
+      <h3 className="text - xl font - bold text - white mb - 4 flex items-center">;
+        <Mail className="mr - 2 h - 5 w - 5 text - zion-cyan" />;
         Contact;
-      </h3>;
-      {email && (
+      </h3>;      {email && (
         <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
           <a
@@ -100,21 +103,20 @@ function ProfileContact() {
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled={isSending}>;
             <Send className="mr-2 h-4 w-4" />;
-            {isSending ? "Sending..." : "Send Message"}
-            <Textarea;
+            {isSending ? "Sending..." : "Send Message"}            <Textarea;
               placeholder={`Message to ${profile_name}...`}
               value={message}
               on_change={(e) => set_message (e.target.value)}
-              className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
+              className="bg - zion - blue border - zion - blue - light text - white min-h-[120px]";
               required;
             />;
           </div>;
           <Button;
             type="submit";
-            className="w - full bg - zion - cyan hover:bg - zion - cyan / 90";
+            className="w - full bg - zion - cyan hover:bg - zion-cyan / 90";
             disabled={is_sending}
           >;
-            <Send className="mr - 2 h - 4 w - 4" />;
+            <Send className="mr - 2 h - 4 w-4" />;
             {is_sending ? "Sending..." : "Send Message"}
           </Button>;
         </div>;
@@ -138,7 +140,7 @@ profileType: 'service' | 'talent'
 setIsSending (true);
 //Here would be the actual API call to send the message setTimeout ( () => {
   
-}, 1000);
+}, 1000)
 };
   `mailto:$ {
   email 
@@ -148,3 +150,4 @@ setIsSending (true);
   );
 }
 ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

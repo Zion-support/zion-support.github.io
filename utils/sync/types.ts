@@ -14,34 +14,7 @@ export interface InstanceConfig {instanceId: string;
   paused: boolean;
   scope: SyncScope;
   peers: Peer[];
-  secretConfigured: boolean;
-
-export type SyncScope = "full" | "dao" | "marketplace",
-export interface Peer {
-  id: string,
-  base_url: string, // e.g., https: //zion - latam.example.org;
-  scope?: SyncScope,
-  paused?: boolean;
-}
-export interface InstanceConfig {
-  instance_id: string,
-  opt_in: boolean,
-  paused: boolean,
-  scope: SyncScope,
-  peers: Peer[],
-  secret_configured: boolean;
-
-
-
-}
-}
-;
-export type SyncEventType =;
-  | "proposal";
-  | "token_transfer";
-  | "talent_mobility";
-  | "dao_endorsement";
-  } catch (error) {
+  secretConfigured: boolean;}  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -70,7 +43,6 @@ export interface ProposalPayload extends BaseEventPayload {;
 export interface TokenTransferPayload extends BaseEventPayload {;
   txId: string;
 
-
   token: string;
   amount: number;
   fromSubnet: string;
@@ -98,6 +70,7 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
@@ -111,38 +84,10 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-}
+;}
 ;
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
   | TalentMobilityPayload;
   | DaoEndorsementPayload;
-  originInstanceId: string;
-  version: number;
-  timestamp: number;
-  merkleRoot?: string, // required for proposal events;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export interface MultiverseState {;
-  config: InstanceConfig,;
-  lastSyncedAt: number;
-  seenEventIds: Record<string, true>,;
-  latestVersionByEntityId: Record<string, number>,;
-  proposalMerkleById: Record<string, string>;
-  events: SyncEvent[];
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }

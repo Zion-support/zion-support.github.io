@@ -47,4 +47,3 @@ export default function Computervision(): any ({ }: ComputervisionProps) {;
     </div>;
   );
 
-

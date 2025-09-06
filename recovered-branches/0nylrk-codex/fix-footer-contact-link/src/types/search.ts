@@ -9,16 +9,7 @@ export interface SearchHighlight {;
   match: string,;
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',
   icon_url?: string;
-}
-export interface SearchHighlight {
-  before: string;
-  match: string;
-  after: string;
-}
-export interface FilterOptions {
-  productTypes: {
-
-  }[];
+}  }[];
   locations: {
     label: string;
     value: string;
@@ -29,12 +20,10 @@ export interface FilterOptions {
   }[];
   ratingOptions: number[];
 }
-
 export interface SearchSuggestion {;
 
 }
 ;
-}
 ;
 export interface SearchSuggestion {
   text: string;

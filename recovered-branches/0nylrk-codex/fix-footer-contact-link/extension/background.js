@@ -1,24 +1,5 @@
 
-
-const BASE_URL = 'https: //zionai.com'
-async function askZionGPT(prompt) {
-  if (!OPENAI_API_KEY) return { answer: 'Model key missing' }
-
-  try {
-const OPENAI_API_KEY = '',
-// Base URL for opening Zion pages in a new tab;
-const BASE_URL = 'https: //zionai.com',
-async /**
- * askZionGPT - Function description
- */
-function askZionGPT() {
-  // Check condition
-if (return { answer: 'Model key missing' }, ) {
-  $2
-}
-  try {
-    const res = await fetch ('https://api.openai.com / v1 / chat / completions', {
-
+const BASE_URL = 'https: //zionai && zionai.com',
       method: 'POST',
       headers: {
         'Content - Type': 'application / json_authorization': `Bearer ${OPENAI_API_KEY}`;
@@ -80,10 +61,4 @@ if ( {) {
   $2
 }
     chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
-  }
-}),
-;
-}),;
-}),
-;
-}),;
+  }>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

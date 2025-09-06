@@ -20,8 +20,7 @@ import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrati
 import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",
 import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
-import { PartnerResources } from "@/components/partners/PartnerResources",
-import { useAuth } from "@/hooks/useAuth";
+import { PartnerResources } from "@/components/partners/PartnerResources",import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 export default function Partners() {
   const [activeTab, setActiveTab] = useState("overview");
@@ -31,7 +30,6 @@ export default function Partners() {
 
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
-
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (
@@ -333,8 +331,7 @@ export default function Partners() {;
           >;
             Apply to Join;
           </Button>;
-            onClick={() => navigate('/login')}
-          >
+            onClick={() => navigate('/login')}          >
             Partner Login
           </Button>
         </div>
@@ -354,7 +351,6 @@ export default function Partners() {;
       </div>;
     );
   }
-
     );
   }
 
@@ -429,15 +425,13 @@ export default function Partners() {;
         </TabsContent>
       </Tabs>
     </div>
-  )
-            Export CSV;
+  )            Export CSV;
           </Button>;
         </div>;
       </div>;
 
-      <Tabs value={active_tab} onValueChange={setActiveTab} className="space - y-4">;
-        <TabsList className="grid grid - cols - 2 md:grid - cols - 5 mb - 4">;
-
+      <Tabs value={active_tab} onValueChange={setActiveTab} className="space-y-4">;
+        <TabsList className="grid grid - cols - 2 md:grid - cols - 5 mb-4">;
           <TabsTrigger value="overview">Overview</TabsTrigger>;
           <TabsTrigger value="referrals">Referral Links</TabsTrigger>;
           <TabsTrigger value="earnings">Earnings</TabsTrigger>;
@@ -445,13 +439,13 @@ export default function Partners() {;
           <TabsTrigger value="resources">Resources</TabsTrigger>;
         </TabsList>;
 
-        <TabsContent value="overview" className="space - y-4">;
+        <TabsContent value="overview" className="space-y-4">;
           <PartnerDashboard />;
         </TabsContent>;
-        <TabsContent value="referrals" className="space - y-4">;
+        <TabsContent value="referrals" className="space-y-4">;
           <PartnerReferralLinks />;
         </TabsContent>;
-        <TabsContent value="earnings" className="space - y-4">;
+        <TabsContent value="earnings" className="space-y-4">;
           <Card>;
             <CardHeader>;
               <CardTitle > Earnings & Payouts</CardTitle>;
@@ -459,20 +453,19 @@ export default function Partners() {;
             </CardHeader>;
             <CardContent>;
               {/* This will be implemented later */}
-              <p className="text - zion - slate - light">Earnings tracking and payout requests will be available soon.</p>;
+              <p className="text - zion - slate-light">Earnings tracking and payout requests will be available soon.</p>;
             </CardContent>;
           </Card>;
         </TabsContent>;
-        <TabsContent value="leaderboard" className="space - y-4">;
+        <TabsContent value="leaderboard" className="space-y-4">;
           <PartnerLeaderboard />;
         </TabsContent>;
-        <TabsContent value="resources" className="space - y-4">;
+        <TabsContent value="resources" className="space-y-4">;
           <PartnerResources />;
         </TabsContent>;
       </Tabs>;
     </div>);
 }
-
 }
 ;
 

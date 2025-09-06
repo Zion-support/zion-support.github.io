@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +21,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import {;
@@ -55,6 +58,7 @@ import {;
 import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data/marketplaceData';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
+<<<<<<< HEAD
 interface SearchResult {;
 import React, { useState, useEffect, useMemo } from 'react';
 import { use_router } from 'next / router';
@@ -89,6 +93,41 @@ import { Separator } from '@/components / ui / separator';
 import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data / marketplace_data';
 import { logErrorToProduction, log_info } from '@/utils / production_logger';
+=======
+import React, { useState, useEffect, useMemo } from 'react'
+import { useRouter } from 'next/router'
+import {
+  Search
+  Filter
+  X
+  SortAsc
+  SortDesc
+  GridIcon
+  List
+  Loader2
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Badge } from '@/components/ui/badge'
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from '@/components/ui/select'
+import { Checkbox } from '@/components/ui/checkbox'
+import { Slider } from '@/components/ui/slider'
+import { Separator } from '@/components/ui/separator'
+  Sheet
+  SheetContent
+  SheetHeader
+  SheetTitle
+  SheetTrigger
+} from '@/components/ui/sheet'
+import { EnhancedSearchInput } from './EnhancedSearchInput'
+import { generateSearchSuggestions } from '@/data/marketplaceData'
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface SearchResult {
   id: string;
   title: string;
@@ -121,8 +160,10 @@ interface SearchResponse {;
   page: number;
   limit: number;
   query: string;
+<<<<<<< HEAD
 
   hasMore: boolean;
+<<<<<<< HEAD
 
 // Highlight search terms in text;
 const HighlightText: React.FC<{;
@@ -130,6 +171,17 @@ const HighlightText: React.FC<{;
   searchTerm: string;
   className?: string;
 }> = ({ text, searchTerm, className = '' }) => {  if (!searchTerm && searchTerm.trim()) {;
+=======
+}
+;
+// Highlight search terms in text;
+const HighlightText: React.FC<{ text: string, searchTerm: string, className?: string }> = ({;
+  text,;
+  searchTerm,;
+  className = '';
+}) => {;
+  if (!searchTerm.trim()) {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return <span className={className}>{text}</span>;
   }
 
@@ -456,6 +508,7 @@ const FilterSidebar: React.FC<{
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 };
 
 // Filter Sidebar Component;
@@ -476,6 +529,37 @@ const FilterSidebar: React.FC<{;
 
     onFiltersChange({ ...filters, types: newTypes });
   };
+=======
+},;
+// Filter Sidebar Component;
+const FilterSidebar: React.FC<{;
+  filters: SearchFilters,;
+  onFiltersChange: (filters: SearchFilters) => void,;
+  availableCategories: string[];
+}> = ({ filters, onFiltersChange, availableCategories }) => {;
+  const typeOptions = [;
+    { id: 'product', label: 'Products' },;
+    { id: 'talent', label: 'Talent' },;
+    { id: 'service', label: 'Services' },;
+    { id: 'blog', label: 'Blog Posts' }
+  ],
+
+  const handleTypeChange = (typeId: string, checked: boolean) => {
+    const newTypes = checked 
+      ? [...filters.types, typeId]
+      : filters.types.filter(t => t !== typeId),
+    
+    onFiltersChange({ ...filters, types: newTypes })
+  },
+
+  const handlePriceChange = (values: number[]) => {
+    onFiltersChange({ 
+      ...filters, 
+      minPrice: values[0] ?? 0, 
+      maxPrice: values[1] ?? 10000 
+    })
+  },
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -1042,10 +1126,16 @@ if ( {) {
     (filters.minRating > 0 ? 1 : 0)
           </div>;
         </div>;
+<<<<<<< HEAD
 
         <div className='text-sm text-muted-foreground'>;
           <p>Tips for better results:</p>;
           <ul className='mt-2 space-y-1'>;
+=======
+        <div className="text-sm text-muted-foreground">;
+          <p>Tips for better results: </p>;
+          <ul className="mt-2 space-y-1">;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <li>• Try different keywords</li>;
             <li>• Check your spelling</li>;
             <li>• Use fewer filters</li>;
@@ -1055,6 +1145,7 @@ if ( {) {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 };
 
 // Main Search Results Page Component;
@@ -1069,12 +1160,27 @@ export const AdvancedSearchResults: React.FC = () => {;
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [showFilters, setShowFilters] = useState(false);
 
+=======
+},;
+// Main Search Results Page Component;
+export const AdvancedSearchResults: React.FC = () => {;
+  const router = useRouter(),;
+  const [searchTerm, setSearchTerm] = useState(''),;
+  const [results, setResults] = useState<SearchResult[]>([]),;
+  const [loading, setLoading] = useState(false),;
+  const [totalCount, setTotalCount] = useState(0),;
+  const [currentPage, setCurrentPage] = useState(1),;
+  const [hasMore, setHasMore] = useState(false),;
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
+  const [showFilters, setShowFilters] = useState(false),;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [filters, setFilters] = useState<SearchFilters>({;
     types: [],;
     category: '',;
     minPrice: 0,;
     maxPrice: 10000,;
     minRating: 0,;
+<<<<<<< HEAD
     sort: 'relevance',;
   });
 
@@ -1156,10 +1262,85 @@ export const AdvancedSearchResults: React.FC = () => {;
     } catch (error) {;
       logErrorToProduction('Search failed', { data: error });
       setResults([]);
+=======
+    sort: 'relevance';
+  }),;
+  const suggestions = generateSearchSuggestions(),;
+  // Extract available categories from results for filter;
+  const availableCategories = useMemo(() => {;
+    const categories = new Set<string>(),;
+    results.forEach(result => {;
+      if (result.category) categories.add(result.category);
+    }),;
+    return Array.from(categories).sort();
+  }, [results]),;
+  // Sync search term with URL;
+  useEffect(() => {;
+    if (router.isReady && router.query.q) {;
+      const urlTerm = router.query.q as string,;
+      setSearchTerm(urlTerm);
+    }
+  }, [router.isReady, router.query.q]),;
+  // Search function;
+  const performSearch = async (term: string, page: number = 1, newFilters?: SearchFilters) => {;
+    if (!term.trim()) {;
+      setResults([]),;
+      setTotalCount(0),;
+      return;
+    }
+;
+    setLoading(true),;
+    try {;
+      const searchFilters = newFilters || filters,;
+      const params = new URLSearchParams({;
+        query: term,;
+        page: page.toString(),;
+        limit: '20';
+      }),;
+      if (searchFilters.types.length > 0) {;
+        params.append('type', searchFilters.types.join());
+      }
+      if (searchFilters.category) {;
+        params.append('category', searchFilters.category);
+      }
+      if (searchFilters.minPrice > 0) {;
+        params.append('minPrice', searchFilters.minPrice.toString());
+      }
+      if (searchFilters.maxPrice < 10000) {;
+        params.append('maxPrice', searchFilters.maxPrice.toString());
+      }
+      if (searchFilters.minRating > 0) {;
+        params.append('minRating', searchFilters.minRating.toString());
+      }
+      if (searchFilters.sort !== 'relevance') {;
+        params.append('sort', searchFilters.sort);
+      }
+;
+      const response = await fetch(`/api/search?${params}`),;
+      const data: SearchResponse = await response.json(),;
+      if (page === 1) {;
+        setResults(data.results);
+      } else {;
+        setResults(prev => [...prev, ...data.results]);
+      }
+;
+      setTotalCount(data.totalCount),;
+      setCurrentPage(data.page),;
+      setHasMore(data.hasMore),;
+      logInfo('Search completed', {;
+        term,;
+        resultCount: data.results.length,;
+        totalCount: data.totalCount;
+      });
+    } catch (error) {;
+      logErrorToProduction('Search failed', { data: error }),;
+      setResults([]),;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setTotalCount(0);
     } finally {;
       setLoading(false);
     }
+<<<<<<< HEAD
   };
 
   // Search when term or filters change;
@@ -1182,11 +1363,31 @@ export const AdvancedSearchResults: React.FC = () => {;
   const handleFiltersChange = (newFilters: SearchFilters) => {;
     setFilters(newFilters);
   };
+=======
+  },;
+  // Search when term or filters change;
+  useEffect(() => {;
+    if (searchTerm.trim()) {;
+      performSearch(searchTerm, 1, filters),;
+      setCurrentPage(1);
+    }
+  }, [searchTerm, filters]),;
+  // Handle search input;
+  const handleSearch = (term: string) => {;
+    setSearchTerm(term),;
+    router.push(`/search?q=${encodeURIComponent(term)}`, undefined, { shallow: true });
+  },;
+  // Handle filter changes;
+  const handleFiltersChange = (newFilters: SearchFilters) => {;
+    setFilters(newFilters);
+  },;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Load more results;
   const loadMore = () => {;
     if (hasMore && !loading) {;
       performSearch(searchTerm, currentPage + 1);
     }
+<<<<<<< HEAD
   };
 
   // Active filters count;
@@ -1195,6 +1396,9 @@ export const AdvancedSearchResults: React.FC = () => {;
     (filters && filters.category ? 1 : 0) +;
     (filters && filters.minPrice > 0 || filters && filters.maxPrice < 10000 ? 1 : 0) +;
     (filters && filters.minRating > 0 ? 1 : 0);
+=======
+  },
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   // Active filters count
   const activeFiltersCount = filters.types.length + 
@@ -1207,11 +1411,19 @@ export const AdvancedSearchResults: React.FC = () => {;
 
 
   return (
+<<<<<<< HEAD
     <div className='container mx-auto px-4 py-6'>;
       {/* Search Header */}
       <div className='mb-6'>;
         <div className='flex gap-4 mb-4'>;
           <div className='flex-1'>;
+=======
+    <div className="container mx-auto px-4 py-6">
+      {/* Search Header */}
+      <div className="mb-6">
+        <div className="flex gap-4 mb-4">
+          <div className="flex-1">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <EnhancedSearchInput
               value={searchTerm}
               onChange={setSearchTerm}
@@ -1429,11 +1641,19 @@ export const AdvancedSearchResults: React.FC = () => {;
         <div className='flex gap-6'>;
 
           {/* Desktop Filters Sidebar */}
+<<<<<<< HEAD
           <div className='hidden lg:block w-64 flex-shrink-0'>;
             <div className='bg-card border rounded-lg p-4 sticky top-4'>;
               <div className='flex items-center justify-between mb-4'>;
                 <h2 className='font-semibold'>Filters</h2>;
                 {activeFiltersCount > 0 && (;
+=======
+          <div className="hidden lg:block w-64 flex-shrink-0">
+            <div className="bg-card border rounded-lg p-4 sticky top-4">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="font-semibold">Filters</h2>
+                {activeFiltersCount > 0 && (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <Button
 
                     onClick={() =>;
@@ -1487,6 +1707,7 @@ export const AdvancedSearchResults: React.FC = () => {;
 
 
                 {/* Load More Button */}
+<<<<<<< HEAD
                 {hasMore && (;
                   <div className='text-center'>;
                     <Button
@@ -1764,3 +1985,10 @@ export default AdvancedSearchResults;
 '";
 export default AdvancedSearchResults,
 export default AdvancedSearchResults,
+=======
+                {hasMore && (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  hasMore: boolean
+// Highlight search terms in text
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

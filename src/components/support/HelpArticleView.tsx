@@ -1,12 +1,27 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { ThumbsUp, ThumbsDown } from 'lucide-react';
+import { toast } from '@/components/ui/use-toast';
+import { HELP_CATEGORIES } from './help-content';
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { ThumbsUp, ThumbsDown } from 'lucide-react'
+import { toast } from "@/components/ui/use-toast",
+import { HELP_CATEGORIES } from "./help-content";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface HelpArticleViewProps {
   articleId: string
 }
 
-
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
 
-
   // Find the article in all categories
+<<<<<<< HEAD
   let article = null;
   for (const category of HELP_CATEGORIES) {
 
@@ -23,10 +38,8 @@ interface HelpArticleViewProps {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
 
-
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-
 
     year: "numeric",;
     month: "long",;
@@ -79,8 +92,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
     day: "numeric", });
 }
 
-
-
 import React, { useState } from './react';
 import { Button  } from '@/components / ui / button';
 import { Card  } from '@/components / ui / card';
@@ -97,27 +108,14 @@ function HelpArticleView() {
   // Find the article in all categories;
   let article;
   for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find (array => a.id === article_id);
-    // Check condition
-if ( {) {
-  $2
-}
-      article = found;
-      break;
-    }
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return <div > Article not found</div>;
-  }
-  const handle_feedback = (type: "helpful" | "not - helpful") =>: any {
-    setFeedbackGiven (type);
-  return new Date (date).toLocaleDateString ("en - US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric", });
+
 }
 
 ;
+=======
+    const found = null;
+    day: "numeric"
+  })
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

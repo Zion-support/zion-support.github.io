@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
       // Check condition
 if ( {) {
@@ -15,12 +16,57 @@ if ( {) {
   const handleEdit = (work: WorkExperience) => {;
 
 
+=======
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { Button  } from '@/components/ui/button';
+import { Textarea  } from '@/components/ui/textarea';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { format } from 'date-fns';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { WorkExperience  } from '@/types/resume';
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
+import { Input } from '@/components/ui/input'
+import { Checkbox } from '@/components/ui/checkbox'
+import { format } from 'date-fns'
+import {
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+} from '@/components/ui/form'; import { WorkExperience } from '@/types/resume'
+import { Loader2, Edit, Trash2 } from 'lucide-react'
+import { useResume  } from '@/hooks/useResume';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { Card, CardContent  } from '@/components/ui/card';
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+// Define schema for form validation
+  };
+
+  const handleEdit = (work: WorkExperience) => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!)
     form.reset({
-      start_date: formatDateValue(work.start_date)
+...work,
+      start_date: formatDateValue(work.start_date),
       end_date:
         work.end_date && !work.is_current
           ? formatDateValue(work.end_date)
@@ -302,8 +348,13 @@ export function WorkExperienceForm(): any ({;
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
+<<<<<<< HEAD
                   </div>;
                   <div className='flex gap-2'>;
+=======
+                  </div>
+                  <div className="flex gap-2">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Button
                     setEditingId(null),
                     setEditingId(null),
@@ -328,6 +379,7 @@ export function WorkExperienceForm(): any ({;
               <Button
                 type='button'
                 variant='outline'
+<<<<<<< HEAD
                 onClick={() => {;
                   if (editingId) {;
                     setEditingId(null);
@@ -341,6 +393,21 @@ export function WorkExperienceForm(): any ({;
                     });
                   } else {;
                     onBack();
+=======
+                onClick={() => {
+                  if (editingId) {
+                    setEditingId(null)
+                    form.reset({
+                      company_name: ''
+                      role_title: ''
+                      start_date: format(new Date(), 'yyyy-MM-dd')
+                      is_current: false
+                      description: ''
+                      location: ''
+                    })
+                  } else {
+                    onBack()
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   }
                 }}
               >
@@ -361,6 +428,7 @@ export function WorkExperienceForm(): any ({;
                     Next
                   </Button>
                 )}
+<<<<<<< HEAD
 
               </Button>;
 
@@ -445,3 +513,18 @@ if ( {) {
 }'"  );
 }
 ;
+=======
+              </div>
+            </div>
+          </form>
+        </Form>
+      </div>
+    </div>
+  );
+
+}> {';
+  editingId ? 'Cancel': 'Back' ;
+}</Button> Next </Button>) ;
+}</div> </div> </form> </Form> </div> </div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

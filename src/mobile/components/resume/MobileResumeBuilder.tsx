@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {;
   Select;
   SelectContent;
@@ -132,6 +133,7 @@ function BasicsStep() {
           Skills;
         </Button>;
       </div>;
+<<<<<<< HEAD
 
       {renderStepContent()}
 
@@ -139,20 +141,37 @@ function BasicsStep() {
         <Zap className="h-5 w-5" /> Enhance with AI;
       </Button>;
 
+=======
+      {renderStepContent()}
+;
+      <Button className="w-full flex gap-2" size="lg">;
+        <Zap className="h-5 w-5" /> Enhance with AI;
+      </Button>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Button variant="default" className="w-full" size="lg">;
         Save & Preview;
       </Button>;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 function BasicsStep() {;
   return (
+=======
+;
+function BasicsStep() {;
+  return (;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <Card>;
       <CardContent className="p-4 space-y-4">;
         <div className="space-y-2">;
           <Label htmlFor="title">Resume Title</Label>;
+<<<<<<< HEAD
           <Input id="title" name="title" placeholder="e && e.g. Senior Frontend Developer" />;
+=======
+          <Input id="title" name="title" placeholder="e.g. Senior Frontend Developer" />;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="fullName">Full Name</Label>;
@@ -160,7 +179,11 @@ function BasicsStep() {;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="email">Email Address</Label>;
+<<<<<<< HEAD
           <Input id="email" name="email" type="email" placeholder="you@example && example.com" autoComplete="email" />;
+=======
+          <Input id="email" name="email" type="email" placeholder="you@example.com" autoComplete="email" />;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="phone">Phone Number</Label>;
@@ -377,3 +400,19 @@ function ExperienceStep() {;
 
 
 ;
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  );
+
+};";
+  () => removeSkill (skill.id) ";
+}aria-label="Remove skill" > <Trash2 className="h-4 w-4 text-destructive" /> </Button>) ;
+}</div>) ) ";
+}<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className="p-4" > <div className="space-y-2" > <Label>Skill Categories</Label> <div className="grid grid-cols-2 gap-2" > <Button variant="outline" className="justify-start" >Development</Button> <Button variant="outline" className="justify-start" >Design</Button> <Button variant="outline" className="justify-start" >Marketing</Button> <Button variant="outline" className="justify-start" >Business</Button> <Button variant="outline" className="justify-start" >Data Analysis</Button> <Button variant="outline" className="justify-start" >Languages</Button> </div> </div> </CardContent> </Card> </div>) ;
+}"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -8,7 +8,6 @@ import {
   FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-
 import { TalentProfile } from "@/types/talent";
 import { FormValues } from "./useHireRequestForm";
 interface BudgetFieldsProps {
@@ -16,6 +15,7 @@ interface BudgetFieldsProps {
   talent?: TalentProfile;
 }
 
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   return (
     <>;
       <FormField
@@ -69,10 +69,6 @@ interface BudgetFieldsProps {
 }
 ;
 
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile;
-}
-
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
@@ -108,3 +104,4 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   )
 }
 ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

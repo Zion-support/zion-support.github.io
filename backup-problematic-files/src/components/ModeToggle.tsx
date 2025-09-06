@@ -45,8 +45,8 @@ export function ModeToggle() {;
       const messages = newTheme === 'dark' ? darkModeMessages :lightModeMessages;
       const title = messages[Math.floor(Math.random() * messages.length)];
       toast({;
-        title,;
-        description:`Theme changed to ${newTheme} mode successfully`}),;
+        title,,
+  description:`Theme changed to ${newTheme} mode successfully`}),;
 ;
       // Accessibility announcement for screen readers;
       const announcement = `Theme switched to ${newTheme} mode`,;
@@ -68,8 +68,8 @@ export function ModeToggle() {;
       logErrorToProduction('Theme toggle error:', { data:error }),;
       logIssue('Theme switch failed', { error, currentTheme:theme, resolvedTheme }),;
       toast({;
-        title:"Theme switch failed",;
-        description:"Unable to change theme. Please try again.",;
+        title:"Theme switch failed",,
+  description:"Unable to change theme. Please try again.",;
         variant:"destructive"}),;
     }
   },;

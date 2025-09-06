@@ -6,6 +6,6 @@ const SEOOptimizer.js = ({ className }) => {
       <h1>SEOOptimizer.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

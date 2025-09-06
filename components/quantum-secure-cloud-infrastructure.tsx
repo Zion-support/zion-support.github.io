@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -15,15 +16,12 @@ export default function QuantumSecureCloudInfrastructure() {
 				"Zero Trust + PQC reference designs";
 				"Threat modeling and validation";
 
-
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
 			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"
 		/>
 	)
-
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -82,3 +80,6 @@ return (<ServiceLanding;
     url="https: //ziontechgroup.com / quantum - secure - cloud - infrastructure";
   />);
 }
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

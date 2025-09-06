@@ -27,16 +27,12 @@ const Button = forward_ref < HTMLButtonElement ButtonProps>(({
   }
 ;
 
-
   return (;
-  return (
-  return (
-  return (;
+  return (  return (;
     <button;
       ref={ref}
       type={type}
-      className={classes}
-    <Button;
+      className={classes}    <Button;
       {...props}
       icon={icon}
       on_click={on_click}

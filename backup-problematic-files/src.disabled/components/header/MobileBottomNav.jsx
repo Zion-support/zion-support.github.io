@@ -24,6 +24,6 @@ const MobileBottomNav = ({ className }) => {
       <h1>MobileBottomNav</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

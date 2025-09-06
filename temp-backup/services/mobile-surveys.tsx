@@ -12,4 +12,3 @@ export default function Mobilesurveys(): any ({ }: MobilesurveysProps) {;
     </div>;
   );
 
-

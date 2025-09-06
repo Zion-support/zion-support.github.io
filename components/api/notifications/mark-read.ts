@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
   if (match) return decodeURIComponent(match.split('=')[1]);
   if (req && req.method !== 'POST')
@@ -8,6 +9,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (match) return decodeURIComponent(match && match.split('=')[1]);
   return 'demo-user-1'
 }
+=======
+import { supabase } from '../../../utils/supabase/client';
+function getUserId(req: NextApiRequest): string {
+    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     const userId = getUserId(req);
     const { error } = await supabase
@@ -15,12 +21,20 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       .update({ read_status: true })
       .eq('id', id)
       .eq('user_id', userId);
+<<<<<<< HEAD
     if (error) return res && res.status(200).json({ ok: true }); // tolerate in dev
 
     return res && res.status(200).json({ ok: true });
+=======
+
+if (error) return res.status(200).json({ ok: true }); // tolerate in dev
+
+    return res.status(200).json({ ok: true });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     return res && res.status(500).json({ error: 'Unexpected error' });
   }
+<<<<<<< HEAD
     return res && res.status(200).json({ ok: true })
   } catch (e) {
 }
@@ -82,3 +96,5 @@ function handler() {
   } catch (e) {
     return res.status (500).json ({ error: 'Unexpected error' });
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -6,6 +6,6 @@ const FeaturedListingsSection.js = ({ className }) => {
       <h1>FeaturedListingsSection.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

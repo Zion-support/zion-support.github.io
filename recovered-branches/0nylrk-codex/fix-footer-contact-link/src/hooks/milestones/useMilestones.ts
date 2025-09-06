@@ -1,26 +1,12 @@
+
+
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
 import {useUpdateMilestone} from './useUpdateMilestone';
 import {useDeleteMilestone} from './useDeleteMilestone';
 import {useUploadDeliverable} from './useUploadDeliverable';
-import {MilestoneStatus} from './types';
-  return {
-    milestones;
-    activities;
-    is_loading;
-    error;
-    is_submitting;
-    create_milestone;
-    updateMilestoneStatus;
-
-    update_milestone;
-    delete_milestone;
-    upload_deliverable: handleUploadDeliverable,
-    refetch;
-
-
-import { useState } from 'react',;
+import {MilestoneStatus} from './types';import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
 import { useUpdateMilestone } from './useUpdateMilestone',;
@@ -54,7 +40,6 @@ export const useMilestones = (projectId?: string) => {;
     refetch;
   }
 };
-
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
@@ -93,8 +78,6 @@ export const useMilestones = (projectId?:string) => {;
     refetch;
   },;
 },; 
-  }
-};
   }
 };
   }

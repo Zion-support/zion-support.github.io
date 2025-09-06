@@ -10,7 +10,7 @@ const Ai-customer-churn-predictor: React.FC<Ai-customer-churn-predictorProps> = 
       <h1>Ai-customer-churn-predictor</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 
 export default Ai-customer-churn-predictor;

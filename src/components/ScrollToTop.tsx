@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import { ChevronUp } from 'lucide-react';
 
 const ScrollToTop: React.FC = () => {
-  const { pathname } = useLocation();
   const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
 
   useEffect(() => {
     const toggleVisibility = () => {

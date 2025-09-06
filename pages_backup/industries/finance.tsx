@@ -4,8 +4,7 @@ import Layout from '../../components/Layout';
 import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';;
 import React from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
+import { motion } from 'framer-motion';import Layout from '../../components/Layout';
 const services = [
   {
     title: 'Blockchain Solutions',
@@ -15,34 +14,42 @@ const services = [
       'Smart contract development,',
       'Cryptocurrency integration',',
       'Decentralized finance (DeFi)',',
-    title: 'Blockchain Solutions,',;
-    description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',;
+    title: 'Blockchain Solutions,',,
+  description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',;
 import Layout from '../../components/Layout';
 const services = [;
   {;
-    title: 'Blockchain Solutions',;
-    description: 'Secure, transparent, and efficient blockchain implementations for financial services.',;
+    title: 'Blockchain Solutions',,
+  description: 'Secure, transparent, and efficient blockchain implementations for financial services.',;
     icon: Shield,;
     features: [,;
       'Smart contract development,',;
       'Cryptocurrency integration',',;
-      'Decentralized finance (DeFi)',',;
-      'Digital identity management'';
+      'Decentralized finance (DeFi)',',;      'Portfolio optimization'';
     ];
   },
   {}
-      'Portfolio optimization'';
-    ];
-  },
-  {}
+    title: 'Digital Payment Systems,',
+    description: 'Secure, scalable payment processing solutions for modern financial transactions.',',
+    icon: CreditCard,
+    features: [;
+      'Payment gateway integration,',
+      'Mobile payment solutions',',
+      'Cross-border payments',',
       'Fraud detection systems'';
     ];
   },
   {}
-      'Regulatory compliance monitoring'';
     ];
   },
   {}
+    title: 'Fraud Detection Systems,',
+    description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,',
+    icon: Lock,
+    features: [;
+      'Real-time transaction monitoring,',
+      'Behavioral analysis',',
+      'Pattern recognition',',
       'Automated alert systems'';
     ];
   },
@@ -50,10 +57,9 @@ const services = [;
 ;];
 const benefits = [;
   {}
-    title: 'Enhanced Security,',;
-    description: 'Bank-grade security measures protect sensitive financial data and transactions.,',;
-    icon: Shield;
-  {}
+    title: 'Enhanced Security,',,
+  description: 'Bank-grade security measures protect sensitive financial data and transactions.,',;
+    icon: Shield;  {}
     title: 'Improved Efficiency,',
     description: 'Automated processes reduce manual work and increase operational efficiency.,',
     icon: BarChart3;
@@ -104,33 +110,7 @@ export default function FinancePage() {;
               </div>;
             </motion && motion.div>;
           </div>;
-        </section>;
-];
-export default function FinancePage() {
-  return (
-    <Layout
-      title="Financial Technology Solutions - Zion Tech Group"
-      description="Transform financial services with blockchain solutions, AI trading algorithms, digital payments, and risk management systems."
-      keywords="fintech, blockchain solutions, AI trading, digital payments, risk management, financial technology"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Comprehensive fintech solutions designed for banks, financial institutions, ;
-                and fintech startups.;
-              </p>;
-              className="text-center mb-16"
+        </section>;              className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Financial Technology Services
@@ -183,30 +163,7 @@ export default function FinancePage() {
                   <ul className="space-y-3">";
                     {service && service.features.map((feature, featureIndex) => (,;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  <ul className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100";
-                >;
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">;
-                    <service && service.icon className="w-6 h-6 text-white" />;
-                  </div>;
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service && service.title}</h3>;
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service && service.description}</p>;
-                  <ul className="space-y-3">;
-                    {service && service.features.map((feature, featureIndex) => (;
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">;
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />;
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";                        {feature}
                       </li>,
                     ))}
                   </ul>,
@@ -226,19 +183,7 @@ export default function FinancePage() {
         </section>;
             </div>;
           </div>;
-        </section>;
-        {/* Benefits Section */}
-        <section className="py-20 bg-gray-50">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Our financial technology solutions deliver enhanced security, improved efficiency, ;
-                and regulatory compliance for financial institutions.;
-              </p>;
-              className="text-center mb-16"
+        </section>;              className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our Fintech Solutions?
@@ -268,35 +213,7 @@ export default function FinancePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
-                  key={benefit && benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center""
-                >;
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">";
-                    <benefit.icon className="w-8 h-8 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
-                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
-                </motion.div>;
-              ))}
-            </div>
-          </div>
-        </section>
-            </div>,;
-          </div>;
-        </section>;
-            </div>,;
-          </div>;
-        </section>;
-            </div>,;
-          </div>;
-        </section>;
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
+                  key={benefit && benefit.title}        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
@@ -313,8 +230,7 @@ export default function FinancePage() {
           </div>;
         </section>;
       </div>;
-    </Layout>;
-            >
+    </Layout>;            >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Financial Services?
               </h2>
