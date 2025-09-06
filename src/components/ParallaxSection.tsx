@@ -1,70 +1,74 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useRef, useEffect, useState } from 'react';
 
 interface ParallaxSectionProps {
   children: React.ReactNode;
   speed?: number;
-  direction?: 'up' | 'down' | 'left' | 'right';
   className?: string;
+  direction?: 'up' | 'down' | 'left' | 'right';
 }
 
 const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   children,
   speed = 0.5,
-<<<<<<< HEAD
   className = '',
   direction = 'up',
-=======
-  direction = 'up',
-  className = ''
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-<<<<<<< HEAD
-    offset: ['start end', 'end start'],
-  });
+  const elementRef = useRef<HTMLDivElement>(null);
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (elementRef.current) {
+        const rect = elementRef.current.getBoundingClientRect();
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -speed;
+        
+        switch (direction) {
+          case 'up':
+            setOffset(rate);
+            break;
+          case 'down':
+            setOffset(-rate);
+            break;
+          case 'left':
+            setOffset(rate);
+            break;
+          case 'right':
+            setOffset(-rate);
+            break;
+          default:
+            setOffset(rate);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [speed, direction]);
 
   const getTransform = () => {
-    const baseTransform = scrollYProgress.get() * 100 * speed;
-
-=======
-    offset: ['start end', 'end start']
-  });
-
-  const getTransform = () => {
-    const baseTransform = useTransform(scrollYProgress, [0, 1], [0, 1]);
-    
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
     switch (direction) {
       case 'up':
-        return useTransform(baseTransform, [0, 1], [100 * speed, -100 * speed]);
       case 'down':
-        return useTransform(baseTransform, [0, 1], [-100 * speed, 100 * speed]);
+        return `translateY(${offset}px)`;
       case 'left':
-        return useTransform(baseTransform, [0, 1], [100 * speed, -100 * speed]);
       case 'right':
-        return useTransform(baseTransform, [0, 1], [-100 * speed, 100 * speed]);
+        return `translateX(${offset}px)`;
       default:
-        return useTransform(baseTransform, [0, 1], [0, 0]);
+        return `translateY(${offset}px)`;
     }
   };
 
-  const y = direction === 'up' || direction === 'down' ? getTransform() : 0;
-  const x = direction === 'left' || direction === 'right' ? getTransform() : 0;
-
   return (
-    <motion.div
-      ref={ref}
+    <div
+      ref={elementRef}
       className={className}
       style={{
-        y,
-        x
+        transform: getTransform(),
       }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 
