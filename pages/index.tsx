@@ -90,8 +90,8 @@ export default function Home() {
           }}
         />
       </Head>
-      <ErrorBoundary level="page">
-        <Suspense fallback={<LoadingSpinner fullScreen text="Loading Zion Tech Group..." />}>
+      <ErrorBoundary>
+        <Suspense fallback={<LoadingSpinner size="lg" className="flex justify-center items-center min-h-screen" />}>
           <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">

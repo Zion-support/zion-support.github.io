@@ -1,12 +1,22 @@
 import React from "react"
 
+interface ButtonProps {
+  className?: string;
+  size?: "sm" | "md" | "lg";
+  variant?: "default" | "outline" | "ghost";
+  children: React.ReactNode;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+}
+
 export function Button({ 
   className = "", 
   size = "md", 
   variant = "default", 
   children, 
   ...props 
-}) {
+}: ButtonProps) {
   const baseClasses = "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
   
   const sizeClasses = {

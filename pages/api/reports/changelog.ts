@@ -1,16 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  res.status(200).json({ message: 'API endpoint' });
-=======
-  if (req.method !== 'GET') {
+export default async function handler(_req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  if (_req.method !== 'GET') {
     res.setHeader('Allow', 'GET');
-    return res.status(405).end('Method Not Allowed');
+    res.status(405).end('Method Not Allowed');
+    return;
   }
 
   try {
-    const { version, limit = '50' } = req.query;
+    const { version, limit = '50' } = _req.query;
     
     // Mock changelog data
     const changelog = [
@@ -57,8 +55,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       changelog: filteredChangelog,
       total: changelog.length
     });
-  } catch (error) {
+    return;
+  } catch (_error) {
     res.status(500).json({ error: 'Failed to retrieve changelog' });
+    return;
   }
->>>>>>> 66a141f7564c1d624743830be150a784a04b806b
 }

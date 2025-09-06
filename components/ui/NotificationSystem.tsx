@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
 export interface Notification {
@@ -22,17 +22,17 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
 }) => {
   const [visibleNotifications, setVisibleNotifications] = useState<Notification[]>([]);
 
-  const handleDismiss = (id: string) => {
+  const handleDismiss = useCallback((id: string) => {
     setVisibleNotifications(prev => prev.filter(n => n.id !== id));
     onDismiss?.(id);
-  };
+  }, [onDismiss]);
 
   useEffect(() => {
     setVisibleNotifications(notifications);
   }, [notifications]);
 
   useEffect(() => {
-    const timers: NodeJS.Timeout[] = [];
+    const timers: ReturnType<typeof setTimeout>[] = [];
     
     notifications.forEach(notification => {
       if (notification.duration && notification.duration > 0) {

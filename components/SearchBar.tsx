@@ -174,7 +174,7 @@ const SearchBar: React.FC = () => {
             </div>
           ) : query && !isLoading ? (
             <div className="px-4 py-3 text-sm text-gray-500">
-              No results found for "{query}"
+              No results found for &quot;{query}&quot;
             </div>
           ) : null}
         </div>

@@ -1,14 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
-import { Brain, TrendingUp, FileText, Eye, Database, Shield, Mic, Zap, Cog, Search, Users, Code } from 'lucide-react';
+// import { Brain, TrendingUp, FileText, Eye, Database, Shield, Mic, Zap, Cog, Search, Users, Code } from 'lucide-react';
 export default function AIServices() {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
+  /*
   const aiServices = [
     {
       icon: Brain,
@@ -1089,6 +1084,7 @@ export default function AIServices() {
       ]
     }
   ];
+  */
 
   return (
     <>
@@ -1097,7 +1093,7 @@ export default function AIServices() {
         <meta name="description" content="Advanced AI services including autonomous AI agents, financial trading systems, legal document analysis, and more." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <ErrorBoundary level="page">
+      <ErrorBoundary>
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           <div className="container mx-auto px-4 py-16">
             <h1 className="text-4xl font-bold text-center mb-8">AI Services</h1>

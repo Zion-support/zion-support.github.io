@@ -1,19 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    res.status(405).end('Method Not Allowed');
+    return;
+  }
 
   try {
     const body = req.body || {};
     const {
       instanceName,
-      defaultLanguage,
-      deploymentRegion,
-      tokenActivation,
-      governanceMode,
-      branding,
-      modules = {},
-      bonusModules = {}
+      tokenActivation
     } = body;
 
     const now = new Date().toISOString();
@@ -42,5 +40,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       publicPages: []
     };
 
+    res.status(200).json({
+      success: true,
+      provisionId,
+      outputActions,
+      timestamp: now
+    });
+    return;
+  } catch (_error) {
+    res.status(500).json({ error: 'Failed to process genesis request' });
+    return;
   }
 }
