@@ -1,22 +1,10 @@
-import React from "react";
-import Link from "next/link";
-import EnhancedButton from "./EnhancedButton";
+import React from 'react';
 
-export type EmptyStateProps = {
-  title: string;
-  description?: string;
-  icon?: React.ReactNode;
-  primaryAction?: { label: string; href: string };
-  secondaryAction?: { label: string; href: string };
-};
+interface EmptyStateProps {
+  className?: string;
+}
 
-export default function EmptyState({
-  title,
-  description,
-  icon,
-  primaryAction,
-  secondaryAction,
-}: EmptyStateProps) {
+const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {
   return (
     <div className='w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3'>
       <div className='text-3xl opacity-70'>{icon ?? '🧭'}</div>
@@ -65,4 +53,6 @@ export default function EmptyState({ title, description, icon, primaryAction, se
       )}
     </div>
   );
-}
+};
+
+export default EmptyState;

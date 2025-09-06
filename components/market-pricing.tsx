@@ -1,22 +1,11 @@
- ];
+];
   'ai-consciousness': {
   marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
   ];
 pricingAnalysis: {
   lowEnd: '$0.005 per 1K tokens', midRange: '$0.015 per 1K tokens', highEnd: '$0.025 per 1K tokens', ourPosition: 'Mid-range with premium features'   'ai-consciousness': {
   marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
-import React, { useState } from 'react';
-import {motion} from 'framer-motion';
-import {TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, BarChart3, Globe, Zap, Shield, Crown, Brain, Atom} from 'lucide-react';
-import Link from 'next/link';
-export default function MarketPricing() {
-  const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
 
-  const markets = [
-    { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },
-    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },
-    { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
   ];
 
   const marketData = {
@@ -350,7 +339,7 @@ export default function MarketPricing() {
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
             </div>
           </div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -377,7 +366,7 @@ export default function MarketPricing() {
           >
             Competitive Analysis
           </motion.h2>
-          
+
           <div className="space-y-8">
             {currentMarket.competitors.map((competitor, index) => (
               <motion.div
@@ -397,7 +386,7 @@ export default function MarketPricing() {
                         <span className="text-sm text-gray-400">({competitor.rating})</span>
                       </div>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-2 gap-4 mb-4">
                       <div>
                         <span className="text-sm text-gray-400">Market Share:</span>
@@ -408,7 +397,7 @@ export default function MarketPricing() {
                         <p className="font-semibold text-green-400">{competitor.pricing}</p>
                       </div>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <h4 className="font-semibold text-green-400 mb-2">Strengths</h4>
@@ -421,7 +410,7 @@ export default function MarketPricing() {
                           ))}
                         </ul>
                       </div>
-                      
+
                       <div>
                         <h4 className="font-semibold text-red-400 mb-2">Weaknesses</h4>
                         <ul className="space-y-1">
@@ -435,7 +424,7 @@ export default function MarketPricing() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {competitor.name === 'Zion Tech Group' && (
                     <div className="lg:w-48 flex-shrink-0">
                       <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 text-center">
@@ -717,7 +706,7 @@ export default function MarketPricing() {
           >
             Pricing Analysis
           </motion.h2>
-          
+
           <div className="grid lg:grid-cols-4 gap-6 mb-12">
             {[
               { label: 'Low End', price: currentMarket.pricingAnalysis.lowEnd, color: 'from-green-500 to-emerald-600' },
@@ -741,7 +730,7 @@ export default function MarketPricing() {
               </motion.div>
             ))}
           </div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -787,7 +776,7 @@ export default function MarketPricing() {
           >
             Market Trends & Opportunities
           </motion.h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -808,7 +797,7 @@ export default function MarketPricing() {
                 ))}
               </ul>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -894,8 +883,3 @@ pricingAnalysis: {
   lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
 
 };
-
-};
-
-};
-export default MarketPricing;export default MarketPricing;

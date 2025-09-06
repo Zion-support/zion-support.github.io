@@ -1,10 +1,10 @@
 
-import {useWallet} from '@/hooks/useWallet';
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
-import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
-import {BadgeDollarSign} from 'lucide-react';
+import { useWallet } from '@/hooks/useWallet',
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
+import { BadgeDollarSign } from 'lucide-react',
 export default function WalletPage() {
-  const { wallet, transactions, loading } = useWallet();
+  const { wallet, transactions, loading } = useWallet(),
 
   return (
     <div className="container max-w-4xl py-10">
@@ -43,7 +43,7 @@ export default function WalletPage() {
                   <span className="font-medium">+{t.amount} ZION$</span>
                 </li>
               ))}
-            </ul>
+            </ul>;
           )}
         </TabsContent>
         <TabsContent value="spending">
@@ -57,7 +57,7 @@ export default function WalletPage() {
                   <span className="font-medium">-{t.amount} ZION$</span>
                 </li>
               ))}
-            </ul>
+            </ul>;
           )}
         </TabsContent>
       </Tabs>
@@ -70,3 +70,4 @@ export default function WalletPage() {
     </div>
   )
 }
+;

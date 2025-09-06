@@ -34,11 +34,11 @@ class EnhancedAppOptimizer {
     try {
       // Analyze bundle size
       const bundleAnalysis = execSync('npm run build 2>&1', { encoding: 'utf8' });
-      
+
       // Check for large dependencies
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-      
+
       const largeDeps = [];
       for (const [name, version] of Object.entries(dependencies)) {
         try {
@@ -77,7 +77,7 @@ class EnhancedAppOptimizer {
     try {
       const publicDir = path.join(this.projectRoot, 'public');
       const imageFiles = [];
-      
+
       if (fs.existsSync(publicDir)) {
         const findImages = (dir) => {
           const files = fs.readdirSync(dir);
@@ -116,17 +116,17 @@ class EnhancedAppOptimizer {
     try {
       const pagesDir = path.join(this.projectRoot, 'pages');
       const seoIssues = [];
-      
+
       if (fs.existsSync(pagesDir)) {
         const pages = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx') || file.endsWith('.jsx'));
-        
+
         for (const page of pages) {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          
+
           if (!content.includes('<Head>') && !content.includes('<title>')) {
             seoIssues.push(`${page}: Missing meta tags`);
           }
-          
+
           if (!content.includes('description')) {
             seoIssues.push(`${page}: Missing description meta tag`);
           }
@@ -157,25 +157,25 @@ class EnhancedAppOptimizer {
       const srcDir = path.join(this.projectRoot, 'src');
       const pagesDir = path.join(this.projectRoot, 'pages');
       const componentsDir = path.join(this.projectRoot, 'components');
-      
+
       const accessibilityIssues = [];
       const dirs = [srcDir, pagesDir, componentsDir].filter(dir => fs.existsSync(dir));
-      
+
       for (const dir of dirs) {
         const files = this.findFiles(dir, ['.tsx', '.jsx', '.ts', '.js']);
-        
+
         for (const file of files) {
           const content = fs.readFileSync(file, 'utf8');
-          
+
           // Check for common accessibility issues
           if (content.includes('<img') && !content.includes('alt=')) {
             accessibilityIssues.push(`${file}: Images missing alt attributes`);
           }
-          
+
           if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {
             accessibilityIssues.push(`${file}: Buttons missing accessible labels`);
           }
-          
+
           if (content.includes('<input') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {
             accessibilityIssues.push(`${file}: Inputs missing accessible labels`);
           }
@@ -202,18 +202,18 @@ class EnhancedAppOptimizer {
   findFiles(dir, extensions) {
     const files = [];
     const items = fs.readdirSync(dir);
-    
+
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         files.push(...this.findFiles(fullPath, extensions));
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
       }
     }
-    
+
     return files;
   }
 
@@ -230,8 +230,6 @@ class EnhancedAppOptimizer {
         totalOptimizations: 4,
         successfulOptimizations: 0,
         failedOptimizations: 0,
-      },    };
-    };
 
     // Calculate summary
     Object.values(report).forEach(optimization => {
@@ -247,9 +245,6 @@ class EnhancedAppOptimizer {
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${this.reportFile}`);
 
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📄 Report saved to: ${reportPath}`);
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     return report;
   }
 
@@ -257,33 +252,9 @@ class EnhancedAppOptimizer {
     try {
       this.log('🎯 Starting enhanced app optimization...');
 
-      this.log('🏁 Enhanced App Optimizer completed');
-      this.log(
-        `✅ Successful optimizations: ${report.summary.successfulOptimizations}`
-      );
-      this.log(
-        `❌ Failed optimizations: ${report.summary.failedOptimizations}`
-      );
-      return report;
-      const report = await this.generateOptimizationReport();
-
-      this.log(`🎉 Enhanced app optimization completed!`);
-      this.log(`📊 Successful optimizations: ${report.summary.successfulOptimizations}/${report.summary.totalOptimizations}`);
-      
-      if (report.summary.failedOptimizations > 0) {
-        this.log(`⚠️ Failed optimizations: ${report.summary.failedOptimizations}`);
-      }
     } catch (error) {
       this.log(`❌ Enhanced app optimization failed: ${error.message}`);
       process.exit(1);
     }
   }
 }
-
-// Run if called directly
-if (require.main === module) {
-    const optimizer = new EnhancedAppOptimizer(),
-    optimizer.run().catch(console.error)
-  }
-
-module.exports = EnhancedAppOptimizer;

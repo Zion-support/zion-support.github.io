@@ -1,8 +1,8 @@
 
-import React from "react";
-import {QuoteRequestCard} from "./QuoteRequestCard";
-import {EmptyStateCard} from "./EmptyStateCard";
-import type { QuoteRequest } from "@/types/quotes";
+import React from "react",
+import { QuoteRequestCard } from "./QuoteRequestCard",
+import { EmptyStateCard } from "./EmptyStateCard",
+import type { QuoteRequest } from "@/types/quotes",
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[],
   isLoading: boolean,
@@ -10,13 +10,13 @@ type QuoteRequestsListProps = {
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
-};
+},
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
-  quotes;
-  isLoading;
-  isArchived;
-  onViewDetails;
+  quotes,
+  isLoading,
+  isArchived,
+  onViewDetails,
   onMarkAsResponded,
   onToggleArchive
 }) => {
@@ -26,10 +26,36 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
       </div>
     )
+import React from "react",;
+import { QuoteRequestCard } from "./QuoteRequestCard",;
+import { EmptyStateCard } from "./EmptyStateCard",;
+import type { QuoteRequest } from "@/types/quotes",;
+type QuoteRequestsListProps = {;
+  quotes: QuoteRequest[],;
+  isLoading: boolean,;
+  isArchived: boolean,;
+  onViewDetails: (quote: QuoteRequest) => void,;
+  onMarkAsResponded: (id: string) => void,;
+  onToggleArchive: (id: string, isArchived: boolean) => void;
+},;
+export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
+  quotes,;
+  isLoading,;
+  isArchived,;
+  onViewDetails,;
+  onMarkAsResponded;
+  onToggleArchive;
+}) => {;
+  if (isLoading) {;
+    return (;
+      <div className="text-center py-20">;
+        <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
+      </div>;
+    );
   }
-  
-  if (quotes.length === 0) {
-    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
+;
+  if (quotes.length === 0) {;
+    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
   }
   
   return (
@@ -43,6 +69,6 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
           onToggleArchive={onToggleArchive}
         />
       ))}
-    </div>
-  )
+    </div>;
+  );
 };

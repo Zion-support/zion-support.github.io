@@ -1,22 +1,22 @@
 
-import React from 'react';
-import {format} from 'date-fns';
-import {PaperclipIcon} from 'lucide-react';
-import {cn} from '@/lib/utils';
-import {Message} from '@/types/messaging';
-interface MessageBubbleProps {
-  message: Message,
-  isUserMessage: boolean
+import React from 'react',;
+import { format } from 'date-fns',;
+import { PaperclipIcon } from 'lucide-react',;
+import { cn } from '@/lib/utils',;
+import { Message } from '@/types/messaging',;
+interface MessageBubbleProps {;
+  message: Message,;
+  isUserMessage: boolean;
 }
 
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
     <div className={cn(
-      "flex";
+      "flex",
       isUserMessage ? "justify-end" : "justify-start"
     )}>
       <div className={cn(
-        "max-w-[75%] rounded-lg px-4 py-2";
+        "max-w-[75%] rounded-lg px-4 py-2",
         isUserMessage 
           ? "bg-zion-purple text-white" 
           : "bg-zion-blue-dark text-white"
@@ -32,13 +32,14 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
           >
             <PaperclipIcon className="h-3 w-3 mr-1" />
             {message.attachment_name || 'Attachment'}
-          </a>
+          </Link>
         )}
         
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
-        </div>
-      </div>
-    </div>
-  )
+        </div>;
+      </div>;
+    </div>;
+  );
 }
+;

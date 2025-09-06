@@ -21,31 +21,25 @@ export default function SmartNudgeBanner({
     try {
       const v =
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {
-  role: 'talent' | 'client',
-  userId?: string | null;
-  message: string
-};
+      setHidden(v === 'dismissed');    } catch {}
 
-export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
-  const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
   const [hidden, setHidden] = React.useState<boolean>(false);
 
   React.useEffect(() => {
     try {
-      const v =
-        typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed');      const v = typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed')
+
     } catch {}
+
   }, [storageKey]);
 
   const dismiss = React.useCallback(() => {
     setHidden(true);
     try {
       if (typeof window !== 'undefined')
-        localStorage.setItem(storageKey, 'dismissed');    } catch {}      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
+        localStorage.setItem(storageKey, 'dismissed');    } catch {}
+
     } catch {}
+
   }, [storageKey]);
 
   if (hidden) return null;
@@ -57,15 +51,9 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
         aria-label='Dismiss'
         className='absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10'
       >
+
         <X size={16} />
       </button>
       <div className='text-sm'>{message}</div>
     </div>
-  );        <X size={16} />
-      </button>
-      <div className="text-sm">
-        {message}
-      </div>
-    </div>
   );
-}

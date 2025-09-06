@@ -1,7 +1,7 @@
- const response = await client.chat.completions.create ({
-  model: 'gpt-4o-mini';
-messages: [ {
-  role: 'system', content: 'You are a helpful assistant.' 
+// Create utility
+export const Create = () => {
+  // Implementation here
+  return null;
 };
 {
   role: 'user', content: prompt 

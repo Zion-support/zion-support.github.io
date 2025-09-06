@@ -1,0 +1,17 @@
+import dynamic from 'next/dynamic';
+
+<<<<<<< HEAD:backup-problematic-files/components/expo.tsx.backup.1755991270
+const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false });
+
+export default function ExpoRoute() {
+=======
+const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), {
+  ssr: false,
+});
+
+export default function ExpoRoute() {
+  return <ExpoPage />;const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false }),
+export default function ExpoRoute() {
+>>>>>>> main:components/expo.tsx
+  return <ExpoPage />;
+}

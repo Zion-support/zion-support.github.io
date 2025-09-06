@@ -264,6 +264,7 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}

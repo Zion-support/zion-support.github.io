@@ -1,10 +1,16 @@
 
-import {Resume} from '@/types/resume';
-import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
-
-interface PreviewResumeProps {
-  resume: Resume,
-  onBack: () => void
+import { Resume } from '@/types/resume',;
+import {;
+  PreviewHeader,;
+  ResumeBasicInfoSection,;
+  WorkExperienceSection,;
+  EducationSection,;
+  SkillsSection,;
+  CertificationsSection;
+} from './preview',;
+interface PreviewResumeProps {;
+  resume: Resume;
+  onBack: () => void;
 }
 
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
@@ -23,3 +29,4 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
     </div>
   )
 }
+;

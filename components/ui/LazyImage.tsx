@@ -1,4 +1,4 @@
- useEffect ( () => {
+useEffect ( () => {
   const observer = new IntersectionObserver ( ([entry]) => {
   if (entry.isIntersecting) {
   return () => observer.disconnect () 
@@ -15,6 +15,9 @@
   threshold = 0.1;
   width;
   height
+
+}) => {
+
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -30,27 +33,13 @@
     );
 
     if (imgRef.current) {
-      observer.observe(imgRef.current);          observer.disconnect()
-        }
-      };
+      observer.observe(imgRef.current);
+
       { threshold }
     );
 
     if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
 
-    return () => observer.disconnect();
-  }, [threshold]);
-
-  const handleLoad = () => {
-    setIsLoaded(true);  };    }
-
-    return () => observer.disconnect()
-  }, [threshold]);
-
-  const handleLoad = () => {
-    setIsLoaded(true)
   };
 
   return (
@@ -58,13 +47,15 @@
       {/* Placeholder */}
       <img
         src={placeholder}
-        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
+        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
       />
-      
+
       {/* Actual Image */}
       {isInView && (
         <motion.img
@@ -83,16 +74,9 @@
   );
 };
 
-export default LazyImage;          className="w-full h-full object-cover"
-          loading="lazy"
+export default LazyImage;
+
           style={{ width, height }}
         />
       )}
     </div>
-  );
-};
-
-export default LazyImage;  )
-};
-
-export default LazyImage;

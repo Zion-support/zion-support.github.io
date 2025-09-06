@@ -1,0 +1,30 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdminFromApi } from '../../../../utils/auth';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const { allowed } = await ensureAdminFromApi(req);
+    if (!allowed) return res.status(403).json({ error: 'Forbidden' });
+
+    if (req.method === 'POST') {
+      const { title, content } = req.body;
+      if (!title || !content) return res.status(400).json({ error: 'Title and content required' });
+
+      // Mock slide creation
+      const slide = {
+        id: Date.now().toString(),
+        title,
+        content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.',
+        createdAt: new Date().toISOString()
+      };
+
+      res.json({ slide });
+    } else {
+      res.setHeader('Allow', 'POST');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

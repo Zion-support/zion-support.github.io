@@ -374,4 +374,5 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     </nav>
   );
 };
+
 export default EnhancedNavigation;

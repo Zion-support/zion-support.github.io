@@ -5,10 +5,7 @@ import i18n, { isRtl } from '../../utils/i18n';
 import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 export type EnhancedLayoutProps = {
   children: React.ReactNode;};
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
-export type EnhancedLayoutProps = {
-  children: React.ReactNode
+
 };
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
@@ -25,23 +22,17 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
       </header>
       <main id='main' className='flex-1 container mx-auto px-4 py-6'>
         {children}
-      </main>      <footer>    document.documentElement.setAttribute('lang', lng)
-  }, []);
+      </main>      <footer>
 
-  return (
-    <div className="min-h-screen flex flex-col">
+      <header>
         <EnhancedNavigation />
         <LanguageSwitchPrompt />
       </header>
-      <main id='main' className='flex-1 container mx-auto px-4 py-6'>
-        {children}
-      </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
+
       <footer>
+
         <EnhancedFooter />
       </footer>
     </div>
-  );
-}
-}
   );
 }

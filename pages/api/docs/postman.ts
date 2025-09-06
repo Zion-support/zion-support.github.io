@@ -1,44 +1,108 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import v1 from "../../../data/api-docs/v1";
-
-function toPostman() {
-  return {
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const postmanCollection = {
     info: {
-      name: "Zion OS API",
-      schema:
-        "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      name: 'Zion Tech Group API',
+      description: 'Postman collection for Zion Tech Group API',
+      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
     },
-    item: v1.sections.flatMap((section) =>
-      section.endpoints.map((ep) => ({
-        name: `${section.title} - ${ep.title}`,
+    item: [
+      {
+        name: 'Health Check',
         request: {
-          method: ep.method,
-          header: [
-            {
-              key: "Authorization",
-              value: "Bearer {{token}}",
-              disabled: !(ep.auth || []).includes("jwt"),
-            },
-          ],
+          method: 'GET',
+          header: [],
           url: {
-            raw: `{{baseUrl}}${ep.path}`,
-            host: ["{{baseUrl}}"],
-            path: ep.path.replace(/^\//, "").split("/"),
-          },
-          body: ep.requestBodySchema
-            ? { mode: "raw", raw: JSON.stringify({}, null, 2) }
-            : undefined,
-        },
-      })),
-    ),
-    variable: [
-      { key: "baseUrl", value: "https://api.zion.os" },
-      { key: "token", value: "" },
+            raw: '{{baseUrl}}/api/health',
+            host: ['{{baseUrl}}'],
+            path: ['api', 'health']
+          }
+        }
+      }
     ],
+    variable: [
+      {
+        key: 'baseUrl',
+        value: 'https://api.ziontechgroup.com'
+      }
+    ]
   };
+  res.status(200).json(postmanCollection);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader("Content-Type", "application/json");
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+import v1 from '../../../data/api-docs/v1';
+function toPostman() {;
+  return {;
+    info: {;
+      name: 'Zion OS API',;
+      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'},;
+    item: v1.sections.flatMap((section) =>;
+      section.endpoints.map((ep) => ({;
+        name: `${section.title} - ${ep.title}`,;
+        request: {;
+          method: ep.method,;
+          header: [{ key: 'Authorization', value: 'Bearer {{token}}', disabled: !(ep.auth || []).includes('jwt') }],;
+          url: {;
+            raw: `{{baseUrl}}${ep.path}`,;
+            host: ['{{baseUrl}}'],;
+            path: ep.path.replace(/^\//, '').split('/')},;
+          body: ep.requestBodySchema ? { mode: 'raw', raw: JSON.stringify({}, null, 2) } : undefined}}));
+    ),;
+    variable: [;
+      { key: 'baseUrl', value: 'https://api.zion.os' },;
+      { key: 'token', value: '' }]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export default function handler(req, res) {
+  try {
+  res.setHeader('Content-Typeapplication/json');
   res.status(200).json(toPostman());
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

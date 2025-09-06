@@ -1188,6 +1188,9 @@ pre code {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
@@ -1202,6 +1205,7 @@ pre code {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 
 /* Responsive typography clamps */
 .h1, h1 { font-size: clamp(2rem, 4vw + 1rem, 3.75rem); }
@@ -1235,6 +1239,9 @@ pre code {
 .prose a { color: #67e8f9; }
 .prose a:hover { color: #a5f3fc; }
 <<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ec95
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1250,3 +1257,4 @@ pre code {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main

@@ -18,19 +18,12 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
-:public/locales/en-US/common.json
-    "services": "Services",
-    "services": "Services",
-    "micro-saas": "Micro SAAS",
-    "categories": "Categories",
-    "categories": "Categories",
+
     "talent": "Talent",
     "equipment": "Equipment",
     "dashboard": "Dashboard",
     "messages": "Messages",
-:public/locales/en-US/common.json
-    "post_job": "Post Job",
-    "analytics": "Analytics",
+
     "about": "About Us",
     "careers": "Careers",
     "partners": "Partners",
@@ -40,8 +33,8 @@
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
     "sitemap": "Sitemap";
-},    "post_job": "Post Job"
-  },
+},
+
   "auth": {
     "login": "Login",
     "signup": "Sign Up",
@@ -74,55 +67,5 @@
     "tool_analytics": "Analytics",
     "tool_analytics_desc": "Insights and trends in the AI and tech industry",
     "tool_chat": "Chat Support",
-:public/locales/en-US/common.json
-    "tool_chat_desc": "Get instant assistance from our AI-powered chat";
-},
-  "marketplace": {
-    "title": "AI & Tech Marketplace",
-    "description": "Discover professional services and products for your AI and tech projects. Browse our curated collection of solutions from verified providers.",
-    "search_placeholder": "Search the marketplace...",
-    "results_count": "Showing {{count}} results",
-    "no_results_title": "No Results Found",
-    "no_results_description": "We couldn't find any listings matching your filters. Try adjusting your search criteria.",
-    "clear_filters": "Clear Filters";
-},
-  "checkout": {
-    "title": "Checkout",
-    "name": "Name",
-    "email": "Email",
-    "address": "Address",
-    "city": "City",
-    "country": "Country",
-    "subtotal": "Subtotal",
-    "pay": "Pay with Stripe (test)";
-},  "language": {
-    "en": "English",
-    "es": "Español",
-    "pt": "Português",
-    "ar": "العربية",
-    "language_changed": "Language changed to {{language}}",
-    "switch_to_detected": "Switch to {{language}}?"
-  },
-  "translation": {
-    "auto_translate": "Auto-Translate",
-    "translation_success": "Translation Successful",
-    "translation_failed": "Translation Failed",
-    "content_translated": "Content has been translated successfully",
-    "no_content": "No Content to Translate",
-    "add_content_first": "Please add content in at least one language first",
-    "unknown_error": "An unknown error occurred",
-    "manager_title": "Translation Manager",
-    "manager_description": "Manage translations for the Zion AI Marketplace",
-    "search_placeholder": "Search translations...",
-    "key": "Translation Key",
-    "translations": "Translations",
-    "actions": "Actions",
-    "no_results": "No translation keys found matching your search",
-    "missing": "Not translated",
-    "missing_languages": "Missing in {{count}} languages",
-    "edit": "Edit",
-    "saved": "Saved",
-}
-    "changes_saved": "Translation changes have been saved"
-  }
+
 }

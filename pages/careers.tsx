@@ -150,7 +150,11 @@ const values = [
   },
 ];
 
-export default function CareersPage() {
+interface CareersProps {
+  className?: string;
+}
+
+const Careers: React.FC<CareersProps> = ({ className }) => {
   return (
     <MainLayout
       title="Careers - Zion Tech Group"

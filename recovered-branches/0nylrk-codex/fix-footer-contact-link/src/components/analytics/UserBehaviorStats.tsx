@@ -1,74 +1,116 @@
 
-import {useQuery} from "@tanstack/react-query";
-import {supabase} from "@/integrations/supabase/client";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Skeleton} from "@/components/ui/skeleton";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {useState} from "react";
-import {AnalyticsChart} from "./AnalyticsChart";
-type TimeRange = '7d' | '30d' | '90d' | '365d';
+import { useQuery } from "@tanstack/react-query",
+import { supabase } from "@/integrations/supabase/client",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { useState } from "react",
+import { AnalyticsChart } from "./AnalyticsChart",
+type TimeRange = '7d' | '30d' | '90d' | '365d',
 
 export function UserBehaviorStats() {
-  const [timeRange, setTimeRange] = useState<TimeRange>('7d');
+  const [timeRange, setTimeRange] = useState<TimeRange>('7d'),
   
   const { data: behaviorData, isLoading } = useQuery({
-    queryKey: ['user-behavior-data', timeRange];
+    queryKey: ['user-behavior-data', timeRange],
     queryFn: async () => {
       // Convert timeRange to days
-      const days = parseInt(timeRange.replace('d', ''));
+      const days = parseInt(timeRange.replace('d', '')),
       
       // Get events grouped by type and date
       const { data, error } = await supabase.rpc('get_event_distribution', {
         days_back: days
-      });
+      }),
       
       if (error) {
-        console.error('Error fetching behavior data:', error);
+        console.error('Error fetching behavior data:', error),
         
         // Fallback to manual query if the RPC doesn't exist
-        const startDate = new Date();
-        startDate.setDate(startDate.getDate() - days);
+        const startDate = new Date(),
+        startDate.setDate(startDate.getDate() - days),
         
         const { data: manualData, error: manualError } = await supabase
           .from('analytics_events')
           .select('event_type, created_at')
-          .gte('created_at', startDate.toISOString());
+          .gte('created_at', startDate.toISOString()),
           
-        if (manualError) throw manualError;
+        if (manualError) throw manualError,
         
         // Process data to count events by type and date
-        const eventsByDate: Record<string, Record<string, number>> = {};
+        const eventsByDate: Record<string Record<string number>> = {},
         manualData?.forEach(event => {
-          const date = new Date(event.created_at).toISOString().split('T')[0];
-          if (!eventsByDate[date]) eventsByDate[date] = {};
-          if (!eventsByDate[date][event.event_type]) eventsByDate[date][event.event_type] = 0;
+          const date = new Date(event.created_at).toISOString().split('T')[0],
+          if (!eventsByDate[date]) eventsByDate[date] = {},
+          if (!eventsByDate[date][event.event_type]) eventsByDate[date][event.event_type] = 0,
           eventsByDate[date][event.event_type]++
-        });
+        }),
         
         // Convert to array format for the chart
         return Object.entries(eventsByDate).map(([date, events]) => ({
-          date;
+          date,
           ...events
         }))
+import { useQuery } from "@tanstack/react-query",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { useState } from "react",;
+import { AnalyticsChart } from "./AnalyticsChart",;
+type TimeRange = '7d' | '30d' | '90d' | '365d',;
+export function UserBehaviorStats() {;
+  const [timeRange, setTimeRange] = useState<TimeRange>('7d'),;
+  const { data: behaviorData, isLoading } = useQuery({;
+    queryKey: ['user-behavior-data', timeRange],;
+    queryFn: async () => {;
+      // Convert timeRange to days;
+      const days = parseInt(timeRange.replace('d', '')),;
+      // Get events grouped by type and date;
+      const { data, error } = await supabase.rpc('get_event_distribution', {;
+        days_back: days;
+      }),;
+      if (error) {;
+        console.error('Error fetching behavior data:', error),;
+        // Fallback to manual query if the RPC doesn't exist;
+        const startDate = new Date(),;
+        startDate.setDate(startDate.getDate() - days),;
+        const { data: manualData, error: manualError } = await supabase;
+          .from('analytics_events');
+          .select('event_type, created_at');
+          .gte('created_at', startDate.toISOString()),;
+        if (manualError) throw manualError,;
+        // Process data to count events by type and date;
+        const eventsByDate: Record<string Record<string number>> = {},;
+        manualData?.forEach(event => {;
+          const date = new Date(event.created_at).toISOString().split('T')[0],;
+          if (!eventsByDate[date]) eventsByDate[date] = {},;
+          if (!eventsByDate[date][event.event_type]) eventsByDate[date][event.event_type] = 0,;
+          eventsByDate[date][event.event_type]++;
+        }),;
+        // Convert to array format for the chart;
+        return Object.entries(eventsByDate).map(([date, events]) => ({;
+          date,;
+          ...events;
+        }));
       }
-      
-      return data || []
+;
+      return data || [];
     }
-  });
+  }),
 
   // Get the event types for chart data keys
   const getEventTypes = () => {
-    if (!behaviorData || behaviorData.length === 0) return ['page_view'];
+    if (!behaviorData || behaviorData.length === 0) return ['page_view'],
     
-    const allKeys = new Set<string>();
+    const allKeys = new Set<string>(),
     behaviorData.forEach(item => {
       Object.keys(item).forEach(key => {
         if (key !== 'date') allKeys.add(key)
       })
-    });
+    }),
     
     return Array.from(allKeys)
-  };
+  },
   
   // Format event type names for better display
   const formatEventType = (type: string) => {
@@ -76,7 +118,7 @@ export function UserBehaviorStats() {
       .split('_')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ')
-  };
+  },
 
   return (
     <div className="space-y-6">
@@ -85,8 +127,8 @@ export function UserBehaviorStats() {
           title="Click Events" 
           description="Button and link interactions"
           isLoading={isLoading}
-          count={
-            behaviorData?.reduce((sum, day) => sum + (day.button_click || 0), 0) || 0
+          count={;
+            behaviorData?.reduce((sum, day) => sum + (day.button_click || 0), 0) || 0;
           }
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14.5 12.5-4-4"/><path d="M8 6.2A3 3 0 1 0 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>
@@ -96,8 +138,8 @@ export function UserBehaviorStats() {
           title="Form Submissions" 
           description="Completed forms and sign-ups"
           isLoading={isLoading}
-          count={
-            behaviorData?.reduce((sum, day) => sum + (day.form_submit || 0), 0) || 0
+          count={;
+            behaviorData?.reduce((sum, day) => sum + (day.form_submit || 0), 0) || 0;
           }
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17H7"/><path d="M17 17h-5"/><path d="M7 12h10"/><path d="M7 7h2"/><path d="M17 7h-5"/></svg>
@@ -107,8 +149,8 @@ export function UserBehaviorStats() {
           title="Conversions" 
           description="Goal completions"
           isLoading={isLoading}
-          count={
-            behaviorData?.reduce((sum, day) => sum + (day.conversion || 0), 0) || 0
+          count={;
+            behaviorData?.reduce((sum, day) => sum + (day.conversion || 0), 0) || 0;
           }
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
@@ -124,17 +166,17 @@ export function UserBehaviorStats() {
         dataKeys={getEventTypes()}
         timeRange={timeRange}
         onTimeRangeChange={(range: TimeRange) => setTimeRange(range)}
-      />
-    </div>
-  )
+      />;
+    </div>;
+  );
 }
-
-interface EventTypeCardProps {
-  title: string,
-  description: string,
-  count: number,
-  icon: React.ReactNode,
-  isLoading: boolean
+;
+interface EventTypeCardProps {;
+  title: string,;
+  description: string,;
+  count: number;
+  icon: React.ReactNode;
+  isLoading: boolean;
 }
 
 function EventTypeCard({ title, description, count, icon, isLoading }: EventTypeCardProps) {
@@ -154,10 +196,11 @@ function EventTypeCard({ title, description, count, icon, isLoading }: EventType
               ) : (
                 new Intl.NumberFormat().format(count)
               )}
-            </div>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
+            </div>;
+          </div>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
 }
+;

@@ -21,16 +21,17 @@ let fixedCount = 0;
 
 for (const file of files) {
   const filePath = path.join(process.cwd(), file);
-  
+
   if (fs.existsSync(filePath)) {
     console.log(`🔧 Fixing ${file}...`);
-    
+
     try {
       let content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
-      
+
       // Remove merge conflict markers and keep "ours" version
-      
+      content = content.replace(/
+
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         console.log(`✅ Fixed ${file}`);

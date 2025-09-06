@@ -10,13 +10,7 @@ function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
 
 function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true })
-}
-
-function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
-}
 
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
@@ -41,39 +35,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
     res.status(400).json({ error: 'Missing fields' });
     return;
-function writeGrant(record: GrantApplication) {
-  ensureDir();
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
-}
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('AllowPOST');
-    res.status(405).end('Method Not Allowed');
-    return
   }
   const payload = req.body as VotePayload;
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
     res.status(400).json({ error: 'Missing fields' });
-    return;
-  }
-  const g = readGrant(payload.grantId);
-  if (!g) return res.status(404).json({ error: 'Grant not found' });
-  const vote = {
-    id: uuidv4(),
-    voter: payload.voter,
-    choice: payload.choice,
-    createdAt: new Date().toISOString(),
-  };
-  g.votes = [...(g.votes || []), vote];
-  g.updatedAt = new Date().toISOString();
-  writeGrant(g);
-  res.status(200).json({ record: g });  }
-  const g = readGrant(payload.grantId);
-  if (!g) return res.status(404).json({ error: 'Grant not found' });
-  const vote = { id: uuidv4(), voter: payload.voter, choice: payload.choice, createdAt: new Date().toISOString() };
-  g.votes = [...(g.votes || []), vote];
-  g.updatedAt = new Date().toISOString();
-  writeGrant(g);
-  res.status(200).json({ record: g })
-}

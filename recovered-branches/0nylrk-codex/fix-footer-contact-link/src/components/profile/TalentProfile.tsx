@@ -1,18 +1,18 @@
 
-import React from "react";
-import {Handshake, MessageSquare, Star} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {HireNowCTA} from "./HireNowCTA";
-import {ProfileHero} from "./ProfileHero";
-import {ProfileSkills} from "./ProfileSkills";
-import {ProfileExperience} from "./ProfileExperience";
-import {ProfileProjects} from "./ProfileProjects";
-import {ProfileAvailability} from "./ProfileAvailability";
-import {ProfileContact} from "./ProfileContact";
-import {ProfileRatings} from "./ProfileRatings";
-import {TalentProfile, as, TalentProfileType} from "@/types/talent";
-import {useAuth} from "@/hooks/useAuth";
-import {Availability} from "@/types/profile";
+import React from "react",
+import { Handshake, MessageSquare, Star } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { HireNowCTA } from "./HireNowCTA",
+import { ProfileHero } from "./ProfileHero",
+import { ProfileSkills } from "./ProfileSkills",
+import { ProfileExperience } from "./ProfileExperience",
+import { ProfileProjects } from "./ProfileProjects",
+import { ProfileAvailability } from "./ProfileAvailability",
+import { ProfileContact } from "./ProfileContact",
+import { ProfileRatings } from "./ProfileRatings",
+import { TalentProfile as TalentProfileType } from "@/types/talent",
+import { useAuth } from "@/hooks/useAuth",
+import { Availability } from "@/types/profile",
 interface TalentProfileProps {
   profile: TalentProfileType,
   onRequestHire: () => void,
@@ -20,24 +20,24 @@ interface TalentProfileProps {
 }
 
 export function TalentProfile({ 
-  profile;
-  onRequestHire;
+  profile,
+  onRequestHire,
   onMessageTalent
 }: TalentProfileProps) {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated } = useAuth(),
   
   // Create proper availability object from talent profile
   const availability: Availability = {
     status: profile.availability_type === 'full_time' ? 'available' : 
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
-  };
+  },
   
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill,
     level: 3 // Default level since we don't have this data
-  })) || [];
+  })) || [],
   
   // Create proper projects array for ProfileProjects component
   const projectsArray = profile.key_projects?.map((proj, i) => ({
@@ -45,10 +45,56 @@ export function TalentProfile({
     title: proj.title,
     description: proj.description,
     date: new Date().toISOString() // Default date since we don't have this data
-  })) || [];
+  })) || [],
   
   return (
     <div className="container mx-auto px-4 py-8">
+import React from "react",;
+import { Handshake, MessageSquare, Star } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { HireNowCTA } from "./HireNowCTA",;
+import { ProfileHero } from "./ProfileHero",;
+import { ProfileSkills } from "./ProfileSkills",;
+import { ProfileExperience } from "./ProfileExperience",;
+import { ProfileProjects } from "./ProfileProjects",;
+import { ProfileAvailability } from "./ProfileAvailability",;
+import { ProfileContact } from "./ProfileContact",;
+import { ProfileRatings } from "./ProfileRatings",;
+import { TalentProfile as TalentProfileType } from "@/types/talent",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Availability } from "@/types/profile",;
+interface TalentProfileProps {;
+  profile: TalentProfileType,;
+  onRequestHire: () => void,;
+  onMessageTalent?: () => void;
+}
+;
+export function TalentProfile({;
+  profile,;
+  onRequestHire,;
+  onMessageTalent;
+}: TalentProfileProps) {;
+  const { isAuthenticated } = useAuth(),;
+  // Create proper availability object from talent profile;
+  const availability: Availability = {;
+    status: profile.availability_type === 'full_time' ? 'available' :;
+            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',;
+    message: `${profile.professional_title} with ${profile.years_experience} years of experience`;
+  },;
+  // Create proper skills array for ProfileSkills component;
+  const skillsArray = profile.skills?.map(skill => ({;
+    name: skill,;
+    level: 3 // Default level since we don't have this data;
+  })) || [],;
+  // Create proper projects array for ProfileProjects component;
+  const projectsArray = profile.key_projects?.map((proj, i) => ({;
+    id: `project-${i}`,;
+    title: proj.title,;
+    description: proj.description;
+    date: new Date().toISOString() // Default date since we don't have this data;
+  })) || [];
+  return (;
+    <div className="container mx-auto px-4 py-8">;
       {/* Profile Header */}
       <ProfileHero
         name={profile.full_name}
@@ -57,8 +103,7 @@ export function TalentProfile({
         profileType="talent"
         rating={profile.average_rating}
         reviewCount={profile.rating_count}
-      />
-      
+      />;
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
         {/* Left Column - Skills & Info */}
@@ -83,8 +128,7 @@ export function TalentProfile({
           </div>
           
           {/* Projects Section */}
-          <ProfileProjects projects={projectsArray} />
-          
+          <ProfileProjects projects={projectsArray} />;
           {/* Ratings Section */}
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
             <h2 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -95,9 +139,8 @@ export function TalentProfile({
               userId={profile.id}
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}
-            />
-          </div>
-          
+            />;
+          </div>;
           {/* Hire Now CTA */}
           {isAuthenticated && (
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
@@ -129,12 +172,13 @@ export function TalentProfile({
                       Message
                     </Button>
                   )}
-                </div>
-              </div>
-            </div>
+                </div>;
+              </div>;
+            </div>;
           )}
-        </div>
-      </div>
-    </div>
-  )
+        </div>;
+      </div>;
+    </div>;
+  );
 }
+;

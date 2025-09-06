@@ -189,6 +189,7 @@ export default function Navigation() {
     { name: "Status", href: "/status" },
   ];
 
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
   return (
     <>
       {/* Top Bar */}

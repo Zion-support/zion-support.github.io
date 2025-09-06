@@ -164,7 +164,11 @@ const accessibilityGuidelines = [
   }
 ];
 
-export default function AccessibilityPage() {
+interface AccessibilityProps {
+  className?: string;
+}
+
+const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
   return (
     <MainLayout
       title="Accessibility - Zion Tech Group"
@@ -442,4 +446,6 @@ export default function AccessibilityPage() {
       </div>
     </MainLayout>
   );
-}
+};
+
+export default Accessibility;

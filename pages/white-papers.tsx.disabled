@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+
+
+import React from 'react';
+
+import React, { useState } from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+=======
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +102,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
+>>>>>>> main
 import {
   FileText,
   Download,
@@ -103,6 +115,11 @@ import {
   BookOpen,
   Star,
   Clock,
+<<<<<<< HEAD
+  Tag
+} from 'lucide-react';
+
+=======
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
   Tag
 } from 'lucide-react';
@@ -220,6 +237,7 @@ const stats = [
   { number: '15+', label: 'Industry Experts' },
   { number: '95%', label: 'Reader Satisfaction' }
 =======
+>>>>>>> main
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -230,17 +248,26 @@ import {
   User, 
   ArrowRight, 
   Tag, 
+<<<<<<< HEAD
+  ExternalLink 
+} from 'lucide-react';
+=======
 ========
   Tag,
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
   ExternalLink 
 } from 'lucide-react';
 >>>>>>> main
+>>>>>>> main
 
 const whitePapers = [
   {
     id: 1,
     title: "The Future of AI in Enterprise: A Comprehensive Guide",
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
     author: "Dr. Sarah Chen",
     date: "2024-01-15",
     category: "Artificial Intelligence",
@@ -258,6 +285,9 @@ const whitePapers = [
   },
   {
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
     title: 'Cybersecurity Best Practices 2024',
     description: 'Latest cybersecurity trends and protection strategies for modern businesses.',
     category: 'Cybersecurity',
@@ -268,6 +298,7 @@ const whitePapers = [
 ;];
 
 =======
+>>>>>>> main
     id: 3,
     title: "Cybersecurity in the Digital Age: Protecting Your Assets",
     author: "Emily Johnson",
@@ -285,6 +316,17 @@ const whitePapers = [
     description: "Discover how to leverage data analytics to drive business decisions and growth.",
     downloadCount: 750
   }
+<<<<<<< HEAD
+
+];
+
+export default function WhitePapersPage() {
+
+    <Layout
+
+    <MainLayout
+
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> main
 ];
@@ -428,6 +470,7 @@ export default function WhitePapersPage() {
 =======
     <MainLayout
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> main
       title="White Papers - Zion Tech Group"
       description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
       keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
@@ -454,9 +497,15 @@ export default function WhitePapersPage() {
                 </span>
               </h1>
 <<<<<<< HEAD
+
+  return (
+
+=======
+<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 In-depth research and insights on the latest technology trends and industry developments
 =======
+>>>>>>> main
     <>
       <Head>
         <title>White Papers - Zion Tech Group</title>
@@ -476,6 +525,42 @@ export default function WhitePapersPage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Download our comprehensive white papers on technology trends and best practices.
+<<<<<<< HEAD
+
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Access our comprehensive collection of technical white papers and research documents. 
+                Free downloads covering AI, cloud solutions, cybersecurity, and more.
+
+              </p>
+              
+              <div className="mb-4">
+                <div className="flex items-center text-sm text-gray-600 mb-2">
+                  <User className="h-4 w-4 mr-2" />
+                  <span className="font-semibold">Author:</span>
+                  <span className="ml-2">{paper.author}</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600 mb-2">
+                  <Clock className="h-4 w-4 mr-2" />
+                  <span className="font-semibold">Read Time:</span>
+                  <span className="ml-2">{paper.readTime}</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600 mb-4">
+                  <Eye className="h-4 w-4 mr-2" />
+                  <span className="font-semibold">Downloads:</span>
+                  <span className="ml-2">{paper.downloadCount}</span>
+                </div>
+              </div>
+              
+              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
+                <Download className="h-4 w-4 mr-2" />
+                Download PDF
+              </button>
+            </motion.div>
+
+          </div>
+        </section>
+
+=======
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> main
@@ -496,6 +581,7 @@ export default function WhitePapersPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> main
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -510,7 +596,11 @@ export default function WhitePapersPage() {
                 >
                   <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
                   <div className="text-gray-600">{stat.label}</div>
+<<<<<<< HEAD
+
 =======
+=======
+>>>>>>> main
         {/* White Papers List */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -560,7 +650,11 @@ export default function WhitePapersPage() {
                     <Download className="w-4 h-4 mr-2" />
                     Download PDF
                   </button>
+<<<<<<< HEAD
+
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
+>>>>>>> main
                 </motion.div>
               ))}
             </div>
@@ -568,6 +662,9 @@ export default function WhitePapersPage() {
         </section>
 
         {/* Categories */}
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -591,6 +688,7 @@ export default function WhitePapersPage() {
                   <div className="text-2xl font-bold text-gray-900">{category.count}</div>
                   <div className="text-sm text-gray-500">papers</div>
 =======
+>>>>>>> main
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -615,7 +713,11 @@ export default function WhitePapersPage() {
                 >
                   <Tag className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                   <span className="text-sm font-medium">{category}</span>
+<<<<<<< HEAD
+
+=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
+>>>>>>> main
 >>>>>>> main
                 </motion.div>
               ))}
@@ -624,11 +726,14 @@ export default function WhitePapersPage() {
         </section>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               </Link>
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> main
         {/* Featured White Papers */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -875,8 +980,12 @@ export default function WhitePapersPage() {
         </section>
       </div>
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
     </Layout>
 =======
+>>>>>>> main
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -906,11 +1015,24 @@ export default function WhitePapersPage() {
                   View All Research
                 </Link>
               </div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
 >>>>>>> main
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
+
+    </>
+
+    </MainLayout>
+
+    </>
+
+=======
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 =======
@@ -922,5 +1044,6 @@ export default function WhitePapersPage() {
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
     </MainLayout>
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> main
   );
 }
