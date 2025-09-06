@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -19,9 +22,12 @@ import AppMinimal from './AppMinimal';
 import React from 'react';
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
     render(<AppMinimal />);
@@ -29,6 +35,9 @@ describe('AppMinimal', () => {
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   it('displays correct content', () => {
     render(<AppMinimal />);
   });
@@ -59,6 +68,7 @@ import { render, screen, describe, it, expect } from 'lucide-react'; import AppM
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import { render, screen } from '@testing-library/react'
@@ -76,3 +86,5 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 =======
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

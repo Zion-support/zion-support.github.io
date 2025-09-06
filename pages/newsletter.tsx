@@ -1,12 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Layout from './components/Layout';
+import { motion } from 'framer-motion';
+import { 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "./components/Layout";
 import { motion } from "framer-motion";
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -17,6 +27,9 @@ import Layout from './components/Layout';
 import { motion } from 'framer-motion';
 import { 
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   ArrowRight,
   Users,
   Calendar,
@@ -33,6 +46,7 @@ import {
   Award,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   Clock,
 =======
   Clock,;
@@ -42,6 +56,14 @@ import {
   Clock
 } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
+=======
+  Clock
+} from 'lucide-react';
+=======
+  Clock,
+} from "lucide-react";
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -74,6 +96,7 @@ const benefits = [
   }
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: "Webinar Invitations"
 =======
 <<<<<<< HEAD
@@ -103,6 +126,8 @@ const benefits = [
     icon: TrendingUp,
   },
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     title: 'Webinar Invitations',
     description: 'Receive invitations to our expert-led webinars and virtual events.',
     icon: Video
@@ -117,6 +142,7 @@ const benefits = [
     description: 'Stay updated with the latest trends and developments in technology.',
     icon: TrendingUp
   }
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -124,9 +150,31 @@ const benefits = [
     icon: TrendingUp
   }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+=======
+    title: "Webinar Invitations",
+    description:
+      "Receive invitations to our expert-led webinars and virtual events.",
+    icon: Video,
+  },
+  {
+    title: "Early Access",
+    description:
+      "Be the first to know about new features, products, and services.",
+    icon: Zap,
+  },
+  {
+    title: "Industry Insights",
+    description:
+      "Stay updated with the latest trends and developments in technology.",
+    icon: TrendingUp,
+  },
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 ];
 const testimonials = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     name: "Sarah Johnson",
@@ -157,6 +205,8 @@ const testimonials = [
 export default function NewsletterPage() {
   const [email, setEmail] = useState("");
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     name: 'Sarah Johnson',
     role: 'CTO, TechCorp',
     content: 'The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.',
@@ -179,11 +229,40 @@ export default function NewsletterPage() {
 <<<<<<< HEAD
 export default function NewsletterPage() {
   const [email, setEmail] = useState('');
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+    name: "Sarah Johnson",
+    role: "CTO, TechCorp",
+    content:
+      "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.",
+    rating: 5,
+  },
+  {
+    name: "Michael Chen",
+    role: "Product Manager, InnovateLab",
+    content:
+      "I look forward to every newsletter. The content quality is exceptional and has helped me make better decisions.",
+    rating: 5,
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Developer, CodeCraft",
+    content:
+      "The technical deep-dives and case studies have been incredibly helpful for my projects.",
+    rating: 5,
+  },
+];
+
+export default function NewsletterPage() {
+  const [email, setEmail] = useState("");
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
@@ -191,10 +270,19 @@ export default function NewsletterPage() {;
     setIsLoading(true);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
+<<<<<<< HEAD
 =======
     
     // Simulate API call
@@ -205,6 +293,9 @@ export default function NewsletterPage() {;
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     setIsSubscribed(true);
     setIsLoading(false);
   }
@@ -213,16 +304,25 @@ export default function NewsletterPage() {;
       <Head>
         <title>Newsletter - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+        <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
         <meta
           name="description"
           content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
         />
+<<<<<<< HEAD
 =======
         <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
       </Head>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -239,6 +339,13 @@ export default function NewsletterPage() {;
               </h1>
               <p className="text-xl mb-8 text-blue-100">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
+              </p>
+              
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 Get exclusive insights, industry trends, and early access to new
                 features delivered directly to your inbox.
               </p>
@@ -250,6 +357,7 @@ export default function NewsletterPage() {;
               </p>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
@@ -260,6 +368,9 @@ export default function NewsletterPage() {;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -318,6 +429,7 @@ export default function NewsletterPage() {;
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -326,6 +438,13 @@ export default function NewsletterPage() {;
 =======
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
 >>>>>>> origin/automation-improvements-final
+=======
+                Join thousands of professionals who rely on our newsletter for the latest insights and updates.
+=======
+                Join thousands of professionals who rely on our newsletter for
+                the latest insights and updates.
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -344,6 +463,7 @@ export default function NewsletterPage() {;
                     {benefit.title}
                   </h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <p className="text-gray-600">{benefit.description}</p>
 =======
 <<<<<<< HEAD
@@ -354,6 +474,14 @@ export default function NewsletterPage() {;
                   </p>
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+                  <p className="text-gray-600">
+                    {benefit.description}
+                  </p>
+=======
+                  <p className="text-gray-600">{benefit.description}</p>
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 </motion.div>
               ))}
             </div>
@@ -370,6 +498,7 @@ export default function NewsletterPage() {;
                 transition={{ duration: 0.8, delay: 0 }}
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   10K+
                 </div>
@@ -382,6 +511,14 @@ export default function NewsletterPage() {;
                 <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+                <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
+=======
+                <div className="text-4xl font-bold text-blue-600 mb-2">
+                  10K+
+                </div>
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
@@ -400,6 +537,7 @@ export default function NewsletterPage() {;
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   Weekly
                 </div>
@@ -412,6 +550,14 @@ export default function NewsletterPage() {;
                 <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+                <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
+=======
+                <div className="text-4xl font-bold text-blue-600 mb-2">
+                  Weekly
+                </div>
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 <div className="text-gray-600">Delivery</div>
               </motion.div>
               <motion.div
@@ -440,6 +586,7 @@ export default function NewsletterPage() {;
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -448,6 +595,13 @@ export default function NewsletterPage() {;
 =======
                 Don't just take our word for it. Here's what our community has to say.
 >>>>>>> origin/automation-improvements-final
+=======
+                Don't just take our word for it. Here's what our community has to say.
+=======
+                Don't just take our word for it. Here's what our community has
+                to say.
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -462,19 +616,28 @@ export default function NewsletterPage() {;
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                       <Star
                         key={i}
                         className="w-4 h-4 text-yellow-400 fill-current"
                       />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                     ))}
                   </div>
                   <p className="text-gray-600 mb-4 italic">
@@ -507,6 +670,13 @@ export default function NewsletterPage() {;
               </h2>
               <p className="text-xl mb-8 text-green-100">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                Subscribe now and start receiving valuable insights delivered to your inbox every week.
+              </p>
+              
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 Subscribe now and start receiving valuable insights delivered to
                 your inbox every week.
               </p>
@@ -518,6 +688,7 @@ export default function NewsletterPage() {;
               </p>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
@@ -528,6 +699,9 @@ export default function NewsletterPage() {;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -572,6 +746,7 @@ export default function NewsletterPage() {;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -579,3 +754,9 @@ export default function NewsletterPage() {;
 =======
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+}
+=======
+}
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -282,6 +283,8 @@ _console.log('Git workflow automation initialized');
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 ;
 #!/usr/bin/env node,;
@@ -547,6 +550,7 @@ if (require.main === module) {,;
 ,;
 module.exports = GitWorkflowAutomator,;
 ;#!/usr/bin/env node;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -758,6 +762,8 @@ module.exports = GitWorkflowAutomator;#!/usr/bin/env node;
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 #!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
@@ -838,6 +844,7 @@ if (require.main = = = module) {; main()};
 <<<<<<< HEAD
 ;
 module.exports = GitWorkflowAutomator;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1433,3 +1440,5 @@ module.exports = GitWorkflowAutomator,;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

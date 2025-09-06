@@ -93,12 +93,15 @@ export default function CommunityPage() {
   );
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',
 import Head from 'next/head',
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 export default function CommunityPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -119,16 +122,24 @@ export default function CommunityPage() {
 					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">
 						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>
 						<ul className="text-slate-300 space-y-1">
+<<<<<<< HEAD
 							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</Link></li>
 							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</Link></li>
 							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</Link></li>
 							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</Link></li>
+=======
+							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	)
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 export default function CommunityPage(req, res) {
@@ -173,3 +184,9 @@ export default function CommunityPage(req, res) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -348,6 +349,8 @@ module.exports = BuildOptimizer;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 }};
 ; async analyzeBuild() {; try {; this.log('🏗️ Analyzing current build...');
 ; if (!fs.existsSync('dist')) {; this.log('📦 Building project first...'); execSync('npm run build', {; cwd: this.projectRoot; stdio: 'pipe'})};
@@ -422,6 +425,7 @@ module.exports = BuildOptimizer;
 const optimizer = new BuildOptimizer();
 <<<<<<< HEAD
 optimizer.run().catch(error = > {; process.exit(1)});
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1896,3 +1900,5 @@ optimizer.run().catch(error => {,;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

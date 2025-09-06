@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -8,6 +13,7 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+<<<<<<< HEAD
 import {
   Brain,
   Bot,
@@ -263,6 +269,8 @@ import React from 'react';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import Layout from '../components/Layout';
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 <<<<<<< HEAD
@@ -284,15 +292,19 @@ export default function AIServices() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               AI Services
             </h1>
+=======
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI solutions and
-              services.
+              Transform your business with cutting-edge AI solutions and services.
             </p>
           </div>
           <div className="text-center">
+<<<<<<< HEAD
             <p className="text-gray-600">
               AI Services page is under construction.
             </p>
@@ -301,6 +313,9 @@ export default function AIServices() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
             </p>
+=======
+            <p className="text-gray-600">AI Services page is under construction.</p>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
           </div>
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
@@ -315,6 +330,7 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1002,6 +1018,8 @@ export default function AIServices() {
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -1096,6 +1114,7 @@ export default function AIServices() {
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 }
@@ -1106,3 +1125,37 @@ export default function AIServices() {
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+import React from "react";
+import Layout from "../components/Layout";
+
+export default function AIServices() {
+  return (
+    <Layout
+      title="AI Services - Zion Tech Group"
+      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI solutions and
+              services.
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600">
+              AI Services page is under construction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

@@ -13,9 +13,26 @@ package = "@netlify/plugin-nextjs"
 directory = "netlify/functions"
 
 [[redirects]]
+<<<<<<< HEAD
 from = "/api/*"
 to = "/.netlify/functions/:splat"
 status = 200
+=======
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+  command = "npm ci && npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 # Security and caching headers for static assets
 [[headers]]
@@ -44,6 +61,18 @@ X-Permitted-Cross-Domain-Policies = "none"
 Origin-Agent-Cluster = "?1"
 
 # Static redirects to mirror Next.js redirects (since output: export)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+
+# Static redirects for exported site
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"
@@ -80,6 +109,21 @@ to = "/services/smart-crm-intelligence-suite/"
 status = 301
 
 [[redirects]]
+<<<<<<< HEAD
 from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
+=======
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/chore/seo-redirects-netlify-fix
+=======
+>>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/chore/seo-redirects-netlify-fix
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

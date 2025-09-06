@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +8,11 @@ import React from 'react';
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -185,13 +191,19 @@ const accessibilityGuidelines = [
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import Head from 'next/head';
 import Layout from '../components/Layout';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 <<<<<<< HEAD
 =======
@@ -203,6 +215,7 @@ import Layout from '../components/Layout';
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function AccessibilityPage() {
+<<<<<<< HEAD
 =======
 interface AccessibilityProps {
   className?: string;
@@ -214,24 +227,21 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
     <MainLayout
       title="Accessibility - Zion Tech Group"
       description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards."
+=======
+  
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     >
       <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
+            <div className="text-center text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  Web Accessibility
-                </span>
+                Accessibility Statement
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Ensuring digital inclusion for everyone
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                We are committed to ensuring our website is accessible to all users.
               </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -240,6 +250,8 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
             </motion.div>
           </div>
         </section>
@@ -490,20 +502,35 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
             </div>
           </div>
         </section>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+      </div>
+    </Layout>
+  );
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
       </div>
     </MainLayout>;
   );
+<<<<<<< HEAD
 };
 
 export default Accessibility;
+=======
+}
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

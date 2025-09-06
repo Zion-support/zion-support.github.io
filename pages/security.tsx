@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -13,6 +14,13 @@ import React from 'react';
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
@@ -67,7 +75,10 @@ const securityStats = [
 ];
 export default function SecurityPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   return (
     <Layout
       title="Security - Zion Tech Group"
@@ -691,6 +702,7 @@ export default function Security(req, res) {
                   View Compliance Details
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -700,6 +712,9 @@ export default function Security(req, res) {
                 </Link>
 <<<<<<< HEAD
 =======
+=======
+                </Link>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -781,6 +796,7 @@ export default function Security() {
     { name: 'HIPAA', status: 'Compliant' },
     { name: 'PCI DSS', status: 'Compliant' },  ];
 
+<<<<<<< HEAD
   return (
     <>
       <Head>
@@ -803,9 +819,40 @@ export default function Security() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='flex items-center justify-center mb-6'
+=======
+=======
+>>>>>>> origin/main
+  return (
+    <Layout
+      title="Security - Zion Tech Group"
+      description="Learn about our comprehensive security measures and how we protect your data and systems."
+      keywords="security, data protection, encryption, compliance, cybersecurity"
+    >
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
             >
-              <Shield className='w-16 h-16 text-cyan-400' />
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Security & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Protection</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Your security is our top priority. Learn about our comprehensive security measures and how we protect your data.
+              </p>
             </motion.div>
+<<<<<<< HEAD
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -843,19 +890,32 @@ export default function Security() {
             </motion.div>
 
             <div className='grid md:grid-cols-2 gap-8 mb-16'>              {securityMeasures.map((measure, index) => (
+=======
+          </div>
+        </section>
+
+        {/* Security Stats */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {securityStats.map((stat, index) => (
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 <motion.div
-                  key={measure.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className='bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300'
+=======
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 >
-                  <div className='flex items-center mb-6'>
-                    <measure.icon className='w-8 h-8 text-cyan-400 mr-4' />
-                    <h3 className='text-2xl font-bold text-white'>
-                      {measure.title}
-                    </h3>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                    {stat.number}
                   </div>
+<<<<<<< HEAD
 
                   <ul className='space-y-3'>
                     {measure.features.map((feature, featureIndex) => (
@@ -866,9 +926,15 @@ export default function Security() {
                         </span>                      </li>
                     ))}
                   </ul>
+=======
+                  <div className="text-gray-600 font-medium">
+                    {stat.label}
+                  </div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
 
             {/* Certifications */}
             <motion.div
@@ -903,7 +969,26 @@ export default function Security() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
               className='mb-16'
+=======
+<<<<<<< HEAD
+              className='mb-16'
+            >
+              <h3 className='text-3xl font-bold text-white mb-6'>
+                Incident Response
+              </h3>
+              <div className='bg-slate-800/50 rounded-2xl p-8 border border-white/10'>
+                <div className='grid md:grid-cols-2 gap-8'>
+                  <div>
+                    <h4 className='text-white font-semibold mb-4 flex items-center'>
+                      <Eye className='w-5 h-5 text-cyan-400 mr-2' />
+                      Detection & Response
+                    </h4>
+                    <ul className='space-y-2 text-gray-300'>
+=======
+              className="mb-16"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
             >
               <h3 className='text-3xl font-bold text-white mb-6'>
                 Incident Response
@@ -1076,6 +1161,8 @@ export default function Security() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </motion.div>
+=======
+>>>>>>> origin/main
           </div>
         </section>
 <<<<<<< HEAD
@@ -1086,10 +1173,163 @@ export default function Security() {
     </Layout>
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       </div>
     </Layout>
 <<<<<<< HEAD
+=======
+
+        {/* Security Features */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Security Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We implement multiple layers of security to protect your data and ensure business continuity.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {securityFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                      <feature.icon className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {feature.details.map((detail, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Compliance Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Compliance & Certifications
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We maintain compliance with industry standards and regulations to ensure your data is protected.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">SOC 2 Type II</h3>
+                <p className="text-gray-600 text-sm">Service Organization Control 2 Type II compliance</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Lock className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">ISO 27001</h3>
+                <p className="text-gray-600 text-sm">Information Security Management System</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Eye className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">GDPR</h3>
+                <p className="text-gray-600 text-sm">General Data Protection Regulation compliance</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Database className="w-8 h-8 text-orange-600" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">HIPAA</h3>
+                <p className="text-gray-600 text-sm">Health Insurance Portability and Accountability Act</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Questions About Our Security?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Our security team is available to answer any questions about our security measures and compliance.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center"
+                >
+                  Contact Security Team
+                </Link>
+                <Link
+                  href="/compliance"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  View Compliance Details
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+=======
+                </Link>
+              </div>
+>>>>>>> origin/main
+=======
+                </Link>              </div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   );
 }  )
 }
@@ -1148,6 +1388,13 @@ export default function Security() {
 =======
   )
 }
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

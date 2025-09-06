@@ -32,6 +32,9 @@ describe('App', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -68,6 +71,7 @@ describe('App', () => {
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
@@ -76,3 +80,5 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 =======
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

@@ -1,17 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React from 'react;';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import Link from 'next/link';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import React from "react";
 import Link from "next/link";
 import {
@@ -36,6 +44,7 @@ import {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 <<<<<<< HEAD
@@ -45,6 +54,9 @@ import Link from 'next/link';
 <<<<<<< HEAD
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 <<<<<<< HEAD
 =======
@@ -192,6 +204,7 @@ export default function Footer() {;
                 <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 <span>
                   364 E Main St STE 1008
@@ -200,6 +213,8 @@ export default function Footer() {;
                 </span>
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
 <<<<<<< HEAD
 =======
@@ -298,7 +313,10 @@ const Footer: React.FC = () => {
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
                 <span>
                   364 E Main St STE 1008
@@ -306,14 +324,18 @@ const Footer: React.FC = () => {
                   Middletown DE 19709
                 </span>
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               </div>
             </div>
           </div>
           {/* Services */}
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -322,6 +344,11 @@ const Footer: React.FC = () => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
@@ -339,12 +366,15 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
               ))}
             </ul>
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
             <h3 className="text-lg font-semibold mb-6>Services</h3>
             <div className="space-y-4">
@@ -370,7 +400,15 @@ const Footer: React.FC = () => {
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+              ))}
+            </ul>
+          </div>
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 >>>>>>> origin/main
@@ -388,8 +426,14 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
+<<<<<<< HEAD
                   <Link
                     href={link.href}
+=======
+<<<<<<< HEAD
+                  <Link 
+                    href={link.href} 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                     className="text-gray-300 hover:text-white transition-colors"
 <<<<<<< HEAD
 =======
@@ -405,10 +449,18 @@ const Footer: React.FC = () => {
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                   >
                     {link.name}
                   </Link>
@@ -419,10 +471,15 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 >>>>>>> origin/main
@@ -440,8 +497,14 @@ const Footer: React.FC = () => {
             <ul className="space-y-2 mb-6">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
+<<<<<<< HEAD
                   <Link
                     href={link.href}
+=======
+<<<<<<< HEAD
+                  <Link 
+                    href={link.href} 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                     className="text-gray-300 hover:text-white transition-colors"
 <<<<<<< HEAD
 =======
@@ -457,16 +520,25 @@ const Footer: React.FC = () => {
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -491,6 +563,14 @@ const Footer: React.FC = () => {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            
+=======
+
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
@@ -576,6 +656,7 @@ const Footer: React.FC = () => {
             <div className="flex space-x-6 text-sm">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               <Link
                 href="/privacy"
@@ -583,6 +664,8 @@ const Footer: React.FC = () => {
               >
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
 <<<<<<< HEAD
 =======
@@ -617,16 +700,22 @@ const Footer: React.FC = () => {
               <Link href="/privacy" className=text-gray-400 hover:text-white transition-colors">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-white transition-colors"
               >
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 Privacy Policy
               </Link>
               <Link
@@ -649,11 +738,14 @@ const Footer: React.FC = () => {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 }
 =======
@@ -662,6 +754,7 @@ const Footer: React.FC = () => {
 export default Footer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
@@ -669,3 +762,8 @@ export default Footer;
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+}
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

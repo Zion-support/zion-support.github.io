@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -66,10 +70,39 @@ class AutomationFactory {
   log(message, level = 'INFO') {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+}};
+; loadStatus() {; try {; if (fs.existsSync(this.statusFile)) {; const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8")); this.runningScripts = new Map(Object.entries(status.runningScripts || {}))}} catch (error) {; this.log(`Error loading status: ${error.message}`)}}}};
+; generateCodeQualityScript() {; const script = `#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
+};
+};
+;
+  loadStatus() {;
+    try {;
+      if (fs.existsSync(this.statusFile)) {;
+        const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8"));
+        this.runningScripts = new Map(Object.entries(status.runningScripts || {}));
+      };
+    } catch (error) {;
+      this.log(`Error loading status: ${error.message}`);
+};
+      };
+};
+};
+;
+  generateCodeQualityScript() {;
+    const script = `#!/usr/bin/env node;
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+const fs = require("fs");
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 }};
 ; loadStatus() {; try {; if (fs.existsSync(this.statusFile)) {; const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8")); this.runningScripts = new Map(Object.entries(status.runningScripts || {}))}} catch (error) {; this.log(`Error loading status: ${error.message}`)}}}};
 ; generateCodeQualityScript() {; const script = `#!/usr/bin/env node;const fs = require("fs");
@@ -99,9 +132,15 @@ const fs = require("fs");
 =======
 }}; loadStatus() {try {; if (fs.existsSync(this.statusFile)) {; const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8")); this.runningScripts = new Map(Object.entries(status.runningScripts |{}))}} catch (error) {this.log(`Error loading status: ${error.message}`)}}}}; generateCodeQualityScript() {const script = `#!/usr/bin/env node;const fs = require("fs");
 const path = require("path");
+<<<<<<< HEAD
 const { execSync } = require("child_process");const fs = require("fs");
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+const { execSync } = require("child_process");
+;const fs = require("fs");
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 const path = require("path");
 const { execSync } = require("child_process");
 ;
@@ -132,11 +171,14 @@ monitor.analyzeCodeQuality().then(metrics = > {; if (metrics) {; console.log("Me
 ; this.scripts.set("code-quality", {; file: "code-quality-monitor.js", description: "Enhanced code quality monitoring with detailed metrics", path: scriptPath, status: "available", lastRun: null, successCount: 0, errorCount: 0});
 ; this.log("Generated enhanced code quality monitor script")};
 <<<<<<< HEAD
+<<<<<<< HEAD
 ; generatePerformanceOptimizer() {; const script = `#!/usr/bin/env node;const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 ;const fs = require("fs");
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 ; generatePerformanceOptimizer() {; const script = `#!/usr/bin/env node;
 =======
 class CodeQualityMonitor {;
@@ -314,7 +356,16 @@ monitor.analyzeCodeQuality().then(metrics => {;
     const script = `#!/usr/bin/env node;
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 const fs = require("fs");
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
+=======
+=======
+; generatePerformanceOptimizer() {; const script = `#!/usr/bin/env node;const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+;const fs = require("fs");
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 const path = require("path");
 const { execSync } = require("child_process");
 ;
@@ -377,8 +428,11 @@ optimizer.optimizePerformance().then(report = > {; if (report) {; console.log("P
       };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       };
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     } catch (error) {;
       return { error: error.message ,
 };
@@ -1172,6 +1226,7 @@ optimizer.optimizePerformance().then(report => {,
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
@@ -1190,3 +1245,8 @@ optimizer.optimizePerformance().then(report = > {if (report) {; console.log("Per
         results.push({ name, success })
       };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+      };
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

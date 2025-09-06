@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-pr-merger.cjs
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -90,6 +91,11 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-pr-merger.cjs
 const { execSync } = require('child_process')
 // console.log('� Comprehensive PR Merger & Conflict Resolver')
 console.log('====')
@@ -115,6 +121,7 @@ async function githubApiCall(endpoint, method = 'GET')
       "state"
     console.log('\n Final "Report")
     console.error(' Comprehensive PR merger "failed")
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-pr-merger.cjs
 <<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
@@ -128,3 +135,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-pr-merger.cjs

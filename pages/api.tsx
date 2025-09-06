@@ -1,9 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
@@ -22,6 +31,9 @@ import { motion } from "framer-motion";
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import {
 <<<<<<< HEAD
   Code
@@ -152,14 +164,23 @@ export default function APIPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
+                API{' '}
+=======
                 API{" "}
+>>>>>>> origin/main
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                   Documentation
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+<<<<<<< HEAD
+                Integrate with Zion Tech Group's powerful APIs to build amazing applications 
+                with AI, cloud services, and enterprise solutions.
+=======
                 Integrate with Zion Tech Group's powerful APIs to build amazing
                 applications with AI, cloud services, and enterprise solutions.
+>>>>>>> origin/main
               </p>
             </motion.div>
           </div>
@@ -178,8 +199,12 @@ export default function APIPage() {
                 Quick Start Guide
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
+                Get started with our APIs in minutes. Follow these simple steps to make your first API call.
+=======
                 Get started with our APIs in minutes. Follow these simple steps
                 to make your first API call.
+>>>>>>> origin/main
               </p>
             </motion.div>
             <div className="max-w-4xl mx-auto">
@@ -194,12 +219,17 @@ export default function APIPage() {
                   <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Shield className="w-8 h-8 text-indigo-600" />
                   </div>
+<<<<<<< HEAD
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">1. Get API Key</h3>
+                  <p className="text-gray-600">Sign up and obtain your API key from the dashboard</p>
+=======
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     1. Get API Key
                   </h3>
                   <p className="text-gray-600">
                     Sign up and obtain your API key from the dashboard
                   </p>
+>>>>>>> origin/main
                 </motion.div>
                 <motion.div
                   className="text-center"
@@ -211,12 +241,17 @@ export default function APIPage() {
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Code className="w-8 h-8 text-purple-600" />
                   </div>
+<<<<<<< HEAD
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">2. Make Request</h3>
+                  <p className="text-gray-600">Use our RESTful APIs with your preferred language</p>
+=======
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     2. Make Request
                   </h3>
                   <p className="text-gray-600">
                     Use our RESTful APIs with your preferred language
                   </p>
+>>>>>>> origin/main
                 </motion.div>
                 <motion.div
                   className="text-center"
@@ -228,12 +263,17 @@ export default function APIPage() {
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-8 h-8 text-green-600" />
                   </div>
+<<<<<<< HEAD
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">3. Build & Scale</h3>
+                  <p className="text-gray-600">Create powerful applications with our APIs</p>
+=======
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     3. Build & Scale
                   </h3>
                   <p className="text-gray-600">
                     Create powerful applications with our APIs
                   </p>
+>>>>>>> origin/main
                 </motion.div>
               </div>
             </div>
@@ -319,8 +359,13 @@ export default function APIPage() {
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
+                Start building with our APIs today. Get your API key and begin integrating 
+                with our powerful services.
+=======
                 Start building with our APIs today. Get your API key and begin
                 integrating with our powerful services.
+>>>>>>> origin/main
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -342,7 +387,10 @@ export default function APIPage() {
       </div>
     </MainLayout>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -367,9 +415,17 @@ export default function APIPage() {
     </Layout>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 }
+=======
+  );
+=======
+  );
+}
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

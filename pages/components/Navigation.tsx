@@ -15,7 +15,10 @@ import {
   Award,
   BarChart3,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 =======
   Shield,
@@ -30,10 +33,15 @@ import {
   ShoppingCart,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   BookOpen,
   Brain,
   Building,
@@ -69,6 +77,7 @@ import {
   Target,
   TrendingUp,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -78,6 +87,8 @@ import {
   Zap,;
 } from "lucide-react";
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
   Truck,
   Users,
@@ -126,7 +137,17 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
+=======
+=======
+  Truck,
+  Users,
+  X,
+  Zap,
+} from "lucide-react";
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 <<<<<<< HEAD

@@ -1,13 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from './components/Layout';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import {
 =======
 =======
@@ -195,6 +208,7 @@ import {
   YawningFace2,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   DizzyFace2,
 =======
   DizzyFace2,;
@@ -204,6 +218,14 @@ import {
   DizzyFace2
 } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
+=======
+  DizzyFace2
+} from 'lucide-react';
+=======
+  DizzyFace2,
+} from "lucide-react";
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -400,6 +422,7 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -415,6 +438,8 @@ export default function LoginPage() {
       ...prev,
       [name]: value,
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   const [error, setError] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -422,17 +447,30 @@ export default function LoginPage() {
     setFormData(prev => ({
       ...prev,
       [name]: value
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
       ...prev
       [name]: value
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+  const [error, setError] = useState("");
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -453,6 +491,8 @@ export default function LoginPage() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     setError('');
 
     try {
@@ -468,8 +508,28 @@ export default function LoginPage() {
       }
     } catch (err) {
       setError('Login failed. Please try again.');
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+    setError("");
+
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // For demo purposes, accept any email/password
+      if (formData.email && formData.password) {
+        // Redirect to dashboard or home page
+        window.location.href = "/";
+      } else {
+        setError("Please fill in all fields");
+      }
+    } catch (err) {
+      setError("Login failed. Please try again.");
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     } finally {
       setIsLoading(false);
     }
@@ -479,16 +539,25 @@ export default function LoginPage() {
       <Head>
         <title>Login - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
         <meta
           name="description"
           content="Sign in to your Zion Tech Group account to access your dashboard and services."
         />
+<<<<<<< HEAD
 =======
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -506,6 +575,7 @@ export default function LoginPage() {
             </h2>
             <p className="mt-2 text-sm text-gray-600">
 <<<<<<< HEAD
+<<<<<<< HEAD
               Or{" "}
 =======
 <<<<<<< HEAD
@@ -514,6 +584,12 @@ export default function LoginPage() {
               Or{' '}
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+              Or{' '}
+=======
+              Or{" "}
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500"
@@ -542,16 +618,25 @@ export default function LoginPage() {
               )}
               <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                   Email address
                 </label>
                 <div className="relative">
@@ -573,19 +658,28 @@ export default function LoginPage() {
               </div>
               <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                   Password
                 </label>
                 <div className="relative">
@@ -625,19 +719,28 @@ export default function LoginPage() {
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                   />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                   <label
                     htmlFor="remember-me"
                     className="ml-2 block text-sm text-gray-900"
                   >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                     Remember me
                   </label>
                 </div>
@@ -677,6 +780,7 @@ export default function LoginPage() {
                 </div>
                 <div className="relative flex justify-center text-sm">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -686,6 +790,14 @@ export default function LoginPage() {
 =======
                   <span className="px-2 bg-white text-gray-500">Or continue with</span>
 >>>>>>> origin/automation-improvements-final
+=======
+                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+=======
+                  <span className="px-2 bg-white text-gray-500">
+                    Or continue with
+                  </span>
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -708,6 +820,7 @@ export default function LoginPage() {
           >
             <p className="text-sm text-gray-600">
 <<<<<<< HEAD
+<<<<<<< HEAD
               Don't have an account?{" "}
 =======
 <<<<<<< HEAD
@@ -716,6 +829,12 @@ export default function LoginPage() {
               Don't have an account?{' '}
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+              Don't have an account?{' '}
+=======
+              Don't have an account?{" "}
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500"

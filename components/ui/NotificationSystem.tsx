@@ -1,6 +1,13 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -80,9 +87,29 @@ export default function NotificationSystem({
   notifications,
   onDismiss,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 <<<<<<< HEAD
+=======
+  className,
+}: NotificationSystemProps) {
+  const getNotificationStyles = (type: Notification['type']) => {
+    switch (type) {
+      case 'success':
+        return 'bg-green-50 border-green-200 text-green-800';
+      case 'error':
+        return 'bg-red-50 border-red-200 text-red-800';
+      case 'warning':
+        return 'bg-yellow-50 border-yellow-200 text-yellow-800';
+      case 'info':
+        return 'bg-blue-50 border-blue-200 text-blue-800';
+      default:
+        return 'bg-gray-50 border-gray-200 text-gray-800';
+    }
+  };
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 key={notification.id},
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`},
 
@@ -129,6 +156,11 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (notifications.length === 0) return null;
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
       {notifications.map((notification) => (
@@ -159,6 +191,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -170,3 +203,8 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+}
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

@@ -1,14 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -22,6 +33,9 @@ import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 <<<<<<< HEAD
@@ -114,7 +128,10 @@ const Layout: React.FC<LayoutProps> = ({
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import React, { ReactNode } from "react";
 
@@ -128,6 +145,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {children}
     </main>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -176,7 +194,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   );
 };
 export default Layout;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+  );
+};
+
+export default Layout;
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

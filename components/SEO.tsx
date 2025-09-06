@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 =======
@@ -9,6 +10,8 @@ import Head from "next/head";
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -17,14 +20,20 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import React from "react";
 import Head from "next/head";
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -33,6 +42,7 @@ interface SEOProps {
   title?: string;
   description?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,6 +50,11 @@ interface SEOProps {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   keywords?: string;
 }
 const SEO: React.FC<SEOProps> = ({
@@ -58,6 +73,7 @@ const SEO: React.FC<SEOProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 };
@@ -65,6 +81,8 @@ const SEO: React.FC<SEOProps> = ({
 export default SEO;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 }
 =======
   image?: string;
@@ -99,6 +117,7 @@ export default function SEO({
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 }
@@ -111,3 +130,10 @@ export default SEO;
 export default SEO;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+};
+
+export default SEO;
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

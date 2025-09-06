@@ -5,6 +5,24 @@ import React from 'react';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface LoadingSpinnerProps {
+<<<<<<< HEAD
+  size?: 'sm' | 'md' | 'lg';
+  color?: 'blue' | 'white' | 'gray';
+  text?: string;
+  className?: string;
+}
+
+export default function LoadingSpinner({ 
+  size = 'md', 
+  color = 'blue', 
+  text,
+  className = '' 
+}: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+=======
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'blue' | 'white' | 'gray' | 'slate';
   text?: string;
@@ -16,6 +34,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   text = 'Loading...'
   className = '',}) => {
   const sizeClasses = {
+<<<<<<< HEAD
     sm: 'w-4 h-4'
     md: 'w-8 h-8'
     lg: 'w-12 h-12'
@@ -26,6 +45,25 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     gray: 'text-gray-600'
     slate: 'text-slate-600'
   }
+=======
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+>>>>>>> origin/main
+  };
+
+  const colorClasses = {
+    blue: 'text-blue-600',
+    white: 'text-white',
+<<<<<<< HEAD
+    gray: 'text-gray-600'
+=======
+    gray: 'text-gray-600',
+    slate: 'text-slate-600'
+>>>>>>> origin/main
+  };
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   const spinner = (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`} />
@@ -37,6 +75,13 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 <<<<<<< HEAD
     </div>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   if (fullScreen) {
     return (
       <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
@@ -96,6 +141,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
         <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
 };
 export default LoadingSpinner;
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

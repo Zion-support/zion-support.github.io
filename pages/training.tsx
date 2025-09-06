@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -17,6 +18,10 @@ import Layout from '../components/Layout';
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import React from 'react';
 import Layout from '../components/Layout';
 
@@ -35,11 +40,13 @@ export default function Training() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Professional training and education services for technology professionals.
             </p>
+<<<<<<< HEAD
           </div>
           <div className="text-center">
             <p className="text-gray-600">Training page is under construction.</p>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,6 +62,8 @@ export default function Training() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
@@ -1152,6 +1161,7 @@ export default Training;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
@@ -1169,6 +1179,14 @@ export default Training;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      </div>
+    </Layout>
+<<<<<<< HEAD
+  );
+<<<<<<< HEAD
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
@@ -1239,6 +1257,21 @@ export default Training;
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600">Training page is under construction.</p>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+<<<<<<< HEAD
+}
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 };
 =======
 <<<<<<< HEAD
@@ -1280,6 +1313,7 @@ export default Training;
 };
 
 export default Training;
+<<<<<<< HEAD
 };export default Training;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1316,3 +1350,10 @@ export default Training,
 export default Training;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+};export default Training;
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

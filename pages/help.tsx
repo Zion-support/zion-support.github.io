@@ -1,11 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -15,6 +19,8 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import {
 <<<<<<< HEAD
   Search
@@ -41,9 +47,20 @@ import {
   Download,
   ExternalLink,
   ChevronDown,
+<<<<<<< HEAD
   Cloud,;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
+=======
+<<<<<<< HEAD
+  Cloud
+} from 'lucide-react';
+=======
+  Cloud,
+} from "lucide-react";
+>>>>>>> origin/main
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 const helpArticles = [
   {
     id: "overview"
@@ -60,6 +77,7 @@ const helpArticles = [
     color: "green"
     articles: [
       {
+<<<<<<< HEAD
         title: "AI Implementation Guide"
         description: "How to implement AI solutions in your business"
         readTime: "10 min read"
@@ -76,6 +94,20 @@ const helpArticles = [
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+        title: "AI Implementation Guide",
+        description: "How to implement AI solutions in your business",
+        readTime: "10 min read",
+        type: "Guide",
+      },
+      {
+        title: "Machine Learning Models",
+        description: "Understanding different ML models and their applications",
+        readTime: "8 min read",
+        type: "Technical",
+      },
+      {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
         title: "AI Best Practices",
         description: "Tips and best practices for AI development",
         readTime: "6 min read",
@@ -87,6 +119,7 @@ const helpArticles = [
     id: "cloud-services",
     title: "Cloud Services",
     description: "Cloud infrastructure and deployment solutions.",
+<<<<<<< HEAD
 =======
         title: 'AI Best Practices',
         description: 'Tips and best practices for AI development',
@@ -133,6 +166,18 @@ const helpArticles = [
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    icon: Cloud,
+    color: "blue",
+    articles: [
+      {
+        title: "Cloud Migration Guide",
+        description: "Step-by-step guide to migrating to the cloud",
+        readTime: "12 min read",
+        type: "Guide",
+      },
+      {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
         title: "Cloud Security",
         description: "Best practices for securing your cloud infrastructure",
         readTime: "9 min read",
@@ -140,6 +185,7 @@ const helpArticles = [
       },
     ],
   },
+<<<<<<< HEAD
 =======
         title: 'Cloud Security',
         description: 'Best practices for securing your cloud infrastructure',
@@ -159,6 +205,8 @@ const helpArticles = [
     ]
   }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 ];
 const helpCategories = [
   {
@@ -166,6 +214,7 @@ const helpCategories = [
     title: "Getting Started",
     description: "New to our platform? Start here.",
     icon: BookOpen,
+<<<<<<< HEAD
 <<<<<<< HEAD
     color: "blue",
     articles: helpArticles,
@@ -202,12 +251,26 @@ export default function HelpPage() {;
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState('');
 >>>>>>> origin/automation-improvements-final
+=======
+    color: "blue",
+    articles: helpArticles,
+  },
+];
+
+export default function HelpPage() {
+<<<<<<< HEAD
+  const [searchTerm, setSearchTerm] = useState('');
+=======
+  const [searchTerm, setSearchTerm] = useState("");
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
 <<<<<<< HEAD
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -235,6 +298,18 @@ export default function HelpPage() {
     )
   })).filter(category => category.articles.length > 0);
 >>>>>>> origin/automation-improvements-final
+=======
+  const filteredCategories = helpCategories
+    .map((category) => ({
+      ...category,
+      articles: category.articles.filter(
+        (article) =>
+          article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          article.description.toLowerCase().includes(searchTerm.toLowerCase()),
+      ),
+    }))
+    .filter((category) => category.articles.length > 0);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

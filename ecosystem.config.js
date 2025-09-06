@@ -4,12 +4,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 module.exports = {;
   apps:[;
 =======
@@ -106,7 +114,14 @@ module.exports = {apps:[;
   ]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
+=======
+<<<<<<< HEAD
+},
+>>>>>>> origin/main
+export default {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -146,6 +161,7 @@ export default {
       error_file: 'logs/pm2/preview-error.log'
       out_file: 'logs/pm2/preview-out.log'
     }
+<<<<<<< HEAD
     {
       name: 'auto-fix'
       script: 'node'
@@ -305,6 +321,16 @@ export default {
       out_file: 'logs/pm2/syntax-fixer-out.log'
     }
   ]
+=======
+  ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 module.exports = {
   apps: [{
     name: "ziontechgroup-site"
@@ -330,6 +356,7 @@ module.exports = {
   }]
 <<<<<<< HEAD
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -444,3 +471,10 @@ module.exports = {;
 },;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

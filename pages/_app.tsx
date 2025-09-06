@@ -6,10 +6,28 @@ import type { AppProps } from 'next/app';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
-import '../src/styles/globals.css';
+import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+=======
+import Layout from '../components/layout/Layout';
+import '../styles/globals.css';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+import '../src/styles/globals.css';
+>>>>>>> origin/main
+
+export default function App({ Component, pageProps }: AppProps) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return <Component {...pageProps} />;
+import '../styles/globals.css';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -22,6 +40,7 @@ export default function App({ Component, pageProps }: AppProps) {
 =======
 import '../src/styles/globals.css';
 
+<<<<<<< HEAD
 export default function App({ Component, pageProps }: AppProps) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 return <Component {...pageProps} />;
@@ -97,3 +116,13 @@ export default function App({ Component, pageProps }: AppProps) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

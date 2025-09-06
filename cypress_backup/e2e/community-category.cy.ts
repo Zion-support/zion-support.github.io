@@ -13,6 +13,7 @@ describe('community category listing',() => { it('displays posts in Getting Hire
 <<<<<<< HEAD
 <<<<<<< HEAD
 });''
+<<<<<<< HEAD
 =======
 });''
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
@@ -49,3 +50,9 @@ describe('community category listing',() => { it('displays posts in Getting Hire
 });''
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+});''
+=======
+});''
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

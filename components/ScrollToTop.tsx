@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronUp } from 'lucide-react';
 =======
 <<<<<<< HEAD
@@ -12,6 +13,8 @@ import { ChevronUp } from 'lucide-react';
 import { ChevronUp } from 'lucide-react';
 export default function ScrollToTop() {
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 import { ChevronUp } from 'lucide-react';
 
@@ -26,10 +29,18 @@ export default function ScrollToTop() {;
 const ScrollToTop: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+import { ChevronUp } from 'lucide-react';
+
+export default function ScrollToTop() {
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const toggleVisibility = () => {
@@ -56,10 +67,14 @@ const ScrollToTop: React.FC = () => {
         setIsVisible(false)
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
         setIsVisible(true);
       } else {
         setIsVisible(false);      }
@@ -69,15 +84,20 @@ const ScrollToTop: React.FC = () => {
       } else {
         setIsVisible(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
       }
     };
 
     window.addEventListener('scroll', toggleVisibility);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     return () => window.removeEventListener('scroll', toggleVisibility);
@@ -85,6 +105,8 @@ const ScrollToTop: React.FC = () => {
     return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
     return () => window.removeEventListener('scroll', toggleVisibility);
 =======
@@ -94,6 +116,7 @@ const ScrollToTop: React.FC = () => {
     return () => window.removeEventListener('scroll', toggleVisibility)
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -111,9 +134,19 @@ const ScrollToTop: React.FC = () => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+    return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   }, []);
   const scrollToTop = () => {
     window.scrollTo({
+<<<<<<< HEAD
+=======
+      top: 0,
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
       top: 0,
 <<<<<<< HEAD
@@ -148,7 +181,12 @@ const ScrollToTop: React.FC = () => {
 }
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
       behavior: 'smooth',
 =======
       top: 0
@@ -272,6 +310,7 @@ export default ScrollToTop;
 };
 
 export default ScrollToTop;
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -305,3 +344,10 @@ export default ScrollToTop;
 export default ScrollToTop;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

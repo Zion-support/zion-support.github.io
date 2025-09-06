@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 <<<<<<< HEAD
 export function cn(...inputs: ClassValue[]) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export function cn(...inputs: ClassValue[]) {;
@@ -13,6 +14,8 @@ export function cn(...inputs: ClassValue[]) {;
   return twMerge(clsx(inputs));}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   return twMerge(clsx(inputs));
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +25,7 @@ export function cn(...inputs: ClassValue[]) {;
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======
 }
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 
 =======
@@ -67,6 +71,11 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 =======
 =======
 }
+=======
+=======
+  return twMerge(clsx(inputs));}
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 export function formatDate(date: Date | string | number): string {
   return new Intl.DateTimeFormat("en-US", {
@@ -107,5 +116,15 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 
 };
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+},
+
+
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

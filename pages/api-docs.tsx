@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
@@ -12,6 +13,10 @@ import React from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import { motion } from 'framer-motion';
 =======
 import React from 'react';
@@ -68,7 +73,10 @@ const apiEndpoints = [
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -76,7 +84,10 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 >>>>>>> origin/main
@@ -87,9 +98,13 @@ import Layout from '../components/Layout';
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function APIDocsPage() {
+=======
+export default function ApiDocsPage() {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
       <Head>
+<<<<<<< HEAD
         <title>API Documentation - Zion Tech Group | Developer Resources</title>
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />
         <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />
@@ -101,6 +116,14 @@ export default function APIDocsPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+        <title>API Docs | Zion Tech Group</title>
+<<<<<<< HEAD
+        <meta name='description' content='API reference and guides.' />
+        <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+      </Head>
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 >>>>>>> origin/main
@@ -217,8 +240,11 @@ export default function APIDocsPage() {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
@@ -232,8 +258,13 @@ export default function APIDocsPage() {
       </div>
     </Layout>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+  );
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   );
 }
 import Layout from '../components/Layout';
@@ -255,8 +286,14 @@ export default function ApiDocsPage() {
       <Head>
         <title>API Docs | Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta name='description' content='API reference and guides.' />
 <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+=======
+        <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+      </Head>
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 <<<<<<< HEAD
         <meta name='description' content='API reference and guides.' />
@@ -316,6 +353,7 @@ export default function ApiDocsPage() {
     </>
   )
 }
+<<<<<<< HEAD
 
 }
 =======
@@ -345,3 +383,9 @@ export default function ApiDocsPage(req, res) {
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

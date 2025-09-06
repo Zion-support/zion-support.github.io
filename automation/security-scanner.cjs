@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -237,9 +241,14 @@ if (require.main === module) {}
 module.exports = SecurityScanner;
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -307,6 +316,10 @@ class SecurityScanner {
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -604,7 +617,29 @@ runSecurityCheck('Environment Security', () => {
       items.forEach(item => {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
+=======
+=======
+  async runSecurityScan() {
+    const securityChecks = [
+      { name: 'NPM Audit', command: 'npm audit', description: 'Checking for vulnerable dependencies' },
+      { name: 'Security Fix', command: 'npm audit fix --force', description: 'Fixing security vulnerabilities' },
+      { name: 'Dependency Check', command: 'npm outdated', description: 'Checking for outdated dependencies' },
+      { name: 'License Check', command: 'npm audit --audit-level moderate', description: 'Checking license compliance' }
+    ];
+
+    const results = [];
+    let passedChecks = 0;
+
+    for (const check of securityChecks) {
+      try {
+        this.log(`🔍 Running ${check.name}...`);
+        this.log(`📝 ${check.description}`);
+        
+        execSync(check.command, { stdio: 'pipe' });
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
         
         console.log(`✅ ${check.name} completed successfully`);
         results.push({ 
@@ -626,7 +661,10 @@ runSecurityCheck('Environment Security', () => {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   async setupSecurityHeaders() {
     this.log('\n🛡️ SETTING UP SECURITY HEADERS');
     
@@ -838,9 +876,14 @@ runSecurityCheck('HTTPS Configuration', () => {
     
     // Save detailed report
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     const report = {
       timestamp: new Date().toISOString(),
       totalDuration,
@@ -854,6 +897,7 @@ runSecurityCheck('HTTPS Configuration', () => {
       }
     };
     
+<<<<<<< HEAD
     fs.writeFileSync(
       'security-scanner-report.json',
       JSON.stringify(report, null, 2)
@@ -880,6 +924,9 @@ const scanner = new SecurityScanner();
 scanner.runSecurityScan().catch(console.error);
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     try {
       await this.auditDependencies();
       await this.scanCodeSecurity();
@@ -1023,13 +1070,26 @@ if (require.main === module) {
 module.exports = SecurityScanner;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+=======
+    this.log(`📊 Security scan completed! Report saved to: ${reportPath}`);
+    this.log(`🔒 Security Score: ${report.securityScore}% (${passedChecks}/${securityChecks.length} checks passed)`);
+    
+    return report;
+  }
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 // Run security scan
 const scanner = new SecurityScanner();
 scanner.runSecurityScan().catch(console.error);
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

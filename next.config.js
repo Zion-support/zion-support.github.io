@@ -8,6 +8,11 @@ const nextConfig = {
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   
   // Performance optimizations
   experimental: {
@@ -17,11 +22,19 @@ const nextConfig = {
   },
   
   // Image optimization
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   images: {
     unoptimized: true,
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+<<<<<<< HEAD
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000, // 1 year
     dangerouslyAllowSVG: true,
@@ -30,6 +43,33 @@ const nextConfig = {
   
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+<<<<<<< HEAD
+    minimumCacheTTL: 31536000, // 1 year
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+=======
+    minimumCacheTTL: 31536000,
+>>>>>>> origin/resolved-all-conflicts-clean
+=======
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000,
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   },
   
   // Webpack configuration to exclude problematic directories

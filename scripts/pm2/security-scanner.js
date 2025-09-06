@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -928,6 +929,11 @@ class SecurityScanner {;
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/security-report.json');
     this.startTime = Date.now();
 };
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
@@ -1450,6 +1456,7 @@ scanner.run().catch(error = > {; process.exit(1)}));}),);
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }),);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1473,3 +1480,5 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

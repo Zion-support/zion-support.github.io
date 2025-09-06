@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 /* eslint-env node */
@@ -16,6 +17,8 @@ module.exports = {
   plugins: ["@typescript-eslint"],
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -149,9 +152,26 @@ module.exports = {
     node: true,
     es2021: true
   },
+<<<<<<< HEAD
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
+=======
+  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+=======
+/* eslint-env node */
+module.exports = {
+  env: {
+    node: true,
+    es2021: true,
+  },
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   rules: {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
@@ -163,7 +183,10 @@ module.exports = {
     "@next/next/no-img-element": "off"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -335,6 +358,7 @@ module.exports = {
   extends: ['next/core-web-vitals'],
 >>>>>>> origin/automation-improvements-final
   rules: {
+<<<<<<< HEAD
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "react-hooks/exhaustive-deps": "warn",
@@ -345,6 +369,21 @@ module.exports = {
     "@next/next/no-img-element": "off"
   },
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    'react/no-unescaped-entities': 'off',
+    'no-unused-vars': 'warn',
+    '@next/next/no-img-element': 'warn'
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+};
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   ignorePatterns: [
     "node_modules/",
     ".next/",
@@ -515,6 +554,7 @@ module.exports = {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 };
@@ -574,3 +614,6 @@ module.exports = {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

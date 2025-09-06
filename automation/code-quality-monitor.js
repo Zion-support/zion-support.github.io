@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -52,7 +56,12 @@ class CodeQualityMonitor {
 <<<<<<< HEAD
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 #!/usr/bin/env node;
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -74,7 +83,10 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, ma
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 class CodeQualityMonitor {;
   constructor() {;
@@ -357,6 +369,7 @@ class CodeQualityMonitor {,
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 const fs = require("fs");
@@ -424,3 +437,7 @@ class CodeQualityMonitor {,;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

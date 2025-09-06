@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
@@ -20,13 +24,20 @@
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/main
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
@@ -51,6 +62,7 @@ export function securityMiddleware(request) {;
   }
 <<<<<<< HEAD
   
+<<<<<<< HEAD
   return response;
 }
 <<<<<<< HEAD
@@ -70,7 +82,14 @@ export function securityMiddleware(request) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+<<<<<<< HEAD
+  return response;
+=======
+// Security headers middleware
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
   return response;// Security headers middleware
+>>>>>>> origin/main
 export function securityHeaders(req, res, next) {
   Object.entries({
 <<<<<<< HEAD
@@ -94,12 +113,15 @@ export function securityHeaders(req, res, next) {
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -108,6 +130,7 @@ export function securityHeaders(req, res, next) {
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 }
@@ -117,3 +140,7 @@ export function securityHeaders(req, res, next) {
 
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

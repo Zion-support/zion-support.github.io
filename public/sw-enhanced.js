@@ -1,5 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 event.respondWith(handleOtherRequest(request))}});
+>>>>>>> origin/main
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -18,6 +25,8 @@ event.respondWith(handleOtherRequest(request))}});
 =======
 >>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 const CACHE_NAME = 'zion-tech-group-v1'';;
 const STATIC_CACHE = 'static-v1'';;
 const DYNAMIC_CACHE = 'dynamic-v1'';;
@@ -114,6 +123,7 @@ self.addEventListener('fetch', (event) => {';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -128,6 +138,13 @@ event.respondWith(handleOtherRequest(request))}});
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+event.respondWith(handleOtherRequest(request))}});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 // Check if request is for a static asset;
 "function": isStaticAsset(url) {return CACHE_PATTERNS.some(pattern = > pattern.test(url))}; cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {console.error('Service "Worker": Error: handling static asset, ', error)'; "return": new Response('Asset not available', { "status": 404})}'}
 // "Handle": page requests;
@@ -145,7 +162,19 @@ self.addEventListener('sync', (event) = > {'; "if": (event.tag = = = 'background
 // "Notification": click;
 self.addEventListener('notificationclick', (event) = > {'; event.notification.close(); "if": (event.action = = = 'explore') {'; event.waitUntil(; clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
+<<<<<<< HEAD
 async: function getPendingSubmissions() {// In a real app, you would store these in IndexedDB; "return": []}
+=======
+async: function getPendingSubmissions() {; // In a real app, you would store these in IndexedDB; "return": []};
+<<<<<<< HEAD
+;
+=======
+    event.respondWith(handleOtherRequest(request))};
+=======
+>>>>>>> origin/main
+<<<<<<< HEAD
+;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 });
 // Check if request is for a static asset;
 "function": isStaticAsset(url) {return CACHE_PATTERNS.some(pattern => pattern.test(url))}
@@ -236,12 +265,15 @@ self.addEventListener('notificationclick', (event) => {';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 async: function getPendingSubmissions() {;
 <<<<<<< HEAD
   // In a real app, you would store these in IndexedDB;    event.waitUntil(,      self.registration.showNotification(data.title, options))}),
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 async: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB;
 <<<<<<< HEAD
@@ -321,6 +353,7 @@ self.addEventListener('sync', (event) => {',
     event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> origin/automation-improvements-final
@@ -330,6 +363,12 @@ self.addEventListener('sync', (event) => {',
     event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+async: function getPendingSubmissions() {;
+  // In a real app, you would store these in IndexedDB;    event.waitUntil(,      self.registration.showNotification(data.title, options))}),
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 // "Notification": click,
 =======
 ;// "Notification": click,
@@ -386,8 +425,11 @@ const CACHE_NAME = 'zion-tech-group-v1'';; const STATIC_CACHE = 'static-v1'';; c
 ;  "return": []};
   "return": []};
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -397,6 +439,7 @@ const CACHE_NAME = 'zion-tech-group-v1'';; const STATIC_CACHE = 'static-v1'';; c
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -488,3 +531,7 @@ asyn: c: function getPendingSubmissions() {,;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

@@ -162,12 +162,15 @@ declare global {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/main
 =======
 <<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 }
     gtag: (...args: unknown[]) => void, dataLayer: unknown[],
   }
@@ -180,8 +183,14 @@ export const trackEvent = ( eventName: 'string',properties?: Record<string,strin
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+}
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

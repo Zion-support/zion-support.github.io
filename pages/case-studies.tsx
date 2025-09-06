@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -13,6 +14,13 @@ import React from 'react';
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
@@ -550,8 +558,19 @@ export default function CaseStudiesPage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </MainLayout>;
   );
+=======
+    </MainLayout>
+<<<<<<< HEAD
+=======
+import Head from 'next/head';
+=======
+  );
+>>>>>>> origin/main
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 }
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -575,7 +594,12 @@ export default function CaseStudiesPage() {
           Proven outcomes and detailed success stories. Coming soon.
         </p>
       </section>
+<<<<<<< HEAD
     </Layout>;
+=======
+    </Layout>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   );
 
  </Head> </section> </Layout>
@@ -601,6 +625,7 @@ export default function CaseStudiesPage() {
 	)
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 }
@@ -632,3 +657,9 @@ export default function CaseStudiesPage(req, res) {
 ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

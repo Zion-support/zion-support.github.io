@@ -41,6 +41,7 @@ import {
   Zap,
   Globe,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -49,6 +50,8 @@ import {
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
   BarChart3,
   Search
@@ -60,6 +63,7 @@ import SearchModal from './SearchModal';
   BarChart3
 } from 'lucide-react;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
@@ -102,6 +106,15 @@ import SearchModal from "./SearchModal";
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+  BarChart3,
+  Search,
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+>>>>>>> origin/main
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 export default function Navigation() {
 =======
 export default function Navigation() {;
@@ -536,10 +549,15 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 =======
 >>>>>>> origin/main
@@ -560,8 +578,14 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               >
                 <Search className="w-5 h-5" />
               </button>
+<<<<<<< HEAD
               <Link
                 href="/contact"
+=======
+<<<<<<< HEAD
+              <Link 
+                href="/contact" 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
 <<<<<<< HEAD
 =======
@@ -573,10 +597,18 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+              <Link
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               >
                 Get Started
               </Link>

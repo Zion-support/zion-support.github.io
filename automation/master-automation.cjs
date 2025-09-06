@@ -3,10 +3,14 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
@@ -24,12 +28,17 @@ const { execSync } = require('child_process');
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -40,10 +49,14 @@ class MasterAutomation {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   log(message) {
 class MasterAutomation {}
   constructor() {}
@@ -76,7 +89,10 @@ class MasterAutomation {}
 <<<<<<< HEAD
   async runCommand(command, options = {}) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 
   ensureLogsDir() {
@@ -98,6 +114,7 @@ class MasterAutomation {}
   async runCommand(command, description) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
@@ -106,6 +123,8 @@ class MasterAutomation {}
 
   async runCommand(command, description) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -115,6 +134,7 @@ class MasterAutomation {}
       });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,6 +142,16 @@ class MasterAutomation {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+    try {
+      const { stdout, stderr } = await execAsync(command, { 
+        cwd: process.cwd(), 
+        timeout: 30000, 
+        ...options 
+      });
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -211,7 +241,10 @@ class MasterAutomation {}
         this.log(`Error parsing PM2 process list: ${error.message}`);
         return [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
@@ -248,6 +281,7 @@ class MasterAutomation {}
         this.log(`❌ Build process failed at: ${step.description}`, 'error');
         return { success: false, results };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -256,12 +290,16 @@ class MasterAutomation {}
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
       }
     }
 
     this.log('✅ Build process completed successfully');
     return { success: true, results };
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -271,6 +309,16 @@ class MasterAutomation {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+      }
+    } else {
+      this.log("Failed to get PM2 process list");
+      return [];
+    }
+  }
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   async performHealthCheck() {
     this.log("Performing health check.");
     // Check if PM2 is running
@@ -402,12 +450,76 @@ class MasterAutomation {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    }
+
+    this.log('✅ Quality checks completed');
+    return { success: true, results };
+  }
+
+  async runAutomationScripts() {
+    this.log('🤖 Running automation scripts...');
+
+    const scripts = [
+      {
+        command: 'node automation/ai-intelligent-code-analyzer.cjs',
+        description: 'AI Code Analyzer',
+      },
+      {
+        command: 'node automation/intelligent-git-workflow.cjs',
+        description: 'Git Workflow Automation',
+      },
+      {
+        command: 'node automation/advanced-performance-optimizer.cjs',
+        description: 'Performance Optimizer',
+      },
+      {
+        command: 'node automation/automated-test-runner.cjs',
+        description: 'Automated Test Runner',
+      },
+      {
+        command: 'node automation/security-auditor.cjs',
+        description: 'Security Auditor',
+      },
+      {
+        command: 'node automation/performance-monitor.cjs',
+        description: 'Performance Monitor',
+      },
+    ];
+
+    const results = [];
+    for (const script of scripts) {
+      const result = await this.runCommand(script.command, script.description);
+      results.push({ ...script, result });
+    }
+
+    this.log('✅ Automation scripts completed');
+    return { success: true, results };
+  }
+  async generateReport() {
+    this.log('📊 Generating automation report...');
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      build: await this.runBuildProcess(),
+      quality: await this.runQualityChecks(),
+      automation: await this.runAutomationScripts(),
+      summary: {
+        totalScripts: 6,
+        successfulScripts: 0,
+        failedScripts: 0,
+      },
+    };
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     }
 
     this.log('✅ Quality checks completed');
@@ -470,6 +582,7 @@ class MasterAutomation {}
     };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -477,6 +590,9 @@ class MasterAutomation {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -521,12 +637,23 @@ class MasterAutomation {}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+    this.log(`📄 Report saved to: ${reportFile}`);
+    return report;
+  }
+  async start() {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report saved to: ${reportFile}`);
@@ -536,6 +663,7 @@ class MasterAutomation {}
   async start() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -543,6 +671,9 @@ class MasterAutomation {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     this.log("Master Automation started");
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, "logs");
@@ -627,7 +758,10 @@ class MasterAutomation {}
 <<<<<<< HEAD
 // Handle command line arguments
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
     this.log('🎯 Starting Master Automation System...');
     const report = await this.generateReport();
@@ -683,6 +817,7 @@ class MasterAutomation {}
 // CLI interface
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
@@ -691,6 +826,10 @@ class MasterAutomation {}
 
 // CLI interface
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
@@ -701,10 +840,14 @@ if (require.main === module) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
@@ -757,9 +900,22 @@ if (require.main === module) {}
       }
 });
       break;
+<<<<<<< HEAD
+    case "report":
+      automation.generateReport().catch(error => {
+        console.error("Failed to generate report: ", error);
+    case 'report':
+      automation.generateReport().catch(error => {})
+        console.error('Failed to generate report: ', error);
+        process.exit(1);
+      }
+});
+      break;
     default: 
-      console.log('Usage: node master-automation.cjs [start|status]');
+    default:
+      console.log("Usage: node master-automation.js [start|stop|restart|status|report]");
       process.exit(1);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -789,6 +945,8 @@ if (require.main === module) {}
 module.exports = MasterAutomation;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
     case 'start':
       automation
@@ -821,16 +979,29 @@ module.exports = MasterAutomation;
 module.exports = MasterAutomation;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+    default: 
+      console.log('Usage: node master-automation.cjs [start|status]');
+      process.exit(1);
+      break;
+  }
+}
+module.exports = MasterAutomation;
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
       process.exit(1);
   };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = MasterAutomation;
 =======
@@ -844,3 +1015,11 @@ module.exports = MasterAutomation;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+module.exports = MasterAutomation;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+module.exports = MasterAutomation;
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

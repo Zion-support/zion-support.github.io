@@ -13,6 +13,7 @@ import Head from 'next/head';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
@@ -23,6 +24,9 @@ import Head from 'next/head';
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
@@ -107,6 +111,11 @@ const categories = [
 const ProductsIndex: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   const filteredProducts = products.filter(product => {
     const matchesCategory = selectedCategory === 'All' |product.category === selectedCategory;
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) |
@@ -114,6 +123,7 @@ const ProductsIndex: NextPage = () => {
                          product.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -140,6 +150,29 @@ const ProductsIndex: NextPage = () => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+const Index: NextPage = () => {
+  return (
+<<<<<<< HEAD
+=======
+
+  const filteredProducts = products.filter(product => {
+    const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  return (
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -330,10 +363,13 @@ const ProductsIndex: NextPage = () => {
     </Layout>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 };
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
@@ -369,7 +405,24 @@ import Head from 'next/head';
       </main>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+};
+
+export default Index;
+=======
+=======
+  );
+};
+
+<<<<<<< HEAD
+export default ProductsIndex;
+>>>>>>> origin/main
+  )
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -382,6 +435,7 @@ import Head from 'next/head';
 };
 
 export default Index;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -401,3 +455,8 @@ export default Index;
 export default Index,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

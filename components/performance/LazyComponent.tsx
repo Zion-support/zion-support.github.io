@@ -1,5 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React, { lazy, Suspense } from 'react';
+
+interface LazyComponentProps {
+  component: () => Promise<{ default: React.ComponentType<any> }>;
+  fallback?: React.ReactNode;
+  [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps> = ({
+  component,
+  fallback = <div>Loading...</div>,
+  ...props
+}) => {
+  const LazyLoadedComponent = lazy(component);
+  return (
+    <Suspense fallback={fallback}>
+      <LazyLoadedComponent {...props} />
+=======
+import React from 'react'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 };
 import React, { Suspense, lazy } from 'react';
 
@@ -30,9 +52,18 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
   return (
     <Suspense fallback={fallback}>
       <Component {...props} />
+>>>>>>> origin/main
     </Suspense>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+export default LazyComponent;
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 export default LazyComponent;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,6 +83,11 @@ import React from 'react';
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

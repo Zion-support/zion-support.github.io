@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node
@@ -178,6 +179,8 @@ if (masterReport.summary.failed > 0) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -188,6 +191,7 @@ console.log('=====')
       "encoding"
       "stdio"
 const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
+<<<<<<< HEAD
 <<<<<<< HEAD
   console.log('\n "Recommendations")
 =======
@@ -201,3 +205,6 @@ const metricsResult = runCommand('Metrics Generation', 'echo "Generating final m
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+  console.log('\n "Recommendations")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

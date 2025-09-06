@@ -3,11 +3,14 @@ const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{"; lo
 const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceEnhancer' ,'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 </p>'
 =======
@@ -15,6 +18,7 @@ const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{'; "l
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 </p>'
@@ -25,3 +29,8 @@ const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{'; "l
 </p>'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+</p>'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

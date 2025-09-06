@@ -1,5 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname); 
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+function fixTypeScriptFiles(dir) {
+  if (!fs.existsSync(dir)) return;
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 ;
 <<<<<<< HEAD
@@ -23,6 +35,7 @@ function fixTypeScriptFiles(dir) {,;
       } catch (error) {,;
 ;
         console.log(`Error processing ${fullPath} ${error.message}`)};  if (!fs.existsSync(dir)) return;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname); 
@@ -43,6 +56,8 @@ function fixTypeScriptFiles(dir) {
 const fs = require('fs');
 const path = require('path');
 function fixTypeScriptFiles(dir) {if (!fs.existsSync(dir)) return;
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 >>>>>>> origin/main
   const items = fs.readdirSync(dir);
   items.forEach(item => {;
@@ -51,8 +66,14 @@ function fixTypeScriptFiles(dir) {if (!fs.existsSync(dir)) return;
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
       fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') |item.endsWith('.tsx')) {try {;
         const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
         if (content.trim() === '' |!content.includes('export') && !content.includes('import')) {;
           console.log(`Fixing "file":${fullPath}`);
+=======
+        if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {;
+          console.log(`Fixing "file": ${fullPath}`);
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}
       } catch (error) {console.log(`Error processing ${fullPath} ${error.message}`)};  if (!fs.existsSync(dir)) return;
   const items = fs.readdirSync(dir);
@@ -107,11 +128,25 @@ function fixTypeScriptFiles(dir) {if (!fs.existsSync(dir)) return;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 #!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ,
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+          fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
+      } catch (error) {;        console.log(`Error processing ${fullPath}: ${error.message}`)};
+        // console.log(`Error processing ${fullPath}: ${error.message}`)};
+          
+          fs.writeFileSync(fullPath, _'// Auto-generated module\nexport {};')};
+      } catch (error) {_;};
+};
+  })};
+;#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ,
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
@@ -135,18 +170,24 @@ function fixTypeScriptFiles(dir) {,
   })};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
   })};
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' || !content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' || !content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
 <<<<<<< HEAD
 =======
   })};
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -249,3 +290,6 @@ console.log('✅ All TypeScript files fixed!');
   })};
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

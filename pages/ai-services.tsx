@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,17 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react";
 import Layout from "../components/Layout";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import Layout from '../components/Layout';
+
+=======
+import React from "react";
+import Layout from "../components/Layout";
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 export default function AIServices() {
   return (
 <Layout
@@ -83,7 +95,10 @@ export default function AIServices() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import Link from 'next/link';
 import Head from 'next/head';
@@ -689,7 +704,12 @@ export default function AIServicesPage() {
   )
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 }
 =======
 }

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ import Link from 'next/link';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -339,6 +342,7 @@ type: 'info'
 content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.';
 type: 'info' 
 }];
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 
 =======
@@ -351,6 +355,18 @@ export default function Terms() {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/main
+
+export default function Terms() {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     site: 'https://ziontechgroup.com'
   }
   return (
@@ -361,15 +377,24 @@ export default function Terms() {
         <meta name="keywords" content="terms of service, terms and conditions, legal, zion tech group" />
         <link rel="canonical" href={`${contact.site}/terms`} />
       </Head>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         <div className="max-w-4xl mx-auto py-20 px-4">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8">
             Terms of Service
           </h1>
+<<<<<<< HEAD
+=======
+          
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
           <div className="prose prose-invert max-w-none">
             <p className="text-lg text-slate-300 mb-8">
               Last updated: {new Date().toLocaleDateString()}
             </p>
+<<<<<<< HEAD
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">1. Acceptance of Terms</h2>
               <p className="text-slate-300 mb-4">
@@ -381,6 +406,21 @@ export default function Terms() {
               <h2 className="text-2xl font-bold mb-4 text-blue-400">2. Use License</h2>
               <p className="text-slate-300 mb-4">
                 Permission is granted to temporarily download one copy of Zion Tech Group&apos;s services for personal
+=======
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">1. Acceptance of Terms</h2>
+              <p className="text-slate-300 mb-4">
+                By accessing and using Zion Tech Group&apos;s services, you accept and agree to be bound by the terms 
+                and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">2. Use License</h2>
+              <p className="text-slate-300 mb-4">
+                Permission is granted to temporarily download one copy of Zion Tech Group&apos;s services for personal, 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
               </p>
               <ul className="list-disc list-inside text-slate-300 mb-4 space-y-2">
@@ -390,6 +430,7 @@ export default function Terms() {
                 <li>remove any copyright or other proprietary notations from the materials</li>
               </ul>
             </section>
+<<<<<<< HEAD
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">3. Service Availability</h2>
               <p className="text-slate-300 mb-4">
@@ -397,6 +438,17 @@ export default function Terms() {
                 We reserve the right to modify, suspend, or discontinue any service at any time without notice.
               </p>
             </section>
+=======
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">3. Service Availability</h2>
+              <p className="text-slate-300 mb-4">
+                Zion Tech Group strives to maintain high service availability but does not guarantee uninterrupted access. 
+                We reserve the right to modify, suspend, or discontinue any service at any time without notice.
+              </p>
+            </section>
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">4. User Responsibilities</h2>
               <p className="text-slate-300 mb-4">
@@ -409,6 +461,7 @@ export default function Terms() {
                 <li>Not using the services for any unlawful or prohibited purpose</li>
               </ul>
             </section>
+<<<<<<< HEAD
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">5. Payment Terms</h2>
               <p className="text-slate-300 mb-4">
@@ -425,12 +478,37 @@ export default function Terms() {
                 orally or in writing of the possibility of such damage.
               </p>
             </section>
+=======
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">5. Payment Terms</h2>
+              <p className="text-slate-300 mb-4">
+                Payment terms vary by service. All fees are non-refundable unless otherwise specified. 
+                We reserve the right to change our pricing with 30 days notice to existing customers.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">6. Limitation of Liability</h2>
+              <p className="text-slate-300 mb-4">
+                In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, 
+                damages for loss of data or profit, or due to business interruption) arising out of the use or inability 
+                to use the services, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified 
+                orally or in writing of the possibility of such damage.
+              </p>
+            </section>
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">7. Privacy Policy</h2>
               <p className="text-slate-300 mb-4">
                 Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the services.
               </p>
             </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">8. Contact Information</h2>
               <p className="text-slate-300 mb-4">
@@ -448,11 +526,18 @@ export default function Terms() {
                 </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               </div>
             </section>
           </div>
+=======
+              </div>
+            </section>
+          </div>
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
           <div className="mt-12 text-center">
             <Link href="/" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
               Back to Home
@@ -2749,6 +2834,7 @@ export default function Terms(req, res) {
                   </div>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -2756,12 +2842,18 @@ export default function Terms(req, res) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               </div>
-            </motion.div>
+            </section>
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 
           <div className="mt-12 text-center">
@@ -2918,6 +3010,7 @@ export default TermsPage;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 }> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>) 
@@ -3031,3 +3124,10 @@ export default Terms,;
 export default TermsPage;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+}> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>) 
+};export default TermsPage;
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

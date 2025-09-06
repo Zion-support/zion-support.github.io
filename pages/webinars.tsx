@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import SEO from '../components/SEO',;
 =======
@@ -48,6 +49,11 @@ export default function WebinarsPage() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+import React from 'react',;
+import SEO from '../components/SEO',;
+export default function WebinarsPage() {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 	return (
 		<>
 			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />
@@ -60,6 +66,7 @@ export default function WebinarsPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -82,3 +89,5 @@ export default function WebinarsPage() {
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

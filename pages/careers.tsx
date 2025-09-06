@@ -1,9 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
@@ -22,6 +31,9 @@ import { motion } from "framer-motion";
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import {
 <<<<<<< HEAD
   Users
@@ -134,6 +146,7 @@ const benefits = [
       "Comprehensive health insurance, mental health support, and wellness programs"
   }
   {
+<<<<<<< HEAD
     icon: DollarSign
     title: "Competitive Compensation"
     description:
@@ -142,6 +155,39 @@ const benefits = [
   {
     icon: GraduationCap
     title: "Learning & Development"
+=======
+    icon: DollarSign,
+    title: "Competitive Compensation",
+<<<<<<< HEAD
+    description: "Competitive salaries, performance bonuses, and equity participation"
+=======
+    description:
+      "Competitive salaries, performance bonuses, and equity participation",
+>>>>>>> origin/main
+  },
+  {
+    icon: GraduationCap,
+    title: "Learning & Development",
+<<<<<<< HEAD
+    description: "Professional development budget, conference attendance, and training programs"
+  },
+  {
+    icon: Globe,
+    title: "Flexible Work",
+    description: "Remote work options, flexible hours, and work-life balance"
+  },
+  {
+    icon: Coffee,
+    title: "Great Culture",
+    description: "Collaborative environment, team events, and inclusive workplace"
+  },
+  {
+    icon: Award,
+    title: "Career Growth",
+    description: "Clear career paths, mentorship programs, and advancement opportunities"
+  }
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     description:
       "Professional development budget, conference attendance, and training programs"
   }
@@ -160,12 +206,38 @@ const benefits = [
     icon: Award
     title: "Career Growth"
     description:
+<<<<<<< HEAD
       "Clear career paths, mentorship programs, and advancement opportunities"
   }
+=======
+      "Clear career paths, mentorship programs, and advancement opportunities",
+  },
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 ];
 const values = [
   {
+<<<<<<< HEAD
     title: "Innovation"
+=======
+    title: "Innovation",
+<<<<<<< HEAD
+    description: "We encourage creative thinking and embrace new technologies to solve complex problems."
+  },
+  {
+    title: "Collaboration",
+    description: "We believe in the power of teamwork and open communication across all levels."
+  },
+  {
+    title: "Excellence",
+    description: "We strive for the highest quality in everything we do and continuously improve."
+  },
+  {
+    title: "Integrity",
+    description: "We conduct business with honesty, transparency, and ethical practices."
+  }
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     description:
       "We encourage creative thinking and embrace new technologies to solve complex problems."
   }
@@ -182,8 +254,14 @@ const values = [
   {
     title: "Integrity"
     description:
+<<<<<<< HEAD
       "We conduct business with honesty, transparency, and ethical practices."
   }
+=======
+      "We conduct business with honesty, transparency, and ethical practices.",
+  },
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 ];
 <<<<<<< HEAD
 export default function CareersPage() {
@@ -216,7 +294,10 @@ const Careers: React.FC<CareersProps> = ({ className }) => {
               className="text-center"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -230,10 +311,30 @@ export default function CareersPage() {
             <div className="text-center text-white">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Careers
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Join our team of innovative developers, engineers, and designers
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+<<<<<<< HEAD
+    </MainLayout>
+=======
+    </Layout>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Join Our{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -476,6 +577,7 @@ export default function CareersPage() {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </MainLayout>
 =======
 <<<<<<< HEAD
@@ -493,3 +595,9 @@ export default function CareersPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
+=======
+    </MainLayout>
+  );
+}
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

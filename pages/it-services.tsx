@@ -1,15 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link',
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import React from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -18,6 +24,11 @@ import { motion } from 'framer-motion';
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import {
 <<<<<<< HEAD
   Server
@@ -112,6 +123,11 @@ const itServices = [{
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response'],
     pricing: '$5,000 - $40,000/project',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     category: 'Security',
 =======
     title: 'Cybersecurity Solutions'
@@ -704,6 +720,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -711,6 +728,9 @@ import { motion } from 'framer-motion';
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import { 
   Server, 
   Shield, 
@@ -819,6 +839,7 @@ const itServices = [
     features: ['Security Assessment', 'Threat Monitoring', 'Incident Response', 'Compliance'],
     pricing: '$1,500 - $8,000/month',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -826,6 +847,9 @@ const itServices = [
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     category: 'Security',
     popular: true,
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
@@ -1158,6 +1182,234 @@ export default function ITServices() {;
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                  <Head>
+                  <title>IT Services - Zion Tech Group</title>
+                  <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and system administration." />
+                  <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, network management, system administration" />
+                  </Head>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
+<div className="absolute inset-0">
+                  <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+                  </div>
+                  <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
+                  </div>
+                  </div>
+                  <div className="container mx-auto px-4 relative z-10">
+                  <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+<div className="flex items-center justify-center mb-6">
+                  <Server className="h-16 w-16 text-green-400 mr-4" />
+                  <h1 className="text-4xl md:text-6xl font-bold">
+                IT{' '}
+                <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                  Services
+                </span>
+</h1>
+                  </div>
+                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Comprehensive IT solutions to keep your business running smoothly. From cloud infrastructure to cybersecurity, we&apos;ve got you covered.
+            </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Get IT Consultation
+              </Link>
+                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                View All Services
+              </Link>
+                  </div>
+                  </motion.div>
+                  </div>
+                  </section>
+      {/* Services Grid */}
+      <section className="py-20 bg-gray-50">
+                  <div className="container mx-auto px-4">
+                  <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our IT Solutions
+            </h2>
+                  <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              End-to-end IT services designed to optimize your infrastructure and ensure business continuity.
+            </p>
+                  </motion.div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {itServices.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <motion.div
+                  key={index}
+className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+whileHover={{ y: -5 }} ">
+                  <div className="flex items-center justify-between mb-4">
+                  <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
+                  <IconComponent className="w-10 h-10" />
+                  </div>
+                  <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">
+                      {service.category}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <div className="mb-4">
+<h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
+                  <ul className="space-y-1">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
+                  <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="mb-4">
+                  <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
+                  </div>
+                  <Link
+                    href="/contact"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                  >
+                    <span>Get Quote</span>
+                  <ArrowRight className="w-3 h-3 ml-1" />
+                  </Link>
+                  </motion.div>
+              );
+            })}
+          </div>
+                  </div>
+                  </section>
+      {/* Technologies Section */}
+      <section className="py-20 bg-white">
+                  <div className="container mx-auto px-4">
+                  <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Technologies We Work With</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We leverage cutting-edge technologies to deliver robust IT solutions.
+            </p>
+                  </motion.div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index) => {
+              const IconComponent = tech.icon;
+              return (
+                <motion.div
+                  key={index}
+className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <IconComponent className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {tech.name}
+                  </h3>
+                  <p className="text-gray-600">
+                    {tech.description}
+                  </p>
+                  </motion.div>
+              );
+            })}
+          </div>
+                  </div>
+                  </section>
+      {/* Benefits Section */}
+      <section className="py-20 bg-gray-50">
+                  <div className="container mx-auto px-4">
+                  <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Proven expertise and measurable results for your technology infrastructure.
+            </p>
+                  </motion.div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => {
+              const IconComponent = benefit.icon;
+              return (
+                <motion.div
+                  key={index}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <IconComponent className="w-8 h-8 text-green-600" />
+                  </div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">
+                    {benefit.stat}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {benefit.description}
+                  </p>
+                  </motion.div>
+              );
+            })}
+          </div>
+                  </div>
+                  </section>
+      {/* Support Levels Section */}
+      <section className="py-20 bg-white">
+                  <div className="container mx-auto px-4">
+                  <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Support Levels</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Choose the support level that best fits your business needs.
+            </p>
+                  </motion.div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {supportLevels.map((level, index) => (
+              <motion.div
+                key={index}
+                className={`p-8 rounded-xl shadow-lg ${
+                  index === 1 ? 'bg-green-50 border-2 border-green-200' : 'bg-white'
+                }`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     <Layout>
 <<<<<<< HEAD
 =======
@@ -1350,7 +1602,155 @@ export default function ITServices(req, res) {
           {/* Hero Section */}
           <section className='py-20 px-4 text-center' role='banner'>
             <div className='max-w-4xl mx-auto'>
+<<<<<<< HEAD
+              <h1
+=======
+      description: 'Expert guidance on quantum computing implementation and optimization for enterprise applications.',
+      category: 'quantum',
+      features: ['Quantum Algorithm DesignHardware SelectionPerformance OptimizationSecurity Implementation'],
+      price: 'Custom Pricing',
+      popular: true,
+      benefits: ['Exponential SpeedupAdvanced CryptographyOptimization SolutionsFuture-Proof Technology']
+    };
+    {
+      id: 2,
+      name: 'Blockchain & Web3 Solutions',
+      description: 'Comprehensive blockchain development and Web3 integration services for modern businesses.',
+      category: 'blockchain',
+      features: ['Smart Contract DevelopmentDApp CreationDeFi IntegrationNFT Platforms'],
+      price: 'Custom Pricing',
+      popular: true,
+      benefits: ['Decentralized SolutionsEnhanced SecurityTransparencyInnovation']
+    };
+    {
+      id: 3,
+      name: 'DevSecOps & Security Automation',
+      description: 'Integrated development, security, and operations with automated security testing and deployment.',
+    category: 'devops',
+      features: ['CI/CD PipelinesSecurity ScanningAutomated TestingInfrastructure as Code'],
+      price: '$199/month',
+      popular: false,
+      benefits: ['Faster DeploymentEnhanced SecurityReduced RiskAutomated Compliance']
+    };
+    {
+      id: 4,
+      name: 'Enterprise Data Platform',
+      description: 'Comprehensive data management and analytics platform for enterprise-scale operations.',
+      category: 'enterprise',
+      features: ['Data WarehousingReal-time AnalyticsData GovernanceMachine Learning Integration'],
+      price: '$299/month',
+      popular: true,
+      benefits: ['Data-Driven InsightsScalable ArchitectureCompliance ReadyAdvanced Analytics']
+    };
+    {
+      id: 5,
+      name: 'High-Performance Computing Solutions',
+      description: 'Optimized computing infrastructure for demanding computational workloads and research.',
+      category: 'cloud',
+      features: ['GPU ComputingParallel ProcessingDistributed ComputingPerformance Monitoring'],
+      price: '$399/month',
+      popular: false,
+      benefits: ['Massive Processing PowerScalable ResourcesCost OptimizationAdvanced Capabilities']
+    };
+    {
+      id: 6,
+      name: 'Cloud Migration Services',
+      description: 'Seamless migration of applications and infrastructure to cloud platforms with zero downtime.',
+      category: 'cloud',
+      features: ['Assessment & PlanningData MigrationApplication ModernizationPerformance Optimization'],
+      price: 'Custom Pricing',
+      popular: true,
+      benefits: ['Reduced CostsEnhanced ScalabilityImproved SecurityBetter Performance']
+    };
+    {
+      id: 7,
+      name: 'Infrastructure as Code',
+      description: 'Automated infrastructure provisioning and management using modern DevOps practices.',
+      category: 'devops',
+      features: ['Terraform AutomationConfiguration ManagementVersion ControlEnvironment Provisioning'],
+      price: '$149/month',
+      popular: false,
+      benefits: ['Consistent EnvironmentsFaster ProvisioningVersion ControlReduced Errors']
+    };
+    {
+      id: 8,
+      name: 'Disaster Recovery Solutions',
+      description: 'Comprehensive backup and disaster recovery strategies to ensure business continuity.',
+      category: 'security',
+      features: ['Automated BackupsMulti-site ReplicationRecovery TestingRTO/RPO Optimization'],
+      price: '$179/month',
+      popular: true,
+      benefits: ['Business ContinuityData ProtectionMinimal DowntimeCompliance Ready']
+    };
+    {
+      id: 9,
+      name: 'Cybersecurity Assessment',
+      description: 'Comprehensive security evaluation and penetration testing for enterprise systems.',
+      category: 'security',
+      features: ['Vulnerability AssessmentPenetration TestingCompliance AuditingSecurity Recommendations'],
+      price: '$249/month',
+      popular: false,
+      benefits: ['Risk IdentificationCompliance AssuranceSecurity HardeningThreat Mitigation']
+    };
+    {
+      id: 10,
+      name: 'API Development & Integration',
+      description: 'Custom API development and third-party integration services for seamless connectivity.',
+      category: 'enterprise',
+      features: ['RESTful APIsGraphQL ServicesThird-party IntegrationAPI Documentation'],
+      price: '$129/month',
+      popular: true,
+      benefits: ['System IntegrationImproved EfficiencyScalable ArchitectureDeveloper Experience']
+    };
+    {
+      id: 11,
+      name: 'Microservices Architecture',
+      description: 'Design and implementation of microservices-based applications for scalable systems.',
+      category: 'enterprise',
+      features: ['Service DesignContainer OrchestrationService MeshMonitoring & Logging'],
+      price: '$199/month',
+      popular: false,
+      benefits: ['Scalable ArchitectureIndependent DeploymentTechnology DiversityFault Isolation']
+    };
+    {
+      id: 12,
+      name: 'Edge Computing Solutions',
+      description: 'Distributed computing infrastructure for low-latency applications and IoT systems.',
+      category: 'cloud',
+      features: ['Edge DeploymentIoT IntegrationReal-time ProcessingBandwidth Optimization'],
+      price: '$159/month',
+      popular: true,
+      benefits: ['Reduced LatencyBandwidth SavingsOffline CapabilityEnhanced Performance']
+    }
+  ];
+
+  const filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
+
+  return (
+    <>
+      <Head>
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting." />
+        <meta name="keywords" content="IT services, cloud computing, cybersecurity, DevOps, blockchain, quantum computing, enterprise solutions, infrastructure" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`${contact.site}/it-services`} />
+      </Head>
+      
+      <ErrorBoundary level="page">
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          {/* Hero Section */}
+          <section className="py-20 px-4 text-center" role="banner">
+            <div className="max-w-4xl mx-auto">
+              <h1 
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
               <h1                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+>>>>>>> origin/main
               >
                 IT Services
               </h1>
@@ -1367,6 +1767,12 @@ export default function ITServices(req, res) {
                 cutting-edge technology solutions that scale with your business
                 and drive innovation.              </p>
             </div>
+<<<<<<< HEAD
+          </motion.div>
+        </div>
+      </section>
+                  </div>
+=======
           </section>
           {/* Category Filter */}
           <section className='py-8 px-4'>
@@ -1927,6 +2333,29 @@ export default function ITServices(req, res) {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <service.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-blue-600">{service.pricing}</span>
+                    {service.marketPrice && (
+                      <span className="text-gray-500 ml-2">(Market: {service.marketPrice})</span>
+                    )}
+                  </div>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
+=======
 whileHover={{ y: -5 }} ">
                   <div className="flex items-center justify-between mb-4">
                   <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
@@ -1949,10 +2378,109 @@ whileHover={{ y: -5 }} ">
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
 <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
+<<<<<<< HEAD
+=======
+=======
+                  <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />                          {feature}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                         </li>
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
+
+                  <Link
+                    href={service.link}
+                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Get Quote
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Industries Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Industries We Serve</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Our IT solutions are tailored for various industries and business requirements.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <industry.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{industry.name}</h3>
+                  <p className="text-gray-600">{industry.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Enhance Your IT Infrastructure?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our IT services can improve your business operations and security.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Get Started Today
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/micro-saas"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  View Micro SaaS
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+
+=======
+            </div>
+=======
                   <div className="mb-4">
                   <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
                   </div>
@@ -2079,6 +2607,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2262,6 +2791,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
               >
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {level.name}
@@ -2408,6 +2939,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               </Link>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -2441,10 +2973,13 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             </div>
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
           </motion.div>
         </div>
       </section>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -2859,9 +3394,16 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   );
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+          </section>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
             </div>
 =======
@@ -2876,6 +3418,9 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
   )
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
 <<<<<<< HEAD
 }
 =======
@@ -2983,4 +3528,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
 }
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20

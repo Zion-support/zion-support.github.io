@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-test-deploy.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -153,6 +154,8 @@ class ComprehensiveTestDeploy {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-test-deploy.cjs
     this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
@@ -169,6 +172,7 @@ class ComprehensiveTestDeploy {
 
 // Run the comprehensive suite
 const suite = new ComprehensiveTestDeploy();
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-test-deploy.cjs
 <<<<<<< HEAD
 suite.runComprehensiveSuite().catch(console.error);#!/usr/bin/env node;
 =======
@@ -187,6 +191,9 @@ suite.runComprehensiveSuite().catch(console.error);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+suite.runComprehensiveSuite().catch(console.error);#!/usr/bin/env node;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-test-deploy.cjs
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -223,6 +230,7 @@ console.log('=')
     this.log('\\n COMPREHENSIVE SUITE SUMMARY')
     this.log('===')
     this.log('\n Recommendations:')
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-test-deploy.cjs
 <<<<<<< HEAD
     this.log('\\n� Comprehensive test & deploy suite completed!')
 =======
@@ -236,3 +244,6 @@ console.log('=')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    this.log('\\n� Comprehensive test & deploy suite completed!')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-test-deploy.cjs
