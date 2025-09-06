@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 "use client";"; import * as _React from "react"; export const ThemeProvider({ children }) {}}; "use client"; const initialState = {}; "setTheme": () => null}; export const ThemeProvider({ children }) {}};},[]);,[]); const root = window.document.documentElement;"; root.classList.remove("light","dark");"; root.classList.add("dark")},[]); const value = {}}}; return (<ThemeContext.Provider value={value}> {children} </ThemeContext.Provider>)} export const useTheme = () => {}}; const context = useContext(ThemeProviderContext); if(context === null)"; throw new Error("useTheme must be used within a ThemeProvider"); return context}; "}
@@ -38,3 +40,4 @@
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

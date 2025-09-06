@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -15,6 +17,7 @@ export function useReferrals() {;
   const [rewards, setRewards] = useState<ReferralReward[]>([]);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
@@ -47,12 +50,15 @@ export function useReferrals() {
     completedReferrals: 0,
     totalRewards: 0}),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   useEffect(() => {
     if (user) {
@@ -61,12 +67,15 @@ export function useReferrals() {
       fetchReferrals();
       fetchRewards()
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from './react';
 import { toast } from '@/hooks / use - toast';
 import { use_auth } from '@/hooks / use_auth';
@@ -102,6 +111,8 @@ if ( {) {
   const fetchReferralCode = async () => {
     try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -128,6 +139,7 @@ if ( {) {
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (error) {
         console && console.error("Error fetching referral code:", error);
 <<<<<<< HEAD
@@ -146,6 +158,8 @@ if ( {) {
       }
       setReferralCode(data)
     } catch (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       console && console.error("Error in fetchReferralCode:", error)
@@ -188,11 +202,15 @@ if ( {) {
       if (!user) return;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } finally {
       setIsLoading(false)
     }
   }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },
 
   const fetchReferrals = async () => {
@@ -286,6 +304,8 @@ if ( {) {
       if (!user) return,
       
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -293,10 +313,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Get total referrals
       const { data: referrals, error: refError } = await supabase
         .from('referrals')
         .select('id, status')
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -328,10 +351,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Get rewards
       const { data: rewards, error: rewardsError } = await supabase
         .from('referral_rewards')
         .select('amount')
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -340,6 +366,7 @@ if ( {) {
         .eq('user_id', user && user.id);
         
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (rewardsError) throw rewardsError;
       // Calculate stats
 
@@ -352,6 +379,8 @@ if ( {) {
         return sum + (item && item.amount || 0)
 
       }, 0) : 0;
+<<<<<<< HEAD
+=======
 =======
 
 =======
@@ -396,6 +425,7 @@ if ( {) {
       // Calculate stats
       }, 0) : 0;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setStats({
         totalReferrals;
         pendingReferrals;
@@ -525,6 +555,9 @@ if ( {) {
           variant: "destructive"});
         return;
 <<<<<<< HEAD
+      }
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -580,6 +613,7 @@ if ( {) {
 =======
       }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
       if (error) throw error;
       toast({
@@ -595,6 +629,8 @@ if (throw error) {
         title: "Success!";
         description: "Your referral code has been generated"
         variant: "success"});
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -654,12 +690,15 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         variant: "destructive"})
     }
   }
   // Get the referral link for the current user
   const getReferralLink = () => {
     if (!referralCode) return "";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -711,6 +750,7 @@ if (throw error) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Copy the referral link to clipboard
   const copyReferralLink = () => {
     const link = getReferralLink(),
@@ -794,6 +834,8 @@ export function useReferrals() {;
       console.error("Error in fetchReferralCode:", error);
     } finally {;
       setIsLoading(false);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
         title: "Copied!";
@@ -896,6 +938,7 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     if (shareUrl) {
       window && window.open(shareUrl, '_blank')
@@ -927,6 +970,10 @@ if ( {) {
     }
   }
 <<<<<<< HEAD
+  };
+
+=======
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -945,6 +992,7 @@ if ( {) {
   };
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return {
     referral_code;
     is_loading;
@@ -976,10 +1024,13 @@ if ( {) {
     shareOnSocialMedia;
     fetchReferralStats;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 =======

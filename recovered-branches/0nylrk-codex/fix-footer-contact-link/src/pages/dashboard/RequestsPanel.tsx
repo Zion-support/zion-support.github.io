@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -28,6 +30,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -105,9 +108,12 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function RequestsPanel() {
   const { user } = useAuth();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
@@ -349,12 +355,18 @@ function RequestsPanel() {
     markAsViewed;
     markAsResponded;
   return (
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <ProtectedRoute>;
       <div>;
         <Header />;
         <div className="min-h-screen bg-zion-blue px-4 py-8">;
           <div className="container mx-auto">;
+<<<<<<< HEAD
+            <RequestsHeader
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -365,11 +377,14 @@ function RequestsPanel() {
 =======
             <RequestsHeader
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
             />;
@@ -418,6 +433,7 @@ function RequestsPanel() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <QuoteRequestsList
                   quotes={activeQuotes}
                   isLoading={isLoading}
@@ -425,6 +441,8 @@ function RequestsPanel() {
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -449,6 +467,7 @@ function RequestsPanel() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <QuoteRequestsList
                   quotes={archivedQuotes}
                   isLoading={isLoading}
@@ -456,6 +475,8 @@ function RequestsPanel() {
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -468,10 +489,13 @@ function RequestsPanel() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -514,6 +538,7 @@ function RequestsPanel() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }}
         />
         <Footer />
@@ -602,6 +627,8 @@ if ( {) {
     </ProtectedRoute>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
             setShowDetails(false),;
@@ -664,3 +691,4 @@ const [showDetails, setShowDetails] = useState (false);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

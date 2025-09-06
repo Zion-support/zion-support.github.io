@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 "use client",;
@@ -20,10 +22,13 @@ export default function DashboardPage() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="min-h-screen flex items-center justify-center">;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
           <p className="text-zinc-400">Loading...</p>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -87,11 +92,15 @@ export default function DashboardPage() {;
     return (;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="min-h-screen flex items-center justify-center">;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
           <p className="text-zinc-400">Loading...</p>;
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>;
       </div>;
     );
@@ -100,9 +109,14 @@ export default function DashboardPage() {;
   if (!isAuthenticated) {return null;
   }
 =======
+<<<<<<< HEAD
+  if (!isAuthenticated) {return null;
+  }
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   if (!isAuthenticated) {;
     return null;
@@ -110,14 +124,19 @@ export default function DashboardPage() {;
 ;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (;
     <div className="space-y-8">;
       {/* Welcome Header */}
       <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/20">;
         <h1 className="text-3xl font-bold text-white mb-2">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -140,6 +159,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </h1>;
         <p className="text - zinc - 300 text - lg">;
           Ready to continue building your digital economy? Here's what you can do next.;
@@ -213,6 +233,8 @@ if ( {) {
           <div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Name</label>;
             <p className="text - white">{user?.name || "Not provided"}</p>;
@@ -224,6 +246,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>;
           <div>;
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Email</label>;

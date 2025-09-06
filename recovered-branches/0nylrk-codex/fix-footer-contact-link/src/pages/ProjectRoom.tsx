@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+
+
+  const { projectId } = useParams() as { projectId: string },;
+
+
+  const [activeTab, setActiveTab] = useState('chat');
+=======
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -26,6 +34,7 @@ import { toast } from "sonner";
 export default function ProjectRoom() {
   const { projectId } = useParams() as { projectId: string };
   const [activeTab, setActiveTab] = useState("chat");
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<
     Array<{
@@ -46,6 +55,8 @@ export default function ProjectRoom() {
       isMuted: false,
     },
   ]);
+<<<<<<< HEAD
+=======
 
   const startVideoCall = () => {
 =======
@@ -110,6 +121,7 @@ import {toast} from 'sonner';
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -128,6 +140,41 @@ import {toast} from 'sonner';
     if (activeTab !== "video") {
       setActiveTab("video");
     }
+<<<<<<< HEAD
+  const endVideoCall = () => {
+    setIsInCall(false),
+    toast.info("Video call ended", {
+      description: "Call duration and participants will be logged"
+    })
+      setCallParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser && randomUser.name} joined the call`);
+    }
+
+  ]),;
+  const startVideoCall = () => {;
+    setIsInCall(true),;
+    toast.success("Video call started", {;
+      description: "Others can join with the project room link";
+    }),;
+    // Switch to video tab if not already there;
+    if (activeTab !== 'video') {;
+      setActiveTab('video');
+    }
+  },;
+  const endVideoCall = () => {;
+    setIsInCall(false),;
+    toast.info("Video call ended", {;
+      description: "Call duration and participants will be logged";
+    });
+  },;
+  const simulateUserJoining = () => {;
+    // This is just for demo purposes - in a real app, this would be handled by the video call service;
+    const mockUsers = [;
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+  
+=======
   };
 
   const endVideoCall = () => {
@@ -164,6 +211,7 @@ import {toast} from 'sonner';
     }
   };
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>
       <SEO
@@ -554,6 +602,8 @@ import {toast} from 'sonner';
       </main>;
       <Footer />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </>);
@@ -598,3 +648,4 @@ return (<> End Call </Button>)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

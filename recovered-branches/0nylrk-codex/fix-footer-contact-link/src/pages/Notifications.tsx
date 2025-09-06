@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+
+
+
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -41,6 +46,7 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -56,6 +62,8 @@ import {SEO} from "@/components/SEO";
 import {useNavigate} from "react-router-dom";
 import {cn} from "@/lib/utils";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -63,6 +71,7 @@ import {cn} from "@/lib/utils";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -84,6 +93,8 @@ import { SEO } from "@/components/SEO",
 import { useNavigate } from "react-router-dom",
 import { cn } from "@/lib/utils",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -92,6 +103,7 @@ import { cn } from "@/lib/utils",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
@@ -109,6 +121,8 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     default:
       return <Bell className={cn(className, "text-gray-500")} />
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -159,6 +173,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {;
     case 'onboarding':;
       return <Badge className="bg-zion-cyan">Onboarding</Badge>;
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -218,6 +233,8 @@ const NotificationCard: React.FC<{
     created_at: string
     action_url?: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -233,6 +250,7 @@ const NotificationCard: React.FC<{
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react',;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -273,6 +291,8 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
 <<<<<<< HEAD
 
   }
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -280,6 +300,7 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
 
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     case 'system':;
       return <Badge className="bg-yellow-500">System</Badge>,;
     default:;
@@ -313,6 +334,8 @@ const NotificationCard: React.FC<{;
       navigate(notification && notification.action_url);
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -321,6 +344,7 @@ const NotificationCard: React.FC<{;
   },
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   };
   },
   
@@ -358,6 +382,8 @@ const NotificationCard: React.FC<{;
                 {!notification && notification.read && (;
                   <Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>;
                 )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
               </div>;
@@ -495,10 +521,13 @@ const NotificationCard: React.FC<{;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Button
                   variant="ghost"
                   size="sm"
                   className="h-8 w-8 p-0"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                   onClick={() => onMarkAsRead(notification && notification.id)}
@@ -514,6 +543,7 @@ const NotificationCard: React.FC<{;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 >;
                   <Check className="h-4 w-4 text-green-400" />;
                   <span className="sr-only">Mark as read</span>;
@@ -535,6 +565,8 @@ const NotificationCard: React.FC<{;
                 variant="ghost"
                 size="sm"
                 className="h-8 w-8 p-0"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -572,10 +604,13 @@ const NotificationCard: React.FC<{;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Button
               variant="outline"
               size="sm"
               className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               onClick={handleAction}>;
@@ -623,6 +658,7 @@ export default function NotificationsPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     filteredNotifications;
     unreadCount;
     action_text?: string;
@@ -719,6 +755,8 @@ function NotificationsPage() {
     loading;
     filter;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -809,6 +847,7 @@ export default function NotificationsPage() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Button
               variant="outline"
           ;
@@ -825,6 +864,8 @@ export default function NotificationsPage() {;
               Mark all as read;
             </Button>;
           )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1034,11 +1075,14 @@ export default function NotificationsPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </TabsContent>;
           </Tabs>;
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1117,3 +1161,4 @@ return (<> <SEO title="Notifications | Zion AI Marketplace" description="View an
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

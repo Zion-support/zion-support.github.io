@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -9,12 +11,15 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -37,10 +42,13 @@ export const useUpdateMilestone = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -49,6 +57,7 @@ export const useUpdateMilestone = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -60,8 +69,11 @@ export const useUpdateMilestone = () => {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   
 =======
   
@@ -74,6 +86,8 @@ export const useUpdateMilestone = () => {
     if (!user) return false;
     try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       setIsSubmitting(true),
       
 <<<<<<< HEAD
@@ -84,11 +98,14 @@ export const useUpdateMilestone = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Get the current status
       const { data: milestoneData, error: fetchError } = await supabase
         .from('project_milestones')
         .select('status')
         .eq('id', milestoneId)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -123,10 +140,13 @@ export const useUpdateMilestone = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Update the milestone status
       const { error } = await supabase
         .from('project_milestones')
         .update({ status: newStatus })
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -157,6 +177,7 @@ export const useUpdateMilestone = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return false
     } finally {
       setIsSubmitting(false)
@@ -355,6 +376,9 @@ export const useUpdateMilestone = () => {;
 <<<<<<< HEAD
 =======
   }
+<<<<<<< HEAD
+};
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       toast && toast.success("Milestone updated successfully");
       
@@ -396,6 +420,7 @@ if (throw error) {
     } finally {
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 
 =======

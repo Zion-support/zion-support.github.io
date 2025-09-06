@@ -46,10 +46,13 @@ export default function MobileNavigation({ }: MobileNavigationProps) {
     </div>
   );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 :src.disabled/components/navigation/MobileNavigation.jsx
 }

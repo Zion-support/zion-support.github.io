@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -23,6 +25,7 @@ import {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/card";
 
 interface GeneratedContent {;
@@ -34,6 +37,8 @@ import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
 import { ArrowRight  } from './lucide-react';
 import {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -57,14 +62,19 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Card,
   CardContent,
   CardFooter,
   CardHeader,
 <<<<<<< HEAD
+    min: number;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   key_points: string[];
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
   CardTitle,
@@ -95,6 +105,8 @@ interface GeneratedContentDisplayProps {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
   CardTitle,;
 } from "@/components/ui/card";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -103,12 +115,15 @@ interface GeneratedContentDisplayProps {;
 } from "@/components/ui/card";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from "lucide-react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -119,10 +134,13 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -138,6 +156,7 @@ interface GeneratedContentDisplayProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     min: number,
     max: number
   },
@@ -159,6 +178,8 @@ interface GeneratedContent {;
 ;
 interface GeneratedContentDisplayProps {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -173,6 +194,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   content: GeneratedContent;
   onApply: () => void
 }
@@ -183,9 +205,12 @@ export function GeneratedContentDisplay({
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -193,6 +218,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
@@ -209,6 +236,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Tags
@@ -493,6 +521,8 @@ function GeneratedContentDisplay() {
         </Button>
       </CardFooter>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -501,6 +531,7 @@ function GeneratedContentDisplay() {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   )
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
@@ -508,6 +539,8 @@ function GeneratedContentDisplay() {
           <ArrowRight className="ml-2 h-4 w-4" />;
         </Button>;
       </CardFooter>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     </Card>;
   );
@@ -517,10 +550,14 @@ function GeneratedContentDisplay() {
     </Card>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
     </Card>;
   );
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -571,3 +608,4 @@ onApply: () => void
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

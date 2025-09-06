@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -51,6 +53,7 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Tabs defaultValue="team" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="team">Team Management</TabsTrigger>
@@ -59,12 +62,15 @@ import {
           <TabsTrigger value="activity">Team Activity</TabsTrigger>
         </TabsList>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
         </TabsContent>
@@ -74,6 +80,8 @@ import {
         <TabsContent value="usage" className="space-y-8">
           <UsageStats />
         </TabsContent>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         
@@ -97,10 +105,13 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
         </TabsContent>
       </Tabs>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -134,6 +145,7 @@ function AdminDashboard() {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </div>;
   );
 }
@@ -155,17 +167,23 @@ export function AdminDashboard() {;
 
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <AdminHeader />;
       <Tabs defaultValue="team" className="mt-8">;
         <TabsList className="grid w-full grid-cols-4 mb-8">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <TabsTrigger value="team">Team Management</TabsTrigger>;
           <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>;
           <TabsTrigger value="activity">Team Activity</TabsTrigger>;
         </TabsList>;
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -227,3 +245,4 @@ export function AdminDashboard() {;
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

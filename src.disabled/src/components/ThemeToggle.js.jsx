@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React,{ useState,useEffect } from 'react';'''; import { SunIcon,MoonIcon } from '@heroicons/react/24/outline'; const ThemeToggle = () => {}}; const [isDark,setIsDark] = useState(true); useEffect(() => {}; setIsDark(savedTheme === 'dark')} },[]); const toggleTheme = () => {}}; const newTheme = !isDark; setIsDark(newTheme); localStorage.setItem('zion-theme',newTheme ? 'dark' : 'light'); if (newTheme) {}; document.documentElement.classList.remove('light')} else {}; document.documentElement.classList.remove('dark')} }; return (<button onClick={toggleTheme} className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 "hover": bg-white/20 transition-all duration-300 group" aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}> {isDark ? (<SunIcon className="w-5 h-5 text-yellow-400 group-"hover": text-yellow-300 transition-colors duration-300"/>) : (<MoonIcon className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors duration-300"/>)} </button>)}; export default ThemeToggle; export { ThemeToggle }; export { ThemeToggle }; export { ThemeToggle }; export { ThemeToggle }; export { ThemeToggle };
@@ -61,3 +63,4 @@ import _React,{ useState,useEffect } from 'react';'''; import { SunIcon,MoonIcon
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -9,6 +9,8 @@ import {StatusBadge} from "./StatusBadge";
 import {ApplicationProgress} from "./ApplicationProgress";
 import {toast} from "sonner";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ApplicationCardProps {;
   application: JobApplication;
@@ -33,6 +35,7 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { JobApplication } from "@/types/jobs",
@@ -49,8 +52,11 @@ interface ApplicationCardProps {
   application: JobApplication
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ApplicationCardProps {;
   application: JobApplication;
 }
@@ -74,6 +80,8 @@ interface ApplicationCardProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -85,12 +93,15 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   },
@@ -104,6 +115,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "shortlisted": return (
           <Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
@@ -194,6 +206,11 @@ export function ApplicationCard({ application } ApplicationCardProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
+<<<<<<< HEAD
+        {expanded && (
+          <div className="mt - 4 space - y-3">;
+            {application.cover_letter && (
+=======
 
 import { useState } from './react';
 import { formatDistanceToNow } from './date - fns';
@@ -376,6 +393,7 @@ function ApplicationCard() {
           <div className="mt - 4 space - y-3">;
             {application.cover_letter && (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
@@ -561,6 +579,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
           </div>;
         )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
       </CardContent>;
 
@@ -576,6 +596,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {expanded ? "Show Less" : "Show More"}
           </Button>;
           <div className="flex gap-2">;
@@ -634,6 +655,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
       </CardFooter>
     </Card>
   )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -785,3 +808,4 @@ case "interview" : default: return (<Card className="overflow-hidden" > <CardHea
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

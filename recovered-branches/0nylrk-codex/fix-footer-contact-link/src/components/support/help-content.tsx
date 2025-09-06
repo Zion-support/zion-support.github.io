@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -11,6 +13,7 @@ import {HelpCircle, CreditCard, Users, Calendar, Briefcase} from "lucide-react";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { HelpCategory } from "./types",
 import { 
@@ -22,6 +25,8 @@ import {
 } from "lucide-react",
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -30,6 +35,7 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
     id: "getting-started"
@@ -38,6 +44,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     icon: <HelpCircle className="h-6 w-6 text-zion-purple" />
     articles: [
       {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -66,12 +74,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {
         id: "complete-profile"
         title: "Completing your profile"
         content: "A complete profile helps you get the most out of Zion AI Marketplace. Follow these steps to set up your profile:\n\n1. Navigate to the Profile section from your dashboard\n2. Upload a professional profile picture\n3. Add your basic information including location and contact details\n4. Write a compelling bio that highlights your expertise or requirements\n5. For talent users: Add your skills, experience, and portfolio items\n6. For client users: Add information about your company or projects\n\nA complete profile increases your visibility on the platform and helps our AI matching system connect you with the right opportunities or talent."
         lastUpdated: "2023-11-18"
         tags: ["profile", "setup"]
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -91,6 +102,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       },
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {
         id: "platform-navigation",
         title: "Navigating the platform",
@@ -100,6 +112,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       }
     ]
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   },
 <<<<<<< HEAD
 
@@ -108,6 +122,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: "hiring"
     name: "Hiring Process"
@@ -115,6 +130,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     icon: <Briefcase className="h-6 w-6 text-zion-cyan" />
     articles: [
       {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -152,6 +169,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         id: "post-job",
         title: "Posting a job",
         content: "Posting a job on Zion AI Marketplace is quick and straightforward. Follow these steps to create an effective job posting:\n\n1. Click on the 'Post a Job' button from your dashboard\n2. Fill in the job title, category, and required skills\n3. Write a detailed description of the project or position\n4. Specify your budget range and timeline\n5. Add any specific requirements or qualifications\n6. Review and publish your listing\n\nFor best results, be as specific as possible about your requirements and expectations. Our AI matching system will use this information to connect you with the most qualified talent.",
@@ -179,6 +197,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         lastUpdated: "2023-12-05",
         tags: ["offer", "contract", "negotiation"]
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     ]
   },
@@ -660,6 +680,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         id: "file-dispute",
         title: "How to file a dispute",
@@ -678,6 +699,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         id: "dispute-prevention",
         title: "Tips for preventing disputes",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.";
@@ -687,6 +710,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
     ]
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",
         lastUpdated: "2023-12-05",
         tags: ["prevention", "best practices", "communication"]
@@ -1016,6 +1040,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
   }
 ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -1340,3 +1366,4 @@ tags: ["prevention", "best practices", "communication" ]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

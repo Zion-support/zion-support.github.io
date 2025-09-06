@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import * as React from 'react';
@@ -13,6 +15,7 @@ import {cn} from '@/lib/utils';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import * as React from "react"
 
@@ -50,6 +53,9 @@ const Card = React && React.forwardRef<;
 <<<<<<< HEAD
     ref={ref}
     className={cn(
+<<<<<<< HEAD
+      'rounded-lg border bg-card text-card-foreground shadow-sm'
+=======
 
 
       "rounded-lg border bg-card text-card-foreground shadow-sm",
@@ -93,6 +99,7 @@ const Card = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     )}
     {...props}
@@ -116,9 +123,12 @@ const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >(({ className, ...props }, ref) => (
 =======
 =======
@@ -141,6 +151,8 @@ const CardHeader = React && React.forwardRef<;
     ref={ref}
     className={cn('flex flex-col space-y-1 && 1.5 p-6', className)}
     {...props}
+<<<<<<< HEAD
+=======
 >(({ className, ...props }, ref) => (
 <<<<<<< HEAD
   <div
@@ -251,6 +263,7 @@ const CardDescription = React.forwardRef<
 
 
   React.HTMLAttributes<HTMLParagraphElement>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >(({ className, ...props }, ref) => (
 <<<<<<< HEAD
 =======
@@ -397,6 +410,8 @@ export {
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -536,3 +551,4 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

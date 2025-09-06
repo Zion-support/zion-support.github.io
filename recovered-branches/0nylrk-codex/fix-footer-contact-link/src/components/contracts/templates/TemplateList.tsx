@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -9,6 +11,7 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
@@ -17,6 +20,8 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Separator} from "@/components/ui/separator";
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {useState} from "react";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface TemplateListProps {;
@@ -50,6 +55,7 @@ export function TemplateList(): any ({;
   };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
@@ -205,6 +211,8 @@ interface TemplateListProps {;
   onEdit: (template: ContractTemplate) => void;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 export function TemplateList({;
   templates,;
@@ -242,6 +250,7 @@ export function TemplateList({;
     }
   },
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   };
 interface TemplateListProps {
@@ -354,6 +363,8 @@ interface TemplateListProps {
             <AlertDialogAction
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
               onClick={handleDeleteConfirm}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -527,6 +538,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             >;
               Use This Template;
             </Button>;
@@ -557,6 +569,8 @@ if ( {) {
           </AlertDialogHeader>;
           <AlertDialogFooter>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <AlertDialogCancel > Cancel</AlertDialogCancel>;
@@ -584,11 +598,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -669,3 +686,4 @@ if (isLoading) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

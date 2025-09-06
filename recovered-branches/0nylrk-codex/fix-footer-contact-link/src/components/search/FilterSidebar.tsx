@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -13,6 +15,7 @@ import {Filter, X, Star} from "lucide-react";
 import {FilterOptions} from "@/types/search";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
@@ -21,9 +24,12 @@ import { FilterOptions } from "@/types/search";
 import { Filter, X, Star } from "lucide-react",
 import { FilterOptions } from "@/types/search",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface FilterSidebarProps {
   filters: {
 
@@ -31,6 +37,8 @@ interface FilterSidebarProps {
     selectedLocations: string[]
     selectedAvailability: string[]
     selectedRating: number | null
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -42,6 +50,7 @@ import {FilterOptions} from "@/types/search";
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   filterOptions: FilterOptions
   onFilterChange: (filterType: string, value: string) => void
@@ -221,6 +230,8 @@ export function FilterSidebar({;
         </div>
       </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -228,6 +239,7 @@ export function FilterSidebar({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white flex items-center">;
@@ -486,10 +498,13 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
         </div>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Rating Filter */}
       <div className="mb-6">;
         <label className="text-sm font-medium text-zion-slate-light block mb-2">;
@@ -517,6 +532,8 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
               size="sm"
               onClick={() => onRatingChange(rating)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -541,6 +558,7 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               }`}
             >;
               {rating === null ? (;
@@ -718,6 +736,8 @@ function FilterSidebar() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -764,3 +784,4 @@ function FilterSidebar() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

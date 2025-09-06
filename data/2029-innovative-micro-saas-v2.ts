@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -330,6 +333,9 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       "Automated customer health scoring";
       "Intelligent intervention recommendations";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] =
   [
@@ -659,21 +665,27 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     tagline: "Predict and prevent customer churn with AI-driven insights",
     price: "$2,499/month",
     description: "Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.",
+<<<<<<< HEAD
+=======
 =======
 =======
 
 export interface InnovativeMicroSaasService2029V2 {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     features: [
       "AI-powered churn prediction",
       "Automated customer health scoring",
       "Intelligent intervention recommendations",
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "Real-time customer sentiment analysis",
       "Predictive analytics dashboard",
       "Automated retention campaigns",
@@ -681,6 +693,9 @@ export interface InnovativeMicroSaasService2029V2 {;
       "ROI tracking and reporting"
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     benefits: [
       "Reduce employee turnover by 35%",
       "Improve hiring success rate by 45%",
@@ -690,6 +705,8 @@ export interface InnovativeMicroSaasService2029V2 {;
     useCases: [
       "Talent acquisition optimization";
       "Employee retention strategies";
+<<<<<<< HEAD
+=======
 =======
 
     link: "https://ziontechgroup && ziontechgroup.com/services/ai-customer-success-platform", marketPosition: "Leading AI-driven customer success solution",
@@ -1293,6 +1310,7 @@ export interface InnovativeMicroSaasService2029V2 {;
     use_cases: [;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
     ],
@@ -1345,6 +1363,8 @@ export interface InnovativeMicroSaasService2029V2 {;
     category: "HR Analytics",
     technology: ["AI/ML", "Predictive Analytics", "People Analytics", "Machine Learning"],
 
+<<<<<<< HEAD
+=======
     benefits: [
       "Reduce employee turnover by 35%",
       "Improve hiring success rate by 45%",
@@ -1354,6 +1374,7 @@ export interface InnovativeMicroSaasService2029V2 {;
     useCases: [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "Workforce planning"
     ]
   }
@@ -1369,6 +1390,8 @@ export interface InnovativeMicroSaasService2029V2 {;
 ];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
 ;
@@ -1377,3 +1400,4 @@ export interface InnovativeMicroSaasService2029V2 {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

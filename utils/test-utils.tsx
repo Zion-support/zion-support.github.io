@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <ThemeProvider attribute="class" default_theme="light">;
       {children}
@@ -10,6 +13,8 @@ import React from 'react';
   defaultLocale: 'en'
   domainLocales: []
   isPreview: false
+<<<<<<< HEAD
+=======
 =======
 
 import { render, RenderOptions } from '@testing - library / react';
@@ -39,6 +44,7 @@ export const mockNextRouter = () =>: any ({
   beforePopState: jest.fn (),
   events: {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     on: jest.fn (),
     off: jest.fn (),
     emit: jest.fn ();
@@ -136,7 +142,10 @@ export const mockNextRouter = () => ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 export const createMockProps = (overrides = {}) => ({;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ...overrides;
 
 

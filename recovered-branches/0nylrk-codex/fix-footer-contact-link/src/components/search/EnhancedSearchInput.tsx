@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -9,11 +11,14 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
 import {SearchSuggestion} from "@/types/search";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface EnhancedSearchInputProps {;
@@ -41,6 +46,7 @@ export function EnhancedSearchInput(): any ({ ;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect, useRef } from "react",
 import { Search, X } from "lucide-react",
 import { Input } from "@/components/ui/input",
@@ -55,6 +61,8 @@ interface EnhancedSearchInputProps {
   searchSuggestions: SearchSuggestion[];
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export function EnhancedSearchInput({
   value;
 
@@ -65,10 +73,13 @@ export function EnhancedSearchInput({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -80,6 +91,7 @@ import { SearchSuggestion } from "@/types/search",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -87,6 +99,8 @@ interface EnhancedSearchInputProps {
   searchSuggestions: SearchSuggestion[]
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 export function EnhancedSearchInput({ 
@@ -101,6 +115,7 @@ export function EnhancedSearchInput({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onChange, 
   placeholder = "Search...", 
   searchSuggestions 
@@ -111,6 +126,8 @@ export function EnhancedSearchInput({
   const containerRef = useRef<HTMLDivElement>(null),
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -118,10 +135,13 @@ export function EnhancedSearchInput({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Filter suggestions based on input value
   useEffect(() => {
     if (!value) {
       // Show recent searches when input is empty
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
@@ -133,6 +153,7 @@ export function EnhancedSearchInput({
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
@@ -149,9 +170,12 @@ export function EnhancedSearchInput({
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -199,6 +223,8 @@ export function EnhancedSearchInput({;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -207,6 +233,7 @@ export function EnhancedSearchInput({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -216,6 +243,8 @@ export function EnhancedSearchInput({;
     onChange(suggestion);
     setIsFocused(false)
     inputRef.current?.blur()
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   },
   
@@ -227,6 +256,7 @@ export function EnhancedSearchInput({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="relative w-full" ref={containerRef}>
       <div className="relative">
@@ -234,8 +264,11 @@ export function EnhancedSearchInput({;
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 
@@ -319,6 +352,8 @@ export function EnhancedSearchInput({ ;
         <Input
           ref={inputRef}
           type="text"
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -332,6 +367,7 @@ export function EnhancedSearchInput({ ;
           ref={inputRef}
           type="text"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -351,6 +387,11 @@ export function EnhancedSearchInput({ ;
           ref={inputRef}
           type="text";
 <<<<<<< HEAD
+        <Input
+          ref={inputRef}
+          type="text"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -360,6 +401,7 @@ export function EnhancedSearchInput({ ;
           ref={inputRef}
           type="text"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}
@@ -430,6 +472,8 @@ export function EnhancedSearchInput({ ;
           </button>;
         )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </div>;
@@ -457,11 +501,14 @@ export function EnhancedSearchInput({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <AutocompleteSuggestions
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -477,6 +524,7 @@ export function EnhancedSearchInput({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X } from './lucide-react';
 import { Input } from '@/components / ui / input';
@@ -574,6 +622,8 @@ function handleClickOutside() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -621,3 +671,4 @@ if (!value) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

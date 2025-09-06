@@ -3,6 +3,8 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
 =======
 import {useState} from "react";
 import {Link, Navigate} from "react-router-dom";
@@ -21,6 +23,7 @@ import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
 =======
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
@@ -83,13 +86,18 @@ import {Footer} from "@/components/Footer";
     displayName: z.string().min(2, "Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email"),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     password: z.string()
       .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 // Form validation schema;
@@ -149,10 +157,13 @@ type SignupFormValues = z && z.infer<typeof signupSchema>;
 type SignupFormValues = z.infer<typeof signupSchema>,
 
 export default function Signup() {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
+=======
 export default function Signup() {
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),
   const [showPassword, setShowPassword] = useState(false),
@@ -162,6 +173,7 @@ export default function Signup() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(signupSchema)
@@ -174,6 +186,8 @@ export default function Signup() {
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return, // Prevent multiple submissions
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -320,6 +334,7 @@ export default function Signup() {;
     if (isSubmitting) return, // Prevent multiple submissions;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     setIsSubmitting(true);
     try {;
 <<<<<<< HEAD
@@ -397,6 +412,8 @@ export default function Signup() {;
     }
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
       await signup(data.email, data.password, data.displayName);
@@ -431,6 +448,7 @@ export default function Signup() {;
     }
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from './react';
 import { Link, Navigate } from './react-router-dom';
 import { use_form, type, UseFormReturn } from './react - hook - form';
@@ -513,6 +531,8 @@ if ( {) {
     <>;
       <Header />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -573,10 +593,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   Sign in;
                 </Link>;
               </p>;
             </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -584,6 +607,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             <Input
                               placeholder="John Doe"
                               className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
@@ -671,6 +695,8 @@ if ( {) {
                         </FormControl>;
                         <FormMessage className="text-red-400" />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                       </FormItem>;
                     )}
@@ -678,6 +704,7 @@ if ( {) {
                   />;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <FormField
                     control={form && form.control}
                     name="password"
@@ -749,6 +776,8 @@ if ( {) {
                               size="sm"
                               className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -789,6 +818,7 @@ if ( {) {
                         <FormLabel className="text - zion - slate - light">Full Name</FormLabel>;
                         <FormControl>;
                           <div className="relative">;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             <Input;
                               placeholder="John Doe";
                               className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
@@ -983,6 +1013,13 @@ if ( {) {
                 </div>;
 
                 <div className="mt-6 grid grid-cols-3 gap-3">;
+<<<<<<< HEAD
+                  <Button;
+                    type="button";
+                    variant="outline";
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
+                    onClick={() => loginWithGoogle()}
+=======
 
                   <Button
                     type="button"
@@ -1001,10 +1038,13 @@ if ( {) {
                     </svg>;
                   </Button>;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <Button
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+<<<<<<< HEAD
+=======
                     onClick={() => loginWithFacebook()}
 
                     disabled={isLoading || isSubmitting}
@@ -1013,11 +1053,14 @@ if ( {) {
                     <Facebook className="h-5 w-5" />;
                   </Button>;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <Button
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithTwitter()}
+<<<<<<< HEAD
+=======
 
 =======
                   />;
@@ -1450,3 +1493,4 @@ FormLabel;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

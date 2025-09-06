@@ -1,9 +1,12 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {;
@@ -33,6 +36,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
   const [sortOption, setSortOption] = useState<string>('relevance');
   const toggleSkill = (skill: string) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     setSelectedSkills(prev => 
@@ -46,10 +51,13 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         : [...prev, skill]
     )
   }
   const toggleAvailability = (availability: string) => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -67,10 +75,13 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         : [...prev, availability]
     )
   }
   const toggleRegion = (region: string) => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -88,6 +99,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         : [...prev, region]
     )
   }
@@ -105,6 +117,10 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     let result = [...talents];
     // Filter by search term
     if (searchTerm) {
+<<<<<<< HEAD
+    }
+    // Filter by selected skills
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -216,11 +232,14 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     }
     // Filter by selected skills
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           )
         )
       )
     }
     // Filter by availability
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -249,6 +268,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         )
       )
     }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 =======
@@ -264,6 +284,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
       return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1]
     });
     // Filter by experience range
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     result = result && result.filter(talent => {
@@ -307,6 +329,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return years >= experienceRange[0] && years <= experienceRange[1]
     });
     // Sort talents
@@ -321,6 +344,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
         result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -342,6 +367,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     // Filter by price range;
     result = result.filter(talent => {;
@@ -377,6 +403,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         break;
       case 'experience':
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         result && result.sort((a, b) => (b && b.years_experience || 0) - (a && a.years_experience || 0));
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -393,6 +421,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         break;
       default: // Default sorting by relevance (no specific order)
         break
@@ -434,6 +463,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     setSortOption;
     toggleSkill;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -458,10 +489,14 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     toggleSkill,;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     toggleAvailability;
     toggleRegion;
 
     clearFilters}
+<<<<<<< HEAD
+}
+=======
 =======
 import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types / talent';
@@ -764,3 +799,4 @@ export function useFilterTalents(talents:TalentProfile[]) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

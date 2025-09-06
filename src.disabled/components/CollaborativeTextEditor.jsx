@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
+" export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";""
@@ -32,6 +36,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
 " export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";""
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

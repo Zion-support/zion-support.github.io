@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 import {;
@@ -23,26 +25,33 @@ import React from "react";
 import {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/card";
 
 import { Progress } from "@/components/ui/progress";
@@ -56,6 +65,8 @@ export function TeamStats() {;
   return (
 } from "@/components/ui/card";
 
+<<<<<<< HEAD
+=======
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {
   return (
@@ -98,6 +109,7 @@ export function TeamStats() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Progress } from "@/components/ui/progress",
@@ -118,6 +130,8 @@ export function TeamStats() {
           <p className="text-xs text-muted-foreground">18 seats available</p>
         </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 
@@ -127,11 +141,14 @@ export function TeamStats() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <p className="text-xl font-bold">24</p>
             </div>
           </div>
         </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -148,6 +165,7 @@ export function TeamStats() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="pt-4 text-center border-t border-border mt-4">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View Full Analytics
@@ -155,12 +173,15 @@ export function TeamStats() {
         </div>
       </CardContent>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
     </Card>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
   )
@@ -169,6 +190,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
   return (;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 import React from "react",;
@@ -180,12 +203,15 @@ export function TeamStats() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <Card>;
       <CardHeader>;
         <CardTitle>Team Stats</CardTitle>;
         <CardDescription>Performance metrics for your team</CardDescription>;
       </CardHeader>;
       <CardContent className="space-y-4">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         <div className="space-y-1 && 1.5">;
@@ -195,6 +221,7 @@ export function TeamStats() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div className="flex items-center justify-between text-sm">;
             <span>Team capacity</span>;
             <span className="font-medium">32 / 50 seats used</span>;
@@ -203,6 +230,8 @@ export function TeamStats() {;
           <p className="text-xs text-muted-foreground">18 seats available</p>;
         </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -210,6 +239,7 @@ export function TeamStats() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="space-y-4 pt-2">;
           <div className="grid grid-cols-2 gap-4">;
             <div className="space-y-1">;
@@ -226,6 +256,8 @@ export function TeamStats() {;
             </div>;
             <div className="space-y-1">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
               <p className="text-xs text-muted-foreground">;
                 Interviews this month;
@@ -236,10 +268,13 @@ export function TeamStats() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <p className="text-xl font-bold">24</p>;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -308,10 +343,16 @@ function TeamStats() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             View Full Analytics;
           </button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
+  );
+}
+;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -350,3 +391,4 @@ function TeamStats() {
 }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

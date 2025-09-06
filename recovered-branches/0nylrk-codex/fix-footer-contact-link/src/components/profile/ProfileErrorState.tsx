@@ -9,7 +9,10 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">
       <div className="text-red-400 mb-4 text-xl">
+<<<<<<< HEAD
+=======
         {error || "Something went wrong"}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </div>
       <Button asChild>
         <Link
@@ -21,6 +24,8 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
+=======
   );
 }
 
@@ -37,6 +42,7 @@ export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
@@ -115,6 +121,8 @@ function ProfileErrorState() {
 
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   );}
  interface ProfileErrorStateProps {
@@ -142,3 +150,4 @@ function ProfileErrorState() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

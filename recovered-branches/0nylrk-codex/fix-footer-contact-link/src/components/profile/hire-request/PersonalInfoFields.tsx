@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+
+=======
 import {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   FormField,
 =======
 <<<<<<< HEAD
@@ -15,6 +19,36 @@ FormField,
   FormLabel,
   FormControl,
   FormMessage,
+<<<<<<< HEAD
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { UseFormReturn  } from './react - hook - form';
+import { FormValues  } from './useHireRequestForm';
+
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn < FormValues>;
+}
+
+
+
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {UseFormReturn} from "react-hook-form";
+import {FormValues} from "./useHireRequestForm";
+
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>
+
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { UseFormReturn } from "react-hook-form",
+import { FormValues } from "./useHireRequestForm",
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { UseFormReturn } from "react-hook-form",;
+=======
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { UseFormReturn } from "react-hook-form";
@@ -77,6 +111,7 @@ interface PersonalInfoFieldsProps {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
   FormField,
   FormItem,
@@ -112,6 +147,8 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
 }
 ;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   ),;}
  interface PersonalInfoFieldsProps {
@@ -204,3 +241,4 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

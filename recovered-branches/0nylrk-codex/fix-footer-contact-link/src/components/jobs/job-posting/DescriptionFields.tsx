@@ -44,6 +44,11 @@ import {
   FormDescription,
   FormMessage,;
 <<<<<<< HEAD
+} from "@/components/ui/form";
+
+import { Textarea } from "@/components/ui/textarea";
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -70,10 +75,13 @@ interface DescriptionFieldsProps {
 
 import { Textarea } from "@/components/ui/textarea";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
   editorContent: string
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -90,6 +98,7 @@ export function DescriptionFields(): any ({;
     <>;
       <FormField
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         control={control}
         name="description"
@@ -192,6 +201,8 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
             <FormLabel>Job Description</FormLabel>
             <FormControl>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -199,6 +210,7 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Textarea
               <Textarea 
 
@@ -513,6 +525,8 @@ function DescriptionFields() {
             </FormDescription>;
             <FormMessage />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -628,12 +642,15 @@ function DescriptionFields() {
 }
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </FormItem>)}
       />;
     </>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   ),;}
  interface DescriptionFieldsProps {
@@ -661,3 +678,4 @@ editorContent: string
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -2,6 +2,8 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 function runNode(relPath, args = []) {
@@ -22,6 +24,7 @@ function run_node() {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 exports.config = {
   schedule: '*/15 * * * *'
 }
@@ -30,6 +33,8 @@ exports.config = {
 
 exports && exports.config = {
   schedule: '*/15 * * * *',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -43,6 +48,7 @@ exports && exports.config = {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (res && res.stdout) logs && logs.push(res && res.stdout);
     if (res && res.stderr) logs && logs.push(res && res.stderr);
     logs && logs.push(`exit=${res && res.status || 0}`);
@@ -60,11 +66,14 @@ exports && exports.config = {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 exports.handler = async () => {

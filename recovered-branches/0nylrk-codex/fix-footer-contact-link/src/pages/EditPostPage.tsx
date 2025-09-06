@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -17,6 +19,7 @@ import {ForumPost, ForumCategory} from "@/types/community";
 import {useAuth} from "@/hooks/useAuth";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -34,7 +37,10 @@ import { useAuth } from "@/hooks/useAuth",
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface PostFormValues {
 
   title: string
@@ -44,6 +50,10 @@ interface PostFormValues {
   tags: string
 }
 // Mock post data
+<<<<<<< HEAD
+export default function EditPostPage() {;
+  const { postId } = useParams() as { postId?: string };
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -88,11 +98,14 @@ export default function EditPostPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const navigate = useNavigate();
   const { toast } = useToast();
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -168,10 +181,13 @@ export default function EditPostPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     // In a real app, we would fetch the post data here
     // For now, we'll just use the mock data
     setIsLoading(false)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -184,6 +200,7 @@ export default function EditPostPage() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (isLoading) {
 
   useEffect(() => {;
@@ -221,6 +238,8 @@ export default function EditPostPage() {
 <<<<<<< HEAD
     );
   }
+<<<<<<< HEAD
+=======
 
 
   if (!post) {;
@@ -267,6 +286,7 @@ export default function EditPostPage() {
     );
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (!post) {
     return (
       <AppLayout>
@@ -280,6 +300,8 @@ export default function EditPostPage() {
     )
   }
   // Check if the user is the author or an admin
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -321,6 +343,7 @@ export default function EditPostPage() {
 
   if (!isAuthor && !isAdmin) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
 <<<<<<< HEAD
 =======
@@ -350,6 +373,8 @@ export default function EditPostPage() {
 <<<<<<< HEAD
     );
   }
+<<<<<<< HEAD
+=======
 
 
   },
@@ -365,6 +390,7 @@ export default function EditPostPage() {
     );
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally update the post in the database
@@ -372,6 +398,8 @@ export default function EditPostPage() {
       toast({
         title: "Post updated"
         description: "Your post has been updated successfully"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -390,6 +418,7 @@ export default function EditPostPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Redirect back to the post
       navigate(`/community/post/${postId}`)
     } catch (error) {
@@ -398,6 +427,10 @@ export default function EditPostPage() {
         description: "There was a problem updating your post"
         variant: "destructive"
       })
+<<<<<<< HEAD
+
+  return (
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -462,10 +495,13 @@ export default function EditPostPage() {
 
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <SEO
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, edit post"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -489,19 +525,25 @@ export default function EditPostPage() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <PostForm
           initialValues={initialValues}
           onSubmit={handleSubmit}
           isEditing={true}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <PostForm 
           initialValues={initialValues} 
           onSubmit={handleSubmit} 
           isEditing={true} 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -509,10 +551,13 @@ export default function EditPostPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         />
       </div>
     </AppLayout>
   )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -526,6 +571,7 @@ export default function EditPostPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -646,6 +692,9 @@ export default function EditPostPage() {;
         description="Edit your discussion post in the Zion AI Marketplace community forum.";
         keywords="community, forum, discussion, edit post";
 <<<<<<< HEAD
+      />;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -696,6 +745,7 @@ export default function EditPostPage() {;
 =======
       />;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
@@ -709,6 +759,8 @@ export default function EditPostPage() {;
           <span className="text-sm font-medium">Edit</span>;
         </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;
@@ -721,6 +773,7 @@ export default function EditPostPage() {;
       </div>;
     </AppLayout>;
   );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -762,6 +815,8 @@ const mock_post: ForumPost = {
   is_featured: true;
 }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export default /**
  * EditPostPage - Function description
@@ -911,3 +966,4 @@ return (<AppLayout> <SEO title="Edit Post | Community Forum | Zion AI Marketplac
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

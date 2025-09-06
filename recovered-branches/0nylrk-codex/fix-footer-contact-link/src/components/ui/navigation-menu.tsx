@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -13,10 +15,13 @@ import {cn} from '@/lib/utils';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import * as React from "react"
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { cva } from "class-variance-authority"
 import { ChevronDown } from "lucide-react"
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -103,11 +108,21 @@ NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
 
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+<<<<<<< HEAD
+const NavigationMenu = React.forwardRef<
+  React.ElementRef<typeof NavigationMenuPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
+>(({ className, children, ...props }, ref) => (
+  <NavigationMenuPrimitive.Root
+
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const NavigationMenuList = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.List>
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitiv</typeof>e.List>
@@ -158,6 +173,8 @@ const NavigationMenuList = React.forwardRef<;
   />;
 ));
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -170,11 +187,17 @@ const NavigationMenuList = React.forwardRef<;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const NavigationMenuList = React.forwardRef<;
   React.ElementRef<typeof NavigationMenuPrimitive.List>,;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.List;
+<<<<<<< HEAD
+    ref={ref}
+    className={cn(
+      "group flex flex-1 list-none items-center justify-center space-x-1",
+=======
 <<<<<<< HEAD
 
 
@@ -194,10 +217,13 @@ const NavigationMenuList = React.forwardRef<;
     ref={ref}
     className={cn(
       "group flex flex-1 list-none items-center justify-center space-x-1",
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     )}
     {...props}
   />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -214,6 +240,7 @@ const NavigationMenuTrigger = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ))
 NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 
@@ -224,11 +251,14 @@ const navigationMenuTriggerStyle = cva(
 )
 const NavigationMenuTrigger = React.forwardRef<
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger
 =======
@@ -256,6 +286,8 @@ const NavigationMenuTrigger = React && React.forwardRef<;
     {...props}>;
     {children}{' '}
     <ChevronDown
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -291,6 +323,7 @@ const NavigationMenuContent = React.forwardRef<
 <<<<<<< HEAD
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Content
 =======
@@ -331,6 +364,9 @@ const NavigationMenuTrigger = React.forwardRef<;
 >(({ className, children, ...props }, ref) => (;
   <NavigationMenuPrimitive.Trigger;
     ref={ref}
+<<<<<<< HEAD
+    className={cn(
+=======
 
       "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ",
 
@@ -418,6 +454,7 @@ const NavigationMenuViewport = React && React.forwardRef<;
         "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         className
 =======
 
@@ -500,6 +537,8 @@ const NavigationMenuIndicator = React && React.forwardRef<;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -509,11 +548,14 @@ const NavigationMenuIndicator = React && React.forwardRef<;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const NavigationMenuIndicator = React.forwardRef<;
   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>,;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.Indicator;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -541,6 +583,7 @@ NavigationMenuIndicator.displayName =
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ref={ref}
     className={cn(
       "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
@@ -561,6 +604,8 @@ NavigationMenuIndicator.displayName =
     <div className='relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md' />;
   </NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator>;
 ));
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 NavigationMenuIndicator && NavigationMenuIndicator.displayName =;
   NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator.displayName;
@@ -602,6 +647,7 @@ export {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 import {cn} from '@/lib / utils';
 ;
@@ -731,6 +777,8 @@ export {
   NavigationMenuLink,
   NavigationMenuIndicator,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -781,6 +829,7 @@ React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator> > ( ({
 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   NavigationMenuViewport,;
 };
   NavigationMenuViewport}
@@ -794,4 +843,7 @@ React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator> > ( ({
   NavigationMenuViewport,
 }
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

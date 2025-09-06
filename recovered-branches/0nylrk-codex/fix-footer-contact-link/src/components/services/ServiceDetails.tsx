@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -17,6 +19,7 @@ import { Server, Clock, MapPin } from "lucide-react",
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -79,10 +82,13 @@ function ServiceDetails() {
   const get_datacenters = (country: string): string[] => {
     const data_centers: Record < string, string[]> = {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"];
       "United Kingdom": ["London", "Manchester", "Birmingham"];
       "Germany": ["Frankfurt", "Berlin", "Munich"];
@@ -91,12 +97,15 @@ function ServiceDetails() {
       "Singapore": ["Singapore Central"];
       "Canada": ["Toronto", "Montreal", "Vancouver"];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const dataCenters: Record<string string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
@@ -105,6 +114,11 @@ function ServiceDetails() {
       "Australia": ["Sydney", "Melbourne", "Perth"],
       "Singapore": ["Singapore Central"],
       "Canada": ["Toronto", "Montreal", "Vancouver"],
+<<<<<<< HEAD
+    }
+    return regions[country] |regions["default"]
+  }
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -237,6 +251,7 @@ function ServiceDetails() {
     return regions[country] |regions["default"]
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     },
     
     return regions[country] || regions["default"]
@@ -445,6 +460,8 @@ export function ServiceDetails({ country } ServiceDetailsProps) {;
         <CardDescription className="text-zion-slate-light">;
           Details about our service locations and capabilities in {country}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -467,10 +484,13 @@ export function ServiceDetails({ country } ServiceDetailsProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <img
             src={getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
             className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -493,6 +513,7 @@ export function ServiceDetails({ country } ServiceDetailsProps) {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Server, Clock, MapPin } from "lucide-react",;
 interface ServiceDetailsProps {;
@@ -572,6 +593,8 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 
           />;
         </div>;
+<<<<<<< HEAD
+=======
 
 =======
           />;
@@ -591,6 +614,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
           />;
         </div>;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="space-y-4">;
           <div>;
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">;
@@ -599,17 +623,22 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
             </h4>;
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               {datacenters.map((dc, idx) => (;
                 <div;
                   key={idx} ;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
                 >;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -617,6 +646,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   {dc}
                 </div>;
               ))}
@@ -648,6 +678,8 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
             <p className="text-zion-slate-light">;
               {getRegionalInstructions(country)}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
             </p>;
           </div>;
@@ -667,6 +699,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
               {getRegionalInstructions(country)}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </p>
           </div>
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
@@ -738,16 +771,22 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 =======
                 </div>;
               ))}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </ul>;
           </div>;
         </div>;
       </CardContent>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <CardFooter className="border - t border - zion - blue - light pt - 4">;
         <p className="text - sm text - zion - slate - light">;
           For custom enterprise needs or multi - site services in {country}, please contact our enterprise team for tailored pricing.;
@@ -755,6 +794,8 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
       </CardFooter>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -800,3 +841,4 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

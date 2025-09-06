@@ -36,6 +36,8 @@ export const quoteRequestService = {
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
@@ -50,11 +52,14 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const quoteRequestService = {
   // Get all quote requests (for admin)
   getAll: async () => {
     const { data, error } = await supabase
       .from('quote_requests')
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -64,6 +69,7 @@ export const quoteRequestService = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         talent:talent_id (
 
     return data && data.map((item: any) => ({
@@ -112,6 +118,8 @@ export const quoteRequestService = {
   };
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -123,12 +131,15 @@ export const quoteRequestService = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
     const { data, error } = await supabase
       .from('quote_requests')
       .select('*')
       .eq('talent_id', talentId)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -150,6 +161,7 @@ export const quoteRequestService = {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Get a single quote request by id
   getById: async (id: string) => {
     const { data, error } = await supabase
@@ -191,6 +203,8 @@ if (throw error) {
         *;
         talent:talent_id (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
       talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
   };
@@ -217,11 +231,14 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
     // If marking as responded, set replied_at
     if (status === 'responded') {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       updates && updates.replied_at = new Date().toISOString()
@@ -230,6 +247,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     // If marking as in_review and viewed_at is null, set viewed_at
     if (status === 'in_review') {
@@ -238,6 +256,8 @@ if (throw error) {
         .select('viewed_at')
         .eq('id', id)
         .single();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -251,6 +271,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
     const { data, error } = await supabase
@@ -282,6 +303,8 @@ if (throw error) {
   }
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -345,6 +368,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       .single(),
     
     if (error) throw error,
@@ -506,6 +530,8 @@ export const quoteRequestService = {;
     if (error) throw error;
     return true;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       .order('created_at', { ascending: false }),
@@ -519,6 +545,7 @@ export const quoteRequestService = {;
   // Get a single quote request by id
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           display_name);
       `);
       .eq ('id', id);
@@ -575,6 +602,9 @@ if (throw error) {
     return data[0] as QuoteRequest;
   }
 <<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
 ;
   // Delete a quote request;
   delete: async (id: string) => {
@@ -603,3 +633,4 @@ if (throw error) {
 =======
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

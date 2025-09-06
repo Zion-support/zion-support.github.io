@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -10,6 +12,7 @@ import {useHireRequest} from "@/hooks/useHireRequest";
 import {TalentProfile} from "@/types/talent";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -21,7 +24,10 @@ import { useHireRequest } from "@/hooks/useHireRequest";
 import { TalentProfile } from "@/types/talent";
 import { useHireRequest } from "@/hooks/useHireRequest",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -43,6 +49,8 @@ interface UseHireRequestFormProps {
   user_details?: {
     name?: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -56,11 +64,14 @@ import { TalentProfile } from "@/types/talent",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface UseHireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
   initialJobTitle?: string,
   userDetails?: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -75,6 +86,7 @@ interface UseHireRequestFormProps {
 export interface FormValues {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 
@@ -129,8 +141,11 @@ export interface FormValues {;
   budgetMax: number;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     email?: string,
     id?: string;
@@ -157,6 +172,8 @@ export interface FormValues {
   budgetMax: number
 }
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -201,6 +218,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     requesterName: z.string().min(2, "Name is required"),
     requesterEmail: z.string().email("Valid email is required"),
     projectOverview: z.string().min(10, "Please provide more details about your project"),
@@ -233,6 +251,8 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema);
     defaultValues: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
       budgetMin: talent && talent.hourly_rate || 25,
@@ -275,6 +295,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Handle form submission
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
@@ -328,6 +349,8 @@ function useHireRequestForm() {
         }
         project: {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
           overview: values && values.projectOverview;
           timeline: values && values.timeline;
@@ -363,15 +386,19 @@ function useHireRequestForm() {
           budgetMax: values.budgetMax
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       }
       const result = await submitHireRequest(requestData);
       if (result.success) {
         onClose()
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           id: talent.id || "",
           full_name: talent.full_name,
           professional_title: talent.professional_title},
@@ -386,6 +413,8 @@ function useHireRequestForm() {
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         }
@@ -396,6 +425,7 @@ function useHireRequestForm() {
         onClose()
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -529,6 +559,8 @@ if ( {) {
       console.error ("Error submitting hire request:", error);
     } finally {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
       setIsSubmitting(false)
 
@@ -548,6 +580,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
@@ -558,6 +591,11 @@ if ( {) {
     form;
     isSubmitting;
     onSubmit;
+<<<<<<< HEAD
+  }
+}
+;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -745,3 +783,4 @@ onSubmit
 }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

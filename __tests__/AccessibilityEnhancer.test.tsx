@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -7,6 +9,7 @@
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
@@ -22,6 +25,9 @@ describe('AccessibilityEnhancer'
   it('handles keyboard events correctly'
     const element = screen.getByRole('button'
     fireEvent.keyDown(element, { "key"
+<<<<<<< HEAD
+    fireEvent.keyDown(element, { "key";
+=======
 <<<<<<< HEAD
     fireEvent.keyDown(element, { "key";
 =======
@@ -128,3 +134,4 @@ describe('AccessibilityEnhancer'
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

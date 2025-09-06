@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface SpaceTechService {
   id: string;
   name: string;
@@ -39,6 +42,8 @@ export interface SpaceTechService {
     realService: true
     technology: [
   {
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -56,6 +61,7 @@ export interface SpaceTechService {
       'Multi - satellite coordination',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Coverage optimization',
       'Interference management',
       'Power optimization',
@@ -68,6 +74,8 @@ export interface SpaceTechService {
     ],
     popular: true,
     icon: '🛰️',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -803,6 +811,7 @@ export interface SpaceTechService {;
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     realImplementation: true
     implementationDetails:
       'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'

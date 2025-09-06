@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 "use client",;
 import Link from "next/link",;
@@ -45,6 +47,7 @@ export function FeatureCard({;
           onClick();
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,

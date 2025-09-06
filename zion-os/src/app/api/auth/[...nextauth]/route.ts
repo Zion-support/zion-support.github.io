@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -119,6 +121,7 @@ const handler = NextAuth({;
   adapter: PrismaAdapter(prisma),;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   providers: [;
     CredentialsProvider({;
       name: "credentials";
@@ -160,6 +163,8 @@ const handler = NextAuth({;
       }
       return session;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -181,3 +186,4 @@ export { handler as GET, handler as POST };
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

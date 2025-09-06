@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface InnovativeITService {
   id: string;
   name: string;
@@ -34,6 +37,8 @@ export interface InnovativeITService {
     website: string;
   }
   {
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -50,6 +55,7 @@ export interface InnovativeITService {
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Distributed edge nodes',
       'Real - time data processing',
       'Low - latency computing',
@@ -63,6 +69,8 @@ export interface InnovativeITService {
     ],
     popular: true,
     icon: '🌐',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -81,6 +89,7 @@ export interface InnovativeITService {
     technology: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Edge Computing',
       'IoT',
       '5G',
@@ -91,6 +100,8 @@ export interface InnovativeITService {
       'Python',
       'AWS',
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -506,6 +517,7 @@ export interface InnovativeITService {;
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     realImplementation: true
     implementationDetails:
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'

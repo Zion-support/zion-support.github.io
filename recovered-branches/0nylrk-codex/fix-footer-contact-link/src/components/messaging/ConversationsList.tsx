@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -27,6 +29,7 @@ interface ConversationsListProps {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ConversationsList({
   conversations;
 
@@ -37,14 +40,20 @@ export function ConversationsList({
 export function ConversationsList({ ;
   conversations;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 export function ConversationsList({ ;
   conversations;
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -58,6 +67,11 @@ interface ConversationsListProps {;
 
 export function ConversationsList({ 
   conversations,
+<<<<<<< HEAD
+  activeConversation, 
+  setActiveConversation, 
+  markAsRead 
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -79,6 +93,7 @@ export function ConversationsList({
   setActiveConversation, 
   markAsRead 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -96,6 +111,8 @@ export function ConversationsList({
       ) : (
         <div>
           {conversations.map((conversation) => (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -168,6 +185,7 @@ export function ConversationsList({ ;
         <div>;
           {conversations && conversations.map((conversation) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <ConversationItem
               key={conversation && conversation.id}
               conversation={conversation}
@@ -255,6 +273,8 @@ function ConversationsList() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -300,3 +320,4 @@ function ConversationsList() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

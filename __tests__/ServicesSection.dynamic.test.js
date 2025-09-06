@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -16,12 +18,15 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Services
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import ServicesSectiondynamic from '../components/ServicesSection && ServicesSection.dynamic'
 describe('ServicesSectiondynamic'
   test('renders without crashing'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -100,10 +105,14 @@ describe('ServicesSectiondynamic', () => {
 });
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     expect(screen.getByTestId('servicessection.dynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+<<<<<<< HEAD
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ServicesSectiondynamic from "./components/ServicesSection.dynamic"; describe('ServicesSectiondynamic', () => { test("renders without crashing",() => { render(<ServicesSectiondynamic />); expect(screen.getByTestId("servicessection.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ServicesSectiondynamic />)}); test("handles user interactions",() => { render(<ServicesSectiondynamic />)}); test("applies correct styling"
+=======
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -121,3 +130,4 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Services
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

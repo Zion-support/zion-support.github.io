@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -12,6 +14,7 @@ import {Progress} from "@/components/ui/progress";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Progress } from "@/components/ui/progress";
@@ -20,14 +23,19 @@ import { Progress } from "@/components/ui/progress",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function UsageOverview() {
   // Mock usage data
 
   const usage = {
     jobPosts: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -45,6 +53,7 @@ export function UsageOverview() {
       total: 100
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       used: 32,
       total: 100,
       percentage: 32;
@@ -53,20 +62,28 @@ export function UsageOverview() {
     }
     },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
       used: 32,
       total: 100,
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     interviews: {
       used: 45
       total: 150
       percentage: 30
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -82,11 +99,14 @@ export function UsageOverview() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     messaging: {
       used: 1250
       total: 5000
       percentage: 25
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -103,6 +123,7 @@ export function UsageOverview() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     storage: {
       used: 2.4
       total: 10
@@ -110,6 +131,8 @@ export function UsageOverview() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Progress} from "@/components/ui/progress";
@@ -247,6 +270,7 @@ export function UsageOverview() {;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Progress } from "@/components/ui/progress",;
@@ -276,6 +300,8 @@ export function UsageOverview() {;
     }
   };
   return (;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -312,6 +338,7 @@ export function UsageOverview() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <Card>;
       <CardHeader>;
         <CardTitle>Usage Overview</CardTitle>;
@@ -324,6 +351,8 @@ export function UsageOverview() {;
             <TabsTrigger value="historical">Historical</TabsTrigger>;
           </TabsList>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -331,12 +360,15 @@ export function UsageOverview() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <TabsContent value="current" className="space-y-6">;
             <div className="space-y-4">;
               <div className="space-y-2">;
                 <div className="flex items-center justify-between">;
                   <p className="text-sm font-medium">Job Posts</p>;
                   <p className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                     {usage && usage.jobPosts.used} / {usage && usage.jobPosts.total}
@@ -354,10 +386,13 @@ export function UsageOverview() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <div className="space-y-2">;
                 <div className="flex items-center justify-between">;
                   <p className="text-sm font-medium">Interviews Conducted</p>;
                   <p className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                     {usage && usage.interviews.used} / {usage && usage.interviews.total}
@@ -375,10 +410,13 @@ export function UsageOverview() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <div className="space-y-2">;
                 <div className="flex items-center justify-between">;
                   <p className="text-sm font-medium">Messages Sent</p>;
                   <p className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                     {usage && usage.messaging.used} / {usage && usage.messaging.total}
@@ -396,10 +434,13 @@ export function UsageOverview() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <div className="space-y-2">;
                 <div className="flex items-center justify-between">;
                   <p className="text-sm font-medium">Storage (GB)</p>;
                   <p className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                     {usage && usage.storage.used} / {usage && usage.storage.total} GB;
@@ -419,11 +460,14 @@ export function UsageOverview() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <div className="pt-4 text-sm text-muted-foreground">;
               <p>Current billing period: May 1, 2025 - May 31, 2025</p>;
               <p className="mt-1">Usage resets at the beginning of each billing period.</p>;
             </div>;
           </TabsContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -461,10 +505,13 @@ function UsageOverview() {
       percentage: 24;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
 
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <Card>;
       <CardHeader>;
@@ -530,6 +577,7 @@ function UsageOverview() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               Historical usage data will be available after your first full billing cycle.;
             </div>;
           </TabsContent>;
@@ -543,6 +591,11 @@ function UsageOverview() {
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
+;
+    </Card>);
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </Card>);
@@ -571,3 +624,4 @@ function UsageOverview() {
     </Card>);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

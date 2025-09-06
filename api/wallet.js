@@ -41,6 +41,8 @@ const { withErrorLogging } = require(
   try {;
     // Authentication would normally be checked here;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -60,6 +62,7 @@ const { withErrorLogging } = require(
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
 async function handler(req, res) {
@@ -113,6 +116,8 @@ async function handler(req, res) {
       'Wallet API "error": err);
     res.statusCode = 500;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -155,6 +160,7 @@ module.exports = withErrorLogging(handler);
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     res.json({ error: err.message || 'Failed to fetch wallet' });
   }
 
@@ -167,6 +173,8 @@ module.exports = withErrorLogging(handler);
 module.exports: = withErrorLogging(handler);
 const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: '[]'})} catch: (err) { console.error( 'Wallet API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: '0',history: '[]' })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})';} module.exports: = withErrorLogging(handler);
 module."exports": = withErrorLogging(handler);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -192,3 +200,4 @@ const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: functi
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

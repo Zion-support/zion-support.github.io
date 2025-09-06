@@ -1,9 +1,12 @@
+<<<<<<< HEAD
+=======
 
 export default function TermsPage() {;
   return (;
 
     <div className="min-h-screen bg-white">;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default /**
  * TermsPage - Function description
  */

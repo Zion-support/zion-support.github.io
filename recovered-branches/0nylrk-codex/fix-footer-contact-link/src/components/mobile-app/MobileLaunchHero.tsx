@@ -4,6 +4,13 @@ import {ArrowRight, Smartphone} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {AppStoreButtons} from "./AppStoreButtons";
 import {Card, CardContent} from "@/components/ui/card";
+<<<<<<< HEAD
+import React from "react",
+import { Link } from "react-router-dom",
+import { ArrowRight, Smartphone } from "lucide-react",
+import { Button } from "@/components/ui/button",
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
@@ -69,6 +76,8 @@ export const MobileLaunchHero: React.FC = () => {
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -90,6 +99,7 @@ export const MobileLaunchHero: React.FC = () => {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, Smartphone } from "lucide-react",;
@@ -211,6 +221,15 @@ export const MobileLaunchHero:React.FC = () => {;
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">;
                     <Smartphone className="w-40 h-40 text-white opacity-40" />;
                     {/* In production, replace with actual app screenshot */}
+<<<<<<< HEAD
+                  </div>;
+                </CardContent>;
+              </Card>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+=======
                   </div>
                 </CardContent>
               </Card>
@@ -219,5 +238,6 @@ export const MobileLaunchHero:React.FC = () => {;
         </div>
       </div>
     </section>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 };

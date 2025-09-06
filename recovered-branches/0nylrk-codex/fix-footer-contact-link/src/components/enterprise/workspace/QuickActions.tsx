@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -12,6 +14,7 @@ import {Button} from "@/components/ui/button";
 import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
@@ -20,13 +23,18 @@ import { Button } from "@/components/ui/button",
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function QuickActions() {
 
   const actions = [
     {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -39,10 +47,13 @@ export function QuickActions() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       id: "post-job",
       label: "Post New Job",
       icon: <FileText className="h-5 w-5 mr-2" />,
       description: "Create a new job posting",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -56,12 +67,16 @@ export function QuickActions() {
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       color: "bg-blue-100 dark:bg-blue-900/20"
     }
     },
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: "add-member"
       label: "Add Team Member"
@@ -69,6 +84,8 @@ export function QuickActions() {
       description: "Invite someone to your team"
       color: "bg-green-100 dark:bg-green-900/20"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -84,6 +101,7 @@ export function QuickActions() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: "find-talent"
       label: "Find Talent"
@@ -91,6 +109,8 @@ export function QuickActions() {
       description: "Search the talent pool"
       color: "bg-purple-100 dark:bg-purple-900/20"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -106,12 +126,15 @@ export function QuickActions() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: "schedule"
       label: "Schedule Interview"
       icon: <Calendar className="h-5 w-5 mr-2" />
       description: "Set up candidate interviews"
       color: "bg-amber-100 dark:bg-amber-900/20"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -266,6 +289,7 @@ function QuickActions() {
 
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -440,6 +464,8 @@ export function QuickActions() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   ),;}
@@ -452,3 +478,4 @@ export function QuickActions() {;
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

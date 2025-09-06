@@ -8,6 +8,8 @@ import {useJobApplications} from "@/hooks/useJobApplications";
 import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} from "./applications";
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface JobApplicationsTableProps {;
   jobId: string;
@@ -55,6 +57,7 @@ interface JobApplicationsTableProps {
   jobId: string
 }
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const {
     applications
@@ -103,6 +106,8 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
   const [showScoreDialog, setShowScoreDialog] = useState(false);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {
@@ -138,6 +143,7 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       await updateApplicationStatus(applicationId, newStatus);
       // If it's not already viewed, mark it as viewed;
       const application = applications && applications.find(app => app && app.id === applicationId);
@@ -159,6 +165,8 @@ import {
       setProcessingId(null);
     }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   };
@@ -214,6 +222,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application)
     setShowScoreDialog(true)
@@ -224,6 +233,8 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
   const handleScoreUpdated = (updatedApplication: JobApplication) => {
     refetch()
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -292,6 +303,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   if (isLoading) {;
@@ -464,6 +476,8 @@ if ( {) {
         application={selected_application}
         onScoreUpdated={handleScoreUpdated}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -545,3 +559,4 @@ return (<> <ApplicationsTable applications= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

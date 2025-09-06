@@ -134,5 +134,9 @@ try {
 <<<<<<< HEAD
 console.log('\n✨ Merge conflict resolution script completed!');
 =======
+<<<<<<< HEAD
+console.log('\n✨ Merge conflict resolution script completed!');
+=======
 console.log('\n✨ Merge conflict resolution script completed!');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

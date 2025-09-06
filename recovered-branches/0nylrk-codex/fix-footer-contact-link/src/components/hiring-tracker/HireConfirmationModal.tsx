@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -7,15 +9,19 @@
 import React, { useState } from 'react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
   Dialog;
   DialogContent;
   DialogDescription;
   DialogHeader;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -23,6 +29,8 @@ import {
   DialogDescription,
   DialogHeader,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -30,6 +38,7 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   DialogTitle} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -39,6 +48,8 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -62,6 +73,7 @@ export function HireConfirmationModal({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -72,6 +84,9 @@ import {supabase} from "@/integrations/supabase/client";
 import {TalentProfile} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication} from "@/types/jobs";
+<<<<<<< HEAD
+  isOpen;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface HireConfirmationModalProps {;
@@ -86,6 +101,7 @@ export interface HireConfirmationModalProps {;
 =======
   isOpen;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function HireConfirmationModal({ ;
 
@@ -138,6 +154,8 @@ export function HireConfirmationModal({ ;
   const [isLoading, setIsLoading] = useState(false);
   const { user } = useAuth();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -156,6 +174,7 @@ export function HireConfirmationModal({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -171,12 +190,15 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
 export interface HireConfirmationModalProps {
@@ -234,6 +256,8 @@ export function HireConfirmationModal({;
         variant: 'destructive'}),;
       return;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -243,6 +267,7 @@ export function HireConfirmationModal({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     if (!user) {
       toast({
@@ -579,6 +604,8 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             return;
           }
+<<<<<<< HEAD
+=======
 
 =======
             return;
@@ -598,10 +625,13 @@ if ( {) {
             return;
           }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           setIsLoading(false);
           return;
         }
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -706,6 +736,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     setIsLoading(true),;
     // Create a new project;
@@ -839,6 +870,8 @@ if ( {) {
   }
 
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 import React, { useState } from 'react',;
@@ -1018,6 +1051,7 @@ export function HireConfirmationModal({ ;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Input
               id="projectName"
               value={projectName}
@@ -1113,6 +1147,8 @@ export function HireConfirmationModal({ ;
             />;
             <label
               htmlFor="updateAvailability"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
               onChange={(e) => setUpdateAvailability(e.target.checked)}
@@ -1311,3 +1347,4 @@ if (!projectName || !projectDescription) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
@@ -11,6 +13,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Download, Settings} from "lucide-react";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function AdminHeader() {
 =======
@@ -29,6 +32,8 @@ export function AdminHeader() {
   const { company } = useCompanyWorkspace(),
 
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -170,10 +175,14 @@ function AdminHeader() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Export Data;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -264,3 +273,4 @@ function AdminHeader() {
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

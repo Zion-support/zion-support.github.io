@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -14,6 +17,8 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
 import {Skeleton} from "@/components/ui/skeleton";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface AIMatchingResultsProps {;
@@ -46,6 +51,7 @@ export function AIMatchingResults(): any ({;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -145,13 +151,18 @@ export function AIMatchingResults({
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Group matches by category
   const categories = {
     all: matches
     talent: matches.filter(match => match.category.toLowerCase().includes("talent"))
     services: matches.filter(match => match.category.toLowerCase().includes("service"))
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -162,12 +173,16 @@ export function AIMatchingResults({
   }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
     const lowerCategory = category.toLowerCase();
     if (lowerCategory.includes("talent")) return User;
     if (lowerCategory.includes("equipment")) return Monitor
     return BriefcaseIcon
+<<<<<<< HEAD
+    return (
+=======
 <<<<<<< HEAD
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -322,6 +337,7 @@ export function AIMatchingResults({;
 =======
     return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="space-y-4">;
         <Skeleton className="h-10 w-full" />;
         <div className="space-y-3">;
@@ -330,6 +346,8 @@ export function AIMatchingResults({;
           <Skeleton className="h-[120px] w-full" />;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     );
@@ -342,6 +360,7 @@ export function AIMatchingResults({;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (matches && matches.length === 0) {;
     return (
     ),;
@@ -352,12 +371,15 @@ export function AIMatchingResults({;
     );
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
   if (matches.length === 0) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;
         <CardContent className="pt-6">;
           <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />;
@@ -371,6 +393,8 @@ export function AIMatchingResults({;
               <p className="text-sm text-white">{projectDescription}</p>;
             </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -378,11 +402,14 @@ export function AIMatchingResults({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           )}
         </CardContent>;
       </Card>;
     );
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -402,6 +429,7 @@ export function AIMatchingResults({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -422,12 +450,15 @@ export function AIMatchingResults({;
         {Object.entries(categories).map(([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from './react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
@@ -748,6 +779,8 @@ if ( {) {
                       </div>;
                     </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   </Card>);
@@ -877,4 +910,5 @@ if (isLoading) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }

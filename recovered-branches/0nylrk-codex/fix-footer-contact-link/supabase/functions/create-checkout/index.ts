@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
@@ -34,6 +36,7 @@ import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -51,6 +54,8 @@ import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 const corsHeaders = {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
@@ -61,6 +66,7 @@ const corsHeaders = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -71,6 +77,8 @@ serve(async (req) => {
     Deno && Deno.env.get("SUPABASE_URL") ?? "";
     Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     { auth: { persistSession: false } }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     const requestData = await req && req.json();
@@ -152,11 +160,14 @@ serve(async (req) => {
       amount
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       serviceId = null;
       providerId = null;
       escrow = false;
       productType = "service";
       currency = "usd";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       successUrl;
       cancelUrl
@@ -164,6 +175,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ),
 
   try {
@@ -181,6 +193,8 @@ serve(async (req) => {
     } = requestData,
     
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -188,11 +202,14 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Verify the amount is valid
     if (!amount |isNaN(Number(amount)) |Number(amount) <= 0) {
       throw new Error("Invalid payment amount")
     }
     // Authenticate the user
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     const authHeader = req && req.headers.get("Authorization")!;
@@ -241,6 +258,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Check if customer exists
     const customers = await stripe && stripe.customers.list({ email: user && user.email, limit: 1 });
     let customerId;
@@ -248,6 +266,8 @@ serve(async (req) => {
       customerId = customers && customers.data[0].id
     }
     // Determine product name and description based on the request
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -280,6 +300,7 @@ serve(async (req) => {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Create the session
     const session = await stripe && stripe.checkout.sessions && sessions.create({
       customer: customerId;
@@ -332,6 +353,10 @@ if ( {) {
         {
           price_data: {
 <<<<<<< HEAD
+            currency: currency;
+            product_data: {
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -351,10 +376,13 @@ if ( {) {
             currency: currency;
             product_data: {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       metadata: {
         userId: user && user.id;
         serviceId: serviceId;
         providerId: providerId;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -389,6 +417,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         productType: productType
       }
     });
@@ -403,6 +432,8 @@ if ( {) {
         provider_id: providerId;
         service_id: serviceId;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         stripe_session_id: session && session.id;
 =======
       await supabaseAdmin.from("transactions").insert({
@@ -413,10 +444,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         amount: amount;
         currency: currency;
         status: "pending";
         in_escrow: escrow
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         created_at: new Date().toISOString()
@@ -473,10 +507,13 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       status: 200})
   } catch (error) {
     console.error("Checkout error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -497,6 +534,7 @@ if ( {) {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       status: 500})
   }
 });
@@ -574,6 +612,8 @@ serve(async (req) => {;
               description: productDescription;
             },;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -598,6 +638,7 @@ serve(async (req) => {;
             }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             unit_amount: amount * 100, // Convert to cents;
             ...(product_type === "subscription" ? { recurring: { interval: "month" } } : {});
           }
@@ -645,6 +686,8 @@ if ( {) {
 
   }
 });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -836,3 +879,4 @@ unit amount: amount * 100, //Convert to cents status: 500
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

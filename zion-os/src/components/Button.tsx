@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 'use client',;
@@ -62,6 +64,7 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const content = (;
     <>;
       {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
@@ -69,6 +72,8 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -109,6 +114,7 @@ interface ButtonProps {children: React.ReactNode;
   fullWidth?: boolean;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 const Button = forward_ref < HTMLButtonElement ButtonProps>(({
@@ -125,6 +131,8 @@ const Button = forward_ref < HTMLButtonElement ButtonProps>(({
   type = 'button',
   full_width = false,
   rounded = 'lg';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -172,20 +180,27 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Link href={href} className={classes}>;
         {content}
       </Link>);
   }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 
 
   return (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
 =======
 =======
@@ -202,6 +217,8 @@ if ( {) {
       ref={ref}
       type={type}
       className={classes}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -281,6 +298,7 @@ export function FloatingActionButton({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <Button;
       {...props}
       icon={icon}

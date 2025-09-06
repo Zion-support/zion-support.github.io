@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -9,6 +11,7 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -21,10 +24,13 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -64,6 +70,8 @@ export function TransactionHistory() {
 
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter];
@@ -608,11 +616,15 @@ interface Transaction {_id: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Success"
         description: data.message |"Transaction updated successfully"})
       refetch()
     } catch (error) {
+<<<<<<< HEAD
+      console.error("Error managing transaction:", error),
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       console.error("Error managing transaction:", error);
@@ -622,11 +634,14 @@ interface Transaction {_id: string;
 =======
       console.error("Error managing transaction:", error),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Error"
         description: error.message |"Failed to update transaction"
         variant: "destructive"})
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -645,6 +660,7 @@ interface Transaction {_id: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'pending':
@@ -657,6 +673,9 @@ interface Transaction {_id: string;
             <Clock className="w-3 h-3 mr-1" /> Pending
           </Badge>
 <<<<<<< HEAD
+        ),
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         );
 =======
@@ -665,12 +684,16 @@ interface Transaction {_id: string;
 =======
         ),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case 'completed':
         return (
           <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">
             <CheckCircle2 className="w-3 h-3 mr-1" /> Completed
           </Badge>
 <<<<<<< HEAD
+        ),
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         );
 =======
@@ -679,12 +702,16 @@ interface Transaction {_id: string;
 =======
         ),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case 'refunded':
         return (
           <Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500">
             <RefreshCcw className="w-3 h-3 mr-1" /> Refunded
           </Badge>
 <<<<<<< HEAD
+        ),
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         );
 =======
@@ -693,6 +720,7 @@ interface Transaction {_id: string;
 =======
         ),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case 'cancelled':
         return (
           <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">
@@ -707,6 +735,8 @@ interface Transaction {_id: string;
         )
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -724,11 +754,14 @@ interface Transaction {_id: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
       currency: currency.toUpperCase()
     }).format(amount)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -777,6 +810,7 @@ interface Transaction {_id: string;
         body: { transactionId, action }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">;
@@ -794,6 +828,8 @@ interface Transaction {_id: string;
   }
   return (
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -1022,6 +1058,7 @@ export function TransactionHistory() {_const { user} = useAuth();
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               return (
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
                   <CardHeader className="pb-3">
@@ -1035,6 +1072,8 @@ export function TransactionHistory() {_const { user} = useAuth();
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>
                           ) : (
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1265,6 +1304,7 @@ export function TransactionHistory() {_const { user} = useAuth();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           )}
                         </CardDescription>
                       </div>
@@ -1286,6 +1326,8 @@ export function TransactionHistory() {_const { user} = useAuth();
                       </span>
                     </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
@@ -1298,6 +1340,7 @@ export function TransactionHistory() {_const { user} = useAuth();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :
@@ -1308,6 +1351,8 @@ export function TransactionHistory() {_const { user} = useAuth();
                             transaction.completed_at |
                             transaction.refunded_at |
                             transaction.cancelled_at!
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1459,6 +1504,7 @@ export function TransactionHistory() {_const { user} = useAuth();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           ).toLocaleDateString()}
                         </span>;
                       </div>;
@@ -1811,6 +1857,8 @@ if ( {) {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                           ).toLocaleDateString()}
                         </span>
                       </div>
@@ -1886,3 +1934,4 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

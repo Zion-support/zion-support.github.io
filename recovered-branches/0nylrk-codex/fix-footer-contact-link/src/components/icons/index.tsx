@@ -1,6 +1,9 @@
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -127,6 +130,8 @@ Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   if (LucideIcons[lucideName]) {
     iconExports[alias] = createIconComponent(alias, lucideName)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 // Alias for missing icons or for icons with different names;
@@ -241,6 +246,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } else {
     console.warn (`Icon '${lucide_name}' not found in lucide-react`);
     // Use a fallback icon;
@@ -594,6 +600,8 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
   }
 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export const {;
@@ -616,6 +624,7 @@ export const {
 export const {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   LayoutGrid;
   List;
   Zap;
@@ -860,6 +869,8 @@ export const {;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -940,10 +951,14 @@ export * from 'lucide-react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Tag} = icon_exports;
 ;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -964,3 +979,4 @@ export * from 'lucide-react';
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

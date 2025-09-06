@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
@@ -129,3 +131,4 @@ export default UserProvider;
 =======
 export default UserProvider;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

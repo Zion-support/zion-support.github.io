@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
   {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
@@ -14,6 +17,8 @@
     description:;
       'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',
     features: [;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -56,6 +61,7 @@
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'db - index - advisor',
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
@@ -73,6 +79,9 @@
     popular: false,
     icon: '🗄️',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Modern alternative to legacy APM add‑ons with focused insights.',
     target_audience: 'DBA, Backend, Platform',
     trial_days: 14,
@@ -119,6 +128,8 @@
     rating: 4.5
     reviews: 9
   }
+<<<<<<< HEAD
+=======
 =======
 
     color: 'from - indigo - 600 to - violet - 700',
@@ -130,6 +141,7 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Modern alternative to legacy APM add‑ons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
     trialDays: 14,
@@ -164,6 +176,13 @@
 
 
 ];	{
+<<<<<<< HEAD
+		period: '/month',
+		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
+    features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true,
+		icon: '🛡️', color: 'from-rose-600 to-red-700',
+		textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',
+=======
 
 		period: '/month'
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
@@ -174,6 +193,7 @@
 		textColor: 'text-rose-300';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.',
 		targetAudience: 'AI platform, Security, Compliance';
 		trialDays: 14;
@@ -195,10 +215,13 @@
 		customers: 40;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 18
 	}
 	{
@@ -215,11 +238,14 @@
 		textColor: 'text-emerald-300';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
 
 		marketPosition: 'Actionable, low‑touch FinOps that pays for itself within 90 days.';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		targetAudience: 'Platform, SRE, Finance';
 		trialDays: 14;
 		setupTime: '2 hours';
@@ -240,10 +266,13 @@
 		customers: 25;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 12
 	}
 	{
@@ -260,11 +289,14 @@
 		textColor: 'text-indigo-300';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/db-index-advisor';
 		marketPosition: 'Modern alternative to legacy APM add‑ons with focused insights.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		targetAudience: 'DBA, Backend, Platform';
 		trialDays: 14;
 		setupTime: '30 minutes';
@@ -284,12 +316,17 @@
 		launchDate: '2025-02-12';
 		customers: 18;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ];
 ;
 
 	}
 ];
 
+<<<<<<< HEAD
+=======
 =======
 
 		rating: 4 && 4.5,
@@ -302,6 +339,7 @@
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: 'ai - redteam - evaluator';
   name: 'AI Red‑Team Evaluator';
   tagline: 'Continuous LLM red‑teaming and safety scoring';

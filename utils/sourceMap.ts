@@ -2,6 +2,10 @@
 }
 export interface DeployTemplateResult {
 =======
+<<<<<<< HEAD
+}
+export interface DeployTemplateResult {
+=======
 
 
 }
@@ -16,6 +20,7 @@ export function getSourceMapWithExistence() {
   }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export function getGitStatus() {
   return {
@@ -26,10 +31,13 @@ export function getGitStatus() {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
   return nodes && nodes.map(markExistenceRecursive);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -77,13 +85,18 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -97,6 +110,7 @@ export function getGitStatus() {
   return {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     connected: false,
     branch: 'main';
   };
@@ -136,6 +150,11 @@ export function deployBasicTemplateForPath(
     skippedPaths.push(keepFile);
   }
 =======
+<<<<<<< HEAD
+  } else {
+    skippedPaths.push(keepFile);
+  }
+=======
 
 
   const keepFile = path && path.join(absoluteDir, '.keep');
@@ -155,6 +174,7 @@ export function deployBasicTemplateForPath(
     createdPaths && createdPaths.push(readmeFile);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } else {
     skippedPaths.push(readmeFile);
   }
@@ -170,8 +190,11 @@ export function deployBasicTemplateForPath(
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   created_paths: string[];
@@ -193,9 +216,12 @@ export function ensure_directory (dir_path: string): void {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

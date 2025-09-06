@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 "use client",;
 import { useState } from "react",;
@@ -238,6 +240,7 @@ const servicePricing: ServicePricing[] = [;
         features: ["Advanced testing", "Custom compliance", "Ongoing monitoring", "Security training", "Incident response", "Dedicated support"],;
         cta: "Contact Sales",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         ctaLink: "mailto:kleber@ziontechgroup.com";
       }
     ];
@@ -252,8 +255,11 @@ const servicePricing: ServicePricing[] = [;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",
 import { useState  } from './react';,
 interface PricingTier {
@@ -962,6 +968,8 @@ export default function PricingPage() {;
               key={category}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               on_click={() => setSelectedCategory (category)}
               className={`px - 4 py - 2 rounded - md text - sm font - medium transition - colors ${
@@ -970,6 +978,7 @@ export default function PricingPage() {;
                   : 'text - gray - 300 hover:text - white hover:bg - zinc - 700';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               }`}
             >;
               {category}
@@ -1013,6 +1022,8 @@ export default function PricingPage() {;
                 <div;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
                   key={tier_index}
                   className={`relative border rounded - lg p - 6 ${
@@ -1021,6 +1032,7 @@ export default function PricingPage() {;
                       : 'border - white / 10';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   }`}
                 >;
                   {tier.popular && (
@@ -1030,12 +1042,15 @@ export default function PricingPage() {;
                       </span>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
                     </div>)}
                   <div className="text - center space - y-4">;
                     <h3 className="text - xl font - semibold">{tier.name}</h3>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <div>;
                       <span className="text - 3xl font - bold">{tier.price}</span>;
                       <span className="text - lg opacity - 80">{tier.period}</span>;
@@ -1053,6 +1068,8 @@ export default function PricingPage() {;
                     <a;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
                       href={tier.cta_link}
                       className={`block w - full text - center py - 3 px - 4 rounded - lg font - medium transition - colors ${
@@ -1061,6 +1078,7 @@ export default function PricingPage() {;
                           : 'bg - zinc - 700 hover:bg - zinc - 600 text - white';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       }`}
                     >;
                       {tier.cta}

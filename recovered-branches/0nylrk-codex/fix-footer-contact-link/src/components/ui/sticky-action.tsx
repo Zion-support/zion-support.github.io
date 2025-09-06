@@ -5,10 +5,13 @@ interface StickyActionProps {
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React, { useEffect, useState } from "react";
 import {cn} from "@/lib/utils";
@@ -19,6 +22,8 @@ interface StickyActionProps {;
   children: React && React.ReactNode,;
 
   showAfterScroll?: number;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   position?: "bottom" | "top";
 }
@@ -43,6 +48,7 @@ interface StickyActionProps {
   showAfterScroll?: number;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   position?: "bottom" | "top"
 }
 
@@ -60,10 +66,13 @@ export function StickyAction({
   position?: "bottom" | "top";
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export function StickyAction(): any ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   className;
   children;
 
@@ -72,6 +81,8 @@ export function StickyAction(): any ({;
 }: StickyActionProps) {;
   const [isVisible, setIsVisible] = useState(false);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -79,17 +90,21 @@ export function StickyAction(): any ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
         setIsVisible(true)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useEffect, useState } from './react';
 import { cn } from '@/lib / utils';
 import { motion, AnimatePresence } from './framer-motion';
@@ -108,6 +123,9 @@ function StickyAction() {
         setIsVisible (false);
       }
 <<<<<<< HEAD
+    }
+=======
+<<<<<<< HEAD
 
 ;
     window.addEventListener ("scroll", handle_scroll);
@@ -121,10 +139,13 @@ function StickyAction() {
 =======
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return () => {
       window.removeEventListener ("scroll", handle_scroll);
     }
   }, [showAfterScroll]);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -169,6 +190,7 @@ function StickyAction() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <AnimatePresence>
       {isVisible && (
@@ -177,6 +199,8 @@ function StickyAction() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 =======
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
@@ -191,6 +215,7 @@ function StickyAction() {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
@@ -233,6 +258,8 @@ export function StickyAction({;
         setIsVisible(false);
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
 
@@ -250,6 +277,7 @@ export function StickyAction({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <AnimatePresence>;
       {isVisible && (;
@@ -331,6 +359,8 @@ export function StickyAction({;
     </AnimatePresence>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -403,3 +433,4 @@ export function StickyAction({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

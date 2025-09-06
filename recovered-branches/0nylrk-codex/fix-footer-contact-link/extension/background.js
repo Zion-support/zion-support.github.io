@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 const BASE_URL = 'https: //zionai && zionai.com',
 
@@ -10,11 +12,14 @@ const OPENAI_API_KEY = ''
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const BASE_URL = 'https: //zionai.com'
 async function askZionGPT(prompt) {
   if (!OPENAI_API_KEY) return { answer: 'Model key missing' }
 
   try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -38,6 +43,7 @@ if (return { answer: 'Model key missing' }, ) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       method: 'POST',
       headers: {
         'Content - Type': 'application / json_authorization': `Bearer ${OPENAI_API_KEY}`;
@@ -101,6 +107,8 @@ if ( {) {
     chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
@@ -151,6 +159,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 }),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }),
 ;
 }),;

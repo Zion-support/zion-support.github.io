@@ -1,8 +1,23 @@
+<<<<<<< HEAD
+import {Link} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {ShieldAlert} from "lucide-react";
+import { Link } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer";
+import { ShieldAlert } from "lucide-react";
+import { Footer } from "@/components/Footer",
+import { ShieldAlert } from "lucide-react",
+=======
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ShieldAlert } from "lucide-react";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function Unauthorized() {
   return (
     <>
@@ -38,6 +53,38 @@ export default function Unauthorized() {
       </div>
       <Footer />
     </>
+<<<<<<< HEAD
+  )
+import { Link } from "react-router-dom",;
+import { Button } from "@/components/ui/button",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { ShieldAlert } from "lucide-react";
+export default function Unauthorized() {;
+  return (
+    <>;
+      <Header />;
+      <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">;
+        <div className="bg-zion-blue-dark rounded-xl p-8 max-w-md w-full text-center shadow-lg border border-zion-blue-light">;
+          <div className="flex justify-center mb-6">;
+            <div className="bg-zion-purple/20 p-4 rounded-full">;
+              <ShieldAlert className="h-12 w-12 text-zion-purple" />;
+            </div>;
+          </div>;
+          <h1 className="text-3xl font-bold text-white mb-3">Access Denied</h1>;
+          <p className="text-zion-slate-light mb-6">;
+            You don't have permission to access this page. This could be because your account doesn't have the required permissions or you need to complete your profile.;
+          </p>;
+          <div className="flex flex-col gap-3">;
+              Login with Different Account;
+            </Link>;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+    </>);
+}
+=======
   );
 }
 
@@ -65,3 +112,4 @@ export default function Unauthorized() {
     </>);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

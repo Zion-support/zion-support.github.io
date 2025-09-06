@@ -1,4 +1,13 @@
+<<<<<<< HEAD
+  return ['ar', 'he', 'fa', 'ur'].includes(locale);
+}
+export const i18n = {
+  language: 'en'
+  resolvedLanguage: 'en'
+}
+=======
 export const supportedLocales = ["en", "pt", "es", "ar"] as const;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 <<<<<<< HEAD
 =======
@@ -30,6 +39,10 @@ export const i18n = {
 
   language: 'en',
   resolved_language: 'en';
+<<<<<<< HEAD
+}
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,3 +76,4 @@ export const i18n = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

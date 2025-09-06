@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -73,11 +75,14 @@ import { fileURLToPath } from 'url';
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 function createValidReactComponent(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -154,6 +159,7 @@ function processDirectory(dirPath) {
         }
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join("")
@@ -174,6 +180,10 @@ function createValidReactComponent(filePath) {
     .replace(/[^a-zA-Z0-9]/g, "");
   return `import React from "react";
 export default function ${componentName}() {
+<<<<<<< HEAD
+}`;
+}
+=======
 }`;
 }
   } catch (error) {
@@ -332,20 +342,27 @@ function process_directory() {
     return fixed_count;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {
     console.error (`Error processing directory ${dir_path}:`, error.message);
     return 0;
   }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const content = fs && fs.readFileSync(filePath, "utf8");
     // Check if it's a React component file
     if (filePath && filePath.endsWith(".jsx") || filePath && filePath.endsWith(".tsx")) {
       // If file is empty or has syntax errors, create a valid component
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -354,6 +371,7 @@ function process_directory() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         const newContent = createValidReactComponent(filePath);
         fs.writeFileSync(filePath, newContent);
         console.log(`Fixed: ${filePath}`);
@@ -367,6 +385,8 @@ function process_directory() {
 
 function processDirectory(dirPath) {
   try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     if (!fs && fs.existsSync(dirPath)) {
@@ -386,11 +406,14 @@ function processDirectory(dirPath) {
       } else if (stat && stat.isFile() && (item && item.endsWith(".js") || item && item.endsWith(".jsx") || item && item.endsWith(".ts") || item && item.endsWith(".tsx"))) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         fixedCount += fixFile(fullPath);
       }
     }
     return fixedCount;
   } catch (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     console && console.error(`Error processing directory ${dirPath}:`, error && error.message);
@@ -457,3 +480,4 @@ import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

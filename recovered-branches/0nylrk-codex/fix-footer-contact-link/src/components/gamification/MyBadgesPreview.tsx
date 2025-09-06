@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -8,6 +10,7 @@ const earnedBadges: { badge: BadgeKey; date: string }[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   { badge: "first_listing", date: "2024-12-16" },
   { badge: "profile_complete", date: "2024-11-22" },
   { badge: "first_action", date: "2024-09-08" },
@@ -32,6 +35,8 @@ const earnedBadges: { badge: BadgeKey, date: string }[] = [
   { badge: "first_action", date: "2024-09-08" }],
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -46,11 +51,14 @@ const earnedBadges: { badge: BadgeKey; date: string }[] = [
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   { badge: "first_listing", date: "2024-12-16" }
   { badge: "profile_complete", date: "2024-11-22" }
   { badge: "first_action", date: "2024-09-08" }
 ];
 export const MyBadgesPreview: React.FC = () => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -58,6 +66,7 @@ export const MyBadgesPreview: React.FC = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 // Dummy data for demo: what badges this user earned (with fake dates);
 const earnedBadges: { badge: BadgeKey; date: string }[] = [;
@@ -67,6 +76,8 @@ const earnedBadges: { badge: BadgeKey; date: string }[] = [;
 ];
 export const MyBadgesPreview: React.FC = () => {;
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -118,6 +129,7 @@ export const MyBadgesPreview:React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="p-4 bg-zion-blue rounded-xl shadow-md mx-auto w-full max-w-sm">
       <div className="mb-2 flex items-center gap-2">
         <span className="font-bold text-lg text-white">My Badges</span>
@@ -128,6 +140,8 @@ export const MyBadgesPreview:React.FC = () => {;
       <div className="flex flex-wrap gap-2">
         {earnedBadges.map(({ badge, date }) => (
           <BadgeEarned key={badge} badge={badge} earnedDate={date} />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -149,6 +163,7 @@ export const MyBadgesPreview:React.FC = () => {;
 >>>>>>> main
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 
 import React from "react",;
@@ -171,6 +186,8 @@ export const MyBadgesPreview: React.FC = () => {
           {earned_badges.length} earned;
         </span>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -248,3 +265,4 @@ export const MyBadgesPreview: React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

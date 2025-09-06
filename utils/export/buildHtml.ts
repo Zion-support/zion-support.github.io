@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -14,6 +16,7 @@ export function buildPrintableHtml(project: BookProject): string {;
     .join('\n'),;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { BookProject } from '../book/bookTypes';
 export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
 export function buildPrintableHtml(project: BookProject): string {;
@@ -22,8 +25,11 @@ export function buildPrintableHtml(project: BookProject): string {;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -49,6 +55,8 @@ export function buildPrintableHtml (project: BookProject): string {
       </section>;
     `);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -62,6 +70,7 @@ export function buildPrintableHtml (project: BookProject): string {
     .join('\n'),;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     .join('\n\n');
   const visualsHtml = [;
     ...visuals.timelineImages;
@@ -70,8 +79,11 @@ export function buildPrintableHtml (project: BookProject): string {
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -81,7 +93,10 @@ export function buildPrintableHtml (project: BookProject): string {
 
 
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     .join ('\n\n'),
   const visuals_html = [;
     ...visuals.timeline_images,
@@ -91,6 +106,8 @@ export function buildPrintableHtml (project: BookProject): string {
     .join ('\n'),
   const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -102,6 +119,7 @@ export function buildPrintableHtml (project: BookProject): string {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return `<!doctype html>;
 <html>;
 <head>;
@@ -235,6 +253,8 @@ function escapeHtml(s: string): string {;
 <body>;
   <section class="cover">;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -256,6 +276,7 @@ function escapeHtml(s: string): string {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ${barcode}
   </section>;
   ${quotes_html}
@@ -264,6 +285,8 @@ function escapeHtml(s: string): string {;
 </body>;
 </html>`;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -407,11 +430,14 @@ function paragraphize(text: string): string {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -444,10 +470,14 @@ function escape_html (string: string): string {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -467,3 +497,4 @@ function escape_html (string: string): string {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

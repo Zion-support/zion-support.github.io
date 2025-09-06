@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useState,useEffect,useCallback,useMemo } from react' export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ "query": ',"filters": {},"sortBy": 'nul',l,"sortOrder": 'asc'; ,',"results": 'dat',a,"isLoading": 'fals',e,"totalResults": 'data.length'}) const [debouncedQuery,setDebouncedQuery] = useState('')'';''
@@ -38,3 +40,4 @@ import { useState,useEffect,useCallback,useMemo } from react' export const useSe
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

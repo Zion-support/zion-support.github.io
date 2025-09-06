@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import {useState, useEffect} from 'react';
 import {use_form} from 'react - hook - form';
@@ -15,6 +17,7 @@ import { use_auth } from '@/hooks / use_auth';
 import {useState, useEffect} from 'react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -24,9 +27,12 @@ import { useNavigate  } from 'react-router-dom';
 import { jobSchema, JobSchemaType  } from './validation';
 import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -44,6 +50,8 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -51,6 +59,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -60,6 +69,8 @@ import { useNavigate } from 'react-router-dom',
 import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -68,10 +79,13 @@ import { useAuth } from "@/hooks/useAuth",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -131,6 +145,7 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       title: '';
       company: '';
       location: '';
@@ -146,6 +161,8 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       expiry_date: '';
       is_remote: false;
       category: '';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -164,10 +181,13 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return
     }
     setIsLoading(true);
     try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -181,10 +201,13 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const jobData = {
         ...values;
         published_date: publishedDate;
         expiry_date: expiryDate;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -198,6 +221,7 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (onSuccess) {
         onSuccess()
       }
@@ -206,6 +230,8 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
       console.error("Error in job form submission:", error);
       toast.error(error.message |"Failed to process form");
@@ -231,6 +257,7 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       title: '',
       company: '',
       location: '',
@@ -422,6 +449,8 @@ if ( {) {
 }
         on_success ();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
       title: '',
       company: '',
@@ -455,6 +484,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
       return job_data;
     } catch (error: any) {
@@ -463,11 +493,14 @@ if ( {) {
       throw error;
     } finally {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       setIsLoading (false);
     }
@@ -482,6 +515,8 @@ if ( {) {
     setIsRemote;
     initial_values;
     setInitialValues;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     submit_job;
 =======
@@ -521,6 +556,7 @@ if ( {) {
     submitJob
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
       return jobData;
     } catch (error: any) {;
@@ -549,6 +585,8 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 ;
 
@@ -559,3 +597,4 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

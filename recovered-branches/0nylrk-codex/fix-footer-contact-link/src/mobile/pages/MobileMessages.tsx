@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -13,6 +15,7 @@ import {MobileConversationList} from "../components/messaging/MobileConversation
 import {MobileChatView} from "../components/messaging/MobileChatView";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -21,9 +24,12 @@ import { MobileChatView } from "../components/messaging/MobileChatView";
 import { MobileConversationList } from "../components/messaging/MobileConversationList",
 import { MobileChatView } from "../components/messaging/MobileChatView",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Mock data for demonstration
 
 const mockConversations = [
@@ -81,6 +87,8 @@ const mockMessages: Message[] = [
     status: "read"}
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React, { useState } from "react";
@@ -102,6 +110,7 @@ import {MobileChatView} from "../components/messaging/MobileChatView";
   {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: "5"
     content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?"
     timestamp: "10:45 AM"
@@ -149,8 +158,11 @@ import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileConversationList } from "../components/messaging/MobileConversationList",;
 import { MobileChatView } from "../components/messaging/MobileChatView",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
@@ -194,6 +206,9 @@ interface Message {;
   status: "read" | "sent" | "delivered";
 }
 <<<<<<< HEAD
+;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -202,6 +217,7 @@ interface Message {;
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const mockMessages: Message[] = [;
   {;
     id: "1",;
@@ -223,6 +239,8 @@ const mockMessages: Message[] = [;
     status: "read"},;
   {;
     id: "4",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?";
@@ -284,6 +302,7 @@ export function MobileMessages() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="min-h-screen flex flex-col">;
       {activeConversation ? (;
@@ -335,6 +354,8 @@ export function MobileMessages() {;
           messages={messages}
           on_back={handle_back}
           onSendMessage={handleSendMessage}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
           />;
@@ -553,3 +574,4 @@ isMe: true;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

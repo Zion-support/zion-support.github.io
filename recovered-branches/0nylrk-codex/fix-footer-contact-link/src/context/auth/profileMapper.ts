@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -16,15 +18,19 @@ import type { UserProfile } from "@/types/auth",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define
 // a minimal user shape that includes only the properties we actually use
 // in this file.
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface SupabaseUser {
 
   id: string,
@@ -91,6 +97,8 @@ export interface SupabaseUser {
     headline: profile.headline || undefined;
     avatar_url: profile.avatar_url || undefined,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     avatar_url: profile.avatar_url || undefined, // Add for compatibility;
     role: profile.user_type // Map user_type to role for backward compatibility;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -118,6 +126,7 @@ import type { UserProfile } from "@/types/auth",;
     avatar_url: profile.avatar_url || undefined,
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     avatarUrl: profile.avatar_url || undefined, // Add for compatibility
     role: profile.user_type // Map user_type to role for backward compatibility
   }
@@ -127,7 +136,10 @@ import type { UserProfile } from "@/types/auth",;
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

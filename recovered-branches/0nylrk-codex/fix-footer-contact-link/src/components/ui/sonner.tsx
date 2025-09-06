@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import { useTheme } from "next-themes"
 import { Toaster as Sonner, toast } from "sonner"
@@ -25,6 +27,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
@@ -32,6 +35,8 @@ const Toaster = ({ ...props }: ToasterProps) => {
       toastOptions={{
         classNames: {
           toast:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -51,11 +56,14 @@ const Toaster = ({ ...props }: ToasterProps) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           cancelButton:
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
       {...props}
     />;
   );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -63,6 +71,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { use_theme } from &quot;next - themes & quot;
 import { Toaster as Sonner, toast } from &quot;sonner & quot;
 ;
@@ -97,6 +106,8 @@ const Toaster = ({ ...props } ToasterProps) => {;
   const { theme = "system" } = useTheme();
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return (;
     <Sonner;
       theme={theme as ToasterProps["theme"]}
@@ -118,6 +129,7 @@ const Toaster = ({ ...props } ToasterProps) => {;
 <<<<<<< HEAD
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 ;
 export { Toaster, toast } />) 

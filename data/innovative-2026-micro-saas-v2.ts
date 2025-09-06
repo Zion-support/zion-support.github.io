@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface Innovative2026MicroSaasV2 {
   id: string;
 export interface Innovative2026MicroSaasV2 {  id: string;
@@ -25,8 +28,11 @@ export interface Innovative2026MicroSaasV2 {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface Innovative2026MicroSaasV2 {;
   id: string,;
   name: string,;
@@ -42,6 +48,8 @@ export interface Innovative2026MicroSaasV2 {;
     email: string,;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     address: string;
   }
 }
@@ -50,6 +58,7 @@ export interface Innovative2026MicroSaasV2 {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     address: string;
   }
@@ -58,8 +67,11 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     address: string;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
@@ -126,8 +138,11 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [;
 ];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],

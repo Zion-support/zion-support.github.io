@@ -49,6 +49,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   type = 'website'
   image = '/og-image.jpg'
   url
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React from 'react';
@@ -75,6 +77,7 @@ export default function MainLayout({
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>
       <Head>
@@ -189,6 +192,8 @@ import React from 'react'; import Head from 'next/head'; import Header from './H
     </>);
 }
 export default MainLayout;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         <meta name="keywords" content={keywords} />
@@ -233,3 +238,4 @@ export default MainLayout;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

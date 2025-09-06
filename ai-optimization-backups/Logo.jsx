@@ -83,6 +83,8 @@ export function Logo({ customLogo, customColor }) {}
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>";
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -166,6 +168,7 @@ import React from 'react';
 origin/automation-improvements-final
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Link } from 'react-router-dom';
       <divclassName="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"import React from 'react'
 import { Link } from 'react-router-dom'

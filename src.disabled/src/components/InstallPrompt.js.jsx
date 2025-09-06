@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React from 'react'; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = e => { e.preventDefault(); setDeferred(e)}; window.addEventListener("beforeinstallprompt",handler); return () => window.removeEventListener("beforeinstallprompt",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== "accepted") {}}}
@@ -38,3 +40,4 @@ import _React from 'react'; export const InstallPrompt = () => { const [deferred
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

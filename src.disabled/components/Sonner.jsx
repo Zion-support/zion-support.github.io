@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+"export\": function Sonner ({ position = \'bottom - right\',richColors = true,closeButton = true }) { return (<div className={`fixed ${position === \'top - left\' ? \'top - 4 left - 4\' : \' \"position\": === \'top - right\' ? \'top - 4 right - 4\' :\' position: === \'bottom - left\' ? \'bottom - 4 left - 4\' :\'` \'bottom: - 4 right - 4\'} z - 50\"}> \''\';\'"\"";
+export: function Sonner ({ position = "bottom - right",richColors = true,closeButton = true }) { return (<div className={`fixed ${position === "top - left" ? "top - 4 left - 4" : " position: === "top - right" ? "top - 4 right - 4" :" position: === "bottom - left" ? "bottom - 4 left - 4" :"` "bottom: - 4 right - 4"} z - 50"}> """;"""";""`"`
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 "export": function Sonner ({ position = 'bottom - right',richColors = true,closeButton = true }) { return (<div className={`fixed ${position === 'top - left' ? 'top - 4 left - 4' : ' "position": === 'top - right' ? 'top - 4 right - 4' :' position: === 'bottom - left' ? 'bottom - 4 left - 4' :'` 'bottom: - 4 right - 4'} z - 50"}> {} </div>) } export const toast = { "success": (message) =>'''""",;""`}
@@ -32,6 +36,7 @@ export: function Sonner ({ position = "bottom - right",richColors = true,closeBu
 "export\": function Sonner ({ position = \'bottom - right\',richColors = true,closeButton = true }) { return (<div className={`fixed ${position === \'top - left\' ? \'top - 4 left - 4\' : \' \"position\": === \'top - right\' ? \'top - 4 right - 4\' :\' position: === \'bottom - left\' ? \'bottom - 4 left - 4\' :\'` \'bottom: - 4 right - 4\'} z - 50\"}> \''\';\'"\"";
 export: function Sonner ({ position = "bottom - right",richColors = true,closeButton = true }) { return (<div className={`fixed ${position === "top - left" ? "top - 4 left - 4" : " position: === "top - right" ? "top - 4 right - 4" :" position: === "bottom - left" ? "bottom - 4 left - 4" :"` "bottom: - 4 right - 4"} z - 50"}> """;"""";""`"`
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "export": function Sonner ({ position = 'bottom - right',richColors = true,closeButton = true }) { return (<div className={`fixed ${position === 'top - left' ? 'top - 4 left - 4' : ' "position": === 'top - right' ? 'top - 4 right - 4' :' position: === 'bottom - left' ? 'bottom - 4 left - 4' :'` 'bottom: - 4 right - 4'} z - 50"}> {} </div>) } export const toast = { "success": (message) =>'''""",;""`}
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

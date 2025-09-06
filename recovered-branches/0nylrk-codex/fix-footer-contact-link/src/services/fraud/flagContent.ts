@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -16,6 +18,7 @@ import { FlagResult } from './types',
 
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const flagContent = async (;
   userId: string;
   userEmail: string | undefined;
@@ -66,6 +69,8 @@ export const flagContent = async (;
   contentExcerpt: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   severity: FraudSeverity;
+<<<<<<< HEAD
+=======
 export const flagContent = async (
   userId: string;
   userEmail: string | undefined;
@@ -75,6 +80,7 @@ export const flagContent = async (
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   severity: FraudSeverity;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   reason: string
   userId: string,
   userEmail: string | undefined,
@@ -86,6 +92,8 @@ export const flagContent = async (
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     console.log ('Flagging content for review:', {
@@ -108,6 +116,7 @@ export const flagContent = async (
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // // // console.log('Flagging content for review:', {
       userId,
       contentType,
@@ -118,6 +127,8 @@ export const flagContent = async (
       severity;
     });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     const { error } = await supabase.from('fraud_flags').insert({
       user_id: userId;
       user_email: userEmail;
@@ -127,6 +138,7 @@ export const flagContent = async (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       severity;
       reason;
       ip_address: ipAddress;
@@ -137,6 +149,8 @@ export const flagContent = async (
     return { success: true }
   } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -146,6 +160,7 @@ export const flagContent = async (
       error: error instanceof Error ? error.message : 'Unknown error'
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
 }
@@ -211,6 +226,8 @@ export const flagContent = async (;
     return {;
       success: false;
       error: error instanceof Error ? error.message : 'Unknown error';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
       reason;
@@ -299,6 +316,7 @@ export const flagContent = async (;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     const { error } = await supabase.from ('fraud_flags').insert ({
       user_id: user_id;
@@ -362,6 +380,9 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
   }
+<<<<<<< HEAD
+};
+=======
 }
 ;
 <<<<<<< HEAD
@@ -380,3 +401,4 @@ if (throw error) {
   }
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

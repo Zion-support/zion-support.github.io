@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -13,10 +15,13 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Badge } from '@/components / ui / badge';
@@ -26,6 +31,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components / ui / too
 
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Badge } from "@/components/ui/badge",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface DisputeStatusBadgeProps {
@@ -83,6 +89,8 @@ function DisputeStatusBadge() {
       message = "This dispute has been closed";
       break;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -124,6 +132,7 @@ function DisputeStatusBadge() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     default:
       break
   }
@@ -141,6 +150,8 @@ function DisputeStatusBadge() {
     </Tooltip>
   )
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -153,12 +164,15 @@ function DisputeStatusBadge() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from "lucide-react",;
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
 interface DisputeStatusBadgeProps {;
   status: 'open' | 'under_review' | 'resolved' | 'closed';
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
@@ -246,6 +260,7 @@ export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Badge>;
       </TooltipTrigger>;
       <TooltipContent>;
@@ -259,6 +274,11 @@ export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
+;
+    </Tooltip>);
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </Tooltip>);
@@ -301,3 +321,4 @@ message
     </Tooltip>);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

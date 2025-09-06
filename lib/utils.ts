@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -86,6 +88,7 @@ export function slugify(str: string): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));
@@ -209,6 +212,8 @@ export function format_currency (amount: number, currency = "USD"): string {
 >>>>>>> main
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 };
@@ -234,10 +239,15 @@ origin/main
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 };
 
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
@@ -257,8 +267,12 @@ origin/main
 =======
 }
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 };
+<<<<<<< HEAD
+
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -267,3 +281,4 @@ origin/main
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

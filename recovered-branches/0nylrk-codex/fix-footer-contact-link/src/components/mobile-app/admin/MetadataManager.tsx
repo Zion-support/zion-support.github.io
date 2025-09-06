@@ -13,6 +13,8 @@ import {Button} from "@/components/ui/button";
 import {toast} from "sonner";
 export type AppPlatform = "ios" | "android";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -20,6 +22,7 @@ export type AppPlatform = "ios" | "android";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -59,6 +62,8 @@ export type AppMetadataValues = {
   keywords: string[],
   version: string,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -67,6 +72,7 @@ export type AppMetadataValues = {
 };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   platform: AppPlatform
 }
 const defaultValues: AppMetadataValues = {
@@ -109,13 +115,18 @@ export const MetadataManager: React.FC = () => {
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm,
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleSaveMetadata = async (data: AppMetadataValues) => {
     setIsSaving(true)
     try {
       // This would be implemented with actual API calls in production
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -220,6 +231,7 @@ export const MetadataManager: React.FC = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="bg-zion-blue-dark rounded-lg p-6">
       <Tabs defaultValue="ios" className="w-full">
@@ -285,6 +297,8 @@ export const MetadataManager: React.FC = () => {
     </div>
   )
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -299,6 +313,7 @@ export const MetadataManager: React.FC = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 },
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -311,12 +326,15 @@ import { Button } from "@/components/ui/button",;
 import { toast } from "sonner",;
 export type AppPlatform = "ios" | "android",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type AppMetadataValues = {;
   appTitle: string,;
   shortDescription: string,;
@@ -324,6 +342,8 @@ export type AppMetadataValues = {;
   keywords: string[],;
   version: string,;
   platform: AppPlatform;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 };
@@ -391,11 +411,14 @@ export const MetadataManager: React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } finally {;
       setIsSaving(false);
     }
   };
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   return (
@@ -464,6 +487,7 @@ export const MetadataManager:React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="bg-zion-blue-dark rounded-lg p-6">;
       <Tabs defaultValue="ios" className="w-full">;
         <div className="flex justify-between items-center mb-6">;
@@ -475,6 +499,8 @@ export const MetadataManager:React.FC = () => {;
               Google Play (Android);
             </TabsTrigger>;
           </TabsList>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -505,12 +531,15 @@ export const MetadataManager:React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <TabsContent value="ios" className="mt-0">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
             <div className="lg:col-span-2 space-y-6">;
               <MetadataForm form={iosForm} />;
               <ChangelogManager platform="ios" />;
             </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -532,12 +561,15 @@ export const MetadataManager:React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <TabsContent value="android" className="mt-0">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
             <div className="lg:col-span-2 space-y-6">;
               <MetadataForm form={androidForm} />;
               <ChangelogManager platform="android" />;
             </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -597,6 +629,7 @@ export const MetadataManager:React.FC = () => {;
               <ExportPanel platform="android" metadata={androidForm.getValues()} />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       toast.error ("Failed to save metadata");
       console.error (error);
@@ -604,7 +637,10 @@ export const MetadataManager:React.FC = () => {;
       setIsSaving (false);
     }
   }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </div>;
           </div>;
         </TabsContent>;
@@ -617,6 +653,11 @@ export const MetadataManager:React.FC = () => {;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
+<<<<<<< HEAD
+    </div>);
+}
+;
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </div>);
@@ -659,3 +700,4 @@ return (<div className="bg-zion-blue-dark rounded-lg p-6" > <Tabs defaultValue="
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

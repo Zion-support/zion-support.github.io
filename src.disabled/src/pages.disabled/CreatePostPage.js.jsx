@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const { Link,useNavigate,useSearchParams } from "react-router-dom";"""; import { SEO } from "@/components/SEO";"""; import PostForm from "@/components/community/PostForm";"""; import { useToast } from "@/hooks/use-toast"; export {}; return null} const navigate = useNavigate(); const { toast } = useToast(); const [searchParams] = useSearchParams(); const initialValues = {} "; ""; """; categoryId: initialCategory | "project-help"}; const handleSubmit = async values => {} try {} "; ""; """; const tagsArray = values.tags.split(").map(tag => tag.trim()); toast({} "; ""; """; title: "Post created","""; description: "Your post has been published successfully"}); router(`/community/category/${values.categoryId}`);} catch (error) {} toast({} "; ""; """; title: "Error","""; description: "There was a problem creating your post","""; variant: "destructive"});} }; return(); (; <div>Broken JSX</div> /> ),"; (; <div className="container py-8"> <div className="flex items-center gap-3 mb-6">"; <div>Broken JSX</div> className="text-sm text-muted-foreground hover: text-foreground"> Forum"; </Link> <span className="text-muted-foreground">/</span> <span className="text-sm font-medium">Create Post></div> </div>"; <h1 className="text-3xl font-bold mb-8">Create New Post></div> <PostForm initialValues={initialValues} onSubmit={handleSubmit}/> </div>)} ; export { CreatePostPage }; export { CreatePostPage }; export { CreatePostPage }; export { CreatePostPage }; export { CreatePostPage };""`"`
@@ -31,3 +33,4 @@ const { Link,useNavigate,useSearchParams } from "react-router-dom";"""; import {
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

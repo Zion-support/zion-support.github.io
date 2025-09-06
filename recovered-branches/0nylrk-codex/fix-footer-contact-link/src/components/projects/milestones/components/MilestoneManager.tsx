@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -24,6 +26,7 @@ interface MilestoneManagerProps {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   projectId: string
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
@@ -40,17 +43,22 @@ interface MilestoneManagerProps {
 import {MilestonesList} from '../MilestonesList';
 import {PaymentSummary} from '../PaymentSummary';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {toast} from "sonner";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',
 import { MilestonesList } from '../MilestonesList',
 import { PaymentSummary } from '../PaymentSummary',
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',
 import { toast } from "sonner",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -59,6 +67,7 @@ import { toast } from "sonner",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface MilestoneManagerProps {
   projectId: string,
   milestones: Milestone[],
@@ -75,6 +84,8 @@ interface MilestoneManagerProps {
   refetch: () => Promise<void>
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -85,6 +96,7 @@ interface MilestoneManagerProps {
 export function MilestoneManager({;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   projectId;
   milestones;
   activities;
@@ -111,16 +123,21 @@ export function MilestoneManager({
   onDeleteMilestone,
   onUploadDeliverable,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   refetch
 }: MilestoneManagerProps) {
 
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -131,6 +148,7 @@ export function MilestoneManager({
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus);
       toast && toast.success("Milestone approved");
       await refetch();
@@ -197,12 +215,15 @@ function MilestoneManager() {
       <div className="lg:col - span - 2">;
         <MilestonesList;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
       toast.success("Milestone approved"),
       await refetch()
@@ -210,6 +231,8 @@ function MilestoneManager() {
       console.error("Error approving milestone:", error),
       toast.error("Failed to approve milestone")
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -226,6 +249,7 @@ function MilestoneManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleMilestoneRejected = async (milestoneId: string) => {
     try {
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),
@@ -235,6 +259,8 @@ function MilestoneManager() {
       console.error("Error rejecting milestone:", error),
       toast.error("Failed to reject milestone")
     }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
   },
@@ -244,10 +270,13 @@ function MilestoneManager() {
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2">
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
         <MilestonesList 
@@ -261,6 +290,7 @@ function MilestoneManager() {
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2">
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',;
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
@@ -323,6 +353,8 @@ export function MilestoneManager({;
         <MilestonesList;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 } MilestoneManagerProps) {;
   const handleMilestoneApproved = async (milestoneId:string) => {;
     try {;
@@ -353,6 +385,7 @@ export function MilestoneManager({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           milestones={milestones}
           activities={activities}
           is_loading={is_loading}
@@ -371,6 +404,8 @@ export function MilestoneManager({;
           onUpdateStatus={onUpdateStatus}
           onDeleteMilestone={onDeleteMilestone}
           onUploadDeliverable={onUploadDeliverable}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -419,6 +454,7 @@ export function MilestoneManager({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           is_submitting={is_submitting}
           on_approve={is_client ? handleMilestoneApproved : undefined}
           on_reject={is_client ? handleMilestoneRejected : undefined}
@@ -462,6 +498,8 @@ refetch: () => Promise<void>
   try {
   
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 
@@ -513,3 +551,4 @@ grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <Miles
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

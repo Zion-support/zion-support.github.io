@@ -1,23 +1,31 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -25,12 +33,15 @@ import {toast} from '@/hooks/use-toast';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle message operations
  */
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function useMessages(
@@ -49,6 +60,7 @@ export function use_messages (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   user: UserWithProfile;
   active_conversation: Conversation | null;
   active_messages: Message[];
@@ -114,6 +126,8 @@ if ( {) {
     }
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -152,6 +166,7 @@ export function useMessages(;
         await markAsRead(conversationId)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
@@ -194,6 +209,8 @@ export function useMessages(;
       if (unreadMessages.length > 0) {;
         await markAsRead(conversationId);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -202,6 +219,7 @@ export function useMessages(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     } catch (error) {
       console.error('Error fetching messages:', error)
@@ -213,6 +231,8 @@ export function useMessages(;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -222,10 +242,13 @@ export function useMessages(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   /**
    * Send a message to an existing conversation
    */
   const sendMessage = async (conversationId: string, content: string) => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -244,6 +267,7 @@ export function useMessages(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (!conversation) {
         throw new Error('Conversation not found')
       }
@@ -276,6 +300,8 @@ export function useMessages(;
         setActiveMessages(prev => [...prev, data as Message])
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -287,6 +313,7 @@ export function useMessages(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },;
   /**;
    * Send a message to an existing conversation;
@@ -318,6 +345,8 @@ export function useMessages(;
         setActiveMessages(prev => [...prev, data as Message]);
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -326,10 +355,13 @@ export function useMessages(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       
       // Update conversations list
       await fetchConversations(),
       
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -343,6 +375,7 @@ export function useMessages(;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Return the sent message
       return data
     } catch (error) {
@@ -369,11 +402,20 @@ export function useMessages(;
       if (error) throw error;
       // Update active messages to show they've been read
 <<<<<<< HEAD
+      setActiveMessages(prev =>
+        prev.map(msg =>
+          msg.recipient_id === user.id ? { ...msg, read: true } : msg
+
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setActiveMessages(prev => 
         prev && prev.map(msg => 
           msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
 
+<<<<<<< HEAD
+=======
         )
       );
       // Update conversations to reflect read messages
@@ -403,6 +445,7 @@ export function useMessages(;
         prev && prev.map(msg => 
           msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         .eq('recipient_id', user && user.id)
         .eq('read', false);
       if (error) throw error;
@@ -411,18 +454,23 @@ export function useMessages(;
       );
       // Update conversations to reflect read messages
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       setConversations(prev =>
         prev.map(conv =>
           conv.id === conversationId
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             ? { ...conv, unread_count: 0 }
             : conv
         )
       );
       // Recalculate unread count
       setUnreadCount(prev => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -449,6 +497,7 @@ export function useMessages(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           0
         )
       })
@@ -468,6 +517,8 @@ export function useMessages(;
     loadMessages;
     sendMessage;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     markAsRead
@@ -475,6 +526,7 @@ export function useMessages(;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   /**;
   * Send a message to an existing conversation;
@@ -719,6 +771,8 @@ if (throw error) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+<<<<<<< HEAD
+=======
 =======
 }
 
@@ -929,3 +983,4 @@ return updatedConversations.reduce ( (total, conv) => total + (conv.unread count
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

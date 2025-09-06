@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 "use client",
 import { useEffect, useRef, useState  } from './react';,
@@ -20,6 +22,7 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <a;
       href={`#${target_id}`}
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
@@ -27,6 +30,8 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
       {children}
     </a>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -53,6 +58,7 @@ export function LiveRegion({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div;
       role={role}
       aria - live={aria_live}
@@ -62,6 +68,8 @@ export function LiveRegion({;
       {message}
     </div>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -81,6 +89,7 @@ export function useFocusTrap(enabled: boolean = true) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
@@ -97,6 +106,8 @@ export function useFocusTrap(enabled: boolean = true) {;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -190,6 +201,7 @@ export function useFocusTrap(enabled: boolean = true) {;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
@@ -412,6 +424,10 @@ export function ProgressIndicator({;
     </div>);
 }
 <<<<<<< HEAD
+  return (;
+    <div className="border border-[var(--border)] rounded-lg">;
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -469,6 +485,7 @@ export function CollapsibleSection({;
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
         on_click={() => setIsExpanded (!is_expanded)}
@@ -481,6 +498,8 @@ export function CollapsibleSection({;
         </span>;
       </button>;
       <div;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -496,6 +515,7 @@ export function CollapsibleSection({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }`}
         aria - hidden={!is_expanded}
       >;
@@ -505,6 +525,10 @@ export function CollapsibleSection({;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+  return (;
+    <div className="relative inline-block">;
+=======
 <<<<<<< HEAD
 =======
 
@@ -574,6 +598,7 @@ export function Tooltip({;
   return (;
     <div className="relative inline-block">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div;
         onMouseEnter={() => setIsVisible (true)}
         onMouseLeave={() => setIsVisible (false)}

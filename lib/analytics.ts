@@ -79,10 +79,15 @@ if ( {) {
 };
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const measurePerformance = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     const navigation = performance && performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     return {
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -104,11 +109,14 @@ export const measurePerformance = () => {
 =======
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Track events
 export const trackEvent = (
   eventName: string,
   properties?: Record<string, string | number | boolean>
 ) => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -127,6 +135,7 @@ if ( {) {
     window.gtag ('event', event_name, properties);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -161,17 +170,25 @@ if ( {) {
 }
 ;
 =======
+<<<<<<< HEAD
+}
+;
+=======
 
 }
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface WebVitalMetric {
   name: string;
   value: number;
   id: string;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       value: Math.round(metric.value)
       event_category: 'Web Vitals'
       event_label: metric.id
@@ -180,8 +197,11 @@ interface WebVitalMetric {
       event_category: 'Web Vitals',
       event_label: metric.id,
       non_interaction: true,;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
       event_category: 'Web Vitals',
@@ -191,10 +211,15 @@ interface WebVitalMetric {
     });
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Track events
 }
 ;
 // Track events;
+<<<<<<< HEAD
+=======
 =======
 
 }
@@ -202,6 +227,7 @@ interface WebVitalMetric {
 // Track events;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const event = ({
   action
   category
@@ -210,8 +236,11 @@ export const event = ({
 }: {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       value: Math.round(metric.value),
       event_category: 'Web Vitals',
@@ -231,13 +260,18 @@ export const event = ({
 }: {;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   action: string;
   category: string;
   label?: string;
   value?: number;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -257,6 +291,7 @@ if ( {) {
   }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 export const measure_performance = () =>: any {
@@ -269,6 +304,9 @@ if ( {') {
 ;
     return {
       load_time: navigation.loadEventEnd - navigation.loadEventStart;
+<<<<<<< HEAD
+      domContentLoaded:;
+=======
 <<<<<<< HEAD
       domContentLoaded:;
 =======
@@ -287,10 +325,14 @@ if ( {') {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Web Vitals tracking;
 interface WebVitalMetric {name: string;
   value: number;
   id: string}
+<<<<<<< HEAD
+// Declare global types
+=======
 <<<<<<< HEAD
 =======
 
@@ -334,6 +376,7 @@ export const trackEvent = ( eventName: 'string',properties?: Record<string,strin
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Declare global types
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         navigation.domContentLoadedEventStart,
       first_paint:;
         performance.getEntriesByName ('first - paint')[0]?.start_time || 0, ';
@@ -367,6 +410,8 @@ if ( {') {
 // Declare global types;
 declare global {
   interface Window {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     gtag: (...args: unknown[]) => void;
     dataLayer: unknown[];
@@ -471,12 +516,16 @@ export const trackEvent = ( eventName: 'string',properties?: Record<string,strin
 // Declare global types;
 declare global {
   interface Window {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     gtag: (...args: unknown[]) => void;
     dataLayer: unknown[];
   }
 }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

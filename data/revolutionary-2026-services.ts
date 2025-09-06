@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -22,6 +24,7 @@ export interface Revolutionary2026Service {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   contactInfo: {
       
     mobile: string, email: string,
@@ -34,6 +37,9 @@ export interface Revolutionary2026Service {
   rating: number,
   reviews: number
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
       'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.'
     launchDate: '2026-03-01'
@@ -102,6 +108,8 @@ export interface Revolutionary2026Service {;
   rating: number,;
   reviews: number;
 }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
@@ -137,6 +145,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -147,11 +156,14 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     reviews: 25;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ServiceVariant } from '../types/service-variants',;
 export interface Revolutionary2026Service {;
   id: string,;
@@ -818,6 +830,9 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
 ];

@@ -10,6 +10,8 @@ import {format_date} from '../formatters';
 export function addWorkExperienceSection (
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -22,11 +24,14 @@ export function addWorkExperienceSection(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addWorkExperienceSection(;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -91,6 +96,7 @@ export function addWorkExperienceSection(;
     return dateB && dateB.getTime() - dateA && dateA.getTime()
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   doc: jsPDF;
   workExperience: WorkExperience[];
   colors: PdfThemeColors;
@@ -107,6 +113,8 @@ export function addWorkExperienceSection(;
   // Sort work experience by date (newest first)
   const sortedWorkExperience = [...workExperience].sort((a, b) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -115,10 +123,13 @@ export function addWorkExperienceSection(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   });
   for (const work of sortedWorkExperience) {
     // Check if we need to add a new page
     if (yPos > 260) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       doc && doc.addPage();
@@ -270,6 +281,7 @@ export function addWorkExperienceSection(;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   return yPos + 5
@@ -356,6 +368,9 @@ if ( {) {
     }
   }
   return y_pos + 5;
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -468,3 +483,4 @@ doc.text (dateText, 20, yPos + 10);
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

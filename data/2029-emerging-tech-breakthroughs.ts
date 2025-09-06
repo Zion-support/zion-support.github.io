@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -49,13 +52,18 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       },
     },
   ];    features: [
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       "Emerging tech breakthroughs";
       "Innovation platform";
       "Future capabilities";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       "Advanced features";
@@ -89,6 +97,7 @@ export interface EmergingTechBreakthrough2029 {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface EmergingTechBreakthrough2029 {;
 =======
   };
@@ -155,13 +164,21 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       "Innovation platform",
       "Future capabilities",
       "Advanced features",
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "Expert insights"
     ],
     link: "/services/2029-emerging-tech-breakthrough",
     category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
+    }
+  }
+;
+=======
 <<<<<<< HEAD
     }
   }
@@ -186,3 +203,4 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

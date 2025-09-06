@@ -1,5 +1,7 @@
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') const [sortBy,setSortBy] = useState (\'name\') \'';\"";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -25,6 +27,7 @@ const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelected
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
 ursor/add-new-services-and-deploy-updates-0462
 :src.pages.disabled/AdvancedServicesShowcase2025.jsx
@@ -43,7 +46,10 @@ const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelected
 
 :src.pages.disabled/AdvancedServicesShowcase2025.jsx
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}

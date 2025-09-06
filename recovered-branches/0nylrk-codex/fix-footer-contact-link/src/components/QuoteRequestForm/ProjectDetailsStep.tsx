@@ -14,6 +14,8 @@ export function ProjectDetailsStep({
   return (
     <div className="space-y-6">
       <div>
+<<<<<<< HEAD
+=======
         <h3 className="text-xl font-semibold text-white mb-4">
           Tell us about your project
         </h3>
@@ -30,6 +32,7 @@ export function ProjectDetailsStep({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="space-y-4">
           <div>
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -63,6 +66,8 @@ export function ProjectDetailsStep({
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
 
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">
@@ -88,6 +93,7 @@ export function ProjectDetailsStep({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -142,6 +148,9 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               id="name";
               placeholder="Your name";
 <<<<<<< HEAD
+              value={formData.contactInfo.name}
+=======
+<<<<<<< HEAD
 
 
 value={formData.contactInfo.name}
@@ -163,6 +172,7 @@ value={formData.contactInfo.name}
             />
           </div>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div>
             <Label htmlFor="company" className="text-zion-slate-light">
               Company
@@ -171,6 +181,8 @@ value={formData.contactInfo.name}
               id="company"
               placeholder="Your company name"
               value={formData.contactInfo.company}
+<<<<<<< HEAD
+=======
               onChange={(e) =>
                 updateFormData({
                   contactInfo: {
@@ -183,6 +195,7 @@ value={formData.contactInfo.name}
             />
           </div>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div>
             <Label htmlFor="email" className="text-zion-slate-light">
               Email
@@ -191,6 +204,8 @@ value={formData.contactInfo.name}
               id="email"
               type="email"
               placeholder="Your email address"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -207,6 +222,7 @@ value={formData.contactInfo.name}
             />
           </div>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div>
             <Label htmlFor="phone" className="text-zion-slate-light">
               Phone
@@ -215,6 +231,8 @@ value={formData.contactInfo.name}
               id="phone"
               placeholder="Your phone number"
               value={formData.contactInfo.phone}
+<<<<<<< HEAD
+=======
               onChange={(e) =>
                 updateFormData({
                   contactInfo: {
@@ -223,13 +241,25 @@ value={formData.contactInfo.name}
                   },
                 })
               }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
             />
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+              className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
+import { QuoteFormData  } from '@/types / quotes';
+import { Input  } from '@/components / ui / input';
+import { Label  } from '@/components / ui / label';
+import { Textarea  } from '@/components / ui / textarea';
+interface ProjectDetailsStepProps {
+  form_data: QuoteFormData;
+  updateFormData: (data: Partial < QuoteFormData>) => void;
+=======
   );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
             />;
           </div>;
@@ -333,6 +363,8 @@ value={formData.contactInfo.name}
   )
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
     </div>;
@@ -379,3 +411,4 @@ updateFormData: (data: Partial<QuoteFormData>) => void
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

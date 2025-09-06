@@ -14,6 +14,8 @@ import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -31,14 +33,18 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     adminOnly: false
 
     icon: "Briefcase"
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -61,6 +67,11 @@ import {
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
+<<<<<<< HEAD
+    adminOnly: false,
+    icon: "Briefcase"
+  },
+=======
 <<<<<<< HEAD
     id: "getting-hired",
     name: "Getting Hired",
@@ -87,6 +98,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     icon: "Briefcase"
   },
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   "project-help": {
 
     id: "project-help"
@@ -95,6 +107,8 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     adminOnly: false
 
     icon: "MessageSquare"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -114,12 +128,15 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
   },
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   "ai-tools": {
     id: "ai-tools",
     name: "AI Tools Discussion",
     description: "Discuss AI tools, frameworks, and best practices.",
     adminOnly: false,
     icon: "Code"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   },
 <<<<<<< HEAD
@@ -129,6 +146,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   "feedback": {
 
     id: "feedback"
@@ -137,6 +155,8 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     adminOnly: false
 
     icon: "FileText"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -153,6 +173,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   "announcements": {
 
     id: "announcements"
@@ -167,6 +188,8 @@ const postsByCategory: Record<string, ForumPost[]> = {
   "getting-hired": [
     {
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 import { useState } from './react';
@@ -268,11 +291,14 @@ const postsByCategory: Record<string ForumPost[]> = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     {
       id: "6"
       title: "Portfolio pieces that clients actually care about"
       content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -336,6 +362,7 @@ const postsByCategory: Record<string ForumPost[]> = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   ];
   "project - help": [;
@@ -444,6 +471,8 @@ const postsByCategory: Record<string ForumPost[]> = {
   ];
   "ai - tools": [;
     {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -554,10 +583,13 @@ const postsByCategory: Record<string ForumPost[]> = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   ];
   "feedback": [;
     {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -655,6 +687,7 @@ const postsByCategory: Record<string ForumPost[]> = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   ];
   "announcements": [;
@@ -910,6 +943,8 @@ const iconMap = {;
       is_pinned: true;
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -919,10 +954,13 @@ const iconMap = {;
 const icon_map = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   "Briefcase": Briefcase;
   "MessageSquare": MessageSquare;
   "Code": Code;
   "FileText": FileText;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "Megaphone": Megaphone;
@@ -1053,6 +1091,7 @@ export default function ForumCategoryPage() {
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
 =======
     return (
@@ -1314,6 +1353,8 @@ export default function ForumCategoryPage() {;
 <<<<<<< HEAD
     );
   }
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -1357,6 +1398,7 @@ export default function ForumCategoryPage() {;
     );
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Filter posts based on search query
   const filteredPosts = searchQuery
     ? posts.filter(post =>
@@ -1364,6 +1406,8 @@ export default function ForumCategoryPage() {;
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1385,6 +1429,7 @@ export default function ForumCategoryPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <AppLayout>
       <SEO
@@ -1421,6 +1466,8 @@ export default function ForumCategoryPage() {;
         <div className="mb-6">
           <div className="relative">
             <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1801,10 +1848,13 @@ export default function ForumCategoryPage() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Input
               placeholder="Search posts in this category..."
               className="pl-10"
               value={searchQuery}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               onChange={(e) => setSearchQuery(e && e.target.value)}
@@ -1833,12 +1883,15 @@ export default function ForumCategoryPage() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             )}
           </div>;
         )}
   "Megaphone": Megaphone;
 }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -2241,3 +2294,4 @@ return (<AppLayout> <div className="container py-8"> <h1>Category not found</h1>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

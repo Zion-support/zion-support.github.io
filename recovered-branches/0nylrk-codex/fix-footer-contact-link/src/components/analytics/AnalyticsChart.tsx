@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -11,6 +13,7 @@
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend  } from 'recharts';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -47,16 +50,21 @@ export function AnalyticsChart({
 }: AnalyticsChartProps) {
   const [chartType, setChartType] = useState<'line' | 'bar'>(type);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const colors = [
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
   ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {useState} from "react";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -111,10 +119,13 @@ export function AnalyticsChart(): any ({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { useState } from "react",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -124,6 +135,7 @@ import { useState } from "react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface AnalyticsChartProps {
   title: string,
   description?: string,
@@ -134,6 +146,8 @@ interface AnalyticsChartProps {
   onTimeRangeChange?: (range: string) => void
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 export function AnalyticsChart({ 
@@ -148,6 +162,7 @@ export function AnalyticsChart({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   description, 
   data, 
   type = 'line',
@@ -160,11 +175,14 @@ export function AnalyticsChart({
   const colors = [
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   ],
   
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
 =======
   const colors = [;
@@ -267,6 +285,8 @@ function AnalyticsChart() {
                   <SelectItem value="90d">3 Months</SelectItem>;
                   <SelectItem value="365d">1 Year</SelectItem>;
                 </SelectContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -403,6 +423,7 @@ export function AnalyticsChart({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <SelectItem value="line">Line</SelectItem>;
                 <SelectItem value="bar">Bar</SelectItem>;
               </SelectContent>;
@@ -410,6 +431,8 @@ export function AnalyticsChart({;
           </div>;
         </div>;
       </CardHeader>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -440,10 +463,13 @@ export function AnalyticsChart({;
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />;
                 <XAxis;
                   dataKey="date";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   tick={{ fill: '#b1b9c6', fontSize: 12 }}
                   angle={-30}
                   textAnchor="end";
                   height={50}
+<<<<<<< HEAD
+=======
                 />
                 <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
                 <Tooltip
@@ -456,10 +482,13 @@ export function AnalyticsChart({;
                 <Legend />
                 {dataKeys.map((key, index) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <Line
                     key={key}
                     type="monotone"
                     dataKey={key}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                     stroke={colors[index % colors && colors.length]}
                     activeDot={{ r: 8 }}
@@ -596,10 +625,13 @@ export function AnalyticsChart({;
               </BarChart>)}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </ResponsiveContainer>;
         </div>;
       </CardContent>;
     </Card>);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -731,3 +763,4 @@ bg-zion-blue-dark border-zion-blue-light overflow-hidden"> <CardHeader className
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

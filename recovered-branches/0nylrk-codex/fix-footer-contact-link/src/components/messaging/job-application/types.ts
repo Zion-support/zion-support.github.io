@@ -5,6 +5,9 @@
 export interface Job {;
 
 
+<<<<<<< HEAD
+export interface Job {
+=======
 =======
 =======
 
@@ -18,6 +21,7 @@ export interface Job {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   title: string;
   description: string;
@@ -25,11 +29,14 @@ export interface Job {;
   budget?: string;
   client_id: string
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export interface ApplyToJobModalProps {
   job: Job;
@@ -45,6 +52,8 @@ export interface ApplyToJobModalProps {;
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -52,6 +61,7 @@ export interface ApplyToJobModalProps {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export interface Job {;
   id: string,;
@@ -66,6 +76,8 @@ export interface ApplyToJobModalProps {;
   job: Job,;
   isOpen: boolean,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -73,11 +85,16 @@ export interface ApplyToJobModalProps {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onClose: () => void;
 
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
 
+<<<<<<< HEAD
+export interface ApplyToJobModalProps {
+  job: Job;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -101,3 +118,4 @@ export interface ApplyToJobModalProps {;
 export interface ApplyToJobModalProps {
   job: Job;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

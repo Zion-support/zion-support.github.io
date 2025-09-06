@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {useParams, Link, useNavigate} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import {ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin} from "lucide-react";
+import type { BlogPost as BlogPostType } from "@/types/blog";
+import {Separator} from "@/components/ui/separator";
+import {AppLayout} from "@/layout/AppLayout";
+import { useState, useEffect } from "react",
+import { useParams, Link, useNavigate } from "react-router-dom",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react",
+import type { BlogPost as BlogPostType } from "@/types/blog",
+=======
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
@@ -14,24 +30,58 @@ import {
   Linkedin,
 } from "lucide-react";
 import type { BlogPost as BlogPostType } from "@/types/blog";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Separator } from "@/components/ui/separator";
 import { AppLayout } from "@/layout/AppLayout";
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts";
 export default function BlogPost() {
+<<<<<<< HEAD
+// Importing the sample blog posts - in a real app, you would fetch this from an API;
+import {BLOG_POSTS} from "@/data/blog-posts";
+export default function BlogPost() {;
+  const { slug } = useParams() as { slug: string },;
+
+=======
   const { slug } = useParams() as { slug: string };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
 <<<<<<< HEAD
+// Importing the sample blog posts - in a real app, you would fetch this from an API
+import { BLOG_POSTS } from "@/data/blog-posts",
+export default function BlogPost() {
+  const { slug } = useParams() as { slug: string },;
+  const navigate = useNavigate();
+  const [post, setPost] = useState<BlogPostType | null>(null);
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
+  const [showShareMenu, setShowShareMenu] = useState(false);
+  const { slug } = useParams() as { slug: string },
+  const navigate = useNavigate(),
+  const [post, setPost] = useState<BlogPostType | null>(null),
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
+  const [showShareMenu, setShowShareMenu] = useState(false),
+  
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     // Find the current post by slug
     const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
 
     if (currentPost) {
+<<<<<<< HEAD
+      // Find related posts (same category, excluding current post)
+      const related = BLOG_POSTS.filter(p =>
+        p.id !== currentPost.id &&
+        (p.category === currentPost.category |
+         p.tags.some(tag => currentPost.tags.includes(tag)))
+      setRelatedPosts(related)
+=======
       setPost(currentPost);
 
       // Find related posts (same category, excluding current post)
@@ -43,12 +93,16 @@ export default function BlogPost() {
       ).slice(0, 3);
 
       setRelatedPosts(related);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } else {
       // Post not found
       navigate("/blog", { replace: true });
     }
 
     // Scroll to top when post changes
+<<<<<<< HEAD
+    window.scrollTo(0, 0)
+=======
     window.scrollTo(0, 0);
   }, [slug, navigate]);
 
@@ -91,6 +145,7 @@ export default function BlogPost() {
     return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -99,6 +154,66 @@ export default function BlogPost() {
           <div className="animate-pulse">Loading article...</div>
         </div>
       </AppLayout>
+<<<<<<< HEAD
+    )
+  }
+  };
+
+  };
+
+import { useState, useEffect } from "react",;
+import { useParams, Link, useNavigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+import { Button } from "@/components/ui/button",;
+import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react",;
+import type { BlogPost as BlogPostType } from "@/types/blog",;
+import { Separator } from "@/components/ui/separator",;
+import { AppLayout } from "@/layout/AppLayout",;
+// Importing the sample blog posts - in a real app, you would fetch this from an API;
+import { BLOG_POSTS } from "@/data/blog-posts",;
+export default function BlogPost() {;
+  const { slug } = useParams() as { slug: string },;
+;
+// Importing the sample blog posts - in a real app, you would fetch this from an API;
+import { BLOG_POSTS } from "@/data/blog-posts",;
+;
+export default function BlogPost() {;
+  const { slug } = useParams() as { slug:string },;
+  const navigate = useNavigate(),;
+  const [post, setPost] = useState<BlogPostType | null>(null),;
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),;
+  const [showShareMenu, setShowShareMenu] = useState(false),;
+  useEffect(() => {;
+    // Find the current post by slug;
+    const currentPost = BLOG_POSTS.find(p => p.slug === slug),;
+    if (currentPost) {;
+      setPost(currentPost),;
+      // Find related posts (same category, excluding current post);
+      const related = BLOG_POSTS.filter(p =>;
+        p.id !== currentPost.id &&;
+        (p.category === currentPost.category ||;
+         p.tags.some(tag => currentPost.tags.includes(tag)));
+      ).slice(0, 3),;
+      setRelatedPosts(related);
+    } else {;
+      // Post not found;
+      navigate("/blog", { replace: true });
+    }
+;
+    // Scroll to top when post changes;
+    window.scrollTo(0, 0);
+  }, [slug, navigate]),;
+  if (!post) {;
+    return (;
+      <AppLayout>;
+        <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">;
+          <div className="animate-pulse">Loading article...</div>;
+        </div>;
+      </AppLayout>;
+    );
+  }
+  
+=======
     );
   }
 <<<<<<< HEAD
@@ -121,6 +236,7 @@ export default function BlogPost() {
     }
   };
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <AppLayout>
       <SEO
@@ -159,15 +275,20 @@ export default function BlogPost() {
             {/* Author and metadata */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
               <div className="flex items-center mb-4 sm:mb-0">
+<<<<<<< HEAD
+=======
                 <img
                   src={post.author.avatarUrl}
                   alt={post.author.name}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   className="w-12 h-12 rounded-full mr-3"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src =
                       "https: //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";
                   }}
+<<<<<<< HEAD
+=======
                 />
                 <div>
                   <p className="text-white font-medium">{post.author.name}</p>
@@ -211,11 +332,16 @@ export default function BlogPost() {
                       <a
                         href={getShareUrl("twitter")}
                         target="_blank"
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
                       >
                         <Twitter className="h-4 w-4 mr-2" />
                         <span>Twitter</span>
+<<<<<<< HEAD
+                        rel="noopener noreferrer"
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
+=======
                       </a>
                       <a
                         href={getShareUrl("linkedin")}
@@ -367,16 +493,20 @@ export default function BlogPost() {
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         <Linkedin className="h-4 w-4 mr-2" />;
                         <span>LinkedIn</span>;
                       </a>;
                     </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   )}
                 </div>
               </div>
@@ -386,6 +516,38 @@ export default function BlogPost() {
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
+<<<<<<< HEAD
+
+                className="object-cover w-full h-full"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
+              <img 
+                src={post.featuredImage} 
+                alt={post.title}
+                className="object-cover w-full h-full"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement,
+                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
+          <div className="mb-12 max-w-5xl mx-auto">;
+            <div className="aspect-[21/9] rounded-lg overflow-hidden">;
+              <img;
+                src={post.featuredImage} ;
+                alt={post.title}
+                className="object-cover w-full h-full";
+                onError={(e) => {;
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
+                  )}
+                className="object-cover w-full h-full"
+                onError={(e) => {;
+                  const target = e && e.target as HTMLImageElement;
+                  target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
+                }}
+                  #{tag}
+                </span>;
+              ))}
+=======
               <img
                 src={post.featuredImage}
                 alt={post.title}
@@ -536,6 +698,7 @@ export default function BlogPost() {
                 </span>;
               ))}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           }}
                         />;
                       </div>;
@@ -552,12 +715,17 @@ export default function BlogPost() {
                 </div>;
               </div>;
             )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12">;
               <Button
                 variant="outline"
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
+<<<<<<< HEAD
+=======
                 asChild
               >
                 <Link to="/blog">
@@ -803,6 +971,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   All Articles;
                 </Link>;
               </Button>;
@@ -810,6 +979,8 @@ if ( {) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -885,3 +1056,4 @@ return (<AppLayout> <SEO <Button variant="outline" className="border-zion-blue-l
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

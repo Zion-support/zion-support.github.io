@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -10,6 +12,7 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -17,10 +20,15 @@
   console.warn ('Missing artifact for', name)
 }main ();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 function main() {
   const outDir = path.join(__dirname, '../abi')
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir)
   const artifactsDir = path.join(__dirname, '../artifacts/contracts')
+<<<<<<< HEAD
+=======
 =======
 
 =======
@@ -35,6 +43,7 @@ function main() {
   if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),
   const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const abis = [
     ['VoteToken.solVoteToken']
     ['ZionDAO.solZionDAO']
@@ -46,6 +55,8 @@ function main() {
   for (const [rel, name] of abis) {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     const p = path && path.join(artifactsDir, rel, `${name}.json`),
     if (fs && fs.existsSync(p)) {
       const json = JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')),
@@ -53,12 +64,15 @@ function main() {
       console && console.log('Exported ABI for', name)
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } else {
       console.warn('Missing artifact for', name)
     }
   }
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -70,3 +84,4 @@ function main() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ' ' ' "export": function PerformanceMonitor({ enabled = true,"showDetails": '_showDetails: = fals,e,autoRefresh = true,refreshInterval = 1000,onAlert,className = ' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} "fps": '6',0,"memory": { used: 0,"total": '0',"percentage": '0'},"renderTime": '0',"networkLatency": '0',"cpuUsage": '0',"diskUsage": '0',"timestamp": Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} "fps": '3',0,"memory": '8',0,"renderTime": '1',6,"networkLatency": '10',0,"cpuUsage": '7',0,"diskUsage": '85'})';";";
@@ -38,3 +40,4 @@
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

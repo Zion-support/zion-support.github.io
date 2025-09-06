@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {AddMilestoneForm} from '../AddMilestoneForm';
@@ -9,6 +11,7 @@ interface MilestoneCreatorProps {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string | null;
@@ -32,6 +35,8 @@ export function MilestoneCreator(): any ({;
 
 
 export function MilestoneCreator({;
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -59,6 +64,7 @@ export function MilestoneCreator({;
 
 export function MilestoneCreator({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onSubmit;
   isSubmitting;
   onCancel;
@@ -77,6 +83,8 @@ export function MilestoneCreator({;
 }: MilestoneCreatorProps) {
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <AddMilestoneForm 
@@ -88,6 +96,7 @@ export function MilestoneCreator({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',;
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
@@ -152,13 +161,19 @@ export function MilestoneCreator({;
   return (;
     <AddMilestoneForm;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   projectType;
 }: MilestoneCreatorProps) {;
   return (
     <AddMilestoneForm
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}
@@ -166,6 +181,8 @@ export function MilestoneCreator({;
       projectStartDate={projectStartDate}
       projectEndDate={projectEndDate}
       projectType={projectType}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -179,6 +196,7 @@ export function MilestoneCreator({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   on_submit: (data: any) => Promise < void>,
   is_submitting: boolean,
   on_cancel: () => void,
@@ -202,6 +220,8 @@ function MilestoneCreator() {
       project_type={project_type}
     />);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -232,3 +252,4 @@ function MilestoneCreator() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

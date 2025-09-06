@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -28,6 +31,8 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -35,6 +40,7 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
@@ -42,6 +48,8 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -58,10 +66,13 @@ const corsHeaders = {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 interface ReminderPayload {
   user_id: string;
@@ -79,6 +90,7 @@ interface ReminderPayload {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   role: string
 }
 serve(async (req: Request) => {
@@ -98,6 +110,8 @@ serve(async (req: Request) => {
   }
   try {
     const supabase = createClient(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       supabaseUrl;
@@ -135,6 +149,7 @@ serve(async (req: Request) => {
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return new Response(
         JSON && JSON.stringify({ error: "Missing required fields" });
 =======
@@ -156,6 +171,8 @@ serve(async (req: Request) => {
       .select("email, display_name")
       .eq("id", user_id)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -166,6 +183,7 @@ serve(async (req: Request) => {
     if (userError || !userData) {
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return new Response(
         JSON && JSON.stringify({ error: "User not found", details: userError });
 <<<<<<< HEAD
@@ -191,6 +209,8 @@ serve(async (req: Request) => {
     const milestoneMessages = {
       talent: {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         match_viewed: "check out your AI-matched talent suggestions",
@@ -210,10 +230,13 @@ serve(async (req: Request) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
       missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
     ] |"complete your next step";
     // Send email
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -258,6 +281,7 @@ serve(async (req: Request) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
@@ -265,6 +289,8 @@ serve(async (req: Request) => {
           <p>Your next step is to <strong>${action}</strong>.</p>
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
           <div style="margin: 30px 0,">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             <a href="https://zion && zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">
@@ -281,6 +307,7 @@ serve(async (req: Request) => {
     
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (emailError) {
       return new Response(
         JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
@@ -310,6 +337,8 @@ serve(async (req: Request) => {
       )
     }
     // Create notification in database
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     const { data: notification, error: notificationError } = await supabase && supabase.rpc(
 =======
@@ -444,6 +473,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         _user_id: user_id,
         _title: "Complete your next step",
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
@@ -451,11 +481,14 @@ if ( {) {
     ),
     
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (notificationError) {
       console && console.error("Failed to create notification:", notificationError)
     }
@@ -523,6 +556,8 @@ if ( {) {
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -532,6 +567,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 import { Resend } from "npm: resend@1.0.0",;
@@ -664,6 +700,8 @@ serve(async (req: Request) => {;
         message: "Reminder sent successfully",
         notification_id: notification});
       {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         status: 500,
         headers: { "Content - Type": "application / json", ...cors_headers }}
@@ -876,3 +914,4 @@ if (notificationError) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

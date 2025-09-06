@@ -1,4 +1,74 @@
 <<<<<<< HEAD
+declare global {
+  interface Window {
+    performance: Performance;
+  }
+  interface Performance {
+    getEntriesByType (type: string): PerformanceEntry[];
+    now (): number;
+  }
+  interface PerformanceEntry {
+    name: string;
+    entry_type: string;
+    start_time: number;
+    duration: number;
+  }
+  interface Element {
+    tag_name: string;
+    attributes: NamedNodeMap;
+    children: HTMLCollection;
+    parent_element: HTMLElement | null;
+  }
+  interface CSSStyleDeclaration {
+    [key: string]: string;
+  }
+  interface HTMLElement extends Element {
+    class_name: string;
+    id: string;
+    innerHTML: string;
+    text_content: string | null;
+    style: CSSStyleDeclaration;
+  }
+  interface HTMLDivElement extends HTMLElement {}
+  interface HTMLParagraphElement extends HTMLElement {}
+  interface HTMLHeadingElement extends HTMLElement {}
+  interface HTMLAnchorElement extends HTMLElement {
+    href: string;
+    target: string;
+  }
+    data: T;
+    origin: string;
+    lastEventId: string;
+    source: MessageEventSource | null;
+    ports: ReadonlyArray < MessagePort>;
+  }
+  interface RequestInit {
+    body?: BodyInit | null;
+    cache?: RequestCache;
+    credentials?: RequestCredentials;
+    headers?: HeadersInit;
+    integrity?: string;
+    keepalive?: boolean;
+    method?: string;
+    mode?: RequestMode;
+    redirect?: RequestRedirect;
+    referrer?: string;
+    referrer_policy?: ReferrerPolicy;
+    signal?: AbortSignal | null;
+    window?: any;
+    timeout?: number;
+  }
+  interface AbortController {
+    signal: AbortSignal;
+    abort (): void;
+  }
+  interface AbortSignal extends EventTarget {
+    aborted: boolean;
+    onabort: ((this: AbortSignal, ev: Event) => any) | null;
+  }
+}
+=======
+<<<<<<< HEAD
 // Global type declarations for DOM types
 declare global {
   interface Window {
@@ -154,6 +224,7 @@ export {}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Module declarations
 declare module "*.svg" {
   const content: string;
@@ -238,6 +309,8 @@ declare module "*.svg" { const content: 'string; export default content;' } decl
 export {}
 // Re - export DOM types that might not be available;
 export {}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -269,3 +342,4 @@ declare module "*.svg" { const content: string; export default content} declare 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

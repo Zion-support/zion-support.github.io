@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -13,6 +15,7 @@ import {Badge} from "@/components/ui/badge";
 import {CandidateCard} from "./CandidateCard";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -21,9 +24,12 @@ import { CandidateCard } from "./CandidateCard";
 import { Badge } from "@/components/ui/badge",
 import { CandidateCard } from "./CandidateCard",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface KanbanColumnProps {
 
   id: string
@@ -54,16 +60,22 @@ interface KanbanColumnProps {;
 export function KanbanColumn(): any ({;
 
 <<<<<<< HEAD
+export function KanbanColumn({;
+=======
+<<<<<<< HEAD
 =======
 export function KanbanColumn({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export function KanbanColumn({;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id;
   title;
   description;
   applications;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -74,18 +86,22 @@ export function KanbanColumn({;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function KanbanColumn({
   id,
   title,
   description,
   applications,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   id;
   title;
   description;
   applications;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -98,6 +114,8 @@ export function KanbanColumn({
 
   const getBadgeVariant = (columnId: string) => {
     switch (columnId) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -115,6 +133,7 @@ export function KanbanColumn({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Droppable } from './react - beautiful - dnd';
 import { JobApplication } from '@/types / jobs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -142,6 +161,8 @@ function KanbanColumn() {
       case "hired":;
         return "success";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -159,11 +180,14 @@ function KanbanColumn() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "rejected":
         return "destructive"
       default:
         return "outline"
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -188,11 +212,14 @@ function KanbanColumn() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "rejected":
         return "bg-red-50"
       default:
         return "bg-muted/30"
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -308,11 +335,14 @@ export function KanbanColumn({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               ref={provided.innerRef}
               {...provided.droppableProps}
               className="min-h-full space-y-2"
             >
               {applications.map((application, index) => (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -321,6 +351,7 @@ export function KanbanColumn({;
                 <CandidateCard 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Droppable } from "react-beautiful-dnd",;
 import { JobApplication } from "@/types/jobs",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -352,8 +383,11 @@ export function KanbanColumn({;
       case "hired":;
         return "success",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case "rejected":;
@@ -363,6 +397,8 @@ export function KanbanColumn({;
     }
   }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   const getColumnBgColor = (column_id: string) =>: any {
     switch (column_id) {
@@ -529,6 +565,7 @@ export function KanbanColumn({;
 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 };
 const getColumnBgColor = (columnId: string) => {
@@ -619,7 +656,10 @@ return (<Card className= {
     </Card>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

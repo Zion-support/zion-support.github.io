@@ -1,6 +1,14 @@
 import React from "react";
 export { VideoCallRoom } from "../video/VideoCallRoom";
 
+<<<<<<< HEAD
+}
+
+  return <div>{children}</div>;
+};
+
+export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) => {
+=======
 // Stub implementation for any LiveKit exports that might be used
 export const VideoCall: React.FC<{ children?: React.ReactNode }> = ({
   children,
@@ -15,6 +23,7 @@ export const LiveKitRoom: React.FC<{ children?: React.ReactNode }> = ({
 };
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',;
 export { VideoCallRoom } from '../video/VideoCallRoom',;
 
@@ -38,6 +47,8 @@ export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) 
   return <div>{children}</div>;
 }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -82,3 +93,4 @@ export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 import Link from "next/link",;
 export const metadata = {;
@@ -9,6 +11,7 @@ export default function DocumentationPage() {;
 
     <div className="min-h-screen">;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Link from './next / link';,
 export const metadata = {
   title: "Documentation - Zion Tech Group | Technical Guides & Resources",

@@ -11,6 +11,9 @@ const { render, screen } from "@testing-library/react"; render(<AIChatAssistant 
 import { render, screen  } from "@testing-library/react";
     expect(screen.getByRole("main")).toBeInTheDocument()});
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   it("displays correct content", () => {;
 <<<<<<< HEAD
 =======
@@ -38,6 +41,8 @@ import { render,screen } from "@testing-library/react"; render(<AIChatAssistant 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -61,3 +66,4 @@ import { render,screen } from "@testing-library/react"; render(<AIChatAssistant 
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

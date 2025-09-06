@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -11,6 +13,7 @@ import { useState  } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from 'react';
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -29,6 +32,9 @@ import {CalendarIcon, Loader2} from "lucide-react";
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
 <<<<<<< HEAD
+import { useState } from 'react',
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -44,6 +50,7 @@ import { useState } from 'react',
 =======
 import { useState } from 'react',
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
 import { z } from "zod",
@@ -58,6 +65,8 @@ import { cn } from "@/lib/utils",
 import { Switch } from "@/components/ui/switch",
 import { format } from "date-fns",
 import { CalendarIcon, Loader2 } from "lucide-react",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -76,6 +85,7 @@ import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDi
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Define form schema
 
 const formSchema = z.object({
@@ -83,6 +93,8 @@ const formSchema = z.object({
   role_title: z.string().min(1, "Role title is required"),
   start_date: z.date({
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -120,12 +132,15 @@ interface WorkExperienceItemFormProps {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function WorkExperienceItemForm({;
   initialData;
   onSubmit;
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   onCancel}: WorkExperienceItemFormProps) {
@@ -138,15 +153,21 @@ export function WorkExperienceItemForm({
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
   onCancel}: WorkExperienceItemFormProps) {
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -184,6 +205,7 @@ export function WorkExperienceItemForm({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleFormSubmit = async (values: FormValues) => {
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
@@ -195,6 +217,8 @@ export function WorkExperienceItemForm({
       is_current: values.is_current,      // Required
       description: values.description,    // Optional
       location: values.location,          // Optional
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -457,6 +481,7 @@ export function WorkExperienceItemForm({;
               name="company_name";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onCancel}: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
   return (
@@ -815,12 +840,15 @@ function WorkExperienceItemForm() {
                   </Popover>;
                   <FormMessage />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             />;
 
             {!watchIsCurrent && (;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <FormField
                 control={form && form.control}
                 name="end_date"
@@ -887,6 +915,8 @@ function WorkExperienceItemForm() {
 <<<<<<< HEAD
                         <Calendar
                           mode="single"
+<<<<<<< HEAD
+=======
 
                           selected={field && field.value || undefined}
                           onSelect={field && field.onChange}
@@ -996,11 +1026,14 @@ function WorkExperienceItemForm() {
                         <Calendar
                           mode="single"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           initialFocus
                           captionLayout="dropdown-buttons"
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
                           disabled={(date) => date > new Date()}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1053,16 +1086,20 @@ function WorkExperienceItemForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         />;
                       </PopoverContent>;
                     </Popover>;
                     <FormMessage />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
           </div>;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <FormField
             control={form && form.control}
             name="description"
@@ -1144,6 +1181,8 @@ function WorkExperienceItemForm() {
                       variant="outline"
                       size="sm"
                       onClick={() => setIsEnhancementDialogOpen(true)}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1245,6 +1284,7 @@ function WorkExperienceItemForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     >;
                       AI Writer;
                     </Button>;
@@ -1360,6 +1400,8 @@ function WorkExperienceItemForm() {
     </>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1420,3 +1462,4 @@ setIsEnhancementDialogOpen (false);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -10,6 +12,7 @@ import React from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -19,6 +22,8 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
 import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -50,6 +55,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 // Example listing type
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -170,14 +176,19 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 // Example listing type;
 // Example listing type
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface Listing {
   id: string,
   title: string,
   description: string,
   category: string,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -200,6 +211,7 @@ interface Listing {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -226,8 +238,11 @@ interface Listing {;
   price?: number | null,;
   createdAt: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 
@@ -412,6 +427,8 @@ export function CategoryListingPage({;
 
               {description}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
             </p>;
           </div>;
@@ -426,6 +443,7 @@ export function CategoryListingPage({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
@@ -509,6 +527,48 @@ export function CategoryListingPage({;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
+                    ) : null}
+                    <span>
+                      {sortOptions.find(option => option.value === selectedSort)?.label |'Sort By'}
+                    </span>
+                  </div>
+                </SelectTrigger>
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
+                  {sortOptions.map((option) => (
+                    <SelectItem key={option.value} value={option.value} className="text-white">
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              <Select value={selectedFilter} onValueChange={setSelectedFilter}>
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
+                  <div className="flex items-center">
+                    <Filter className="mr-2 h-4 w-4" />
+                    <span>
+                      {filterOptions.find(option => option.value === selectedFilter)?.label |'Filter'}
+                    </span>
+                  </div>
+                </SelectTrigger>
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
+                  {filterOptions.map((option) => (
+                    <SelectItem key={option.value} value={option.value} className="text-white">
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+          {/* Results Count */}
+          <div className="mb-6">
+            <p className="text-zion-slate-light">
+              Showing {processedListings.length} results
+              {searchQuery && ` for "${searchQuery}"`}
+            </p>
+          </div>
+=======
                   onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e && e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
                 />;
@@ -701,6 +761,7 @@ if (return matches_search) {
                     <SelectItem key={option.value} value={option.value} className="text - white">;
                       {option.label}
                     </SelectItem>))}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
                   {filterOptions.map((option) => (;
@@ -716,6 +777,8 @@ if (return matches_search) {
             </div>;
           </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -727,11 +790,14 @@ if (return matches_search) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (
                 <ListingScoreCard
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -752,11 +818,14 @@ if (return matches_search) {
 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Results Count */}
           <div className="mb-6">;
             <p className="text-zion-slate-light">;
               Showing {processedListings && processedListings.length} results;
               {searchQuery && ` for "${searchQuery}"`}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             </p>;
           </div>;
@@ -778,6 +847,7 @@ if (return matches_search) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   key={listing.id}
                   title={listing.title}
                   description={listing.description}
@@ -790,6 +860,8 @@ if (return matches_search) {
                   author_image={listing.author_image}
                   ai_score={listing.ai_score}
                   rating={listing.rating}
+<<<<<<< HEAD
+=======
 =======
                   authorImage={listing.authorImage}
                   aiScore={listing.aiScore}
@@ -843,6 +915,7 @@ if (return matches_search) {
                   ai_score={listing.ai_score}
                   rating={listing.rating}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 }}
 
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -850,6 +923,10 @@ if (return matches_search) {
                 Clear all filters
               </Button>
             </div>
+<<<<<<< HEAD
+                }}
+
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -897,24 +974,31 @@ if (return matches_search) {
                 }}
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters
               </Button>
             </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
               >;
                 Clear all filters;
               </Button>;
             </div>;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           )}
         </div>;
       </div>;
@@ -933,6 +1017,8 @@ if (return matches_search) {
                   setSearchQuery ("");
                   setSelectedFilter (filter_options[0].value);
                 }}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                 className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
               >;
@@ -1093,4 +1179,5 @@ case 'z-a': return (<> <Header /> <div className="min-h-screen bg-zion-blue py-1
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }

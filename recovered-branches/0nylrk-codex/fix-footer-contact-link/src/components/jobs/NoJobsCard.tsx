@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -18,6 +20,7 @@ export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card className="bg-muted/30 border border-dashed">;
       <CardContent className="p-6 text-center">;
@@ -111,6 +114,8 @@ interface NoJobsCardProps {
 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -155,3 +160,4 @@ export function NoJobsCard({ onUpdateProfile } NoJobsCardProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 "use client",;
@@ -22,6 +24,7 @@ const features: Feature[] = [;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     icon: (;
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />;
@@ -31,6 +34,8 @@ const features: Feature[] = [;
       <div className="max-w-7xl mx-auto">;
         <div className="text-center mb-16">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -91,6 +96,7 @@ const features: Feature[] = [;
     description: "Complete marketplace infrastructure with job posting, talent matching, and project management.",;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     icon: (;
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />;
@@ -98,10 +104,13 @@ const features: Feature[] = [;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     );
     color: "blue";
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     details: [;
       "Smart job matching algorithms",
       "Escrow payment systems",
@@ -261,6 +270,8 @@ export function FeatureShowcase() {;
                 key={feature.id}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
                 className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${;
@@ -268,11 +279,14 @@ export function FeatureShowcase() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
                     : 'hover:bg-white/10';
                 } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -291,12 +305,16 @@ export function FeatureShowcase() {;
                   activeFeature === feature.id;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
                     : 'hover:bg-white/10';
                 } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               >;
                 <div className="flex items - start space - x-4">;
                   <div className={`w - 12 h - 12 bg - gradient - to - r ${getColorClasses (feature.color)} rounded - lg flex items - center justify - center text - white flex - shrink - 0`}>;
@@ -320,6 +338,8 @@ export function FeatureShowcase() {;
                   </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
                   <div className={`transform transition - transform duration - 300 ${
                     active_feature === feature.id ? 'rotate - 180' : 'rotate - 0';
@@ -331,6 +351,7 @@ export function FeatureShowcase() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   }`}>;
                     <svg className="w - 5 h - 5 text - gray - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                       <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 9l - 7 7 - 7-7" />;

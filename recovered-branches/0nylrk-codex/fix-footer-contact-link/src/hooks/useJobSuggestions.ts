@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -21,6 +23,7 @@ export function useJobSuggestions(talentId?: string) {;
   const [isLoading, setIsLoading] = useState(true);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -42,15 +45,20 @@ export function useJobSuggestions(talentId?: string) {
       try {
         setIsLoading(true);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (!talentId) return,
       
       try {
         setIsLoading(true),
         
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -58,10 +66,13 @@ export function useJobSuggestions(talentId?: string) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         // Get job matches with job details
         const { data, error } = await supabase
           .from("job_talent_matches")
           .select(`
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             *;
@@ -73,11 +84,14 @@ export function useJobSuggestions(talentId?: string) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
             *,
             job:job_id (*)
           `)
           .eq("talent_id", talentId)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           .order("created_at", { ascending: false });
         if (error) throw error;
@@ -169,16 +183,22 @@ if (throw error) {
   }, [talentId]);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       } finally {
         setIsLoading(false)
       }
     }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     },
     
     fetchSuggestedJobs()
   }, [talentId]),
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -187,11 +207,14 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
         status
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -245,16 +268,20 @@ if (throw error) {
           match.id === matchId
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
       );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       ),
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Show appropriate message
       if (status === 'applied') {
         toast({
@@ -269,6 +296,8 @@ if (throw error) {
       }
     } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
       console && console.error("Error updating job match status:", error);
       toast({
@@ -278,6 +307,7 @@ if (throw error) {
       toast({
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         title: "Error";
         description: "Failed to update job status"
         variant: "destructive"})
@@ -285,12 +315,15 @@ if (throw error) {
   }
   // Filter matches by status
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const newMatches = jobMatches.filter(match => match.status === 'new');
   const viewedMatches = jobMatches.filter(match => match.status === 'viewed');
   const appliedMatches = jobMatches.filter(match => match.status === 'applied');
   const declinedMatches = jobMatches.filter(match => match.status === 'declined');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const newMatches = jobMatches && jobMatches.filter(match => match && match.status === 'new');
@@ -318,6 +351,8 @@ if (throw error) {
 
       declinedMatches
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         title: "Error",
@@ -325,6 +360,7 @@ if (throw error) {
         variant: "destructive"})
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -357,12 +393,15 @@ export function useJobSuggestions(talentId?: string) {;
       } finally {;
         setIsLoading(false);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
   }
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     fetchSuggestedJobs ();
   }, [talent_id]);
@@ -432,6 +471,11 @@ if ( {) {
       viewed_matches;
       applied_matches,
       declined_matches;
+<<<<<<< HEAD
+    }
+  }
+}
+=======
 <<<<<<< HEAD
 
 
@@ -582,3 +626,4 @@ job:job id (*) `)
   }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

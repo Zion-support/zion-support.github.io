@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 // Sample talent listings
@@ -19,9 +22,12 @@ const TALENT_LISTINGS: ProductListing[] = [
     currency: "$"
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import {DynamicListingPage} from "@/components/DynamicListingPage";
@@ -29,6 +35,8 @@ import {ProductListing} from "@/types/listings";
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -36,6 +44,7 @@ import { ProductListing } from "@/types/listings",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
@@ -47,6 +56,8 @@ const TALENT_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -54,6 +65,7 @@ const TALENT_LISTINGS: ProductListing[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     author: {
       name: "Alexandra Chen"
       id: "alexandra-chen"
@@ -64,6 +76,8 @@ const TALENT_LISTINGS: ProductListing[] = [
     rating: 4.9
     reviewCount: 43}
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -91,6 +105,7 @@ const TALENT_LISTINGS: ProductListing[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     author: {
       name: "Michael Reynolds"
       id: "michael-reynolds"
@@ -101,6 +116,8 @@ const TALENT_LISTINGS: ProductListing[] = [
     rating: 4.8
     reviewCount: 37}
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -155,11 +172,14 @@ const TALENT_LISTINGS: ProductListing[] = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.";
     category: "Data Science"
     price: 145
     currency: "$"
     tags: ["Statistical Analysis", "Python", "R", "Tableau"];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -176,6 +196,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     author: {
 
 =======
@@ -193,6 +214,8 @@ const TALENT_LISTINGS: ProductListing[] = [;
     rating: 4.9,
     review_count: 29},
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     id: "talent - 4",
@@ -213,11 +236,14 @@ const TALENT_LISTINGS: ProductListing[] = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.";
     category: "Security"
     price: 165
     currency: "$"
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -280,6 +306,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: "talent-5",
     title: "Full-Stack Developer",
     description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications.",
@@ -288,6 +315,8 @@ const TALENT_LISTINGS: ProductListing[] = [;
     currency: "$",
     tags: ["React", "Node.js", "TypeScript", "MongoDB"],
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -295,6 +324,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     author: {
       name: "David Martinez"
       id: "david-martinez"}
@@ -304,6 +334,8 @@ const TALENT_LISTINGS: ProductListing[] = [;
     rating: 4.8
     reviewCount: 42}
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -375,11 +407,16 @@ const TALENT_FILTERS = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.";
     category: "Consulting"
     price: 180
     currency: "$"
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"];
+<<<<<<< HEAD
+    author: {
+
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -464,6 +501,7 @@ export default function TalentsPage() {
 =======
     author: {
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function TalentsPage() {;
   return (
     <DynamicListingPage
@@ -631,8 +669,11 @@ function TalentsPage() {
     />);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }/>) 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

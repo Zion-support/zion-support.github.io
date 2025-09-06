@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -18,6 +20,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 const { execSync } = // // require('child_process');
 const fs = // // require('fs');
@@ -79,6 +82,8 @@ class EnhancedTestAutomation {
       }
     ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     
@@ -105,6 +110,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async runTypeChecks() {
     this.log('📝 Running Type Checks');
@@ -113,6 +119,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "description": 'TypeScript Type Check'
       }
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -140,6 +148,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async runLintChecks() {
     this.log('🔍 Running Lint Checks');
@@ -148,6 +157,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "description": 'ESLint Check'
       }
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -175,6 +186,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async runBuildTests() {
     this.log('🏗️ Running Build Tests');
@@ -183,6 +195,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "description": 'Production Build Test'
       }
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -210,6 +224,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async runIntegrationTests() {
     this.log('🔗 Running Integration Tests');
@@ -239,6 +254,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       }
     ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     
@@ -265,6 +282,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async runSecurityTests() {
     this.log('🔒 Running Security Tests');
@@ -273,6 +291,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "description": 'Security Audit'
       }
     ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -300,6 +320,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async analyzeTestResults() {
     this.log('📊 Analyzing Test Results');
@@ -359,6 +380,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     let files = [];
     try {
 <<<<<<< HEAD
+          files.push(fullPath)}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       const items = fs.readdirSync(dir);
@@ -384,6 +408,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
           files.push(fullPath)}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     } catch (error) {
       // Skip directories that can't be read
@@ -392,6 +417,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   getDirectorySize(dir) {
     let size = 0;
     try {
+<<<<<<< HEAD
+          size += stat.size}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -418,6 +446,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
           size += stat.size}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     } catch (error) {
       // Skip directories that can't be read
@@ -466,6 +495,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 if (require.main === module) {
   const testAutomation = new EnhancedTestAutomation();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedTestAutomation { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'test-automation.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),summary: { total: 0,passed: 0,failed: 0,skipped: 0 },details: [] }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🧪 Running: ${description}`); this.results.summary.total++; try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Passed: ${description}`); this.results.summary.passed++; this.results.details.push({ name: description,command,status: 'passed',output: result.substring(0,500) }); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); this.results.summary.failed++; this.results.details.push({ name: description,command,status: 'failed',error: error.message }); return { success: false,error: error.message }} } async runUnitTests() { this.log('🔬 Running Unit Tests'); const testCommands = [ { command: 'npm test -- --passWithNoTests --silent --verbose=false',description: 'Jest Unit Tests' } ];  } async runTypeChecks() { this.log('📝 Running Type Checks'); const typeCommands = [ { command: 'npx tsc --noEmit --skipLibCheck --incremental false',description: 'TypeScript Type Check' } ];  } async runLintChecks() { this.log('🔍 Running Lint Checks'); const lintCommands = [ { command: 'npx eslint . --max-warnings 0 --quiet --ext .js,.jsx,.ts,.tsx',description: 'ESLint Check' } ];  } async runBuildTests() { this.log('🏗️ Running Build Tests'); const buildCommands = [ { command: 'npm run build --silent',description: 'Production Build Test' } ];  } async runIntegrationTests() { this.log('🔗 Running Integration Tests'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.log('✅ Build artifacts found - integration tests can run'); this.results.summary.passed++; this.results.details.push({ name: 'Build Artifacts Check',status: 'passed',message: 'Build directory exists' })} else { this.log('⚠️ No build artifacts found - skipping integration tests'); this.results.summary.skipped++; this.results.details.push({ name: 'Build Artifacts Check',status: 'skipped',message: 'No build directory found' })} } async runPerformanceTests() { this.log('⚡ Running Performance Tests'); const perfCommands = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } async runSecurityTests() { this.log('🔒 Running Security Tests'); const securityCommands = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ];  } async analyzeTestResults() { this.log('📊 Analyzing Test Results'); const analysis = { testCoverage: this.calculateTestCoverage(),performanceMetrics: this.getPerformanceMetrics(),codeQuality: this.getCodeQualityMetrics() }; this.results.analysis = analysis; return analysis} calculateTestCoverage() { const srcDir = path.join(this.projectRoot,'src'); const testDir = path.join(this.projectRoot,'__tests__'); let totalFiles = 0; let testFiles = 0; if (fs.existsSync(srcDir)) { const files = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); totalFiles = files.length} if (fs.existsSync(testDir)) { const tests = this.getAllFiles(testDir,['.test.js','.test.jsx','.test.ts','.test.tsx','.spec.js','.spec.jsx','.spec.ts','.spec.tsx']); testFiles = tests.length} return { totalFiles,testFiles,coverage: totalFiles > 0 ? (testFiles / totalFiles) * 100 : 0 }} getPerformanceMetrics() { const buildDir = path.join(this.projectRoot,'.next'); let buildSize = 0; if (fs.existsSync(buildDir)) { buildSize = this.getDirectorySize(buildDir)} return { buildSize,buildSizeMB: Math.round(buildSize / (1024 * 1024) * 100) / 100 }} getCodeQualityMetrics() { const srcDir = path.join(this.projectRoot,'src'); let totalLines = 0; let totalFiles = 0; if (fs.existsSync(srcDir)) { const files = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); totalFiles = files.length; for (const file of files.slice(0,100)) { try { const content = fs.readFileSync(file,'utf8'); totalLines += content.split('\n').length} catch (error) { } } } return { totalFiles,totalLines,averageLinesPerFile: totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0 }} getAllFiles(dir,extensions) { let files = []; try { const items = fs.readdirSync(dir);  else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } catch (error) { } return files} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} generateReport() { const reportPath = path.join(this.reportsDir,'test-automation-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Test report generated: ${reportPath}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Test Automation'); try { await this.runUnitTests(); await this.runTypeChecks(); await this.runLintChecks(); await this.runBuildTests(); await this.runIntegrationTests(); await this.runPerformanceTests(); await this.runSecurityTests(); await this.analyzeTestResults(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Test Automation Completed'); this.log(`📊 Summary: ${this.results.summary.passed}/${this.results.summary.total} passed,${this.results.summary.failed} failed,${this.results.summary.skipped} skipped`); return { success: this.results.summary.failed === 0,reportPath,summary: this.results.summary }} catch (error) { this.log(`💥 Fatal error: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const testAutomation = new EnhancedTestAutomation(); testAutomation.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedTestAutomation;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedTestAutomation { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'test-automation.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),summary: { total: 0,passed: 0,failed: 0,skipped: 0 },details: [] }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🧪 Running: ${description}`); this.results.summary.total++; try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Passed: ${description}`); this.results.summary.passed++; this.results.details.push({ name: description,command,status: 'passed',output: result.substring(0,500) }); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); this.results.summary.failed++; this.results.details.push({ name: description,command,status: 'failed',error: error.message }); return { success: false,error: error.message }} } async runUnitTests() { this.log('🔬 Running Unit Tests'); const testCommands = [ { command: 'npm test -- --passWithNoTests --silent --verbose=false',description: 'Jest Unit Tests' } ];  } async runTypeChecks() { this.log('📝 Running Type Checks'); const typeCommands = [ { command: 'npx tsc --noEmit --skipLibCheck --incremental false',description: 'TypeScript Type Check' } ];  } async runLintChecks() { this.log('🔍 Running Lint Checks'); const lintCommands = [ { command: 'npx eslint . --max-warnings 0 --quiet --ext .js,.jsx,.ts,.tsx',description: 'ESLint Check' } ];  } async runBuildTests() { this.log('🏗️ Running Build Tests'); const buildCommands = [ { command: 'npm run build --silent',description: 'Production Build Test' } ];  } async runIntegrationTests() { this.log('🔗 Running Integration Tests'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.log('✅ Build artifacts found - integration tests can run'); this.results.summary.passed++; this.results.details.push({ name: 'Build Artifacts Check',status: 'passed',message: 'Build directory exists' })} else { this.log('⚠️ No build artifacts found - skipping integration tests'); this.results.summary.skipped++; this.results.details.push({ name: 'Build Artifacts Check',status: 'skipped',message: 'No build directory found' })} } async runPerformanceTests() { this.log('⚡ Running Performance Tests'); const perfCommands = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } async runSecurityTests() { this.log('🔒 Running Security Tests'); const securityCommands = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ];  } async analyzeTestResults() { this.log('📊 Analyzing Test Results'); const analysis = { testCoverage: this.calculateTestCoverage(),performanceMetrics: this.getPerformanceMetrics(),codeQuality: this.getCodeQualityMetrics() }; this.results.analysis = analysis; return analysis} calculateTestCoverage() { const srcDir = path.join(this.projectRoot,'src'); const testDir = path.join(this.projectRoot,'__tests__'); let totalFiles = 0; let testFiles = 0; if (fs.existsSync(srcDir)) { const files = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); totalFiles = files.length} if (fs.existsSync(testDir)) { const tests = this.getAllFiles(testDir,['.test.js','.test.jsx','.test.ts','.test.tsx','.spec.js','.spec.jsx','.spec.ts','.spec.tsx']); testFiles = tests.length} return { totalFiles,testFiles,coverage: totalFiles > 0 ? (testFiles / totalFiles) * 100 : 0 }} getPerformanceMetrics() { const buildDir = path.join(this.projectRoot,'.next'); let buildSize = 0; if (fs.existsSync(buildDir)) { buildSize = this.getDirectorySize(buildDir)} return { buildSize,buildSizeMB: Math.round(buildSize / (1024 * 1024) * 100) / 100 }} getCodeQualityMetrics() { const srcDir = path.join(this.projectRoot,'src'); let totalLines = 0; let totalFiles = 0; if (fs.existsSync(srcDir)) { const files = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); totalFiles = files.length; for (const file of files.slice(0,100)) { try { const content = fs.readFileSync(file,'utf8'); totalLines += content.split('\n').length} catch (error) { } } } return { totalFiles,totalLines,averageLinesPerFile: totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0 }} getAllFiles(dir,extensions) { let files = []; try { const items = fs.readdirSync(dir);  else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } catch (error) { } return files} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} generateReport() { const reportPath = path.join(this.reportsDir,'test-automation-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Test report generated: ${reportPath}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Test Automation'); try { await this.runUnitTests(); await this.runTypeChecks(); await this.runLintChecks(); await this.runBuildTests(); await this.runIntegrationTests(); await this.runPerformanceTests(); await this.runSecurityTests(); await this.analyzeTestResults(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Test Automation Completed'); this.log(`📊 Summary: ${this.results.summary.passed}/${this.results.summary.total} passed,${this.results.summary.failed} failed,${this.results.summary.skipped} skipped`); return { success: this.results.summary.failed === 0,reportPath,summary: this.results.summary }} catch (error) { this.log(`💥 Fatal error: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const testAutomation = new EnhancedTestAutomation(); testAutomation.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedTestAutomation;
@@ -477,11 +508,14 @@ if (require.main === module) {
 if (require.main === module) {
   const testAutomation = new EnhancedTestAutomation();
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   testAutomation.run().then(result => {
     process.exit(result.success ? 0 : 1)})}
 module.exports = EnhancedTestAutomation;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedTestAutomation { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'test-automation.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),summary: { total: 0,passed: 0,failed: 0,skipped: 0 },details: [] }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🧪 Running: ${description}`); this.results.summary.total++; try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Passed: ${description}`); this.results.summary.passed++; this.results.details.push({ name: description,command,status: 'passed',output: result.substring(0,500) }); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); this.results.summary.failed++; this.results.details.push({ name: description,command,status: 'failed',error: error.message }); return { success: false,error: error.message }} } async runUnitTests() { this.log('🔬 Running Unit Tests'); const testCommands = [ { command: 'npm test -- --passWithNoTests --silent --verbose=false',description: 'Jest Unit Tests' } ];  } async runTypeChecks() { this.log('📝 Running Type Checks'); const typeCommands = [ { command: 'npx tsc --noEmit --skipLibCheck --incremental false',description: 'TypeScript Type Check' } ];  } async runLintChecks() { this.log('🔍 Running Lint Checks'); const lintCommands = [ { command: 'npx eslint . --max-warnings 0 --quiet --ext .js,.jsx,.ts,.tsx',description: 'ESLint Check' } ];  } async runBuildTests() { this.log('🏗️ Running Build Tests'); const buildCommands = [ { command: 'npm run build --silent',description: 'Production Build Test' } ];  } async runIntegrationTests() { this.log('🔗 Running Integration Tests'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.log('✅ Build artifacts found - integration tests can run'); this.results.summary.passed++; this.results.details.push({ name: 'Build Artifacts Check',status: 'passed',message: 'Build directory exists' })} else { this.log('⚠️ No build artifacts found - skipping integration tests'); this.results.summary.skipped++; this.results.details.push({ name: 'Build Artifacts Check',status: 'skipped',message: 'No build directory found' })} } async runPerformanceTests() { this.log('⚡ Running Performance Tests'); const perfCommands = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } async runSecurityTests() { this.log('🔒 Running Security Tests'); const securityCommands = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ];  } async analyzeTestResults() { this.log('📊 Analyzing Test Results'); const analysis = { testCoverage: this.calculateTestCoverage(),performanceMetrics: this.getPerformanceMetrics(),codeQuality: this.getCodeQualityMetrics() }; this.results.analysis = analysis; return analysis} calculateTestCoverage() { const srcDir = path.join(this.projectRoot,'src'); const testDir = path.join(this.projectRoot,'__tests__'); let totalFiles = 0; let testFiles = 0; if (fs.existsSync(srcDir)) { const files = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); totalFiles = files.length} if (fs.existsSync(testDir)) { const tests = this.getAllFiles(testDir,['.test.js','.test.jsx','.test.ts','.test.tsx','.spec.js','.spec.jsx','.spec.ts','.spec.tsx']); testFiles = tests.length} return { totalFiles,testFiles,coverage: totalFiles > 0 ? (testFiles / totalFiles) * 100 : 0 }} getPerformanceMetrics() { const buildDir = path.join(this.projectRoot,'.next'); let buildSize = 0; if (fs.existsSync(buildDir)) { buildSize = this.getDirectorySize(buildDir)} return { buildSize,buildSizeMB: Math.round(buildSize / (1024 * 1024) * 100) / 100 }} getCodeQualityMetrics() { const srcDir = path.join(this.projectRoot,'src'); let totalLines = 0; let totalFiles = 0; if (fs.existsSync(srcDir)) { const files = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); totalFiles = files.length; for (const file of files.slice(0,100)) { try { const content = fs.readFileSync(file,'utf8'); totalLines += content.split('\n').length} catch (error) { } } } return { totalFiles,totalLines,averageLinesPerFile: totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0 }} getAllFiles(dir,extensions) { let files = []; try { const items = fs.readdirSync(dir);  else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } catch (error) { } return files} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} generateReport() { const reportPath = path.join(this.reportsDir,'test-automation-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Test report generated: ${reportPath}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Test Automation'); try { await this.runUnitTests(); await this.runTypeChecks(); await this.runLintChecks(); await this.runBuildTests(); await this.runIntegrationTests(); await this.runPerformanceTests(); await this.runSecurityTests(); await this.analyzeTestResults(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Test Automation Completed'); this.log(`📊 Summary: ${this.results.summary.passed}/${this.results.summary.total} passed,${this.results.summary.failed} failed,${this.results.summary.skipped} skipped`); return { success: this.results.summary.failed === 0,reportPath,summary: this.results.summary }} catch (error) { this.log(`💥 Fatal error: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const testAutomation = new EnhancedTestAutomation(); testAutomation.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedTestAutomation;
 #!/usr/bin/env node const { execSync } = const fs = const path = class EnhancedTestAutomation { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot,'automation-reports'); this.logFile = path.join(this.reportsDir,'test-automation.log'); this.ensureDirectories(); this.results = { timestamp: new Date().toISOString(),summary: { total: 0,passed: 0,failed: 0,skipped: 0 },details: [] }} ensureDirectories() { if (!fs.existsSync(this.reportsDir)) { fs.mkdirSync(this.reportsDir,{ recursive: true })} } log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description,timeout = 30000) { this.log(`🧪 Running: ${description}`); this.results.summary.total++; try { const result = execSync(command,{ cwd: this.projectRoot,encoding: 'utf8',timeout: timeout,maxBuffer: 1024 * 1024 * 5 }); this.log(`✅ Passed: ${description}`); this.results.summary.passed++; this.results.details.push({ name: description,command,status: 'passed',output: result.substring(0,500) }); return { success: true,output: result }} catch (error) { this.log(`❌ Failed: ${description} - ${error.message}`,'ERROR'); this.results.summary.failed++; this.results.details.push({ name: description,command,status: 'failed',error: error.message }); return { success: false,error: error.message }} } async runUnitTests() { this.log('🔬 Running Unit Tests'); const testCommands = [ { command: 'npm test -- --passWithNoTests --silent --verbose=false',description: 'Jest Unit Tests' } ];  } async runTypeChecks() { this.log('📝 Running Type Checks'); const typeCommands = [ { command: 'npx tsc --noEmit --skipLibCheck --incremental false',description: 'TypeScript Type Check' } ];  } async runLintChecks() { this.log('🔍 Running Lint Checks'); const lintCommands = [ { command: 'npx eslint . --max-warnings 0 --quiet --ext .js,.jsx,.ts,.tsx',description: 'ESLint Check' } ];  } async runBuildTests() { this.log('🏗️ Running Build Tests'); const buildCommands = [ { command: 'npm run build --silent',description: 'Production Build Test' } ];  } async runIntegrationTests() { this.log('🔗 Running Integration Tests'); const buildDir = path.join(this.projectRoot,'.next'); if (fs.existsSync(buildDir)) { this.log('✅ Build artifacts found - integration tests can run'); this.results.summary.passed++; this.results.details.push({ name: 'Build Artifacts Check',status: 'passed',message: 'Build directory exists' })} else { this.log('⚠️ No build artifacts found - skipping integration tests'); this.results.summary.skipped++; this.results.details.push({ name: 'Build Artifacts Check',status: 'skipped',message: 'No build directory found' })} } async runPerformanceTests() { this.log('⚡ Running Performance Tests'); const perfCommands = [ { command: 'npm run perf:monitor',description: 'Performance Monitoring' } ];  } async runSecurityTests() { this.log('🔒 Running Security Tests'); const securityCommands = [ { command: 'npm audit --audit-level=moderate --json',description: 'Security Audit' } ];  } async analyzeTestResults() { this.log('📊 Analyzing Test Results'); const analysis = { testCoverage: this.calculateTestCoverage(),performanceMetrics: this.getPerformanceMetrics(),codeQuality: this.getCodeQualityMetrics() }; this.results.analysis = analysis; return analysis} calculateTestCoverage() { const srcDir = path.join(this.projectRoot,'src'); const testDir = path.join(this.projectRoot,'__tests__'); let totalFiles = 0; let testFiles = 0; if (fs.existsSync(srcDir)) { const files = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); totalFiles = files.length} if (fs.existsSync(testDir)) { const tests = this.getAllFiles(testDir,['.test.js','.test.jsx','.test.ts','.test.tsx','.spec.js','.spec.jsx','.spec.ts','.spec.tsx']); testFiles = tests.length} return { totalFiles,testFiles,coverage: totalFiles > 0 ? (testFiles / totalFiles) * 100 : 0 }} getPerformanceMetrics() { const buildDir = path.join(this.projectRoot,'.next'); let buildSize = 0; if (fs.existsSync(buildDir)) { buildSize = this.getDirectorySize(buildDir)} return { buildSize,buildSizeMB: Math.round(buildSize / (1024 * 1024) * 100) / 100 }} getCodeQualityMetrics() { const srcDir = path.join(this.projectRoot,'src'); let totalLines = 0; let totalFiles = 0; if (fs.existsSync(srcDir)) { const files = this.getAllFiles(srcDir,['.js','.jsx','.ts','.tsx']); totalFiles = files.length; for (const file of files.slice(0,100)) { try { const content = fs.readFileSync(file,'utf8'); totalLines += content.split('\n').length} catch (error) { } } } return { totalFiles,totalLines,averageLinesPerFile: totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0 }} getAllFiles(dir,extensions) { let files = []; try { const items = fs.readdirSync(dir);  else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } } catch (error) { } return files} getDirectorySize(dir) { let size = 0; try { const items = fs.readdirSync(dir);  else { size += stat.size} } } catch (error) { } return size} generateReport() { const reportPath = path.join(this.reportsDir,'test-automation-report.json'); fs.writeFileSync(reportPath,JSON.stringify(this.results,null,2)); this.log(`📊 Test report generated: ${reportPath}`); return reportPath} async run() { this.log('🎯 Starting Enhanced Test Automation'); try { await this.runUnitTests(); await this.runTypeChecks(); await this.runLintChecks(); await this.runBuildTests(); await this.runIntegrationTests(); await this.runPerformanceTests(); await this.runSecurityTests(); await this.analyzeTestResults(); const reportPath = this.generateReport(); this.log('🎉 Enhanced Test Automation Completed'); this.log(`📊 Summary: ${this.results.summary.passed}/${this.results.summary.total} passed,${this.results.summary.failed} failed,${this.results.summary.skipped} skipped`); return { success: this.results.summary.failed === 0,reportPath,summary: this.results.summary }} catch (error) { this.log(`💥 Fatal error: ${error.message}`,'ERROR'); return { success: false,error: error.message }} } } if (require.main === module) { const testAutomation = new EnhancedTestAutomation(); testAutomation.run().then(result => { process.exit(result.success ? 0 : 1)})} module.exports = EnhancedTestAutomation;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   testAutomation && testAutomation.run().then(result => {
@@ -502,3 +536,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

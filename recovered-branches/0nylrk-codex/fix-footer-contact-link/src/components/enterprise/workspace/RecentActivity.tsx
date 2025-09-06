@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -11,20 +13,26 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Badge} from "@/components/ui/badge";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function RecentActivity() {
   // Mock activity data
 
   const activities = [
     {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -38,11 +46,14 @@ export function RecentActivity() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       id: "act-1",
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",
       timestamp: "1h ago",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -56,12 +67,16 @@ export function RecentActivity() {
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       type: "job"
     }
     },
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -70,6 +85,8 @@ export function RecentActivity() {
       timestamp: "3h ago"
       type: "candidate"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -85,6 +102,7 @@ export function RecentActivity() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: "act-3"
       user: "David Johnson"
@@ -93,6 +111,8 @@ export function RecentActivity() {
       timestamp: "Yesterday"
       type: "interview"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -108,6 +128,7 @@ export function RecentActivity() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: "act-4"
       user: "Emily Davis"
@@ -116,6 +137,11 @@ export function RecentActivity() {
       timestamp: "2d ago"
       type: "comment"
     }
+<<<<<<< HEAD
+}
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -198,6 +224,7 @@ import {Badge} from "@/components/ui/badge";
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -232,6 +259,8 @@ export function RecentActivity() {;
       timestamp: "1h ago",;
       type: "job";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
 =======
@@ -239,6 +268,7 @@ export function RecentActivity() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {;
       id: "act-2",;
       user: "Sarah Wilson",;
@@ -247,6 +277,8 @@ export function RecentActivity() {;
       timestamp: "3h ago",;
       type: "candidate";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
 =======
@@ -254,6 +286,7 @@ export function RecentActivity() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {;
       id: "act-3",;
       user: "David Johnson",;
@@ -262,6 +295,8 @@ export function RecentActivity() {;
       timestamp: "Yesterday",;
       type: "interview";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
 =======
@@ -269,6 +304,7 @@ export function RecentActivity() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {;
       id: "act-4",;
       user: "Emily Davis",;
@@ -278,6 +314,8 @@ export function RecentActivity() {;
       type: "comment";
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   ];
 
@@ -286,6 +324,7 @@ export function RecentActivity() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
       case "candidate":;
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
@@ -402,6 +441,8 @@ export function RecentActivity() {;
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -525,6 +566,7 @@ function RecentActivity() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             View All Activity;
           </button>;
         </div>;
@@ -537,6 +579,11 @@ function RecentActivity() {
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
+;
+    </Card>);
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </Card>);
@@ -600,3 +647,4 @@ default:
     </Card>);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

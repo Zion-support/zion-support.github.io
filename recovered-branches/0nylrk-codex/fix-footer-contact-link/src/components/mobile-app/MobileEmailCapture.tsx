@@ -113,7 +113,10 @@ export const MobileEmailCapture: React.FC = () => {;
     }
   }
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -150,6 +153,8 @@ export const MobileEmailCapture: React.FC = () => {
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -238,6 +243,7 @@ export const MobileEmailCapture:React.FC = () => {;
   )
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 },
@@ -288,16 +294,21 @@ export const MobileEmailCapture: React.FC = () => {;
             Subscribe to our mobile app updates and be the first to try new features before they're released to the public.;
           </p>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Input
               type="email"
               placeholder="Enter your email address"
               value={email}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -383,6 +394,7 @@ export const MobileEmailCapture: React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             We respect your privacy and will never share your information.;
           </p>;
         </div>;
@@ -395,6 +407,11 @@ export const MobileEmailCapture: React.FC = () => {;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
+<<<<<<< HEAD
+    </section>);
+}
+;
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </section>);
@@ -432,3 +449,4 @@ return (<section className=" py-16 bg-gradient-to-r from-zion-blue-dark to-zion-
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

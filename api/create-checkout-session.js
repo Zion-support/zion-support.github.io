@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -75,6 +78,7 @@ async function handler(req, res) {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     res.statusCode = 200;
     res.json({ 
       success: true, 
@@ -117,10 +121,13 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
+<<<<<<< HEAD
+=======
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       url: session.url
     })
   } catch (err) {,

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -49,6 +51,7 @@ import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -308,6 +311,8 @@ const DashboardRoutes = () => {;
             <TalentDashboard />;
           </ProtectedRoute>;
         }
+<<<<<<< HEAD
+=======
       />
       <Route
         path="/creator-dashboard"
@@ -336,6 +341,7 @@ const DashboardRoutes = () => {;
       <Route
         path="/project/:id"
         element={
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <ProtectedRoute>;
             <ProjectDetails />;
           </ProtectedRoute>;
@@ -346,6 +352,8 @@ const DashboardRoutes = () => {;
           </ProtectedRoute>;
         }
       />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       <Route
         path="/messages"
@@ -424,6 +432,7 @@ const DashboardRoutes = () => {;
         element={
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <ProtectedRoute>;
             <DeveloperPortal />;
           </ProtectedRoute>;
@@ -487,6 +496,8 @@ const DashboardRoutes = () => {;
 
 export default DashboardRoutes;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -534,3 +545,4 @@ export default DashboardRoutes;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

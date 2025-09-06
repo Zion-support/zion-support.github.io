@@ -14,17 +14,22 @@ import React from 'react';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import * as React from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {DayPicker} from "react-day-picker";
 import {cn} from "@/lib/utils";
 import {buttonVariants} from "@/components/ui/button";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -33,6 +38,7 @@ import {buttonVariants} from "@/components/ui/button";
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react",
 import { DayPicker } from "react-day-picker",
@@ -40,12 +46,17 @@ import { cn } from "@/lib/utils",
 import { buttonVariants } from "@/components/ui/button",
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
 <<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 function Calendar({
@@ -122,6 +133,8 @@ function Calendar({;
         ...classNames}}
       components={{;
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -207,6 +220,7 @@ function Calendar() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
@@ -224,6 +238,8 @@ Calendar.displayName = "Calendar";
 export { Calendar };
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -231,6 +247,7 @@ Calendar && Calendar.displayName = "Calendar";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className={cn ("p - 3", class_name)}
       class_names={{
         months: "flex flex - col sm:flex - row space - y-4 sm:space - x-4 sm:space - y-0",
@@ -269,6 +286,8 @@ Calendar.display_name = "Calendar";
 ;
 export { Calendar }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -385,3 +404,4 @@ export { Calendar };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

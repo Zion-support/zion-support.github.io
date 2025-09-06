@@ -9,6 +9,8 @@ import {Calendar, Clock, Video} from "lucide-react";
 import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const { fetchInterviews } = useInterviews();
@@ -27,6 +29,7 @@ export function UpcomingInterviewsCard() {;
   const [isLoading, setIsLoading] = useState(true);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -50,6 +53,11 @@ export function UpcomingInterviewsCard() {
   const [isLoading, setIsLoading] = useState(true),
 
 <<<<<<< HEAD
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+=======
+<<<<<<< HEAD
 
   useEffect(() => {;
     const loadInterviews = async () => {;
@@ -62,6 +70,7 @@ export function UpcomingInterviewsCard() {
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setIsLoading(true);
       try {;
         const interviews = await fetchInterviews();
@@ -80,6 +89,8 @@ export function UpcomingInterviewsCard() {
       setIsLoading(true),
       try {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         const interviews = await fetchInterviews(),
@@ -99,6 +110,7 @@ export function UpcomingInterviewsCard() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview =>
@@ -110,6 +122,8 @@ export function UpcomingInterviewsCard() {
           )
           .slice(0, 3), // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -223,6 +237,7 @@ export function UpcomingInterviewsCard() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       } catch (error) {
         console.error ("Error loading upcoming interviews:", error);
       } finally {
@@ -351,6 +366,8 @@ export function UpcomingInterviewsCard() {;
                 </div>;
               </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -358,12 +375,15 @@ export function UpcomingInterviewsCard() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             ))}
           </div>;
         </CardContent>;
       </Card>;
     );
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -380,6 +400,7 @@ export function UpcomingInterviewsCard() {;
   if (upcomingInterviews.length === 0) {
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
 =======
   if (upcomingInterviews && upcomingInterviews.length === 0) {;
@@ -415,6 +436,8 @@ export function UpcomingInterviewsCard() {;
     );
   }
   return (
+<<<<<<< HEAD
+=======
 
 =======
             ))}
@@ -489,6 +512,7 @@ export function UpcomingInterviewsCard() {;
   }
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -512,6 +536,8 @@ export function UpcomingInterviewsCard() {;
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
                         Soon
                       </span>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -562,6 +588,7 @@ export function UpcomingInterviewsCard() {;
   return (;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
       <CardHeader>;
         <CardTitle className="text-lg flex items-center">;
@@ -619,7 +646,10 @@ export function UpcomingInterviewsCard() {;
           {upcomingInterviews && upcomingInterviews.map(interview => {;
             const interviewDate = parseISO(interview && interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     )}
                   </div>;
                   <div className="flex items-center text-sm text-muted-foreground">;
@@ -766,6 +796,8 @@ if ( {) {
         </div>;
       </CardContent>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </Card>);
@@ -818,3 +850,4 @@ return (<img src= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

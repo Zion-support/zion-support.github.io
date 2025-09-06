@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
@@ -11,6 +13,7 @@ const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
@@ -20,6 +23,8 @@ const OPENAI_API_KEY = Deno.env.get ('OPENAI_API_KEY'),
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface TalentProfileData {
@@ -155,6 +160,7 @@ const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface TalentProfileData {
   name: string;
   title: string;
@@ -190,6 +196,8 @@ interface EnhancedProfile {;
     softSkills: string[],;
     other: string[];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   location?: string;
 
 }
@@ -202,6 +210,7 @@ interface EnhancedProfile {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
@@ -215,6 +224,8 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 }
 serve(async (req) => {
   // Handle CORS preflight requests
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   if (req && req.method === 'OPTIONS') {
@@ -241,6 +252,7 @@ serve(async (req) => {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
@@ -251,6 +263,8 @@ serve(async (req) => {
 
       return new Response(
         JSON && JSON.stringify({ error: "Bio must be at least 20 characters long" });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   skills: string[];
   location?: string;}
@@ -292,10 +306,13 @@ serve(_async (req) => {_// Handle CORS preflight requests
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
     // Create a request to OpenAI API
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -316,6 +333,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         model: 'gpt-4o-mini';
         messages: [
           {
@@ -326,6 +344,8 @@ serve(_async (req) => {_// Handle CORS preflight requests
             role: 'user'
             content: `Create a professional profile summary and categorize skills based on this information:
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -333,6 +353,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     // Create a request to OpenAI API;
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
@@ -351,6 +372,8 @@ serve(_async (req) => {_// Handle CORS preflight requests
             role: 'user',;
             content: `Create a professional profile summary and categorize skills based on this information:;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -360,10 +383,14 @@ serve(_async (req) => {_// Handle CORS preflight requests
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Name: ${talentData.name}
             Title: ${talentData.title}
             Bio: ${talentData.bio}
             Skills: ${talentData.skills.join()}
+<<<<<<< HEAD
+              "summary": "The professional summary text (100-150 words)",
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -382,6 +409,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
 =======
               "summary": "The professional summary text (100-150 words)",
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text (100-150 words)"
               "categorizedSkills": {
@@ -441,6 +469,8 @@ if ( {) {
               }
             }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.`;
@@ -498,11 +528,14 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Parse the JSON response
     let enhancedProfile: EnhancedProfile
     try {
       enhancedProfile = JSON && JSON.parse(responseContent)
     } catch (e) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       console && console.error("Error parsing OpenAI response:", e);
       throw new Error("Failed to parse the generated content")
@@ -560,6 +593,7 @@ if ( {) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
@@ -581,14 +615,25 @@ if ( {) {
     console.error("Error in talent-profile-enhancer function:", error),
     
     return new Response(
+<<<<<<< HEAD
+      JSON && JSON.stringify(enhancedProfile);
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  } catch (error) {
+    return new Response(
+      JSON && JSON.stringify({ error: error && error.message });
+=======
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }
 });
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -716,3 +761,4 @@ if ( {) {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

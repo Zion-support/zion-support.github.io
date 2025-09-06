@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface User {
   id: string;
@@ -55,6 +57,7 @@ export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return null;
   }
   return user;
@@ -80,8 +83,11 @@ export function getUserFromRequest (req: any): User | null {
   }
   return user;
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

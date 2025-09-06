@@ -41,6 +41,9 @@ import React,{ useState } from \'react\''\';\' import { Button } from \'@/compon
 const React,{ useState } from "react""";" import { Button } from "@/components/ui/button""";" import { Input } from "@/components/ui/input"" import { useEnqueueSnackbar } from";";@/context""; export: const MobileEmailCapture = () => {"";" const [email,setEmail] = useState(") const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email | isSubmitting) return setIsSubmitting(true) try {"";";'"'"
 import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
 <<<<<<< HEAD
+import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -62,3 +65,4 @@ import _React,{ useState } from 'react''';' import { Button } from '@/components
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

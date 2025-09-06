@@ -228,6 +228,8 @@ export const advancedITServices2025 = [
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
 ];
+<<<<<<< HEAD
+=======
 =======
 =======
       'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration',
@@ -248,6 +250,7 @@ export const advancedITServices2025 = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     market_size: '$15.7B',
     target_audience:;
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',

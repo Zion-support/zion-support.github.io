@@ -7,6 +7,8 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -22,6 +24,7 @@ import {Button} from "@/components/ui/button";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -29,6 +32,8 @@ import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -38,6 +43,7 @@ import { Review, ReviewStatus } from "@/types/reviews",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import {
   Table,
@@ -62,6 +68,8 @@ import {
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -69,6 +77,7 @@ import { Button } from "@/components/ui/button",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean
@@ -111,9 +120,12 @@ export function ReviewsModerationTable({
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
 
@@ -126,6 +138,8 @@ export function ReviewsModerationTable({
       const { error } = await supabase
         .from("reviews")
         .update({ status })
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -164,12 +178,15 @@ export function ReviewsModerationTable({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     onError: (error: Error) => {
       toast({
 
         title: "Error"
         description: `Failed to update review: ${error.message}`
         variant: "destructive"})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     }}),
@@ -186,11 +203,14 @@ export function ReviewsModerationTable({
       case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "rejected":
         return "bg-red-100 text-red-800 hover:bg-red-200"
       default:
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   },
@@ -204,12 +224,18 @@ export function ReviewsModerationTable({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
+<<<<<<< HEAD
+                        src={review.reviewer_profile.avatar_url}
+                        alt={review.reviewer_profile.display_name |""}
+
+=======
 <<<<<<< HEAD
 
   },
@@ -322,6 +348,7 @@ export function ReviewsModerationTable({
                         alt={review.reviewer_profile.display_name |""}
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -352,17 +379,25 @@ import {;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ReviewsModerationTableProps {;
   reviews: Review[],;
   isLoading: boolean,;
   onRefresh: () => void;
 }
+<<<<<<< HEAD
+        .eq("id", reviewId);
+      if (error) throw error;
+      return { reviewId, status }
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -556,6 +591,7 @@ export function ReviewsModerationTable({;
         .eq("id", reviewId);
       if (error) throw error;
       return { reviewId, status }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="space-y-4">;
@@ -746,6 +782,8 @@ if ( {) {
             key={star}
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     ),;
@@ -780,10 +818,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <>;
       <Table>;
         <TableHeader>;
           <TableRow>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -798,6 +839,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
                       />
@@ -805,6 +847,11 @@ if ( {) {
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name
                           ? getInitials(review.reviewer_profile.display_name)
+<<<<<<< HEAD
+                          : <User className="h-4 w-4" />}
+                      </AvatarFallback>;
+                    )}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -862,6 +909,7 @@ if ( {) {
                       </AvatarFallback>;
                     )}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     )}
                   </div>;
                 </div>;
@@ -971,6 +1019,8 @@ if ( {) {
                         variant="outline"
                         className="h-8 w-8 p-0"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                         onClick={() => handleApprove(review && review.id)}
 =======
@@ -984,6 +1034,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         disabled={isPending}
                       >;
                         <Check className="h-4 w-4 text-green-500" />;
@@ -1004,6 +1055,8 @@ if ( {) {
                         variant="outline"
                         className="h-8 w-8 p-0"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                         onClick={() => handleReject(review && review.id)}
 =======
@@ -1015,6 +1068,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         disabled={isPending}
                       >;
                         <X className="h-4 w-4 text-red-500" />;
@@ -1156,6 +1210,8 @@ if ( {) {
                         </DropdownMenuItem>)}
                       {review.status === "rejected" && (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                         onClick={() => handleReject(review.id)}
                         disabled={isPending}
                       >
@@ -1213,10 +1269,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1226,6 +1285,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           ))}
 
         </TableBody>;
@@ -1287,6 +1347,8 @@ if ( {) {
                       </AvatarFallback>;
                     )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
                   </Avatar>;
                   <div>;
@@ -1335,6 +1397,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   )}
                   {selectedReview && selectedReview.quality_rating && (;
                     <Badge variant="outline">;
@@ -1638,6 +1701,8 @@ if ( {) {
         </Dialog>)}
     </>);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),; import {
@@ -1893,4 +1958,5 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 const resp = await fetch(;
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`;
 =======
@@ -121,6 +123,7 @@ if ( {) {
         message: 'chore (automation): weekly dependency insights',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         token,
       });
     }
@@ -186,6 +189,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   try {
     const pkgPath = path && path.join(process && process.cwd(), 'package && package.json';
     const pkg = JSON && JSON.parse(fs && fs.readFileSync(pkgPath, 'utf-8';
@@ -212,3 +217,4 @@ const path = require ('path';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

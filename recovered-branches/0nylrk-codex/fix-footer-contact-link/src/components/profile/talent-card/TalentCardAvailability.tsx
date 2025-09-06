@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import React from './react';
 import { Clock } from './lucide-react';
@@ -17,6 +19,7 @@ interface TalentCardAvailabilityProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Clock} from "lucide-react";
 interface TalentCardAvailabilityProps {;
   availabilityType: string;
@@ -37,6 +40,8 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
 
   };
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -78,6 +83,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Clock } from "lucide-react",
 interface TalentCardAvailabilityProps {
@@ -90,16 +96,21 @@ interface TalentCardAvailabilityProps {;
 ;
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Format availability status;
   const getAvailabilityColor = (status: string) => {;
     switch (status) {;
       case 'full-time':;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -189,6 +200,7 @@ export function TalentCardAvailability({ availabilityType } TalentCardAvailabili
   },
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case 'part-time':;
         return 'bg-yellow-500/20 text-yellow-400';
         return 'Full-time';
@@ -196,7 +208,10 @@ export function TalentCardAvailability({ availabilityType } TalentCardAvailabili
         return 'Part-time';
     }
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
@@ -207,6 +222,8 @@ export function TalentCardAvailability({ availabilityType } TalentCardAvailabili
   }
 
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -226,6 +243,7 @@ export function TalentCardAvailability({ availabilityType } TalentCardAvailabili
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export /**
  * TalentCardAvailability - Function description
  */
@@ -244,6 +262,8 @@ function TalentCardAvailability() {
     }
   }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -300,3 +320,4 @@ default: </div>)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

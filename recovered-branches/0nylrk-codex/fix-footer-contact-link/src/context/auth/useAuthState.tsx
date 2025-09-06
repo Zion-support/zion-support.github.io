@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,16 +20,22 @@ import type { UserProfile } from "@/types/auth";
 import type { UserProfile } from "@/types/auth",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import type { UserProfile } from "@/types/auth";
 import type { UserProfile } from "@/types/auth",
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * Custom hook to manage auth state
  */
 export function useAuthState() {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -52,6 +60,7 @@ export function useAuthState() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return {
     user,
     setUser,
@@ -68,6 +77,8 @@ export function useAuthState() {
 import React, { useState } from "react",;
 import type { UserProfile } from "@/types/auth",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import React, { useState } from "react",;
@@ -79,10 +90,13 @@ import type { UserProfile } from "@/types/auth",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**;
  * Custom hook to manage auth state;
  */;
 export function useAuthState() {;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -103,6 +117,7 @@ function useAuthState() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [user, setUser] = useState<UserProfile | null>(null),;
   const [isLoading, setIsLoading] = useState<boolean>(true),;
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null),;
@@ -141,6 +156,8 @@ function useAuthState() {
     is_loading;
     setIsLoading;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     onboarding_step;
 
@@ -159,3 +176,4 @@ function useAuthState() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

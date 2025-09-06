@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+interface CreateKeyRequest {
+  name: string;
+  scopes: string[]
+=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 =======
@@ -27,12 +32,15 @@ interface CreateKeyRequest {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -41,10 +49,13 @@ import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface CreateKeyRequest {
   name: string,
   scopes: string[],
   expiresAt?: string | null
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -52,6 +63,7 @@ interface CreateKeyRequest {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 interface CreateKeyRequest {;
@@ -59,21 +71,27 @@ interface CreateKeyRequest {;
   scopes: string[],;
   expiresAt?: string | null;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
 interface RegenerateKeyRequest {;
   keyId: string;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   expiresAt?: string | null
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
@@ -86,6 +104,8 @@ interface CreateKeyRequest {
 interface RegenerateKeyRequest {
   key_id: string;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -119,6 +139,7 @@ const supabase = createClient(supabaseUrl, supabaseKey),
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 serve(async (req) => {
   // Handle CORS for browser requests
   if (req && req.method === 'OPTIONS') {
@@ -190,7 +211,10 @@ if ( {) {
         headers: { 'Content-Type': 'application/json' }})
     }
     // Parse URL to determine action
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Handle different actions
     if (req && req.method === 'POST') {
       if (path === 'create') {
@@ -212,6 +236,8 @@ if ( {) {
         return await getApiLogs(user && user.id, limit, offset)
       }
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -285,12 +311,15 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       headers: { 'Content-Type': 'application/json' }})
   }
 });
 async function createApiKey(userId: string, name: string, scopes: string[], expiresAt: string | null = null) {
   try {
     // Generate prefix from name (first 4 chars of name + 4 random chars)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     const namePrefix = name && name.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 4);
@@ -348,6 +377,7 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         headers: { 'Content-Type': 'application/json' }})
     }
     // Insert the API key record
@@ -355,6 +385,11 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
       .from('api_keys')
       .insert({
         user_id: userId;
+<<<<<<< HEAD
+        key_prefix: prefix;
+        key_hash: hash_data;
+        name: name;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -497,6 +532,7 @@ if ( {) {
         key_hash: hash_data;
         name: name;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         headers: { 'Content-Type': 'application/json' }})
     }
     // Return the created key (only shown once)
@@ -529,6 +565,8 @@ if ( {) {
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     console && console.error('Error in createApiKey:', error);
@@ -545,6 +583,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -556,6 +595,9 @@ async function getUserApiKeys(userId: string) {
       .eq('user_id', userId)
       .order('created_at', { ascending: false });
     if (error) {
+<<<<<<< HEAD
+      headers: { 'Content-Type': 'application/json' }})
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -593,6 +635,7 @@ async function getUserApiKeys(userId: string) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       headers: { 'Content-Type': 'application/json' }})
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 async function regenerateApiKey(userId: string, keyId: string) {
@@ -604,6 +647,8 @@ async function regenerateApiKey(userId: string, keyId: string) {
       .eq('id', keyId)
       .eq('user_id', userId)
       .single();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -674,6 +719,7 @@ async function regenerateApiKey(userId: string, keyId: string) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         headers: { 'Content-Type': 'application/json' }})
     }
     // Update the key record with new hash
@@ -685,6 +731,8 @@ async function regenerateApiKey(userId: string, keyId: string) {
       .eq('id', keyId)
       .eq('user_id', userId)
       .select('id, name, key_prefix, scopes, created_at, expires_at, is_active');
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -701,6 +749,7 @@ async function regenerateApiKey(userId: string, keyId: string) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         headers: { 'Content-Type': 'application/json' }})
     }
     // Return the regenerated key
@@ -727,6 +776,8 @@ async function regenerateApiKey(userId: string, keyId: string) {
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     console && console.error('Error in regenerateApiKey:', error);
@@ -743,6 +794,7 @@ async function regenerateApiKey(userId: string, keyId: string) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -754,6 +806,8 @@ async function revokeApiKey(userId: string, keyId: string) {
       .eq('id', keyId)
       .eq('user_id', userId)
       .select('id, name, is_active');
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -955,6 +1009,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -966,6 +1021,8 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       .select('id')
       .eq('user_id', userId);
     if (keyError) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -979,6 +1036,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;
@@ -1235,6 +1293,8 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1243,10 +1303,20 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     if (!keyIds |keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
         status: 200
+<<<<<<< HEAD
+
+
+
+
+
+        headers: { 'Content-Type': 'application/json' }})
+    }
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1266,6 +1336,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Get logs for those keys
     const ids = keyIds && keyIds.map(k => k && k.id);
 =======
@@ -1296,6 +1367,8 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       .range(offset, offset + limit - 1);
     if (logsError) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       console && console.error('Error fetching API logs:', logsError);
@@ -1316,6 +1389,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return new Response (JSON.stringify ({
       message: 'API key revoked successfully',
       key: data[0];
@@ -1327,6 +1401,8 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     return new Response (JSON.stringify ({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content - Type': 'application / json' }});
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       headers: { 'Content-Type': 'application/json' }})
@@ -1380,6 +1456,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     // Get logs for those keys;
     const ids = keyIds.map(k => k.id),;
@@ -1417,6 +1494,8 @@ function getApiLogs() {
       .select ('id');
       .eq ('user_id', user_id);
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     // Check condition
 if ( {) {
@@ -1843,3 +1922,4 @@ async function createApiKey (userId: string, name: string, scopes: string[], exp
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

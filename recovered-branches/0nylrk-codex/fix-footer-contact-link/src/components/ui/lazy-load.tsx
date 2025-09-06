@@ -6,10 +6,13 @@ interface LazyLoadProps {
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import {useEffect, useState, useRef, ReactNode} from "react";
 import {cn} from "@/lib/utils";
@@ -44,6 +47,8 @@ export function LazyLoad(): any ({;
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -65,11 +70,14 @@ import { Skeleton } from "@/components/ui/skeleton",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
   children: ReactNode,
   loadingComponent?: ReactNode,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -82,6 +90,7 @@ interface LazyLoadProps {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   className?: string
 }
 
@@ -111,14 +120,19 @@ export function LazyLoad({
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -139,6 +153,7 @@ export function LazyLoad({
         rootMargin: "200px", // Start loading when element is within 200px of viewport
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         threshold: 0.1}
     );
 
@@ -196,6 +211,8 @@ export function LazyLoad({;
       (entries) => {;
         if (entries[0].isIntersecting) {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           setIsVisible(true);
@@ -236,6 +253,7 @@ if ( {) {
         root_margin: "200px", // Start loading when element is within 200px of viewport;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         threshold: 0.1}
 
 <<<<<<< HEAD
@@ -433,6 +451,8 @@ if ( {) {
     <div
       ref={containerRef}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -496,6 +516,7 @@ if ( {) {
   );
 }
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
@@ -535,6 +556,8 @@ if ( {) {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }, [isVisible]);
 const defaultLoadingComponent = (<Skeleton />);
 return (<div) 
@@ -549,3 +572,4 @@ return (<div)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

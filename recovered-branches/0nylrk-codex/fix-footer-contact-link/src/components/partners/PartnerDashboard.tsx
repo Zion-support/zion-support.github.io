@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -60,6 +62,7 @@ import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
   Card,
   CardContent,
@@ -77,10 +80,13 @@ import {
   Users,
 } from "lucide-react";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -88,10 +94,13 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
+<<<<<<< HEAD
+=======
     totalRevenue: 850.0,
     pendingRevenue: 200.0,
   };
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-6">;
       {/* Stats Overview */}
@@ -198,6 +207,8 @@ export function PartnerDashboard() {
   );
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </div>);
@@ -246,3 +257,4 @@ return (<div className="space-y-6" > {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

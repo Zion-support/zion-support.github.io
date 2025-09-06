@@ -19,6 +19,11 @@ NODE_OPTIONS = "--max-old-space-size=4096"
 
 [[redirects]]
 <<<<<<< HEAD
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+=======
+<<<<<<< HEAD
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
@@ -27,6 +32,7 @@ from = "/api/*"
 to = "/.netlify/functions/:splat"
 status = 200
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 # Security and caching headers for static assets
 [[headers]]
@@ -54,7 +60,17 @@ status = 200
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
 
+<<<<<<< HEAD
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Static redirects for specific routes
+=======
 # Static redirects for exported site
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"
@@ -92,6 +108,11 @@ status = 301
 
 [[redirects]]
 <<<<<<< HEAD
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+=======
+<<<<<<< HEAD
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
@@ -100,3 +121,4 @@ from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,6 +1,16 @@
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
+<<<<<<< HEAD
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+
+=======
   FormField,
   FormItem,
   FormLabel,
@@ -8,6 +18,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { TalentProfile } from "@/types/talent";
 import { FormValues } from "./useHireRequestForm";
 interface BudgetFieldsProps {
@@ -15,6 +26,8 @@ interface BudgetFieldsProps {
   talent?: TalentProfile;
 }
 
+<<<<<<< HEAD
+=======
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
@@ -79,6 +92,7 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 >>>>>>> main
 }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -118,6 +132,9 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

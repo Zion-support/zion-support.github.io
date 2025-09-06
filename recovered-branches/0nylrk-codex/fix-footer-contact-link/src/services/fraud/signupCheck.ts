@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 // Signup checking functionality;
 import {supabase} from '@/integrations / supabase / client';
 import {analyze_email} from './analyze_email';
@@ -14,12 +16,15 @@ export const checkSignupPatterns = async (
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export const checkSignupPatterns = async (;
 export const checkSignupPatterns = async (
   email: string;
   ip_address?: string): Promise < SignupCheckResult> => {
   const reasons: string[] = [];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   const emailCheck = analyzeEmail(email),
@@ -60,6 +65,7 @@ export const checkSignupPatterns = async (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   // If IP address is provided, check for rapid signups from same IP
   if (ipAddress) {
@@ -73,6 +79,8 @@ export const checkSignupPatterns = async (;
         .gte('created_at', new Date(Date && Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
         .order('created_at', { ascending: false });
       if (!error && recentSignups && recentSignups.length >= 3) {
+<<<<<<< HEAD
+=======
 
 =======
         .gte('created_at', new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
@@ -84,6 +92,7 @@ export const checkSignupPatterns = async (;
         .order('created_at', { ascending: false });
       if (!error && recentSignups && recentSignups.length >= 3) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
 // Signup checking functionality;
 import { supabase } from '@/integrations/supabase/client',;
@@ -175,6 +184,8 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -248,3 +259,4 @@ export const checkSignupPatterns = async (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

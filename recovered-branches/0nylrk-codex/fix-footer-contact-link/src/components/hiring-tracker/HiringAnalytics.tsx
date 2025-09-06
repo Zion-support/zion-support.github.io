@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState, useEffect } from './react';
@@ -22,10 +24,13 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState, useEffect} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -75,6 +80,7 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
         }, 0);
         avgTimeToHire = Math.round(totalDays / hiredApplications.length)
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { applications, isLoading } = useJobApplications(jobId);
 interface HiringAnalyticsProps {;
   jobId?: string;
@@ -214,6 +220,8 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -309,6 +317,7 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   
   if (!applications || applications.length === 0) {
@@ -324,13 +333,20 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
     )
   }
 <<<<<<< HEAD
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
 =======
   
@@ -503,6 +519,8 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
               <XAxis type="number" />;
               <YAxis dataKey="name" type="category" width={100} />;
               <Tooltip />;
+<<<<<<< HEAD
+=======
               <Bar dataKey="value" fill="#8884d8" radius={[0, 4, 4, 0]}>;
 <<<<<<< HEAD
                 {analyticsData && analyticsData.funnelData.map((entry, index) => (;
@@ -755,11 +773,14 @@ if ( {) {
               <YAxis dataKey="name" type="category" width={100} />;
               <Tooltip />;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </Bar>;
             </BarChart>;
           </ResponsiveContainer>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -821,3 +842,4 @@ if (applications && applications.length > 0) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

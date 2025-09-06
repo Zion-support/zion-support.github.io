@@ -73,6 +73,9 @@
     ],
     link: 'https://ziontechgroup.com / quantum - ai - orchestrator',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -83,8 +86,11 @@
     yearly: number;
     currency: string;
     trialDays: number;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     icon: '⚛️',
     color: 'from - indigo - 500 to - blue - 600',
@@ -95,6 +101,8 @@
     reviews: 89,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -128,12 +136,15 @@
     benefits: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Reduce DevOps workload by 90%',
       'Improve system reliability by 99 && 99.9%',
       'Reduce deployment failures by 95%',
       'Optimize costs by 40%',
       'Enable 24 / 7 autonomous operations',
     ],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -176,6 +187,7 @@
 
     icon: '🤖',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2025 - 01 - 10',
@@ -184,6 +196,8 @@
     reviews: 234,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -259,6 +273,7 @@
 
     icon: '🛡️',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - red - 500 to - pink - 600',
     popular: true,
     launch_date: '2025 - 01 - 20',
@@ -267,6 +282,8 @@
     reviews: 156,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -346,6 +363,7 @@
 
     icon: '🚀',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 01 - 25',
@@ -354,6 +372,8 @@
     reviews: 8,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -433,6 +453,7 @@
 
     icon: '🧬',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - teal - 500 to - cyan - 600',
     popular: true,
     launch_date: '2025 - 01 - 30',
@@ -441,6 +462,8 @@
     reviews: 45,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -518,6 +541,7 @@
 
     icon: '🌐',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 02 - 01',
@@ -526,6 +550,8 @@
     reviews: 423,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -603,6 +629,7 @@
 
     icon: '🚚',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - orange - 500 to - red - 600',
     popular: true,
     launch_date: '2025 - 02 - 05',
@@ -611,6 +638,8 @@
     reviews: 267,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -688,6 +717,7 @@
 
     icon: '💰',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2025 - 02 - 10',
@@ -698,10 +728,13 @@
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'AI-powered medical diagnostics with 99 && 99.9% accuracy for early disease detection',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     description:
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.'
     category: 'Healthcare & Biotechnology'
@@ -728,7 +761,11 @@
 <<<<<<< HEAD
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 =======
+<<<<<<< HEAD
+];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       'Improve diagnostic accuracy by 99 && 99.9%',
     id: 'ai - healthcare - diagnostic',
@@ -738,6 +775,8 @@
     description:;
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.',
     category: 'Healthcare & Biotechnology',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     price: {
@@ -781,6 +820,7 @@
   },;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 
     ];
@@ -896,6 +936,10 @@
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 
 =======
+<<<<<<< HEAD
+];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
+
+=======
   },
 
 =======
@@ -931,10 +975,16 @@
 
     icon: '🏥';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - blue - 500 to - indigo - 600';
     popular: true;
     launch_date: '2025 - 02 - 15';
     customers: 350;
+<<<<<<< HEAD
+    rating: 4.9,
+    reviews: 189;
+  }
+=======
 <<<<<<< HEAD
     rating: 4.9,
     reviews: 189;
@@ -959,6 +1009,7 @@ export interface InnovativeAIService {;
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
 <<<<<<< HEAD

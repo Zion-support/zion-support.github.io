@@ -1,12 +1,43 @@
 import React from "react";
+<<<<<<< HEAD
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {ProductSubmissionForm} from "@/components/ProductSubmissionForm";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+export default function PublishProduct() {;
+  const { isAuthenticated, isLoading } = useAuth();
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
+import { useAuth } from "@/hooks/useAuth",
+=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProductSubmissionForm } from "@/components/ProductSubmissionForm";
 import { useAuth } from "@/hooks/useAuth";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Navigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth();
+<<<<<<< HEAD
+import { Navigate } from "react-router-dom",
+import { SEO } from "@/components/SEO",
+export default function PublishProduct() {
+  const { isAuthenticated, isLoading } = useAuth(),
+  
+
+  // Show loading while checking authentication;
+  if (isLoading) {;
+
+
+
+  // Show loading while checking authentication
+  if (isLoading) {
+=======
 <<<<<<< HEAD
 
   // Show loading while checking authentication
@@ -17,12 +48,43 @@ export default function PublishProduct() {
   // Show loading while checking authentication
   if (isLoading) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>
       </div>
     );
   }
+<<<<<<< HEAD
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+export default function PublishProduct() {;
+  const { isAuthenticated, isLoading } = useAuth();
+  // Show loading while checking authentication;
+  if (isLoading) {;
+    return (;
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
+        <div className="animate-pulse text-zion-purple text-lg">;
+          Loading...;
+        </div>;
+      </div>;
+    );
+  }
+;
+  // Redirect to login if not authenticated;
+  if (!isAuthenticated) {;
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />;
+  }
+;
+  return (;
+
+    <div className="min-h-screen flex flex-col bg-zion-blue">;
+=======
 <<<<<<< HEAD
 
   // Redirect to login if not authenticated
@@ -38,10 +100,13 @@ export default function PublishProduct() {
   }
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <SEO
         title="Publish Your Product"
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
         keywords="publish product, sell online, digital marketplace, AI tools, tech services"
+<<<<<<< HEAD
+=======
       />
       <Header />
       <main className="flex-1 p-6 md:p-10">
@@ -100,6 +165,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <ProductSubmissionForm />;
           </div>;
         </div>;
@@ -113,6 +179,11 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
+;
+    </div>);
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </div>);
@@ -147,3 +218,4 @@ if ( {) {
     </div>);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

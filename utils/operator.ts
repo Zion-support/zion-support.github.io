@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 export interface OperatorSession {
   id: string;
@@ -40,6 +42,7 @@ export const operator = {
   // Add operator functionality here
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   logEvent: (event: any) => null
   getEvents: () => []
   getEventById: (id: string) => null
@@ -112,6 +115,8 @@ export const operator = {
   log_event: (event: any) => null,
   get_events: () => [],
   getEventById: (id: string) => null;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -119,3 +124,4 @@ export const operator = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

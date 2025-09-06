@@ -61,6 +61,8 @@ import {;
   FormLabel,
   FormMessage,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -81,6 +83,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/form";
 
 } from "@/components/ui/form";
@@ -106,6 +109,11 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from "lucide-react",
+<<<<<<< HEAD
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+}
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -151,6 +159,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const keywords = watch("keywords"),
   const platform = watch("platform"),
   
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 <<<<<<< HEAD
 =======
@@ -175,6 +184,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const platform = watch("platform"),
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
@@ -186,6 +197,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (value && !keywords.includes(value)) {
 
 <<<<<<< HEAD
@@ -203,6 +215,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
         e && e.currentTarget.value = "";
       }
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   };
@@ -227,6 +241,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     );
   }
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
@@ -234,6 +249,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
   return (
+<<<<<<< HEAD
+=======
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -362,6 +379,7 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle>App Metadata</CardTitle>;
@@ -599,6 +617,8 @@ if ( {) {
                   </FormControl>;
                   <FormDescription>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 </FormItem>;
@@ -614,6 +634,7 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               control={control}
               name="shortDescription"
               render={({ field }) => (
@@ -631,6 +652,8 @@ if ( {) {
                   </FormDescription>
                 </FormItem>
               )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -652,12 +675,15 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               control={control}
               name="longDescription"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Long Description</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -674,6 +700,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
@@ -687,6 +714,8 @@ if ( {) {
               )}
             />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             
 
 <<<<<<< HEAD
@@ -698,6 +727,7 @@ if ( {) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             />;
 
             <div>;
@@ -781,6 +811,8 @@ if ( {) {
                   </Badge>;
                 ))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </div>;
@@ -859,6 +891,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <FormField
               control={control}
               name="version"
@@ -1018,6 +1051,9 @@ if (value && !keywords.includes (value) ) {
   );
 };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

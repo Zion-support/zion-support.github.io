@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const res = await fetch('/api/translate', {;
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' },;
@@ -22,8 +25,11 @@ export function getWithFallback(map: TranslationMap, preferred: string): string 
 }
 ;
 export async function translateTextViaAI(text: string, targets: string[]): Promise<Record<string, string>> {;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import i18n from './i18n',
 export type TranslationMap = Record < string string | undefined>,
@@ -93,13 +99,19 @@ export function getSelectedLanguage (): string {
 export function getSelectedLanguage(): string {;
   return i18n.resolvedLanguage || i18n.language || 'en';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 =======
 
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

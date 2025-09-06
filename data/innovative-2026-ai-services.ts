@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -22,6 +24,7 @@ export interface Innovative2026AIService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   contactInfo: {
       
     mobile: string, email: string,
@@ -34,6 +37,9 @@ export interface Innovative2026AIService {
   rating: number,
   reviews: number
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
       'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
     launchDate: '2025-06-20'
@@ -59,6 +65,8 @@ export interface Innovative2026AIService {
 
     reviews: 950
   }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
@@ -92,6 +100,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 950
       website: 'https://ziontechgroup.com';
@@ -105,11 +114,15 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
 <<<<<<< HEAD
 ];
 =======
+<<<<<<< HEAD
+];
+=======
 
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
   id: string,;

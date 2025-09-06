@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -44,6 +46,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 <<<<<<< HEAD
 import fs from 'fs';
@@ -56,6 +59,8 @@ const __dirname = path.dirname(__filename);
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -109,11 +114,14 @@ class AdvancedSourceFixer {
       ) {
         await this && this.fixFile(fullPath);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
   }
   async fixFile(filePath) {
     try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       const content = fs && fs.readFileSync(filePath, "utf8");
@@ -155,6 +163,7 @@ class AdvancedSourceFixer {
       });
       this && this.log(`Error fixing ${filePath}: ${error && error.message}`, "ERROR");
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   hasParsingErrors(content) {
@@ -188,6 +197,8 @@ class AdvancedSourceFixer {
     // Fix unterminated strings
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     fixed = fixed && fixed.replace(/"[^"]*$/gm, '"');
     fixed = fixed && fixed.replace(/'[^']*$/gm, "'");
@@ -205,10 +216,13 @@ class AdvancedSourceFixer {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return fixed;
   }
   fixImportExportIssues(content, filePath) {
     let fixed = content;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -753,6 +767,7 @@ import { fileURLToPath } from "url";
   }
   fixImportExportIssues(content, filePath) {
     let fixed = content;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
     fixed = fixed && fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
@@ -785,6 +800,8 @@ import { fileURLToPath } from "url";
     }
     return fixes;
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -835,6 +852,7 @@ fixer.fixAllSourceFiles().catch(console.error);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
@@ -843,6 +861,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 if (import && import.meta.url === `file://${process ;
   fixer && fixer.fixAllSourceFiles().catch(console && console.error);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -856,6 +876,7 @@ if (import && import.meta.url === `file://${process ;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
@@ -867,6 +888,8 @@ if (require.main === module) {
 module.exports = AdvancedSourceFixer;
 export default AdvancedSourceFixer;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }
 // Check condition
@@ -918,6 +941,7 @@ export default AdvancedSourceFixer;
     this.log (`Report generated: ${this.report_file}`);
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 // Check condition
 if ( {) {
@@ -930,10 +954,13 @@ export default AdvancedSourceFixer;
 ;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
@@ -1027,6 +1054,20 @@ export default AdvancedSourceFixer;
 =======
 
 }
+<<<<<<< HEAD
+// Check condition
+if ( {) {
+  $2
+}
+  const fixer = new AdvancedSourceFixer ();
+  fixer.fixAllSourceFiles ().catch (console.error);
+}
+export default AdvancedSourceFixer;
+;
+export default AdvancedSourceFixer;
+
+}
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
@@ -1042,3 +1083,4 @@ export default AdvancedSourceFixer;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -31,6 +33,7 @@ import {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Table
   TableBody
   TableCell
@@ -38,9 +41,12 @@ import {
   TableHeader
   TableRow
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Table,
   TableBody,
   TableCell,
@@ -49,6 +55,8 @@ import {
 <<<<<<< HEAD
 <<<<<<< HEAD
 TableRow,;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -61,10 +69,13 @@ TableRow,;
 =======
 TableRow,;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -128,6 +139,7 @@ export function TeamActivity() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
@@ -143,6 +155,8 @@ export function TeamActivity() {
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 import React from "react",
@@ -306,6 +320,7 @@ export function TeamActivity() {;
       string,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       { variant: "default" | "outline" | "secondary" | "destructive" }
     > = {;
       jobs: { variant: "default" },;
@@ -483,6 +498,8 @@ export function TeamActivity() {;
               placeholder="Search activities..."
               className="w-[200px] md:w-[300px] pl-9"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -520,6 +537,7 @@ export function TeamActivity() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import {;
   Table,;
@@ -684,6 +702,8 @@ export function TeamActivity() {;
         <Button variant="outline" size="sm">;
           Previous;
         </Button>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         <div className="text-sm text-muted-foreground">Page 1 of 10</div>;
@@ -856,6 +876,7 @@ if ( {) {
                 <TableCell className="text-muted-foreground">;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -863,10 +884,13 @@ if ( {) {
           </TableBody>
         </Table>
       </div>
+<<<<<<< HEAD
+=======
 
       
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -879,6 +903,9 @@ if ( {) {
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
+}
+=======
 
   )
 }
@@ -1009,3 +1036,4 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

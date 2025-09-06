@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -9,6 +11,7 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -70,6 +73,8 @@ export function EducationForm({ ;
       description: data.description
       location: data.location}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -120,6 +125,7 @@ export function EducationForm(): any ({ ;
       location: data && data.location},;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     let success;
 <<<<<<< HEAD
 =======
@@ -152,14 +158,23 @@ export function EducationForm(): any ({ ;
     } else {;
       success = await addEducation(resumeId, educationData);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     if (success) {
       setEditingId(null)
     }
+<<<<<<< HEAD
+
+
+
+
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -168,6 +183,7 @@ export function EducationForm(): any ({ ;
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 
 
@@ -199,10 +215,13 @@ export function EducationForm(): any ({ ;
     } else {
       onBack()
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -232,6 +251,8 @@ export function EducationForm(): any ({ ;
     // Form reset happens in the child component;
   };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -246,6 +267,7 @@ export function EducationForm(): any ({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleDelete = async (id: string) => {;
     if (confirm('Are you sure you want to delete this education entry?')) {;
       await deleteEducation(id);
@@ -263,6 +285,8 @@ export function EducationForm(): any ({ ;
 
   },
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -274,6 +298,7 @@ export function EducationForm(): any ({ ;
   },
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-6">
       <div>
@@ -286,9 +311,12 @@ export function EducationForm(): any ({ ;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
 
@@ -300,6 +328,8 @@ export function EducationForm(): any ({ ;
         onDelete={handleDelete}
       />
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -318,10 +348,13 @@ export function EducationForm(): any ({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -399,6 +432,7 @@ export function EducationForm({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="space-y-6">;
       <div>;
         <h2 className="text-xl font-semibold mb-2">Education</h2>;
@@ -454,6 +488,8 @@ export function EducationForm({ ;
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         />;
       </div>;
 ;
@@ -475,6 +511,7 @@ export function EducationForm({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export /**
  * EducationForm - Function description
  */
@@ -578,6 +615,8 @@ if ( {) {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -616,3 +655,4 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

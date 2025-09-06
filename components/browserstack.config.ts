@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
@@ -11,6 +13,7 @@ default defineConfig({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   projects: [
       name: Desktop Chrome',      use: {
         browserName: chromium',        channel: chrome'}
@@ -26,6 +29,8 @@ default defineConfig({
     {
       name: Mobile Chrome',      use: {
         browserName: chromium',        ...devices['Pixel 5']}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -52,12 +57,15 @@ default define_config ({
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     {
       name: Mobile Safari',      use: {
         browser_name: webkit',        ...devices['i_phone 12']}
     }
   ];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 });
   reporter: [;
@@ -112,3 +120,4 @@ default define_config ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

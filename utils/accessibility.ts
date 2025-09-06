@@ -1,10 +1,13 @@
 <<<<<<< HEAD
-export const generateId = (prefix: string = "id"): string => {
 =======
 <<<<<<< HEAD
 export const generateId = (prefix: string = "id"): string => {
 =======
 <<<<<<< HEAD
+export const generateId = (prefix: string = "id"): string => {
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const generateId = (prefix: string = 'id'): string => {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
@@ -15,6 +18,9 @@ export const generateId = (prefix: string = 'id'): string => {;
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
+<<<<<<< HEAD
+export const announceToScreenReader = (message: string): void => {;
+=======
 export const announceToScreenReader = (message: string): void => {
   if (typeof window === "undefined") return;
 
@@ -31,6 +37,7 @@ export const announceToScreenReader = (message: string): void => {
 =======
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -52,6 +59,9 @@ export const announceToScreenReader = (message: string): void => {
 export const trapFocus = (element: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll(
 <<<<<<< HEAD
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+=======
+<<<<<<< HEAD
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
 =======
 <<<<<<< HEAD
@@ -64,6 +74,7 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
   const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[
@@ -134,6 +145,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
 
 
@@ -174,6 +187,7 @@ export const getContrastRatio = (color1: string, color2: string): number => {
 =======
 =======
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
@@ -183,6 +197,8 @@ export const isHighContrast = (color1: string, color2: string): boolean => {
 
 export const validateAriaLabel = (element: HTMLElement): boolean => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const hasAriaLabel = element.hasAttribute("aria-label");
   const hasAriaLabelledBy = element.hasAttribute("aria-labelledby");
 =======
@@ -194,6 +210,7 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 
 export const isHighContrast = (color1: string, color2: string): boolean => {;
@@ -203,9 +220,12 @@ export const isHighContrast = (color1: string, color2: string): boolean => {;
 export const validateAriaLabel = (element: HTMLElement): boolean => {;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const hasAriaLabel = element.hasAttribute('aria-label');
   const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -217,6 +237,8 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {;
 
 export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
   const focusableSelectors = [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -307,6 +329,7 @@ export const isElementInViewport = (element: HTMLElement): boolean => {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     'button:not([disabled])',
     'input:not([disabled])',
     'select:not([disabled])',
@@ -314,8 +337,11 @@ export const isElementInViewport = (element: HTMLElement): boolean => {
     'a[href]',
     '[tabindex]:not([tabindex="-1"])';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const rect = element.getBoundingClientRect();
   return (
     rect.top >= 0 &&
@@ -328,6 +354,8 @@ export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior =
   element.scrollIntoView({ behavior, block: 'start' });
 }
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
+<<<<<<< HEAD
+=======
 =======
 
   ].join(', ');
@@ -340,6 +368,7 @@ export const isElementInViewport = (element: HTMLElement): boolean => {;
   const rect = element.getBoundingClientRect();
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
@@ -371,9 +400,12 @@ export const createSkipLink = (
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const skipLink = document.createElement('a');
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
@@ -391,10 +423,15 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
     }
   });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   
 
   return skipLink;
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
   return skipLink;
@@ -405,6 +442,7 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
 
   
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   
@@ -422,6 +460,8 @@ export const generateId = (prefix: string = 'id'): string = > { return `${prefix
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 };
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -459,3 +499,4 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

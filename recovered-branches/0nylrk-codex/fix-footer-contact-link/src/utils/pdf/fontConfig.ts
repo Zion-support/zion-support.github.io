@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -6,6 +8,7 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
 
@@ -38,6 +41,8 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
     // For demonstration purposes, we'll just set up the font using standard fonts
     switch (fontFamily) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
       case 'montserrat':
         doc && doc.setFont('helvetica');
@@ -60,6 +65,7 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
         doc.setFont('helvetica');
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         break;
       case 'open-sans':
         doc.setFont('helvetica');
@@ -121,6 +127,9 @@ if (return, ) {
     console.error ('Error loading custom fonts:', error);
     // Fall back to default font;
 <<<<<<< HEAD
+    doc.set_font ('helvetica');
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     doc.setFont('helvetica');
@@ -128,6 +137,7 @@ if (return, ) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 =======

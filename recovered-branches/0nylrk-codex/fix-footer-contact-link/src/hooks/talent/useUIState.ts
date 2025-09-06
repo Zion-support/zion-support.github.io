@@ -1,9 +1,12 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useUIState() {;
@@ -28,6 +31,8 @@ export function useUIState() {;
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
   const [expandedSections, setExpandedSections] = useState({
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {useState} from 'react';
@@ -43,12 +48,15 @@ function useUIState() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     skills: true;
     availability: true;
     region: true;
 
     experience: true
     price: true});
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -94,6 +102,7 @@ function useUIState() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return {
     isMobileFilterOpen;
     setIsMobileFilterOpen;
@@ -103,6 +112,8 @@ function useUIState() {
 <<<<<<< HEAD
     selected_talent;
     setSelectedTalent;
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -113,6 +124,7 @@ function useUIState() {
     selected_talent;
     setSelectedTalent;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from 'react',;
 import { TalentProfile } from '@/types/talent',;
 export function useUIState() {;
@@ -145,6 +157,8 @@ export function useUIState() {;
     setIsHireModalOpen,;
     selectedTalent,;
     setSelectedTalent,;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -218,6 +232,7 @@ export function useUIState() {;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     expandedSections;
     toggleSection;
 

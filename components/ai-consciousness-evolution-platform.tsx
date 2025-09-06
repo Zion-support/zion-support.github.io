@@ -51,6 +51,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 }animate= {
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
   opacity: 1, y: 0 
@@ -94,10 +96,13 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
   opacity: 0, y: 20
 }animate= {
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -124,6 +129,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -134,6 +140,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   once: true
 }transition= {
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -159,6 +167,7 @@ import {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration. </p> <motion && motion.button ;
 };
 const containerVariants = {;
@@ -178,6 +187,8 @@ visible: {;
 export default AIConsciousnessEvolutionPlatform;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -195,6 +206,7 @@ visible: {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 
@@ -203,6 +215,9 @@ visible: {
 };
 
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 };
 
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
@@ -210,6 +225,7 @@ visible: {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 }
 }
@@ -288,6 +304,8 @@ visible: {
 ;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -296,3 +314,4 @@ visible: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -11,6 +13,7 @@ interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // add more env variables as needed;
 }
 interface ImportMeta {readonly env: ImportMetaEnv;
@@ -36,6 +39,8 @@ declare module 'lovable-tagger' {import { Plugin } from 'vite';
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 declare let __dirname: string;
 declare let process: {env: {;
@@ -94,6 +99,7 @@ declare let process: {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     PORT?: string;
   }
 }
@@ -253,6 +259,8 @@ declare module '@/components / ui / badge' {
   export interface BadgeProps {
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   export const Badge: React.FC < BadgeProps>;
 }
 // FeatureCard type fixes;
@@ -337,10 +345,13 @@ declare module '@/components/FeatureCard' {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     key?: number | string;
   }
 }
 // ListingScoreCard type fixes;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -370,11 +381,14 @@ declare module '@/components / ChatAssistant / ChatMessage' {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     key?: string | number;
 
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 declare module '@/components/ListingScoreCard' {;
@@ -437,18 +451,25 @@ declare module '@/components/ChatAssistant/ChatMessage' {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // ProductListingCard type fixes;
 declare module '@/components/ProductListingCard' {;
   export interface ProductListingCardProps {;
     listing: any,;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 declare module '@/components / ProductListingCard' {
   export interface ProductListingCardProps {
@@ -511,6 +532,10 @@ declare module '@livekit / components - styles' {
 ;
 
 declare module '@livekit/components-styles' {;
+<<<<<<< HEAD
+  // Empty stub for the styles;
+}
+=======
 
   // Empty stub for the styles;
 <<<<<<< HEAD
@@ -568,3 +593,4 @@ declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

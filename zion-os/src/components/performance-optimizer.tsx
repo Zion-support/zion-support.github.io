@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 "use client",
 import { Suspense, lazy, Component, ReactNode  } from './react';,
@@ -21,10 +23,13 @@ const LazyComponent = ({ component: Component, fallback, ...props }: {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   [key: string]: any;
 }) =>: any (
   <Suspense fallback={fallback}>;
     <Component {...props} />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -46,6 +51,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
   constructor(props: ErrorBoundaryProps) {;
     super(props),;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {return { hasError: true, error }
@@ -53,6 +59,9 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {console.error("Error caught by boundary:", error, errorInfo);
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Error boundary for better error handling;
 interface ErrorBoundaryState {
   has_error: boolean,
@@ -62,6 +71,8 @@ interface ErrorBoundaryProps {
   children: ReactNode,
   fallback?: ReactNode;
 }
+<<<<<<< HEAD
+=======
 =======
 ;
   render() {;
@@ -79,6 +90,7 @@ interface ErrorBoundaryProps {
 );
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Error boundary for better error handling;
 interface ErrorBoundaryState {
   has_error: boolean,
@@ -158,6 +170,8 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
     }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 ;
@@ -178,6 +192,7 @@ export function LoadingSpinner({ size = "md", className = "" }: {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (;
     <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
   );
@@ -197,6 +212,8 @@ export function Skeleton({ className = "", lines = 1 }: {;
 
     <div className={`animate-pulse ${className}`}>;
       {Array.from({ length: lines }).map((_, i) => (;
+<<<<<<< HEAD
+=======
 =======
 export /**
  * LoadingSpinner - Function description
@@ -269,6 +286,7 @@ export function Skeleton({ className = "", lines = 1 }: {;
     <div className={`animate-pulse ${className}`}>;
       {Array.from({ length: lines }).map((_, i) => (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div;
           key={i}
           className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb - 0";
@@ -276,6 +294,8 @@ export function Skeleton({ className = "", lines = 1 }: {;
         />))}
     </div>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -302,6 +322,7 @@ export function usePerformanceMonitor(componentName: string) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Log performance metrics in development;
       // Check condition
 if ( {) {
@@ -309,6 +330,9 @@ if ( {) {
 }
         // // // console.log (`${component_name} render time: ${duration.to_fixed (2)}ms`);
       }
+<<<<<<< HEAD
+        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
+=======
 <<<<<<< HEAD
 =======
 
@@ -338,10 +362,13 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
   }
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -397,10 +424,13 @@ export function useDebounce<T>(value: T, delay: number): T {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }, [value, delay]);
   return debounced_value;
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -410,3 +440,4 @@ export { LazyComponent };
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -97,17 +97,22 @@ export default function Index() {;
 =======
     }
     },
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     }
     },
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: t("home.tool_talent")
       description: t("home.tool_talent_desc")
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -123,12 +128,15 @@ export default function Index() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: t("home.tool_services")
       description: t("home.tool_services_desc")
       icon: <Zap className="h-6 w-6 text-zion-cyan" />
       link: "/services"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -144,12 +152,15 @@ export default function Index() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: t("home.tool_equipment")
       description: t("home.tool_equipment_desc")
       icon: <Settings className="h-6 w-6 text-zion-purple" />
       link: "/equipment"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -165,12 +176,15 @@ export default function Index() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: t("home.tool_analytics")
       description: t("home.tool_analytics_desc")
       icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />
       link: "/analytics"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -186,11 +200,14 @@ export default function Index() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Mobile App"
       description: "Take Zion with you on the go with our mobile app for iOS and Android"
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />
       link: "/mobile-launch"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -357,6 +374,7 @@ function Index() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { TrustedBySection } from "@/components/TrustedBySection",;
@@ -457,6 +475,8 @@ export default function Index() {;
                 </div>;
               </Link>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -465,6 +485,7 @@ export default function Index() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             ))}
           </div>
         </div>
@@ -485,6 +506,8 @@ export default function Index() {;
       <Footer />
     </div>
   )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -534,6 +557,7 @@ import { ;
   Smartphone;
 } from "lucide-react",;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { TrustedBySection } from '@/components / TrustedBySection';
@@ -700,7 +724,10 @@ function Index() {
 =======
 =======
   return (
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="min - h-screen bg - zion - blue text - white">;
       <SEO;
         title={t ("home.seo_title")}
@@ -771,6 +798,8 @@ function Index() {
       <Footer />;
     </div>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
       ;
@@ -853,3 +882,4 @@ min-h-screen bg-zion-blue text-white" > <SEO /> <Header /> <HeroSection /> </p> 
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

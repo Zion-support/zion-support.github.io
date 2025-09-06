@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -16,6 +18,7 @@ import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group';
 import {type, VariantProps} from 'class-variance-authority';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {cn} from '@/lib/utils';
 import {toggleVariants} from '@/components/ui/toggle';
 type ToggleGroupContextProps = VariantProps<typeof toggleVariants>;
@@ -30,8 +33,11 @@ import * as React from "react"
 import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group"
 import { type VariantProps } from "class-variance-authority"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -44,6 +50,8 @@ type ToggleGroupContextProps = VariantProps<typeof toggleVariants>
 
 const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   size: "default",
   variant: "default"})
 
@@ -54,10 +62,15 @@ const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const ToggleGroup = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
     VariantProps<typeof toggleVariants>
+<<<<<<< HEAD
+import React from 'react';
+import * as React from 'react';
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 ></typeof>(({ className, variant, size, children, ...props }, ref) => (
@@ -80,6 +93,7 @@ const ToggleGroup = React && React.forwardRef<;
 import React from 'react';
 import * as React from 'react';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ref={ref}
     className={cn('flex items-center justify-center gap-1', className)}
     {...props}>;
@@ -213,6 +227,8 @@ ToggleGroupItem.display_name = ToggleGroupPrimitive.Item.display_name;
 export { ToggleGroup, ToggleGroupItem }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -311,3 +327,4 @@ export { ToggleGroup, ToggleGroupItem }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

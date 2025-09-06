@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -49,6 +51,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React from 'react';
 import Link from 'next/link';
@@ -295,6 +298,8 @@ export default function Services() {;
 								<Link
 									href='/contact'
 									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 									aria-label='Get started with custom software services'
@@ -1569,10 +1574,13 @@ export default function Services() {;
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
 							</Link>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 						</div>;
 					</div>;
 				</div>;
 			</section>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -1614,3 +1622,4 @@ export default function Services() {;
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

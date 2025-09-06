@@ -8,12 +8,16 @@
 export interface TokenConfig {
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
 export interface TokenConfig {
   token_name: string;
   token_symbol: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface TokenConfig {
 =======
 =======
@@ -34,6 +38,8 @@ export interface TokenConfig {;
   maxIssueAmount: number;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,6 +57,7 @@ const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json'
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 class TokenStore {
   private config: TokenConfig = {
     token_name: 'ZION$',
@@ -80,6 +87,8 @@ class TokenStore {
     minIssueAmount: 1
     maxIssueAmount: 10000
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -100,6 +109,7 @@ export interface TokenStoreData {;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 export const tokenStore = new TokenStore();
@@ -135,6 +145,8 @@ function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -142,6 +154,7 @@ function readFromDisk(): TokenStoreData | null {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 
@@ -195,6 +208,8 @@ export const token_store = new TokenStore ();
 =======
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -229,3 +244,4 @@ export const tokenStore = new TokenStore();
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -14,6 +16,7 @@ import { Resume } from "@/types/resume";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -34,15 +37,20 @@ import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react',
 import { Resume } from "@/types/resume",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ResumePreviewCardProps {
   resume: Resume,
   onDownload: () => void,
   isLoading: boolean
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 export function ResumePreviewCard(): any ({;
@@ -52,6 +60,7 @@ export function ResumePreviewCard(): any ({;
 }: ResumePreviewCardProps) {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
 =======
   return (
@@ -79,6 +88,8 @@ export function ResumePreviewCard({ resume, onDownload, isLoading } ResumePrevie
       <CardContent className="p-4">;
         <div className="flex justify-between items-start mb-2">;
           <div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             <h4 className="font-medium text-white">;
@@ -265,6 +276,7 @@ function ResumePreviewCard() {
           </Button>;
         </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {resume.basic_info.summary && (
           <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
             {resume.basic_info.summary}
@@ -278,6 +290,13 @@ function ResumePreviewCard() {
           </Button>;
         </div>;
 <<<<<<< HEAD
+            {resume.basic_info.summary}
+          </p>
+        )}
+        
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 =======
@@ -314,6 +333,8 @@ function ResumePreviewCard() {
                 +{resume && resume.skills.length - 5} more;
               </Badge>;
             )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -374,6 +395,7 @@ function ResumePreviewCard() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
           </p>)}
         {resume.skills && resume.skills.length > 0 && (
@@ -397,6 +419,8 @@ function ResumePreviewCard() {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
   ),;}
@@ -441,3 +465,4 @@ isLoading: boolean
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

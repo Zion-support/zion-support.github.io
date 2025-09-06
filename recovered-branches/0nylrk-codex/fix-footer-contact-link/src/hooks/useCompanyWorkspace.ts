@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -14,6 +16,7 @@ export function useCompanyWorkspace(companySlug?: string) {;
   const [error, setError] = useState<string | null>(null);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
 export function useCompanyWorkspace(companySlug?: string) {
@@ -27,13 +30,19 @@ export function useCompanyWorkspace(companySlug?: string) {
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   useEffect(() => {
     // In a real app, this would fetch data from an API based on the companySlug
     // For now, we'll simulate a delay and return mock data
+<<<<<<< HEAD
+    setIsLoading(true),
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     setIsLoading(true);
@@ -43,11 +52,14 @@ export function useCompanyWorkspace(companySlug?: string) {
 =======
     setIsLoading(true),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     setTimeout(() => {
 
       if (companySlug === "demo" |!companySlug) {
         // Demo company data
         setCompany({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           id: "company-123";
@@ -95,11 +107,14 @@ billingCycle: "Annual",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         setError(null)
       } else {
         // For any other slug, we could check if it's a valid company
         // For demo purposes, let's assume it exists
         setCompany({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           id: `company-${companySlug}`;
@@ -119,6 +134,7 @@ billingCycle: "Annual",
           logoUrl: "/placeholder.svg",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           theme: {
             primaryColor: "#4f46e5";
             backgroundColor: "#ffffff"
@@ -126,6 +142,8 @@ billingCycle: "Annual",
           plan: "Teams";
           teamSize: 5;
           teamLimit: 10;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           billingCycle: "Monthly"
             primaryColor: "#4f46e5",
@@ -139,6 +157,7 @@ billingCycle: "Annual",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         setError(null)
       }
       setIsLoading(false)
@@ -362,6 +381,9 @@ export function useCompanyWorkspace(companySlug?: string) {;
   return { company, isLoading, error }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

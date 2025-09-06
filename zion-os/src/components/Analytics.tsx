@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -59,6 +61,7 @@ export function Analytics() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Performance monitoring;
     // Check condition
 if ( {) {
@@ -73,6 +76,8 @@ if ( {) {
 }
             // // // console.log ("LCP:", entry.start_time);
           }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -107,11 +112,14 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         }
       });
       observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
       // Cumulative Layout Shift monitoring;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       let cls = 0,
       const observer2 = new PerformanceObserver ((list) => {
@@ -175,6 +183,7 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
   }, []);

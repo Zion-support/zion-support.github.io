@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -50,9 +53,12 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       },
     },
   ];    features: [
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       "Practical solutions";
       "Business applications";
@@ -77,14 +83,20 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ];    features: [;
       "Practical solutions";
       "Business applications";
       "Real - world use cases";
       "Easy integration";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string,;
   name: string,;
   tagline: string,;
@@ -100,6 +112,8 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     address: string;
   }
 }
+<<<<<<< HEAD
+=======
 =======
       "Affordable pricing";
     ];
@@ -113,6 +127,7 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 export interface PracticalBusinessSolution2029 {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "Affordable pricing"
     ],
     link: "/services/2029-practical-business-solution",
@@ -129,6 +144,9 @@ export interface PracticalBusinessSolution2029 {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
+<<<<<<< HEAD
+;
+=======
 
 ];
 
@@ -137,6 +155,7 @@ export interface PracticalBusinessSolution2029 {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface PracticalBusinessSolution2029 {;
 =======
   };
@@ -257,5 +276,8 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     }
   }
 ];
+<<<<<<< HEAD
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
+const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from';';@heroicons/react/24/outline' const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '1',6,"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) useEffect(() => {'';''}
@@ -32,6 +36,7 @@ const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false)
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from';';@heroicons/react/24/outline' const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '1',6,"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) useEffect(() => {'';''}
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

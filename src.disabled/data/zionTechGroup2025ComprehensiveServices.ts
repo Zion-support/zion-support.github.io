@@ -16,6 +16,8 @@
 export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string} website: 'strin',g} ctaLabel: 'string: href: string: external?: boolean'} export: const zionTechGroup2025Services: ZionService[] = ['';,;
    website: strin,g} "ctaLabel": string: href: string: external?: boolean} "export": const zionTechGroup2025Services: ZionService[] = ['',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string; website: strin,g} ctaLabel: string: href: string: external?: boolean} export: const zionTechGroup2025Services: ZionService[] = ['',
 =======
@@ -42,3 +44,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 export: interface ZionService { id: string; title: string; description: string; category,: Micro: SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech'';; price: string; billing: 'month' | 'year' | 'project' | 'hour';; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; contactInfo: { mobile: string; email: string; address: string; website: strin,g} ctaLabel: string: href: string: external?: boolean} export: const zionTechGroup2025Services: ZionService[] = ['',
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

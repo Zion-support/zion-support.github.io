@@ -1,18 +1,89 @@
 import React from "react";
+<<<<<<< HEAD
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {AdminDashboard} from "@/components/enterprise/admin/AdminDashboard";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+export default function EnterpriseAdmin() {;
+  const { user } = useAuth();
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseAdmin() {
   const { user } = useAuth();
 <<<<<<< HEAD
+  // Check if user has enterprise admin role
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   // Check if user has enterprise admin role
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
 
+<<<<<<< HEAD
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+export default function EnterpriseAdmin() {
+  const { user } = useAuth(),
+  
+  // Check if user has enterprise admin role
+  const isEnterpriseAdmin = user?.role === "enterprise_admin",
+  
+  if (!isEnterpriseAdmin) {
+    return <Navigate to="/unauthorized" />
+  }
+  return (
+
+
+
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+export default function EnterpriseAdmin() {;
+  const { user } = useAuth();
+  // Check if user has enterprise admin role;
+  const isEnterpriseAdmin = user?.role === "enterprise_admin";
+  if (!isEnterpriseAdmin) {;
+    return <Navigate to="/unauthorized" />;
+  }
+;
+  return (;
+    <ProtectedRoute>;
+      <SEO
+        title="Enterprise Admin - Zion AI Marketplace"
+        description="Manage your team's access, roles, and usage on the Zion AI Marketplace."
+      />;
+      <Header />;
+      <main className="min-h-screen bg-background">;
+        <AdminDashboard />;
+      </main>;
+      <Footer />;
+    </ProtectedRoute>;
+
+
+
+
+=======
   if (!isEnterpriseAdmin) {
     return <Navigate to="/unauthorized" />;
   }
@@ -39,6 +110,7 @@ export default function EnterpriseAdmin() {
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
   }
   return (
@@ -56,6 +128,8 @@ export default /**
 function EnterpriseAdmin() {
   const { user } = use_auth ();
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   // Check if user has enterprise admin role;
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
@@ -96,3 +170,4 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

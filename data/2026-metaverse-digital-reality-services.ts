@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -49,13 +52,18 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       },
     },
   ];    features: [
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       "Immersive experiences";
       "Digital reality";
       "Metaverse platform";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       "Advanced graphics";
@@ -89,6 +97,7 @@ export interface MetaverseDigitalRealityService2026 {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface MetaverseDigitalRealityService2026 {;
 =======
   };
@@ -155,13 +164,21 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       "Digital reality",
       "Metaverse platform",
       "Advanced graphics",
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       "Social interactions"
     ],
     link: "/services/2026-metaverse-digital-reality",
     category: "Metaverse Digital Reality 2026",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
+    }
+  }
+;
+=======
 <<<<<<< HEAD
     }
   }
@@ -186,3 +203,4 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React,{ useState } from 'react';'''; import { SEO } from '@/components/SEO';'''; import { GradientHeading } from '@/components/GradientHeading';'''; import { Button } from '@/components/ui/button'; export {}; return null} const { isAuthenticated,user,isLoading } = useAuth(); const navigate = useNavigate(); const location = useLocation(); const { dispatch } = useCart(); const reduxDispatch = useDispatch(); useEffect(() => {} const params = new URLSearchParams(location.search);'; const token = params.get('token'); if (token) {} '; ''; '''; safeStorage.setItem('zion_token',token); router(location.pathname,{ "replace": 'true' });} },[location.search,location.pathname,navigate]); useEffect ( () => {} if (!isLoading && isAuthenticated) {} reduxDispatch(setLoggedIn(true));'; const next =''; new URLSearchParams(location.search).get('next') || '/dashboard'; router(next,{ "replace": 'true' });} },[isAuthenticated,isLoading,navigate,reduxDispatch,location.search]); if (!isAuthenticated && !isLoading) {} return(); <ErrorBoundary FallbackComponent={LoginErrorFallback}> <LoginContent /> ></div> );} ; if (isLoading) {} return <div className="p-4 text-center text-foreground">Loading...</div>} ; return null} ; export { Login }; export { Login }; export { Login }; export { Login }; export { Login };
@@ -38,3 +40,4 @@ import _React,{ useState } from 'react';'''; import { SEO } from '@/components/S
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

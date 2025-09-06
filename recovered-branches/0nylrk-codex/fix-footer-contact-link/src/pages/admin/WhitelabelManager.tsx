@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {WhitelabelRequestForm} from "@/components/admin/whitelabel/WhitelabelRequestForm";
+import {TenantsList} from "@/components/admin/whitelabel/TenantsList";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+export default function WhitelabelManager() {;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("tenants");
+import React, { useState } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",
+import { TenantsList } from "@/components/admin/whitelabel/TenantsList",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+=======
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -5,6 +26,7 @@ import { SEO } from "@/components/SEO";
 import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm";
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function WhitelabelManager() {
@@ -16,6 +38,28 @@ export default function WhitelabelManager() {
   const isAdmin = user?.role === "admin";
 
   if (!isAdmin) {
+<<<<<<< HEAD
+    return <Navigate to="/unauthorized" />
+  }
+  return (
+
+import React, { useState } from 'react',;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { SEO } from "@/components/SEO",;
+import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",;
+import { TenantsList } from "@/components/admin/whitelabel/TenantsList",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+export default function WhitelabelManager() {;
+  const { user } = useAuth(),;
+  const [activeTab, setActiveTab] = useState("tenants"),;
+  // Check if user has admin role;
+  const isAdmin = user?.role === "admin";
+  if (!isAdmin) {;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return <Navigate to="/unauthorized" />;
   }
   return (
@@ -23,6 +67,10 @@ export default function WhitelabelManager() {
       <SEO
         title="White-Label Management - Zion AI Marketplace"
         description="Create and manage white-label instances of the Zion AI Marketplace platform."
+<<<<<<< HEAD
+  }
+  return (
+=======
       />
       <Header />
       <main className="flex-1 container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
@@ -144,10 +192,13 @@ export default function WhitelabelManager() {
   }
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <TabsTrigger value="tenants">Tenants</TabsTrigger>;
               <TabsTrigger value="create">Create New</TabsTrigger>;
               <TabsTrigger value="docs">Documentation</TabsTrigger>;
             </TabsList>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -191,10 +242,13 @@ export default function WhitelabelManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </p>;
                 <table>;
                   <thead>;
                     <tr>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -211,10 +265,13 @@ export default function WhitelabelManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </tr>;
                   </thead>;
                   <tbody>;
                     <tr>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -267,6 +324,7 @@ export default function WhitelabelManager() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.;
                 </p>;
               </div>;
@@ -279,6 +337,8 @@ export default function WhitelabelManager() {
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -306,8 +366,12 @@ including content, users, and analytics. Tenant admins cannot access data from o
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
     </>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -10,6 +12,7 @@ import { twMerge } from "tailwind-merge"
  
 
 >>>>>>> 207d7230e0649fa517bb469b27623282180528c9
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -33,6 +36,8 @@ function cn() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 import clsx, { type ClassValue } from "clsx";
@@ -53,3 +58,4 @@ export function cn(...inputs: ClassValue[]) {
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> 207d7230e0649fa517bb469b27623282180528c9
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -24,6 +24,8 @@ export * from "./SidebarProvider";
 export * from "./SidebarTrigger";
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export * from "./SidebarTrigger";
@@ -32,6 +34,7 @@ export * from "./SidebarTrigger";
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Export components from their respective files
 export * from "./Sidebar.tsx",
 export * from "./SidebarItem",
@@ -64,7 +67,10 @@ export * from "./SidebarTrigger";
 export * from "./SidebarTrigger";
 export * from "./SidebarTrigger";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export * from "./SidebarTrigger";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

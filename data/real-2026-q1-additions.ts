@@ -1,6 +1,9 @@
 <<<<<<< HEAD
   {
 =======
+<<<<<<< HEAD
+  {
+=======
 
 
   {
@@ -16,12 +19,15 @@
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Multichannel ingestion',
       'LLM clustering and themes',
       'Impact scoring',
       'Roadmap export',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '💬',
@@ -38,6 +44,7 @@
     technology: ['Embeddings, Vector DB, Next.js'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Zendesk', 'Intercom', 'G2', 'Capterra'],
     use_cases: ['Prioritize roadmap', 'Reduce churn'],
     roi: 'Ship high - impact features faster',
@@ -56,6 +63,8 @@
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'api - security - posture - monitor',
@@ -68,12 +77,15 @@
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'OpenAPI scanning',
       'Auth / rate limit tests',
       'OWASP API checks',
       'PR annotations and diffs',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🛡️',
@@ -83,6 +95,7 @@
     link: 'https://ziontechgroup.com / services / api - security - posture - monitor',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Quality & Monitoring',
     real_service: true,
     market_position: 'Developer - first API security posture',
@@ -108,6 +121,8 @@
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'Flexible cron/rate',
     id: 'edge - cron - orchestrator',
@@ -121,11 +136,14 @@
       'Flexible cron / rate',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Idempotency and retries',
       'Run history',
       'Alerting and webhooks',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '⏰',
@@ -135,6 +153,7 @@
     link: 'https://ziontechgroup.com / services / edge - cron - orchestrator',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Developer Tools',
     real_service: true,
     market_position: 'Unified schedules across clouds',
@@ -160,6 +179,8 @@
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'email - parsing - routing - api',
@@ -172,12 +193,15 @@
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Signature stripping',
       'Attachment handling',
       'Webhook retries / DLQ',
       'Inspector UI',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📨',
@@ -187,6 +211,7 @@
     link: 'https://ziontechgroup.com / services / email - parsing - routing - api',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Developer Tools',
     real_service: true,
     market_position: 'Developer - friendly email ingestion',
@@ -200,6 +225,8 @@
     competitors: ['Mailparser', 'Integromat'],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     market_size: '$0.8B',
     growth_rate: '10% CAGR',
@@ -210,11 +237,14 @@
     launch_date: '2026 - 01 - 20',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     customers: 8,
     rating: 4 && 4.6,
     reviews: 5,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -230,11 +260,14 @@
       'Brand / tone controls',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Templates and briefs',
       'Compliance checks',
       'Multi - channel export',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📝',
@@ -244,6 +277,7 @@
     link: 'https://ziontechgroup.com / services / ai - marketing - content - studio',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'AI & Data',
     real_service: true,
     market_position: 'On - brand AI content for teams',
@@ -269,6 +303,8 @@
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'CSP/HSTS checks',
     id: 'security - headers - scanner',
@@ -282,11 +318,14 @@
       'CSP / HSTS checks',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Cookie flags',
       'PR annotations',
       'Weekly reports',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🔐',
@@ -296,6 +335,7 @@
     link: 'https://ziontechgroup.com / services / security - headers - scanner',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Quality & Monitoring',
     real_service: true,
     market_position: 'Simple posture checks for web apps',
@@ -309,11 +349,14 @@
     competitors: ['Mozilla Observatory'],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     market_size: '$0.5B',
     growth_rate: '8% CAGR',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     variant: 'holographic',
     contact_info: contact,
     real_implementation: true,
@@ -324,6 +367,8 @@
     reviews: 10,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -338,12 +383,15 @@
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Feature versioning',
       'Validation rules',
       'Lineage tracking',
       'Online serving API',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📦',
@@ -353,6 +401,7 @@
     link: 'https://ziontechgroup.com / services / ml - feature - store - starter',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'AI & Data',
     real_service: true,
     market_position: 'Lean feature store for teams',
@@ -378,6 +427,8 @@
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'slo - burn - rate - coach',
@@ -390,12 +441,15 @@
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'SLO editor',
       'Burn - rate alerts',
       'Runbook hints',
       'Integrations and webhooks',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📈',
@@ -405,6 +459,7 @@
     link: 'https://ziontechgroup.com / services / slo - burn - rate - coach',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Observability',
     real_service: true,
     market_position: 'SLOs without the complexity',
@@ -418,6 +473,8 @@
     competitors: ['Nobl9'],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     market_size: '$0.8B',
     growth_rate: '14% CAGR',
@@ -428,11 +485,14 @@
     launch_date: '2026 - 02 - 01',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     customers: 10,
     rating: 4 && 4.5,
     reviews: 6,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -447,12 +507,15 @@
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'RUM + synthetic',
       'Budgets and alerts',
       'Bundle diff and PR notes',
       'Edge hints',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '⚡',
@@ -462,6 +525,7 @@
     link: 'https://ziontechgroup.com / services / browser - performance - optimizer',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Quality & Monitoring',
     real_service: true,
     market_position: 'Developer - first CWV improvements',
@@ -475,6 +539,8 @@
     competitors: ['SpeedCurve', 'Calibre'],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     market_size: '$0.5B',
     growth_rate: '12% CAGR',
@@ -485,11 +551,14 @@
     launch_date: '2026 - 02 - 05',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     customers: 5,
     rating: 4 && 4.5,
     reviews: 3,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -504,12 +573,15 @@
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Budgets and owners',
       'Anomaly detection',
       'Policy guardrails',
       'IaC recommendation exports',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '💸',
@@ -519,6 +591,7 @@
     link: 'https://ziontechgroup.com / services / cloud - cost - governance - suite',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Cloud & FinOps',
     real_service: true,
     market_position: 'Governance overlay for FinOps',
@@ -544,6 +617,8 @@
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'api - changelog - sdk - publisher',
@@ -556,12 +631,15 @@
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Docs from schemas',
       'SDK generation',
       'Changelogs',
       'Searchable portal',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📘',
@@ -571,6 +649,7 @@
     link: 'https://ziontechgroup.com / services / api - changelog - sdk - publisher',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Developer Tools',
     real_service: true,
     market_position: 'Ship API portals faster',
@@ -584,6 +663,8 @@
     competitors: ['ReadMe', 'Redocly'],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     market_size: '$1.5B',
     growth_rate: '18% CAGR',
@@ -594,6 +675,7 @@
     launch_date: '2026 - 02 - 12',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     customers: 9,
     rating: 4 && 4.7,
     reviews: 6,
@@ -601,9 +683,12 @@
 ];	{
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		integrations: ['StripePayPalGoogle Analytics'];
 		useCases: ['Partner growthAutomated payouts'];
 		roi: 'Grow partner revenue by 10–25%';
@@ -617,10 +702,13 @@
 		customers: 12;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 7
 	}
 	{
@@ -643,11 +731,14 @@
 		trialDays: 14;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		setupTime: '1 hour',
 		technology: ['Embeddings, Vector DB, Next && Next.js'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		integrations: ['ZendeskIntercomG2Capterra'];
 		useCases: ['Prioritize roadmapReduce churn'];
 		roi: 'Ship high-impact features faster';
@@ -662,10 +753,13 @@
 		customers: 9;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 5
 	}
 	{
@@ -702,10 +796,13 @@
 		customers: 11;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.5,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 6
 	}
 	{
@@ -742,10 +839,13 @@
 		customers: 7;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.5,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 4
 	}
 	{
@@ -782,10 +882,13 @@
 		customers: 8;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 5
 	}
 	{
@@ -822,10 +925,13 @@
 		customers: 15;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 9
 	}
 	{
@@ -862,10 +968,13 @@
 		customers: 20;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.5,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 10
 	}
 	{
@@ -902,10 +1011,13 @@
 		customers: 6;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.5,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 3
 	}
 	{
@@ -942,10 +1054,13 @@
 		customers: 10;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.5,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 6
 	}
 	{
@@ -982,10 +1097,13 @@
 		customers: 5;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.5,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 3
 	}
 	{
@@ -1022,10 +1140,13 @@
 		customers: 6;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 4
 	}
 	{
@@ -1060,6 +1181,11 @@
 		implementationDetails: 'Schema importers, generators, UI';
 		launchDate: '2026-02-12';
 		customers: 9;
+<<<<<<< HEAD
+		reviews: 6
+	}
+];
+=======
 <<<<<<< HEAD
 		reviews: 6
 	}
@@ -1500,3 +1626,4 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

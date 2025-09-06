@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -61,6 +63,7 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -72,11 +75,14 @@ import {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
 =======
 =======
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Carousel
   CarouselContent
   CarouselItem
@@ -110,9 +116,12 @@ const testimonials = [
   }
 ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Quote } from "lucide-react",
 import {
@@ -142,6 +151,8 @@ const testimonials = [
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -176,15 +187,21 @@ export function EnterpriseTestimonials() {
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ];
 
 export function EnterpriseTestimonials() {;
   return (
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <img
                         src={testimonial && testimonial.image}
                         alt={testimonial && testimonial.author}
                         className="h-full w-full object-cover"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                       />
                     </div>
@@ -216,6 +233,7 @@ export function EnterpriseTestimonials() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -245,6 +263,8 @@ const testimonials = [;
     image: "/placeholder.svg"}];
 export function EnterpriseTestimonials() {;
   return (;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -279,6 +299,7 @@ export function EnterpriseTestimonials() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <section className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-12">;
@@ -289,6 +310,8 @@ export function EnterpriseTestimonials() {;
             See how enterprise teams are transforming their hiring process;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -306,10 +329,13 @@ export function EnterpriseTestimonials() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                 <div className="bg-card rounded-xl p-8 border border-border h-full">;
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />;
                   <blockquote className="text-xl mb-6 italic">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                     "{testimonial && testimonial.quote}";
@@ -342,6 +368,7 @@ import {
                       <img;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -444,6 +471,8 @@ function EnterpriseTestimonials() {
         </Carousel>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </section>);
@@ -483,3 +512,4 @@ image: "/placeholder.svg"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

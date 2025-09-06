@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -19,6 +21,7 @@ import {ChevronLeft, ChevronRight} from "lucide-react";
 import {Button} from "@/components/ui/button";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useRef } from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -39,15 +42,20 @@ export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null),
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount
         behavior: "smooth"})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -106,6 +114,7 @@ export const AppScreenshots: React.FC = () => {;
   return (
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
           <div 
@@ -132,6 +141,8 @@ export const AppScreenshots: React.FC = () => {;
                   src={screenshot.src}
                   alt={screenshot.alt}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -139,11 +150,14 @@ export const AppScreenshots: React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   className="w-full h-full object-cover"
                 />
               </div>
             ))}
           </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -155,10 +169,13 @@ export const AppScreenshots: React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Button 
             variant="ghost" 
             size="icon" 
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -166,6 +183,7 @@ export const AppScreenshots: React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             onClick={() => scroll("right")}
           >
             <ChevronRight className="h-6 w-6" />
@@ -174,6 +192,8 @@ export const AppScreenshots: React.FC = () => {;
       </div>
     </section>
   )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -185,6 +205,7 @@ export const AppScreenshots: React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 },
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
@@ -207,6 +228,8 @@ export const AppScreenshots: React.FC = () => {;
     }
   };
   return (;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -243,6 +266,7 @@ export const AppScreenshots:React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <section className="py-16 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -251,6 +275,8 @@ export const AppScreenshots:React.FC = () => {;
             Take a visual tour through the Zion app's intuitive interface.;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -274,10 +300,16 @@ export const AppScreenshots:React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             onClick={() => scroll("left")}
           >;
             <ChevronLeft className="h-6 w-6" />;
           </Button>;
+<<<<<<< HEAD
+    }
+  }
+  return (
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -298,6 +330,7 @@ export const AppScreenshots:React.FC = () => {;
   }
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   className="w-full h-full object-cover"
                 />;
               </div>;
@@ -355,6 +388,8 @@ export const AppScreenshots:React.FC = () => {;
 <<<<<<< HEAD
 
 };
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
@@ -489,3 +524,4 @@ Take a visual tour through the Zion app's intuitive interface. </p> </div> <div 
 
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

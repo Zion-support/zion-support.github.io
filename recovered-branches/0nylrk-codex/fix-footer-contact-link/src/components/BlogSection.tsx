@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -21,12 +23,15 @@ import { Button } from "./ui/button";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "@/data/blog-posts";
 // Get the 3 most recent blog posts
 
 const recentPosts = [...BLOG_POSTS]
   .sort((a, b) => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -42,12 +47,15 @@ const recentPosts = [...BLOG_POSTS];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
       new Date(b && b.publishedDate).getTime() - new Date(a && a.publishedDate).getTime();
     );
   });
   .slice(0, 3);
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -74,6 +82,7 @@ export function BlogSection() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { GradientHeading } from "./GradientHeading",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import { Button } from "./ui/button",
@@ -85,6 +94,8 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
 }).slice(0, 3),
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -92,6 +103,7 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             className="mt-4 md:mt-0 border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
             asChild
           >
@@ -101,6 +113,8 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {recentPosts.map((post, index) => (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -109,6 +123,7 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Card key={post.id} className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">
               <div className="h-48 bg-zion-blue-dark relative overflow-hidden">
                 <img 
@@ -116,6 +131,8 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                   alt={post.title}
                   className="object-cover w-full h-full opacity-60 hover: opacity-80 transition-opacity duration-300"
                   loading="lazy"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -130,6 +147,7 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                   onError={(
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     e: React.SyntheticEvent<HTMLImageElement, Event>
                   ) => {
                     const target = e.currentTarget as HTMLImageElement;
@@ -137,14 +155,19 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     e: React.SyntheticEvent<HTMLImageElement, Event>,
                   ) => {;
                     const target = e.currentTarget as HTMLImageElement;
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -152,13 +175,17 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     e: React.SyntheticEvent<HTMLImageElement, Event>,
                   ) => {;
                     const target = e.currentTarget as HTMLImageElement;
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     target.src =
                       "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                   }}
@@ -184,6 +211,8 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
               </CardFooter>
             </Card>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -196,6 +225,7 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { GradientHeading } from "./GradientHeading",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 import { Button } from "./ui/button",;
@@ -206,6 +236,8 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {;
   return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
 }).slice(0, 3),;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function BlogSection() {;
@@ -213,6 +245,7 @@ export function BlogSection() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function BlogSection() {;
   return (
 
@@ -232,15 +265,20 @@ export function BlogSection() {;
 export function BlogSection() {;
   return (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <section className="py-20 bg-zion-blue-dark" id="blog">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">;
           <div>;
             <GradientHeading>Latest Insights</GradientHeading>;
             <p className="mt-2 text-zion-slate-light text-xl max-w-2xl">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               Stay updated with trends in AI technology, marketplace strategies,;
@@ -260,6 +298,7 @@ export function BlogSection() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Card
               key={post && post.id}
               className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">;
@@ -312,6 +351,8 @@ export function BlogSection() {;
                   variant="link"
                   className="text-zion-cyan p-0 hover:text-zion-purple"
                   asChild>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   <Link to={`/blog/${post && post.slug}`}>Read More →</Link>;
 <<<<<<< HEAD
@@ -406,14 +447,18 @@ function BlogSection() {
             <p className="mt - 2 text - zion - slate - light text - xl max - w-2xl">;
               Stay updated with trends in AI technology, marketplace strategies,
               and IT services;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </p>;
           </div>;
           <Button;
             variant="outline";
+<<<<<<< HEAD
+=======
             className="mt - 4 md:mt - 0 border - zion - purple text - zion - cyan hover:bg - zion - purple / 10";
             as_child;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           >;
             <Link to="/blog">View All Articles</Link>;
           </Button>;
@@ -475,6 +520,8 @@ function BlogSection() {
 <<<<<<< HEAD
 
 }
+<<<<<<< HEAD
+=======
 =======
 }
 ;
@@ -512,3 +559,4 @@ function BlogSection() {
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

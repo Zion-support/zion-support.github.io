@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -16,6 +18,7 @@ import { ShieldAlert } from "lucide-react";
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
@@ -37,6 +40,8 @@ import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -45,12 +50,15 @@ import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
 import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -59,6 +67,7 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ProjectActionsProps {
   projectId: string,
   isUnderDispute: boolean,
@@ -68,10 +77,13 @@ interface ProjectActionsProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ProjectActions({;
   projectId;
   isUnderDispute;
@@ -114,11 +126,16 @@ export function ProjectActions({
 }: ProjectActionsProps) {
   return (
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <RaiseDisputeButton
           projectId={projectId}
           variant="outline"
         />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -126,6 +143,7 @@ export function ProjectActions({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
@@ -155,6 +173,8 @@ export function ProjectActions(): any ({;
   isTalent;
   onAddMilestone;
 }: ProjectActionsProps) {;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   return (;
@@ -220,12 +240,15 @@ export function ProjectActions({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>
           Add Milestone
         </Button>
       )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -240,6 +263,7 @@ export function ProjectActions({;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Button} from '@/components / ui / button';
 import {Link} from 'react-router-dom';
 import { ShieldAlert } from './lucide-react';
@@ -272,6 +296,8 @@ function ProjectActions() {
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;
           Add Milestone;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         </Button>)}
     </div>);
@@ -310,3 +336,4 @@ onAddMilestone
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
