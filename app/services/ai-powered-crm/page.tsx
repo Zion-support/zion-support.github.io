@@ -1,5 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
+import FeatureCard from '../../../components/FeatureCard';
+import TestimonialCard from '../../../components/TestimonialCard';
+import PricingTier from '../../../components/PricingTier';
 
 export const metadata = {
   title: 'AI-Powered CRM | Zion Tech Group',
